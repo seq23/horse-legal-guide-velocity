@@ -1,0 +1,45 @@
+{
+  "floors": {
+    "faq": 700,
+    "answer": 700,
+    "comparison": 900,
+    "scenario": 900,
+    "state": 1100,
+    "business": 1000,
+    "liability": 1000,
+    "disputes": 1000,
+    "leases": 1000,
+    "boarding": 1000,
+    "therapeutic": 1000,
+    "ip": 1000,
+    "hub": 700,
+    "reference": 250,
+    "insight": 700,
+    "article": 1500,
+    "whitepaper": 2500,
+    "deep_authority": 2500
+  },
+  "warning_margin": 0.2,
+  "hard_fail_conditions": [
+    "below_80_percent_floor",
+    "no_internal_links",
+    "no_canonical_routing_block"
+  ],
+  "warning_conditions": [
+    "between_80_and_99_percent_floor",
+    "fewer_than_3_headings",
+    "missing_what_people_miss_section",
+    "high_similarity",
+    "low_lexical_diversity",
+    "readability_above_target"
+  ],
+  "readability": {
+    "faq_like_warn_above": 12.0,
+    "hub_warn_above": 11.0,
+    "other_warn_above": 12.5,
+    "excluded_slugs": [
+      "/disclaimer/",
+      "/privacy-policy/"
+    ]
+  }
+}

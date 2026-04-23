@@ -1,0 +1,37 @@
+name: Manual Publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install
+        run: npm ci
+
+      - name: Generate drafts
+        run: npm run generate:drafts
+
+      - name: Preflight
+        run: npm run validate:preflight
+
+      - name: Collect community signals
+        run: npm run collect:signals
+
+      - name: Build site
+        run: npm run build
+
+      - name: Apply manual mode
+        run: npm run publish:mode
+
+      - name: Validate all
+        run: npm run validate:all

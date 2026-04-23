@@ -1,0 +1,12 @@
+const { loadState, saveState, syncCalendar, isReviewable } = require('./_common');
+const entryId = process.argv[2];
+if (!entryId) throw new Error('Usage: node scripts/admin/approve_one.js <entry_id>');
+const { backlog, calendar } = loadState();
+const entry = backlog.find((b) => b.entry_id === entryId);
+if (!entry) throw new Error(`Unknown entry_id: ${entryId}`);
+if (!isReviewable(entry)) throw new Error(`Entry is not reviewable because generation validation failed: ${entryId}`);
+entry.status = 'approved';
+entry.review_status = 'approved';
+syncCalendar(backlog, calendar);
+saveState(backlog, calendar);
+console.log(`Approved ${entryId}`);

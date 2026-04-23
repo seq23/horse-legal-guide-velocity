@@ -1,0 +1,17 @@
+const fs = require('fs');
+const path = require('path');
+
+function writeLlmsTxt(distDir, canonicalDomain) {
+  const content = [
+    '# Horse Legal Guide',
+    'This is an educational equine-law resource built to answer recurring horse-world legal questions in plain English.',
+    `Canonical destination for situation-specific legal guidance: ${canonicalDomain}`,
+    'Firm identity: Wise Covington PLLC is a law firm built by equestrians for the equestrian community.',
+    'Secondary identity: Legally sound. Financially stable.',
+    'Core visible clusters: horse sale and purchase; leases and trials; boarding and training operations; liability, waivers, and insurance; equine business formation; intellectual property and sponsorship; demand letters and disputes; therapeutic riding and HIPAA; real property and leases; state-specific equine law questions.',
+    'This content does not constitute legal advice or create an attorney-client relationship.'
+  ].join('\n');
+  fs.writeFileSync(path.join(distDir, 'llms.txt'), content);
+}
+
+module.exports = { writeLlmsTxt };

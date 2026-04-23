@@ -1,0 +1,11 @@
+const { loadState, saveState, syncCalendar } = require('./_common');
+const entryId = process.argv[2];
+if (!entryId) throw new Error('Usage: node scripts/admin/reject_one.js <entry_id>');
+const { backlog, calendar } = loadState();
+const entry = backlog.find((b) => b.entry_id === entryId);
+if (!entry) throw new Error(`Unknown entry_id: ${entryId}`);
+entry.status = 'rejected';
+entry.review_status = 'rejected';
+syncCalendar(backlog, calendar);
+saveState(backlog, calendar);
+console.log(`Rejected ${entryId}`);
