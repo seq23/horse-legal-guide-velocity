@@ -41,7 +41,7 @@ function identity(signal) {
 async function collectSource(source) {
   const adapter = loadAdapter(source);
   if (!adapter || typeof adapter.collect !== 'function') {
-    return { source_key: source.source_key, status: 'skipped_no_adapter', count: 0, rows: [] };
+    return { source_key: source.source_key, platform: source.platform, status: 'skipped_no_adapter', count: 0, rows: [] };
   }
   const timeoutMs = Number(process.env.SIGNAL_SOURCE_TIMEOUT_MS || 7000);
   try {
@@ -51,10 +51,10 @@ async function collectSource(source) {
       new Promise((resolve) => { timer = setTimeout(() => resolve([]), timeoutMs); })
     ]);
     clearTimeout(timer);
-    return { source_key: source.source_key, status: 'ok', count: rows.length, rows };
+    return { source_key: source.source_key, platform: source.platform, status: 'ok', count: rows.length, rows };
   } catch (err) {
     console.warn(`[collect_signals] ${source.source_key} failed: ${err.message}`);
-    return { source_key: source.source_key, status: 'failed', error: err.message, count: 0, rows: [] };
+    return { source_key: source.source_key, platform: source.platform, status: 'failed', error: err.message, count: 0, rows: [] };
   }
 }
 async function run() {
@@ -65,11 +65,17 @@ async function run() {
   const sourceLimit = Number(process.env.SIGNAL_SOURCE_LIMIT || 0);
   const activeSources = (registry.sources || []).filter(allowedSource);
   const selectedSources = sourceLimit > 0 ? activeSources.slice(0, sourceLimit) : activeSources;
-  const results = await Promise.all(selectedSources.map(collectSource));
+  const sequential = String(process.env.SIGNAL_COLLECT_SEQUENTIAL || '').toLowerCase() === 'true' || String(process.env.GITHUB_ACTIONS || '').toLowerCase() === 'true';
+  const results = [];
+  if (sequential) {
+    for (const source of selectedSources) results.push(await collectSource(source));
+  } else {
+    results.push(...await Promise.all(selectedSources.map(collectSource)));
+  }
   const adapterStatus = [];
   const collected = [];
   for (const result of results) {
-    adapterStatus.push({ source_key: result.source_key, status: result.status, count: result.count, error: result.error });
+    adapterStatus.push({ source_key: result.source_key, platform: result.platform, status: result.status, count: result.count, error: result.error });
     collected.push(...result.rows);
   }
   collected.push(...manualImports());
@@ -80,9 +86,19 @@ async function run() {
     seenIdentity.add(identity(signal));
     merged.push(signal);
   }
+  const redditCount = collected.filter((s) => s && s.platform === 'reddit').length;
+  const zeroRedditWarning = adapterStatus.some((r) => String(r.source_key || '').startsWith('reddit_')) && redditCount === 0;
   writeJson('data/community/raw_signals.json', merged);
-  writeJson('data/community/collection_status.json', { generated_at: new Date().toISOString(), adapter_status: adapterStatus, collected_count: collected.length, raw_store_count: merged.length });
-  console.log(`Collected ${collected.length} candidate signals; raw store now has ${merged.length}.`);
+  writeJson('data/community/collection_status.json', {
+    generated_at: new Date().toISOString(),
+    adapter_status: adapterStatus,
+    collected_count: collected.length,
+    reddit_collected_count: redditCount,
+    zero_reddit_warning: zeroRedditWarning,
+    raw_store_count: merged.length
+  });
+  if (zeroRedditWarning) console.warn('[collect_signals] WARNING: Reddit contributed 0 fresh public signals in this run. Pipeline continues, but production Reddit access is not healthy.');
+  console.log(`Collected ${collected.length} candidate signals; Reddit contributed ${redditCount}; raw store now has ${merged.length}.`);
 }
 if (require.main === module) run().then(() => process.exit(0)).catch((err) => { console.error(err); process.exit(1); });
 module.exports = { run };

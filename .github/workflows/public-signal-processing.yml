@@ -13,7 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SIGNAL_SOURCE_TIMEOUT_MS: "7000"
-      SIGNAL_FETCH_TIMEOUT_MS: "3500"
+      SIGNAL_FETCH_TIMEOUT_MS: "7000"
+      SIGNAL_COLLECT_SEQUENTIAL: "true"
+      REDDIT_PUBLIC_PREFER_RSS: "true"
+      REDDIT_PUBLIC_LIMIT: "5"
+      REDDIT_PUBLIC_MAX_SIGNALS: "20"
+      REDDIT_PUBLIC_TERM_LIMIT: "3"
+      REDDIT_PUBLIC_DELAY_MS: "900"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
