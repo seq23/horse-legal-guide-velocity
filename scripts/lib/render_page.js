@@ -221,8 +221,25 @@ function renderIndex(config) {
 </section>
 <section>
   <h2>How to use it</h2>
-  <p>Browse by topic hub or land directly on a question page. The material here stays general and educational. If a situation turns on specific facts, contracts, state-law differences, or a live dispute, the canonical Wise Covington site is the correct next stop.</p>
+  <p>Browse by topic hub, public index, or scheduled editorial surface. The material here stays general and educational. If a situation turns on specific facts, contracts, state-law differences, or a live dispute, the canonical Wise Covington site is the correct next stop.</p>
 </section>
+<nav>
+  <h2>Public navigation</h2>
+  <ul>
+    <li><a href="/hubs/">All topic hubs</a></li>
+    <li><a href="/faq/">FAQ index</a></li>
+    <li><a href="/scenario/">Scenario index</a></li>
+    <li><a href="/compare/">Comparison index</a></li>
+    <li><a href="/reference/">Reference / fan-out index</a></li>
+    <li><a href="/coverage/">Query coverage map</a></li>
+    <li><a href="/insights/">Daily insights</a></li>
+    <li><a href="/articles/">Weekly articles</a></li>
+    <li><a href="/whitepapers/">Monthly white papers</a></li>
+    <li><a href="/authority/">Quarterly authority briefs</a></li>
+    <li><a href="/llms.txt">llms.txt</a></li>
+    <li><a href="/sitemap.xml">Sitemap</a></li>
+  </ul>
+</nav>
 <section>
   <h2>Current publishing state</h2>
   <p>Publishing mode is manual. Drafts may exist internally, but only approved content is allowed into live output.</p>

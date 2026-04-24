@@ -11,7 +11,7 @@ for (const file of files) {
   const html = fs.readFileSync(file, 'utf8');
   const matches = [...html.matchAll(/href="(\/[^"#]*)"/g)].map((m) => m[1]);
   for (const href of matches) {
-    if (!knownPaths.has(href) && href !== '/sitemap.xml') fail(`Broken internal link ${href} in ${path.relative(process.cwd(), file)}`);
+    if (!knownPaths.has(href) && !['/sitemap.xml','/llms.txt','/robots.txt'].includes(href)) fail(`Broken internal link ${href} in ${path.relative(process.cwd(), file)}`);
   }
 }
 ok('internal links valid');

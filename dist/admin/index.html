@@ -170,7 +170,7 @@
   <h2>System summary</h2>
   <p><strong>Canonical:</strong> <a href="https://wisecovington.com">https://wisecovington.com</a></p>
   <p><strong>Velocity domain:</strong> <a href="https://horselegalguide.com">https://horselegalguide.com</a></p>
-  <p><strong>GitHub repo:</strong> <a href="https://github.com/REPLACE_OWNER/REPLACE_REPO">https://github.com/REPLACE_OWNER/REPLACE_REPO</a></p>
+  <p><strong>GitHub repo:</strong> <a href="https://github.com/seq23/horse-legal-guide-velocity">https://github.com/seq23/horse-legal-guide-velocity</a></p>
   <p><strong>Daily:</strong> insight · <strong>Weekly:</strong> article · <strong>Monthly:</strong> whitepaper · <strong>Quarterly:</strong> deep_authority</p>
 </section>
 <section>
@@ -224,7 +224,7 @@ async function gate() {
 }
 function githubLink(item) {
   if (!item.github_path) return '#';
-  const base = "https://github.com/REPLACE_OWNER/REPLACE_REPO";
+  const base = "https://github.com/seq23/horse-legal-guide-velocity";
   if (!base || base.includes('REPLACE_OWNER') || base.includes('REPLACE_REPO')) return '#';
   return base.replace(//$/, '') + '/blob/main/' + item.github_path;
 }

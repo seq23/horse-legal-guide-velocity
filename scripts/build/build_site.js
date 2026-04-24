@@ -9,6 +9,8 @@ const { writeHubPages } = require('./write_hubs');
 const { writeSitemaps } = require('./write_sitemaps');
 const { writeLlmsTxt } = require('./write_feeds');
 const { writeAdminPage } = require('./write_admin');
+const { writeEditorialPages } = require('./write_editorial_pages');
+const { writePublicIndexes } = require('./write_public_indexes');
 
 function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
@@ -56,6 +58,8 @@ function main() {
   writeHubPages(distDir, clusters, approvedPages);
   const candidates = readJson('data/reference/incoming_candidates.json');
   writeReferencePages(distDir, candidates);
+  writePublicIndexes(distDir, approvedPages, clusters, candidates);
+  writeEditorialPages(distDir);
   writeSitemaps(distDir, config.site_domain || 'https://example.com');
   writeLlmsTxt(distDir, config.canonical_domain);
   writeAdminPage(distDir);

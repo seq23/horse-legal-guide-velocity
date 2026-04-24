@@ -1,8 +1,8 @@
 {
-  "name": "wise-covington-equine-law-velocity",
+  "name": "horse-legal-guide-velocity",
   "version": "1.0.0",
   "private": true,
-  "description": "Velocity artifact repo for Wise Covington PLLC",
+  "description": "Velocity artifact repo for Horse Legal Guide",
   "license": "UNLICENSED",
   "scripts": {
     "validate:preflight": "node _ops/validators/validate_preflight.js",
@@ -17,7 +17,7 @@
     "validate:disclaimers": "node _ops/validators/validate_disclaimer_presence.js",
     "validate:footer": "node _ops/validators/validate_footer_links.js",
     "validate:manual": "node _ops/validators/validate_manual_mode.js",
-    "validate:all": "npm run validate:mode && npm run validate:review && npm run validate:content && npm run validate:links && npm run validate:ingestion && npm run validate:distribution && npm run validate:policy && npm run validate:canonical && npm run validate:disclaimers && npm run validate:footer && npm run validate:manual && npm run validate:content-system && npm run validate:publish_quality",
+    "validate:all": "npm run build && npm run validate:mode && npm run validate:review && npm run validate:content && npm run validate:links && npm run validate:ingestion && npm run validate:distribution && npm run validate:policy && npm run validate:canonical && npm run validate:disclaimers && npm run validate:footer && npm run validate:manual && npm run validate:content-system && npm run validate:publish_quality && npm run validate:editorial && npm run validate:public-surfaces",
     "build": "node scripts/build/build_site.js",
     "publish:mode": "node scripts/publishing/run_mode_pipeline.js",
     "collect:signals": "node scripts/community/collect_signals.js",
@@ -29,6 +29,8 @@
     "approve:one": "node scripts/admin/approve_one.js",
     "approve:type": "node scripts/admin/approve_by_type.js",
     "approve:filter": "node scripts/admin/approve_by_filter.js",
-    "reject:one": "node scripts/admin/reject_one.js"
+    "reject:one": "node scripts/admin/reject_one.js",
+    "validate:editorial": "node _ops/validators/validate_editorial_system.js",
+    "validate:public-surfaces": "node _ops/validators/validate_public_surfaces.js"
   }
 }

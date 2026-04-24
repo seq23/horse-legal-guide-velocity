@@ -7,7 +7,7 @@ const approvedSlugs = new Set(targets.filter((p) => p.review_status === 'approve
 const liveFiles = collectFiles('dist', (file) => file.endsWith('index.html'));
 for (const file of liveFiles) {
   const rel = file.split('/dist')[1].replace(/\/index\.html$/, '/').replace(/\\/g, '/');
-  const allowedGenerated = rel.startsWith('/hubs/') || rel.startsWith('/reference/');
+  const allowedGenerated = rel.startsWith('/hubs/') || rel.startsWith('/reference/') || rel.startsWith('/coverage/') || rel.startsWith('/insights/') || rel.startsWith('/articles/') || rel.startsWith('/whitepapers/') || rel.startsWith('/authority/') || rel === '/faq/' || rel === '/scenario/' || rel === '/compare/' || rel === '/state/';
   if (!['/','/disclaimer/','/privacy-policy/','/admin/'].includes(rel) && !approvedSlugs.has(rel) && !allowedGenerated) {
     fail(`Live page exists without approved status: ${rel}`);
   }

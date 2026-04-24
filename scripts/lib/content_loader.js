@@ -1,20 +1,27 @@
 const fs = require('fs');
 const path = require('path');
 
-function findSourceFileForSlug(slug) {
-  const normalized = slug.replace(/^\//, '').replace(/\/$/, '').replace(/\//g, '__') + '.md';
+let sourceIndex = null;
+
+function buildSourceIndex() {
   const root = path.resolve(process.cwd(), 'content');
-  let match = null;
+  const index = new Map();
+  if (!fs.existsSync(root)) return index;
   function walk(dir) {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       const full = path.join(dir, entry.name);
       if (entry.isDirectory()) walk(full);
-      else if (entry.isFile() && entry.name === normalized) match = full;
-      if (match) return;
+      else if (entry.isFile() && entry.name.endsWith('.md') && !index.has(entry.name)) index.set(entry.name, full);
     }
   }
   walk(root);
-  return match;
+  return index;
+}
+
+function findSourceFileForSlug(slug) {
+  const normalized = slug.replace(/^\//, '').replace(/\/$/, '').replace(/\//g, '__') + '.md';
+  if (!sourceIndex) sourceIndex = buildSourceIndex();
+  return sourceIndex.get(normalized) || null;
 }
 
 function parseMarkdownSections(markdown) {
@@ -32,9 +39,7 @@ function parseMarkdownSections(markdown) {
     if (current) sections[current].push(line);
   }
   const clean = {};
-  for (const [key, value] of Object.entries(sections)) {
-    clean[key] = value.join('\n').trim();
-  }
+  for (const [key, value] of Object.entries(sections)) clean[key] = value.join('\n').trim();
   return { title, sections: clean };
 }
 
@@ -59,4 +64,4 @@ function loadPageContent(slug) {
   };
 }
 
-module.exports = { loadPageContent };
+module.exports = { loadPageContent, findSourceFileForSlug };
