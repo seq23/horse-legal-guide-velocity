@@ -6,7 +6,7 @@
       "display_name": "Reddit r/equestrian",
       "base_url": "https://www.reddit.com/r/equestrian/",
       "tier": 1,
-      "access_method": "api_or_public_search",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "title",
         "url",
@@ -35,9 +35,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_api_or_provider",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "reddit",
@@ -45,7 +63,7 @@
       "display_name": "Reddit r/horses",
       "base_url": "https://www.reddit.com/r/horses/",
       "tier": 1,
-      "access_method": "api_or_public_search",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "title",
         "url",
@@ -74,9 +92,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_api_or_provider",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "reddit",
@@ -84,7 +120,7 @@
       "display_name": "Reddit r/legaladvice",
       "base_url": "https://www.reddit.com/r/legaladvice/",
       "tier": 1,
-      "access_method": "api_or_public_search",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "title",
         "url",
@@ -113,9 +149,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_api_or_provider",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "reddit",
@@ -123,7 +177,7 @@
       "display_name": "Reddit r/smallbusiness",
       "base_url": "https://www.reddit.com/r/smallbusiness/",
       "tier": 1,
-      "access_method": "api_or_public_search",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "title",
         "url",
@@ -152,9 +206,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_api_or_provider",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "reddit",
@@ -162,7 +234,7 @@
       "display_name": "Reddit r/farming + r/ranching",
       "base_url": "https://www.reddit.com/search/?q=horse%20legal%20ranching%20farming",
       "tier": 1,
-      "access_method": "api_or_public_search",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "title",
         "url",
@@ -191,9 +263,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_api_or_provider",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "equestrian_forums",
@@ -201,7 +291,7 @@
       "display_name": "The Horse Forum",
       "base_url": "https://www.horseforum.com/",
       "tier": 1,
-      "access_method": "public_thread_metadata_or_manual_import",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "thread_title",
         "url",
@@ -225,9 +315,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_provider_when_configured",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "equestrian_forums",
@@ -235,7 +343,7 @@
       "display_name": "Chronicle of the Horse Forums",
       "base_url": "https://forum.chronofhorse.com/",
       "tier": 1,
-      "access_method": "public_thread_metadata_or_manual_import",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "thread_title",
         "url",
@@ -259,9 +367,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_provider_when_configured",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "equestrian_forums",
@@ -269,7 +395,7 @@
       "display_name": "Horse & Hound Forums",
       "base_url": "https://forums.horseandhound.co.uk/",
       "tier": 1,
-      "access_method": "public_thread_metadata_or_manual_import",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "thread_title",
         "url",
@@ -293,9 +419,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_provider_when_configured",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "google_paa",
@@ -303,7 +447,7 @@
       "display_name": "Google People Also Ask / Search surfaces",
       "base_url": "https://www.google.com/search",
       "tier": 1,
-      "access_method": "manual_export_or_approved_serp_provider",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "question",
         "url",
@@ -325,9 +469,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_api_or_provider",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "serp_competitors",
@@ -335,7 +497,7 @@
       "display_name": "SERP competitor headings and FAQ patterns",
       "base_url": "https://www.google.com/search",
       "tier": 1,
-      "access_method": "manual_research_or_approved_serp_provider",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "url",
         "title",
@@ -358,9 +520,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_api_or_provider",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "youtube",
@@ -368,7 +548,7 @@
       "display_name": "YouTube search + comments",
       "base_url": "https://www.youtube.com/results",
       "tier": 2,
-      "access_method": "youtube_data_api_or_manual_export",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "video_title",
         "url",
@@ -390,9 +570,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_api_or_provider",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     },
     {
       "platform": "instagram",
@@ -400,7 +598,7 @@
       "display_name": "Instagram public social framing",
       "base_url": "https://www.instagram.com/",
       "tier": 2,
-      "access_method": "compliant_public_tooling_or_manual_export",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "caption_question_pattern",
         "url",
@@ -422,9 +620,28 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_provider_when_configured",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ],
+      "notes": "Tier 2 only. Publicly visible profile/caption/comment snippets only; skip if unavailable without login."
     },
     {
       "platform": "quora",
@@ -432,7 +649,7 @@
       "display_name": "Quora public question pages",
       "base_url": "https://www.quora.com/",
       "tier": 2,
-      "access_method": "public_question_metadata_or_manual_import",
+      "access_method": "public_web_only",
       "allowed_fields": [
         "question_title",
         "url",
@@ -453,9 +670,27 @@
       ],
       "automation": {
         "enabled": true,
-        "mode": "automatic_provider_when_configured",
-        "manual_import_fallback": true
-      }
+        "mode": "public_signal_processing",
+        "manual_import_fallback": false
+      },
+      "retrieval_mode": "public_no_auth",
+      "access_policy": {
+        "requires_authentication": false,
+        "allow_private_content": false,
+        "allow_captcha_workaround": false,
+        "store_full_threads": false,
+        "store_usernames": false,
+        "metadata_and_short_excerpt_only": true,
+        "skip_if_unavailable_publicly": true
+      },
+      "skip_conditions": [
+        "login_required",
+        "captcha",
+        "private_content",
+        "blocked_or_forbidden",
+        "paywall",
+        "unstable_or_empty_public_response"
+      ]
     }
   ]
 }
