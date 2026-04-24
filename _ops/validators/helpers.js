@@ -35,6 +35,7 @@ function collectFiles(dir, matcher) {
 
 function ok(message) {
   console.log(`OK: ${message}`);
+  process.exit(0);
 }
 
 module.exports = { fail, ensureExists, readJson, collectFiles, ok };

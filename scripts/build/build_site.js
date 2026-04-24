@@ -12,13 +12,8 @@ const { writeAdminPage } = require('./write_admin');
 const { writeEditorialPages } = require('./write_editorial_pages');
 const { writePublicIndexes } = require('./write_public_indexes');
 
-function ensureDir(dirPath) {
-  fs.mkdirSync(dirPath, { recursive: true });
-}
-
-function rimraf(target) {
-  fs.rmSync(target, { recursive: true, force: true });
-}
+function ensureDir(dirPath) { fs.mkdirSync(dirPath, { recursive: true }); }
+function rimraf(target) { fs.rmSync(target, { recursive: true, force: true }); }
 
 function main() {
   const config = readJson('data/system/config.json');
@@ -36,11 +31,9 @@ function main() {
   ensureDir(path.join(distDir, 'privacy-policy'));
   fs.writeFileSync(path.join(distDir, 'privacy-policy', 'index.html'), renderPolicyPage({ title: 'Privacy Policy', text: privacyText, url: '/privacy-policy/' }));
 
-  for (const staticFile of ['robots.txt', '_headers', '_redirects']) {
+  for (const staticFile of ['robots.txt', '_headers', '_redirects', 'indexnow.txt']) {
     const src = path.resolve(process.cwd(), staticFile);
-    if (fs.existsSync(src)) {
-      fs.copyFileSync(src, path.join(distDir, path.basename(staticFile)));
-    }
+    if (fs.existsSync(src)) fs.copyFileSync(src, path.join(distDir, path.basename(staticFile)));
   }
 
   const targets = loadPageTargets();
@@ -65,4 +58,10 @@ function main() {
   writeAdminPage(distDir);
 }
 
-main();
+try {
+  main();
+  process.exit(0);
+} catch (err) {
+  console.error(err && err.stack ? err.stack : err);
+  process.exit(1);
+}

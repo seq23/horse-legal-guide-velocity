@@ -17,7 +17,6 @@ function writeAdminPage(distDir) {
   <span class="eyebrow">Internal review</span>
   <h1>Draft Review Admin</h1>
   <p class="muted">Manual review dashboard for queued drafts. Publishing mode remains manual. This page is a lightweight static review surface, not a CMS.</p>
-  <p class="muted"><strong>Important:</strong> update the admin password hash and the GitHub repo URL before live deployment.</p>
 </header>
 <section>
   <h2>System summary</h2>
@@ -49,6 +48,7 @@ function writeAdminPage(distDir) {
     <option value="deep_authority">Deep authority</option>
   </select>
   <div id="draft-count" class="muted"></div>
+  <div id="draft-summary" class="muted"></div>
   <h3>Pending approval</h3>
   <div id="draft-list"></div>
   <h3>Needs revision</h3>
@@ -79,23 +79,23 @@ function githubLink(item) {
   if (!item.github_path) return '#';
   const base = ${JSON.stringify(config.github_repo_url)};
   if (!base || base.includes('REPLACE_OWNER') || base.includes('REPLACE_REPO')) return '#';
-  return base.replace(/\/$/, '') + '/blob/main/' + item.github_path;
+  return (base.endsWith('/') ? base.slice(0, -1) : base) + '/blob/main/' + item.github_path;
 }
 function row(item, revision) {
   const git = githubLink(item);
   const gitText = git === '#' ? ' · GitHub link pending repo URL update' : ' · <a href="' + git + '">Open in GitHub</a>';
   const action = revision
-    ? '<p style="margin:8px 0 0;"><strong>Reason:</strong> ' + escape((item.generation_validation?.fails || []).join('; ')) + '</p>'
-    : '<p style="margin:8px 0 0;">Approve one: <code>node scripts/admin/approve_one.js ' + escape(item.entry_id) + '</code></p>';
+    ? '<p style="margin:8px 0 0;"><strong>Reason:</strong> ' + escapeHtml((item.generation_validation?.fails || []).join('; ')) + '</p>'
+    : '<p style="margin:8px 0 0;">Approve one: <code>node scripts/admin/approve_one.js ' + escapeHtml(item.entry_id) + '</code></p>';
   return '<article class="review-card">'
-    + '<h2 style="margin:0 0 8px;">' + escape(item.title) + '</h2>'
-    + '<p class="muted" style="margin:0 0 8px;">' + escape(item.date) + ' · ' + escape(item.content_type) + ' · ' + escape((item.source_cluster || '').replace(/-/g, ' ')) + ' · word count ' + escape(String(item.generation_validation?.word_count || '')) + '</p>'
-    + '<p style="margin:0 0 8px;">' + escape(item.notes || '') + '</p>'
-    + '<p style="margin:0;"><a href="' + escape(item.slug) + '">Scheduled slug</a>' + gitText + '</p>'
+    + '<h2 style="margin:0 0 8px;">' + escapeHtml(item.title) + '</h2>'
+    + '<p class="muted" style="margin:0 0 8px;">' + escapeHtml(item.date) + ' · ' + escapeHtml(item.content_type) + ' · ' + escapeHtml((item.source_cluster || '').replace(/-/g, ' ')) + ' · word count ' + escapeHtml(String(item.generation_validation?.word_count || '')) + '</p>'
+    + '<p style="margin:0 0 8px;">' + escapeHtml(item.notes || '') + '</p>'
+    + '<p style="margin:0;"><strong>Scheduled slug:</strong> <code>' + escapeHtml(item.slug) + '</code>' + gitText + '</p>'
     + action
     + '</article>';
 }
-function escape(value) { return String(value || '').replace(/[&<>\"]/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
+function escapeHtml(value) { return String(value || '').replace(/[&<>\"]/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
 function applyFilters() {
   const q = document.getElementById('draft-search').value.toLowerCase().trim();
   const type = document.getElementById('draft-filter').value;
@@ -105,7 +105,9 @@ function applyFilters() {
   });
   const ready = filtered.filter((item) => (item.generation_validation?.status || 'pass') !== 'fail');
   const revision = filtered.filter((item) => (item.generation_validation?.status || 'pass') === 'fail');
+  const counts = filtered.reduce((acc, item) => { const key = item.content_type || 'unknown'; acc[key] = (acc[key] || 0) + 1; return acc; }, {});
   document.getElementById('draft-count').textContent = ready.length + ' pending approval · ' + revision.length + ' need revision';
+  document.getElementById('draft-summary').textContent = ['insight', 'article', 'whitepaper', 'deep_authority'].map((key) => key + ': ' + (counts[key] || 0)).join(' · ');
   document.getElementById('draft-list').innerHTML = ready.map((item) => row(item, false)).join('');
   document.getElementById('revision-list').innerHTML = revision.map((item) => row(item, true)).join('');
 }
