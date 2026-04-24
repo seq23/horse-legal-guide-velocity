@@ -1,31 +1,60 @@
-const { buildRawSignal, fetchJson } = require('../signal_utils');
-const DEFAULT_TERMS = ['horse lease agreement', 'selling a horse contract', 'boarding liability'];
+const { buildRawSignal, fetchText, slugify } = require('../signal_utils');
+
+function clean(value) {
+  return String(value || '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function extractTitles(html) {
+  const matches = [];
+  const re = /"title":{"runs":\[{"text":"([^"]+)"/g;
+  let m;
+
+  while ((m = re.exec(html)) && matches.length < 40) {
+    const title = clean(m[1]);
+    if (!title || title.length < 10) continue;
+    if (!/(horse|equine|barn|boarding|trainer|sale|lease|liability|contract|insurance)/i.test(title)) continue;
+    matches.push(title);
+  }
+
+  return matches;
+}
+
 async function collect(source) {
-  if (process.env.COLLECT_LIVE_SIGNALS !== "1") return [];
-  const key = process.env.YOUTUBE_API_KEY || process.env.GOOGLE_YOUTUBE_API_KEY;
-  if (!key) return [];
-  const terms = (source.search_terms || DEFAULT_TERMS).slice(0, Number(process.env.SIGNAL_TERMS_PER_SOURCE || 2));
-  const signals = [];
+  const terms = Array.isArray(source.search_terms) ? source.search_terms.slice(0, 4) : [];
+  const rows = [];
+  const seen = new Set();
+
   for (const term of terms) {
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q=${encodeURIComponent(term)}&key=${encodeURIComponent(key)}`;
+    const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(term)}`;
+
     try {
-      const json = await fetchJson(url);
-      for (const item of json.items || []) {
-        const videoId = item.id && item.id.videoId;
-        const snip = item.snippet || {};
-        if (!videoId || !snip.title) continue;
+      const html = await fetchText(url);
+      const titles = extractTitles(html);
+
+      for (const title of titles) {
+        const key = slugify(title);
+        if (seen.has(key)) continue;
+        seen.add(key);
+
         const signal = buildRawSignal(source, {
-          title: snip.title,
-          source_url: `https://www.youtube.com/watch?v=${videoId}`,
-          short_excerpt: snip.description || snip.title,
-          captured_at: snip.publishedAt ? snip.publishedAt.slice(0, 10) : undefined
-        }, signals.length);
-        if (signal) signals.push(signal);
+          title,
+          source_url: url,
+          short_excerpt: title,
+          score: 0,
+          comment_count: 0
+        }, rows.length);
+
+        if (signal) rows.push(signal);
       }
     } catch (err) {
-      console.warn(`[youtube_adapter] ${source.source_key} query failed: ${term} (${err.message})`);
+      console.warn(`[youtube_adapter] failed for ${term}: ${err.message}`);
     }
   }
-  return signals;
+
+  return rows.slice(0, 40);
 }
+
 module.exports = { collect };
