@@ -141,6 +141,40 @@
       margin: 16px 0;
       background: #fffdfa;
     }
+
+    .signal-block {
+      background: #fffdfa;
+      border-color: #cbbba7;
+    }
+    details {
+      background: #fffdfa;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin: 10px 0;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 650;
+      color: var(--accent);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      background: #fffdfa;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 12px;
+    }
+    tr:last-child td { border-bottom: 0; }
+
     code {
       background: rgba(93, 70, 52, 0.08);
       border-radius: 6px;
@@ -171,6 +205,15 @@
   <p><strong>Velocity domain:</strong> <a href="https://horselegalguide.com">https://horselegalguide.com</a></p>
   <p><strong>GitHub repo:</strong> <a href="https://github.com/seq23/horse-legal-guide-velocity">https://github.com/seq23/horse-legal-guide-velocity</a></p>
   <p><strong>Daily:</strong> insight · <strong>Weekly:</strong> article · <strong>Monthly:</strong> whitepaper · <strong>Quarterly:</strong> deep_authority</p>
+</section>
+<section>
+  <h2>Ingestion status</h2>
+  <p><strong>New Signals:</strong> 263 · <strong>Promoted Signals:</strong> 262 · <strong>Ignored Signals:</strong> 0 · <strong>Strengthened Pages:</strong> 262</p>
+  <p class="muted">Source Mix and cluster status are generated from metadata-only signals. Raw user posts are not shown publicly.</p>
+  <ul>
+    <li>reddit_equestrian: 30</li><li>reddit_horses: 30</li><li>forum_the_horse_forum: 29</li><li>forum_chronicle_of_the_horse: 29</li><li>google_paa_manual_or_provider: 29</li><li>serp_competitor_research: 29</li><li>youtube_search_comments: 29</li><li>instagram_public_social_framing: 29</li><li>quora_question_patterns: 29</li>
+  </ul>
+  <p><a href="/coverage/">Open coverage map</a> · <a href="/reference/">Open reference index</a></p><p class="muted">Audit artifacts: <code>/reference/index.json</code> · <code>/reference/signal_trace.json</code> · <code>/reference/fanout/</code> · <code>/reference/llm.txt</code></p>
 </section>
 <section>
   <h2>Bulk approval commands</h2>

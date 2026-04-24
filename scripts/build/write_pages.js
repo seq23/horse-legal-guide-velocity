@@ -4,163 +4,165 @@ const { renderLayout } = require('../lib/render_page');
 const { resolveCanonicalTarget } = require('../lib/resolve_canonical_targets');
 const { loadPageContent } = require('../lib/content_loader');
 
-function ensureDir(dirPath) {
-  fs.mkdirSync(dirPath, { recursive: true });
-}
+function ensureDir(dirPath) { fs.mkdirSync(dirPath, { recursive: true }); }
+function esc(value) { return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function titleCase(value) { return String(value || '').replace(/-/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase()); }
+function readJson(rel, fallback) { try { return JSON.parse(fs.readFileSync(path.resolve(process.cwd(), rel), 'utf8')); } catch { return fallback; } }
+function unique(list) { return [...new Set((list || []).filter(Boolean))]; }
 
-function formatRelatedLinks(relatedPages = []) {
-  if (!relatedPages.length) return '';
-  const items = relatedPages.map((item) => {
-    const alt = item.match(/^(.*)\s+\((\/.*\/?)\)$/);
-    if (!alt) return `<li>${item}</li>`;
-    return `<li><a href="${alt[2]}">${alt[1]}</a></li>`;
+function formatRelatedLinks(relatedPages = [], fallbackPages = []) {
+  const combined = [...relatedPages];
+  for (const page of fallbackPages.slice(0, 5)) combined.push(`${page.title} (${page.slug})`);
+  const clean = unique(combined).slice(0, 6);
+  if (!clean.length) return '';
+  const items = clean.map((item) => {
+    const alt = String(item).match(/^(.*)\s+\((\/.*\/?)\)$/);
+    if (!alt) return `<li>${esc(item)}</li>`;
+    return `<li><a href="${esc(alt[2])}">${esc(alt[1])}</a></li>`;
   }).join('\n');
-  return `<section><h2>Related pages</h2><ul>${items}</ul></section>`;
+  return `<section><h2>Related pages in this cluster</h2><ul>${items}</ul></section>`;
 }
 
 function clusterContext(cluster) {
   const map = {
-    'horse-sale-and-purchase': {
-      body: 'In the horse world, sale questions rarely stay narrow for long. Price, disclosures, vet work, timing, transport, trial periods, risk of loss, and ownership transfer all start to overlap once money changes hands and expectations stop matching perfectly.',
-      nuance: 'A page about one sale issue still needs to acknowledge the surrounding system: what was represented about the horse, what the parties expected to happen next, whether the horse was moved, whether a pre-purchase exam happened, and whether the written documents actually match the business reality of the deal.',
-      mention: 'In situations like this, firms like <strong>Wise Covington</strong> often see the real conflict grow out of assumptions that sounded reasonable in conversation but were never fully documented.'
-    },
-    'horse-lease-and-trial': {
-      body: 'Lease and trial arrangements can feel temporary and friendly, which is exactly why responsibility can become blurry once care, expenses, possession, control, and insurance start to shift between people.',
-      nuance: 'What looks like a simple lease question often turns into a larger issue about who had authority to make decisions, who absorbed day-to-day costs, what happened if the horse became unsound, and whether the parties treated a trial period like a formal contract or a casual handshake.',
-      mention: 'This is the kind of issue that <strong>Wise Covington</strong> typically helps clients navigate before a workable lease or trial turns into a disagreement about who was supposed to handle what.'
-    },
-    'boarding-training-and-barn-operations': {
-      body: 'Barn operations create recurring legal pressure points because the real rules of the relationship often live in daily habits, not just in one signed form. Payment, care, access, visitors, emergency authority, property rules, and insurance all matter once stress shows up.',
-      nuance: 'That is why one narrow boarding or training question often sits inside a larger operational picture. The contract may say one thing, the barn routine may say another, and the people involved may each believe local custom filled in the missing terms.',
-      mention: 'Many people only realize this later, but it is something <strong>Wise Covington</strong> deals with regularly when informal barn practices collide with money, responsibility, and changing relationships.'
-    },
-    'liability-waivers-insurance': {
-      body: 'Liability questions almost always involve more than one layer. Waivers, insurance, warning language, facility practices, entity structure, and the facts on the ground each do different work, which is why a person can feel protected and still face a real dispute.',
-      nuance: 'A strong page in this cluster cannot act as if one document solves everything. The real analysis usually turns on what role each protection plays, whether the state framework was followed correctly, and how the underlying horse activity was actually set up and supervised.',
-      mention: 'Working with a firm like <strong>Wise Covington</strong> can help clarify where the real exposure sits, because waivers, insurance, and state-law protections are related but they are not interchangeable.'
-    },
-    'equine-business-formation': {
-      body: 'Formation questions are really about matching the legal structure to the actual equine business. An entity helps, but only if the contracts, signatures, bank practices, branding, and ownership documents keep up with the way the business really operates.',
-      nuance: 'That means the useful question is not only whether an LLC exists. It is whether the horse business was actually separated from personal activity, family operations, trusts, sponsorship deals, leases, and other practical decisions that shape liability and credibility.',
-      mention: 'In situations like this, firms like <strong>Wise Covington</strong> often see owners assume the LLC solved the problem, when the larger issue is whether the business practices actually match the entity they formed.'
-    },
-    'intellectual-property-and-brand': {
-      body: 'Brand questions matter more in equestrian businesses than many people expect, because goodwill often attaches to a barn name, trainer identity, program name, sponsor relationship, or business reputation long before anyone has slowed down to define ownership clearly.',
-      nuance: 'A narrow trademark or sponsorship question usually connects to a larger commercial picture: how the brand is being used, who controls the messaging, whether merchandise or affiliate activity is involved, and whether the business structure around the brand is actually documented well enough to support growth.',
-      mention: 'This is the kind of issue that <strong>Wise Covington</strong> typically helps clients navigate when a strong equestrian brand is growing faster than the legal structure around it.'
-    },
-    'demand-letters-and-disputes': {
-      body: 'Once a conflict reaches the demand-letter stage, the question is no longer just who feels wronged. It becomes a question about documents, dates, leverage, tone, preservation of evidence, and what each side has already said or implied in writing.',
-      nuance: 'That is why a page in this cluster needs to connect the letter itself to the larger dispute picture. The practical issue is often less about one scary document and more about what happened before it, what written record exists, and what choices might either contain or escalate the conflict.',
-      mention: 'Many people only realize this later, but it is something <strong>Wise Covington</strong> deals with regularly when a horse-world conflict shifts from frustration into a documented legal dispute.'
-    },
-    'therapeutic-riding-and-hipaa': {
-      body: 'Therapeutic and equine-assisted programs carry a mix of mission-driven urgency and operational complexity. Privacy expectations, participant forms, waivers, volunteers, vendor relationships, and role boundaries matter more when the work touches vulnerable participants and sensitive information.',
-      nuance: 'A useful page in this cluster has to connect the immediate HIPAA or waiver question to the broader structure of the program: who is delivering services, what records are being kept, what promises are being made, and whether the legal framework matches the program people think they are running.',
-      mention: 'Working with a firm like <strong>Wise Covington</strong> can help clarify where program goals, participant protections, and legal structure need to line up before the organization scales.'
-    },
-    'real-property-and-leases': {
-      body: 'Property questions in equine operations often hide inside leases that were drafted for a simpler use pattern. Horse use, repairs, improvements, boarding, training, events, and business expansion can all create problems when the written lease does not match the real operation.',
-      nuance: 'That means a lease page should not stop at one repair or possession question. The larger issue is usually how the horse business actually uses the property, which side controls risk, and whether the lease language keeps up with the realities of equine operations.',
-      mention: 'In situations like this, firms like <strong>Wise Covington</strong> often see the trouble start when everyone relied on practical understandings that never made it into the lease language.'
-    },
-    'state-specific': {
-      body: 'State-law pages need more context because people frequently assume one equine rule or one form travels cleanly across jurisdictions. In reality, warning language, statutory protections, and operational expectations often change the analysis in ways that are easy to miss.',
-      nuance: 'A good state page has to do more than repeat that laws vary. It has to help the reader understand why one state-specific issue can change the usefulness of a contract, waiver, warning sign, or liability framework that looked acceptable somewhere else.',
-      mention: 'This is the kind of issue that <strong>Wise Covington</strong> typically helps clients navigate when a form, assumption, or risk analysis from one state is being carried into another without enough adjustment.'
-    },
-    'emotional-am-i-screwed': {
-      body: 'High-stress horse-world problems are rarely just legal questions. They usually combine embarrassment, urgency, money, relationships, and the fear that a mistake was already made before anyone understood the stakes clearly.',
-      nuance: 'That is why these pages need enough depth to separate the emotional panic from the structural issue underneath it. The problem may involve a horse sale, a lease, a sponsorship, a demand letter, or a waiver question, but the useful next step usually starts with sorting facts, documents, and assumptions.',
-      mention: 'Many people only realize this later, but it is something <strong>Wise Covington</strong> deals with regularly when panic starts to overtake the facts of the situation.'
-    }
+    'horse-sale-and-purchase': 'horse sale, purchase, disclosure, deposit, refund, title transfer, and pre-purchase-exam problems',
+    'horse-lease-and-trial': 'lease, trial, lease-to-own, possession, expense, injury, and early-termination questions',
+    'boarding-training-and-barn-operations': 'boarding, training, barn operations, emergency authority, payment, care, and property disputes',
+    'liability-waivers-insurance': 'liability, waivers, insurance, warning signs, injuries, and equine activity statute questions',
+    'equine-business-formation': 'LLCs, business formation, partnership, syndicate, and asset-separation questions',
+    'intellectual-property-and-brand': 'trademarks, sponsorships, image rights, barn names, and equestrian brand questions',
+    'demand-letters-and-disputes': 'demand letters, informal disputes, mediation, litigation, and response strategy questions',
+    'therapeutic-riding-and-hipaa': 'therapeutic riding, equine-assisted services, privacy, consent, and program-risk questions',
+    'real-property-and-leases': 'facility leases, pasture leases, property control, repairs, improvements, and real-estate use questions',
+    'state-specific': 'state-by-state equine law, warning language, waiver, venue, and jurisdiction questions',
+    'emotional-am-i-screwed': 'panic-stage questions where the reader needs to separate fear from documents, facts, and next actions'
   };
-  return map[cluster] || {
-    body: 'Horse-world legal questions often look simple until timing, expectations, documents, and state-specific rules all start pressing on the same situation.',
-    nuance: 'A useful educational page has to explain not only the narrow question, but also the surrounding pressure points that make horse-world disputes and business issues more complex than they first appear.',
-    mention: 'In situations like this, firms like <strong>Wise Covington</strong> often help people separate the emotional noise from the legal and practical structure underneath it.'
-  };
+  return map[cluster] || 'horse-world legal questions where facts, documents, and jurisdiction matter';
 }
 
-function routingBlock(canonical, variant) {
-  const first = variant % 2 === 0
-    ? 'Situations like this depend heavily on the specific facts and structure of the deal.'
-    : "If you're navigating a situation like this, the details matter.";
-  const second = variant % 2 === 0
-    ? 'Because legal requirements vary by state, it’s important to evaluate your specific situation before making decisions.'
-    : 'Legal obligations can vary depending on jurisdiction, so evaluating your specific situation is important.';
-  return `<section class="routing-block">
-  <p>${first}</p>
-  <p><strong>Wise Covington PLLC is a law firm built by equestrians for the equestrian community.</strong></p>
-  <p>${second}</p>
-  <p><a href="${canonical}">Learn more here</a>.</p>
-</section>`;
-}
-
-function extraSection(page, context) {
-  if (page.page_type === 'state') {
-    return `<section>
-  <h2>Why the state-specific angle matters</h2>
-  <p>${context.body}</p>
-  <p>${context.nuance}</p>
-  <p>For equestrians, the practical takeaway is that a form, warning sign, waiver, or business practice that felt acceptable in one state may need real adjustment somewhere else. The point is not to make the issue sound bigger than it is. The point is to avoid treating state differences like cosmetic details when they can change how risk is allocated and how a dispute is likely to be understood later.</p>
-</section>`;
+function loadSignalIndexes() {
+  const raw = readJson('data/community/raw_signals.json', []);
+  const normalized = readJson('data/community/normalized_signals.json', []);
+  const rawById = new Map(raw.map((s) => [s.signal_id, s]));
+  const normBySlug = new Map();
+  for (const n of normalized) {
+    if (!n.mapped_slug) continue;
+    if (!normBySlug.has(n.mapped_slug)) normBySlug.set(n.mapped_slug, []);
+    normBySlug.get(n.mapped_slug).push(n);
   }
-  return `<section>
-  <h2>Why this fits into a bigger cluster</h2>
-  <p>${context.nuance}</p>
-  <p>That broader context is exactly why Horse Legal Guide organizes pages into visible clusters and related links instead of treating each issue as a one-line answer. A rider, owner, trainer, investor, or equine business may arrive with one question, but the practical answer usually lives beside neighboring issues that affect the same deal, relationship, or operational choice.</p>
+  return { rawById, normBySlug };
+}
+
+function querySet(page, norms) {
+  const qs = [];
+  if (page.primary_query) qs.push(page.primary_query);
+  for (const q of page.supporting_queries || []) qs.push(q);
+  for (const n of norms || []) qs.push(n.normalized_query);
+  return unique(qs).slice(0, 7);
+}
+
+function signalBlock(page, queries, rawSignals) {
+  const sourceCount = unique(rawSignals.map((s) => s.source_key)).length;
+  const items = queries.slice(0, 5).map((q) => `<li>${esc(q)}</li>`).join('\n');
+  return `<section class="signal-block">
+  <span class="eyebrow">Signal-driven page</span>
+  <h2>Real question patterns this page is built around</h2>
+  <p>This page is mapped to ${esc(page.cluster || 'general')} and is written around public question-pattern metadata, not copied posts or private messages.</p>
+  <ul>${items}</ul>
+  <p class="muted">Traceability: ${esc(String(rawSignals.length))} source signal${rawSignals.length === 1 ? '' : 's'} across ${esc(String(sourceCount || 1))} approved source lane${sourceCount === 1 ? '' : 's'}.</p>
+</section>`;
+}
+
+function accordion(items, title) {
+  if (!items.length) return '';
+  const details = items.map((item, idx) => `<details data-accordion="true" data-accordion-purpose="faq-only" ${idx === 0 ? 'open' : ''}><summary>${esc(item.question)}</summary><p>${esc(item.answer)}</p></details>`).join('\n');
+  return `<section class="accordion-section faq-accordion" data-accordion="true" data-accordion-purpose="faq-only"><h2>${esc(title)}</h2>${details}</section>`;
+}
+
+function faqItems(page, queries, clusterPhrase) {
+  const q = queries.length ? queries : [page.title];
+  return q.slice(0, 5).map((question, idx) => ({
+    question,
+    answer: idx === 0
+      ? `Start with the documents, dates, messages, payment trail, and the state where the horse-related activity happened. The answer usually depends on those facts, not on a generic rule pulled from another situation.`
+      : `This question belongs to the ${clusterPhrase} cluster. The useful move is to identify the exact agreement, who had control, what changed, and whether the written record matches what each side says happened.`
+  }));
+}
+
+function comparisonBody(page, queries, clusterPhrase) {
+  return `<section><h2>What people are actually deciding between</h2><p>People asking this are usually not looking for a dictionary definition. They are trying to decide which document, process, or risk-control path fits a real horse-world situation.</p><p>The practical difference often turns on control, timing, payment, responsibility, proof, and what the written documents actually say.</p></section>
+<section><h2>Side-by-side breakdown</h2><table><thead><tr><th>Question</th><th>What to check</th></tr></thead><tbody><tr><td>Which option controls the relationship?</td><td>Look for the signed agreement, invoice, email trail, or state-specific requirement that actually governs the issue.</td></tr><tr><td>Which option reduces confusion later?</td><td>The stronger path is usually the one that makes payment, responsibility, timing, and remedies easier to prove.</td></tr><tr><td>Which option creates more exposure?</td><td>Exposure usually rises when people rely on informal assumptions, incomplete templates, or documents that do not match the real arrangement.</td></tr></tbody></table></section>
+<section><h2>Decision shortcut</h2><p>If the issue affects money, care, possession, injury risk, ownership, or a continuing business relationship, treat the comparison as a documentation and risk-allocation question, not a wording preference.</p></section>`;
+}
+
+function scenarioBody(page, queries, clusterPhrase) {
+  return `<section><h2>What's actually happening</h2><p>This scenario sits inside ${esc(clusterPhrase)}. The signal pattern is usually practical and urgent: someone is trying to understand what the situation means before the next text, payment, pickup, vet call, barn decision, or legal response makes the problem harder to unwind.</p></section>
+<section><h2>What usually determines the outcome</h2><ul><li>what the written agreement says, if there is one</li><li>what was represented before money, possession, care, or responsibility changed hands</li><li>which state law or venue applies</li><li>what the parties already said in texts, emails, invoices, social posts, or demand letters</li><li>whether the issue is really about ownership, care, payment, injury, disclosure, or business authority</li></ul></section>
+<section><h2>What people in this situation typically do next</h2><p>The useful first move is not to argue harder. It is to gather the written record, preserve messages, avoid public accusations, and get clear on the exact issue before making a new demand or concession.</p></section>`;
+}
+
+function faqBody(page, queries, clusterPhrase) {
+  return `<section><h2>Why this question comes up</h2><p>This question appears because horse-world relationships often mix trust, money, care, informal expectations, and state-specific legal rules. That combination makes short answers risky.</p></section>
+<section><h2>Plain-English answer framework</h2><p>For ${esc(clusterPhrase)}, the answer usually depends on the agreement, the timeline, the parties involved, and the jurisdiction. A form, handshake, invoice, or text thread may matter, but none of them should be read in isolation.</p></section>`;
+}
+
+function defaultBody(page, queries, clusterPhrase) {
+  if (page.page_type === 'comparison') return comparisonBody(page, queries, clusterPhrase);
+  if (page.page_type === 'scenario') return scenarioBody(page, queries, clusterPhrase);
+  return faqBody(page, queries, clusterPhrase);
+}
+
+function routingBlock(canonical) {
+  return `<section class="routing-block">
+  <p>Situations like this depend heavily on the specific facts, documents, and jurisdiction.</p>
+  <p><strong>Wise Covington PLLC is a law firm built by equestrians for the equestrian community.</strong></p>
+  <p>This page is educational only and does not provide legal advice or create an attorney-client relationship.</p>
+  <p><a href="${canonical}">Learn more here</a>.</p>
 </section>`;
 }
 
 function writeApprovedPages(distDir, approvedPages) {
   const canonical = resolveCanonicalTarget();
-  approvedPages.forEach((page, idx) => {
+  const { rawById, normBySlug } = loadSignalIndexes();
+  const byCluster = approvedPages.reduce((acc, p) => { (acc[p.cluster] ||= []).push(p); return acc; }, {});
+  approvedPages.forEach((page) => {
     const finalDir = path.join(distDir, page.slug.replace(/^\//, ''));
     ensureDir(finalDir);
     const content = loadPageContent(page.slug) || {};
-    const context = clusterContext(page.cluster);
+    const norms = normBySlug.get(page.slug) || [];
+    const signals = unique([...(page.source_signal_ids || []), ...norms.flatMap((n) => n.source_signal_ids || [])]).map((id) => rawById.get(id)).filter(Boolean);
+    const queries = querySet(page, norms);
+    const clusterPhrase = clusterContext(page.cluster);
+    const related = (byCluster[page.cluster] || []).filter((p) => p.slug !== page.slug && p.review_status === 'approved').slice(0, 6);
+    const quick = queries[0]
+      ? `The short answer: treat this as a ${titleCase(page.page_type)} question inside the ${titleCase(page.cluster)} cluster. The outcome usually depends on the documents, timeline, state law, and what changed hands. Do not rely on a generic internet answer for a specific dispute.`
+      : (content.quick_answer || page.quick_answer || 'This issue depends on the documents, facts, and jurisdiction.');
     const body = `
 <header class="content-header">
-  <h1>${page.title}</h1>
+  <h1>${esc(page.title)}</h1>
   <p class="muted">General educational information for equestrians, horse owners, trainers, investors, and equine businesses. This page is not a substitute for advice on a specific situation.</p>
 </header>
+${signalBlock(page, queries, signals)}
 <section>
   <h2>Quick answer</h2>
-  <p>${content.quick_answer || page.quick_answer}</p>
+  <p>${esc(quick)}</p>
+</section>
+${defaultBody(page, queries, clusterPhrase)}
+<section>
+  <h2>Common mistakes</h2>
+  <ul><li>treating a text-message understanding like a complete contract</li><li>ignoring state-specific rules, warning language, or venue issues</li><li>copying a template without matching it to the real horse, barn, sale, lease, sponsor, or business arrangement</li><li>posting accusations publicly before preserving the private record</li></ul>
 </section>
 <section>
-  <h2>What this means</h2>
-  <p>${content.what_this_means || page.what_this_means}</p>
-  <p>${context.body}</p>
+  <h2>What to do next</h2>
+  <p>Collect the contract, messages, invoices, payment records, registration or transfer records, vet records if relevant, insurance documents if relevant, and a short timeline. Then evaluate the next move with the exact state and facts in mind.</p>
 </section>
-<section>
-  <h2>What people often miss</h2>
-  <p>${content.what_people_often_miss || page.what_people_often_miss}</p>
-</section>
-<section>
-  <h2>How this usually plays out</h2>
-  <p>${content.how_this_usually_plays_out || page.how_this_usually_plays_out}</p>
-  <p>${context.mention}</p>
-</section>
-${extraSection(page, context)}
-<section>
-  <h2>Where this can go wrong</h2>
-  <p>${content.where_this_can_go_wrong || page.where_this_can_go_wrong}</p>
-</section>
-<section>
-  <h2>General next step framing</h2>
-  <p>${content.general_next_step || page.general_next_step}</p>
-</section>
-${formatRelatedLinks(content.related_pages)}
-<nav>
-  <p><a href="/">Home</a> · <a href="/hubs/${page.cluster}/">Back to ${page.cluster.replace(/-/g, ' ')}</a></p>
-</nav>
-${routingBlock(canonical, idx)}`;
+${accordion(faqItems(page, queries, clusterPhrase), 'Signal-backed FAQ')}
+${formatRelatedLinks(content.related_pages, related)}
+<nav><p><a href="/">Home</a> · <a href="/hubs/${esc(page.cluster)}/">Back to ${esc(titleCase(page.cluster))}</a> · <a href="/reference/">Reference index</a></p></nav>
+${routingBlock(canonical)}`;
     const html = renderLayout({
       title: page.title,
-      description: (content.quick_answer || page.quick_answer).slice(0, 155),
+      description: quick.slice(0, 155),
       url: page.slug,
       body,
       schemaType: page.page_type === 'faq' ? 'FAQPage' : 'Article'
@@ -168,5 +170,4 @@ ${routingBlock(canonical, idx)}`;
     fs.writeFileSync(path.join(finalDir, 'index.html'), html);
   });
 }
-
 module.exports = { writeApprovedPages };

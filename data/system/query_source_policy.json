@@ -1,18 +1,37 @@
 {
-  "weights": {
-    "reddit": 0.35,
-    "equestrian_forums": 0.25,
-    "youtube": 0.15,
-    "quora": 0.10,
-    "facebook_groups": 0.05,
-    "google_paa": 0.05,
-    "competitors": 0.05
+  "approved_sources": [
+    "reddit",
+    "equestrian_forums",
+    "google_paa",
+    "serp_competitors",
+    "youtube",
+    "instagram",
+    "quora"
+  ],
+  "removed_sources": [
+    "facebook_groups"
+  ],
+  "rules": {
+    "no_private_content": true,
+    "no_full_thread_storage": true,
+    "no_user_profile_enrichment": true,
+    "metadata_and_short_excerpt_only": true,
+    "strip_usernames": true,
+    "strip_phone_numbers": true,
+    "strip_emails": true,
+    "strip_addresses": true,
+    "no_captcha_bypass": true,
+    "no_paywall_bypass": true,
+    "legal_advice_disclaimer_required": true
   },
-  "priority_thread_types": [
-    "question",
-    "comparison",
-    "discussion",
-    "problem",
-    "regret"
+  "excerpt_limit_chars": 300,
+  "tier_order": [
+    "reddit",
+    "equestrian_forums",
+    "google_paa",
+    "serp_competitors",
+    "youtube",
+    "instagram",
+    "quora"
   ]
 }

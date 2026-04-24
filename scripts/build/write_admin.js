@@ -9,6 +9,10 @@ function writeAdminPage(distDir) {
   const config = readJson('data/system/config.json');
   const backlog = readJson('data/system/editorial_backlog.json');
   const strategy = readJson('data/system/content_strategy.json');
+  const rawSignals = readJson('data/community/raw_signals.json');
+  const normalizedSignals = readJson('data/community/normalized_signals.json');
+  const publishQueue = readJson('data/community/publish_queue.json');
+  const ingestionReport = fs.existsSync(path.resolve(process.cwd(), 'data/community/ingestion_report.json')) ? readJson('data/community/ingestion_report.json') : null;
   const adminDir = path.join(distDir, 'admin');
   ensureDir(adminDir);
   fs.writeFileSync(path.join(adminDir, 'backlog.json'), JSON.stringify(backlog, null, 2));
@@ -24,6 +28,15 @@ function writeAdminPage(distDir) {
   <p><strong>Velocity domain:</strong> <a href="${config.site_domain}">${config.site_domain}</a></p>
   <p><strong>GitHub repo:</strong> <a href="${config.github_repo_url}">${config.github_repo_url}</a></p>
   <p><strong>Daily:</strong> ${strategy.daily.join(', ')} · <strong>Weekly:</strong> ${strategy.weekly.join(', ')} · <strong>Monthly:</strong> ${strategy.monthly.join(', ')} · <strong>Quarterly:</strong> ${strategy.quarterly.join(', ')}</p>
+</section>
+<section>
+  <h2>Ingestion status</h2>
+  <p><strong>New Signals:</strong> ${rawSignals.length} · <strong>Promoted Signals:</strong> ${publishQueue.filter((q) => q.status === 'approved_for_content').length} · <strong>Ignored Signals:</strong> ${publishQueue.filter((q) => q.status === 'ignored' || q.status === 'rejected').length} · <strong>Strengthened Pages:</strong> ${publishQueue.filter((q) => q.action === 'strengthen_existing_page').length}</p>
+  <p class="muted">Source Mix and cluster status are generated from metadata-only signals. Raw user posts are not shown publicly.</p>
+  <ul>
+    ${Object.entries(rawSignals.reduce((acc, s) => { const key = s.source_key || s.platform || 'unknown'; acc[key] = (acc[key] || 0) + 1; return acc; }, {})).map(([key, value]) => `<li>${key}: ${value}</li>`).join('') }
+  </ul>
+  <p><a href="/coverage/">Open coverage map</a> · <a href="/reference/">Open reference index</a></p><p class="muted">Audit artifacts: <code>/reference/index.json</code> · <code>/reference/signal_trace.json</code> · <code>/reference/fanout/</code> · <code>/reference/llm.txt</code></p>
 </section>
 <section>
   <h2>Bulk approval commands</h2>

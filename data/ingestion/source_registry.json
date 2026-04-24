@@ -1,0 +1,461 @@
+{
+  "sources": [
+    {
+      "platform": "reddit",
+      "source_key": "reddit_equestrian",
+      "display_name": "Reddit r/equestrian",
+      "base_url": "https://www.reddit.com/r/equestrian/",
+      "tier": 1,
+      "access_method": "api_or_public_search",
+      "allowed_fields": [
+        "title",
+        "url",
+        "created_at",
+        "score",
+        "comment_count",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "full_thread_dump",
+        "private_messages",
+        "user_profile_enrichment",
+        "username_targeting"
+      ],
+      "weight": 1,
+      "cadence": "daily",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability",
+        "buyer wants refund horse",
+        "horse misrepresented sale",
+        "horse boarding unpaid bills",
+        "equine liability waiver"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_api_or_provider",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "reddit",
+      "source_key": "reddit_horses",
+      "display_name": "Reddit r/horses",
+      "base_url": "https://www.reddit.com/r/horses/",
+      "tier": 1,
+      "access_method": "api_or_public_search",
+      "allowed_fields": [
+        "title",
+        "url",
+        "created_at",
+        "score",
+        "comment_count",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "full_thread_dump",
+        "private_messages",
+        "user_profile_enrichment",
+        "username_targeting"
+      ],
+      "weight": 0.95,
+      "cadence": "daily",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability",
+        "buyer wants refund horse",
+        "horse misrepresented sale",
+        "horse boarding unpaid bills",
+        "equine liability waiver"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_api_or_provider",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "reddit",
+      "source_key": "reddit_legaladvice",
+      "display_name": "Reddit r/legaladvice",
+      "base_url": "https://www.reddit.com/r/legaladvice/",
+      "tier": 1,
+      "access_method": "api_or_public_search",
+      "allowed_fields": [
+        "title",
+        "url",
+        "created_at",
+        "score",
+        "comment_count",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "full_thread_dump",
+        "private_messages",
+        "user_profile_enrichment",
+        "username_targeting"
+      ],
+      "weight": 0.9,
+      "cadence": "daily",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability",
+        "buyer wants refund horse",
+        "horse misrepresented sale",
+        "horse boarding unpaid bills",
+        "equine liability waiver"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_api_or_provider",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "reddit",
+      "source_key": "reddit_smallbusiness",
+      "display_name": "Reddit r/smallbusiness",
+      "base_url": "https://www.reddit.com/r/smallbusiness/",
+      "tier": 1,
+      "access_method": "api_or_public_search",
+      "allowed_fields": [
+        "title",
+        "url",
+        "created_at",
+        "score",
+        "comment_count",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "full_thread_dump",
+        "private_messages",
+        "user_profile_enrichment",
+        "username_targeting"
+      ],
+      "weight": 0.75,
+      "cadence": "daily",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability",
+        "buyer wants refund horse",
+        "horse misrepresented sale",
+        "horse boarding unpaid bills",
+        "equine liability waiver"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_api_or_provider",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "reddit",
+      "source_key": "reddit_farming_ranching",
+      "display_name": "Reddit r/farming + r/ranching",
+      "base_url": "https://www.reddit.com/search/?q=horse%20legal%20ranching%20farming",
+      "tier": 1,
+      "access_method": "api_or_public_search",
+      "allowed_fields": [
+        "title",
+        "url",
+        "created_at",
+        "score",
+        "comment_count",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "full_thread_dump",
+        "private_messages",
+        "user_profile_enrichment",
+        "username_targeting"
+      ],
+      "weight": 0.7,
+      "cadence": "daily",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability",
+        "buyer wants refund horse",
+        "horse misrepresented sale",
+        "horse boarding unpaid bills",
+        "equine liability waiver"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_api_or_provider",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "equestrian_forums",
+      "source_key": "forum_the_horse_forum",
+      "display_name": "The Horse Forum",
+      "base_url": "https://www.horseforum.com/",
+      "tier": 1,
+      "access_method": "public_thread_metadata_or_manual_import",
+      "allowed_fields": [
+        "thread_title",
+        "url",
+        "created_at",
+        "reply_count",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "full_thread_dump",
+        "login_only_content",
+        "private_messages",
+        "user_profile_enrichment"
+      ],
+      "weight": 1,
+      "cadence": "2-3x_weekly",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_provider_when_configured",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "equestrian_forums",
+      "source_key": "forum_chronicle_of_the_horse",
+      "display_name": "Chronicle of the Horse Forums",
+      "base_url": "https://forum.chronofhorse.com/",
+      "tier": 1,
+      "access_method": "public_thread_metadata_or_manual_import",
+      "allowed_fields": [
+        "thread_title",
+        "url",
+        "created_at",
+        "reply_count",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "full_thread_dump",
+        "login_only_content",
+        "private_messages",
+        "user_profile_enrichment"
+      ],
+      "weight": 1,
+      "cadence": "2-3x_weekly",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_provider_when_configured",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "equestrian_forums",
+      "source_key": "forum_horse_and_hound",
+      "display_name": "Horse & Hound Forums",
+      "base_url": "https://forums.horseandhound.co.uk/",
+      "tier": 1,
+      "access_method": "public_thread_metadata_or_manual_import",
+      "allowed_fields": [
+        "thread_title",
+        "url",
+        "created_at",
+        "reply_count",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "full_thread_dump",
+        "login_only_content",
+        "private_messages",
+        "user_profile_enrichment"
+      ],
+      "weight": 0.9,
+      "cadence": "2-3x_weekly",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_provider_when_configured",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "google_paa",
+      "source_key": "google_paa_manual_or_provider",
+      "display_name": "Google People Also Ask / Search surfaces",
+      "base_url": "https://www.google.com/search",
+      "tier": 1,
+      "access_method": "manual_export_or_approved_serp_provider",
+      "allowed_fields": [
+        "question",
+        "url",
+        "title",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "captcha_bypass",
+        "forbidden_scraping",
+        "full_result_copy"
+      ],
+      "weight": 0.85,
+      "cadence": "monthly",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract legal questions",
+        "horse lease agreement legal questions",
+        "horse boarding liability questions"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_api_or_provider",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "serp_competitors",
+      "source_key": "serp_competitor_research",
+      "display_name": "SERP competitor headings and FAQ patterns",
+      "base_url": "https://www.google.com/search",
+      "tier": 1,
+      "access_method": "manual_research_or_approved_serp_provider",
+      "allowed_fields": [
+        "url",
+        "title",
+        "headings",
+        "faq_question_patterns",
+        "topic_gap"
+      ],
+      "disallowed_fields": [
+        "copied_body_text",
+        "paywalled_content",
+        "captcha_bypass"
+      ],
+      "weight": 0.8,
+      "cadence": "monthly",
+      "status": "active",
+      "search_terms": [
+        "equine law horse sale contract",
+        "equine liability boarding agreement",
+        "horse lease legal agreement"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_api_or_provider",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "youtube",
+      "source_key": "youtube_search_comments",
+      "display_name": "YouTube search + comments",
+      "base_url": "https://www.youtube.com/results",
+      "tier": 2,
+      "access_method": "youtube_data_api_or_manual_export",
+      "allowed_fields": [
+        "video_title",
+        "url",
+        "description_summary",
+        "comment_question_pattern"
+      ],
+      "disallowed_fields": [
+        "bulk_comment_dump",
+        "profile_enrichment",
+        "private_content"
+      ],
+      "weight": 0.65,
+      "cadence": "weekly",
+      "status": "active",
+      "search_terms": [
+        "horse lease agreement",
+        "selling a horse contract",
+        "boarding liability"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_api_or_provider",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "instagram",
+      "source_key": "instagram_public_social_framing",
+      "display_name": "Instagram public social framing",
+      "base_url": "https://www.instagram.com/",
+      "tier": 2,
+      "access_method": "compliant_public_tooling_or_manual_export",
+      "allowed_fields": [
+        "caption_question_pattern",
+        "url",
+        "short_excerpt"
+      ],
+      "disallowed_fields": [
+        "login_wall_scraping",
+        "private_account_content",
+        "bulk_comment_dump",
+        "user_profile_enrichment"
+      ],
+      "weight": 0.45,
+      "cadence": "weekly",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_provider_when_configured",
+        "manual_import_fallback": true
+      }
+    },
+    {
+      "platform": "quora",
+      "source_key": "quora_question_patterns",
+      "display_name": "Quora public question pages",
+      "base_url": "https://www.quora.com/",
+      "tier": 2,
+      "access_method": "public_question_metadata_or_manual_import",
+      "allowed_fields": [
+        "question_title",
+        "url",
+        "topic_pattern"
+      ],
+      "disallowed_fields": [
+        "answer_body_copy",
+        "login_wall_scraping",
+        "user_profile_enrichment"
+      ],
+      "weight": 0.55,
+      "cadence": "weekly",
+      "status": "active",
+      "search_terms": [
+        "horse sale contract",
+        "horse lease agreement",
+        "boarding barn liability"
+      ],
+      "automation": {
+        "enabled": true,
+        "mode": "automatic_provider_when_configured",
+        "manual_import_fallback": true
+      }
+    }
+  ]
+}

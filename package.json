@@ -31,6 +31,10 @@
     "approve:filter": "node scripts/admin/approve_by_filter.js",
     "reject:one": "node scripts/admin/reject_one.js",
     "validate:editorial": "node _ops/validators/validate_editorial_system.js",
-    "validate:public-surfaces": "node _ops/validators/validate_public_surfaces.js"
+    "validate:public-surfaces": "node _ops/validators/validate_public_surfaces.js",
+    "normalize:signals": "node scripts/community/normalize_signals.js",
+    "map:signals": "node scripts/community/map_signals_to_targets.js",
+    "report:ingestion": "node scripts/community/generate_ingestion_report.js",
+    "ingest:manual": "npm run collect:signals && npm run normalize:signals && npm run map:signals && npm run report:ingestion"
   }
 }
