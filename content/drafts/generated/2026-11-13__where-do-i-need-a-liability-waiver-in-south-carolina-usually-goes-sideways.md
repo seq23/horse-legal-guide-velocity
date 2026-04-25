@@ -68,9 +68,9 @@ That is a much better test than asking whether the deal feels friendly today.
 
 
 ## Related links
-- [Do I Need a Horse Sale Contract in North Carolina?](/state/north-carolina/do-i-need-a-horse-sale-contract/)
-- [What Does North Carolina Equine Liability Law Cover?](/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/)
-- [What Does Illinois Equine Liability Law Cover?](/state/illinois/what-does-illinois-equine-liability-law-cover/)
+- [A contract has no state law clause. Why can that matter?](/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/)
+- [A horse sale crossed state lines. What should be reviewed?](/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/)
+- [A seller relied on a verbal as-is statement. What should be reviewed?](/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

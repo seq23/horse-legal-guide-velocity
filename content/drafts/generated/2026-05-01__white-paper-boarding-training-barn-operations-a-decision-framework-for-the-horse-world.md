@@ -89,9 +89,9 @@ For a horse-world audience, that plain-English system view is more useful than e
 
 
 ## Related links
-- [What Should Be Included in a Horse Boarding Agreement?](/boarding/what-should-be-included-in-a-horse-boarding-agreement/)
-- [What Should Be Included in a Training Agreement?](/boarding/what-should-be-included-in-a-training-agreement/)
-- [What Legal Documents Do I Need to Run a Boarding Barn?](/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/)
+- [Boarder default notice vs demand letter](/compare/boarder-default-notice-vs-demand-letter/)
+- [Boarding agreement vs training agreement](/compare/boarding-agreement-vs-training-agreement/)
+- [Boarding lien rights vs collections lawsuit](/compare/boarding-lien-rights-vs-collections-lawsuit/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

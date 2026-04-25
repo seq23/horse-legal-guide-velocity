@@ -69,8 +69,8 @@ That is a much better test than asking whether the deal feels friendly today.
 
 ## Related links
 - [Can I Run a Horse Business Under My Lease?](/leases/can-i-run-a-horse-business-under-my-lease/)
-- [Who Is Responsible for Repairs in a Barn Lease?](/leases/who-is-responsible-for-repairs-in-a-barn-lease/)
 - [What Liability Applies in a Horse Property Lease?](/leases/what-liability-applies-in-a-horse-property-lease/)
+- [Who Is Responsible for Repairs in a Barn Lease?](/leases/who-is-responsible-for-repairs-in-a-barn-lease/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

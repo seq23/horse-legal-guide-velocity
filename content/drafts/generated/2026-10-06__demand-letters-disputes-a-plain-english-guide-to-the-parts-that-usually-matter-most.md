@@ -75,9 +75,9 @@ The final checkpoint is whether the people involved were relying on shared assum
 
 
 ## Related links
-- [What Should I Do If I Receive a Demand Letter?](/disputes/what-should-i-do-if-i-receive-a-demand-letter/)
-- [How Serious Is a Legal Demand Letter?](/disputes/how-serious-is-a-legal-demand-letter/)
-- [Can I Ignore a Demand Letter?](/disputes/can-i-ignore-a-demand-letter/)
+- [Demand letter vs informal text dispute](/compare/demand-letter-vs-informal-text-dispute/)
+- [Demand Letter vs Lawsuit](/compare/demand-letter-vs-lawsuit/)
+- [Demand Letter vs Lawsuit in a Horse Dispute](/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

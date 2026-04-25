@@ -75,9 +75,9 @@ The final checkpoint is whether the people involved were relying on shared assum
 
 
 ## Related links
-- [Do I Need a Contract to Sell a Horse?](/faq/do-i-need-a-contract-to-sell-a-horse/)
-- [Do I Need a Contract to Buy a Horse?](/faq/do-i-need-a-contract-to-buy-a-horse/)
-- [What Should Be Included in a Horse Bill of Sale?](/faq/what-should-be-included-in-a-horse-bill-of-sale/)
+- [As-is clause vs disclosure clause in a horse sale](/compare/as-is-clause-vs-disclosure-clause-in-a-horse-sale/)
+- [Bill of sale vs transfer-of-ownership clause](/compare/bill-of-sale-vs-transfer-of-ownership-clause/)
+- [Choice of law clause vs venue clause](/compare/choice-of-law-clause-vs-venue-clause/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

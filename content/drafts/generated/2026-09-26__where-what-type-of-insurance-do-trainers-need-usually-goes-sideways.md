@@ -68,9 +68,9 @@ That is a much better test than asking whether the deal feels friendly today.
 
 
 ## Related links
-- [If Someone Gets Hurt Riding My Horse, Am I Liable?](/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/)
-- [What Does Equine Liability Law Actually Protect Me From?](/liability/what-does-equine-liability-law-actually-protect-me-from/)
-- [Can I Still Be Sued If I Have a Waiver?](/liability/can-i-still-be-sued-if-i-have-a-waiver/)
+- [Do I Need Both a Waiver and Insurance for a Horse Business?](/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/)
+- [Equine activity statute vs negligence claim](/compare/equine-activity-statute-vs-negligence-claim/)
+- [Equine therapy consent form vs liability waiver](/compare/equine-therapy-consent-form-vs-liability-waiver/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

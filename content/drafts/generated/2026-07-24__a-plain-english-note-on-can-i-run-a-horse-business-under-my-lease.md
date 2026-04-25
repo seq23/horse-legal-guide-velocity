@@ -68,9 +68,9 @@ That is a much better test than asking whether the deal feels friendly today.
 
 
 ## Related links
+- [What Liability Applies in a Horse Property Lease?](/leases/what-liability-applies-in-a-horse-property-lease/)
 - [What Should Be Included in a Barn Lease?](/leases/what-should-be-included-in-a-barn-lease/)
 - [Who Is Responsible for Repairs in a Barn Lease?](/leases/who-is-responsible-for-repairs-in-a-barn-lease/)
-- [What Liability Applies in a Horse Property Lease?](/leases/what-liability-applies-in-a-horse-property-lease/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

@@ -68,9 +68,9 @@ That is a much better test than asking whether the deal feels friendly today.
 
 
 ## Related links
-- [What Should I Do If I Receive a Demand Letter?](/disputes/what-should-i-do-if-i-receive-a-demand-letter/)
-- [Can I Ignore a Demand Letter?](/disputes/can-i-ignore-a-demand-letter/)
-- [Do I Need a Lawyer to Respond to a Demand Letter?](/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/)
+- [Demand letter vs informal text dispute](/compare/demand-letter-vs-informal-text-dispute/)
+- [Demand Letter vs Lawsuit](/compare/demand-letter-vs-lawsuit/)
+- [Demand Letter vs Lawsuit in a Horse Dispute](/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

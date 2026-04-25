@@ -89,8 +89,8 @@ For a horse-world audience, that plain-English system view is more useful than e
 
 
 ## Related links
-- [I Sold a Horse Without a Contract — Am I Screwed?](/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/)
-- [I Bought a Horse and Something Is Wrong — What Now?](/scenario/i-bought-a-horse-and-something-is-wrong-what-now/)
+- [Am I Overreacting or Is This Risky?](/scenario/am-i-overreacting-or-is-this-risky/)
+- [Can I Back Out of a Horse Deal Without Getting Sued?](/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/)
 - [Did I Mess Up by Trusting a Handshake Deal?](/scenario/did-i-mess-up-by-trusting-a-handshake-deal/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)

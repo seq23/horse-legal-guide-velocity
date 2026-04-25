@@ -68,9 +68,9 @@ That is a much better test than asking whether the deal feels friendly today.
 
 
 ## Related links
-- [Do I Need an LLC to Start a Horse Business?](/business/do-i-need-an-llc-to-start-a-horse-business/)
-- [How Do I Legally Start a Horse Business?](/business/how-do-i-legally-start-a-horse-business/)
-- [What Legal Documents Do I Need for a Horse Business?](/business/what-legal-documents-do-i-need-for-a-horse-business/)
+- [Business name registration vs trademark filing](/compare/business-name-registration-vs-trademark-filing/)
+- [Equine business contract vs general business contract](/compare/equine-business-contract-vs-general-business-contract/)
+- [Horse co-ownership agreement vs syndicate structure](/compare/horse-co-ownership-agreement-vs-syndicate-structure/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

@@ -68,9 +68,9 @@ That is a much better test than asking whether the deal feels friendly today.
 
 
 ## Related links
-- [I Sold a Horse Without a Contract — Am I Screwed?](/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/)
-- [I Bought a Horse and Something Is Wrong — What Now?](/scenario/i-bought-a-horse-and-something-is-wrong-what-now/)
-- [Is It Too Late to Fix a Bad Horse Sale?](/scenario/is-it-too-late-to-fix-a-bad-horse-sale/)
+- [Am I Overreacting or Is This Risky?](/scenario/am-i-overreacting-or-is-this-risky/)
+- [Can I Back Out of a Horse Deal Without Getting Sued?](/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/)
+- [Do People Actually Get Sued Over Horse Deals Like This?](/scenario/do-people-actually-get-sued-over-horse-deals-like-this/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

@@ -68,8 +68,8 @@ That is a much better test than asking whether the deal feels friendly today.
 
 
 ## Related links
-- [What Should Be Included in a Barn Lease?](/leases/what-should-be-included-in-a-barn-lease/)
 - [Can I Run a Horse Business Under My Lease?](/leases/can-i-run-a-horse-business-under-my-lease/)
+- [What Should Be Included in a Barn Lease?](/leases/what-should-be-included-in-a-barn-lease/)
 - [Who Is Responsible for Repairs in a Barn Lease?](/leases/who-is-responsible-for-repairs-in-a-barn-lease/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)

@@ -89,9 +89,9 @@ For a horse-world audience, that plain-English system view is more useful than e
 
 
 ## Related links
-- [Should I Trademark My Barn Name?](/ip/should-i-trademark-my-barn-name/)
-- [How Do I Protect My Horse Business Brand?](/ip/how-do-i-protect-my-horse-business-brand/)
-- [Trademark vs LLC Name for a Horse Business](/compare/trademark-vs-llc-name-horse-business/)
+- [Equestrian sponsor agreement vs informal email agreement](/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/)
+- [Sponsor deliverables schedule vs general sponsorship promise](/compare/sponsor-deliverables-schedule-vs-general-sponsorship-promise/)
+- [Sponsorship agreement vs brand ambassador agreement](/compare/sponsorship-agreement-vs-brand-ambassador-agreement/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

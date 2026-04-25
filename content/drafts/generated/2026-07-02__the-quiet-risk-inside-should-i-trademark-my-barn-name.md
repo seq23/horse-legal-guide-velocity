@@ -68,9 +68,9 @@ That is a much better test than asking whether the deal feels friendly today.
 
 
 ## Related links
-- [How Do I Protect My Horse Business Brand?](/ip/how-do-i-protect-my-horse-business-brand/)
-- [Trademark vs LLC Name for a Horse Business](/compare/trademark-vs-llc-name-horse-business/)
-- [Do I Need a Trademark for an Equestrian Brand?](/ip/do-i-need-a-trademark-for-an-equestrian-brand/)
+- [Equestrian sponsor agreement vs informal email agreement](/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/)
+- [Sponsor deliverables schedule vs general sponsorship promise](/compare/sponsor-deliverables-schedule-vs-general-sponsorship-promise/)
+- [Sponsorship agreement vs brand ambassador agreement](/compare/sponsorship-agreement-vs-brand-ambassador-agreement/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)

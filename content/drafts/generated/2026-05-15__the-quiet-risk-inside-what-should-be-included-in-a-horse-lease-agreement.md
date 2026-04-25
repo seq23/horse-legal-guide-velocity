@@ -68,9 +68,9 @@ That is a much better test than asking whether the deal feels friendly today.
 
 
 ## Related links
-- [What Is a Horse Trial Agreement?](/leases/what-is-a-horse-trial-agreement/)
-- [Who Is Liable During a Horse Lease?](/leases/who-is-liable-during-a-horse-lease/)
-- [Who Pays Vet Bills in a Horse Lease?](/leases/who-pays-vet-bills-in-a-horse-lease/)
+- [Barn lease vs boarding agreement](/compare/barn-lease-vs-boarding-agreement/)
+- [Boarding contract vs barn lease](/compare/boarding-contract-vs-barn-lease/)
+- [Facility lease vs pasture lease](/compare/facility-lease-vs-pasture-lease/)
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
