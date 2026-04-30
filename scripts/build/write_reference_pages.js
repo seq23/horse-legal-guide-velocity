@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
-const { renderModule } = require('../lib/answer_shape');
+const { renderModule, quickAnswerForPage } = require('../lib/answer_shape');
 const { validatePostRenderPage } = require('./validate_page_contract_post_render');
 const { findManifest, loadPatchForManifest, loadPatchForSlug, applyZoneOperations } = require('../lib/page_patch_utils');
 function ensureDir(p){fs.mkdirSync(p,{recursive:true});}
@@ -42,13 +42,13 @@ function buildReferenceBundle(refDir,candidates,context,options={}){
       const answerShape = renderModule(pageModel);
       let body=`
 <header class="content-header"><span class="eyebrow">Reference surface</span><h1>${esc(entry.primary_query)}</h1><p class="muted">This is a crawlable signal-reference page. It maps one public question pattern to an original educational page without exposing raw user posts.</p></header>
-<section class="quick-answer-block" data-answer-summary="true" data-editable-zone="quick_answer_block"><h2>Quick answer</h2><p><strong>Short answer:</strong> The clean way to think about this question is to identify the agreement, the timeline, the state-specific rule, and what the written record can actually prove before jumping to conclusions.</p></section>
+<section class="quick-answer-block" data-answer-summary="true" data-editable-zone="quick_answer_block"><h2>Quick answer</h2><p><strong>${esc(quickAnswerForPage(pageModel))}</strong></p></section>
 ${answerShape.html.replace('<section class="answer-shape-module"', '<section class="answer-shape-module" data-editable-zone="top_answer_module"')}
 <section data-editable-zone="faq_block"><h2>Question</h2><p>${esc(entry.primary_query)}</p></section>
 <section><h2>Answer route</h2><p>This question is routed to <a href="${esc(targetUrl)}">${esc(target.title||targetUrl)}</a>, where the full educational explanation lives.</p></section>
 <section><h2>Cluster</h2><p>${esc(cluster.replace(/-/g,' '))}</p></section>
 <section><h2>Traceability</h2><p>Source lane count: ${esc(String(sourceKeys.length||1))}. Storage policy: metadata and short excerpt only. Full threads, usernames, private messages, and copied comments are not stored or published.</p></section>
-<section><h2>Clean extraction answer</h2><p>For this type of horse-world legal question, the useful starting point is to identify the agreement, timeline, money or care exchange, documents, state-specific context, and what each side has already said in writing.</p></section>
+<section><h2>Clean extraction answer</h2><p>${pageModel.page_type==='scenario' ? 'Treat this like a triage problem first: identify the controlling document, the timeline, what changed hands, the immediate risk, and the state-specific rule before you decide what to do next.' : 'For this type of horse-world legal question, the useful starting point is to identify the agreement, timeline, money or care exchange, documents, state-specific context, and what each side has already said in writing.'}</p></section>
 <nav data-editable-zone="routing_block"><p><a href="/reference/">Reference index</a> · <a href="${esc(targetUrl)}">Mapped page</a> · <a href="/coverage/">Coverage map</a></p></nav>`;
       body = applyPersistedPatchIfPresent(pageModel, body);
       const html=renderLayout({title:entry.primary_query,description:`Signal reference for ${entry.primary_query}`.slice(0,155),url:`/reference/${slug}/`,body,schemaType:'FAQPage'});

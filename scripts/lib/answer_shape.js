@@ -43,6 +43,15 @@ function requiredTopModuleForFamily(family) {
   return familyMap[family]?.required_top_module || 'top_checklist';
 }
 
+function comparisonSides(page) {
+  const raw = sentenceCase(page.primary_query || page.title || '');
+  const match = raw.split(/\s+vs\.?\s+/i);
+  if (match.length >= 2) {
+    return { left: sentenceCase(match[0]), right: sentenceCase(match.slice(1).join(' vs ')) };
+  }
+  return { left: 'option one', right: 'option two' };
+}
+
 function checklistItems(page, clusterPhrase) {
   return [
     'Identify the controlling document, email trail, invoice, waiver, or policy before arguing about conclusions.',
@@ -64,11 +73,13 @@ function redFlagItems(page) {
 }
 
 function comparisonRows(page) {
+  const sides = comparisonSides(page);
   return [
-    ['What controls the relationship?', 'The stronger option is the one that clearly allocates payment, authority, care duties, and remedies in writing.'],
-    ['What is easier to prove later?', 'Choose the structure that leaves a cleaner paper trail if there is a dispute.'],
-    ['Where does the risk sit?', 'Risk increases when the real arrangement is more complicated than the document people signed.'],
-    ['When does state law matter most?', 'State-specific rules matter most when the dispute affects possession, liability, notices, or enforceability.']
+    ['Best when', `${sides.left} is usually the cleaner fit when the parties need a narrower role, shorter duration, or less transfer of ownership-style risk. ${sides.right} is usually the cleaner fit when the parties need a broader allocation of control, responsibility, and long-term expectations.`],
+    ['Gets risky when', `${sides.left} becomes dangerous when people treat it like ${sides.right} without updating the paperwork. ${sides.right} becomes dangerous when it is too broad, too vague, or copied from a form that does not match the actual arrangement.`],
+    ['What decides the outcome', 'The deciding factors are usually control, payment, possession, emergency authority, refund or exit rights, and what can actually be proved in writing.'],
+    ['Fast verdict', `If the relationship needs clarity about who controls the horse, who pays, who can end the deal, and what happens when something goes wrong, choose the structure that says those things explicitly instead of relying on horse-world assumptions.`],
+    ['Before signing', `Ask which side controls the key decisions, what happens if the horse is hurt or the deal breaks down, and whether ${sides.left} or ${sides.right} still fits once the real-world facts are written down.`]
   ];
 }
 
@@ -107,8 +118,21 @@ function scriptRows(page) {
   ];
 }
 
+function quickAnswerForPage(page) {
+  const pageType = String(page.page_type || '').toLowerCase();
+  if (pageType === 'comparison') {
+    const { left, right } = comparisonSides(page);
+    return `Short answer: ${left} and ${right} are not interchangeable. Use the version that matches who controls the relationship, who carries the risk, what happens when the arrangement changes, and what you can actually prove in writing if the horse-world deal goes sideways.`;
+  }
+  if (pageType === 'scenario') {
+    return 'Short answer: Do not guess and do not escalate blindly. First pin down the exact problem, preserve the written record, and sort the issue into the right lane — sale, boarding, lease, liability, payment, care, business authority, or state-specific rule. What you do next should follow that triage, not panic.';
+  }
+  const stem = sentenceCase(page.primary_query || page.title);
+  return `Short answer: ${stem} is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.`;
+}
+
 function verdictText(page) {
-  return `Short answer: ${sentenceCase(page.primary_query || page.title)} usually turns on the written record, the real-world facts, and the state-specific rule that governs the horse-world relationship.`;
+  return quickAnswerForPage(page);
 }
 
 function renderModule(page) {
@@ -131,7 +155,7 @@ function renderModule(page) {
   } else if (moduleType === 'top_red_flags_block') {
     inner = `<ul>${redFlagItems(page).map((item) => `<li><strong>Red flag:</strong> ${esc(item)}</li>`).join('')}</ul>`;
   } else if (moduleType === 'top_comparison_table') {
-    inner = `<table><thead><tr><th>Question</th><th>What to compare</th></tr></thead><tbody>${comparisonRows(page).map(([a,b]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join('')}</tbody></table>`;
+    inner = `<table><thead><tr><th>Decision lens</th><th>What matters</th></tr></thead><tbody>${comparisonRows(page).map(([a,b]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join('')}</tbody></table>`;
   } else if (moduleType === 'top_cost_table') {
     inner = `<table><thead><tr><th>Cost lens</th><th>What matters</th></tr></thead><tbody>${costRows(page).map(([a,b]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join('')}</tbody></table>`;
   } else if (moduleType === 'top_timeline') {
@@ -150,4 +174,4 @@ function renderModule(page) {
   };
 }
 
-module.exports = { detectQueryFamily, requiredTopModuleForFamily, renderModule };
+module.exports = { detectQueryFamily, requiredTopModuleForFamily, renderModule, comparisonSides, quickAnswerForPage };
