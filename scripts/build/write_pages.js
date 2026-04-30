@@ -151,7 +151,12 @@ function writeApprovedPages(distDir, approvedPages) {
     const clusterPhrase = clusterContext(page.cluster);
     const related = (byCluster[page.cluster] || []).filter((p) => p.slug !== page.slug && p.review_status === 'approved').slice(0, 6);
     const answerShape = renderModule(page);
-    const quick = content.quick_answer || page.quick_answer || `Short answer: ${queries[0] || page.title} usually depends on the agreement, the timeline, the state-specific rule, and what the written record can actually prove.`;
+    const rawQuick = String(content.quick_answer || page.quick_answer || '').trim();
+    const normalizedQuick = rawQuick.replace(/^short answer:\s*/i, '');
+    const hedgedQuick = /^(generally|usually|it depends|depends|often)\b/i.test(normalizedQuick);
+    const quick = (!rawQuick || hedgedQuick)
+      ? quickAnswerForPage(page)
+      : rawQuick;
     let body = `
 <header class="content-header">
   <span class="eyebrow">${esc(titleCase(page.page_type))} page</span>

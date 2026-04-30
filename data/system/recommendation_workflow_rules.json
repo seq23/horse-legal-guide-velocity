@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-04-30T00:00:00Z",
+  "target_type_to_lane": {
+    "page": "page_patch_queue",
+    "family": "system_fix_queue",
+    "system": "system_fix_queue",
+    "validator": "validator_backlog",
+    "cluster": "cluster_gap_backlog"
+  },
+  "recommendation_type_to_action": {
+    "page_patch": "page_local_patch",
+    "family_renderer_upgrade": "system_family_upgrade",
+    "system_routing_upgrade": "system_routing_upgrade",
+    "validator_upgrade": "validator_upgrade",
+    "cluster_gap": "cluster_expansion"
+  },
+  "batch_group_aliases": {
+    "compare-verdict-upgrades": "compare-family-batch",
+    "scenario-triage-upgrades": "scenario-family-batch",
+    "faq-quick-answer-upgrades": "faq-family-batch"
+  },
+  "severity_rank": {
+    "high": 3,
+    "medium": 2,
+    "low": 1
+  },
+  "confidence_rank": {
+    "high": 3,
+    "medium": 2,
+    "low": 1
+  },
+  "lane_execution_order": [
+    "page_patch_queue",
+    "system_fix_queue",
+    "validator_backlog",
+    "cluster_gap_backlog"
+  ],
+  "required_fields": [
+    "recommendation_id",
+    "source",
+    "status",
+    "severity",
+    "confidence",
+    "target_type",
+    "target",
+    "recommendation_type",
+    "summary",
+    "suggested_action"
+  ]
+}

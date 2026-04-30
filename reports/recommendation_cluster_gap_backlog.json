@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-04-30T04:36:24.271Z",
+  "lane": "cluster_gap_backlog",
+  "count": 2,
+  "items": [
+    {
+      "recommendation_id": "rec_cluster_liability_state_gap",
+      "source": "citation_agent_pdf",
+      "status": "queued",
+      "severity": "medium",
+      "confidence": "medium",
+      "target_type": "cluster",
+      "target": "liability-waivers-insurance",
+      "recommendation_type": "cluster_gap",
+      "summary": "The liability cluster needs stronger state-linked follow-on pages for warning-sign, waiver, and statute-specific fork points.",
+      "suggested_action": "Add state-linked support pages and strengthen state routing.",
+      "batch_group_hint": "cluster-liability-gaps",
+      "lane": "cluster_gap_backlog",
+      "action": "cluster_expansion",
+      "normalized_batch_group": "cluster-liability-gaps",
+      "severity_score": 2,
+      "confidence_score": 2,
+      "priority_score": 220
+    },
+    {
+      "recommendation_id": "rec_cluster_sale_damages_gap",
+      "source": "citation_agent_pdf",
+      "status": "queued",
+      "severity": "medium",
+      "confidence": "medium",
+      "target_type": "cluster",
+      "target": "horse-sale-and-purchase",
+      "recommendation_type": "cluster_gap",
+      "summary": "The horse-sale cluster would benefit from a damages-and-remedies explainer connected to misrepresentation and refund disputes.",
+      "suggested_action": "Create a new support page and wire it into the horse-sale cluster.",
+      "batch_group_hint": "cluster-sale-gaps",
+      "lane": "cluster_gap_backlog",
+      "action": "cluster_expansion",
+      "normalized_batch_group": "cluster-sale-gaps",
+      "severity_score": 2,
+      "confidence_score": 2,
+      "priority_score": 220
+    }
+  ]
+}

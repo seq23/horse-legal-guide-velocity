@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-04-30T04:36:24.271Z",
+  "total_recommendations": 12,
+  "batches": [
+    {
+      "batch_group": "boarding-collection-patches",
+      "count": 1,
+      "lanes": [
+        "page_patch_queue"
+      ],
+      "top_targets": [
+        "boarding__can-a-boarding-barn-sell-a-horse-for-unpaid-bills"
+      ],
+      "recommendation_ids": [
+        "rec_page_unpaid_bills_docs"
+      ]
+    },
+    {
+      "batch_group": "cluster-liability-gaps",
+      "count": 1,
+      "lanes": [
+        "cluster_gap_backlog"
+      ],
+      "top_targets": [
+        "liability-waivers-insurance"
+      ],
+      "recommendation_ids": [
+        "rec_cluster_liability_state_gap"
+      ]
+    },
+    {
+      "batch_group": "cluster-sale-gaps",
+      "count": 1,
+      "lanes": [
+        "cluster_gap_backlog"
+      ],
+      "top_targets": [
+        "horse-sale-and-purchase"
+      ],
+      "recommendation_ids": [
+        "rec_cluster_sale_damages_gap"
+      ]
+    },
+    {
+      "batch_group": "compare-family-batch",
+      "count": 1,
+      "lanes": [
+        "system_fix_queue"
+      ],
+      "top_targets": [
+        "compare"
+      ],
+      "recommendation_ids": [
+        "rec_compare_verdict_strengthen"
+      ]
+    },
+    {
+      "batch_group": "demand-letter-patches",
+      "count": 1,
+      "lanes": [
+        "page_patch_queue"
+      ],
+      "top_targets": [
+        "disputes__what-should-i-do-if-i-receive-a-demand-letter"
+      ],
+      "recommendation_ids": [
+        "rec_page_demand_letter_triage"
+      ]
+    },
+    {
+      "batch_group": "faq-family-batch",
+      "count": 1,
+      "lanes": [
+        "system_fix_queue"
+      ],
+      "top_targets": [
+        "faq"
+      ],
+      "recommendation_ids": [
+        "rec_faq_hedge_cleanup"
+      ]
+    },
+    {
+      "batch_group": "lease-document-patches",
+      "count": 1,
+      "lanes": [
+        "page_patch_queue"
+      ],
+      "top_targets": [
+        "leases__what-should-be-included-in-a-horse-lease-agreement"
+      ],
+      "recommendation_ids": [
+        "rec_patch_lease_agreement_terms"
+      ]
+    },
+    {
+      "batch_group": "scenario-family-batch",
+      "count": 1,
+      "lanes": [
+        "system_fix_queue"
+      ],
+      "top_targets": [
+        "scenario"
+      ],
+      "recommendation_ids": [
+        "rec_scenario_triage_block"
+      ]
+    },
+    {
+      "batch_group": "state-routing-upgrades",
+      "count": 1,
+      "lanes": [
+        "system_fix_queue"
+      ],
+      "top_targets": [
+        "state-routing"
+      ],
+      "recommendation_ids": [
+        "rec_routing_state_specificity"
+      ]
+    },
+    {
+      "batch_group": "validator-compare-family",
+      "count": 1,
+      "lanes": [
+        "validator_backlog"
+      ],
+      "top_targets": [
+        "compare_family_verdict_requirement"
+      ],
+      "recommendation_ids": [
+        "rec_validator_compare_verdict"
+      ]
+    },
+    {
+      "batch_group": "validator-faq-family",
+      "count": 1,
+      "lanes": [
+        "validator_backlog"
+      ],
+      "top_targets": [
+        "faq_hedge_opening_requirement"
+      ],
+      "recommendation_ids": [
+        "rec_validator_faq_hedge_opening"
+      ]
+    },
+    {
+      "batch_group": "validator-scenario-family",
+      "count": 1,
+      "lanes": [
+        "validator_backlog"
+      ],
+      "top_targets": [
+        "scenario_family_triage_requirement"
+      ],
+      "recommendation_ids": [
+        "rec_validator_scenario_triage"
+      ]
+    }
+  ]
+}

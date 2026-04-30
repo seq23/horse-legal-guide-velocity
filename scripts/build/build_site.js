@@ -12,6 +12,7 @@ const { writeAdminPage } = require('./write_admin');
 const { writeEditorialPages } = require('./write_editorial_pages');
 const { writePublicIndexes } = require('./write_public_indexes');
 const { generateAnswerSurfaceReports } = require('../monitoring/generate_answer_surface_reports');
+const { generateReports: generateRecommendationReports } = require('../recommendations/process_recommendations');
 const { main: prepareDistributionArtifacts } = require('./prepare_distribution_artifacts');
 const { writePageManifests } = require('./write_page_manifest');
 const { resolveCanonicalTarget } = require('../lib/resolve_canonical_targets');
@@ -114,6 +115,7 @@ function main() {
   const referenceResults = writeReferencePages(distDir, candidates);
   writePublicIndexes(distDir, approvedPages, clusters, candidates);
   generateAnswerSurfaceReports();
+  generateRecommendationReports();
   writeEditorialPages(distDir);
   writeSitemaps(distDir, config.site_domain || 'https://example.com');
   writeLlmsTxt(distDir, config.canonical_domain);
