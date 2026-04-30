@@ -12,6 +12,11 @@ jobs:
   process-public-signals:
     runs-on: ubuntu-latest
     env:
+      SITE_DOMAIN: https://horselegalguide.com
+      CANONICAL_DOMAIN: https://wisecovington.com
+      GSC_SITE_URL: sc-domain:horselegalguide.com
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
       SIGNAL_SOURCE_TIMEOUT_MS: "7000"
       SIGNAL_FETCH_TIMEOUT_MS: "7000"
       SIGNAL_COLLECT_SEQUENTIAL: "true"
@@ -21,37 +26,26 @@ jobs:
       REDDIT_PUBLIC_TERM_LIMIT: "3"
       REDDIT_PUBLIC_DELAY_MS: "900"
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           persist-credentials: true
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - name: Install
         run: npm ci
-
       - name: Collect public signals
         run: npm run collect:signals
-
       - name: Normalize signals
-        run: node scripts/community/normalize_signals.js
-
+        run: npm run normalize:signals
       - name: Map signals to targets
-        run: node scripts/community/map_signals_to_targets.js
-
+        run: npm run map:signals
       - name: Generate ingestion report
-        run: node scripts/community/generate_ingestion_report.js
-
+        run: npm run report:ingestion
       - name: Build
         run: npm run build
-
       - name: Validate
         run: npm run validate:all
-
       - name: Commit generated updates
         run: |
           if [ -n "$(git status --porcelain)" ]; then

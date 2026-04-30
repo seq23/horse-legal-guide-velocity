@@ -1,11 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
+const { toAbsoluteUrl } = require('../lib/write_canonical_tag');
 function dir(p) { fs.mkdirSync(p, { recursive: true }); }
 function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;'); }
 function tit(s) { return String(s || '').replace(/-/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase()); }
 function rslug(c) { return '/reference/' + (c.slug || String(c.query || c.raw_phrasing || c.candidate_id).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')) + '/'; }
 function readJson(rel, fallback) { try { return JSON.parse(fs.readFileSync(path.resolve(process.cwd(), rel), 'utf8')); } catch { return fallback; } }
+function writeJson(dist, rel, payload) {
+  fs.writeFileSync(path.join(dist, rel), JSON.stringify(payload, null, 2));
+}
 function idx(dist, { slug, title, description, items }) {
   const d = path.join(dist, slug.replace(/^\//, ''));
   dir(d);
@@ -15,7 +19,7 @@ function idx(dist, { slug, title, description, items }) {
     '<section><h2>Pages</h2><ul>' + list + '</ul></section>';
   fs.writeFileSync(path.join(d, 'index.html'), renderLayout({ title, description, url: slug, body }));
 }
-function coverage(dist, targets, clusters, cands) {
+function coveragePage(dist, targets, clusters, cands) {
   const raw = readJson('data/community/raw_signals.json', []);
   const normalized = readJson('data/community/normalized_signals.json', []);
   const queue = readJson('data/community/publish_queue.json', []);
@@ -44,6 +48,26 @@ function coverage(dist, targets, clusters, cands) {
   dir(d);
   fs.writeFileSync(path.join(d, 'index.html'), renderLayout({ title: 'Coverage Map | Horse Legal Guide', description: 'Query universe and public coverage map for Horse Legal Guide.', url: '/coverage/', body }));
 }
+function writeExports(dist, targets, clusters, cands) {
+  const answers = targets.map((page) => ({
+    slug: page.slug,
+    title: page.title,
+    page_type: page.page_type,
+    cluster: page.cluster,
+    primary_query: page.primary_query,
+    answer_surface_type: 'educational_velocity_page',
+    canonical_site_url: toAbsoluteUrl(page.slug)
+  }));
+  const coverage = {
+    cluster_count: clusters.length,
+    approved_page_count: targets.length,
+    reference_candidate_count: cands.length,
+    clusters: clusters.map((cluster) => ({ cluster: cluster.cluster, title: cluster.title, slug: cluster.slug })),
+    pages: targets.map((page) => ({ slug: page.slug, page_type: page.page_type, cluster: page.cluster, title: page.title }))
+  };
+  writeJson(dist, 'answers.json', answers);
+  writeJson(dist, 'coverage.json', coverage);
+}
 function writePublicIndexes(dist, targets, clusters, cands) {
   const a = targets.filter((p) => p.review_status === 'approved');
   idx(dist, { slug: '/faq/', title: 'FAQ Index', description: 'Approved frequently asked equine-law question pages.', items: a.filter((p) => p.page_type === 'faq') });
@@ -52,6 +76,7 @@ function writePublicIndexes(dist, targets, clusters, cands) {
   idx(dist, { slug: '/state/', title: 'State Index', description: 'Approved state-specific equine-law pages.', items: a.filter((p) => p.page_type === 'state') });
   idx(dist, { slug: '/hubs/', title: 'Topic Hub Index', description: 'All public topic hubs for Horse Legal Guide.', items: clusters.map((c) => ({ slug: c.slug, title: c.title || tit(c.cluster), cluster: c.cluster })) });
   idx(dist, { slug: '/reference/', title: 'Reference / Fan-Out Index', description: 'Intentional reference surfaces that map clean public question patterns to page targets and cluster fan-out files.', items: cands.map((c) => ({ slug: rslug(c), title: c.query || c.raw_phrasing || c.candidate_id, cluster: c.cluster })) });
-  coverage(dist, a, clusters, cands);
+  coveragePage(dist, a, clusters, cands);
+  writeExports(dist, a, clusters, cands);
 }
 module.exports = { writePublicIndexes };

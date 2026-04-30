@@ -4,34 +4,35 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-validate:
+  build-validate-publish:
     runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      CANONICAL_DOMAIN: https://wisecovington.com
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
+      GSC_SITE_URL: sc-domain:horselegalguide.com
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - name: Install
         run: npm ci
-
+      - name: Mark publish state running
+        run: npm run state:publish
       - name: Generate drafts
         run: npm run generate:drafts
-
       - name: Preflight
         run: npm run validate:preflight
-
-      - name: Collect community signals
-        run: npm run collect:signals
-
       - name: Build site
         run: npm run build
-
       - name: Apply manual mode
         run: npm run publish:mode
-
       - name: Validate all
         run: npm run validate:all
+      - name: Submit distribution (non-blocking)
+        run: |
+          ./distribution_scripts/indexnow_submit.sh || true
+          python3 distribution_scripts/gsc_submit_sitemaps.py || true
+          python3 distribution_scripts/gsc_inspect_urls.py .build/distribution-priority-urls.txt || true

@@ -11,37 +11,34 @@ permissions:
 jobs:
   refresh-drafts:
     runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      CANONICAL_DOMAIN: https://wisecovington.com
+      GSC_SITE_URL: sc-domain:horselegalguide.com
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           persist-credentials: true
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - name: Install
         run: npm ci
-
       - name: Generate drafts
         run: npm run generate:drafts
-
       - name: Build site
         run: npm run build
-
       - name: Apply manual mode
         run: npm run publish:mode
-
       - name: Validate all
         run: npm run validate:all
-
       - name: Commit refreshed draft queue
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/drafts/generated data/system/content_calendar.json data/system/editorial_backlog.json dist
+          git add content/drafts/generated data/system/content_calendar.json data/system/editorial_backlog.json dist .build data/content_refresh_state.json
           if git diff --cached --quiet; then
             echo "No draft queue changes to commit."
             exit 0

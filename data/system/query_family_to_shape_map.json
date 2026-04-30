@@ -1,0 +1,95 @@
+{
+  "choose_or_best": {
+    "query_patterns": [
+      "how do i choose",
+      "what should i look for",
+      "best",
+      "trusted",
+      "good provider",
+      "good lawyer"
+    ],
+    "required_top_module": "top_checklist",
+    "required_supporting_sections": [
+      "evaluation_factors",
+      "questions_to_ask"
+    ]
+  },
+  "red_flags": {
+    "query_patterns": [
+      "red flags",
+      "warning signs",
+      "sketchy",
+      "bad contract"
+    ],
+    "required_top_module": "top_red_flags_block",
+    "required_supporting_sections": [
+      "signal_explanations",
+      "what_to_do_next"
+    ]
+  },
+  "comparison": {
+    "query_patterns": [
+      "vs",
+      "versus",
+      "compare",
+      "difference between"
+    ],
+    "required_top_module": "top_comparison_table",
+    "required_supporting_sections": [
+      "verdict_block",
+      "who_each_option_fits"
+    ]
+  },
+  "cost_or_damages": {
+    "query_patterns": [
+      "how much",
+      "cost",
+      "fees",
+      "damages",
+      "what am i paying for"
+    ],
+    "required_top_module": "top_cost_table",
+    "required_supporting_sections": [
+      "variance_factors",
+      "example_scenarios"
+    ]
+  },
+  "timeline_or_process": {
+    "query_patterns": [
+      "what happens if",
+      "timeline",
+      "process",
+      "how long"
+    ],
+    "required_top_module": "top_timeline",
+    "required_supporting_sections": [
+      "named_phases",
+      "common_forks"
+    ]
+  },
+  "eligibility_or_claim": {
+    "query_patterns": [
+      "can i",
+      "do i have a claim",
+      "is this enforceable",
+      "should i sign"
+    ],
+    "required_top_module": "top_decision_tree",
+    "required_supporting_sections": [
+      "yes_no_depends",
+      "eligibility_factors"
+    ]
+  },
+  "questions_to_ask": {
+    "query_patterns": [
+      "what should i ask",
+      "before i sign",
+      "consultation questions",
+      "questions to ask"
+    ],
+    "required_top_module": "top_question_script",
+    "required_supporting_sections": [
+      "good_answer_vs_red_flag_answer"
+    ]
+  }
+}

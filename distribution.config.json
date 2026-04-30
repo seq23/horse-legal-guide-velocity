@@ -1,0 +1,22 @@
+{
+  "site_domain": "https://horselegalguide.com",
+  "canonical_domain": "https://wisecovington.com",
+  "gsc_site_url": "sc-domain:horselegalguide.com",
+  "indexnow": {
+    "key_file": "indexnow.txt",
+    "priority_input": "dist/indexnow-priority.txt",
+    "batch_input": "dist/indexnow-batch.txt",
+    "endpoint": "https://api.indexnow.org/indexnow"
+  },
+  "sitemaps": [
+    "dist/sitemap.xml",
+    "dist/sitemap-pages.xml"
+  ],
+  "distribution_outputs": {
+    "manifest": ".build/distribution-manifest.json",
+    "priority_urls": ".build/distribution-priority-urls.txt",
+    "indexnow_priority": ".build/indexnow-priority.txt",
+    "indexnow_batch": ".build/indexnow-batch.txt"
+  },
+  "non_blocking": true
+}

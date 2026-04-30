@@ -1,4 +1,5 @@
 const { readJson, writeJson, excerpt, sourceMap, makeSignalId, allowedSource } = require('./signal_utils');
+const { createThrottle } = require('../social/throttle');
 const fs = require('fs');
 const path = require('path');
 
@@ -38,7 +39,7 @@ function manualImports() {
 function identity(signal) {
   return `${signal.source_key || ''}|${signal.source_url || ''}|${signal.raw_title || ''}`.toLowerCase();
 }
-async function collectSource(source) {
+async function collectSource(source, throttle) {
   const adapter = loadAdapter(source);
   if (!adapter || typeof adapter.collect !== 'function') {
     return { source_key: source.source_key, platform: source.platform, status: 'skipped_no_adapter', count: 0, rows: [] };
@@ -46,10 +47,10 @@ async function collectSource(source) {
   const timeoutMs = Number(process.env.SIGNAL_SOURCE_TIMEOUT_MS || 7000);
   try {
     let timer;
-    const rows = await Promise.race([
+    const rows = await throttle.run(() => Promise.race([
       adapter.collect(source).finally(() => clearTimeout(timer)),
       new Promise((resolve) => { timer = setTimeout(() => resolve([]), timeoutMs); })
-    ]);
+    ]));
     clearTimeout(timer);
     return { source_key: source.source_key, platform: source.platform, status: 'ok', count: rows.length, rows };
   } catch (err) {
@@ -64,13 +65,18 @@ async function run() {
   const seenIdentity = new Set(existing.map(identity));
   const sourceLimit = Number(process.env.SIGNAL_SOURCE_LIMIT || 0);
   const activeSources = (registry.sources || []).filter(allowedSource);
+  const throttle = createThrottle({
+    sourceKey: 'public_signal_collection',
+    stateFile: 'data/content_refresh_state.json'
+  });
+  throttle.checkpoint({ last_refresh_started_at: new Date().toISOString(), last_refresh_status: 'running' });
   const selectedSources = sourceLimit > 0 ? activeSources.slice(0, sourceLimit) : activeSources;
   const sequential = String(process.env.SIGNAL_COLLECT_SEQUENTIAL || '').toLowerCase() === 'true' || String(process.env.GITHUB_ACTIONS || '').toLowerCase() === 'true';
   const results = [];
   if (sequential) {
-    for (const source of selectedSources) results.push(await collectSource(source));
+    for (const source of selectedSources) results.push(await collectSource(source, throttle));
   } else {
-    results.push(...await Promise.all(selectedSources.map(collectSource)));
+    results.push(...await Promise.all(selectedSources.map((source) => collectSource(source, throttle))));
   }
   const adapterStatus = [];
   const collected = [];
@@ -97,8 +103,21 @@ async function run() {
     zero_reddit_warning: zeroRedditWarning,
     raw_store_count: merged.length
   });
+  throttle.checkpoint({
+    last_refresh_completed_at: new Date().toISOString(),
+    last_refresh_status: 'passed',
+    collected_count: collected.length,
+    raw_store_count: merged.length
+  });
   if (zeroRedditWarning) console.warn('[collect_signals] WARNING: Reddit contributed 0 fresh public signals in this run. Pipeline continues, but production Reddit access is not healthy.');
   console.log(`Collected ${collected.length} candidate signals; Reddit contributed ${redditCount}; raw store now has ${merged.length}.`);
 }
-if (require.main === module) run().then(() => process.exit(0)).catch((err) => { console.error(err); process.exit(1); });
+if (require.main === module) run().then(() => process.exit(0)).catch((err) => {
+  try {
+    const throttle = createThrottle({ sourceKey: 'public_signal_collection', stateFile: 'data/content_refresh_state.json' });
+    throttle.checkpoint({ last_refresh_completed_at: new Date().toISOString(), last_refresh_status: 'failed', last_error: err.message });
+  } catch {}
+  console.error(err);
+  process.exit(1);
+});
 module.exports = { run };

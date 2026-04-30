@@ -7,7 +7,8 @@ const {
   preservedQueryFromTitle,
   normalizedQueryFromTitle,
   llmBaitPhrase,
-  hash
+  hash,
+  isHorseLegalLike
 } = require('./signal_utils');
 
 function classifyIntent(text) {
@@ -98,6 +99,8 @@ function run() {
 
   raw.forEach((signal, idx) => {
     if (!signal.signal_id || !(signal.raw_signal_phrase || signal.raw_title)) return;
+    const candidateText = `${signal.raw_signal_phrase || ''} ${signal.raw_title || ''}`.trim();
+    if (!isHorseLegalLike(candidateText)) return;
     const item = normalizeOne(signal, idx);
     const key = item.dedupe_group_id;
 

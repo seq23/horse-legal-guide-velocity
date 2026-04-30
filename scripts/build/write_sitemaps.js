@@ -19,6 +19,13 @@ function collectHtmlUrls(baseDir, root = '') {
   return urls.sort();
 }
 
+function writeIndexNowArtifacts(distDir, canonicalDomain, urls) {
+  const absolute = urls.map((url) => `${canonicalDomain}${url === '/' ? '' : url}`);
+  const priority = absolute.filter((url) => /\/$/.test(url) && (url.endsWith('/') || url.includes('/coverage/') || url.includes('/faq/') || url.includes('/scenario/') || url.includes('/compare/') || url.includes('/hubs/')));
+  fs.writeFileSync(path.join(distDir, 'indexnow-priority.txt'), Array.from(new Set(priority)).join('\n') + '\n');
+  fs.writeFileSync(path.join(distDir, 'indexnow-batch.txt'), absolute.join('\n') + '\n');
+}
+
 function writeSitemaps(distDir, canonicalDomain) {
   const urls = collectHtmlUrls(distDir);
   const pageEntries = urls.map((url) => `<url><loc>${canonicalDomain}${url === '/' ? '' : url}</loc></url>`).join('');
@@ -26,6 +33,7 @@ function writeSitemaps(distDir, canonicalDomain) {
   fs.writeFileSync(path.join(distDir, 'sitemap-pages.xml'), pagesXml);
   const indexXml = `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>${canonicalDomain}/sitemap-pages.xml</loc></sitemap></sitemapindex>`;
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), indexXml);
+  writeIndexNowArtifacts(distDir, canonicalDomain, urls);
   return urls;
 }
 

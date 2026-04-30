@@ -1,8 +1,12 @@
+const { toAbsoluteUrl } = require('./write_canonical_tag');
+
 function writeJsonLd(type, headline, description, url) {
+  const absoluteUrl = toAbsoluteUrl(url);
   if (type === 'faq') {
     return JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      'url': absoluteUrl,
       'mainEntity': [{
         '@type': 'Question',
         'name': headline,
@@ -18,7 +22,7 @@ function writeJsonLd(type, headline, description, url) {
     '@type': 'Article',
     'headline': headline,
     'description': description,
-    'url': url
+    'url': absoluteUrl
   });
 }
 

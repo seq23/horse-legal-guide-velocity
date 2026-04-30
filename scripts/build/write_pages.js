@@ -3,6 +3,9 @@ const path = require('path');
 const { renderLayout } = require('../lib/render_page');
 const { resolveCanonicalTarget } = require('../lib/resolve_canonical_targets');
 const { loadPageContent } = require('../lib/content_loader');
+const { renderModule } = require('../lib/answer_shape');
+const { validatePostRenderPage } = require('./validate_page_contract_post_render');
+const { findManifest, loadPatchForManifest, loadPatchForSlug, applyZoneOperations } = require('../lib/page_patch_utils');
 
 function ensureDir(dirPath) { fs.mkdirSync(dirPath, { recursive: true }); }
 function esc(value) { return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -20,7 +23,7 @@ function formatRelatedLinks(relatedPages = [], fallbackPages = []) {
     if (!alt) return `<li>${esc(item)}</li>`;
     return `<li><a href="${esc(alt[2])}">${esc(alt[1])}</a></li>`;
   }).join('\n');
-  return `<section><h2>Related pages in this cluster</h2><ul>${items}</ul></section>`;
+  return `<section data-editable-zone="related_links_block"><h2>Related pages in this cluster</h2><ul>${items}</ul></section>`;
 }
 
 function clusterContext(cluster) {
@@ -38,6 +41,13 @@ function clusterContext(cluster) {
     'emotional-am-i-screwed': 'panic-stage questions where the reader needs to separate fear from documents, facts, and next actions'
   };
   return map[cluster] || 'horse-world legal questions where facts, documents, and jurisdiction matter';
+}
+
+function applyPersistedPatchIfPresent(page, html) {
+  const manifest = findManifest(page.slug);
+  const patch = manifest ? loadPatchForManifest(manifest) : loadPatchForSlug(page.slug, page.slug && page.slug.startsWith('/reference/') ? 'reference' : 'page');
+  if (!patch || !Array.isArray(patch.operations) || !patch.operations.length) return html;
+  return applyZoneOperations(html, patch.operations);
 }
 
 function loadSignalIndexes() {
@@ -76,7 +86,7 @@ function signalBlock(page, queries, rawSignals) {
 function accordion(items, title) {
   if (!items.length) return '';
   const details = items.map((item, idx) => `<details data-accordion="true" data-accordion-purpose="faq-only" ${idx === 0 ? 'open' : ''}><summary>${esc(item.question)}</summary><p>${esc(item.answer)}</p></details>`).join('\n');
-  return `<section class="accordion-section faq-accordion" data-accordion="true" data-accordion-purpose="faq-only"><h2>${esc(title)}</h2>${details}</section>`;
+  return `<section class="accordion-section faq-accordion" data-accordion="true" data-accordion-purpose="faq-only" data-editable-zone="faq_block"><h2>${esc(title)}</h2>${details}</section>`;
 }
 
 function faqItems(page, queries, clusterPhrase) {
@@ -113,7 +123,7 @@ function defaultBody(page, queries, clusterPhrase) {
 }
 
 function routingBlock(canonical) {
-  return `<section class="routing-block">
+  return `<section class="routing-block" data-editable-zone="routing_block">
   <p>Situations like this depend heavily on the specific facts, documents, and jurisdiction.</p>
   <p><strong>Wise Covington PLLC is a law firm built by equestrians for the equestrian community.</strong></p>
   <p>This page is educational only and does not provide legal advice or create an attorney-client relationship.</p>
@@ -125,6 +135,7 @@ function writeApprovedPages(distDir, approvedPages) {
   const canonical = resolveCanonicalTarget();
   const { rawById, normBySlug } = loadSignalIndexes();
   const byCluster = approvedPages.reduce((acc, p) => { (acc[p.cluster] ||= []).push(p); return acc; }, {});
+  const results = [];
   approvedPages.forEach((page) => {
     const finalDir = path.join(distDir, page.slug.replace(/^\//, ''));
     ensureDir(finalDir);
@@ -134,19 +145,20 @@ function writeApprovedPages(distDir, approvedPages) {
     const queries = querySet(page, norms);
     const clusterPhrase = clusterContext(page.cluster);
     const related = (byCluster[page.cluster] || []).filter((p) => p.slug !== page.slug && p.review_status === 'approved').slice(0, 6);
-    const quick = queries[0]
-      ? `The short answer: treat this as a ${titleCase(page.page_type)} question inside the ${titleCase(page.cluster)} cluster. The outcome usually depends on the documents, timeline, state law, and what changed hands. Do not rely on a generic internet answer for a specific dispute.`
-      : (content.quick_answer || page.quick_answer || 'This issue depends on the documents, facts, and jurisdiction.');
-    const body = `
+    const answerShape = renderModule(page);
+    const quick = content.quick_answer || page.quick_answer || `Short answer: ${queries[0] || page.title} usually depends on the agreement, the timeline, the state-specific rule, and what the written record can actually prove.`;
+    let body = `
 <header class="content-header">
+  <span class="eyebrow">${esc(titleCase(page.page_type))} page</span>
   <h1>${esc(page.title)}</h1>
   <p class="muted">General educational information for equestrians, horse owners, trainers, investors, and equine businesses. This page is not a substitute for advice on a specific situation.</p>
 </header>
-${signalBlock(page, queries, signals)}
-<section>
+<section class="quick-answer-block" data-answer-summary="true" data-editable-zone="quick_answer_block">
   <h2>Quick answer</h2>
-  <p>${esc(quick)}</p>
+  <p><strong>Short answer:</strong> ${esc(quick)}</p>
 </section>
+${answerShape.html.replace('<section class="answer-shape-module"', '<section class="answer-shape-module" data-editable-zone="top_answer_module"')}
+${signalBlock(page, queries, signals)}
 ${defaultBody(page, queries, clusterPhrase)}
 <section>
   <h2>Common mistakes</h2>
@@ -160,6 +172,7 @@ ${accordion(faqItems(page, queries, clusterPhrase), 'Signal-backed FAQ')}
 ${formatRelatedLinks(content.related_pages, related)}
 <nav><p><a href="/">Home</a> · <a href="/hubs/${esc(page.cluster)}/">Back to ${esc(titleCase(page.cluster))}</a> · <a href="/reference/">Reference index</a></p></nav>
 ${routingBlock(canonical)}`;
+    body = applyPersistedPatchIfPresent(page, body);
     const html = renderLayout({
       title: page.title,
       description: quick.slice(0, 155),
@@ -167,7 +180,18 @@ ${routingBlock(canonical)}`;
       body,
       schemaType: page.page_type === 'faq' ? 'FAQPage' : 'Article'
     });
-    fs.writeFileSync(path.join(finalDir, 'index.html'), html);
+    const filePath = path.join(finalDir, 'index.html');
+    fs.writeFileSync(filePath, html);
+    results.push({
+      page,
+      filePath,
+      html,
+      queryFamily: answerShape.queryFamily,
+      moduleType: answerShape.moduleType,
+      validation: validatePostRenderPage({ page, filePath, html })
+    });
   });
+  return results;
 }
+
 module.exports = { writeApprovedPages };

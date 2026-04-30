@@ -1,0 +1,24 @@
+{
+  "version": "sprint1_skeleton",
+  "default_behavior": {
+    "above_the_fold_answer_object_required": true,
+    "generic_intro_before_answer_object_forbidden": true
+  },
+  "velocity_rules": {
+    "role": "educational_answer_capture",
+    "priority": [
+      "structured answer modules",
+      "decision support",
+      "handoff logic"
+    ]
+  },
+  "canonical_rules": {
+    "role": "deeper trust and specific legal handoff",
+    "priority": [
+      "specificity",
+      "authority cues",
+      "conversion path"
+    ]
+  },
+  "query_family_map_file": "data/system/query_family_to_shape_map.json"
+}

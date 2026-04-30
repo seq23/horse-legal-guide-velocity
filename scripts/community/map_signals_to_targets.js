@@ -1,6 +1,21 @@
-const { readJson, writeJson, slugify } = require('./signal_utils');
+const { readJson, writeJson, slugify, isHorseLegalLike } = require('./signal_utils');
 
 const STOP = new Set(['what','can','should','could','would','does','when','where','why','how','someone','horse','equine','legal','situation','question','know','about','compare']);
+
+function cleanSupportingQueries(list) {
+  const next = [];
+  const seen = new Set();
+  for (const item of list || []) {
+    const clean = String(item || '').replace(/\s+/g, ' ').trim();
+    if (!clean) continue;
+    if (!isHorseLegalLike(clean)) continue;
+    const key = clean.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    next.push(clean);
+  }
+  return next.slice(0, 12);
+}
 
 function words(value) {
   return slugify(value).split('-').filter((w) => w.length > 2 && !STOP.has(w));
@@ -90,12 +105,12 @@ function run() {
 
       target.source_signal_ids = Array.from(new Set([...(target.source_signal_ids || []), ...(n.source_signal_ids || [])]));
       target.primary_query ||= n.preserved_query || n.normalized_query;
-      target.supporting_queries = Array.from(new Set([
+      target.supporting_queries = cleanSupportingQueries([
         ...(target.supporting_queries || []),
         n.preserved_query,
         n.normalized_query,
         n.llm_bait_phrase
-      ].filter(Boolean))).slice(0, 16);
+      ]);
       target.provenance_status = 'source_backed';
       target.signal_score = Math.max(Number(target.signal_score || 0), Number(n.signal_score || 0));
 

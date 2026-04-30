@@ -46,6 +46,22 @@ function cleanSyntheticSignal(value) {
     .trim();
 }
 
+
+const HORSE_POSITIVE_TERMS = [
+  'horse','equine','barn','trainer','training','board','boarding','mare','gelding','stallion','foal','pony','pasture','stable','tack','lease','sale','buyer','seller','waiver','liability','vet','boarding','trial ride','pre-purchase'
+];
+const CROSS_VERTICAL_NEGATIVE_TERMS = [
+  'dentist','dental','implant','trt','testosterone','hair loss','uscis','immigration','civil surgeon','neuro','adhd','autism','therapy provider','engineering firm','small engineering','purina','brooks','buckeye'
+];
+
+function isHorseLegalLike(value) {
+  const v = String(value || '').toLowerCase();
+  if (!v.trim()) return false;
+  if (CROSS_VERTICAL_NEGATIVE_TERMS.some((term) => v.includes(term))) return false;
+  if (HORSE_POSITIVE_TERMS.some((term) => v.includes(term))) return true;
+  return /(waiver|liability|lease|sale|purchase|board|trainer|barn|horse|equine|demand letter|refund|deposit|misrepresent|ownership|possession)/.test(v);
+}
+
 function sourceMap() {
   const registry = readJson('data/ingestion/source_registry.json', { sources: [] });
   return new Map((registry.sources || []).map((s) => [s.source_key, s]));
@@ -177,5 +193,6 @@ module.exports = {
   allowedSource,
   buildRawSignal,
   fetchText,
-  fetchJson
+  fetchJson,
+  isHorseLegalLike
 };

@@ -1,0 +1,28 @@
+name: Sitemap And Indexing
+
+on:
+  workflow_dispatch:
+
+jobs:
+  submit-indexing:
+    runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
+      GSC_SITE_URL: sc-domain:horselegalguide.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Submit IndexNow
+        run: ./distribution_scripts/indexnow_submit.sh || true
+      - name: Submit sitemaps to GSC
+        run: python3 distribution_scripts/gsc_submit_sitemaps.py || true
+      - name: Inspect priority URLs
+        run: python3 distribution_scripts/gsc_inspect_urls.py .build/distribution-priority-urls.txt || true
