@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-08T14:14:51.071Z",
-  "total_signals": 1123,
+  "generated_at": "2026-05-11T14:22:07.005Z",
+  "total_signals": 1143,
   "signals_by_source": {
-    "reddit_equestrian": 267,
+    "reddit_equestrian": 287,
     "reddit_horses": 268,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
@@ -17,7 +17,7 @@
     "forum_horse_and_hound": 12
   },
   "signals_by_platform": {
-    "reddit": 849,
+    "reddit": 869,
     "equestrian_forums": 71,
     "google_paa": 29,
     "serp_competitors": 30,
@@ -25,16 +25,16 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 539,
-  "duplicates_collapsed": 584,
+  "normalized_count": 543,
+  "duplicates_collapsed": 600,
   "pages_created": 0,
-  "pages_strengthened": 539,
+  "pages_strengthened": 543,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 199
+      "count": 201
     },
     {
       "name": "horse-sale-and-purchase",
@@ -42,11 +42,11 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 78
+      "count": 79
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 70
+      "count": 71
     },
     {
       "name": "liability-waivers-insurance",
@@ -75,12 +75,12 @@
   ],
   "source_mix": [
     {
-      "name": "reddit_horses",
-      "count": 268
+      "name": "reddit_equestrian",
+      "count": 287
     },
     {
-      "name": "reddit_equestrian",
-      "count": 267
+      "name": "reddit_horses",
+      "count": 268
     },
     {
       "name": "reddit_smallbusiness",
@@ -137,8 +137,9 @@
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
-      "status": "ok",
-      "count": 20
+      "status": "failed",
+      "count": 0,
+      "error": "Throttle runtime exceeded for public_signal_collection"
     },
     {
       "source_key": "reddit_legaladvice",
@@ -9393,6 +9394,74 @@
       "intent_type": "faq",
       "signal_score": 0.95,
       "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0539_badminton-horse-trials-ros-canter-and-lordships-graffalo-cla",
+      "normalized_id": "norm_1127_8953ff61a0",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_badminton-horse-trials-ros-canter-and-lordships-graf_9f372fe4"
+      ],
+      "preserved_query": "Badminton Horse Trials: Ros Canter and Lordships Graffalo claim record third win — what should I know?",
+      "normalized_query": "Badminton Horse Trials: Ros Canter and Lordships Graffalo claim record third win — what should I know?",
+      "llm_bait_phrase": "Badminton Horse Trials: Ros Canter and Lordships Graffalo claim record third win",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0540_teaching-a-horse-to-jump",
+      "normalized_id": "norm_1128_9889792185",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_teaching-a-horse-to-jump-https-www-reddit-com-r-eque_5685f863"
+      ],
+      "preserved_query": "Teaching a horse to jump — what should I know?",
+      "normalized_query": "Teaching a horse to jump — what should I know?",
+      "llm_bait_phrase": "Teaching a horse to jump",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0541_to-get-into-horse-racing-media",
+      "normalized_id": "norm_1131_3896824f1e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_how-to-get-into-horse-racing-media-https-www-reddit-_6d0aaa35"
+      ],
+      "preserved_query": "How to get into horse-racing media?",
+      "normalized_query": "How to get into horse-racing media?",
+      "llm_bait_phrase": "to get into horse-racing media",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0542_goes-into-training-a-race-horse",
+      "normalized_id": "norm_1141_02a8543341",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_what-goes-into-training-a-race-horse-https-www-reddi_75a4dc0a"
+      ],
+      "preserved_query": "What goes into training a race horse?",
+      "normalized_query": "What goes into training a race horse?",
+      "llm_bait_phrase": "goes into training a race horse",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
