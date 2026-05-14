@@ -6921,7 +6921,7 @@
     "dedupe_group_id": "dedupe_faq_leasing-or-buying-a-which-is-better",
     "signal_score": 0.65,
     "status": "mapped",
-    "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/"
+    "mapped_slug": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/"
   },
   {
     "normalized_id": "norm_0508_f9bede2fc8",
@@ -10992,7 +10992,7 @@
     "dedupe_group_id": "dedupe_faq_cause-a-s-mane-to-naturally-change-which-direction-it-lays",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/business/what-legal-documents-do-i-need-for-a-horse-business/"
+    "mapped_slug": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/"
   },
   {
     "normalized_id": "norm_1163_ae2112641d",
@@ -11493,5 +11493,325 @@
     "signal_score": 0.95,
     "status": "mapped",
     "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_1223_2dd86110ad",
+    "source_signal_ids": [
+      "reddit_equestrian_my-horse-keeps-injuring-himself-https-www-reddit-com_09b74e04"
+    ],
+    "raw_signal_phrase": "My horse keeps injuring himself",
+    "preserved_query": "My horse keeps injuring himself — what should I know?",
+    "normalized_query": "My horse keeps injuring himself — what should I know?",
+    "llm_bait_phrase": "My horse keeps injuring himself",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_my-keeps-injuring-himself",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_1226_4037607bbb",
+    "source_signal_ids": [
+      "reddit_equestrian_which-barn-would-you-choose-https-www-reddit-com-r-e_6df8651f"
+    ],
+    "raw_signal_phrase": "Which barn would you choose",
+    "preserved_query": "Which barn would you choose — what should I know?",
+    "normalized_query": "Which barn would you choose — what should I know?",
+    "llm_bait_phrase": "Which barn would you choose",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_which-barn-you-choose",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/"
+  },
+  {
+    "normalized_id": "norm_1230_fd6d99c76c",
+    "source_signal_ids": [
+      "reddit_equestrian_please-kindly-explain-to-me-how-tight-loose-should-m_7c33cff4"
+    ],
+    "raw_signal_phrase": "Please (kindly) explain to me how tight/loose should my muscles be",
+    "preserved_query": "Please (kindly) explain to me how tight/loose should my muscles be — what should I know?",
+    "normalized_query": "Please (kindly) explain to me how tight/loose should my muscles be — what should I know?",
+    "llm_bait_phrase": "Please (kindly) explain to me how tight/loose should my muscles be",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_please-kindly-explain-to-me-tight-loose-my-muscles-be",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+  },
+  {
+    "normalized_id": "norm_1235_6af75d35f2",
+    "source_signal_ids": [
+      "reddit_equestrian_trainer-issues-https-www-reddit-com-r-equestrian-com_5c4abf47"
+    ],
+    "raw_signal_phrase": "Trainer Issues",
+    "preserved_query": "Trainer Issues — what should I know?",
+    "normalized_query": "Trainer Issues — what should I know?",
+    "llm_bait_phrase": "Trainer Issues",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_trainer-issues",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/"
+  },
+  {
+    "normalized_id": "norm_1238_5f2048afdb",
+    "source_signal_ids": [
+      "reddit_equestrian_what-would-a-horse-look-like-if-it-was-a-carnivore-h_f2d6d31c"
+    ],
+    "raw_signal_phrase": "What would a horse look like if it was a carnivore",
+    "preserved_query": "What would a horse look like if it was a carnivore?",
+    "normalized_query": "What would a horse look like if it was a carnivore?",
+    "llm_bait_phrase": "would a horse look like if it was a carnivore",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_a-look-like-if-it-was-a-carnivore",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/"
+  },
+  {
+    "normalized_id": "norm_1240_da41baa735",
+    "source_signal_ids": [
+      "reddit_equestrian_please-fill-out-this-survey-in-support-of-equine-spo_57de5c29"
+    ],
+    "raw_signal_phrase": "Please fill out this survey in support of equine sports having access to trails without bikes.",
+    "preserved_query": "Please fill out this survey in support of equine sports having access to trails without bikes. — what should I know?",
+    "normalized_query": "Please fill out this survey in support of equine sports having access to trails without bikes. — what should I know?",
+    "llm_bait_phrase": "Please fill out this survey in support of equine sports having access to trails without bikes.",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_please-fill-out-this-survey-in-support-of-sports-having-access-to-trails-without",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/leases/what-is-a-horse-trial-agreement/"
+  },
+  {
+    "normalized_id": "norm_1242_36010910d5",
+    "source_signal_ids": [
+      "reddit_equestrian_appropriate-workload-for-a-horse-with-ulcers-https-w_edcb7aa3"
+    ],
+    "raw_signal_phrase": "Appropriate workload for a horse with ulcers",
+    "preserved_query": "Appropriate workload for a horse with ulcers — what should I know?",
+    "normalized_query": "Appropriate workload for a horse with ulcers — what should I know?",
+    "llm_bait_phrase": "Appropriate workload for a horse with ulcers",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_appropriate-workload-for-a-with-ulcers",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_1243_011348093d",
+    "source_signal_ids": [
+      "reddit_horses_horse-people-it-s-getting-expensive-out-there-https-_ac5c1016"
+    ],
+    "raw_signal_phrase": "horse people, it's getting expensive out there",
+    "preserved_query": "horse people, it's getting expensive out there — what should I know?",
+    "normalized_query": "horse people, it's getting expensive out there — what should I know?",
+    "llm_bait_phrase": "horse people, it's getting expensive out there",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_people-it-s-getting-expensive-out-there",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_1244_fd921af556",
+    "source_signal_ids": [
+      "reddit_horses_look-how-beautifully-these-horses-live-here-https-ww_f388f019"
+    ],
+    "raw_signal_phrase": "Look how beautifully these horses live here!",
+    "preserved_query": "Look how beautifully these horses live here! — what should I know?",
+    "normalized_query": "Look how beautifully these horses live here! — what should I know?",
+    "llm_bait_phrase": "Look how beautifully these horses live here!",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_look-beautifully-these-horses-live-here",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_1245_f8d040bb6a",
+    "source_signal_ids": [
+      "reddit_horses_what-do-you-look-for-in-a-horse-trailer-https-www-re_459c3ae5"
+    ],
+    "raw_signal_phrase": "What do you look for in a horse trailer",
+    "preserved_query": "What do you look for in a horse trailer?",
+    "normalized_query": "What do you look for in a horse trailer?",
+    "llm_bait_phrase": "do you look for in a horse trailer",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_do-you-look-for-in-a-trailer",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/"
+  },
+  {
+    "normalized_id": "norm_1250_0cea95dfdf",
+    "source_signal_ids": [
+      "reddit_horses_training-fees-https-www-reddit-com-r-horses-comments_7658cce8"
+    ],
+    "raw_signal_phrase": "Training fees.",
+    "preserved_query": "Training fees. — what should I know?",
+    "normalized_query": "Training fees. — what should I know?",
+    "llm_bait_phrase": "Training fees.",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_training-fees",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_1251_473e676ac0",
+    "source_signal_ids": [
+      "reddit_horses_hand-horse-https-www-reddit-com-r-horses-comments-1t_e58fb094"
+    ],
+    "raw_signal_phrase": "Hand horse!",
+    "preserved_query": "Hand horse! — what should I know?",
+    "normalized_query": "Hand horse! — what should I know?",
+    "llm_bait_phrase": "Hand horse!",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_hand",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_1252_5776e5785a",
+    "source_signal_ids": [
+      "reddit_horses_does-this-horse-move-sound-looking-into-purchase-can_f32bbf4d"
+    ],
+    "raw_signal_phrase": "Does this horse move sound? Looking into purchase, can't tell from these clips and need help please",
+    "preserved_query": "Does this horse move sound? Looking into purchase, can't tell from these clips and need help please?",
+    "normalized_query": "Does this horse move sound? Looking into purchase, can't tell from these clips and need help please?",
+    "llm_bait_phrase": "this horse move sound? Looking into purchase, can't tell from these clips and need help please",
+    "intent_type": "faq",
+    "cluster": "horse-sale-and-purchase",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_this-move-sound-looking-into-purchase-t-tell-from-these-clips-and-need-help-plea",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/"
+  },
+  {
+    "normalized_id": "norm_1257_b400a3517a",
+    "source_signal_ids": [
+      "reddit_horses_horse-hair-locket-https-www-reddit-com-r-horses-comm_93279750"
+    ],
+    "raw_signal_phrase": "Horse hair locket",
+    "preserved_query": "Horse hair locket — what should I know?",
+    "normalized_query": "Horse hair locket — what should I know?",
+    "llm_bait_phrase": "Horse hair locket",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_hair-locket",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_1259_6af0414baf",
+    "source_signal_ids": [
+      "reddit_horses_please-god-let-this-be-my-final-muzzle-update-https-_aed9a1a1"
+    ],
+    "raw_signal_phrase": "Please god let this be my final muzzle update",
+    "preserved_query": "Please god let this be my final muzzle update — what should I know?",
+    "normalized_query": "Please god let this be my final muzzle update — what should I know?",
+    "llm_bait_phrase": "Please god let this be my final muzzle update",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_please-god-let-this-be-my-final-muzzle-update",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/leases/what-should-be-included-in-a-horse-lease-agreement/"
+  },
+  {
+    "normalized_id": "norm_1261_cfc69cfedc",
+    "source_signal_ids": [
+      "reddit_horses_what-kinds-of-treats-are-good-for-horses-https-www-r_87edcd81"
+    ],
+    "raw_signal_phrase": "What kinds of treats are good for horses",
+    "preserved_query": "What kinds of treats are good for horses?",
+    "normalized_query": "What kinds of treats are good for horses?",
+    "llm_bait_phrase": "kinds of treats are good for horses",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_kinds-of-treats-are-good-for-horses",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/"
   }
 ]
