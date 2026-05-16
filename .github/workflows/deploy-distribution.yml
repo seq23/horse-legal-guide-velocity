@@ -1,0 +1,44 @@
+name: Deploy Distribution
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-distribution:
+    runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      CANONICAL_DOMAIN: https://wisecovington.com
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
+      GSC_SITE_URL: sc-domain:horselegalguide.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Validate
+        run: npm run validate:all
+      - name: Submit IndexNow
+        run: ./distribution_scripts/indexnow_submit.sh .build/indexnow-priority.txt .build/indexnow-batch.txt
+      - name: Submit sitemaps to GSC
+        run: python3 distribution_scripts/gsc_submit_sitemaps.py || true
+      - name: Inspect priority URLs
+        run: python3 distribution_scripts/gsc_inspect_urls.py .build/distribution-priority-urls.txt || true
+      - name: Upload distribution reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: horse-legal-guide-distribution-reports
+          path: |
+            .build
+            _ops/reports
