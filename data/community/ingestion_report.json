@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-19T14:23:22.794Z",
-  "total_signals": 1383,
+  "generated_at": "2026-05-20T14:24:03.260Z",
+  "total_signals": 1403,
   "signals_by_source": {
-    "reddit_equestrian": 407,
+    "reddit_equestrian": 427,
     "reddit_horses": 388,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
@@ -17,7 +17,7 @@
     "forum_horse_and_hound": 12
   },
   "signals_by_platform": {
-    "reddit": 1109,
+    "reddit": 1129,
     "equestrian_forums": 71,
     "google_paa": 29,
     "serp_competitors": 30,
@@ -25,16 +25,16 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 636,
-  "duplicates_collapsed": 747,
+  "normalized_count": 640,
+  "duplicates_collapsed": 763,
   "pages_created": 0,
-  "pages_strengthened": 636,
+  "pages_strengthened": 640,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 271
+      "count": 273
     },
     {
       "name": "horse-sale-and-purchase",
@@ -42,11 +42,11 @@
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 87
+      "count": 88
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 84
+      "count": 85
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 407
+      "count": 427
     },
     {
       "name": "reddit_horses",
@@ -138,7 +138,7 @@
       "source_key": "reddit_horses",
       "platform": "reddit",
       "status": "ok",
-      "count": 20
+      "count": 0
     },
     {
       "source_key": "reddit_legaladvice",
@@ -11047,6 +11047,74 @@
       "intent_type": "faq",
       "signal_score": 0.95,
       "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0636_comment-pics-of-your-horse-s-and-i-ll-draw-them",
+      "normalized_id": "norm_1391_c5f2f75dca",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_comment-pics-of-your-horse-s-and-i-ll-draw-them-http_3500dc6f"
+      ],
+      "preserved_query": "Comment pics of your horse/s and I'll draw them! — what should I know?",
+      "normalized_query": "Comment pics of your horse/s and I'll draw them! — what should I know?",
+      "llm_bait_phrase": "Comment pics of your horse/s and I'll draw them!",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0637_kermit-s-horse-riding-training-video",
+      "normalized_id": "norm_1392_0554f43a22",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_kermit-s-horse-riding-training-video-https-www-reddi_01b41f4c"
+      ],
+      "preserved_query": "Kermit's horse riding training video — what should I know?",
+      "normalized_query": "Kermit's horse riding training video — what should I know?",
+      "llm_bait_phrase": "Kermit's horse riding training video",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0638_a-lease-ending-never-gets-easier",
+      "normalized_id": "norm_1397_19c5a1e770",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_a-lease-ending-never-gets-easier-https-www-reddit-co_7d5d9094"
+      ],
+      "preserved_query": "A lease ending never gets easier — what should I know?",
+      "normalized_query": "A lease ending never gets easier — what should I know?",
+      "llm_bait_phrase": "A lease ending never gets easier",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0639_equine-fun",
+      "normalized_id": "norm_1398_51ad2c99e2",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_equine-fun-https-www-reddit-com-r-equestrian-comment_2a6f1bda"
+      ],
+      "preserved_query": "equine fun — what should I know?",
+      "normalized_query": "equine fun — what should I know?",
+      "llm_bait_phrase": "equine fun",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
