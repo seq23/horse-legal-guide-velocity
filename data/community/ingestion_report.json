@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-22T14:21:39.822Z",
-  "total_signals": 1443,
+  "generated_at": "2026-05-25T14:24:31.296Z",
+  "total_signals": 1483,
   "signals_by_source": {
-    "reddit_equestrian": 447,
-    "reddit_horses": 408,
+    "reddit_equestrian": 467,
+    "reddit_horses": 428,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
@@ -17,7 +17,7 @@
     "forum_horse_and_hound": 12
   },
   "signals_by_platform": {
-    "reddit": 1169,
+    "reddit": 1209,
     "equestrian_forums": 71,
     "google_paa": 29,
     "serp_competitors": 30,
@@ -25,16 +25,16 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 656,
-  "duplicates_collapsed": 787,
+  "normalized_count": 671,
+  "duplicates_collapsed": 812,
   "pages_created": 0,
-  "pages_strengthened": 656,
+  "pages_strengthened": 671,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 287
+      "count": 298
     },
     {
       "name": "horse-sale-and-purchase",
@@ -42,11 +42,11 @@
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 90
+      "count": 93
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 85
+      "count": 86
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,11 +76,11 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 447
+      "count": 467
     },
     {
       "name": "reddit_horses",
-      "count": 408
+      "count": 428
     },
     {
       "name": "reddit_smallbusiness",
@@ -6664,7 +6664,7 @@
       "cluster": "horse-lease-and-trial",
       "intent_type": "faq",
       "signal_score": 0.7,
-      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -11388,6 +11388,261 @@
       "intent_type": "faq",
       "signal_score": 0.95,
       "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0656_i-acquired-my-first-ever-barn",
+      "normalized_id": "norm_1443_0d0ae09b74",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_i-acquired-my-first-ever-barn-https-www-reddit-com-r_05a29348"
+      ],
+      "preserved_query": "I acquired my first ever barn. 😭 — what should I know?",
+      "normalized_query": "I acquired my first ever barn. 😭 — what should I know?",
+      "llm_bait_phrase": "I acquired my first ever barn. 😭",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0657_need-help-with-my-gelding-horse-s-genitalia-nsfw-topic-no-pi",
+      "normalized_id": "norm_1447_9b89166e32",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_need-help-with-my-gelding-horse-s-genitalia-nsfw-top_097271f3"
+      ],
+      "preserved_query": "Need help with my gelding horse's genitalia (NSFW topic?)(No pics!) — what should I know?",
+      "normalized_query": "Need help with my gelding horse's genitalia (NSFW topic?)(No pics!) — what should I know?",
+      "llm_bait_phrase": "Need help with my gelding horse's genitalia (NSFW topic?)(No pics!)",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0658_horses-genuinely-enjoying-work",
+      "normalized_id": "norm_1449_0a8f912b11",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horses-genuinely-enjoying-work-https-www-reddit-com-_b24d00f9"
+      ],
+      "preserved_query": "horses genuinely enjoying work — what should I know?",
+      "normalized_query": "horses genuinely enjoying work — what should I know?",
+      "llm_bait_phrase": "horses genuinely enjoying work",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0659_online-tack-stores",
+      "normalized_id": "norm_1452_e338c0e433",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_online-tack-stores-https-www-reddit-com-r-equestrian_d6bb2314"
+      ],
+      "preserved_query": "Online Tack Stores — what should I know?",
+      "normalized_query": "Online Tack Stores — what should I know?",
+      "llm_bait_phrase": "Online Tack Stores",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0660_looking-for-a-horse-retreat-volunteer-opportunity-this-summe",
+      "normalized_id": "norm_1453_d991718587",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_looking-for-a-horse-retreat-volunteer-opportunity-th_cbe3edb2"
+      ],
+      "preserved_query": "Looking for a horse retreat/volunteer opportunity this summer — what should I know?",
+      "normalized_query": "Looking for a horse retreat/volunteer opportunity this summer — what should I know?",
+      "llm_bait_phrase": "Looking for a horse retreat/volunteer opportunity this summer",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0661_i-bought-my-first-horse",
+      "normalized_id": "norm_1454_484bd4229f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_i-bought-my-first-horse-https-www-reddit-com-r-eques_d45f7018"
+      ],
+      "preserved_query": "I bought my first horse! — what should I know?",
+      "normalized_query": "I bought my first horse! — what should I know?",
+      "llm_bait_phrase": "I bought my first horse!",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0662_horse-trails-in-virginia",
+      "normalized_id": "norm_1456_7411d1231f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-trails-in-virginia-https-www-reddit-com-r-eque_ccd5b590"
+      ],
+      "preserved_query": "Horse trails in Virginia — what should I know?",
+      "normalized_query": "Horse trails in Virginia — what should I know?",
+      "llm_bait_phrase": "Horse trails in Virginia",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0663_ottb-mares-lineage",
+      "normalized_id": "norm_1457_ebc6c6fc3a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_ottb-mares-lineage-https-www-reddit-com-r-equestrian_30d108c2"
+      ],
+      "preserved_query": "Ottb mares lineage — what should I know?",
+      "normalized_query": "Ottb mares lineage — what should I know?",
+      "llm_bait_phrase": "Ottb mares lineage",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0664_little-bit-of-a-rant-about-barn-etiquette",
+      "normalized_id": "norm_1458_2c7bd08369",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_little-bit-of-a-rant-about-barn-etiquette-https-www-_6a982a3e"
+      ],
+      "preserved_query": "Little bit of a rant about barn etiquette — what should I know?",
+      "normalized_query": "Little bit of a rant about barn etiquette — what should I know?",
+      "llm_bait_phrase": "Little bit of a rant about barn etiquette",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0665_first-horse-as-an-adult",
+      "normalized_id": "norm_1467_47195586a3",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_horses_first-horse-as-an-adult-https-www-reddit-com-r-horse_d33d0e24"
+      ],
+      "preserved_query": "First horse! (As an adult) — what should I know?",
+      "normalized_query": "First horse! (As an adult) — what should I know?",
+      "llm_bait_phrase": "First horse! (As an adult)",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.95,
+      "mapped_slug": "/business/horse-syndicate-legal-structure/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0666_help-ideas-is-this-a-distress-call-how-concerned-should-i-be",
+      "normalized_id": "norm_1472_ed6bb5ea89",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_horses_help-ideas-is-this-a-distress-call-how-concerned-sho_3fee688f"
+      ],
+      "preserved_query": "Help/Ideas- Is this a “distress” call? How concerned should I be? Please read context in description — what should I know?",
+      "normalized_query": "Help/Ideas- Is this a “distress” call? How concerned should I be? Please read context in description — what should I know?",
+      "llm_bait_phrase": "Help/Ideas- Is this a “distress” call? How concerned should I be? Please read context in description",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.95,
+      "mapped_slug": "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0667_photoshoot-prior-to-euthanasia-with-my-dear-old-man-horses-c",
+      "normalized_id": "norm_1473_c4da4ee901",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_horses_photoshoot-prior-to-euthanasia-with-my-dear-old-man-_1475920e"
+      ],
+      "preserved_query": "Photoshoot prior to euthanasia with my dear old man horses ❤️ Clancy and Sebby — what should I know?",
+      "normalized_query": "Photoshoot prior to euthanasia with my dear old man horses ❤️ Clancy and Sebby — what should I know?",
+      "llm_bait_phrase": "Photoshoot prior to euthanasia with my dear old man horses ❤️ Clancy and Sebby",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.95,
+      "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0668_unedited-woodland-horse",
+      "normalized_id": "norm_1478_fc77714b85",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_horses_unedited-woodland-horse-https-www-reddit-com-r-horse_afc5441d"
+      ],
+      "preserved_query": "Unedited - Woodland Horse — what should I know?",
+      "normalized_query": "Unedited - Woodland Horse — what should I know?",
+      "llm_bait_phrase": "Unedited - Woodland Horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.95,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0669_need-advice-cryptorchid-horse-still-acting-like-a-stallion-a",
+      "normalized_id": "norm_1481_48865891ab",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_horses_need-advice-cryptorchid-horse-still-acting-like-a-st_9f1ce876"
+      ],
+      "preserved_query": "need advice - cryptorchid horse still acting like a stallion after being gelded — what should I know?",
+      "normalized_query": "need advice - cryptorchid horse still acting like a stallion after being gelded — what should I know?",
+      "llm_bait_phrase": "need advice - cryptorchid horse still acting like a stallion after being gelded",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.95,
+      "mapped_slug": "/boarding/what-happens-if-a-boarder-damages-property/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0670_is-it-ok-for-a-horse-to-walk-down-the-road-and-sh-tting-ever",
+      "normalized_id": "norm_1482_e1ad66c284",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_horses_why-is-it-ok-for-a-horse-to-walk-down-the-road-and-s_644a12e4"
+      ],
+      "preserved_query": "why is it ok for a horse to walk down the road and sh*tting everywhere?",
+      "normalized_query": "why is it ok for a horse to walk down the road and sh*tting everywhere?",
+      "llm_bait_phrase": "is it ok for a horse to walk down the road and sh*tting everywhere",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.95,
+      "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
