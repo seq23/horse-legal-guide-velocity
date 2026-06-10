@@ -13123,7 +13123,8 @@
   {
     "normalized_id": "norm_1441_195530e49d",
     "source_signal_ids": [
-      "reddit_horses_sam-the-horse-https-www-reddit-com-r-horses-comments_7e06453a"
+      "reddit_horses_sam-the-horse-https-www-reddit-com-r-horses-comments_7e06453a",
+      "reddit_equestrian_sam-the-horse-https-www-reddit-com-r-equestrian-comm_2767bfa5"
     ],
     "raw_signal_phrase": "Sam the horse",
     "preserved_query": "Sam the horse — what should I know?",
@@ -13136,7 +13137,7 @@
     "legal_risk_level": "low",
     "recommended_action": "map_to_page_target",
     "dedupe_group_id": "dedupe_faq_sam-the",
-    "signal_score": 0.95,
+    "signal_score": 2.45,
     "status": "mapped",
     "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/"
   },
@@ -14703,7 +14704,7 @@
     "dedupe_group_id": "dedupe_faq_is-this-mare-waxing",
     "signal_score": 0.95,
     "status": "mapped",
-    "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/"
+    "mapped_slug": "/leases/what-liability-applies-in-a-horse-property-lease/"
   },
   {
     "normalized_id": "norm_1678_d863aa6dbb",
@@ -15547,7 +15548,7 @@
     "dedupe_group_id": "dedupe_faq_price-you-ask-for-this-mare",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/"
+    "mapped_slug": "/leases/what-liability-applies-in-a-horse-property-lease/"
   },
   {
     "normalized_id": "norm_1818_90a9d5dd4f",
@@ -15929,5 +15930,125 @@
     "signal_score": 0.95,
     "status": "mapped",
     "mapped_slug": "/leases/what-liability-applies-in-a-horse-property-lease/"
+  },
+  {
+    "normalized_id": "norm_1886_e86a3d6736",
+    "source_signal_ids": [
+      "reddit_equestrian_i-adopted-a-26-year-old-tennessee-walker-as-a-pastur_84630ba4"
+    ],
+    "raw_signal_phrase": "I adopted a 26 year old Tennessee walker as a pasture puff/grooming friend. He’s on triple crown senior 4 pounds a day and unlimited o&a , alfalfa, and grass access as he pleases. Ideas to put a little weight on if I can",
+    "preserved_query": "I adopted a 26 year old Tennessee walker as a pasture puff/grooming friend. He’s on triple crown senior 4 pounds a day and unlimited o&a , alfalfa, and grass access as he pleases. Ideas to put a little weight on if I can — what should I know?",
+    "normalized_query": "I adopted a 26 year old Tennessee walker as a pasture puff/grooming friend. He’s on triple crown senior 4 pounds a day and unlimited o&a , alfalfa, and grass access as he pleases. Ideas to put a little weight on if I can — what should I know?",
+    "llm_bait_phrase": "I adopted a 26 year old Tennessee walker as a pasture puff/grooming friend. He’s on triple crown senior 4 pounds a day and unlimited o&a , alfalfa, and grass access as he pleases. Ideas to put a little weight on if I can",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_i-adopted-a-26-year-old-tennessee-walker-as-a-pasture-puff-grooming-friend-he-s-",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+  },
+  {
+    "normalized_id": "norm_1891_c8e2d062a7",
+    "source_signal_ids": [
+      "reddit_equestrian_just-wanted-to-share-attempted-painting-my-friends-h_0240aaa8"
+    ],
+    "raw_signal_phrase": "Just wanted to share. Attempted painting my friends horses as a gift!",
+    "preserved_query": "Just wanted to share. Attempted painting my friends horses as a gift! — what should I know?",
+    "normalized_query": "Just wanted to share. Attempted painting my friends horses as a gift! — what should I know?",
+    "llm_bait_phrase": "Just wanted to share. Attempted painting my friends horses as a gift!",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_just-wanted-to-share-attempted-painting-my-friends-horses-as-a-gift",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/"
+  },
+  {
+    "normalized_id": "norm_1894_8dc86d8989",
+    "source_signal_ids": [
+      "reddit_equestrian_diet-advice-for-an-elderly-horse-with-pssm1-uk-with-_e0bb544b"
+    ],
+    "raw_signal_phrase": "Diet advice for an elderly horse with PSSM1 (UK, with only Harbro as a local shop)",
+    "preserved_query": "Diet advice for an elderly horse with PSSM1 (UK, with only Harbro as a local shop) — what should I know?",
+    "normalized_query": "Diet advice for an elderly horse with PSSM1 (UK, with only Harbro as a local shop) — what should I know?",
+    "llm_bait_phrase": "Diet advice for an elderly horse with PSSM1 (UK, with only Harbro as a local shop)",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_diet-advice-for-an-elderly-with-pssm1-uk-with-only-harbro-as-a-local-shop",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/business/what-legal-documents-do-i-need-for-a-horse-business/"
+  },
+  {
+    "normalized_id": "norm_1896_c7b79a3837",
+    "source_signal_ids": [
+      "reddit_equestrian_well-they-hated-this-in-the-other-horse-sub-but-i-th_d6c72012"
+    ],
+    "raw_signal_phrase": "Well they hated this in the other horse sub, but I think it’s fun and I wanna see more funny names! Your first three emojis in your recently used (that are not faces or hands) are your next horses show name. So what’s th",
+    "preserved_query": "Well they hated this in the other horse sub, but I think it’s fun and I wanna see more funny names! Your first three emojis in your recently used (that are not faces or hands) are your next horses show name. So what’s th — what should I know?",
+    "normalized_query": "Well they hated this in the other horse sub, but I think it’s fun and I wanna see more funny names! Your first three emojis in your recently used (that are not faces or hands) are your next horses show name. So what’s th — what should I know?",
+    "llm_bait_phrase": "Well they hated this in the other horse sub, but I think it’s fun and I wanna see more funny names! Your first three emojis in your recently used (that are not faces or hands) are your next horses show name. So what’s th",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_well-they-hated-this-in-the-other-sub-but-i-think-it-s-fun-and-i-wanna-see-more-",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/"
+  },
+  {
+    "normalized_id": "norm_1900_3e774eb6cf",
+    "source_signal_ids": [
+      "reddit_equestrian_issues-with-1-2-lease-horse-don-t-know-what-to-do-ht_0ba5b572"
+    ],
+    "raw_signal_phrase": "Issues with 1/2 lease horse, don’t know what to do.",
+    "preserved_query": "Issues with 1/2 lease horse, don’t know what to do. — what should I know?",
+    "normalized_query": "Issues with 1/2 lease horse, don’t know what to do. — what should I know?",
+    "llm_bait_phrase": "Issues with 1/2 lease horse, don’t know what to do.",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_issues-with-1-2-lease-don-t-to-do",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-horse-lease-ended-early-what-issues-usually-come-up/"
+  },
+  {
+    "normalized_id": "norm_1902_11e243cae4",
+    "source_signal_ids": [
+      "reddit_equestrian_lazy-horse-when-flatting-https-www-reddit-com-r-eque_aeb87af5"
+    ],
+    "raw_signal_phrase": "Lazy horse when flatting",
+    "preserved_query": "Lazy horse when flatting — what should I know?",
+    "normalized_query": "Lazy horse when flatting — what should I know?",
+    "llm_bait_phrase": "Lazy horse when flatting",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_lazy-flatting",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
   }
 ]
