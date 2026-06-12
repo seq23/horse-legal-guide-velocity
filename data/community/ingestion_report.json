@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T14:48:42.898Z",
+  "generated_at": "2026-06-12T14:24:15.270Z",
   "total_signals": 1943,
   "signals_by_source": {
     "reddit_equestrian": 707,
@@ -132,13 +132,14 @@
       "source_key": "reddit_equestrian",
       "platform": "reddit",
       "status": "ok",
-      "count": 20
+      "count": 0
     },
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
-      "status": "ok",
-      "count": 20
+      "status": "failed",
+      "count": 0,
+      "error": "Throttle runtime exceeded for public_signal_collection"
     },
     {
       "source_key": "reddit_legaladvice",
