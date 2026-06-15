@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-12T14:24:15.270Z",
-  "total_signals": 1943,
+  "generated_at": "2026-06-15T15:31:28.453Z",
+  "total_signals": 1963,
   "signals_by_source": {
-    "reddit_equestrian": 707,
+    "reddit_equestrian": 727,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
@@ -17,7 +17,7 @@
     "forum_horse_and_hound": 12
   },
   "signals_by_platform": {
-    "reddit": 1669,
+    "reddit": 1689,
     "equestrian_forums": 71,
     "google_paa": 29,
     "serp_competitors": 30,
@@ -25,16 +25,16 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 816,
-  "duplicates_collapsed": 1127,
+  "normalized_count": 822,
+  "duplicates_collapsed": 1141,
   "pages_created": 0,
-  "pages_strengthened": 816,
+  "pages_strengthened": 822,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 415
+      "count": 418
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -46,7 +46,7 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 94
+      "count": 97
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 707
+      "count": 727
     },
     {
       "name": "reddit_horses",
@@ -132,7 +132,7 @@
       "source_key": "reddit_equestrian",
       "platform": "reddit",
       "status": "ok",
-      "count": 0
+      "count": 20
     },
     {
       "source_key": "reddit_horses",
@@ -14122,6 +14122,108 @@
       "intent_type": "faq",
       "signal_score": 0.95,
       "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0816_fox-hunting-tack-etiquette",
+      "normalized_id": "norm_1944_0779248aa3",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_fox-hunting-tack-etiquette-https-www-reddit-com-r-eq_0a29289f"
+      ],
+      "preserved_query": "Fox hunting tack etiquette — what should I know?",
+      "normalized_query": "Fox hunting tack etiquette — what should I know?",
+      "llm_bait_phrase": "Fox hunting tack etiquette",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0817_new-and-broke-how-did-you-get-access-to-horses-for-more-hour",
+      "normalized_id": "norm_1945_9e054a90b8",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_new-and-broke-how-did-you-get-access-to-horses-for-m_7db97647"
+      ],
+      "preserved_query": "New and broke. How did you get access to horses for more hours under saddle — what should I know?",
+      "normalized_query": "New and broke. How did you get access to horses for more hours under saddle — what should I know?",
+      "llm_bait_phrase": "New and broke. How did you get access to horses for more hours under saddle",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0818_lesson-horse-vs-well-trained-lease",
+      "normalized_id": "norm_1951_54b7123349",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_lesson-horse-vs-well-trained-lease-https-www-reddit-_b5698a29"
+      ],
+      "preserved_query": "Lesson horse vs. well trained lease",
+      "normalized_query": "Lesson horse vs. well trained lease",
+      "llm_bait_phrase": "Lesson horse vs. well trained lease",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "comparison",
+      "signal_score": 1,
+      "mapped_slug": "/compare/barn-lease-vs-boarding-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0819_this-correct-if-not-help-me-figure-it-out-please",
+      "normalized_id": "norm_1956_656d34da68",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_is-this-correct-if-not-help-me-figure-it-out-please-_e2fa5e29"
+      ],
+      "preserved_query": "Is this correct? If not help me figure it out please!?",
+      "normalized_query": "Is this correct? If not help me figure it out please!?",
+      "llm_bait_phrase": "this correct? If not help me figure it out please!",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0820_you-see-how-a-month-of-hard-work-pays-off-although-i-do-stil",
+      "normalized_id": "norm_1959_0195c1f53e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_when-you-see-how-a-month-of-hard-work-pays-off-altho_3f953d71"
+      ],
+      "preserved_query": "When you see how a month of hard work pays off 🥰🐴 Although I do still need to finally figure out how to do hunter hair properly! 🤪 Love this mare (my lease horse) so much and I’m having so much fun😊❤️?",
+      "normalized_query": "When you see how a month of hard work pays off 🥰🐴 Although I do still need to finally figure out how to do hunter hair properly! 🤪 Love this mare (my lease horse) so much and I’m having so much fun😊❤️?",
+      "llm_bait_phrase": "you see how a month of hard work pays off 🥰🐴 Although I do still need to finally figure out how to do hunter hair properly! 🤪 Love this mare (my lease horse) so much and I’m having so much fun😊❤️",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0821_i-was-digging-through-my-closet-today-and-found-the-coolest-",
+      "normalized_id": "norm_1961_fe6b8d68bc",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_i-was-digging-through-my-closet-today-and-found-the-_62d7030a"
+      ],
+      "preserved_query": "I was digging through my closet today and found the coolest momento. One of the earliest horseback riding ribbons i won. 1994 leadline division. I was four..I even remember the horse i was on. A sweet bay mare Named Wind — what should I know?",
+      "normalized_query": "I was digging through my closet today and found the coolest momento. One of the earliest horseback riding ribbons i won. 1994 leadline division. I was four..I even remember the horse i was on. A sweet bay mare Named Wind — what should I know?",
+      "llm_bait_phrase": "I was digging through my closet today and found the coolest momento. One of the earliest horseback riding ribbons i won. 1994 leadline division. I was four..I even remember the horse i was on. A sweet bay mare Named Wind",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-a-seller-refuse-to-take-a-horse-back/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
