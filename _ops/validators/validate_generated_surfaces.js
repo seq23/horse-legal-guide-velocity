@@ -65,9 +65,11 @@ for (const rel of [...referencedDistPaths].sort()) assertFile(rel, 'referenced b
 // Route-level smoke checks for the admin surfaces most likely to regress silently.
 if (exists('dist/admin/index.html')) {
   const html = read('dist/admin/index.html');
-  for (const phrase of ['Horse Legal Guide Admin', '/admin/seo/', 'Original admin password', 'password reminder']) {
+  for (const phrase of ['Horse Legal Guide Admin', '/admin/seo/', 'Admin password', 'Unlock review panel', 'Filter queue', 'data-filter-status', 'data-filter-quality', 'Rows per page', 'Exactly what to change in metadata', 'pending', 'approved', 'needs_revision', 'rejected']) {
     if (!html.includes(phrase)) fail(`dist/admin/index.html missing phrase: ${phrase}`);
   }
+  if (html.includes('Enter admin password (reminder:')) fail('dist/admin/index.html still exposes password inside the password prompt text');
+  if (html.includes('Search draft queue')) fail('dist/admin/index.html still uses title-search-first draft queue UX');
 }
 
 if (exists('dist/admin/seo/index.html')) {
