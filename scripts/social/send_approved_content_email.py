@@ -1,0 +1,324 @@
+#!/usr/bin/env python3
+"""Email Claire approved Horse Legal Guide content links and platform-ready social copy.
+
+This script is intentionally dependency-free so GitHub Actions can run it with
+Python stdlib only. It sends only approved entries that have not already been
+recorded in data/social/approved_content_email_state.json, unless --force-resend
+is passed.
+"""
+from __future__ import annotations
+
+import argparse
+import email.message
+import glob
+import json
+import os
+import re
+import smtplib
+import ssl
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, Dict, Iterable, List, Optional, Tuple
+
+ROOT = Path.cwd()
+BACKLOG_PATH = ROOT / "data/system/editorial_backlog.json"
+STATE_PATH = ROOT / "data/social/approved_content_email_state.json"
+PREVIEW_PATH = ROOT / "reports/approved-content-email-preview.md"
+DEFAULT_RECIPIENT = "claire@wisecovington.com"
+DEFAULT_SITE = "https://horselegalguide.com"
+
+
+def read_json(path: Path, fallback: Any) -> Any:
+    if not path.exists():
+        return fallback
+    with path.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def write_json(path: Path, data: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as handle:
+        json.dump(data, handle, indent=2)
+        handle.write("\n")
+
+
+def slugify(value: str) -> str:
+    value = value.lower()
+    value = re.sub(r"[^a-z0-9]+", "-", value).strip("-")
+    return value or "approved-content"
+
+
+def parse_frontmatter(text: str) -> Tuple[Dict[str, str], str]:
+    if not text.startswith("---\n"):
+        return {}, text
+    end = text.find("\n---", 4)
+    if end == -1:
+        return {}, text
+    raw = text[4:end].strip().splitlines()
+    body = text[end + 4 :].lstrip()
+    meta: Dict[str, str] = {}
+    for line in raw:
+        if ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        meta[key.strip()] = value.strip().strip('"').strip("'")
+    return meta, body
+
+
+def load_draft_index() -> Dict[str, Dict[str, str]]:
+    out: Dict[str, Dict[str, str]] = {}
+    for filename in glob.glob(str(ROOT / "content/drafts/generated/*.md")):
+        path = Path(filename)
+        text = path.read_text(encoding="utf-8")
+        meta, body = parse_frontmatter(text)
+        entry_id = meta.get("entry_id")
+        if not entry_id:
+            continue
+        heading = ""
+        for line in body.splitlines():
+            if line.startswith("# "):
+                heading = line[2:].strip()
+                break
+        out[entry_id] = {
+            "path": str(path.relative_to(ROOT)),
+            "title": meta.get("title") or heading,
+            "slug": meta.get("slug") or "",
+            "content_type": meta.get("content_type") or "",
+            "source_cluster": meta.get("source_cluster") or "",
+            "scheduled_date": meta.get("scheduled_date") or meta.get("date") or "",
+        }
+    return out
+
+
+def normalize_candidate_url(site_domain: str, candidate: Any) -> str:
+    if not candidate:
+        return ""
+    value = str(candidate).strip()
+    if not value:
+        return ""
+    if value.startswith("http://") or value.startswith("https://"):
+        return value
+    if not value.startswith("/"):
+        value = "/" + value
+    return site_domain.rstrip("/") + value
+
+
+def path_from_site_url(site_domain: str, url: str) -> str:
+    base = site_domain.rstrip("/")
+    if url.startswith(base):
+        path_value = url[len(base):] or "/"
+    elif url.startswith("/"):
+        path_value = url
+    else:
+        return ""
+    path_value = path_value.split("#", 1)[0].split("?", 1)[0]
+    if path_value == "/":
+        return "index.html"
+    return path_value.strip("/").rstrip("/") + "/index.html"
+
+
+def dist_path_exists(site_domain: str, url: str) -> bool:
+    rel = path_from_site_url(site_domain, url)
+    if not rel:
+        return False
+    return (ROOT / "dist" / rel).exists()
+
+
+def resolve_live_public_url(site_domain: str, entry: Dict[str, Any], draft_meta: Dict[str, str]) -> Optional[str]:
+    candidates = [
+        entry.get("public_url"),
+        entry.get("live_url"),
+        entry.get("url"),
+        entry.get("preview_url"),
+        draft_meta.get("slug"),
+    ]
+    title = draft_meta.get("title") or entry.get("title") or entry.get("entry_id") or "approved-content"
+    date = draft_meta.get("scheduled_date") or entry.get("date") or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    candidates.append(f"/drafts/{date}/{slugify(str(title))}/")
+    for candidate in candidates:
+        url = normalize_candidate_url(site_domain, candidate)
+        if not url:
+            continue
+        # For social/email copy, do not send links to local draft routes unless that route actually exists in dist.
+        if dist_path_exists(site_domain, url):
+            return url
+    return None
+
+
+def short_context(entry: Dict[str, Any], draft_meta: Dict[str, str]) -> str:
+    cluster = (entry.get("source_cluster") or draft_meta.get("source_cluster") or "equine law").replace("-", " ")
+    ctype = (entry.get("content_type") or draft_meta.get("content_type") or "guide").replace("_", " ")
+    return f"A new {ctype} in the {cluster} lane is ready to share."
+
+
+def social_copy(title: str, url: str, context: str) -> Dict[str, str]:
+    linkedin = (
+        f"New on Horse Legal Guide: {title}\n\n"
+        f"{context} This plain-English resource is designed to help horse owners, trainers, riders, and equine businesses spot key legal pressure points before a situation becomes harder to unwind.\n\n"
+        f"Read it here: {url}\n\n"
+        "Horse Legal Guide is an educational resource connected to Wise Covington PLLC."
+    )
+    twitter = (
+        f"New on Horse Legal Guide: {title}\n\n"
+        f"Plain-English equine legal education from Wise Covington.\n{url}"
+    )
+    instagram = (
+        f"New on Horse Legal Guide 🐴⚖️\n\n"
+        f"{title}\n\n"
+        "This guide helps horse owners, riders, trainers, and equine businesses understand practical legal pressure points before a situation gets harder to unwind.\n\n"
+        f"Read it here: {url}\n\n"
+        "#EquineLaw #HorseBusiness #HorseLegalGuide #WiseCovington"
+    )
+    return {"linkedin": linkedin, "twitter": twitter, "instagram": instagram}
+
+
+def select_entries(backlog: List[Dict[str, Any]], sent: Dict[str, Any], ids: Optional[List[str]], force_resend: bool) -> List[Dict[str, Any]]:
+    wanted = set(ids or [])
+    sent_ids = set(sent.get("sent_entry_ids", []))
+    out: List[Dict[str, Any]] = []
+    for entry in backlog:
+        entry_id = str(entry.get("entry_id") or "")
+        if ids and entry_id not in wanted:
+            continue
+        approved = entry.get("status") == "approved" or entry.get("review_status") == "approved"
+        if not approved:
+            continue
+        if not force_resend and entry_id in sent_ids:
+            continue
+        out.append(entry)
+    return out
+
+
+def render_markdown(packages: List[Dict[str, Any]], recipient: str, skipped_not_live: Optional[List[Dict[str, str]]] = None) -> str:
+    lines = [
+        "# Approved Horse Legal Guide Content Ready to Share",
+        "",
+        f"Recipient: {recipient}",
+        f"Generated: {datetime.now(timezone.utc).isoformat()}",
+        "",
+        "Each approved piece below includes a link and ready-to-post copy for LinkedIn, Twitter/X, and Instagram.",
+    ]
+    for idx, item in enumerate(packages, 1):
+        copy = item["copy"]
+        lines.extend([
+            "",
+            f"## {idx}. {item['title']}",
+            "",
+            f"Link: {item['url']}",
+            f"Entry ID: `{item['entry_id']}`",
+            "",
+            "### LinkedIn",
+            copy["linkedin"],
+            "",
+            "### Twitter / X",
+            copy["twitter"],
+            "",
+            "### Instagram",
+            copy["instagram"],
+        ])
+    if skipped_not_live:
+        lines.extend(["", "## Approved but not emailed yet", "", "These approved entries were skipped because no matching live `dist/.../index.html` page exists yet:"])
+        for item in skipped_not_live:
+            lines.append(f"- `{item['entry_id']}` — {item['title']}")
+    return "\n".join(lines).strip() + "\n"
+
+
+def send_email(subject: str, markdown_body: str, recipient: str) -> bool:
+    required = ["SMTP_HOST", "SMTP_USERNAME", "SMTP_PASSWORD", "SMTP_FROM"]
+    missing = [name for name in required if not os.environ.get(name)]
+    if missing:
+        print(f"SMTP not configured; preview written only. Missing: {', '.join(missing)}")
+        return False
+    host = os.environ["SMTP_HOST"]
+    port = int(os.environ.get("SMTP_PORT", "587"))
+    username = os.environ["SMTP_USERNAME"]
+    password = os.environ["SMTP_PASSWORD"]
+    sender = os.environ["SMTP_FROM"]
+    msg = email.message.EmailMessage()
+    msg["Subject"] = subject
+    msg["From"] = sender
+    msg["To"] = recipient
+    msg.set_content(markdown_body)
+    if port == 465:
+        with smtplib.SMTP_SSL(host, port, context=ssl.create_default_context()) as smtp:
+            smtp.login(username, password)
+            smtp.send_message(msg)
+    else:
+        with smtplib.SMTP(host, port) as smtp:
+            smtp.starttls(context=ssl.create_default_context())
+            smtp.login(username, password)
+            smtp.send_message(msg)
+    return True
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--recipient", default=os.environ.get("APPROVED_CONTENT_EMAIL_TO", DEFAULT_RECIPIENT))
+    parser.add_argument("--site-domain", default=os.environ.get("SITE_DOMAIN", DEFAULT_SITE))
+    parser.add_argument("--ids", nargs="*", default=None)
+    parser.add_argument("--force-resend", action="store_true")
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args()
+
+    backlog = read_json(BACKLOG_PATH, [])
+    if not isinstance(backlog, list):
+        raise SystemExit("data/system/editorial_backlog.json must be a list")
+    state = read_json(STATE_PATH, {"sent_entry_ids": [], "sent_log": []})
+    draft_index = load_draft_index()
+    selected = select_entries(backlog, state, args.ids, args.force_resend)
+    packages: List[Dict[str, Any]] = []
+    skipped_not_live: List[Dict[str, str]] = []
+    for entry in selected:
+        entry_id = str(entry.get("entry_id") or "")
+        draft_meta = draft_index.get(entry_id, {})
+        title = str(entry.get("title") or draft_meta.get("title") or entry_id)
+        url = resolve_live_public_url(args.site_domain, entry, draft_meta)
+        if not url:
+            skipped_not_live.append({"entry_id": entry_id, "title": title})
+            continue
+        context = short_context(entry, draft_meta)
+        packages.append({
+            "entry_id": entry_id,
+            "title": title,
+            "url": url,
+            "copy": social_copy(title, url, context),
+        })
+
+    if not packages:
+        PREVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
+        lines = ["# Approved Horse Legal Guide Content Ready to Share", "", "No approved content pieces with live public URLs needed an email."]
+        if skipped_not_live:
+            lines.extend(["", "## Approved but not emailed yet", "", "These approved entries were skipped because no matching live `dist/.../index.html` page exists yet:"])
+            for item in skipped_not_live:
+                lines.append(f"- `{item['entry_id']}` — {item['title']}")
+        PREVIEW_PATH.write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
+        print("No approved content pieces with live public URLs needed an email.")
+        if skipped_not_live:
+            print(f"Skipped {len(skipped_not_live)} approved item(s) without live public URLs.")
+        return 0
+
+    markdown_body = render_markdown(packages, args.recipient, skipped_not_live)
+    PREVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PREVIEW_PATH.write_text(markdown_body, encoding="utf-8")
+
+    subject = f"Approved Horse Legal Guide content ready to share ({len(packages)})"
+    sent = False if args.dry_run else send_email(subject, markdown_body, args.recipient)
+    if sent:
+        sent_ids = list(dict.fromkeys([*(state.get("sent_entry_ids") or []), *[item["entry_id"] for item in packages]]))
+        sent_log = list(state.get("sent_log") or [])
+        sent_log.append({
+            "sent_at": datetime.now(timezone.utc).isoformat(),
+            "recipient": args.recipient,
+            "entry_ids": [item["entry_id"] for item in packages],
+            "count": len(packages),
+        })
+        write_json(STATE_PATH, {"sent_entry_ids": sent_ids, "sent_log": sent_log[-100:]})
+        print(f"Sent approved content email to {args.recipient} for {len(packages)} item(s).")
+    else:
+        print(f"Preview generated at {PREVIEW_PATH}. Email was not sent.")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

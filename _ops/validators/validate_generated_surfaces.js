@@ -65,9 +65,17 @@ for (const rel of [...referencedDistPaths].sort()) assertFile(rel, 'referenced b
 // Route-level smoke checks for the admin surfaces most likely to regress silently.
 if (exists('dist/admin/index.html')) {
   const html = read('dist/admin/index.html');
-  for (const phrase of ['Horse Legal Guide Admin', '/admin/seo/', 'Admin password', 'Unlock review panel', 'Filter queue', 'data-filter-status', 'data-filter-quality', 'Rows per page', 'Exactly what to change in metadata', 'pending', 'approved', 'needs_revision', 'rejected']) {
+  for (const phrase of ['Horse Legal Guide Admin', '/admin/seo/', 'Password reminder', 'Unlock review panel', 'Filter queue', 'data-filter-status', 'data-filter-quality', 'Rows per page', 'Exactly what to change in metadata', 'pending', 'approved', 'needs_revision', 'rejected']) {
     if (!html.includes(phrase)) fail(`dist/admin/index.html missing phrase: ${phrase}`);
   }
+  const loginIndex = html.indexOf('id="login-landing"');
+  const panelIndex = html.indexOf('id="admin-panel"');
+  if (loginIndex === -1 || panelIndex === -1 || panelIndex <= loginIndex) fail('dist/admin/index.html login/admin panel sections are malformed');
+  const loginHtml = html.slice(loginIndex, panelIndex);
+  if (loginHtml.includes('ChangeThisAdminPassword123!') || loginHtml.includes('Admin password') || loginHtml.includes('Password reminder')) fail('dist/admin/index.html exposes password details before admin unlock');
+  if (html.includes('ChangeThisAdminPassword123!')) fail('dist/admin/index.html must not embed the plaintext password before unlock; JS should reveal the entered value only after successful login');
+  if (!html.includes('id="password-reminder-value"')) fail('dist/admin/index.html missing dynamic password reminder target');
+  if (!html.includes('revealPasswordReminder(attempt)')) fail('dist/admin/index.html does not reveal password reminder only after successful unlock');
   if (html.includes('Enter admin password (reminder:')) fail('dist/admin/index.html still exposes password inside the password prompt text');
   if (html.includes('Search draft queue')) fail('dist/admin/index.html still uses title-search-first draft queue UX');
 }

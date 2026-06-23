@@ -17,7 +17,7 @@
     "validate:disclaimers": "node _ops/validators/validate_disclaimer_presence.js",
     "validate:footer": "node _ops/validators/validate_footer_links.js",
     "validate:manual": "node _ops/validators/validate_manual_mode.js",
-    "validate:all": "npm run build && npm run validate:generated-surfaces && npm run validate:mode && npm run validate:review && npm run validate:content && npm run validate:answer-shape && npm run validate:above-fold && npm run validate:extractability && npm run validate:links && npm run validate:ingestion && npm run validate:distribution && npm run validate:indexnow-workflow && npm run validate:policy && npm run validate:canonical && npm run validate:disclaimers && npm run validate:footer && npm run validate:manual && npm run validate:content-system && npm run validate:publish_quality && npm run validate:editorial && npm run validate:public-surfaces && npm run validate:answer-surface-monitoring && npm run validate:page-manifests && npm run validate:recommendation-workflow && npm run validate:family-scaffold && npm run validate:compare-contract && npm run validate:scenario-contract && npm run validate:faq-opening && npm run validate:content-ops && npm run validate:seo-aeo-geo && npm run validate:llm-velocity && npm run validate:automation-mode && npm run validate:workflow-trace",
+    "validate:all": "npm run build && npm run validate:generated-surfaces && npm run validate:mode && npm run validate:review && npm run validate:content && npm run validate:answer-shape && npm run validate:above-fold && npm run validate:extractability && npm run validate:links && npm run validate:ingestion && npm run validate:distribution && npm run validate:indexnow-workflow && npm run validate:policy && npm run validate:canonical && npm run validate:disclaimers && npm run validate:footer && npm run validate:manual && npm run validate:content-system && npm run validate:publish_quality && npm run validate:editorial && npm run validate:public-surfaces && npm run validate:answer-surface-monitoring && npm run validate:page-manifests && npm run validate:recommendation-workflow && npm run validate:family-scaffold && npm run validate:compare-contract && npm run validate:scenario-contract && npm run validate:faq-opening && npm run validate:content-ops && npm run validate:seo-aeo-geo && npm run validate:llm-velocity && npm run validate:automation-mode && npm run validate:approved-content-email && npm run validate:workflow-trace",
     "build": "node scripts/release/build_site_release.js",
     "publish:mode": "node scripts/publishing/run_mode_pipeline.js",
     "collect:signals": "node scripts/community/collect_signals.js",
@@ -93,6 +93,7 @@
     "validate:llm-velocity": "npm run validate:llm-citation-readiness && npm run validate:wise-covington-contact && npm run validate:firm-routing && npm run validate:contact-coverage",
     "ops:simulate-github-actions": "node scripts/ops/simulate_github_actions.js",
     "validate:github-actions-trace": "node scripts/ops/validate_github_actions_trace.js",
-    "validate:generated-surfaces": "node _ops/validators/validate_generated_surfaces.js"
+    "validate:generated-surfaces": "node _ops/validators/validate_generated_surfaces.js",
+    "validate:approved-content-email": "node _ops/validators/validate_approved_content_email_workflow.js"
   }
 }

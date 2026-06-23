@@ -26,6 +26,7 @@ function requiredArtifactsFor(workflowFile) {
   if (workflowFile.includes('validate')) return ['_ops/reports/generation_contract_report.json'];
   if (workflowFile.includes('build')) return ['dist/index.html', '.build/distribution-manifest.json'];
   if (workflowFile.includes('admin-bulk')) return ['scripts/admin/approve_many.js', 'scripts/admin/reject_many.js', 'scripts/admin/set_publish_date_many.js'];
+  if (workflowFile.includes('approved-content-email')) return ['scripts/social/send_approved_content_email.py', 'data/social/approved_content_email_state.json'];
   return [];
 }
 function classifyWorkflow(name) {
@@ -37,6 +38,7 @@ function classifyWorkflow(name) {
   if (name.includes('validate')) return 'repository validation lane';
   if (name.includes('build')) return 'manual build artifact lane; retained as non-mutating utility';
   if (name.includes('admin-bulk')) return 'owner-initiated bulk approval/rejection/publish-date actions';
+  if (name.includes('approved-content-email')) return 'approved-content social copy email notification to Claire';
   return 'workflow lane';
 }
 function main() {

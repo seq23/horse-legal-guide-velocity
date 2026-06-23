@@ -1,0 +1,84 @@
+name: Approved Content Email
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Optional space-separated approved entry IDs to email. Leave blank for all newly approved unsent pieces."
+        required: false
+        default: ""
+      force_resend:
+        description: "true allows resending IDs already recorded as emailed"
+        required: false
+        default: "false"
+      dry_run:
+        description: "true generates the preview artifact without sending email"
+        required: false
+        default: "false"
+  workflow_run:
+    workflows: ["Admin Bulk Content Actions", "Manual Publish"]
+    types: [completed]
+  schedule:
+    - cron: "17 14 * * *"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  email-approved-content:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      APPROVED_CONTENT_EMAIL_TO: claire@wisecovington.com
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      SMTP_FROM: ${{ secrets.SMTP_FROM }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build current generated surfaces
+        run: npm ci && npm run build
+      - name: Generate and send approved content email
+        run: |
+          set -euo pipefail
+          IDS="${{ github.event.inputs.ids || '' }}"
+          FORCE="${{ github.event.inputs.force_resend || 'false' }}"
+          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+          ARGS=()
+          if [ -n "$IDS" ]; then
+            # shellcheck disable=SC2206
+            ID_LIST=($IDS)
+            ARGS+=(--ids "${ID_LIST[@]}")
+          fi
+          if [ "$FORCE" = "true" ]; then ARGS+=(--force-resend); fi
+          if [ "$DRY" = "true" ]; then ARGS+=(--dry-run); fi
+          python3 scripts/social/send_approved_content_email.py "${ARGS[@]}"
+      - name: Upload email preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: approved-content-email-preview
+          path: reports/approved-content-email-preview.md
+          if-no-files-found: warn
+      - name: Commit sent-email state
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/social/approved_content_email_state.json reports/approved-content-email-preview.md
+          if git diff --cached --quiet; then
+            echo "No approved-content email state changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: record approved content email notification"
+          git push

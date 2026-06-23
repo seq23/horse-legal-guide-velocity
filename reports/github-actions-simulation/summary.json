@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-23T14:45:22.640Z",
+  "generated_at": "2026-06-23T17:47:57.651Z",
   "truth_boundary": "This is a local simulated GitHub Actions data trace. It combines workflow YAML presence, local command validation already executed in this workspace, artifact presence, dry-run distribution checks, and source-specific warning inspection. It does not prove live GitHub Actions, live GitHub secrets, live GSC, live IndexNow, or deployed runtime behavior.",
   "status": "passed",
-  "workflow_count": 8,
-  "passed": 8,
+  "workflow_count": 9,
+  "passed": 9,
   "passed_with_warnings": 0,
   "failed": 0,
   "hostile_review_repairs": [
@@ -90,6 +90,14 @@
       "live_followups": [],
       "hard_fails": [],
       "report": "reports/github-actions-simulation/admin-bulk-content-actions.json"
+    },
+    {
+      "workflow": "approved-content-email.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/approved-content-email.json"
     }
   ]
 }
