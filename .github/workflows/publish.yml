@@ -21,14 +21,14 @@ jobs:
         run: npm ci
       - name: Mark publish state running
         run: npm run state:publish
-      - name: Generate drafts
-        run: npm run generate:drafts
       - name: Preflight
         run: npm run validate:preflight
-      - name: Build site
+      - name: Build site and admin dashboards
         run: npm run build
       - name: Apply manual mode
         run: npm run publish:mode
+      - name: Generate workflow trace
+        run: npm run ops:trace-workflows
       - name: Validate all
         run: npm run validate:all
       - name: Submit distribution (non-blocking)

@@ -26,5 +26,7 @@ jobs:
         run: npm run validate:preflight
       - name: Build
         run: npm run build
+      - name: Generate workflow trace
+        run: npm run ops:trace-workflows
       - name: Validate
         run: npm run validate:all

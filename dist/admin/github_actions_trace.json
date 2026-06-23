@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-06-23T14:27:47.247Z",
+  "truth_boundary": "This is a local simulated GitHub Actions data trace. It combines workflow YAML presence, local command validation already executed in this workspace, artifact presence, dry-run distribution checks, and source-specific warning inspection. It does not prove live GitHub Actions, live GitHub secrets, live GSC, live IndexNow, or deployed runtime behavior.",
+  "status": "passed",
+  "workflow_count": 8,
+  "passed": 8,
+  "passed_with_warnings": 0,
+  "failed": 0,
+  "hostile_review_repairs": [
+    {
+      "finding": "public-signal-processing total runtime was too short for sequential sources",
+      "repair": "separated SIGNAL_COLLECTION_RUNTIME_MS from per-source SIGNAL_SOURCE_TIMEOUT_MS and set workflow total runtime to 90000ms"
+    },
+    {
+      "finding": "/admin/seo was previously mostly manifest-score based",
+      "repair": "dashboard now measures rendered dist HTML, sitemap files, schema coverage, internal links, signal health, workflow trace, and GitHub Actions simulation trace"
+    }
+  ],
+  "live_followups_count": 5,
+  "workflows": [
+    {
+      "workflow": "build.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/build.json"
+    },
+    {
+      "workflow": "validate.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/validate.json"
+    },
+    {
+      "workflow": "drafts-refresh.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/drafts-refresh.json"
+    },
+    {
+      "workflow": "public-signal-processing.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [
+        "0 fresh public/social signals collected in local container simulation; stored signal corpus still normalized/mapped. Live GitHub run should confirm fresh collection.",
+        "Reddit produced 0 fresh signals in local container simulation; live GitHub run should be reviewed."
+      ],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/public-signal-processing.json"
+    },
+    {
+      "workflow": "publish.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [
+        "Live IndexNow/GSC submission is dry-run/non-blocking in local simulation; prove live after apply."
+      ],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/publish.json"
+    },
+    {
+      "workflow": "deploy-distribution.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [
+        "Live IndexNow/GSC submission is dry-run/non-blocking in local simulation; prove live after apply."
+      ],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/deploy-distribution.json"
+    },
+    {
+      "workflow": "sitemap-indexing.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [
+        "Live IndexNow/GSC submission is dry-run/non-blocking in local simulation; prove live after apply."
+      ],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/sitemap-indexing.json"
+    },
+    {
+      "workflow": "admin-bulk-content-actions.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/admin-bulk-content-actions.json"
+    }
+  ]
+}

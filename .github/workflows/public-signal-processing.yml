@@ -18,6 +18,7 @@ jobs:
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
       SIGNAL_SOURCE_TIMEOUT_MS: "7000"
+      SIGNAL_COLLECTION_RUNTIME_MS: "90000"
       SIGNAL_FETCH_TIMEOUT_MS: "7000"
       SIGNAL_COLLECT_SEQUENTIAL: "true"
       REDDIT_PUBLIC_PREFER_RSS: "true"
@@ -42,8 +43,10 @@ jobs:
         run: npm run map:signals
       - name: Generate ingestion report
         run: npm run report:ingestion
-      - name: Build
+      - name: Build admin signal health
         run: npm run build
+      - name: Generate workflow trace
+        run: npm run ops:trace-workflows
       - name: Validate
         run: npm run validate:all
       - name: Commit generated updates

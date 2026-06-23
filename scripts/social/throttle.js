@@ -26,7 +26,7 @@ function createThrottle(options = {}) {
     sourceKey: 'global',
     delayMs: Number(process.env.REDDIT_PUBLIC_DELAY_MS || 900),
     maxRequests: Number(process.env.SIGNAL_SOURCE_LIMIT || 0) || Infinity,
-    maxRuntimeMs: Number(process.env.SIGNAL_SOURCE_TIMEOUT_MS || 7000),
+    maxRuntimeMs: Number(process.env.SIGNAL_COLLECTION_RUNTIME_MS || process.env.SIGNAL_TOTAL_RUNTIME_MS || 90000),
     retryLimit: 1,
     backoffMs: 500,
     stateFile: 'data/content_refresh_state.json'

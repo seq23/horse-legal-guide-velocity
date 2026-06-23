@@ -1,0 +1,29 @@
+{
+  "workflow": "public-signal-processing.yml",
+  "path": ".github/workflows/public-signal-processing.yml",
+  "workflow_key": "public_signal_processing",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/public-signal-processing.yml",
+  "purpose": "public/social signal ingestion; keep and protect",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run collect:signals",
+    "npm run normalize:signals",
+    "npm run map:signals",
+    "npm run report:ingestion",
+    "npm run build",
+    "npm run ops:trace-workflows",
+    "npm run validate:all"
+  ],
+  "artifacts_checked": [
+    "reference/signal_trace.json",
+    "reports/recommendation_normalized_intake.json",
+    "reports/recommendation_cluster_gap_backlog.json"
+  ],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-06-23T14:27:32.183Z",
+  "finished_at": "2026-06-23T14:27:32.183Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}

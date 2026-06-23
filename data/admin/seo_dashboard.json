@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-06-23T14:27:32.421Z",
+  "title": "LLM Citation Velocity Dashboard",
+  "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, and workflow trace next steps.",
+  "truth_boundary": "Scores are generated from repo files, rendered dist HTML, admin manifests, signal reports, and workflow trace JSON. They do not prove live GitHub Actions, live GSC, or live IndexNow until those run after apply.",
+  "source_files": [
+    "dist/**/*.html",
+    "dist/sitemap.xml",
+    "dist/sitemap-pages.xml",
+    "data/admin/editorial_manifest.json",
+    "data/admin/content_quality_report.json",
+    "data/admin/workflow_health.json",
+    "data/admin/github_actions_trace.json",
+    "data/admin/signal_ingestion_status.json",
+    "data/community/collection_status.json",
+    "data/community/ingestion_report.json",
+    "data/firm/wise_covington_contact.json"
+  ],
+  "health": {
+    "citation_velocity": 99,
+    "seo": 100,
+    "aeo": 100,
+    "geo": 100,
+    "routing_contact": 100,
+    "content_atom_coverage": 100,
+    "legal_safety": 100,
+    "workflow_trace": 100,
+    "signal_ingestion": 95,
+    "internal_linking": 100,
+    "schema_coverage": 100,
+    "metadata_completeness": 100
+  },
+  "metrics": {
+    "rendered_public_pages": 560,
+    "total_html_pages": 560,
+    "sitemap_url_count": 561,
+    "title_present": 560,
+    "description_present": 560,
+    "canonical_present": 560,
+    "duplicate_title_groups": 0,
+    "duplicate_description_groups": 0,
+    "jsonld_present": 560,
+    "article_schema_pages": 560,
+    "breadcrumb_schema_pages": 560,
+    "internal_link_healthy_pages": 560,
+    "zero_internal_link_pages": 0,
+    "weak_internal_link_pages": 0,
+    "draft_items": 300,
+    "approval_eligible": 300,
+    "direct_answer_ok": 300,
+    "data_atom_ok": 300,
+    "routing_ok": 300,
+    "hard_fail_items": 0,
+    "word_warning_items": 0,
+    "ai_risk_items": 0,
+    "workflow_count": 8,
+    "workflow_passed": 8,
+    "workflow_warning_count": 0,
+    "signal_raw_store_count": 2063,
+    "signal_fresh_collected_count": 0,
+    "signal_failed_sources": 0,
+    "signal_zero_reddit_warning": true,
+    "github_actions_simulation_status": "passed",
+    "github_actions_simulated_workflows": 8,
+    "github_actions_simulation_warnings": 0,
+    "github_actions_live_followups": 5,
+    "github_actions_simulation_failures": 0
+  },
+  "summary": {
+    "total": 300,
+    "pending": 300,
+    "approved": 0,
+    "rejected": 0,
+    "needs_revision": 0,
+    "approval_eligible": 300,
+    "missing_data_atom": 0,
+    "missing_routing": 0,
+    "hard_fail_items": 0,
+    "warning_items": 0,
+    "average_scores": {
+      "humanization": 100,
+      "seo": 100,
+      "aeo": 96,
+      "geo": 96,
+      "llm_citation": 97,
+      "routing": 100,
+      "legal_safety": 100
+    }
+  },
+  "firm_routing": {
+    "firm_name": "Wise Covington PLLC",
+    "canonical_site": "https://wisecovington.com",
+    "attorneys": [
+      "Andrea Benavides Wise",
+      "Claire Covington"
+    ],
+    "data_source": "data/firm/wise_covington_contact.json"
+  },
+  "panels": {
+    "seo": {
+      "score": 100,
+      "instructions": "Improve rendered title/meta/canonical coverage, sitemap parity, duplicate metadata warnings, and crawl/index readiness. Duplicate metadata is warning-only unless severe."
+    },
+    "aeo": {
+      "score": 100,
+      "instructions": "Keep direct answers near the top, use literal questions, visible FAQs where appropriate, and tables/lists for extractability."
+    },
+    "geo": {
+      "score": 100,
+      "instructions": "Strengthen entity clarity, data atoms, organization/publisher/schema graph, rendered JSON-LD, and source-traceable content units."
+    },
+    "citation_velocity": {
+      "score": 99,
+      "instructions": "Every approval-eligible page needs one citation-ready answer, one defensible data atom, useful internal links, and one clear Wise Covington routing path."
+    },
+    "routing_contact": {
+      "score": 100,
+      "instructions": "Use data/firm/wise_covington_contact.json as the only source for firm/attorney routing details. Do not invent lawyer/contact details."
+    },
+    "workflow": {
+      "score": 100,
+      "instructions": "Workflow trace must pass locally before ZIP delivery. Local simulation may record live follow-ups separately from warnings. Live GitHub Actions run after the ZIP is applied and pushed."
+    },
+    "signal_ingestion": {
+      "score": 95,
+      "instructions": "Preserve collect:signals, normalize:signals, map:signals, and report:ingestion. Stored/manual signals preserve the pipeline in container; live GitHub must prove fresh collection after apply."
+    },
+    "internal_linking": {
+      "score": 100,
+      "instructions": "Use internal links to connect each citation page to cluster hubs and sibling answer pages."
+    }
+  },
+  "issues": [],
+  "affected_item_count": 0
+}

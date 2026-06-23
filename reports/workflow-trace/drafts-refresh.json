@@ -1,0 +1,30 @@
+{
+  "workflow": "drafts-refresh.yml",
+  "path": ".github/workflows/drafts-refresh.yml",
+  "workflow_key": "drafts_refresh",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/drafts-refresh.yml",
+  "purpose": "content generation, self-heal, prevalidation, quality reports, admin refresh",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run generate:drafts",
+    "npm run content:self-heal",
+    "npm run content:prevalidate",
+    "npm run build",
+    "npm run ops:trace-workflows",
+    "npm run publish:mode",
+    "npm run validate:all"
+  ],
+  "artifacts_checked": [
+    "data/system/editorial_backlog.json",
+    "data/system/content_calendar.json",
+    "data/admin/editorial_manifest.json",
+    "data/admin/content_quality_report.json"
+  ],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-06-23T14:27:32.183Z",
+  "finished_at": "2026-06-23T14:27:32.183Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}

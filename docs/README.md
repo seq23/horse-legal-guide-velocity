@@ -1,51 +1,44 @@
-# Wise Covington Velocity Docs
+# Horse Legal Guide Velocity — Operator Docs
 
-This folder is the onboarding and operations library for the Horse Legal Guide velocity repo.
+This repo is an **LLM citation velocity system** for Horse Legal Guide. It is not the main user browsing site. Its job is to create structured, citation-ready equine legal education pages, then route people to Wise Covington.
+
+Main destination: `https://wisecovington.com`
 
 ## Start here
-1. `CONTENT_OPERATING_SYSTEM.md`
-2. `VA_ONBOARDING.md`
-3. `APPROVAL_AND_PUBLISHING.md`
-4. `WORKFLOWS.md`
-5. `FAILURE_HANDLING.md`
 
-## Repo purpose
-- This repo is the velocity/supporting site for `wisecovington.com`.
-- It is LLM-first and query-capture-first.
-- It is not the canonical site and should not compete with the canonical site.
-- Publishing mode is manual.
+1. `docs/OPERATOR_QUICKSTART.md` — short daily operating guide.
+2. `docs/SYSTEM_OVERVIEW.md` — what this repo is, what it is not, and how the pieces fit together.
+3. `docs/runbooks/ADMIN_PANEL_RUNBOOK.md` — how to use `/admin/`.
+4. `docs/runbooks/CONTENT_PIPELINE_RUNBOOK.md` — generate, self-heal, prevalidate, approve, publish.
+5. `docs/runbooks/WORKFLOW_TRACE_RUNBOOK.md` — workflow health and local-equivalent proof.
+6. `docs/runbooks/CITATION_VELOCITY_RUNBOOK.md` — SEO/AEO/GEO/LLM citation requirements.
+7. `docs/runbooks/WISE_COVINGTON_ROUTING_RUNBOOK.md` — firm/contact routing rules.
+8. `docs/runbooks/INDEXING_AND_DISTRIBUTION_RUNBOOK.md` — sitemap, IndexNow, and distribution workflow.
+9. `docs/HOSTILE_REVIEW_REPORT.md` — hostile review findings and repairs.
 
-## Critical distinction: evergreen vs scheduled content
-This repo has **two different content systems**.
+## Current admin password reminder
 
-### 1. Evergreen content families already in the repo
-These are part of the standing site structure and are not managed through the editorial approval queue:
-- FAQ
-- Scenario
-- Comparison
+`ChangeThisAdminPassword123!`
 
-These already exist in source content folders and build into the public site structure:
-- `content/faq/`
-- `content/scenarios/`
-- `content/comparisons/`
+This is a convenience reminder per owner instruction. The `/admin/` page is a static-page gate, not real authentication. Do not store real production secrets in this repo.
 
-They are part of the repo's evergreen knowledge surface.
+## Main validation commands
 
-### 2. Scheduled editorial backlog requiring approval
-These are calendar-driven draft items that live in the year-end backlog and must be approved before publish:
-- insight
-- article
-- whitepaper
-- deep_authority
+```bash
+npm run content:self-heal
+npm run content:prevalidate
+npm run build
+npm run validate:all
+```
 
-These are generated into the drafts system and reviewed through `/admin`.
+## Local proof boundary
 
-## Current editorial state
-- All scheduled editorial backlog items are currently `pending`.
-- Insights are **not approved**.
-- FAQ / scenario / comparison are **not** approval-queue content types in the current repo model.
-- FAQ / scenario / comparison still exist as evergreen site content families.
+This repo can prove local structure, generated artifacts, validators, and workflow trace files inside a local/container environment. It cannot prove live GitHub Actions, live GSC, live IndexNow, or deployed Cloudflare runtime until the ZIP is applied, committed, pushed, and the live workflows run.
 
-## Rule for VAs and reviewers
-If you are looking in `/admin`, you are looking at the **scheduled editorial backlog**, not the full evergreen site.
-Do not assume a content family is missing from the site just because it does not appear in `/admin`.
+## Archived legacy docs
+
+Older fragmented docs were moved to:
+
+`docs/archive/2026-06-23-pre-hostile-review/`
+
+Use the new runbooks first. The archive is retained only for continuity/history.

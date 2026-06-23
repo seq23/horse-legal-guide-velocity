@@ -47,7 +47,6 @@ function renderLayout({ title, description, url, body, schemaType = 'Article', i
   <title>${htmlEscape(title)}</title>
   <meta name="description" content="${htmlEscape(description)}">
   ${writeCanonicalTag(url)}
-  <script type="application/ld+json">${writeJsonLd(schemaType.toLowerCase() === 'faqpage' ? 'faq' : 'article', title, description, url)}</script>
   <style>
     :root {
       --bg: #f4efe7;
@@ -238,6 +237,7 @@ ${body}
 ${footer}
     </div>
   </main>
+  <script type="application/ld+json">${writeJsonLd(schemaType.toLowerCase() === 'faqpage' ? 'faq' : 'article', title, description, url)}</script>
 </body>
 </html>`;
 }
@@ -292,8 +292,16 @@ function renderIndex(config) {
 
 function renderPolicyPage({ title, text, url }) {
   const paragraphs = text.split(/\n+/).map((p) => `<p>${htmlEscape(p)}</p>`).join('\n');
-  const body = `<header class="content-header"><span class="eyebrow">Horse Legal Guide</span><h1>${htmlEscape(title)}</h1></header>${paragraphs}`;
-  return renderLayout({ title, description: title, url, body });
+  const body = `<header class="content-header"><span class="eyebrow">Horse Legal Guide</span><h1>${htmlEscape(title)}</h1></header>${paragraphs}
+<nav aria-label="Policy page navigation"><h2>Related site resources</h2><ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/coverage/">Coverage map</a></li>
+  <li><a href="/reference/">Reference index</a></li>
+  <li><a href="/faq/">FAQ index</a></li>
+  <li><a href="/scenario/">Scenario index</a></li>
+  <li><a href="/compare/">Comparison index</a></li>
+</ul></nav>`;
+  return renderLayout({ title: `${title} | Horse Legal Guide`, description: `${title} for Horse Legal Guide, including educational boundaries, privacy, routing, and public citation-surface context.`, url, body });
 }
 
 module.exports = { renderLayout, renderIndex, renderPolicyPage };

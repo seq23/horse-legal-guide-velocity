@@ -1,0 +1,99 @@
+name: Admin Bulk Content Actions
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "approve_many, reject_many, mark_many_needs_revision, set_publish_date_many, clear_publish_date_many, approve_all_eligible, approve_by_quality, approve_by_type, approve_by_cluster, dry_run"
+        required: true
+        default: "dry_run"
+      ids:
+        description: "Space-separated entry IDs for many-actions"
+        required: false
+        default: ""
+      publish_date:
+        description: "YYYY-MM-DD for set_publish_date_many"
+        required: false
+        default: ""
+      content_type:
+        description: "Content type for approve_by_type"
+        required: false
+        default: ""
+      cluster:
+        description: "Source cluster for approve_by_cluster"
+        required: false
+        default: ""
+      min_quality_score:
+        description: "Minimum quality score for approve_by_quality"
+        required: false
+        default: "90"
+      dry_run:
+        description: "true keeps this non-mutating"
+        required: false
+        default: "true"
+
+permissions:
+  contents: write
+
+jobs:
+  admin-bulk-action:
+    runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      CANONICAL_DOMAIN: https://wisecovington.com
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
+      GSC_SITE_URL: sc-domain:horselegalguide.com
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install
+        run: npm ci
+      - name: Refresh self-heal and prevalidation before action
+        run: |
+          npm run content:self-heal
+          npm run content:prevalidate
+          npm run build
+          npm run ops:trace-workflows
+      - name: Execute requested admin action
+        if: ${{ inputs.dry_run != 'true' && inputs.action != 'dry_run' }}
+        run: |
+          set -euo pipefail
+          case "${{ inputs.action }}" in
+            approve_many) node scripts/admin/approve_many.js ${{ inputs.ids }} ;;
+            reject_many) node scripts/admin/reject_many.js ${{ inputs.ids }} ;;
+            mark_many_needs_revision) node scripts/admin/mark_many_needs_revision.js ${{ inputs.ids }} ;;
+            set_publish_date_many) node scripts/admin/set_publish_date_many.js "${{ inputs.publish_date }}" ${{ inputs.ids }} ;;
+            clear_publish_date_many) node scripts/admin/clear_publish_date_many.js ${{ inputs.ids }} ;;
+            approve_all_eligible) node scripts/admin/approve_all_eligible.js ;;
+            approve_by_quality) node scripts/admin/approve_by_quality.js "${{ inputs.min_quality_score }}" ;;
+            approve_by_type) node scripts/admin/approve_by_type.js "${{ inputs.content_type }}" ;;
+            approve_by_cluster) node scripts/admin/approve_by_cluster.js "${{ inputs.cluster }}" ;;
+            *) echo "Unknown action: ${{ inputs.action }}"; exit 1 ;;
+          esac
+      - name: Dry run summary
+        if: ${{ inputs.dry_run == 'true' || inputs.action == 'dry_run' }}
+        run: |
+          echo "Dry run only. No content status changed."
+          echo "Action requested: ${{ inputs.action }}"
+          echo "IDs: ${{ inputs.ids }}"
+      - name: Rebuild and validate after action
+        run: |
+          npm run build
+          npm run validate:all
+      - name: Commit admin content action
+        if: ${{ inputs.dry_run != 'true' && inputs.action != 'dry_run' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/system/editorial_backlog.json data/system/content_calendar.json data/admin data/content_atoms reports/workflow-trace dist .build
+          if git diff --cached --quiet; then
+            echo "No admin action changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: run admin bulk content action"
+          git push

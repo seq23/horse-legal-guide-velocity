@@ -1,0 +1,21 @@
+{
+  "workflow": "sitemap-indexing.yml",
+  "path": ".github/workflows/sitemap-indexing.yml",
+  "workflow_key": "sitemap_indexing",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/sitemap-indexing.yml",
+  "purpose": "manual indexing utility; retained intentionally as a narrow operator tool",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run build"
+  ],
+  "artifacts_checked": [
+    "dist/sitemap.xml"
+  ],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-06-23T14:27:32.184Z",
+  "finished_at": "2026-06-23T14:27:32.184Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}

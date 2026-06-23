@@ -1,0 +1,24 @@
+{
+  "workflow": "validate.yml",
+  "path": ".github/workflows/validate.yml",
+  "workflow_key": "validate",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/validate.yml",
+  "purpose": "repository validation lane",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run validate:preflight",
+    "npm run build",
+    "npm run ops:trace-workflows",
+    "npm run validate:all"
+  ],
+  "artifacts_checked": [
+    "_ops/reports/generation_contract_report.json"
+  ],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-06-23T14:27:32.184Z",
+  "finished_at": "2026-06-23T14:27:32.184Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}
