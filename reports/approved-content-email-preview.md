@@ -1,3 +1,3 @@
 # Approved Horse Legal Guide Content Ready to Share
 
-No new approved content pieces needed an email.
+No approved content pieces with live public URLs needed an email.
