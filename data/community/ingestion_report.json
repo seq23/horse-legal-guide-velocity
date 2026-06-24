@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T14:01:13.561Z",
-  "total_signals": 2063,
+  "generated_at": "2026-06-24T14:21:23.935Z",
+  "total_signals": 2089,
   "signals_by_source": {
     "reddit_equestrian": 827,
     "reddit_horses": 648,
@@ -8,45 +8,45 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 86,
+    "youtube_search_comments": 111,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 120,
     "reddit_smallbusiness": 121,
     "reddit_farming_ranching": 73,
-    "forum_horse_and_hound": 12
+    "forum_horse_and_hound": 13
   },
   "signals_by_platform": {
     "reddit": 1789,
-    "equestrian_forums": 71,
+    "equestrian_forums": 72,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 86,
+    "youtube": 111,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 859,
-  "duplicates_collapsed": 1204,
+  "normalized_count": 882,
+  "duplicates_collapsed": 1207,
   "pages_created": 0,
-  "pages_strengthened": 859,
+  "pages_strengthened": 882,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 447
-    },
-    {
-      "name": "boarding-training-and-barn-operations",
-      "count": 112
+      "count": 451
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 104
+      "count": 117
+    },
+    {
+      "name": "boarding-training-and-barn-operations",
+      "count": 113
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 99
+      "count": 104
     },
     {
       "name": "liability-waivers-insurance",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 86
+      "count": 111
     },
     {
       "name": "reddit_farming_ranching",
@@ -124,7 +124,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 12
+      "count": 13
     }
   ],
   "collection_status": [
@@ -156,7 +156,7 @@
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
       "status": "ok",
-      "count": 0
+      "count": 10
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -168,13 +168,13 @@
       "source_key": "forum_chronicle_of_the_horse",
       "platform": "equestrian_forums",
       "status": "ok",
-      "count": 0
+      "count": 1
     },
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "ok",
-      "count": 0
+      "count": 6
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -186,13 +186,13 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "ok",
-      "count": 0
+      "count": 1
     },
     {
       "source_key": "youtube_search_comments",
       "platform": "youtube",
       "status": "ok",
-      "count": 0
+      "count": 40
     },
     {
       "source_key": "instagram_public_social_framing",
@@ -14841,6 +14841,397 @@
       "intent_type": "faq",
       "signal_score": 1,
       "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0859_locksmith-for-coachbuilt-horsebox",
+      "normalized_id": "norm_2063_ea9d16f5d8",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_locksmith-for-coachbuilt-horsebox-https-forums-horse_8abdcda6"
+      ],
+      "preserved_query": "Locksmith for coachbuilt horsebox — what should I know?",
+      "normalized_query": "Locksmith for coachbuilt horsebox — what should I know?",
+      "llm_bait_phrase": "Locksmith for coachbuilt horsebox",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0860_understanding-lease-agreements-housing-financial-literacy-kh",
+      "normalized_id": "norm_2064_1a3302aae2",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_understanding-lease-agreements-housing-financial-lit_5c3583f8"
+      ],
+      "preserved_query": "Understanding lease agreements | Housing | Financial Literacy | Khan Academy — what should I know?",
+      "normalized_query": "Understanding lease agreements | Housing | Financial Literacy | Khan Academy — what should I know?",
+      "llm_bait_phrase": "Understanding lease agreements | Housing | Financial Literacy | Khan Academy",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0861_lease-vs-rental-agreement-what-s-the-difference",
+      "normalized_id": "norm_2065_666823dbd9",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_lease-vs-rental-agreement-what-s-the-difference-http_7a45a641"
+      ],
+      "preserved_query": "Lease vs. Rental Agreement: What’s the Difference",
+      "normalized_query": "Lease vs. Rental Agreement: What’s the Difference",
+      "llm_bait_phrase": "Lease vs. Rental Agreement: What’s the Difference",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "comparison",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0862_landlord-iq-what-s-the-difference-between-a-rental-agreement",
+      "normalized_id": "norm_2066_e1c46ff23b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_landlord-iq-what-s-the-difference-between-a-rental-a_55e9d1b4"
+      ],
+      "preserved_query": "Landlord IQ: What's the Difference Between a Rental Agreement and a Lease — what should I know?",
+      "normalized_query": "Landlord IQ: What's the Difference Between a Rental Agreement and a Lease",
+      "llm_bait_phrase": "Landlord IQ: What's the Difference Between a Rental Agreement and a Lease",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "comparison",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0863_i-lease-a-horse",
+      "normalized_id": "norm_2067_fe7070b4d3",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_should-i-lease-a-horse-https-www-youtube-com-results_7f9d2f2c"
+      ],
+      "preserved_query": "Should I Lease A Horse?",
+      "normalized_query": "Should I Lease A Horse?",
+      "llm_bait_phrase": "I Lease A Horse",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0864_differences-in-part-boarding-co-boarding-leasing-and-owning-",
+      "normalized_id": "norm_2068_36f05d6c24",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_differences-in-part-boarding-co-boarding-leasing-and_b1605d3f"
+      ],
+      "preserved_query": "Differences in part boarding, co boarding, leasing and owning a horse! — what should I know?",
+      "normalized_query": "Differences in part boarding, co boarding, leasing and owning a horse! — what should I know?",
+      "llm_bait_phrase": "Differences in part boarding, co boarding, leasing and owning a horse!",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0865_the-conditions-of-sale",
+      "normalized_id": "norm_2069_1235c34e96",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_the-conditions-of-sale-https-www-youtube-com-results_a0dbc1b7"
+      ],
+      "preserved_query": "The Conditions of Sale — what should I know?",
+      "normalized_query": "The Conditions of Sale — what should I know?",
+      "llm_bait_phrase": "The Conditions of Sale",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0866_kind-of-horse-to-buy",
+      "normalized_id": "norm_2070_d7e795c554",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_what-kind-of-horse-to-buy-https-www-youtube-com-resu_db45b923"
+      ],
+      "preserved_query": "What Kind of Horse To Buy?",
+      "normalized_query": "What Kind of Horse To Buy?",
+      "llm_bait_phrase": "Kind of Horse To Buy",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0867_the-business-of-selling-and-buying-horses",
+      "normalized_id": "norm_2071_6a36f29c2b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_the-business-of-selling-and-buying-horses-https-www-_718fb953"
+      ],
+      "preserved_query": "The business of selling and buying horses — what should I know?",
+      "normalized_query": "The business of selling and buying horses — what should I know?",
+      "llm_bait_phrase": "The business of selling and buying horses",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-seller-refuse-to-take-a-horse-back/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0868_your-horses-are-killing-you-mathematically-it-s-time-to-sell",
+      "normalized_id": "norm_2072_7799b78684",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_your-horses-are-killing-you-mathematically-it-s-time_4842c5d5"
+      ],
+      "preserved_query": "Your Horses Are Killing You Mathematically!! (It's Time To Sell The Farm) — what should I know?",
+      "normalized_query": "Your Horses Are Killing You Mathematically!! (It's Time To Sell The Farm) — what should I know?",
+      "llm_bait_phrase": "Your Horses Are Killing You Mathematically!! (It's Time To Sell The Farm)",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0869_horse-buying-contracts",
+      "normalized_id": "norm_2073_fc1e099404",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-buying-contracts-https-www-youtube-com-results_3dff2223"
+      ],
+      "preserved_query": "Horse Buying Contracts — what should I know?",
+      "normalized_query": "Horse Buying Contracts — what should I know?",
+      "llm_bait_phrase": "Horse Buying Contracts",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0870_sales-fraud-in-the-horse-industry",
+      "normalized_id": "norm_2074_1e78d477af",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_sales-fraud-in-the-horse-industry-https-www-youtube-_52fe451b"
+      ],
+      "preserved_query": "Sales Fraud in the Horse Industry — what should I know?",
+      "normalized_query": "Sales Fraud in the Horse Industry — what should I know?",
+      "llm_bait_phrase": "Sales Fraud in the Horse Industry",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0871_horse-buyers",
+      "normalized_id": "norm_2078_86eff5605c",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-buyers-https-www-youtube-com-results-search-qu_a1d6c216"
+      ],
+      "preserved_query": "Horse buyers — what should I know?",
+      "normalized_query": "Horse buyers — what should I know?",
+      "llm_bait_phrase": "Horse buyers",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0872_you-need-a-sales-contract-notarized",
+      "normalized_id": "norm_2079_e349ad2e76",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_do-you-need-a-sales-contract-notarized-https-www-you_32b4613f"
+      ],
+      "preserved_query": "Do you need a sales contract notarized?",
+      "normalized_query": "Do you need a sales contract notarized?",
+      "llm_bait_phrase": "you need a sales contract notarized",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0873_check-out-the-horse",
+      "normalized_id": "norm_2080_8eb29475aa",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_check-out-the-horse-https-www-youtube-com-results-se_570f6675"
+      ],
+      "preserved_query": "Check out the horse — what should I know?",
+      "normalized_query": "Check out the horse — what should I know?",
+      "llm_bait_phrase": "Check out the horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/scenario/a-buyer-wants-a-refund-after-changing-their-mind-what-matters/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0874_is-sales-fraud",
+      "normalized_id": "norm_2081_563d594c16",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_what-is-sales-fraud-https-www-youtube-com-results-se_afd55cdf"
+      ],
+      "preserved_query": "What is Sales Fraud?",
+      "normalized_query": "What is Sales Fraud?",
+      "llm_bait_phrase": "is Sales Fraud",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0875_liability-releases",
+      "normalized_id": "norm_2082_b7a6cfdf1f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_liability-releases-https-www-youtube-com-results-sea_7723fde9"
+      ],
+      "preserved_query": "Liability Releases — what should I know?",
+      "normalized_query": "Liability Releases — what should I know?",
+      "llm_bait_phrase": "Liability Releases",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0876_lease-with-option-to-buy",
+      "normalized_id": "norm_2083_bef109ab39",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_lease-with-option-to-buy-https-www-youtube-com-resul_7ad1c943"
+      ],
+      "preserved_query": "Lease with Option to Buy — what should I know?",
+      "normalized_query": "Lease with Option to Buy — what should I know?",
+      "llm_bait_phrase": "Lease with Option to Buy",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/scenario/a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0877_to-make-a-horse-bill-of-sale",
+      "normalized_id": "norm_2084_23fb519caa",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-make-a-horse-bill-of-sale-https-www-youtube-c_88fa624f"
+      ],
+      "preserved_query": "How to Make a Horse Bill of Sale?",
+      "normalized_query": "How to Make a Horse Bill of Sale?",
+      "llm_bait_phrase": "to Make a Horse Bill of Sale",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0878_to-buy-a-horse",
+      "normalized_id": "norm_2085_e6f28693bf",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-buy-a-horse-https-www-youtube-com-results-sea_5ff18841"
+      ],
+      "preserved_query": "How To Buy A Horse?",
+      "normalized_query": "How To Buy A Horse?",
+      "llm_bait_phrase": "To Buy A Horse",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0879_importance-of-a-horse-bill-of-sale",
+      "normalized_id": "norm_2086_13b0e6ba44",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_importance-of-a-horse-bill-of-sale-https-www-youtube_05bd0ebb"
+      ],
+      "preserved_query": "Importance Of A Horse Bill Of Sale — what should I know?",
+      "normalized_query": "Importance Of A Horse Bill Of Sale — what should I know?",
+      "llm_bait_phrase": "Importance Of A Horse Bill Of Sale",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0880_what-s-included-in-a-horse-bill-of-sale",
+      "normalized_id": "norm_2087_867eb4489a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_what-s-included-in-a-horse-bill-of-sale-https-www-yo_c690341e"
+      ],
+      "preserved_query": "What's Included In A Horse Bill Of Sale?",
+      "normalized_query": "What's Included In A Horse Bill Of Sale?",
+      "llm_bait_phrase": "What's Included In A Horse Bill Of Sale",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0881_to-sell-horses",
+      "normalized_id": "norm_2088_ab9d1201cf",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-sell-horses-https-www-youtube-com-results-sea_965c60bd"
+      ],
+      "preserved_query": "How to Sell Horses?",
+      "normalized_query": "How to Sell Horses?",
+      "llm_bait_phrase": "to Sell Horses",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
