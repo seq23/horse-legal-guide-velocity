@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-26T14:20:44.340Z",
-  "total_signals": 2110,
+  "generated_at": "2026-06-29T14:49:32.983Z",
+  "total_signals": 2145,
   "signals_by_source": {
-    "reddit_equestrian": 847,
+    "reddit_equestrian": 867,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
@@ -12,45 +12,45 @@
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 120,
-    "reddit_smallbusiness": 121,
+    "reddit_smallbusiness": 134,
     "reddit_farming_ranching": 73,
-    "forum_horse_and_hound": 14
+    "forum_horse_and_hound": 16
   },
   "signals_by_platform": {
-    "reddit": 1809,
-    "equestrian_forums": 73,
+    "reddit": 1842,
+    "equestrian_forums": 75,
     "google_paa": 29,
     "serp_competitors": 30,
     "youtube": 111,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 889,
-  "duplicates_collapsed": 1221,
+  "normalized_count": 899,
+  "duplicates_collapsed": 1246,
   "pages_created": 0,
-  "pages_strengthened": 889,
+  "pages_strengthened": 899,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 457
+      "count": 461
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 117
+      "count": 119
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 114
+      "count": 115
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 104
+      "count": 106
     },
     {
       "name": "liability-waivers-insurance",
-      "count": 40
+      "count": 41
     },
     {
       "name": "equine-business-formation",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 847
+      "count": 867
     },
     {
       "name": "reddit_horses",
@@ -84,7 +84,7 @@
     },
     {
       "name": "reddit_smallbusiness",
-      "count": 121
+      "count": 134
     },
     {
       "name": "reddit_legaladvice",
@@ -124,7 +124,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 14
+      "count": 16
     }
   ],
   "collection_status": [
@@ -132,7 +132,7 @@
       "source_key": "reddit_equestrian",
       "platform": "reddit",
       "status": "ok",
-      "count": 0
+      "count": 20
     },
     {
       "source_key": "reddit_horses",
@@ -150,7 +150,7 @@
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
       "status": "ok",
-      "count": 0
+      "count": 20
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -174,7 +174,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "ok",
-      "count": 6
+      "count": 7
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -9273,14 +9273,15 @@
       "normalized_id": "norm_1097_c4bc5c2dfb",
       "action": "strengthen_existing_page",
       "source_signal_ids": [
-        "reddit_equestrian_i-love-this-horse-so-much-https-www-reddit-com-r-equ_8fff19a5"
+        "reddit_equestrian_i-love-this-horse-so-much-https-www-reddit-com-r-equ_8fff19a5",
+        "reddit_equestrian_i-love-this-horse-so-much-https-www-reddit-com-r-equ_57a60a30"
       ],
       "preserved_query": "I love this horse so much — what should I know?",
       "normalized_query": "I love this horse so much — what should I know?",
       "llm_bait_phrase": "I love this horse so much",
       "cluster": "state-specific",
       "intent_type": "faq",
-      "signal_score": 1,
+      "signal_score": 2.5,
       "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
@@ -15351,6 +15352,176 @@
       "intent_type": "faq",
       "signal_score": 0.9,
       "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0889_foal-colour",
+      "normalized_id": "norm_2110_4981c69b8c",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_foal-colour-https-www-reddit-com-r-equestrian-commen_9dd294c3"
+      ],
+      "preserved_query": "Foal colour — what should I know?",
+      "normalized_query": "Foal colour — what should I know?",
+      "llm_bait_phrase": "Foal colour",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0890_thinking-about-buying-this-horse-would-love-some-honest-opin",
+      "normalized_id": "norm_2115_1c5c2eb469",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_thinking-about-buying-this-horse-would-love-some-hon_f748aa45"
+      ],
+      "preserved_query": "Thinking about buying this horse, would love some honest opinions — what should I know?",
+      "normalized_query": "Thinking about buying this horse, would love some honest opinions — what should I know?",
+      "llm_bait_phrase": "Thinking about buying this horse, would love some honest opinions",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0891_help-needed-please",
+      "normalized_id": "norm_2117_ebb8696b96",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_help-needed-please-https-www-reddit-com-r-equestrian_b1e9e742"
+      ],
+      "preserved_query": "Help needed please!! — what should I know?",
+      "normalized_query": "Help needed please!! — what should I know?",
+      "llm_bait_phrase": "Help needed please!!",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0892_there-any-way-to-keep-down-a-mare-s-udder-buildup",
+      "normalized_id": "norm_2121_6a855515d7",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_is-there-any-way-to-keep-down-a-mare-s-udder-buildup_3565159d"
+      ],
+      "preserved_query": "Is there any way to keep down a mare’s udder buildup?",
+      "normalized_query": "Is there any way to keep down a mare’s udder buildup?",
+      "llm_bait_phrase": "there any way to keep down a mare’s udder buildup",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0893_my-trainer-gaslighting-me",
+      "normalized_id": "norm_2125_e18f94de8a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_is-my-trainer-gaslighting-me-https-www-reddit-com-r-_974c86e9"
+      ],
+      "preserved_query": "Is my trainer gaslighting me?",
+      "normalized_query": "Is my trainer gaslighting me?",
+      "llm_bait_phrase": "my trainer gaslighting me",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0894_conflicted-between-buying-back-my-horse-opinions",
+      "normalized_id": "norm_2127_130e542a3b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_conflicted-between-buying-back-my-horse-opinions-htt_7471d346"
+      ],
+      "preserved_query": "Conflicted between buying back my horse. Opinions — what should I know?",
+      "normalized_query": "Conflicted between buying back my horse. Opinions — what should I know?",
+      "llm_bait_phrase": "Conflicted between buying back my horse. Opinions",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0895_do-small-businesses-track-obligations-buried-in-contracts-le",
+      "normalized_id": "norm_2141_b8d7ec9f7f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_smallbusiness_how-do-small-businesses-track-obligations-buried-in-_e1710e84"
+      ],
+      "preserved_query": "How do small businesses track obligations buried in contracts, leases, vendor agreements, and client SOWs?",
+      "normalized_query": "How do small businesses track obligations buried in contracts, leases, vendor agreements, and client SOWs?",
+      "llm_bait_phrase": "do small businesses track obligations buried in contracts, leases, vendor agreements, and client SOWs",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.75,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0896_after-reviewing-a-stack-of-commercial-trucking-insurance-pol",
+      "normalized_id": "norm_2142_6c20a3beb6",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_smallbusiness_after-reviewing-a-stack-of-commercial-trucking-insur_c52337b8"
+      ],
+      "preserved_query": "After reviewing a stack of commercial trucking insurance policies, here are 6 things almost every owner-op is overpaying for — what should I know?",
+      "normalized_query": "After reviewing a stack of commercial trucking insurance policies, here are 6 things almost every owner-op is overpaying for — what should I know?",
+      "llm_bait_phrase": "After reviewing a stack of commercial trucking insurance policies, here are 6 things almost every owner-op is overpaying for",
+      "cluster": "liability-waivers-insurance",
+      "intent_type": "faq",
+      "signal_score": 0.75,
+      "mapped_slug": "/liability/do-i-need-insurance-for-my-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0897_the-nagging-feeling-that-riding-horses-is-just-odd",
+      "normalized_id": "norm_2143_795a18a8a4",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_the-nagging-feeling-that-riding-horses-is-just-odd-h_343021e7"
+      ],
+      "preserved_query": "The nagging feeling that riding horses is just odd — what should I know?",
+      "normalized_query": "The nagging feeling that riding horses is just odd — what should I know?",
+      "llm_bait_phrase": "The nagging feeling that riding horses is just odd",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0898_red-horse-artimud",
+      "normalized_id": "norm_2144_ff85eb8331",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_red-horse-artimud-https-forums-horseandhound-co-uk_19a334f6"
+      ],
+      "preserved_query": "Red Horse Artimud — what should I know?",
+      "normalized_query": "Red Horse Artimud — what should I know?",
+      "llm_bait_phrase": "Red Horse Artimud",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
