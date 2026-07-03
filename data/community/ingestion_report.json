@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-02T14:19:14.924Z",
-  "total_signals": 2190,
+  "generated_at": "2026-07-03T15:35:27.219Z",
+  "total_signals": 2212,
   "signals_by_source": {
-    "reddit_equestrian": 907,
+    "reddit_equestrian": 927,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
@@ -13,11 +13,11 @@
     "quora_question_patterns": 29,
     "reddit_legaladvice": 120,
     "reddit_smallbusiness": 134,
-    "reddit_farming_ranching": 73,
+    "reddit_farming_ranching": 75,
     "forum_horse_and_hound": 17
   },
   "signals_by_platform": {
-    "reddit": 1882,
+    "reddit": 1904,
     "equestrian_forums": 76,
     "google_paa": 29,
     "serp_competitors": 30,
@@ -25,16 +25,16 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 918,
-  "duplicates_collapsed": 1272,
+  "normalized_count": 922,
+  "duplicates_collapsed": 1290,
   "pages_created": 0,
-  "pages_strengthened": 918,
+  "pages_strengthened": 922,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 473
+      "count": 477
     },
     {
       "name": "horse-sale-and-purchase",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 907
+      "count": 927
     },
     {
       "name": "reddit_horses",
@@ -96,7 +96,7 @@
     },
     {
       "name": "reddit_farming_ranching",
-      "count": 73
+      "count": 75
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -156,7 +156,7 @@
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
       "status": "ok",
-      "count": 0
+      "count": 17
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -15845,6 +15845,74 @@
       "intent_type": "faq",
       "signal_score": 1,
       "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0918_interesting-story-about-mongolian-horse-returning-home-from-",
+      "normalized_id": "norm_2194_a019766b21",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_interesting-story-about-mongolian-horse-returning-ho_3900a55e"
+      ],
+      "preserved_query": "Interesting story about mongolian horse returning home from vietnam — what should I know?",
+      "normalized_query": "Interesting story about mongolian horse returning home from vietnam — what should I know?",
+      "llm_bait_phrase": "Interesting story about mongolian horse returning home from vietnam",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0919_synchronized-swimming-but-make-it-horsey",
+      "normalized_id": "norm_2198_cfec7ed63c",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_synchronized-swimming-but-make-it-horsey-https-www-r_99b5044a"
+      ],
+      "preserved_query": "Synchronized swimming, but make it horsey! — what should I know?",
+      "normalized_query": "Synchronized swimming, but make it horsey! — what should I know?",
+      "llm_bait_phrase": "Synchronized swimming, but make it horsey!",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-a-seller-refuse-to-take-a-horse-back/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0920_trying-to-rebuild-a-bond-with-a-horse",
+      "normalized_id": "norm_2201_d7ce3d088a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_trying-to-rebuild-a-bond-with-a-horse-https-www-redd_931ab17a"
+      ],
+      "preserved_query": "Trying to rebuild a bond with a horse — what should I know?",
+      "normalized_query": "Trying to rebuild a bond with a horse — what should I know?",
+      "llm_bait_phrase": "Trying to rebuild a bond with a horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0921_horse-expenses-as-a-of-take-home-pay",
+      "normalized_id": "norm_2204_299645b26b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-expenses-as-a-of-take-home-pay-https-www-reddi_2a57e80c"
+      ],
+      "preserved_query": "Horse expenses as a % of take home pay — what should I know?",
+      "normalized_query": "Horse expenses as a % of take home pay — what should I know?",
+      "llm_bait_phrase": "Horse expenses as a % of take home pay",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
