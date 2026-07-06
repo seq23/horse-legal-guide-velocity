@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-03T15:35:27.219Z",
-  "total_signals": 2212,
+  "generated_at": "2026-07-06T16:40:45.411Z",
+  "total_signals": 2252,
   "signals_by_source": {
-    "reddit_equestrian": 927,
+    "reddit_equestrian": 947,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
@@ -11,13 +11,13 @@
     "youtube_search_comments": 115,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
-    "reddit_legaladvice": 120,
+    "reddit_legaladvice": 140,
     "reddit_smallbusiness": 134,
     "reddit_farming_ranching": 75,
     "forum_horse_and_hound": 17
   },
   "signals_by_platform": {
-    "reddit": 1904,
+    "reddit": 1944,
     "equestrian_forums": 76,
     "google_paa": 29,
     "serp_competitors": 30,
@@ -25,28 +25,28 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 922,
-  "duplicates_collapsed": 1290,
+  "normalized_count": 929,
+  "duplicates_collapsed": 1323,
   "pages_created": 0,
-  "pages_strengthened": 922,
+  "pages_strengthened": 929,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 477
+      "count": 480
+    },
+    {
+      "name": "boarding-training-and-barn-operations",
+      "count": 121
     },
     {
       "name": "horse-sale-and-purchase",
       "count": 120
     },
     {
-      "name": "boarding-training-and-barn-operations",
-      "count": 118
-    },
-    {
       "name": "horse-lease-and-trial",
-      "count": 109
+      "count": 110
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,19 +76,19 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 927
+      "count": 947
     },
     {
       "name": "reddit_horses",
       "count": 648
     },
     {
-      "name": "reddit_smallbusiness",
-      "count": 134
+      "name": "reddit_legaladvice",
+      "count": 140
     },
     {
-      "name": "reddit_legaladvice",
-      "count": 120
+      "name": "reddit_smallbusiness",
+      "count": 134
     },
     {
       "name": "youtube_search_comments",
@@ -144,7 +144,7 @@
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
       "status": "ok",
-      "count": 0
+      "count": 20
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -156,7 +156,7 @@
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
       "status": "ok",
-      "count": 17
+      "count": 0
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -15913,6 +15913,125 @@
       "intent_type": "faq",
       "signal_score": 1,
       "mapped_slug": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0922_to-tell-someone-i-wont-work-with-their-horse-while-being-pro",
+      "normalized_id": "norm_2214_5300ccc1a0",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_how-to-tell-someone-i-wont-work-with-their-horse-whi_9145b8d6"
+      ],
+      "preserved_query": "How to tell someone I wont work with their horse while being professional and sympathetic?",
+      "normalized_query": "How to tell someone I wont work with their horse while being professional and sympathetic?",
+      "llm_bait_phrase": "to tell someone I wont work with their horse while being professional and sympathetic",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0923_do-i-help-my-horse-pass-manure-or-gas-i-can-t-walk-him-bcs-o",
+      "normalized_id": "norm_2215_9b347f2ac0",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_how-do-i-help-my-horse-pass-manure-or-gas-i-can-t-wa_d93226bc"
+      ],
+      "preserved_query": "How do i help my horse pass manure or gas (i can't walk him bcs of laminitis)?",
+      "normalized_query": "How do i help my horse pass manure or gas (i can't walk him bcs of laminitis)?",
+      "llm_bait_phrase": "do i help my horse pass manure or gas (i can't walk him bcs of laminitis)",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0924_showing-in-decorated-harness-classes-is-all-about-stacking-a",
+      "normalized_id": "norm_2216_7aae819ffe",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_showing-in-decorated-harness-classes-is-all-about-st_bd12360d"
+      ],
+      "preserved_query": "Showing in \"decorated harness\" classes is all about stacking as many shiny things and ribbons onto a draft horse as physically possible, and then just hoping for the best — what should I know?",
+      "normalized_query": "Showing in \"decorated harness\" classes is all about stacking as many shiny things and ribbons onto a draft horse as physically possible, and then just hoping for the best — what should I know?",
+      "llm_bait_phrase": "Showing in \"decorated harness\" classes is all about stacking as many shiny things and ribbons onto a draft horse as physically possible, and then just hoping for the best",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0925_please-help-a-begginer",
+      "normalized_id": "norm_2217_207be06137",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_please-help-a-begginer-https-www-reddit-com-r-equest_687a43c2"
+      ],
+      "preserved_query": "Please help a begginer — what should I know?",
+      "normalized_query": "Please help a begginer — what should I know?",
+      "llm_bait_phrase": "Please help a begginer",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0926_hello-i-am-planning-on-leaving-my-barn-next-month-and-would-",
+      "normalized_id": "norm_2224_258741739b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_hello-i-am-planning-on-leaving-my-barn-next-month-an_6cda7015"
+      ],
+      "preserved_query": "Hello! I am planning on leaving my barn next month and would like some advice — what should I know?",
+      "normalized_query": "Hello! I am planning on leaving my barn next month and would like some advice — what should I know?",
+      "llm_bait_phrase": "Hello! I am planning on leaving my barn next month and would like some advice",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0927_barn-and-training-expectations",
+      "normalized_id": "norm_2231_ddd40bf210",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_barn-and-training-expectations-https-www-reddit-com-_73c6c8ae"
+      ],
+      "preserved_query": "Barn and training expectations — what should I know?",
+      "normalized_query": "Barn and training expectations — what should I know?",
+      "llm_bait_phrase": "Barn and training expectations",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0928_my-ex-filed-a-restraining-order-on-me-nc",
+      "normalized_id": "norm_2243_dbf4763a0c",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_legaladvice_my-ex-filed-a-restraining-order-on-me-nc-https-www-r_1b2b885a"
+      ],
+      "preserved_query": "My ex filed a restraining order on me - NC — what should I know?",
+      "normalized_query": "My ex filed a restraining order on me - NC — what should I know?",
+      "llm_bait_phrase": "My ex filed a restraining order on me - NC",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
