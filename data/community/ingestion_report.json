@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T16:04:39.365Z",
-  "total_signals": 2252,
+  "generated_at": "2026-07-08T15:52:11.642Z",
+  "total_signals": 2253,
   "signals_by_source": {
     "reddit_equestrian": 947,
     "reddit_horses": 648,
@@ -14,21 +14,21 @@
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 134,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 17
+    "forum_horse_and_hound": 18
   },
   "signals_by_platform": {
     "reddit": 1944,
-    "equestrian_forums": 76,
+    "equestrian_forums": 77,
     "google_paa": 29,
     "serp_competitors": 30,
     "youtube": 115,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 929,
+  "normalized_count": 930,
   "duplicates_collapsed": 1323,
   "pages_created": 0,
-  "pages_strengthened": 929,
+  "pages_strengthened": 930,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
@@ -46,7 +46,7 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 110
+      "count": 111
     },
     {
       "name": "liability-waivers-insurance",
@@ -124,7 +124,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 17
+      "count": 18
     }
   ],
   "collection_status": [
@@ -174,7 +174,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "ok",
-      "count": 0
+      "count": 6
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -16032,6 +16032,23 @@
       "intent_type": "faq",
       "signal_score": 0.9,
       "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0929_stallion-ideas-please",
+      "normalized_id": "norm_2252_ec07d0cbf8",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_stallion-ideas-please-https-forums-horseandhound-co-_0e35d497"
+      ],
+      "preserved_query": "Stallion ideas please — what should I know?",
+      "normalized_query": "Stallion ideas please — what should I know?",
+      "llm_bait_phrase": "Stallion ideas please",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
