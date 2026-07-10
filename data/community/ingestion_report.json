@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-09T16:13:27.099Z",
-  "total_signals": 2254,
+  "generated_at": "2026-07-10T15:57:57.675Z",
+  "total_signals": 2276,
   "signals_by_source": {
-    "reddit_equestrian": 947,
+    "reddit_equestrian": 967,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
@@ -14,31 +14,31 @@
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 134,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 19
+    "forum_horse_and_hound": 21
   },
   "signals_by_platform": {
-    "reddit": 1944,
-    "equestrian_forums": 78,
+    "reddit": 1964,
+    "equestrian_forums": 80,
     "google_paa": 29,
     "serp_competitors": 30,
     "youtube": 115,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 931,
-  "duplicates_collapsed": 1323,
+  "normalized_count": 940,
+  "duplicates_collapsed": 1336,
   "pages_created": 0,
-  "pages_strengthened": 931,
+  "pages_strengthened": 940,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 481
+      "count": 487
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 121
+      "count": 122
     },
     {
       "name": "horse-sale-and-purchase",
@@ -46,11 +46,11 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 111
+      "count": 112
     },
     {
       "name": "liability-waivers-insurance",
-      "count": 41
+      "count": 42
     },
     {
       "name": "equine-business-formation",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 947
+      "count": 967
     },
     {
       "name": "reddit_horses",
@@ -124,7 +124,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 19
+      "count": 21
     }
   ],
   "collection_status": [
@@ -132,7 +132,7 @@
       "source_key": "reddit_equestrian",
       "platform": "reddit",
       "status": "ok",
-      "count": 0
+      "count": 20
     },
     {
       "source_key": "reddit_horses",
@@ -156,7 +156,7 @@
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
       "status": "ok",
-      "count": 17
+      "count": 0
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -174,7 +174,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "ok",
-      "count": 6
+      "count": 8
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -16066,6 +16066,159 @@
       "intent_type": "faq",
       "signal_score": 0.9,
       "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0931_it-okay-to-loan-a-horse-just-to-be-a-companion",
+      "normalized_id": "norm_2258_2f699ef7f6",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_is-it-okay-to-loan-a-horse-just-to-be-a-companion-ht_330bde37"
+      ],
+      "preserved_query": "Is it okay to loan a horse just to be a companion?",
+      "normalized_query": "Is it okay to loan a horse just to be a companion?",
+      "llm_bait_phrase": "it okay to loan a horse just to be a companion",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0932_trainers-and-experienced-riders-what-are-the-stages-of-learn",
+      "normalized_id": "norm_2259_27208e06c5",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_trainers-and-experienced-riders-what-are-the-stages-_66a8c996"
+      ],
+      "preserved_query": "Trainers & experienced riders, what are the stages of learning for a new rider — what should I know?",
+      "normalized_query": "Trainers & experienced riders, what are the stages of learning for a new rider — what should I know?",
+      "llm_bait_phrase": "Trainers & experienced riders, what are the stages of learning for a new rider",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0933_i-had-this-idea-for-a-horse-riding-book-series-called-the-me",
+      "normalized_id": "norm_2260_4b2b63c780",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_i-had-this-idea-for-a-horse-riding-book-series-calle_7a69f5a7"
+      ],
+      "preserved_query": "I had this idea for a horse riding book series called The Meadowbrook Stables but I could use some help — what should I know?",
+      "normalized_query": "I had this idea for a horse riding book series called The Meadowbrook Stables but I could use some help — what should I know?",
+      "llm_bait_phrase": "I had this idea for a horse riding book series called The Meadowbrook Stables but I could use some help",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0934_thinking-about-having-to-leave-loan-horse-due-to-welfare-iss",
+      "normalized_id": "norm_2263_33d793343b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_thinking-about-having-to-leave-loan-horse-due-to-wel_5fa750ae"
+      ],
+      "preserved_query": "Thinking about having to leave loan horse due to welfare issues. Help please I’m so torn. — what should I know?",
+      "normalized_query": "Thinking about having to leave loan horse due to welfare issues. Help please I’m so torn. — what should I know?",
+      "llm_bait_phrase": "Thinking about having to leave loan horse due to welfare issues. Help please I’m so torn.",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0935_i-built-my-daughter-a-horse-she-could-come-home-to-every-day",
+      "normalized_id": "norm_2265_66b8a6659e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_i-built-my-daughter-a-horse-she-could-come-home-to-e_1ce49b22"
+      ],
+      "preserved_query": "I built my daughter a horse she could come home to every day. — what should I know?",
+      "normalized_query": "I built my daughter a horse she could come home to every day. — what should I know?",
+      "llm_bait_phrase": "I built my daughter a horse she could come home to every day.",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0936_are-farriers-so-hard-to-schedule-but-vets-so-easy",
+      "normalized_id": "norm_2270_27f150c295",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_why-are-farriers-so-hard-to-schedule-but-vets-so-eas_dd08a886"
+      ],
+      "preserved_query": "Why are farriers so hard to schedule but vets so easy?",
+      "normalized_query": "Why are farriers so hard to schedule but vets so easy?",
+      "llm_bait_phrase": "are farriers so hard to schedule but vets so easy",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0937_horse-show-resources",
+      "normalized_id": "norm_2272_2585f7e404",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-show-resources-https-www-reddit-com-r-equestri_226f4f64"
+      ],
+      "preserved_query": "Horse Show Resources — what should I know?",
+      "normalized_query": "Horse Show Resources — what should I know?",
+      "llm_bait_phrase": "Horse Show Resources",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0938_public-liability-insurance-for-dogs",
+      "normalized_id": "norm_2274_ee54bf5882",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_public-liability-insurance-for-dogs-https-forums-hor_f6ea4f4b"
+      ],
+      "preserved_query": "Public liability insurance for dogs — what should I know?",
+      "normalized_query": "Public liability insurance for dogs — what should I know?",
+      "llm_bait_phrase": "Public liability insurance for dogs",
+      "cluster": "liability-waivers-insurance",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/liability/do-i-need-insurance-for-my-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0939_possible-to-own-horse-in-university",
+      "normalized_id": "norm_2275_404f6a2494",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_possible-to-own-horse-in-university-https-forums-hor_31b595df"
+      ],
+      "preserved_query": "Possible to own horse in University — what should I know?",
+      "normalized_query": "Possible to own horse in University — what should I know?",
+      "llm_bait_phrase": "Possible to own horse in University",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/boarding/what-happens-if-a-boarder-damages-property/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
