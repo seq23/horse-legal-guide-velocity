@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-15T15:09:27.121Z",
-  "total_signals": 2304,
+  "generated_at": "2026-07-16T15:18:32.609Z",
+  "total_signals": 2327,
   "signals_by_source": {
-    "reddit_equestrian": 987,
+    "reddit_equestrian": 1007,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
@@ -12,12 +12,12 @@
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
-    "reddit_smallbusiness": 134,
+    "reddit_smallbusiness": 137,
     "reddit_farming_ranching": 75,
     "forum_horse_and_hound": 26
   },
   "signals_by_platform": {
-    "reddit": 1984,
+    "reddit": 2007,
     "equestrian_forums": 85,
     "google_paa": 29,
     "serp_competitors": 30,
@@ -25,16 +25,16 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 952,
-  "duplicates_collapsed": 1352,
+  "normalized_count": 960,
+  "duplicates_collapsed": 1367,
   "pages_created": 0,
-  "pages_strengthened": 952,
+  "pages_strengthened": 960,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 497
+      "count": 503
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -42,11 +42,11 @@
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 121
+      "count": 122
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 112
+      "count": 113
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 987
+      "count": 1007
     },
     {
       "name": "reddit_horses",
@@ -88,7 +88,7 @@
     },
     {
       "name": "reddit_smallbusiness",
-      "count": 134
+      "count": 137
     },
     {
       "name": "youtube_search_comments",
@@ -132,7 +132,7 @@
       "source_key": "reddit_equestrian",
       "platform": "reddit",
       "status": "ok",
-      "count": 0
+      "count": 20
     },
     {
       "source_key": "reddit_horses",
@@ -150,13 +150,13 @@
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
       "status": "ok",
-      "count": 0
+      "count": 20
     },
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
       "status": "ok",
-      "count": 17
+      "count": 0
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -174,7 +174,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "ok",
-      "count": 9
+      "count": 8
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -16423,6 +16423,142 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0952_difficulties-with-a-share-pony-and-now-being-charged-to-shar",
+      "normalized_id": "norm_2305_0cc5795740",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_difficulties-with-a-share-pony-and-now-being-charged_983c464c"
+      ],
+      "preserved_query": "Difficulties with a share pony and now being charged to share him — what should I know?",
+      "normalized_query": "Difficulties with a share pony and now being charged to share him — what should I know?",
+      "llm_bait_phrase": "Difficulties with a share pony and now being charged to share him",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0953_far-do-people-drive-to-where-their-horse-is-boarded",
+      "normalized_id": "norm_2307_9618f596e9",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_how-far-do-people-drive-to-where-their-horse-is-boar_17e38b2b"
+      ],
+      "preserved_query": "How far do people drive to where their horse is boarded?",
+      "normalized_query": "How far do people drive to where their horse is boarded?",
+      "llm_bait_phrase": "far do people drive to where their horse is boarded",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0954_my-pony-got-laminitis-and-i-feel-like-a-failure",
+      "normalized_id": "norm_2310_43aa5ad827",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_my-pony-got-laminitis-and-i-feel-like-a-failure-http_07563c0b"
+      ],
+      "preserved_query": "My pony got laminitis and I feel like a failure — what should I know?",
+      "normalized_query": "My pony got laminitis and I feel like a failure — what should I know?",
+      "llm_bait_phrase": "My pony got laminitis and I feel like a failure",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-a-seller-refuse-to-take-a-horse-back/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0955_if-you-had-a-heart-horse-who-s-not-of-breeding-quality-would",
+      "normalized_id": "norm_2312_b6f81ffeee",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_if-you-had-a-heart-horse-who-s-not-of-breeding-quali_7ba1b1b4"
+      ],
+      "preserved_query": "If you had a heart horse who’s not of breeding quality, would you breed them for a foal to keep? Why or why not — what should I know?",
+      "normalized_query": "If you had a heart horse who’s not of breeding quality, would you breed them for a foal to keep? Why or why not — what should I know?",
+      "llm_bait_phrase": "If you had a heart horse who’s not of breeding quality, would you breed them for a foal to keep? Why or why not",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0956_tw-mental-health-i-m-depressed-about-not-being-able-to-ride-",
+      "normalized_id": "norm_2315_72194483f2",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_tw-mental-health-i-m-depressed-about-not-being-able-_6c827248"
+      ],
+      "preserved_query": "(tw mental health) I'm depressed about not being able to ride/be around horses. — what should I know?",
+      "normalized_query": "(tw mental health) I'm depressed about not being able to ride/be around horses. — what should I know?",
+      "llm_bait_phrase": "(tw mental health) I'm depressed about not being able to ride/be around horses.",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0957_ownership-advice-refresher",
+      "normalized_id": "norm_2316_dc40b44d02",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_ownership-advice-refresher-https-www-reddit-com-r-eq_ffcf69ab"
+      ],
+      "preserved_query": "Ownership advice refresher — what should I know?",
+      "normalized_query": "Ownership advice refresher — what should I know?",
+      "llm_bait_phrase": "Ownership advice refresher",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0958_horse-licking-dirt",
+      "normalized_id": "norm_2317_88fc5826ea",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-licking-dirt-https-www-reddit-com-r-equestrian_f5efaa90"
+      ],
+      "preserved_query": "Horse licking dirt — what should I know?",
+      "normalized_query": "Horse licking dirt — what should I know?",
+      "llm_bait_phrase": "Horse licking dirt",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0959_breaking-commercial-lease-due-to-financial-hardship",
+      "normalized_id": "norm_2325_d638041a19",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_smallbusiness_breaking-commercial-lease-due-to-financial-hardship-_0c47b44d"
+      ],
+      "preserved_query": "Breaking Commercial Lease due to Financial Hardship — what should I know?",
+      "normalized_query": "Breaking Commercial Lease due to Financial Hardship — what should I know?",
+      "llm_bait_phrase": "Breaking Commercial Lease due to Financial Hardship",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.75,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
