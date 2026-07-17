@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-16T15:18:32.609Z",
-  "total_signals": 2327,
+  "generated_at": "2026-07-17T14:59:21.677Z",
+  "total_signals": 2330,
   "signals_by_source": {
     "reddit_equestrian": 1007,
     "reddit_horses": 648,
@@ -8,33 +8,33 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 118,
+    "youtube_search_comments": 119,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 137,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 26
+    "forum_horse_and_hound": 28
   },
   "signals_by_platform": {
     "reddit": 2007,
-    "equestrian_forums": 85,
+    "equestrian_forums": 87,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 118,
+    "youtube": 119,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 960,
+  "normalized_count": 963,
   "duplicates_collapsed": 1367,
   "pages_created": 0,
-  "pages_strengthened": 960,
+  "pages_strengthened": 963,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 503
+      "count": 505
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -46,7 +46,7 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 113
+      "count": 114
     },
     {
       "name": "liability-waivers-insurance",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 118
+      "count": 119
     },
     {
       "name": "reddit_farming_ranching",
@@ -124,7 +124,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 26
+      "count": 28
     }
   ],
   "collection_status": [
@@ -132,7 +132,7 @@
       "source_key": "reddit_equestrian",
       "platform": "reddit",
       "status": "ok",
-      "count": 20
+      "count": 0
     },
     {
       "source_key": "reddit_horses",
@@ -150,7 +150,7 @@
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
       "status": "ok",
-      "count": 20
+      "count": 0
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -174,7 +174,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "ok",
-      "count": 8
+      "count": 9
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -16559,6 +16559,57 @@
       "intent_type": "faq",
       "signal_score": 0.75,
       "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0960_temporary-fan-in-horsebox",
+      "normalized_id": "norm_2327_2d74a88e0d",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_temporary-fan-in-horsebox-https-forums-horseandhound_2910b7ef"
+      ],
+      "preserved_query": "Temporary fan in horsebox — what should I know?",
+      "normalized_query": "Temporary fan in horsebox — what should I know?",
+      "llm_bait_phrase": "Temporary fan in horsebox",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0961_wwyd-mare-that-is-very-quick-to-swing-and-kick-the-other-hor",
+      "normalized_id": "norm_2328_e8482502f7",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_wwyd-mare-that-is-very-quick-to-swing-and-kick-the-o_2869e6cb"
+      ],
+      "preserved_query": "WWYD? Mare that is very quick to swing and kick the other horses — what should I know?",
+      "normalized_query": "WWYD? Mare that is very quick to swing and kick the other horses — what should I know?",
+      "llm_bait_phrase": "WWYD? Mare that is very quick to swing and kick the other horses",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0962_landlord-tried-to-change-the-lease",
+      "normalized_id": "norm_2329_9e41104b3a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_landlord-tried-to-change-the-lease-https-www-youtube_04a338a9"
+      ],
+      "preserved_query": "Landlord Tried to Change the Lease! — what should I know?",
+      "normalized_query": "Landlord Tried to Change the Lease! — what should I know?",
+      "llm_bait_phrase": "Landlord Tried to Change the Lease!",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }

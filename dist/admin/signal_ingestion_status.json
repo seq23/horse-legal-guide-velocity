@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-17T12:36:21.719Z",
-  "status": "healthy",
+  "generated_at": "2026-07-17T14:59:22.759Z",
+  "status": "healthy_with_live_followup",
   "preserved_pipeline": [
     "collect:signals",
     "normalize:signals",
     "map:signals",
     "report:ingestion"
   ],
-  "raw_signal_count": 2327,
-  "normalized_signal_count": 960,
-  "fresh_collected_count": 90,
+  "raw_signal_count": 2330,
+  "normalized_signal_count": 963,
+  "fresh_collected_count": 51,
   "failed_source_count": 0,
-  "zero_reddit_warning": false,
-  "live_followup_required": false,
+  "zero_reddit_warning": true,
+  "live_followup_required": true,
   "failed_sources": [],
   "signal_trace_present": true,
   "ingestion_report_present": true,
   "workflow": "public-signal-processing.yml",
-  "next_step": "No action needed before local handoff. Live workflow must still run in GitHub after apply."
+  "next_step": "Local source corpus and ingestion artifacts are healthy. Run Public Signal Processing after apply to prove fresh live collection and Reddit access."
 }
