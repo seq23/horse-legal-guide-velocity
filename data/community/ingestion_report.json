@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-21T15:23:47.103Z",
-  "total_signals": 2336,
+  "generated_at": "2026-07-22T15:21:18.266Z",
+  "total_signals": 2344,
   "signals_by_source": {
     "reddit_equestrian": 1007,
     "reddit_horses": 648,
@@ -8,7 +8,7 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 122,
+    "youtube_search_comments": 130,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
@@ -21,28 +21,28 @@
     "equestrian_forums": 90,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 122,
+    "youtube": 130,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 969,
-  "duplicates_collapsed": 1367,
+  "normalized_count": 976,
+  "duplicates_collapsed": 1368,
   "pages_created": 0,
-  "pages_strengthened": 969,
+  "pages_strengthened": 976,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 508
+      "count": 512
+    },
+    {
+      "name": "horse-sale-and-purchase",
+      "count": 125
     },
     {
       "name": "boarding-training-and-barn-operations",
       "count": 123
-    },
-    {
-      "name": "horse-sale-and-purchase",
-      "count": 122
     },
     {
       "name": "horse-lease-and-trial",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 122
+      "count": 130
     },
     {
       "name": "reddit_farming_ranching",
@@ -174,7 +174,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "ok",
-      "count": 9
+      "count": 6
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -16712,6 +16712,125 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/leases/what-liability-applies-in-a-horse-property-lease/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0969_part-loaning-a-horse-q-u0026a-everything-you-need-to-know-uk",
+      "normalized_id": "norm_2336_6d6a025745",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_part-loaning-a-horse-q-u0026a-everything-you-need-to_607bfe52"
+      ],
+      "preserved_query": "PART LOANING A HORSE Q\\u0026A! EVERYTHING YOU NEED TO KNOW | UK Equestrian YouTuber — what should I know?",
+      "normalized_query": "PART LOANING A HORSE Q\\u0026A! EVERYTHING YOU NEED TO KNOW | UK Equestrian YouTuber — what should I know?",
+      "llm_bait_phrase": "PART LOANING A HORSE Q\\u0026A! EVERYTHING YOU NEED TO KNOW | UK Equestrian YouTuber",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0970_happens-if-you-hack-a-horse",
+      "normalized_id": "norm_2338_e23bb34d8a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_what-happens-if-you-hack-a-horse-https-www-youtube-c_d52ed7bf"
+      ],
+      "preserved_query": "What happens if you hack a horse?",
+      "normalized_query": "What happens if you hack a horse?",
+      "llm_bait_phrase": "happens if you hack a horse",
+      "cluster": "state-specific",
+      "intent_type": "scenario",
+      "signal_score": 0.65,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0971_it-better-to-loan-or-share-a-horse",
+      "normalized_id": "norm_2339_2324eb0e66",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_is-it-better-to-loan-or-share-a-horse-https-www-yout_65da0e25"
+      ],
+      "preserved_query": "Is it better to loan or share a horse?",
+      "normalized_query": "Is it better to loan or share a horse?",
+      "llm_bait_phrase": "it better to loan or share a horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0972_you-buy-a-horse-yourself",
+      "normalized_id": "norm_2340_23335b1bd9",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_should-you-buy-a-horse-yourself-https-www-youtube-co_9bbda182"
+      ],
+      "preserved_query": "Should you buy a horse yourself?",
+      "normalized_query": "Should you buy a horse yourself?",
+      "llm_bait_phrase": "you buy a horse yourself",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0973_finding-the-right-horse",
+      "normalized_id": "norm_2341_1b54477096",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_finding-the-right-horse-https-www-youtube-com-result_bb3caa86"
+      ],
+      "preserved_query": "Finding the right horse — what should I know?",
+      "normalized_query": "Finding the right horse — what should I know?",
+      "llm_bait_phrase": "Finding the right horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0974_ted-for-sale",
+      "normalized_id": "norm_2342_d607e18c93",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_is-ted-for-sale-https-www-youtube-com-results-search_25c98532"
+      ],
+      "preserved_query": "Is Ted for sale?",
+      "normalized_query": "Is Ted for sale?",
+      "llm_bait_phrase": "Ted for sale",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0975_horse-sale-sparks-allegations-and-social-media-backlash-for-",
+      "normalized_id": "norm_2343_adb3574e78",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-sale-sparks-allegations-and-social-media-backl_2fb11106"
+      ],
+      "preserved_query": "Horse sale sparks allegations and social media backlash for Mid Missouri business owner — what should I know?",
+      "normalized_query": "Horse sale sparks allegations and social media backlash for Mid Missouri business owner — what should I know?",
+      "llm_bait_phrase": "Horse sale sparks allegations and social media backlash for Mid Missouri business owner",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
