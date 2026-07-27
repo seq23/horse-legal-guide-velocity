@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-24T15:15:04.811Z",
-  "total_signals": 2387,
+  "generated_at": "2026-07-27T16:00:51.834Z",
+  "total_signals": 2390,
   "signals_by_source": {
     "reddit_equestrian": 1047,
     "reddit_horses": 648,
@@ -8,37 +8,37 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 133,
+    "youtube_search_comments": 134,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 137,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 31
+    "forum_horse_and_hound": 33
   },
   "signals_by_platform": {
     "reddit": 2047,
-    "equestrian_forums": 90,
+    "equestrian_forums": 92,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 133,
+    "youtube": 134,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 992,
+  "normalized_count": 995,
   "duplicates_collapsed": 1395,
   "pages_created": 0,
-  "pages_strengthened": 992,
+  "pages_strengthened": 995,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 524
+      "count": 526
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 125
+      "count": 126
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 133
+      "count": 134
     },
     {
       "name": "reddit_farming_ranching",
@@ -100,7 +100,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 31
+      "count": 33
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -132,7 +132,7 @@
       "source_key": "reddit_equestrian",
       "platform": "reddit",
       "status": "ok",
-      "count": 20
+      "count": 0
     },
     {
       "source_key": "reddit_horses",
@@ -174,7 +174,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "ok",
-      "count": 0
+      "count": 10
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -5750,7 +5750,7 @@
       "cluster": "horse-lease-and-trial",
       "intent_type": "faq",
       "signal_score": 0.65,
-      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
+      "mapped_slug": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -7388,7 +7388,7 @@
       "cluster": "horse-lease-and-trial",
       "intent_type": "faq",
       "signal_score": 0.65,
-      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "mapped_slug": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -14875,7 +14875,7 @@
       "cluster": "horse-lease-and-trial",
       "intent_type": "faq",
       "signal_score": 0.65,
-      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "mapped_slug": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -17103,6 +17103,57 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0992_horse-refusing-to-go-forward-pain",
+      "normalized_id": "norm_2387_a6f52f943a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_horse-refusing-to-go-forward-pain-https-forums-horse_3db20c32"
+      ],
+      "preserved_query": "HORSE REFUSING TO GO FORWARD… PAIN — what should I know?",
+      "normalized_query": "HORSE REFUSING TO GO FORWARD… PAIN — what should I know?",
+      "llm_bait_phrase": "HORSE REFUSING TO GO FORWARD… PAIN",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0993_horse-can-and-039-t-canter",
+      "normalized_id": "norm_2388_bd104717bb",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_horse-can-and-039-t-canter-https-forums-horseandhoun_09010d99"
+      ],
+      "preserved_query": "Horse can&#039;t canter — what should I know?",
+      "normalized_query": "Horse can&#039;t canter — what should I know?",
+      "llm_bait_phrase": "Horse can&#039;t canter",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_0994_horse-owner-vs-buyer-shocking-court-battle",
+      "normalized_id": "norm_2389_c410e47554",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-owner-vs-buyer-shocking-court-battle-https-www_ffcf19d0"
+      ],
+      "preserved_query": "Horse Owner vs Buyer – Shocking Court Battle",
+      "normalized_query": "Horse Owner vs Buyer – Shocking Court Battle",
+      "llm_bait_phrase": "Horse Owner vs Buyer – Shocking Court Battle",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "comparison",
+      "signal_score": 0.65,
+      "mapped_slug": "/compare/bill-of-sale-vs-transfer-of-ownership-clause/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
