@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "repo_id": "horse-legal-guide-velocity",
+  "generated_at": "2026-07-24T00:00:00.000Z",
+  "materialized_reference_runway": 100000,
+  "theoretical_combinations": "40000000",
+  "page_quota": false,
+  "publication_authority": "EXISTING_CLIENT_ADMIN_AND_APPROVAL_SYSTEM",
+  "compression": "gzip_jsonl",
+  "shard_count": 20,
+  "aggregate_sha256": "0d9c42dfb7b270717aba5d73e5a9ff4139c359e86ed312c61369eb4d40bb76ab",
+  "shards": [
+    {
+      "part": 1,
+      "path": "data/authority_scale/fanout_100k/part-00001.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "98d67d133c7dd15b91575cceab000156b49bb22ea14bc5f6ae9908497b111d61",
+      "first_id": "horse_fanout_000001_e086d50fb6",
+      "last_id": "horse_fanout_005000_ae9037ca02"
+    },
+    {
+      "part": 2,
+      "path": "data/authority_scale/fanout_100k/part-00002.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "b85215d2a07e76d731fac49f8630f2841c2fc97bbe1124be5d3529d0d1925543",
+      "first_id": "horse_fanout_005001_2f8faf61da",
+      "last_id": "horse_fanout_010000_a2e6d257f4"
+    },
+    {
+      "part": 3,
+      "path": "data/authority_scale/fanout_100k/part-00003.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "78b72c2e109e1b349df09b64e83c3d2ef710f48953ebb5d052315381d6cb2c94",
+      "first_id": "horse_fanout_010001_dbcbd6b0dd",
+      "last_id": "horse_fanout_015000_fcf853919c"
+    },
+    {
+      "part": 4,
+      "path": "data/authority_scale/fanout_100k/part-00004.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "15915a38e0d30ea8e3263c5267afe4b3f6250b5ad6a1915be2af5b56d84eb679",
+      "first_id": "horse_fanout_015001_4178015721",
+      "last_id": "horse_fanout_020000_6b016b44d5"
+    },
+    {
+      "part": 5,
+      "path": "data/authority_scale/fanout_100k/part-00005.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "2966b55989abddb68d9270a4f91b5ae9bd5997d8b8385fa0d0f38c3cbb050759",
+      "first_id": "horse_fanout_020001_63cd1032ae",
+      "last_id": "horse_fanout_025000_6eb2f14049"
+    },
+    {
+      "part": 6,
+      "path": "data/authority_scale/fanout_100k/part-00006.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "269b1ba6cbf1e98bd184174f079ba7151b69062483df91aa3c57c87c911e4473",
+      "first_id": "horse_fanout_025001_06bd18fcf9",
+      "last_id": "horse_fanout_030000_7931589000"
+    },
+    {
+      "part": 7,
+      "path": "data/authority_scale/fanout_100k/part-00007.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "5d01b5696d086adbf5ad66f073bd30838ab3041f4e7a9e47b9ce74b17ae97044",
+      "first_id": "horse_fanout_030001_7bfdb68abf",
+      "last_id": "horse_fanout_035000_ff2d4da091"
+    },
+    {
+      "part": 8,
+      "path": "data/authority_scale/fanout_100k/part-00008.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "bdb5471657e77f609140929144ee51a00ddc74ef80923efb26b2eaa7ee662d31",
+      "first_id": "horse_fanout_035001_1a3071b67d",
+      "last_id": "horse_fanout_040000_82d0961bfe"
+    },
+    {
+      "part": 9,
+      "path": "data/authority_scale/fanout_100k/part-00009.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "0d900e13fd0d606dd83131f692e7088440bec560dce051e809ef0a9f00161e99",
+      "first_id": "horse_fanout_040001_7085f01819",
+      "last_id": "horse_fanout_045000_38c54886c4"
+    },
+    {
+      "part": 10,
+      "path": "data/authority_scale/fanout_100k/part-00010.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "5727ba0c3d423d869ab4f00a771fbe428447b361e14a195f4784ec20d804dea2",
+      "first_id": "horse_fanout_045001_b8b670eb09",
+      "last_id": "horse_fanout_050000_eac666434f"
+    },
+    {
+      "part": 11,
+      "path": "data/authority_scale/fanout_100k/part-00011.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "23c381e838a42cd3d81e61022275ff69bb5557e7b951bf52eca707308fe054f5",
+      "first_id": "horse_fanout_050001_2dc9fbf19a",
+      "last_id": "horse_fanout_055000_84d705262c"
+    },
+    {
+      "part": 12,
+      "path": "data/authority_scale/fanout_100k/part-00012.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "19927848513b6492cb78e49c69a583967ae1db4cdccb40446866b3da4cb4bd31",
+      "first_id": "horse_fanout_055001_8a717a4d07",
+      "last_id": "horse_fanout_060000_c225c36648"
+    },
+    {
+      "part": 13,
+      "path": "data/authority_scale/fanout_100k/part-00013.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "939d12114176452f052f5c505eff65e0ac6720c59a7e761e22a16ee368d86c1d",
+      "first_id": "horse_fanout_060001_b45a202862",
+      "last_id": "horse_fanout_065000_eba5dee9bc"
+    },
+    {
+      "part": 14,
+      "path": "data/authority_scale/fanout_100k/part-00014.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "3ec2e55745494143d5adc81a9f318560660338045d7ee4130ae80fa434d99e7d",
+      "first_id": "horse_fanout_065001_78fea5bd44",
+      "last_id": "horse_fanout_070000_01bb377937"
+    },
+    {
+      "part": 15,
+      "path": "data/authority_scale/fanout_100k/part-00015.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "248e191553f114d830c389fd77e89277b2a2b2f391f4e914509af80b7525480d",
+      "first_id": "horse_fanout_070001_3084d8f210",
+      "last_id": "horse_fanout_075000_2eedc80297"
+    },
+    {
+      "part": 16,
+      "path": "data/authority_scale/fanout_100k/part-00016.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "98dfed100ad049ff95808569d653fbade9dc5e604e72f765a9786c6688331e2f",
+      "first_id": "horse_fanout_075001_0c9d835ca1",
+      "last_id": "horse_fanout_080000_049f40627d"
+    },
+    {
+      "part": 17,
+      "path": "data/authority_scale/fanout_100k/part-00017.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "32be58dfecd196f915ea18eeced927eb383d4bf3d2e2c0d0ff15d272d6395b49",
+      "first_id": "horse_fanout_080001_9311c4893c",
+      "last_id": "horse_fanout_085000_fa03d257ee"
+    },
+    {
+      "part": 18,
+      "path": "data/authority_scale/fanout_100k/part-00018.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "628d6520a98f014e98edf65e7ca58015f8a2e27a19f30ad8e48a5c3190003562",
+      "first_id": "horse_fanout_085001_4cf97a20f0",
+      "last_id": "horse_fanout_090000_92d0e808f9"
+    },
+    {
+      "part": 19,
+      "path": "data/authority_scale/fanout_100k/part-00019.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "e0f9b3577f8864a2169622a941ff1b4a314fc6c4781412b54dc1de17d0b9955c",
+      "first_id": "horse_fanout_090001_8eb179623d",
+      "last_id": "horse_fanout_095000_6dc00eab11"
+    },
+    {
+      "part": 20,
+      "path": "data/authority_scale/fanout_100k/part-00020.jsonl.gz",
+      "record_count": 5000,
+      "sha256": "de88c545877b6dc0703756cc9867404fbc5ecb547446c71721ee950053fe985e",
+      "first_id": "horse_fanout_095001_f69733c8c3",
+      "last_id": "horse_fanout_100000_1581f1d8a3"
+    }
+  ]
+}

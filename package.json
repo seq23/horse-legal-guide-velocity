@@ -94,6 +94,24 @@
     "ops:simulate-github-actions": "node scripts/ops/simulate_github_actions.js",
     "validate:github-actions-trace": "node scripts/ops/validate_github_actions_trace.js",
     "validate:generated-surfaces": "node _ops/validators/validate_generated_surfaces.js",
-    "validate:approved-content-email": "node _ops/validators/validate_approved_content_email_workflow.js"
+    "validate:approved-content-email": "node _ops/validators/validate_approved_content_email_workflow.js",
+    "authority:fanout": "node scripts/authority_scale/build_max_fanout.mjs --target=100000",
+    "authority:window": "node scripts/authority_scale/build_fanout_window.mjs --size=2500",
+    "authority:candidates": "node scripts/authority_scale/build_candidate_backlog.mjs",
+    "authority:yield": "node scripts/authority_scale/build_yield_feedback.mjs",
+    "authority:distribution-manifest": "node scripts/authority_scale/build_distribution_manifest.mjs",
+    "authority:cycle": "npm run authority:window && npm run authority:candidates && npm run authority:improvements && npm run authority:yield && npm run authority:scoreboard && npm run authority:velocity && npm run authority:distribution-manifest",
+    "validate:authority-fanout": "node scripts/authority_scale/validate_max_fanout.mjs",
+    "validate:kpi-truth": "node scripts/authority_scale/validate_kpi_truth.mjs",
+    "validate:protected-editorial-core": "node scripts/authority_scale/validate_protected_editorial_core.mjs",
+    "validate:authority-distribution": "node scripts/authority_scale/validate_distribution_manifest.mjs",
+    "continuity:replenish": "node scripts/continuity/replenish_editorial_runway.mjs",
+    "validate:continuity": "node scripts/continuity/validate_editorial_continuity.mjs",
+    "validate:authority-modernization": "npm run validate:protected-editorial-core && npm run validate:authority-fanout && npm run validate:kpi-truth && npm run validate:improvement-recommendations && npm run validate:authority-distribution && npm run validate:continuity",
+    "authority:improvements": "node scripts/authority_scale/build_improvement_recommendations.mjs",
+    "authority:scoreboard": "node scripts/authority_scale/build_citation_scoreboard.mjs",
+    "authority:velocity": "node scripts/authority_scale/evaluate_intelligence_velocity.mjs",
+    "validate:improvement-recommendations": "node scripts/authority_scale/validate_improvement_recommendations.mjs",
+    "distribution:post-publish": "node scripts/distribution/run_post_publish_distribution.mjs"
   }
 }

@@ -1,0 +1,55 @@
+name: Editorial Continuity Sidecar
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 10 * * 1"
+permissions:
+  contents: write
+jobs:
+  continuity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Validate protected editorial core
+        run: npm run validate:protected-editorial-core
+      - name: Refresh authority intelligence
+        run: npm run authority:cycle
+      - name: Replenish pending draft runway only
+        run: npm run continuity:replenish
+      - name: Detect new continuity entries
+        id: continuity_status
+        run: |
+          node -e "const r=require('./data/continuity/editorial_continuity_report.json'); console.log('changed=' + (Number(r.new_pending_entries||0)>0 ? 'true':'false'))" >> "$GITHUB_OUTPUT"
+      - name: Generate new pending drafts through existing draft engine
+        if: steps.continuity_status.outputs.changed == 'true'
+        run: npm run generate:drafts
+      - name: Run existing self-heal and prevalidation
+        if: steps.continuity_status.outputs.changed == 'true'
+        run: |
+          npm run content:self-heal
+          npm run content:prevalidate
+      - name: Refresh existing admin manifest without changing admin logic
+        if: steps.continuity_status.outputs.changed == 'true'
+        run: node scripts/admin/generate_admin_manifest.js
+      - name: Rebuild existing admin and public surfaces
+        if: steps.continuity_status.outputs.changed == 'true'
+        run: npm run build
+      - name: Validate continuity contract
+        run: npm run validate:authority-modernization
+      - name: Validate existing client system after continuity generation
+        if: steps.continuity_status.outputs.changed == 'true'
+        run: npm run validate:all
+      - name: Commit pending continuity outputs only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/authority_scale data/continuity data/system/editorial_backlog.json data/system/content_calendar.json content/drafts/generated data/admin data/content_atoms reports dist .build
+          if git diff --cached --quiet; then echo "No continuity changes."; exit 0; fi
+          git commit -m "chore: extend manual-review editorial runway"
+          git push

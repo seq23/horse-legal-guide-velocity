@@ -1,44 +1,68 @@
 name: Deploy Distribution
 
 on:
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: ["Manual Publish"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: horse-legal-guide-post-publish-distribution
+  cancel-in-progress: false
 
 jobs:
   deploy-distribution:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     env:
       SITE_DOMAIN: https://horselegalguide.com
       CANONICAL_DOMAIN: https://wisecovington.com
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
-      GSC_SITE_URL: sc-domain:horselegalguide.com
+      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+      GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+      GSC_INSPECTION_LIMIT: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Install
         run: npm ci
-      - name: Build
+      - run: git pull --rebase origin main
+      - name: Refresh sitemap and distribution artifacts after successful manual publish
         run: npm run build
-      - name: Validate
+      - name: Validate client and authority systems before provider submission
         run: npm run validate:all
-      - name: Submit IndexNow
-        run: ./distribution_scripts/indexnow_submit.sh .build/indexnow-priority.txt .build/indexnow-batch.txt
-      - name: Submit sitemaps to GSC
-        run: python3 distribution_scripts/gsc_submit_sitemaps.py || true
-      - name: Inspect priority URLs
-        run: python3 distribution_scripts/gsc_inspect_urls.py .build/distribution-priority-urls.txt || true
-      - name: Upload distribution reports
-        uses: actions/upload-artifact@v4
+      - name: Run IndexNow, GSC sitemap submission, and priority URL inspection
+        run: npm run distribution:post-publish
+      - name: Validate post-publish distribution contract
+        run: |
+          npm run validate:indexnow-workflow
+          npm run validate:authority-distribution
+      - name: Commit durable distribution receipts and observation feedback
+        run: |
+          git config user.name "horse-distribution-observer"
+          git config user.email "actions@github.com"
+          git add data/distribution
+          if git diff --cached --quiet; then
+            echo "No distribution receipt changes."
+          else
+            git commit -m "Record post-publish distribution receipt"
+            git push origin main
+          fi
+      - name: Upload distribution evidence
         if: always()
+        uses: actions/upload-artifact@v4
         with:
-          name: horse-legal-guide-distribution-reports
+          name: horse-legal-guide-distribution-evidence
           path: |
+            data/distribution
             .build
             _ops/reports

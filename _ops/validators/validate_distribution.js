@@ -24,6 +24,8 @@ function main() {
     'distribution_scripts/indexnow_submit.sh',
     'distribution_scripts/gsc_submit_sitemaps.py',
     'distribution_scripts/gsc_inspect_urls.py',
+    'scripts/distribution/run_post_publish_distribution.mjs',
+    '.github/workflows/deploy-distribution.yml',
     '.build/distribution-manifest.json',
     '.build/distribution-priority-urls.txt',
     '.build/indexnow-priority.txt',
@@ -77,6 +79,23 @@ function main() {
       });
     }
   });
+
+
+  const postPublishWorkflow = fs.readFileSync(path.resolve(process.cwd(), '.github/workflows/deploy-distribution.yml'), 'utf8');
+  if (!postPublishWorkflow.includes('workflows: ["Manual Publish"]') || !postPublishWorkflow.includes("github.event.workflow_run.conclusion == 'success'")) {
+    report.addIssue({
+      file: '.github/workflows/deploy-distribution.yml',
+      code: 'distribution_not_post_publish',
+      message: 'Distribution must run only after successful Manual Publish or explicit workflow dispatch.',
+      fixHint: 'Use workflow_run for Manual Publish and require a success conclusion.'
+    });
+  }
+  const postPublishRunner = fs.readFileSync(path.resolve(process.cwd(), 'scripts/distribution/run_post_publish_distribution.mjs'), 'utf8');
+  for (const token of ['api.indexnow.org/indexnow', 'webmasters/v3/sites/', 'searchconsole.googleapis.com/v1/urlInspection/index:inspect', 'provider_receipt.json', 'observation_feedback.json']) {
+    if (!postPublishRunner.includes(token)) {
+      report.addIssue({ file: 'scripts/distribution/run_post_publish_distribution.mjs', code: 'post_publish_distribution_incomplete', message: `Post-publish distribution runner missing ${token}.`, fixHint: 'Restore the complete provider and receipt chain.' });
+    }
+  }
 
   report.finalize('distribution valid');
 }
