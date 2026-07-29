@@ -1,0 +1,27 @@
+{
+  "workflow": "editorial-continuity.yml",
+  "path": ".github/workflows/editorial-continuity.yml",
+  "workflow_key": "editorial_continuity",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/editorial-continuity.yml",
+  "purpose": "workflow lane",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run validate:protected-editorial-core",
+    "npm run authority:cycle",
+    "npm run continuity:replenish",
+    "npm run generate:drafts",
+    "npm run content:self-heal",
+    "npm run content:prevalidate",
+    "npm run build",
+    "npm run validate:authority-modernization",
+    "npm run validate:all"
+  ],
+  "artifacts_checked": [],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-07-29T15:32:04.054Z",
+  "finished_at": "2026-07-29T15:32:04.054Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}

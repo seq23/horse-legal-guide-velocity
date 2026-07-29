@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T15:15:06.046Z",
+  "generated_at": "2026-07-29T15:32:04.081Z",
   "status": "passed",
   "live_github_actions_status": "not_executed_in_chatgpt_container",
   "truth_boundary": "This trace proves YAML/script/artifact structure and local-equivalent availability only. Live GitHub Actions must run after ZIP apply, commit, and push.",
@@ -25,8 +25,8 @@
         "scripts/admin/set_publish_date_many.js"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-07-24T15:15:06.010Z",
-      "finished_at": "2026-07-24T15:15:06.010Z",
+      "started_at": "2026-07-29T15:32:04.053Z",
+      "finished_at": "2026-07-29T15:32:04.053Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -47,8 +47,8 @@
         "data/social/approved_content_email_state.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-07-24T15:15:06.011Z",
-      "finished_at": "2026-07-24T15:15:06.011Z",
+      "started_at": "2026-07-29T15:32:04.053Z",
+      "finished_at": "2026-07-29T15:32:04.053Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -70,8 +70,8 @@
         ".build/distribution-manifest.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-07-24T15:15:06.011Z",
-      "finished_at": "2026-07-24T15:15:06.011Z",
+      "started_at": "2026-07-29T15:32:04.053Z",
+      "finished_at": "2026-07-29T15:32:04.053Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -86,15 +86,18 @@
       "proof_type": "local-equivalent-structure-and-artifact-trace",
       "commands_checked": [
         "npm run build",
-        "npm run validate:all"
+        "npm run validate:all",
+        "npm run distribution:post-publish",
+        "npm run validate:indexnow-workflow",
+        "npm run validate:authority-distribution"
       ],
       "artifacts_checked": [
         ".build/indexnow-priority.txt",
         ".build/distribution-priority-urls.txt"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-07-24T15:15:06.011Z",
-      "finished_at": "2026-07-24T15:15:06.011Z",
+      "started_at": "2026-07-29T15:32:04.054Z",
+      "finished_at": "2026-07-29T15:32:04.054Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -123,8 +126,35 @@
         "data/admin/content_quality_report.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-07-24T15:15:06.011Z",
-      "finished_at": "2026-07-24T15:15:06.011Z",
+      "started_at": "2026-07-29T15:32:04.054Z",
+      "finished_at": "2026-07-29T15:32:04.054Z",
+      "warnings": [],
+      "hard_fails": [],
+      "live_github_actions_status": "not_executed_in_chatgpt_container"
+    },
+    {
+      "workflow": "editorial-continuity.yml",
+      "path": ".github/workflows/editorial-continuity.yml",
+      "workflow_key": "editorial_continuity",
+      "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/editorial-continuity.yml",
+      "purpose": "workflow lane",
+      "status": "passed",
+      "proof_type": "local-equivalent-structure-and-artifact-trace",
+      "commands_checked": [
+        "npm run validate:protected-editorial-core",
+        "npm run authority:cycle",
+        "npm run continuity:replenish",
+        "npm run generate:drafts",
+        "npm run content:self-heal",
+        "npm run content:prevalidate",
+        "npm run build",
+        "npm run validate:authority-modernization",
+        "npm run validate:all"
+      ],
+      "artifacts_checked": [],
+      "missing_artifacts_warning_only": [],
+      "started_at": "2026-07-29T15:32:04.054Z",
+      "finished_at": "2026-07-29T15:32:04.054Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -152,8 +182,8 @@
         "reports/recommendation_cluster_gap_backlog.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-07-24T15:15:06.012Z",
-      "finished_at": "2026-07-24T15:15:06.012Z",
+      "started_at": "2026-07-29T15:32:04.054Z",
+      "finished_at": "2026-07-29T15:32:04.054Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -179,8 +209,8 @@
         "dist/editorial-publishing-state.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-07-24T15:15:06.012Z",
-      "finished_at": "2026-07-24T15:15:06.012Z",
+      "started_at": "2026-07-29T15:32:04.054Z",
+      "finished_at": "2026-07-29T15:32:04.054Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -200,8 +230,8 @@
         "dist/sitemap.xml"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-07-24T15:15:06.012Z",
-      "finished_at": "2026-07-24T15:15:06.012Z",
+      "started_at": "2026-07-29T15:32:04.054Z",
+      "finished_at": "2026-07-29T15:32:04.054Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -224,8 +254,8 @@
         "_ops/reports/generation_contract_report.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-07-24T15:15:06.013Z",
-      "finished_at": "2026-07-24T15:15:06.013Z",
+      "started_at": "2026-07-29T15:32:04.054Z",
+      "finished_at": "2026-07-29T15:32:04.054Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"

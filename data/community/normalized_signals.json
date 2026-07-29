@@ -6521,7 +6521,7 @@
     "dedupe_group_id": "dedupe_faq_lease-agreement",
     "signal_score": 0.65,
     "status": "mapped",
-    "mapped_slug": "/leases/what-is-a-horse-trial-agreement/"
+    "mapped_slug": "/leases/what-happens-if-a-leased-horse-becomes-unsound/"
   },
   {
     "normalized_id": "norm_0487_4782bee45b",
@@ -8447,7 +8447,7 @@
     "dedupe_group_id": "dedupe_faq_much-it-cost-to-lease-a",
     "signal_score": 0.65,
     "status": "mapped",
-    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+    "mapped_slug": "/leases/what-happens-if-a-leased-horse-becomes-unsound/"
   },
   {
     "normalized_id": "norm_0796_175efe4d55",
@@ -17251,7 +17251,7 @@
     "dedupe_group_id": "dedupe_faq_understanding-lease-agreements-housing-financial-literacy-khan-academy",
     "signal_score": 0.65,
     "status": "mapped",
-    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+    "mapped_slug": "/leases/what-happens-if-a-leased-horse-becomes-unsound/"
   },
   {
     "normalized_id": "norm_2065_666823dbd9",
@@ -19872,5 +19872,65 @@
     "signal_score": 0.65,
     "status": "mapped",
     "mapped_slug": "/leases/what-happens-if-a-leased-horse-becomes-unsound/"
+  },
+  {
+    "normalized_id": "norm_2387_9f0516190b",
+    "source_signal_ids": [
+      "forum_horse_and_hound_please-report-my-recent-post-id-like-to-have-it-remo_a8c34856"
+    ],
+    "raw_signal_phrase": "Please report my recent post - id like to have it removed",
+    "preserved_query": "Please report my recent post - id like to have it removed — what should I know?",
+    "normalized_query": "Please report my recent post - id like to have it removed — what should I know?",
+    "llm_bait_phrase": "Please report my recent post - id like to have it removed",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_please-report-my-recent-post-id-like-to-have-it-removed",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/leases/what-is-a-horse-trial-agreement/"
+  },
+  {
+    "normalized_id": "norm_2388_4aaf34851c",
+    "source_signal_ids": [
+      "forum_horse_and_hound_feeding-horse-with-ems-https-forums-horseandhound-co_46049bb2"
+    ],
+    "raw_signal_phrase": "Feeding horse with EMS",
+    "preserved_query": "Feeding horse with EMS — what should I know?",
+    "normalized_query": "Feeding horse with EMS — what should I know?",
+    "llm_bait_phrase": "Feeding horse with EMS",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_feeding-with-ems",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/"
+  },
+  {
+    "normalized_id": "norm_2389_0f090f14ef",
+    "source_signal_ids": [
+      "youtube_search_comments_how-to-fit-a-horse-for-sale-and-get-maximum-prices-h_54df908f"
+    ],
+    "raw_signal_phrase": "How To Fit A Horse For Sale And Get Maximum Prices.",
+    "preserved_query": "How To Fit A Horse For Sale And Get Maximum Prices.?",
+    "normalized_query": "How To Fit A Horse For Sale And Get Maximum Prices.?",
+    "llm_bait_phrase": "To Fit A Horse For Sale And Get Maximum Prices.",
+    "intent_type": "faq",
+    "cluster": "horse-sale-and-purchase",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_to-fit-a-for-sale-and-get-maximum-prices",
+    "signal_score": 0.65,
+    "status": "mapped",
+    "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/"
   }
 ]
