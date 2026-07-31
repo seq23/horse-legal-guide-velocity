@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-30T15:34:20.902Z",
-  "total_signals": 2410,
+  "generated_at": "2026-07-31T15:39:07.583Z",
+  "total_signals": 2412,
   "signals_by_source": {
     "reddit_equestrian": 1067,
     "reddit_horses": 648,
@@ -8,7 +8,7 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 134,
+    "youtube_search_comments": 136,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
@@ -21,14 +21,14 @@
     "equestrian_forums": 92,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 134,
+    "youtube": 136,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1002,
+  "normalized_count": 1004,
   "duplicates_collapsed": 1408,
   "pages_created": 0,
-  "pages_strengthened": 1002,
+  "pages_strengthened": 1004,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
@@ -38,7 +38,7 @@
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 126
+      "count": 127
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -46,7 +46,7 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 119
+      "count": 120
     },
     {
       "name": "liability-waivers-insurance",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 134
+      "count": 136
     },
     {
       "name": "reddit_farming_ranching",
@@ -132,7 +132,7 @@
       "source_key": "reddit_equestrian",
       "platform": "reddit",
       "status": "ok",
-      "count": 20
+      "count": 0
     },
     {
       "source_key": "reddit_horses",
@@ -17273,6 +17273,40 @@
       "intent_type": "faq",
       "signal_score": 1,
       "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1002_horse-owner-vs-buyer-shocking-court-battle",
+      "normalized_id": "norm_2410_c410e47554",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-owner-vs-buyer-shocking-court-battle-https-www_87b07fbf"
+      ],
+      "preserved_query": "Horse Owner vs Buyer – Shocking Court Battle",
+      "normalized_query": "Horse Owner vs Buyer – Shocking Court Battle",
+      "llm_bait_phrase": "Horse Owner vs Buyer – Shocking Court Battle",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "comparison",
+      "signal_score": 0.65,
+      "mapped_slug": "/compare/bill-of-sale-vs-transfer-of-ownership-clause/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1003_horse-pasture-land-lease-agreement-intoducing-navajo-reserva",
+      "normalized_id": "norm_2411_12dda3f78e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-pasture-land-lease-agreement-intoducing-navajo_a5620e3f"
+      ],
+      "preserved_query": "🐎Horse Pasture | Land Lease Agreement | Intoducing Navajo Reservation Filly to the herd🚜 — what should I know?",
+      "normalized_query": "🐎Horse Pasture | Land Lease Agreement | Intoducing Navajo Reservation Filly to the herd🚜 — what should I know?",
+      "llm_bait_phrase": "🐎Horse Pasture | Land Lease Agreement | Intoducing Navajo Reservation Filly to the herd🚜",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
