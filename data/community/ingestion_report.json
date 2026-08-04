@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-03T16:04:54.385Z",
-  "total_signals": 2432,
+  "generated_at": "2026-08-04T15:58:28.571Z",
+  "total_signals": 2435,
   "signals_by_source": {
     "reddit_equestrian": 1087,
     "reddit_horses": 648,
@@ -8,7 +8,7 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 136,
+    "youtube_search_comments": 139,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
@@ -21,20 +21,20 @@
     "equestrian_forums": 92,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 136,
+    "youtube": 139,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1008,
+  "normalized_count": 1011,
   "duplicates_collapsed": 1424,
   "pages_created": 0,
-  "pages_strengthened": 1008,
+  "pages_strengthened": 1011,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 533
+      "count": 534
     },
     {
       "name": "horse-sale-and-purchase",
@@ -46,7 +46,7 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 120
+      "count": 122
     },
     {
       "name": "liability-waivers-insurance",
@@ -87,12 +87,12 @@
       "count": 140
     },
     {
-      "name": "reddit_smallbusiness",
-      "count": 137
+      "name": "youtube_search_comments",
+      "count": 139
     },
     {
-      "name": "youtube_search_comments",
-      "count": 136
+      "name": "reddit_smallbusiness",
+      "count": 137
     },
     {
       "name": "reddit_farming_ranching",
@@ -132,7 +132,7 @@
       "source_key": "reddit_equestrian",
       "platform": "reddit",
       "status": "ok",
-      "count": 20
+      "count": 0
     },
     {
       "source_key": "reddit_horses",
@@ -17376,6 +17376,57 @@
       "intent_type": "faq",
       "signal_score": 1,
       "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1008_pasture-lease-agreements",
+      "normalized_id": "norm_2432_273afa6370",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_pasture-lease-agreements-https-www-youtube-com-resul_2befaf91"
+      ],
+      "preserved_query": "Pasture Lease Agreements — what should I know?",
+      "normalized_query": "Pasture Lease Agreements — what should I know?",
+      "llm_bait_phrase": "Pasture Lease Agreements",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1009_tensions-growing-at-canyonside-ranch-between-horse-boarders-",
+      "normalized_id": "norm_2433_60e43993cd",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_tensions-growing-at-canyonside-ranch-between-horse-b_331ec4ab"
+      ],
+      "preserved_query": "Tensions growing at Canyonside Ranch between horse boarders, evicted leaseholders — what should I know?",
+      "normalized_query": "Tensions growing at Canyonside Ranch between horse boarders, evicted leaseholders — what should I know?",
+      "llm_bait_phrase": "Tensions growing at Canyonside Ranch between horse boarders, evicted leaseholders",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1010_horse-leasing",
+      "normalized_id": "norm_2434_d202e4e756",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-leasing-https-www-youtube-com-results-search-q_3fe1c1e9"
+      ],
+      "preserved_query": "Horse Leasing — what should I know?",
+      "normalized_query": "Horse Leasing — what should I know?",
+      "llm_bait_phrase": "Horse Leasing",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
