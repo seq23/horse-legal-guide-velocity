@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-08T05:02:28.000Z",
+  "generated_at": "2026-08-08T11:26:17.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -8,24 +8,24 @@
   "health": {
     "gsc": {
       "status": "not_connected",
-      "checked_at": null,
-      "age_hours": null,
-      "message": "Configure Search Console secrets in GitHub Actions to refresh this snapshot."
+      "checked_at": "2026-08-08T14:27:03.392Z",
+      "age_hours": -3,
+      "message": "Add GSC service-account secrets or GSC_ACCESS_TOKEN to GitHub Actions."
     },
     "bing": {
       "status": "not_connected",
-      "checked_at": null,
-      "age_hours": null,
-      "message": "Configure Bing Webmaster secrets in GitHub Actions to refresh this snapshot."
+      "checked_at": "2026-08-08T14:27:03.392Z",
+      "age_hours": -3,
+      "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
-      "status": "not_checked",
-      "checked_at": null,
-      "age_hours": null,
-      "message": "The scheduled monitor has not run yet.",
+      "status": "ok",
+      "checked_at": "2026-08-08T14:27:03.392Z",
+      "age_hours": -3,
+      "message": "All monitored public routes returned successful responses.",
       "summary": {
-        "checked": 0,
-        "passed": 0,
+        "checked": 9,
+        "passed": 9,
         "failed": 0
       }
     },
@@ -3208,7 +3208,7 @@
   },
   "provider_health": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-08-08T01:31:47.332Z",
+    "generated_at": "2026-08-08T14:27:12.194Z",
     "providers": {
       "gemini_grounded_search": {
         "state": "NOT_CONFIGURED",
@@ -3247,7 +3247,7 @@
   },
   "external_action_truth": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-08-08T01:31:47.458Z",
+    "generated_at": "2026-08-08T14:27:12.307Z",
     "actions": [
       {
         "id": "gemini_grounded_query",

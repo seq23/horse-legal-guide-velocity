@@ -1,13 +1,77 @@
 {
   "provider": "live",
-  "status": "not_checked",
-  "checked_at": null,
+  "status": "ok",
+  "checked_at": "2026-08-08T14:27:03.392Z",
   "site_url": "https://horselegalguide.com",
-  "checks": [],
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 125,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/coverage/",
+      "status": 200,
+      "ok": true,
+      "ms": 241,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/reference/",
+      "status": 200,
+      "ok": true,
+      "ms": 202,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/compare/",
+      "status": 200,
+      "ok": true,
+      "ms": 188,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/scenario/",
+      "status": 200,
+      "ok": true,
+      "ms": 80,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "ok": true,
+      "ms": 63,
+      "content_type": "application/xml"
+    },
+    {
+      "route": "/sitemap-pages.xml",
+      "status": 200,
+      "ok": true,
+      "ms": 213,
+      "content_type": "application/xml"
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "ok": true,
+      "ms": 93,
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "route": "/admin/",
+      "status": 200,
+      "ok": true,
+      "ms": 216,
+      "content_type": "text/html; charset=utf-8"
+    }
+  ],
   "summary": {
-    "checked": 0,
-    "passed": 0,
+    "checked": 9,
+    "passed": 9,
     "failed": 0
   },
-  "message": "The scheduled monitor has not run yet."
+  "message": "All monitored public routes returned successful responses."
 }
