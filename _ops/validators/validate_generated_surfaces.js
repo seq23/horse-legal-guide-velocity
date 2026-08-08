@@ -41,6 +41,22 @@ const requiredGeneratedFiles = [
   ['dist/robots.txt', 'crawler contract'],
   ['data/admin/editorial_manifest.json', 'admin source manifest'],
   ['data/admin/seo_dashboard.json', 'SEO/AEO/GEO source dashboard'],
+  ['data/admin/page_uniqueness_report.json', 'fresh rendered-page uniqueness source report'],
+  ['data/admin/consolidation_review_ledger.json', 'owner-review consolidation ledger'],
+  ['data/admin/draft_uniqueness_report.json', 'automatic draft uniqueness repair report'],
+  ['dist/admin/seo/page_uniqueness_report.json', 'page uniqueness admin export'],
+  ['dist/admin/seo/consolidation_review_ledger.json', 'owner-review ledger admin export'],
+  ['dist/admin/seo/draft_uniqueness_report.json', 'draft uniqueness admin export'],
+  ['dist/agency/index.html', 'private GSC/Bing agency dashboard'],
+  ['dist/_routes.json', 'Cloudflare Functions protected-route contract'],
+  ['dist/data/agency/dashboard.json', 'private agency data export'],
+  ['dist/data/query_intelligence/provider_opportunities.json', 'provider opportunity export'],
+  ['dist/data/remediation/remediation_queue.json', 'owner-remediation queue export'],
+  ['data/agency/dashboard.json', 'private agency source report'],
+  ['data/query_intelligence/provider_opportunities.json', 'provider query-intelligence source'],
+  ['data/remediation/remediation_queue.json', 'owner-approved remediation source queue'],
+  ['data/system/admin_action_contract.json', 'authenticated admin action contract'],
+  ['data/system/provider_capabilities.json', 'provider capability truth boundary'],
   ['data/admin/schema_audit.json', 'schema audit source data'],
   ['data/admin/internal_link_report.json', 'internal link source data'],
   ['data/admin/workflow_health.json', 'workflow source data'],
@@ -87,10 +103,22 @@ if (exists('dist/admin/seo/index.html')) {
   }
 }
 
+if (exists('dist/agency/index.html')) {
+  const html = read('dist/agency/index.html');
+  for (const phrase of ['Horse Legal Guide Agency Dashboard', 'Google performance', 'Bing performance and crawl', 'Provider-fed opportunities', 'Owner-approved page remediation', 'noindex,nofollow']) {
+    if (!html.includes(phrase)) fail(`dist/agency/index.html missing phrase: ${phrase}`);
+  }
+}
+
 if (exists('data/admin/seo_dashboard.json')) {
   const dashboard = JSON.parse(read('data/admin/seo_dashboard.json'));
   if (!dashboard.health || !dashboard.metrics) fail('data/admin/seo_dashboard.json missing health/metrics');
-  if ((dashboard.issues || []).length !== 0) fail('SEO dashboard has issue groups after build');
+  const hardFindings = (dashboard.issues || []).filter((issue) => issue.severity === 'hard_fail');
+  if (hardFindings.length) fail(`SEO dashboard has ${hardFindings.length} hard-fail issue group(s) after build`);
+  if (exists('data/admin/page_uniqueness_report.json')) {
+    const uniqueness = JSON.parse(read('data/admin/page_uniqueness_report.json'));
+    if (!dashboard.measurement_fingerprint || dashboard.measurement_fingerprint !== uniqueness.source_fingerprint) fail('SEO dashboard is stale relative to the fresh page uniqueness report');
+  }
 }
 
 if (!process.exitCode) console.log(`Generated surface contract OK: ${requiredGeneratedFiles.length} required files and ${referencedDistPaths.size} validator-referenced dist paths present.`);

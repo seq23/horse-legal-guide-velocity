@@ -1,0 +1,121 @@
+name: Agency Search Monitor
+
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: "refresh_all"
+        required: true
+        default: "refresh_all"
+      receipt_id:
+        required: false
+        default: ""
+      requested_by:
+        required: false
+        default: ""
+      request_reason:
+        required: false
+        default: ""
+  schedule:
+    - cron: '17 14 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: horse-legal-guide-search-monitor
+  cancel-in-progress: true
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    env:
+      LIVE_SITE_URL: https://horselegalguide.com
+      SITE_DOMAIN: https://horselegalguide.com
+      GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+      GSC_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GSC_SERVICE_ACCOUNT_EMAIL }}
+      GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
+      GSC_ACCESS_TOKEN: ${{ secrets.GSC_ACCESS_TOKEN }}
+      GSC_INSPECTION_LIMIT: 10
+      BING_SITE_URL: ${{ secrets.BING_SITE_URL }}
+      BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_SEARCH_MODEL: gemini-2.5-flash-lite
+      QUERY_MEASUREMENT_PANEL_SIZE: "30"
+      LIVE_QUERY_LIMIT: "30"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: git pull --rebase origin main
+      - name: Refresh providers, intelligence, and private agency report
+        id: operation
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          node scripts/agency/refresh_search_health.js
+          npm run search:cycle
+          node scripts/query/build_provider_query_intelligence.js
+          node scripts/remediation/build_remediation_queue.js
+          npm run build
+          npm run validate:agency-monitoring
+          npm run validate:query-intelligence
+          npm run validate:remediation-workflow
+      - name: Commit monitoring snapshots
+        if: ${{ steps.operation.outcome == 'success' }}
+        run: |
+          git config user.name "horse-search-monitor"
+          git config user.email "actions@github.com"
+          git add data/agency data/search data/system data/query_intelligence data/remediation reports/agency reports/query_intelligence reports/remediation dist/agency dist/data/agency dist/data/query_intelligence dist/data/remediation
+          if git diff --cached --quiet; then
+            echo "No monitoring changes to commit."
+          else
+            git commit -m "chore: refresh GSC Bing and agency intelligence"
+            git push origin main
+          fi
+      - name: Upload monitoring evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: horse-legal-guide-agency-monitor
+          path: |
+            data/agency
+            data/search
+            data/system
+            data/query_intelligence
+            data/remediation
+            reports/agency
+            reports/query_intelligence
+            reports/remediation
+
+      - name: Write authenticated action receipt
+        if: ${{ always() && inputs.receipt_id != '' }}
+        env:
+          RECEIPT_ID: ${{ inputs.receipt_id }}
+          REQUESTED_BY: ${{ inputs.requested_by }}
+          REQUEST_REASON: ${{ inputs.request_reason }}
+          ACTION_STATUS: ${{ steps.operation.outcome }}
+          OPERATION: ${{ inputs.operation || inputs.action }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+        run: node scripts/admin/write_action_receipt.js
+      - name: Commit authenticated action receipt
+        if: ${{ always() && inputs.receipt_id != '' }}
+        run: |
+          git config user.name "horse-legal-guide-admin"
+          git config user.email "actions@github.com"
+          git add data/admin/action_receipts
+          if git diff --cached --quiet; then
+            echo "No receipt change to commit."
+          else
+            git commit -m "chore: record authenticated admin action"
+            git push origin main
+          fi
+      - name: Preserve operation failure
+        if: ${{ steps.operation.outcome != 'success' }}
+        run: exit 1

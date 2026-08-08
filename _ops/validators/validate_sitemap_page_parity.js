@@ -13,13 +13,13 @@ for (const file of collectFiles('dist', (file) => file.endsWith('index.html'))) 
   const html = fs.readFileSync(path.resolve(process.cwd(), file), 'utf8');
   const match = html.match(/<link rel="canonical" href="([^"]+)"/i);
   const canonical = match ? match[1] : '';
-  if (normalized === '/admin/') {
+  if (normalized.startsWith('/admin/') || normalized.startsWith('/agency/')) {
     continue;
   }
   if (canonical && !pageUrls.has(normalizeUrl(canonical))) {
     report.addIssue({ file, code: 'canonical_missing_from_sitemap', message: `Canonical URL is missing from sitemap-pages.xml: ${canonical}.`, fixHint: 'Ensure every public page canonical is included in the sitemap pages file.' });
   }
-  if (!canonical && normalized !== '/admin/') {
+  if (!canonical && !normalized.startsWith('/admin/') && !normalized.startsWith('/agency/')) {
     report.addIssue({ file, code: 'missing_canonical_for_parity', message: 'Page missing canonical prevents sitemap parity check.', fixHint: 'Render canonical tags before parity validation.' });
   }
 }

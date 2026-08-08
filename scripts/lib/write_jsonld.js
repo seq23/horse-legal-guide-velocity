@@ -37,7 +37,6 @@ function breadcrumbList(config, url, title) {
 function writeJsonLd(type, title, description, url, options = {}) {
   const config = readJson('data/system/config.json', {});
   const firm = readJson('data/firm/wise_covington_contact.json', {});
-  const now = new Date().toISOString();
   const pageUrl = absoluteUrl(config, url);
   const orgId = `${firm.canonical_site || config.canonical_domain || 'https://wisecovington.com'}#organization`;
   const websiteId = `${originFromConfig(config)}/#website`;
@@ -65,8 +64,8 @@ function writeJsonLd(type, title, description, url, options = {}) {
       description,
       url: pageUrl,
       mainEntityOfPage: pageUrl,
-      datePublished: options.datePublished || options.dateModified || now,
-      dateModified: options.dateModified || now,
+      ...(options.datePublished || options.dateModified ? { datePublished: options.datePublished || options.dateModified } : {}),
+      ...(options.dateModified ? { dateModified: options.dateModified } : {}),
       author: { '@id': orgId },
       publisher: { '@id': orgId },
       isPartOf: { '@id': websiteId },

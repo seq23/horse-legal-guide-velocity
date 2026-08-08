@@ -1,0 +1,93 @@
+name: Owner Approved Query Page Repair
+
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: "dry_run, approve, reject, or apply"
+        required: true
+        default: "dry_run"
+      repair_ids:
+        description: "Space-separated query repair IDs"
+        required: true
+        default: ""
+      receipt_id:
+        required: false
+        default: ""
+      requested_by:
+        required: false
+        default: ""
+      request_reason:
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: horse-legal-guide-admin-actions
+  cancel-in-progress: false
+
+jobs:
+  query-page-repair:
+    runs-on: ubuntu-latest
+    env:
+      REQUESTED_BY: ${{ inputs.requested_by }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: git pull --rebase origin main
+      - name: Execute owner-gated query repair
+        id: operation
+        continue-on-error: true
+        env:
+          OPERATION_INPUT: ${{ inputs.operation }}
+          REPAIR_IDS_INPUT: ${{ inputs.repair_ids }}
+        run: |
+          set -euo pipefail
+          read -r -a REPAIR_IDS <<< "$REPAIR_IDS_INPUT"
+          node scripts/search/manage_query_repairs.js "$OPERATION_INPUT" "${REPAIR_IDS[@]}"
+          if [[ "$OPERATION_INPUT" == "apply" ]]; then
+            npm run build
+            npm run validate:all
+          fi
+      - name: Commit approved state or applied patch
+        if: ${{ steps.operation.outcome == 'success' && inputs.operation != 'dry_run' }}
+        env:
+          OPERATION_INPUT: ${{ inputs.operation }}
+        run: |
+          git config user.name "horse-query-repair"
+          git config user.email "actions@github.com"
+          git add data/remediation reports/remediation data/page_patches dist .build
+          if git diff --cached --quiet; then
+            echo "No query-repair changes to commit."
+          else
+            git commit -m "chore: ${OPERATION_INPUT} owner query repair"
+            git push origin main
+          fi
+      - name: Write authenticated action receipt
+        if: ${{ always() && inputs.receipt_id != '' }}
+        env:
+          RECEIPT_ID: ${{ inputs.receipt_id }}
+          REQUESTED_BY: ${{ inputs.requested_by }}
+          REQUEST_REASON: ${{ inputs.request_reason }}
+          ACTION_STATUS: ${{ steps.operation.outcome }}
+          OPERATION: ${{ inputs.operation }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+        run: node scripts/admin/write_action_receipt.js
+      - name: Commit action receipt
+        if: ${{ always() && inputs.receipt_id != '' }}
+        run: |
+          git config user.name "horse-legal-guide-admin"
+          git config user.email "actions@github.com"
+          git add data/admin/action_receipts
+          if ! git diff --cached --quiet; then git commit -m "chore: record query repair action" && git push origin main; fi
+      - name: Preserve operation failure
+        if: ${{ steps.operation.outcome != 'success' }}
+        run: exit 1

@@ -2,9 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const { collectFiles, fail, ok } = require('./helpers');
 const files = collectFiles('dist', (file) => file.endsWith('index.html'));
+const allDistFiles = collectFiles('dist');
 const knownPaths = new Set(['/','/disclaimer/','/privacy-policy/']);
 for (const file of files) {
   const rel = file.split('/dist')[1].replace(/\/index\.html$/, '/').replace(/\\/g, '/');
+  knownPaths.add(rel);
+}
+for (const file of allDistFiles) {
+  const rel = file.split('/dist')[1].replace(/\\/g, '/');
   knownPaths.add(rel);
 }
 for (const file of files) {

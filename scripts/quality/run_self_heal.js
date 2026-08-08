@@ -4,6 +4,8 @@ const {
   syncCalendar, wordCount, atomTypeForEntry, atomIdForEntry, canonicalRoutingPresent, dataAtomPresent,
   directAnswerPresent, unresolvedTokens
 } = require('./content_ops_common');
+const { readRenderedDocuments, DEFAULT_BODY_THRESHOLD } = require('./similarity_engine');
+const { healDraftUniqueness } = require('./draft_uniqueness');
 
 function humanTitle(entry) {
   return (entry.source_query_title || entry.title || 'this horse legal question').replace(/\?+$/, '');
@@ -114,24 +116,75 @@ function selfHealEntry(entry) {
   return { entry: healedEntry, changed: before !== body, hard_fails, warnings, word_count: wordCount(nextRaw) };
 }
 
+function uniquenessKey(entry) {
+  return String(entry.source_page_id || entry.source_query_title || entry.title || entry.entry_id || 'unknown').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+}
+
 function main() {
   const backlog = loadBacklog();
+  const publicCorpus = readRenderedDocuments().filter((document) => document.indexable !== false);
+  const processedDraftCorpus = [];
+  const occurrenceCounts = new Map();
   const results = [];
-  const nextBacklog = backlog.map((entry) => {
-    const result = selfHealEntry(entry);
+  const nextBacklog = [];
+
+  for (const entry of backlog) {
+    const baseline = selfHealEntry(entry);
+    const key = uniquenessKey(entry);
+    const occurrenceIndex = occurrenceCounts.get(key) || 0;
+    occurrenceCounts.set(key, occurrenceIndex + 1);
+    const raw = readText(entry.github_path || '', '');
+    const uniqueness = healDraftUniqueness(baseline.entry, raw, [...publicCorpus, ...processedDraftCorpus], {
+      threshold: Number(process.env.DRAFT_SIMILARITY_THRESHOLD || DEFAULT_BODY_THRESHOLD),
+      occurrenceIndex
+    });
+    if (uniqueness.changed) writeText(entry.github_path, uniqueness.raw);
+
+    const uniquenessFailure = uniqueness.status === 'passed'
+      ? []
+      : [`self-healing could not reduce substantial similarity below ${Number(process.env.DRAFT_SIMILARITY_THRESHOLD || DEFAULT_BODY_THRESHOLD).toFixed(2)}`];
+    const hard_fails = [...new Set([...(baseline.hard_fails || []), ...uniquenessFailure])];
+    const warnings = [...new Set([...(baseline.warnings || []), ...(uniqueness.initial_nearest && uniqueness.initial_nearest.body_similarity >= DEFAULT_BODY_THRESHOLD ? [`automatic uniqueness repair triggered against ${uniqueness.initial_nearest.id}`] : [])])];
+    const healedEntry = {
+      ...baseline.entry,
+      title: uniqueness.title || baseline.entry.title,
+      uniqueness_status: uniqueness.status,
+      uniqueness_strategy: uniqueness.strategy,
+      uniqueness_threshold: Number(process.env.DRAFT_SIMILARITY_THRESHOLD || DEFAULT_BODY_THRESHOLD),
+      uniqueness_repair_attempts: uniqueness.attempts,
+      uniqueness_initial_similarity: uniqueness.initial_nearest?.body_similarity ?? 0,
+      uniqueness_max_similarity: uniqueness.final_nearest?.body_similarity ?? 0,
+      uniqueness_nearest_page: uniqueness.final_nearest?.id || null,
+      uniqueness_nearest_family: uniqueness.final_nearest?.family || null,
+      uniqueness_last_run_at: new Date().toISOString(),
+      self_heal_status: hard_fails.length ? 'failed' : 'passed',
+      self_heal_last_run_at: new Date().toISOString(),
+      self_heal_warnings: warnings,
+      self_heal_hard_fails: hard_fails,
+      approval_eligible: false
+    };
+    const document = uniqueness.document || null;
+    if (document) processedDraftCorpus.push({ ...document, title: healedEntry.title });
     results.push({
       entry_id: entry.entry_id,
-      title: entry.title,
-      changed: result.changed,
-      self_heal_status: result.entry.self_heal_status,
-      hard_fails: result.hard_fails,
-      warnings: result.warnings,
-      data_atom_type: result.entry.data_atom_type,
-      data_atom_id: result.entry.data_atom_id,
-      word_count: result.word_count
+      title_before: entry.title,
+      title_after: healedEntry.title,
+      changed: Boolean(baseline.changed || uniqueness.changed),
+      self_heal_status: healedEntry.self_heal_status,
+      uniqueness_status: uniqueness.status,
+      uniqueness_strategy: uniqueness.strategy,
+      uniqueness_repair_attempts: uniqueness.attempts,
+      initial_nearest: uniqueness.initial_nearest,
+      final_nearest: uniqueness.final_nearest,
+      hard_fails,
+      warnings,
+      data_atom_type: healedEntry.data_atom_type,
+      data_atom_id: healedEntry.data_atom_id,
+      word_count: wordCount(readText(entry.github_path || '', uniqueness.raw || raw))
     });
-    return result.entry;
-  });
+    nextBacklog.push(healedEntry);
+  }
+
   saveBacklog(nextBacklog);
   saveCalendar(syncCalendar(nextBacklog, loadCalendar()));
 
@@ -155,15 +208,26 @@ function main() {
     generated_at: new Date().toISOString(),
     clusters
   });
-  writeJson('data/admin/self_heal_report.json', {
+  const report = {
+    schema_version: '1.0.0',
     generated_at: new Date().toISOString(),
+    policy: 'Substantially similar drafts are automatically rewritten and rechecked before approval eligibility. Manual approval of the final repaired draft remains required; the client is not asked to diagnose or repair similarity.',
+    automatic_repair: true,
+    automatic_approval: false,
+    automatic_publication: false,
+    similarity_threshold: Number(process.env.DRAFT_SIMILARITY_THRESHOLD || DEFAULT_BODY_THRESHOLD),
+    public_corpus_pages: publicCorpus.length,
     total: results.length,
-    changed: results.filter((r) => r.changed).length,
-    passed: results.filter((r) => r.self_heal_status === 'passed').length,
-    failed: results.filter((r) => r.self_heal_status === 'failed').length,
+    repaired: results.filter((result) => result.uniqueness_repair_attempts > 0).length,
+    changed: results.filter((result) => result.changed).length,
+    passed: results.filter((result) => result.self_heal_status === 'passed').length,
+    failed: results.filter((result) => result.self_heal_status === 'failed').length,
     results
-  });
-  console.log(`Self-heal complete: ${results.filter((r) => r.self_heal_status === 'passed').length}/${results.length} passed; ${results.filter((r) => r.changed).length} files changed.`);
+  };
+  writeJson('data/admin/self_heal_report.json', report);
+  writeJson('data/admin/draft_uniqueness_report.json', report);
+  writeJson('reports/quality/draft_uniqueness_report.json', report);
+  console.log(`Self-heal complete: ${report.passed}/${report.total} passed; ${report.repaired} drafts automatically differentiated; ${report.failed} unresolved.`);
 }
 
 if (require.main === module) main();

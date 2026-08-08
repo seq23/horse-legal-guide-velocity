@@ -2,6 +2,24 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 
+function resolveDeterministicBuildTimestamp() {
+  if (process.env.BUILD_TIMESTAMP) return process.env.BUILD_TIMESTAMP;
+  const git = spawnSync('git', ['log', '-1', '--format=%cI'], { cwd: process.cwd(), encoding: 'utf8' });
+  const commitTime = String(git.stdout || '').trim();
+  if (git.status === 0 && commitTime && Number.isFinite(Date.parse(commitTime))) return new Date(commitTime).toISOString();
+  try {
+    const epoch = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'data/system/build_epoch.json'), 'utf8'));
+    const fallback = String(epoch.fallback_build_timestamp || '').trim();
+    if (fallback && Number.isFinite(Date.parse(fallback))) return new Date(fallback).toISOString();
+  } catch {}
+  throw new Error('Deterministic build timestamp unavailable. Set BUILD_TIMESTAMP or provide git metadata/data/system/build_epoch.json.');
+}
+const deterministicBuildTimestamp = resolveDeterministicBuildTimestamp();
+process.env.BUILD_TIMESTAMP = deterministicBuildTimestamp;
+const preload = path.resolve(process.cwd(), 'scripts/lib/frozen_build_clock.cjs');
+process.env.NODE_OPTIONS = [process.env.NODE_OPTIONS || '', `--require=${preload}`].filter(Boolean).join(' ').trim();
+require(preload);
+
 function root(rel = '') { return path.resolve(process.cwd(), rel); }
 function ensureDir(dir) { fs.mkdirSync(dir, { recursive: true }); }
 function readJson(rel, fallback = null) {
@@ -64,6 +82,7 @@ function htmlShell(title, body) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="Owner operations dashboard for Horse Legal Guide citation velocity, admin review, SEO, AEO, GEO, workflow health, and Wise Covington routing.">
+<meta name="robots" content="noindex,nofollow">
 <style>
 :root{color-scheme:light;background:#f7f1e8;color:#1d1a16;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{margin:0}.shell{max-width:1180px;margin:0 auto;padding:32px 20px 60px}.card{background:#fffaf1;border:1px solid #e4d7c5;border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 12px 28px rgba(56,39,20,.07)}h1{font-size:clamp(2rem,5vw,4rem);line-height:.95;margin:0 0 12px}h2{margin-top:0}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#7c6245;font-weight:800}.muted{color:#66594b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.metric{border:1px solid #eadfce;border-radius:14px;padding:16px;background:white}.metric strong{display:block;font-size:2rem}.pill{display:inline-block;border:1px solid #d8c8b4;border-radius:999px;padding:6px 10px;margin:3px;background:#fff}code,pre{background:#241e17;color:#f7ead7;border-radius:10px;padding:.12rem .35rem}pre{overflow:auto;padding:14px}a{color:#764b20;font-weight:700}table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #eadfce;padding:10px}textarea,input,select{font:inherit;border:1px solid #d8c8b4;border-radius:10px;padding:10px;background:white}button,.button-link{border:0;border-radius:999px;padding:10px 14px;background:#2c2118;color:white;font-weight:800;text-decoration:none;display:inline-block}button.metric{color:#1d1a16;background:white;text-align:left;cursor:pointer}.warn{background:#fff3cd;border-color:#e6cf82}.ok{background:#edf8ed;border-color:#b9dfb9}.fail{background:#ffe8e6;border-color:#ebb1ab}.login-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;align-items:stretch}.password-display code{font-size:1.15rem;word-break:break-all}.filter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.filter-grid label{display:flex;flex-direction:column;gap:5px;font-weight:750}.button-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.sticky-admin-bar{position:sticky;top:0;z-index:4}.compact-metrics .metric{cursor:pointer}.table-scroll{max-height:780px;overflow:auto;border:1px solid #eadfce;border-radius:14px}.small{font-size:.86rem}textarea#bulk-command{width:100%;box-sizing:border-box}th{position:sticky;top:0;background:#fffaf1}</style>
 </head>
@@ -71,17 +90,39 @@ function htmlShell(title, body) {
 </html>`;
 }
 function ensureAdminSourceReports() {
-  if (!fs.existsSync(root('data/admin/content_quality_report.json'))) runExport('scripts/quality/generate_content_quality_report.js', 'main', 'content quality report');
-  if (!fs.existsSync(root('data/admin/editorial_manifest.json'))) runExport('scripts/admin/generate_admin_manifest.js', 'main', 'admin manifest');
-  if (!fs.existsSync(root('reports/workflow-trace/validate.json'))) runExport('scripts/ops/trace_workflows.js', 'main', 'workflow trace');
-  if (!fs.existsSync(root('data/admin/seo_dashboard.json'))) runExport('scripts/quality/generate_seo_dashboard.js', 'main', 'SEO dashboard');
+  // Build truth must come from the current source tree and freshly rendered dist, never a carried-forward dashboard snapshot.
+  runExport('scripts/quality/generate_content_quality_report.js', 'main', 'content quality report');
+  runExport('scripts/admin/generate_admin_manifest.js', 'main', 'admin manifest');
+  runExport('scripts/ops/trace_workflows.js', 'main', 'workflow trace');
+  runExport('scripts/ops/simulate_github_actions.js', 'main', 'GitHub Actions simulation trace');
+  runExport('scripts/quality/run_page_uniqueness_audit.js', 'main', 'page uniqueness audit');
+  runExport('scripts/quality/generate_seo_dashboard.js', 'main', 'SEO dashboard');
+  runExport('scripts/remediation/build_remediation_queue.js', 'main', 'owner remediation queue');
+  runExport('scripts/query/build_provider_query_intelligence.js', 'main', 'provider query intelligence');
+  runExport('scripts/agency/generate_agency_report.js', 'main', 'private agency report');
 }
 function writeAdminDataExports() {
   copyIfExists('data/admin/editorial_manifest.json', 'dist/admin/editorial_manifest.json');
   copyIfExists('data/admin/signal_ingestion_status.json', 'dist/admin/signal_ingestion_status.json');
   copyIfExists('data/admin/workflow_health.json', 'dist/admin/workflow_health.json');
   copyIfExists('data/admin/seo_dashboard.json', 'dist/admin/seo/seo_dashboard.json');
+  copyIfExists('data/admin/page_uniqueness_report.json', 'dist/admin/seo/page_uniqueness_report.json');
+  copyIfExists('data/admin/consolidation_review_ledger.json', 'dist/admin/seo/consolidation_review_ledger.json');
+  copyIfExists('data/admin/draft_uniqueness_report.json', 'dist/admin/seo/draft_uniqueness_report.json');
   copyIfExists('data/admin/github_actions_trace.json', 'dist/admin/github_actions_trace.json');
+  copyIfExists('data/system/provider_capabilities.json', 'dist/data/system/provider_capabilities.json');
+  copyIfExists('data/system/admin_action_contract.json', 'dist/data/system/admin_action_contract.json');
+  copyIfExists('data/agency/dashboard.json', 'dist/data/agency/dashboard.json');
+  copyIfExists('data/agency/gsc_snapshot.json', 'dist/data/agency/gsc_snapshot.json');
+  copyIfExists('data/agency/bing_snapshot.json', 'dist/data/agency/bing_snapshot.json');
+  copyIfExists('data/agency/live_snapshot.json', 'dist/data/agency/live_snapshot.json');
+  copyIfExists('data/query_intelligence/provider_opportunities.json', 'dist/data/query_intelligence/provider_opportunities.json');
+  copyIfExists('data/remediation/remediation_queue.json', 'dist/data/remediation/remediation_queue.json');
+  copyIfExists('data/search/query_observations.json', 'dist/data/search/query_observations.json');
+  copyIfExists('data/search/query_diagnostics.json', 'dist/data/search/query_diagnostics.json');
+  copyIfExists('data/remediation/query_repair_queue.json', 'dist/data/remediation/query_repair_queue.json');
+  copyIfExists('data/system/provider_health.json', 'dist/data/system/provider_health.json');
+  copyIfExists('data/system/external_action_truth.json', 'dist/data/system/external_action_truth.json');
 }
 function summarizeStatusCounts(items) {
   return items.reduce((acc, item) => {
@@ -137,7 +178,7 @@ function writeAdminIndex() {
   <p class="eyebrow">Owner cockpit · manual publishing only</p>
   <h1>Horse Legal Guide Admin</h1>
   <p class="muted">Review, filter, approve, reject, revise, and monitor content built to improve LLM citation opportunities and route legal matters back to Wise Covington.</p>
-  <p><a href="/admin/seo/">Open /admin/seo/ AEO / SEO / GEO dashboard</a> · <a href="${escapeHtml(normalizeRepoUrl(config))}/actions">Open GitHub Actions</a></p>
+  <p><a href="/admin/seo/">Open /admin/seo/ AEO / SEO / GEO dashboard</a> · <a href="/agency/">Open private /agency/ search intelligence</a> · <a href="${escapeHtml(normalizeRepoUrl(config))}/actions">Open GitHub Actions</a></p>
 </header>
 <section id="login-landing" class="login-grid">
   <div class="card login-card">
@@ -187,6 +228,18 @@ function writeAdminIndex() {
     <div class="button-row"><button type="button" data-action="approve">Approve selected</button><button type="button" data-action="reject">Reject selected</button><button type="button" data-action="needs_revision">Needs revision selected</button><button type="button" data-action="publish_date">Set publish date selected</button><button type="button" data-action="approve_all_eligible">Approve all eligible</button><a class="button-link" href="${escapeHtml(normalizeRepoUrl(config))}/actions/workflows/admin-bulk-content-actions.yml">Open bulk GitHub workflow</a></div>
     <textarea id="bulk-command" rows="3" readonly placeholder="Generated command appears here"></textarea>
   </section>
+  <section class="card" id="github-admin-card">
+    <p class="eyebrow">Additive method · existing commands remain</p>
+    <h2>GitHub-authenticated actions</h2>
+    <p class="muted">This does not replace the command box or GitHub workflow page. Sign in with an allowlisted GitHub account to dispatch the same guarded workflows from here. Every mutation requires confirmation, server-side authentication, validation, and a receipt.</p>
+    <div class="button-row"><button type="button" id="github-admin-login">Sign in with GitHub</button><button type="button" id="github-admin-logout" hidden>Sign out</button><a class="button-link" href="/agency/">Open private agency dashboard</a></div>
+    <p id="github-admin-status" class="muted">Checking GitHub admin session…</p>
+    <div id="github-admin-actions" hidden>
+      <div class="button-row"><button type="button" data-github-action="content_dry_run">Dry-run selected</button><button type="button" data-github-action="approve_selected">Approve selected</button><button type="button" data-github-action="reject_selected">Reject selected</button><button type="button" data-github-action="needs_revision_selected">Needs revision selected</button><button type="button" data-github-action="set_publish_date_selected">Set publish date</button><button type="button" data-github-action="clear_publish_date_selected">Clear publish date</button></div>
+      <div class="button-row"><button type="button" data-github-action="self_heal_prevalidate">Run self-heal + prevalidation</button><button type="button" data-github-action="validate_repo">Validate repo</button><button type="button" data-github-action="refresh_search">Refresh GSC + Bing</button><button type="button" data-github-action="rebuild_query_intelligence">Rebuild query intelligence</button><button type="button" data-github-action="refresh_remediation_queue">Refresh remediation queue</button></div>
+    </div>
+    <pre id="github-admin-receipt">No authenticated action dispatched in this browser session.</pre>
+  </section>
   <section class="card status-guide">
     <h2>Exactly what to change in metadata</h2>
     <p>Open <code>data/system/editorial_backlog.json</code> through an article’s <strong>Edit Metadata</strong> link and find the matching <code>entry_id</code>.</p>
@@ -232,7 +285,12 @@ function renderQueue(resetPage=false){if(resetPage)state.page=1;const f=getFilte
 function selectedIds(){return Array.from(document.querySelectorAll('.row-check:checked')).map((el)=>el.value);}
 function selectRows(kind){for(const row of document.querySelectorAll('#draft-tbody tr[data-entry-id]')){const cb=row.querySelector('.row-check');if(!cb)continue;if(kind==='clear')cb.checked=false;if(kind==='visible')cb.checked=true;if(kind==='eligible')cb.checked=row.dataset.eligible==='yes';if(kind==='pending')cb.checked=row.dataset.status==='pending';}}
 function commandFor(action){const ids=selectedIds();if(action==='approve_all_eligible')return 'node scripts/admin/approve_all_eligible.js && npm run build && npm run validate:all';if(!ids.length)return 'Select at least one visible row first.';if(action==='approve')return 'node scripts/admin/approve_many.js '+ids.join(' ')+' && npm run build && npm run validate:all';if(action==='reject')return 'node scripts/admin/reject_many.js '+ids.join(' ')+' && npm run build && npm run validate:all';if(action==='needs_revision')return 'node scripts/admin/mark_many_needs_revision.js '+ids.join(' ')+' && npm run build && npm run validate:all';if(action==='publish_date'){const d=window.prompt('Publish date YYYY-MM-DD');return d?'node scripts/admin/set_publish_date_many.js '+d+' '+ids.join(' ')+' && npm run build && npm run validate:all':'Publish date cancelled.';}return '';}
-function bindAdmin(){document.getElementById('unlock-admin')?.addEventListener('click',unlockAdmin);document.getElementById('admin-password')?.addEventListener('keydown',(event)=>{if(event.key==='Enter')unlockAdmin();});['status-filter','quality-filter','type-filter','cluster-filter','sort-filter','page-size'].forEach((id)=>document.getElementById(id)?.addEventListener('change',()=>renderQueue(true)));document.getElementById('prev-page')?.addEventListener('click',()=>{state.page=Math.max(1,state.page-1);renderQueue();});document.getElementById('next-page')?.addEventListener('click',()=>{state.page+=1;renderQueue();});document.getElementById('clear-filters')?.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value='all';document.getElementById('type-filter').value='all';document.getElementById('cluster-filter').value='all';document.getElementById('sort-filter').value='date-asc';renderQueue(true);});document.querySelectorAll('[data-filter-status]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value=button.dataset.filterStatus||'all';document.getElementById('quality-filter').value='all';renderQueue(true);}));document.querySelectorAll('[data-filter-quality]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value=button.dataset.filterQuality||'all';renderQueue(true);}));document.querySelectorAll('[data-select]').forEach((button)=>button.addEventListener('click',()=>selectRows(button.dataset.select)));document.querySelectorAll('[data-action]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('bulk-command').value=commandFor(button.dataset.action);}));if(sessionStorage.getItem('hlg-admin-open')==='true'){document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(sessionStorage.getItem('hlg-admin-password-reminder')||'');renderQueue();}}
+let githubAdminSession={authenticated:false,csrf:null,user:null};
+async function loadGithubAdminSession(){const status=document.getElementById('github-admin-status');try{const response=await fetch('/api/admin/github/session',{cache:'no-store'});const data=await response.json();githubAdminSession=data;const authenticated=Boolean(data.authenticated);document.getElementById('github-admin-login').hidden=authenticated;document.getElementById('github-admin-logout').hidden=!authenticated;document.getElementById('github-admin-actions').hidden=!authenticated;status.textContent=authenticated?'Signed in as @'+data.user.login+'. Actions dispatch through GitHub and retain manual approval.':(data.provider_configured?'Not signed in. Use GitHub to unlock server-side actions.':'GitHub admin provider is not configured yet. Existing commands and workflow links still work.');}catch(error){status.textContent='GitHub admin session unavailable: '+error.message;}}
+function githubActionPayload(action){const payload={action,ids:selectedIds(),reason:'Horse Legal Guide owner admin action'};if(action==='set_publish_date_selected'){const value=window.prompt('Publish date YYYY-MM-DD');if(!value)return null;payload.publish_date=value;}return payload;}
+async function dispatchGithubAction(action){const payload=githubActionPayload(action);if(!payload)return;const selectedRequired=['approve_selected','reject_selected','needs_revision_selected','set_publish_date_selected','clear_publish_date_selected'].includes(action);if(selectedRequired&&!payload.ids.length){window.alert('Select at least one row first.');return;}const warning=action==='approve_selected'?'Approve the selected final self-healed drafts?':action==='reject_selected'?'Reject the selected drafts?':action==='needs_revision_selected'?'Mark the selected drafts as needing revision?':action==='set_publish_date_selected'?'Set the selected publish dates?':action==='clear_publish_date_selected'?'Clear the selected publish dates?':'Dispatch '+action.replaceAll('_',' ')+'?';if(!window.confirm(warning))return;const receipt=document.getElementById('github-admin-receipt');receipt.textContent='Dispatching…';try{const response=await fetch('/api/admin/action',{method:'POST',headers:{'content-type':'application/json','x-hlg-admin-csrf':githubAdminSession.csrf||''},body:JSON.stringify(payload)});const data=await response.json();if(!response.ok)throw new Error(data.error||'Action failed');receipt.textContent=JSON.stringify(data.receipt,null,2);}catch(error){receipt.textContent='Action failed: '+error.message;}}
+async function githubLogout(){await fetch('/api/admin/github/logout',{method:'POST'});githubAdminSession={authenticated:false,csrf:null,user:null};await loadGithubAdminSession();}
+function bindAdmin(){document.getElementById('unlock-admin')?.addEventListener('click',unlockAdmin);document.getElementById('admin-password')?.addEventListener('keydown',(event)=>{if(event.key==='Enter')unlockAdmin();});document.getElementById('github-admin-login')?.addEventListener('click',()=>{window.location.href='/api/admin/github/login?return_to=%2Fadmin%2F';});document.getElementById('github-admin-logout')?.addEventListener('click',githubLogout);document.querySelectorAll('[data-github-action]').forEach(button=>button.addEventListener('click',()=>dispatchGithubAction(button.dataset.githubAction)));loadGithubAdminSession();['status-filter','quality-filter','type-filter','cluster-filter','sort-filter','page-size'].forEach((id)=>document.getElementById(id)?.addEventListener('change',()=>renderQueue(true)));document.getElementById('prev-page')?.addEventListener('click',()=>{state.page=Math.max(1,state.page-1);renderQueue();});document.getElementById('next-page')?.addEventListener('click',()=>{state.page+=1;renderQueue();});document.getElementById('clear-filters')?.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value='all';document.getElementById('type-filter').value='all';document.getElementById('cluster-filter').value='all';document.getElementById('sort-filter').value='date-asc';renderQueue(true);});document.querySelectorAll('[data-filter-status]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value=button.dataset.filterStatus||'all';document.getElementById('quality-filter').value='all';renderQueue(true);}));document.querySelectorAll('[data-filter-quality]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value=button.dataset.filterQuality||'all';renderQueue(true);}));document.querySelectorAll('[data-select]').forEach((button)=>button.addEventListener('click',()=>selectRows(button.dataset.select)));document.querySelectorAll('[data-action]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('bulk-command').value=commandFor(button.dataset.action);}));if(sessionStorage.getItem('hlg-admin-open')==='true'){document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(sessionStorage.getItem('hlg-admin-password-reminder')||'');renderQueue();}}
 document.addEventListener('DOMContentLoaded',bindAdmin);</script>`;
   ensureDir(root('dist/admin'));
   fs.writeFileSync(root('dist/admin/index.html'), htmlShell('Horse Legal Guide Admin', body));
@@ -251,7 +309,7 @@ function writeAdminSeo() {
   <p class="eyebrow">SEO / AEO / GEO · real generated data</p>
   <h1>LLM Citation Velocity Dashboard</h1>
   <p class="muted">Measures local generated surfaces, schema, metadata, internal links, content atoms, workflow trace, signal ingestion, and Wise Covington routing.</p>
-  <p><a href="/admin/">Back to admin</a> · <code>/admin/seo/seo_dashboard.json</code> · <a href="${escapeHtml(normalizeRepoUrl(config))}/actions">GitHub Actions</a></p>
+  <p><a href="/admin/">Back to admin</a> · <code>/admin/seo/seo_dashboard.json</code> · <a href="/admin/seo/page_uniqueness_report.json">Page uniqueness report</a> · <a href="/admin/seo/consolidation_review_ledger.json">Owner-review ledger</a> · <a href="/admin/seo/draft_uniqueness_report.json">Draft self-heal report</a> · <a href="${escapeHtml(normalizeRepoUrl(config))}/actions">GitHub Actions</a></p>
 </header>
 <section class="card">
   <h2>Real measurement summary</h2>
@@ -278,15 +336,49 @@ function writeAdminSeo() {
   ensureDir(root('dist/admin/seo'));
   fs.writeFileSync(root('dist/admin/seo/index.html'), htmlShell('LLM Citation Velocity Dashboard', body));
 }
+function writeAgencyIndex() {
+  const body = `
+<header class="card">
+  <p class="eyebrow">Private search intelligence · approval-gated</p>
+  <h1>Horse Legal Guide Agency Dashboard</h1>
+  <p class="muted">Google Search Console, Bing Webmaster Tools, live-route monitoring, page uniqueness, provider-fed opportunities, and owner-approved remediation. Monitoring may run automatically; content approval and live-page changes remain manual.</p>
+  <p><a href="/admin/">Back to admin</a> · <a href="/admin/seo/">Local SEO dashboard</a></p>
+</header>
+<section class="card"><div class="button-row"><button id="agency-refresh" type="button">Refresh GSC + Bing</button><button id="agency-query" type="button">Rebuild query intelligence</button><button id="agency-remediation" type="button">Refresh remediation queue</button><button id="agency-logout" type="button">Sign out</button></div><p id="agency-user" class="muted">Checking GitHub identity…</p><pre id="agency-receipt">No action dispatched.</pre></section>
+<section class="card"><h2>Provider health</h2><div id="agency-health" class="grid"></div></section>
+<section class="card"><h2>Google performance</h2><div id="agency-gsc-metrics" class="grid"></div><div class="table-scroll"><table><thead><tr><th>Query or page</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Position</th></tr></thead><tbody id="agency-gsc-table"></tbody></table></div></section>
+<section class="card"><h2>Bing performance and crawl</h2><div class="table-scroll"><table><thead><tr><th>Query</th><th>Clicks</th><th>Impressions</th><th>Position</th></tr></thead><tbody id="agency-bing-table"></tbody></table></div></section>
+<section class="card"><h2>Active live-query tests</h2><p class="muted">Grounded live-search evidence is kept separate from literal Google rank. GSC remains the source of truth for owned-site Google impressions, clicks, CTR, and average position.</p><div class="table-scroll"><table><thead><tr><th>Query</th><th>Target</th><th>State</th><th>Site surfaced</th><th>Observed competitors</th></tr></thead><tbody id="agency-active-query-table"></tbody></table></div></section>
+<section class="card"><h2>Query-driven finished repair proposals</h2><p class="muted">The system automatically diagnoses and prepares a bounded page patch using already-approved Horse Legal Guide answer content. The client still approves before any live legal-page change.</p><div class="button-row"><button id="approve-query-repairs" type="button">Approve selected query repairs</button><button id="reject-query-repairs" type="button">Reject selected query repairs</button><button id="apply-query-repairs" type="button">Apply already-approved query repairs</button></div><div class="table-scroll"><table><thead><tr><th>Select</th><th>Query</th><th>State</th><th>Target</th><th>Diagnosis / retest</th></tr></thead><tbody id="agency-query-repair-table"></tbody></table></div></section>
+<section class="card"><h2>Provider-fed opportunities</h2><p class="muted">Select only new-candidate opportunities you want admitted as pending drafts. Admission triggers draft generation, self-healing, and prevalidation; it does not approve or publish.</p><div class="button-row"><button id="admit-query-candidates" type="button">Admit selected as pending drafts</button></div><div class="table-scroll"><table><thead><tr><th>Select</th><th>Query</th><th>Type</th><th>Target</th><th>Evidence</th></tr></thead><tbody id="agency-query-table"></tbody></table></div></section>
+<section class="card"><h2>Owner-approved page remediation</h2><p class="muted">No live search control is applied until a proposal is approved with a specific action and then separately applied.</p><label>Approved action<select id="remediation-action"><option value="noindex_keep_llm">Noindex, keep in LLM feeds</option><option value="canonical_to_primary">Canonical/noindex to primary</option><option value="redirect_to_primary">301 redirect to primary</option><option value="differentiate_patch">Apply reviewed differentiation patch</option></select></label><div class="button-row"><button id="approve-remediations" type="button">Approve selected action</button><button id="reject-remediations" type="button">Reject selected</button><button id="apply-remediations" type="button">Apply already-approved selected</button></div><div class="table-scroll"><table><thead><tr><th>Select</th><th>Proposal</th><th>Status</th><th>Primary</th><th>Members</th><th>Evidence</th></tr></thead><tbody id="agency-remediation-table"></tbody></table></div></section>
+<script>
+let agencySession=null,agencyReport=null;
+const esc=(value)=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const num=(value)=>new Intl.NumberFormat().format(Number(value)||0);const pct=(value)=>((Number(value)||0)*100).toFixed(1)+'%';
+async function api(url,options={}){const response=await fetch(url,{cache:'no-store',...options});const data=await response.json();if(!response.ok)throw new Error(data.error||url+' failed');return data;}
+function healthCard(label,item){return '<div class="metric"><span class="eyebrow">'+esc(label)+'</span><strong>'+esc(item?.status||'unknown')+'</strong><span>'+esc(item?.message||'')+'</span></div>';}
+function selected(name){return Array.from(document.querySelectorAll('input[name="'+name+'"]:checked')).map(el=>el.value);}
+function render(){const h=agencyReport.health||{};document.getElementById('agency-health').innerHTML=healthCard('Google Search Console',h.gsc)+healthCard('Bing Webmaster Tools',h.bing)+healthCard('Live routes',h.live);const g=agencyReport.performance?.gsc||{};document.getElementById('agency-gsc-metrics').innerHTML=[['Clicks',num(g.clicks)],['Impressions',num(g.impressions)],['CTR',pct(g.ctr)],['Average position',Number(g.position||0).toFixed(1)]].map(x=>'<div class="metric"><span class="eyebrow">'+x[0]+'</span><strong>'+x[1]+'</strong></div>').join('');const gRows=[...(agencyReport.performance?.gsc_top_queries||[]).slice(0,30).map(r=>({label:'Query: '+(r.keys?.[0]||''),...r})),...(agencyReport.performance?.gsc_top_pages||[]).slice(0,20).map(r=>({label:'Page: '+(r.keys?.[0]||''),...r}))];document.getElementById('agency-gsc-table').innerHTML=gRows.map(r=>'<tr><td>'+esc(r.label)+'</td><td>'+num(r.clicks)+'</td><td>'+num(r.impressions)+'</td><td>'+pct(r.ctr)+'</td><td>'+Number(r.position||0).toFixed(1)+'</td></tr>').join('')||'<tr><td colspan="5">No connected GSC data yet.</td></tr>';document.getElementById('agency-bing-table').innerHTML=(agencyReport.performance?.bing_top_queries||[]).slice(0,50).map(r=>'<tr><td>'+esc(r.Query||r.QueryString||r.query||'')+'</td><td>'+num(r.Clicks||r.clicks)+'</td><td>'+num(r.Impressions||r.impressions)+'</td><td>'+Number(r.AvgImpressionPosition||r.position||0).toFixed(1)+'</td></tr>').join('')||'<tr><td colspan="4">No connected Bing data yet.</td></tr>';document.getElementById('agency-query-table').innerHTML=(agencyReport.query_intelligence?.opportunities||[]).map(item=>'<tr><td><input type="checkbox" name="query-opportunity" value="'+esc(item.opportunity_id)+'" '+(item.type==='new_candidate'?'':'disabled')+'></td><td><strong>'+esc(item.query)+'</strong></td><td>'+esc(item.type)+'</td><td>'+esc(item.target_page||'new candidate')+'</td><td>'+num(item.metrics?.impressions)+' impressions · '+num(item.metrics?.clicks)+' clicks</td></tr>').join('')||'<tr><td colspan="5">No provider opportunities yet.</td></tr>';document.getElementById('agency-active-query-table').innerHTML=(agencyReport.active_search?.diagnostics||[]).map(item=>'<tr><td><strong>'+esc(item.query)+'</strong></td><td>'+esc(item.target_page||'—')+'</td><td>'+esc(item.state)+'</td><td>'+esc(item.evidence?.grounded_site_surfaced?'yes':'no / unproven')+'</td><td>'+esc((item.evidence?.competitor_urls||[]).slice(0,3).join(' · '))+'</td></tr>').join('')||'<tr><td colspan="5">No live-query observations yet.</td></tr>';document.getElementById('agency-query-repair-table').innerHTML=(agencyReport.query_repairs?.repairs||[]).map(item=>'<tr><td><input type="checkbox" name="query-repair" value="'+esc(item.repair_id)+'"></td><td><strong>'+esc(item.query)+'</strong></td><td>'+esc(item.state)+'</td><td>'+esc(item.target_page)+'</td><td>'+esc((item.diagnosis||[]).join(', '))+' · '+esc(item.retest_status||'not deployed')+'</td></tr>').join('')||'<tr><td colspan="5">No query-driven repairs currently require owner review.</td></tr>';document.getElementById('agency-remediation-table').innerHTML=(agencyReport.remediation?.proposals||[]).map(item=>'<tr><td><input type="checkbox" name="remediation" value="'+esc(item.proposal_id)+'"></td><td>'+esc(item.proposal_id)+'</td><td>'+esc(item.status)+'</td><td>'+esc(item.candidate_primary)+'</td><td>'+num(item.members?.length)+'</td><td>'+Math.round(Number(item.maximum_body_similarity||0)*100)+'% · '+esc((item.reasons||[]).join(', '))+'</td></tr>').join('')||'<tr><td colspan="6">No remediation proposals.</td></tr>';}
+async function dispatch(action,ids=[],extra={}){if(!agencySession?.authenticated)throw new Error('GitHub sign-in required.');if(!window.confirm('Dispatch '+action.replaceAll('_',' ')+'?'))return;const data=await api('/api/admin/action',{method:'POST',headers:{'content-type':'application/json','x-hlg-admin-csrf':agencySession.csrf},body:JSON.stringify({action,ids,reason:'Horse Legal Guide agency dashboard action',...extra})});document.getElementById('agency-receipt').textContent=JSON.stringify(data.receipt,null,2);}
+async function load(){agencySession=await api('/api/admin/github/session');if(!agencySession.authenticated){window.location.href='/api/admin/github/login?return_to=%2Fagency%2F';return;}document.getElementById('agency-user').textContent='Signed in as @'+agencySession.user.login+'.';agencyReport=(await api('/api/agency/dashboard'));render();}
+document.getElementById('agency-refresh').addEventListener('click',()=>dispatch('refresh_search'));document.getElementById('agency-query').addEventListener('click',()=>dispatch('rebuild_query_intelligence'));document.getElementById('agency-remediation').addEventListener('click',()=>dispatch('refresh_remediation_queue'));document.getElementById('admit-query-candidates').addEventListener('click',()=>dispatch('admit_query_candidates',selected('query-opportunity')));document.getElementById('approve-remediations').addEventListener('click',()=>dispatch('approve_remediation',selected('remediation'),{approved_action:document.getElementById('remediation-action').value}));document.getElementById('reject-remediations').addEventListener('click',()=>dispatch('reject_remediation',selected('remediation')));document.getElementById('apply-remediations').addEventListener('click',()=>dispatch('apply_remediation',selected('remediation')));document.getElementById('approve-query-repairs').addEventListener('click',()=>dispatch('approve_query_repair',selected('query-repair')));document.getElementById('reject-query-repairs').addEventListener('click',()=>dispatch('reject_query_repair',selected('query-repair')));document.getElementById('apply-query-repairs').addEventListener('click',()=>dispatch('apply_query_repair',selected('query-repair')));document.getElementById('agency-logout').addEventListener('click',async()=>{await fetch('/api/admin/github/logout',{method:'POST'});window.location.href='/admin/';});load().catch(error=>{document.getElementById('agency-user').textContent='Dashboard unavailable: '+error.message;});
+</script>`;
+  ensureDir(root('dist/agency'));
+  fs.writeFileSync(root('dist/agency/index.html'), htmlShell('Horse Legal Guide Agency Dashboard', body));
+}
 function writeRequiredSurfaces() {
   ensureAdminSourceReports();
   writeAdminDataExports();
   writeAdminIndex();
   writeAdminSeo();
+  writeAgencyIndex();
+  copyIfExists('_routes.json', 'dist/_routes.json');
 }
 function main() {
   // The updater excludes directories named "build" during rsync. Keep this release entry point outside scripts/build.
   runNode('scripts/build/build_site.js', 'base static build');
+  runNode('scripts/remediation/apply_search_controls.js', 'owner-approved search controls');
   writeRequiredSurfaces();
   // Re-run distribution prep after admin surfaces are written so batch artifacts can see final dist state where relevant.
   if (fs.existsSync(root('scripts/build/prepare_distribution_artifacts.js'))) {

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "started_at": "2026-08-08T01:46:18.295Z",
+  "finished_at": "2026-08-08T01:46:18.538Z",
+  "ok": true,
+  "truth_boundary": "Isolated local behavior proof. Does not prove deployed Cloudflare OAuth, live GitHub workflow dispatch, or provider credentials.",
+  "checks": [
+    {
+      "name": "signed session verifies",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "wrong signing secret rejected",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "approval dispatch is allowlisted",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "approval requires selected IDs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid publish date rejected",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "unsupported remediation rejected",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "current manifest selection accepted",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "unknown or stale selection rejected before dispatch",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "provider candidate admission succeeds",
+      "ok": true,
+      "detail": "{\n  \"ok\": true,\n  \"admitted_count\": 1,\n  \"admitted\": [\n    \"provider-provider-opportunity-fixture\"\n  ],\n  \"automatic_approval\": false,\n  \"automatic_publication\": false\n}\n"
+    },
+    {
+      "name": "only new-candidate opportunity admitted",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admitted provider draft remains pending and approval-required",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "provider admission is idempotent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "unapproved live remediation is blocked",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "owner approval is recorded",
+      "ok": true,
+      "detail": "{\n  \"ok\": true,\n  \"operation\": \"approve\",\n  \"results\": [\n    {\n      \"proposal_id\": \"remediation-fixture\",\n      \"status\": \"approved\",\n      \"action\": \"noindex_keep_llm\"\n    }\n  ],\n  \"automatic_approval\": false,\n  \"automatic_live_change\": false\n}\n"
+    },
+    {
+      "name": "approval evidence is durable",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "approved remediation applies",
+      "ok": true,
+      "detail": "{\n  \"ok\": true,\n  \"operation\": \"apply\",\n  \"results\": [\n    {\n      \"proposal_id\": \"remediation-fixture\",\n      \"status\": \"applied\",\n      \"action\": \"noindex_keep_llm\"\n    }\n  ],\n  \"automatic_approval\": false,\n  \"automatic_live_change\": false\n}\n"
+    },
+    {
+      "name": "applied proposal creates one evidence-backed search control",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "approved search control applies to dist",
+      "ok": true,
+      "detail": "Applied 1 owner-approved search controls to dist.\n"
+    },
+    {
+      "name": "approved noindex control appears in rendered page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "approved noindex route removed from public sitemap",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "manual_approval_preserved": true,
+  "automatic_approval": false,
+  "automatic_publication": false,
+  "unapproved_live_remediation_blocked": true
+}

@@ -1,0 +1,117 @@
+name: Owner Approved Page Remediation
+
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: "refresh_queue, dry_run, approve, reject, or apply"
+        required: true
+        default: "dry_run"
+      proposal_ids:
+        description: "Space-separated remediation proposal IDs"
+        required: false
+        default: ""
+      approved_action:
+        description: "noindex_keep_llm, canonical_to_primary, redirect_to_primary, or differentiate_patch"
+        required: false
+        default: ""
+      receipt_id:
+        required: false
+        default: ""
+      requested_by:
+        required: false
+        default: ""
+      request_reason:
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: horse-legal-guide-admin-actions
+  cancel-in-progress: false
+
+jobs:
+  remediation:
+    runs-on: ubuntu-latest
+    env:
+      REQUESTED_BY: ${{ inputs.requested_by }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: git pull --rebase origin main
+      - name: Execute owner-gated remediation operation
+        id: operation
+        continue-on-error: true
+        env:
+          OPERATION_INPUT: ${{ inputs.operation }}
+          PROPOSAL_IDS_INPUT: ${{ inputs.proposal_ids }}
+          APPROVED_ACTION_INPUT: ${{ inputs.approved_action }}
+        run: |
+          set -euo pipefail
+          read -r -a PROPOSAL_IDS <<< "$PROPOSAL_IDS_INPUT"
+          case "$OPERATION_INPUT" in
+            refresh_queue) node scripts/remediation/manage_remediations.js refresh_queue "" ;;
+            dry_run) node scripts/remediation/manage_remediations.js dry_run "" "${PROPOSAL_IDS[@]}" ;;
+            approve) node scripts/remediation/manage_remediations.js approve "$APPROVED_ACTION_INPUT" "${PROPOSAL_IDS[@]}" ;;
+            reject) node scripts/remediation/manage_remediations.js reject "" "${PROPOSAL_IDS[@]}" ;;
+            apply) node scripts/remediation/manage_remediations.js apply "" "${PROPOSAL_IDS[@]}" ;;
+            *) echo "Unknown operation: $OPERATION_INPUT"; exit 1 ;;
+          esac
+          npm run build
+          npm run validate:all
+      - name: Commit owner-approved remediation state
+        if: ${{ steps.operation.outcome == 'success' && inputs.operation != 'dry_run' }}
+        run: |
+          git config user.name "horse-remediation-owner"
+          git config user.email "actions@github.com"
+          git add data/remediation reports/remediation data/page_patches data/reference_patches dist .build data/admin
+          if git diff --cached --quiet; then
+            echo "No remediation changes to commit."
+          else
+            git commit -m "chore: record owner-approved page remediation"
+            git push origin main
+          fi
+      - name: Upload remediation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: horse-legal-guide-remediation-evidence
+          path: |
+            data/remediation
+            reports/remediation
+            data/page_patches
+            data/reference_patches
+
+      - name: Write authenticated action receipt
+        if: ${{ always() && inputs.receipt_id != '' }}
+        env:
+          RECEIPT_ID: ${{ inputs.receipt_id }}
+          REQUESTED_BY: ${{ inputs.requested_by }}
+          REQUEST_REASON: ${{ inputs.request_reason }}
+          ACTION_STATUS: ${{ steps.operation.outcome }}
+          OPERATION: ${{ inputs.operation || inputs.action }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+        run: node scripts/admin/write_action_receipt.js
+      - name: Commit authenticated action receipt
+        if: ${{ always() && inputs.receipt_id != '' }}
+        run: |
+          git config user.name "horse-legal-guide-admin"
+          git config user.email "actions@github.com"
+          git add data/admin/action_receipts
+          if git diff --cached --quiet; then
+            echo "No receipt change to commit."
+          else
+            git commit -m "chore: record authenticated admin action"
+            git push origin main
+          fi
+      - name: Preserve operation failure
+        if: ${{ steps.operation.outcome != 'success' }}
+        run: exit 1

@@ -1,7 +1,7 @@
 {
   "workflow": "admin-bulk-content-actions.yml",
   "path": ".github/workflows/admin-bulk-content-actions.yml",
-  "purpose": "owner admin bulk action lane; simulated as dry-run only",
+  "purpose": "owner admin bulk action lane; existing method preserved and authenticated dispatch added",
   "mode": "local_simulated_github_actions_data_trace",
   "execution_model": "replay_from_local_command_validation_and_artifact_presence",
   "commands": [
@@ -61,6 +61,11 @@
     },
     {
       "path": "scripts/admin/set_publish_date_many.js",
+      "exists": true,
+      "status": "present"
+    },
+    {
+      "path": "scripts/admin/write_action_receipt.js",
       "exists": true,
       "status": "present"
     },

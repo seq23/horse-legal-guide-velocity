@@ -40,6 +40,8 @@ function blockingReasons(entry) {
   if ((entry.generation_validation?.status || 'pass') === 'fail') reasons.push('generation validation failed');
   if ((entry.self_heal_status || 'not_run') !== 'passed') reasons.push('self-heal has not passed');
   if ((entry.prevalidation_status || 'not_run') !== 'passed') reasons.push('prevalidation has not passed');
+  if ((entry.uniqueness_status || 'not_run') !== 'passed') reasons.push('automatic draft uniqueness self-heal has not passed');
+  if (Number(entry.uniqueness_max_similarity || 0) >= Number(entry.uniqueness_threshold || 0.85)) reasons.push(`substantial draft similarity remains: ${Number(entry.uniqueness_max_similarity).toFixed(4)}`);
   if (entry.hard_fails && entry.hard_fails.length) reasons.push(`hard fails: ${entry.hard_fails.join('; ')}`);
   if (!entry.data_atom_id) reasons.push('missing data atom');
   if ((entry.routing_score || 0) < 100) reasons.push('Wise Covington routing not verified');

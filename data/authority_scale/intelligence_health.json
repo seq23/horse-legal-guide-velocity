@@ -1,9 +1,17 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "validation_status": "PASS",
   "duplicate_status": "CLEAN",
   "distribution_observation_status": "UNKNOWN",
   "observed_yield_trend": "UNKNOWN",
   "minimum_observed_yield_events_met": false,
-  "truth_note": "External distribution/indexation/yield evidence is unknown in the build artifact, so analysis throughput must HOLD."
+  "observed_yield_events": 0,
+  "evidence_sources": [],
+  "provider_states": {
+    "gemini_grounded_search": "NOT_CONFIGURED",
+    "gsc": "NOT_CONFIGURED",
+    "bing": "NOT_CONFIGURED",
+    "indexnow": "DRY_RUN_ONLY"
+  },
+  "truth_note": "External yield evidence remains unknown or provider-gated; analysis throughput must HOLD."
 }

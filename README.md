@@ -39,3 +39,17 @@ Package from the true repo root as a baseline snapshot ZIP after validation.
 ## Content system layer
 
 This repo now includes a manual-review content system with a yearly editorial backlog, a content calendar, generated draft files under `content/drafts/generated/`, and a lightweight static `/admin/` review page.
+
+## Approval-gated operations
+
+- `/admin/` preserves the existing review and command-generation method and adds optional GitHub-authenticated workflow buttons.
+- `/agency/` is a private GitHub-authenticated GSC, Bing, live-search, query-intelligence, and remediation dashboard.
+- Provider-fed opportunities can create pending drafts only.
+- Existing-page remediation requires separate owner approval and apply operations.
+
+Setup:
+
+- `docs/runbooks/GITHUB_ADMIN_AUTH_SETUP.md`
+- `docs/runbooks/AGENCY_SEARCH_PROVIDER_SETUP.md`
+- `docs/runbooks/OWNER_APPROVED_REMEDIATION_RUNBOOK.md`
+

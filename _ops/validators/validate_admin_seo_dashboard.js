@@ -8,10 +8,13 @@ if(fs.existsSync('data/admin/seo_dashboard.json')){
   for(const k of ['citation_velocity','seo','aeo','geo','routing_contact','content_atom_coverage','workflow_trace','signal_ingestion','internal_linking','schema_coverage','metadata_completeness']){
     if(typeof (x.health||{})[k] !== 'number') fail(`health missing numeric ${k}`);
   }
-  for(const k of ['rendered_public_pages','total_html_pages','sitemap_url_count','title_present','description_present','canonical_present','jsonld_present','draft_items','workflow_count']){
+  for(const k of ['rendered_public_pages','total_html_pages','sitemap_url_count','title_present','description_present','canonical_present','high_similarity_pairs','intent_overlap_pairs','uniqueness_review_clusters','drafts_automatically_differentiated','draft_uniqueness_failures','jsonld_present','draft_items','workflow_count']){
     if(typeof (x.metrics||{})[k] !== 'number') fail(`metrics missing numeric ${k}`);
   }
   if(!Array.isArray(x.source_files)||x.source_files.length<5) fail('source_files must identify real measurement inputs');
+  if(!x.measurement_fingerprint) fail('measurement_fingerprint missing; dashboard freshness cannot be proven');
+  const uniqueness=fs.existsSync('data/admin/page_uniqueness_report.json')?JSON.parse(fs.readFileSync('data/admin/page_uniqueness_report.json','utf8')):null;
+  if(uniqueness && x.measurement_fingerprint!==uniqueness.source_fingerprint) fail('dashboard fingerprint does not match fresh page uniqueness report');
   if(!String(x.truth_boundary||'').toLowerCase().includes('github actions')) fail('truth boundary must mention GitHub Actions');
   for(const issue of x.issues||[]){
     for(const k of ['category','issue','why_it_matters','recommended_fix','affected_pages','source_metric']) if(!(k in issue)) fail(`issue missing ${k}: ${JSON.stringify(issue).slice(0,160)}`);

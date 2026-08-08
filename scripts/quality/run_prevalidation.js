@@ -35,6 +35,10 @@ function prevalidate(entry) {
   if (!canonicalRoutingPresent(raw)) hard_fails.push('missing Wise Covington routing');
   if (!dataAtomPresent(raw)) hard_fails.push('missing defensible data atom');
   if (!directAnswerPresent(raw)) warnings.push('missing or weak direct/citation-ready answer block');
+  const uniquenessThreshold = Number(entry.uniqueness_threshold || process.env.DRAFT_SIMILARITY_THRESHOLD || 0.85);
+  if ((entry.uniqueness_status || 'not_run') !== 'passed') hard_fails.push('draft uniqueness self-heal has not passed');
+  if (Number(entry.uniqueness_max_similarity || 0) >= uniquenessThreshold) hard_fails.push(`substantial draft similarity remains (${Number(entry.uniqueness_max_similarity).toFixed(4)} >= ${uniquenessThreshold.toFixed(2)})`);
+  if (Number(entry.uniqueness_repair_attempts || 0) > 0) warnings.push(`draft automatically differentiated in ${entry.uniqueness_repair_attempts} bounded repair attempt(s)`);
   const wc = wordCount(raw);
   const band = advisoryWordBand(entry.content_type);
   if (wc < band.soft_floor) warnings.push(`word count below advisory floor (${wc} < ${band.soft_floor}); warning only`);
@@ -60,7 +64,8 @@ function prevalidate(entry) {
     hard_fails,
     warnings,
     prevalidation_status,
-    approval_eligible: prevalidation_status === 'passed' && entry.self_heal_status === 'passed',
+    approval_eligible: prevalidation_status === 'passed' && entry.self_heal_status === 'passed' && entry.uniqueness_status === 'passed',
+    uniqueness: { status: entry.uniqueness_status || 'not_run', strategy: entry.uniqueness_strategy || null, repair_attempts: Number(entry.uniqueness_repair_attempts || 0), nearest_page: entry.uniqueness_nearest_page || null, maximum_similarity: Number(entry.uniqueness_max_similarity || 0), threshold: uniquenessThreshold },
     scores: { humanizationScore, seoScore, aeoScore, geoScore, llmCitationScore, routingScore, legalSafetyScore }
   };
 }
@@ -76,6 +81,12 @@ function main() {
       data_atom_type: entry.data_atom_type || atomTypeForEntry(entry),
       data_atom_id: entry.data_atom_id || atomIdForEntry(entry),
       prevalidation_status: result.prevalidation_status,
+      uniqueness_status: result.uniqueness.status,
+      uniqueness_strategy: result.uniqueness.strategy,
+      uniqueness_repair_attempts: result.uniqueness.repair_attempts,
+      uniqueness_nearest_page: result.uniqueness.nearest_page,
+      uniqueness_max_similarity: result.uniqueness.maximum_similarity,
+      uniqueness_threshold: result.uniqueness.threshold,
       prevalidation_last_run_at: new Date().toISOString(),
       approval_eligible: result.approval_eligible,
       quality_warnings: result.warnings,
@@ -100,7 +111,7 @@ function main() {
   saveCalendar(syncCalendar(nextBacklog, loadCalendar()));
   const payload = {
     generated_at: new Date().toISOString(),
-    policy: 'prevalidation gates approval eligibility; word count is warning-only',
+    policy: 'prevalidation gates approval eligibility after automatic draft uniqueness self-healing; word count is warning-only; client approval and publication remain manual',
     total: results.length,
     passed: results.filter((r) => r.prevalidation_status === 'passed').length,
     failed: results.filter((r) => r.prevalidation_status === 'failed').length,

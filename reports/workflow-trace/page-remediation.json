@@ -1,0 +1,24 @@
+{
+  "workflow": "page-remediation.yml",
+  "path": ".github/workflows/page-remediation.yml",
+  "workflow_key": "page_remediation",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/page-remediation.yml",
+  "purpose": "owner-approved existing-page remediation with separate approve and apply gates",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run build",
+    "npm run validate:all"
+  ],
+  "artifacts_checked": [
+    "scripts/remediation/manage_remediations.js",
+    "data/remediation/remediation_queue.json",
+    "data/remediation/applied_search_controls.json"
+  ],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-08-07T13:58:56.000Z",
+  "finished_at": "2026-08-07T13:58:56.000Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}

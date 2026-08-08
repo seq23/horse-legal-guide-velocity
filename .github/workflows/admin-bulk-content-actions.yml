@@ -31,9 +31,25 @@ on:
         description: "true keeps this non-mutating"
         required: false
         default: "true"
+      receipt_id:
+        description: "Authenticated admin receipt ID"
+        required: false
+        default: ""
+      requested_by:
+        description: "Authenticated GitHub login"
+        required: false
+        default: ""
+      request_reason:
+        description: "Operator-supplied action reason"
+        required: false
+        default: ""
 
 permissions:
   contents: write
+
+concurrency:
+  group: horse-legal-guide-admin-actions
+  cancel-in-progress: false
 
 jobs:
   admin-bulk-action:
@@ -54,39 +70,55 @@ jobs:
       - name: Install
         run: npm ci
       - name: Refresh self-heal and prevalidation before action
+        id: preflight
+        continue-on-error: true
         run: |
           npm run content:self-heal
           npm run content:prevalidate
           npm run build
           npm run ops:trace-workflows
       - name: Execute requested admin action
-        if: ${{ inputs.dry_run != 'true' && inputs.action != 'dry_run' }}
+        id: operation
+        continue-on-error: true
+        if: ${{ steps.preflight.outcome == 'success' && inputs.dry_run != 'true' && inputs.action != 'dry_run' }}
+        env:
+          ACTION_INPUT: ${{ inputs.action }}
+          IDS_INPUT: ${{ inputs.ids }}
+          PUBLISH_DATE_INPUT: ${{ inputs.publish_date }}
+          CONTENT_TYPE_INPUT: ${{ inputs.content_type }}
+          CLUSTER_INPUT: ${{ inputs.cluster }}
+          MIN_QUALITY_SCORE_INPUT: ${{ inputs.min_quality_score }}
         run: |
           set -euo pipefail
-          case "${{ inputs.action }}" in
-            approve_many) node scripts/admin/approve_many.js ${{ inputs.ids }} ;;
-            reject_many) node scripts/admin/reject_many.js ${{ inputs.ids }} ;;
-            mark_many_needs_revision) node scripts/admin/mark_many_needs_revision.js ${{ inputs.ids }} ;;
-            set_publish_date_many) node scripts/admin/set_publish_date_many.js "${{ inputs.publish_date }}" ${{ inputs.ids }} ;;
-            clear_publish_date_many) node scripts/admin/clear_publish_date_many.js ${{ inputs.ids }} ;;
+          read -r -a IDS <<< "$IDS_INPUT"
+          case "$ACTION_INPUT" in
+            approve_many) node scripts/admin/approve_many.js "${IDS[@]}" ;;
+            reject_many) node scripts/admin/reject_many.js "${IDS[@]}" ;;
+            mark_many_needs_revision) node scripts/admin/mark_many_needs_revision.js "${IDS[@]}" ;;
+            set_publish_date_many) node scripts/admin/set_publish_date_many.js "$PUBLISH_DATE_INPUT" "${IDS[@]}" ;;
+            clear_publish_date_many) node scripts/admin/clear_publish_date_many.js "${IDS[@]}" ;;
             approve_all_eligible) node scripts/admin/approve_all_eligible.js ;;
-            approve_by_quality) node scripts/admin/approve_by_quality.js "${{ inputs.min_quality_score }}" ;;
-            approve_by_type) node scripts/admin/approve_by_type.js "${{ inputs.content_type }}" ;;
-            approve_by_cluster) node scripts/admin/approve_by_cluster.js "${{ inputs.cluster }}" ;;
-            *) echo "Unknown action: ${{ inputs.action }}"; exit 1 ;;
+            approve_by_quality) node scripts/admin/approve_by_quality.js "$MIN_QUALITY_SCORE_INPUT" ;;
+            approve_by_type) node scripts/admin/approve_by_type.js "$CONTENT_TYPE_INPUT" ;;
+            approve_by_cluster) node scripts/admin/approve_by_cluster.js "$CLUSTER_INPUT" ;;
+            *) echo "Unknown action: $ACTION_INPUT"; exit 1 ;;
           esac
       - name: Dry run summary
-        if: ${{ inputs.dry_run == 'true' || inputs.action == 'dry_run' }}
+        if: ${{ steps.preflight.outcome == 'success' && (inputs.dry_run == 'true' || inputs.action == 'dry_run') }}
+        env:
+          ACTION_INPUT: ${{ inputs.action }}
+          IDS_INPUT: ${{ inputs.ids }}
         run: |
           echo "Dry run only. No content status changed."
-          echo "Action requested: ${{ inputs.action }}"
-          echo "IDs: ${{ inputs.ids }}"
+          printf 'Action requested: %s\n' "$ACTION_INPUT"
+          printf 'IDs: %s\n' "$IDS_INPUT"
       - name: Rebuild and validate after action
+        if: ${{ steps.preflight.outcome == 'success' && (steps.operation.outcome == 'success' || inputs.dry_run == 'true' || inputs.action == 'dry_run') }}
         run: |
           npm run build
           npm run validate:all
       - name: Commit admin content action
-        if: ${{ inputs.dry_run != 'true' && inputs.action != 'dry_run' }}
+        if: ${{ steps.operation.outcome == 'success' && inputs.dry_run != 'true' && inputs.action != 'dry_run' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -97,3 +129,28 @@ jobs:
           fi
           git commit -m "chore: run admin bulk content action"
           git push
+      - name: Write authenticated action receipt
+        if: ${{ always() && inputs.receipt_id != '' }}
+        env:
+          RECEIPT_ID: ${{ inputs.receipt_id }}
+          REQUESTED_BY: ${{ inputs.requested_by }}
+          REQUEST_REASON: ${{ inputs.request_reason }}
+          ACTION_STATUS: ${{ steps.preflight.outcome != 'success' && 'failure' || steps.operation.outcome || 'success' }}
+          OPERATION: ${{ inputs.action }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+        run: node scripts/admin/write_action_receipt.js
+      - name: Commit authenticated action receipt
+        if: ${{ always() && inputs.receipt_id != '' }}
+        run: |
+          git config user.name "horse-legal-guide-admin"
+          git config user.email "actions@github.com"
+          git add data/admin/action_receipts
+          if git diff --cached --quiet; then
+            echo "No receipt change to commit."
+          else
+            git commit -m "chore: record authenticated admin action"
+            git push origin main
+          fi
+      - name: Preserve operation failure
+        if: ${{ steps.preflight.outcome != 'success' || steps.operation.outcome == 'failure' }}
+        run: exit 1

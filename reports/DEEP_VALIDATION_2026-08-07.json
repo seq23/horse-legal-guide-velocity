@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "repo": "horse-legal-guide-velocity",
+  "validation_mode": "deep_on_demand",
+  "local_date": "2026-08-07",
+  "source_zip": "horse-legal-guide-velocity-FINAL-search-self-healing.zip",
+  "source_zip_sha256": "3515ae891b9df122ba37032d8db5fac3a4fbc9722985152732598cba87bf4b13",
+  "repairs_from_deep_validation": [
+    "Removed direct GitHub workflow-input interpolation from query-page-repair shell execution.",
+    "Corrected foundation sitemap parity to exclude all private /admin/* and /agency/* descendants.",
+    "Removed fabricated wall-clock Article datePublished/dateModified defaults.",
+    "Added reproducible build-clock handling for clean release builds."
+  ],
+  "full_validation": {
+    "command": "npm run validate:all",
+    "status": "PASS"
+  },
+  "foundation_enforce": {
+    "command": "npm run validate:foundation:enforce",
+    "status": "PASS"
+  },
+  "github_actions_trace": {
+    "command": "npm run validate:github-actions-trace",
+    "status": "PASS"
+  },
+  "assisted_operations_e2e": {
+    "status": "PASS",
+    "assertions": 20
+  },
+  "search_cycle": {
+    "measurement_queries": 30,
+    "clusters": 11,
+    "provider_state": "NOT_CONFIGURED",
+    "observed": 0,
+    "surfaced": 0,
+    "prepared_query_repairs": 0,
+    "external_provider_truth_contract": "PASS",
+    "live_query_loop_contract": "PASS"
+  },
+  "manual_approval_preserved": true,
+  "owner_review_remediation_proposals": 71,
+  "applied_live_search_controls": 0,
+  "deterministic_clean_build": {
+    "status": "PASS",
+    "consecutive_dist_file_differences": 0
+  },
+  "high_risk_secret_pattern_scan": "PASS",
+  "cache_temp_scan": "PASS",
+  "live_postdeploy_validation": "NOT_RUN_NEW_ARTIFACT_NOT_DEPLOYED",
+  "pre_receipt_tree_sha256": "3ef2ee6d4e87d9982baaf0fe55d9f97882481c8ca13bcf93735234fa09043446"
+}

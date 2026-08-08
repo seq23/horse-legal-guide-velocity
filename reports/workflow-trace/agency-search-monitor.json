@@ -1,0 +1,27 @@
+{
+  "workflow": "agency-search-monitor.yml",
+  "path": ".github/workflows/agency-search-monitor.yml",
+  "workflow_key": "agency_search_monitor",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/agency-search-monitor.yml",
+  "purpose": "scheduled and owner-triggered GSC, Bing, live-route, query-intelligence, and remediation monitoring",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run search:cycle",
+    "npm run build",
+    "npm run validate:agency-monitoring",
+    "npm run validate:query-intelligence",
+    "npm run validate:remediation-workflow"
+  ],
+  "artifacts_checked": [
+    "scripts/agency/refresh_search_health.js",
+    "data/agency/dashboard.json",
+    "data/query_intelligence/provider_opportunities.json"
+  ],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-08-07T13:58:56.000Z",
+  "finished_at": "2026-08-07T13:58:56.000Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}

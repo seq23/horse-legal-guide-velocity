@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "runtime_mode": "approval_gated_assisted",
+  "capabilities": {
+    "github_admin": {
+      "state": "INTEGRATED_UNPROVEN",
+      "auth": "GitHub OAuth identity plus explicit login allowlist",
+      "required_secrets": [
+        "GITHUB_OAUTH_CLIENT_ID",
+        "GITHUB_OAUTH_CLIENT_SECRET",
+        "ADMIN_SESSION_SECRET",
+        "GITHUB_ADMIN_TOKEN",
+        "GITHUB_ADMIN_REPOSITORY",
+        "GITHUB_ADMIN_LOGINS"
+      ],
+      "optional_secrets": [
+        "GITHUB_ADMIN_BRANCH",
+        "GITHUB_ADMIN_REQUIRE_REPO_PERMISSION"
+      ],
+      "fallback": "existing command generation and direct GitHub workflow links remain available",
+      "automatic_approval": false,
+      "automatic_publication": false
+    },
+    "gsc": {
+      "state": "INTEGRATED_UNPROVEN",
+      "required_secrets": [
+        "GSC_SITE_URL",
+        "GSC_SERVICE_ACCOUNT_JSON"
+      ],
+      "alternatives": [
+        "GSC_ACCESS_TOKEN",
+        "GSC_SERVICE_ACCOUNT_EMAIL + GSC_PRIVATE_KEY"
+      ],
+      "fallback": "display disconnected snapshot without blocking build"
+    },
+    "bing": {
+      "state": "INTEGRATED_UNPROVEN",
+      "required_secrets": [
+        "BING_SITE_URL",
+        "BING_WEBMASTER_API_KEY"
+      ],
+      "fallback": "display disconnected snapshot without blocking build"
+    },
+    "agency": {
+      "state": "STRUCTURAL",
+      "route": "/agency/",
+      "protection": "GitHub OAuth session enforced by Cloudflare Pages Functions",
+      "fallback": "route redirects to GitHub login when Functions and secrets are configured"
+    },
+    "query_intelligence": {
+      "state": "STRUCTURAL",
+      "automatic_measurement": true,
+      "automatic_candidate_admission": false,
+      "automatic_live_page_mutation": false,
+      "fallback": "local query corpus and uniqueness data only"
+    },
+    "remediation": {
+      "state": "STRUCTURAL",
+      "owner_approval_required": true,
+      "supported_actions": [
+        "noindex_keep_llm",
+        "canonical_to_primary",
+        "redirect_to_primary",
+        "differentiate_patch"
+      ],
+      "automatic_live_page_mutation": false
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# Copy to .dev.vars for local Pages Functions testing. Never commit real values.
+GITHUB_OAUTH_CLIENT_ID=""
+GITHUB_OAUTH_CLIENT_SECRET=""
+ADMIN_SESSION_SECRET=""
+GITHUB_ADMIN_TOKEN=""
+GITHUB_ADMIN_REPOSITORY="seq23/horse-legal-guide-velocity"
+GITHUB_ADMIN_BRANCH="main"
+GITHUB_ADMIN_LOGINS=""
+GITHUB_ADMIN_REQUIRE_REPO_PERMISSION="false"
+# External search/query intelligence (real values belong in provider/GitHub secrets)
+GEMINI_API_KEY=
+GEMINI_SEARCH_MODEL=gemini-2.5-flash-lite
+QUERY_MEASUREMENT_PANEL_SIZE=30
+LIVE_QUERY_LIMIT=30
+GSC_SITE_URL=sc-domain:horselegalguide.com
+GSC_SERVICE_ACCOUNT_JSON=
+GSC_SERVICE_ACCOUNT_EMAIL=
+GSC_PRIVATE_KEY=
+GSC_ACCESS_TOKEN=
+BING_SITE_URL=https://horselegalguide.com/
+BING_WEBMASTER_API_KEY=

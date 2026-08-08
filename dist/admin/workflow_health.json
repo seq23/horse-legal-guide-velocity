@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T13:58:49.973Z",
+  "generated_at": "2026-08-07T13:58:56.000Z",
   "status": "passed",
   "live_github_actions_status": "not_executed_in_chatgpt_container",
   "truth_boundary": "This trace proves YAML/script/artifact structure and local-equivalent availability only. Live GitHub Actions must run after ZIP apply, commit, and push.",
@@ -9,7 +9,7 @@
       "path": ".github/workflows/admin-bulk-content-actions.yml",
       "workflow_key": "admin_bulk_content_actions",
       "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/admin-bulk-content-actions.yml",
-      "purpose": "owner-initiated bulk approval/rejection/publish-date actions",
+      "purpose": "owner-initiated bulk approval/rejection/publish-date actions; existing manual method preserved",
       "status": "passed",
       "proof_type": "local-equivalent-structure-and-artifact-trace",
       "commands_checked": [
@@ -22,11 +22,65 @@
       "artifacts_checked": [
         "scripts/admin/approve_many.js",
         "scripts/admin/reject_many.js",
-        "scripts/admin/set_publish_date_many.js"
+        "scripts/admin/set_publish_date_many.js",
+        "scripts/admin/write_action_receipt.js"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.949Z",
-      "finished_at": "2026-08-07T13:58:49.949Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
+      "warnings": [],
+      "hard_fails": [],
+      "live_github_actions_status": "not_executed_in_chatgpt_container"
+    },
+    {
+      "workflow": "admin-maintenance.yml",
+      "path": ".github/workflows/admin-maintenance.yml",
+      "workflow_key": "admin_maintenance",
+      "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/admin-maintenance.yml",
+      "purpose": "authenticated self-heal, prevalidation, and repository validation without approval-state mutation",
+      "status": "passed",
+      "proof_type": "local-equivalent-structure-and-artifact-trace",
+      "commands_checked": [
+        "npm run content:self-heal",
+        "npm run content:prevalidate",
+        "npm run build",
+        "npm run validate:all"
+      ],
+      "artifacts_checked": [
+        "scripts/quality/run_self_heal.js",
+        "scripts/quality/run_prevalidation.js",
+        "scripts/admin/write_action_receipt.js"
+      ],
+      "missing_artifacts_warning_only": [],
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
+      "warnings": [],
+      "hard_fails": [],
+      "live_github_actions_status": "not_executed_in_chatgpt_container"
+    },
+    {
+      "workflow": "agency-search-monitor.yml",
+      "path": ".github/workflows/agency-search-monitor.yml",
+      "workflow_key": "agency_search_monitor",
+      "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/agency-search-monitor.yml",
+      "purpose": "scheduled and owner-triggered GSC, Bing, live-route, query-intelligence, and remediation monitoring",
+      "status": "passed",
+      "proof_type": "local-equivalent-structure-and-artifact-trace",
+      "commands_checked": [
+        "npm run search:cycle",
+        "npm run build",
+        "npm run validate:agency-monitoring",
+        "npm run validate:query-intelligence",
+        "npm run validate:remediation-workflow"
+      ],
+      "artifacts_checked": [
+        "scripts/agency/refresh_search_health.js",
+        "data/agency/dashboard.json",
+        "data/query_intelligence/provider_opportunities.json"
+      ],
+      "missing_artifacts_warning_only": [],
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -47,8 +101,8 @@
         "data/social/approved_content_email_state.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.949Z",
-      "finished_at": "2026-08-07T13:58:49.949Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -70,8 +124,8 @@
         ".build/distribution-manifest.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.950Z",
-      "finished_at": "2026-08-07T13:58:49.950Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -96,8 +150,8 @@
         ".build/distribution-priority-urls.txt"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.950Z",
-      "finished_at": "2026-08-07T13:58:49.950Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -126,8 +180,8 @@
         "data/admin/content_quality_report.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.950Z",
-      "finished_at": "2026-08-07T13:58:49.950Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -137,7 +191,7 @@
       "path": ".github/workflows/editorial-continuity.yml",
       "workflow_key": "editorial_continuity",
       "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/editorial-continuity.yml",
-      "purpose": "workflow lane",
+      "purpose": "scheduled manual-review editorial runway replenishment; new work remains pending",
       "status": "passed",
       "proof_type": "local-equivalent-structure-and-artifact-trace",
       "commands_checked": [
@@ -151,10 +205,37 @@
         "npm run validate:authority-modernization",
         "npm run validate:all"
       ],
-      "artifacts_checked": [],
+      "artifacts_checked": [
+        "scripts/continuity/replenish_editorial_runway.mjs",
+        "data/continuity/editorial_continuity_report.json"
+      ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.950Z",
-      "finished_at": "2026-08-07T13:58:49.950Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
+      "warnings": [],
+      "hard_fails": [],
+      "live_github_actions_status": "not_executed_in_chatgpt_container"
+    },
+    {
+      "workflow": "page-remediation.yml",
+      "path": ".github/workflows/page-remediation.yml",
+      "workflow_key": "page_remediation",
+      "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/page-remediation.yml",
+      "purpose": "owner-approved existing-page remediation with separate approve and apply gates",
+      "status": "passed",
+      "proof_type": "local-equivalent-structure-and-artifact-trace",
+      "commands_checked": [
+        "npm run build",
+        "npm run validate:all"
+      ],
+      "artifacts_checked": [
+        "scripts/remediation/manage_remediations.js",
+        "data/remediation/remediation_queue.json",
+        "data/remediation/applied_search_controls.json"
+      ],
+      "missing_artifacts_warning_only": [],
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -182,8 +263,8 @@
         "reports/recommendation_cluster_gap_backlog.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.950Z",
-      "finished_at": "2026-08-07T13:58:49.950Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -209,8 +290,57 @@
         "dist/editorial-publishing-state.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.950Z",
-      "finished_at": "2026-08-07T13:58:49.950Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
+      "warnings": [],
+      "hard_fails": [],
+      "live_github_actions_status": "not_executed_in_chatgpt_container"
+    },
+    {
+      "workflow": "query-intelligence.yml",
+      "path": ".github/workflows/query-intelligence.yml",
+      "workflow_key": "query_intelligence",
+      "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/query-intelligence.yml",
+      "purpose": "provider-fed recommendations and owner-selected pending draft admission only",
+      "status": "passed",
+      "proof_type": "local-equivalent-structure-and-artifact-trace",
+      "commands_checked": [
+        "npm run search:cycle",
+        "npm run build",
+        "npm run validate:query-intelligence",
+        "npm run generate:drafts",
+        "npm run content:self-heal",
+        "npm run content:prevalidate",
+        "npm run validate:all"
+      ],
+      "artifacts_checked": [
+        "scripts/query/build_provider_query_intelligence.js",
+        "scripts/query/admit_provider_candidates.js",
+        "data/query_intelligence/provider_opportunities.json"
+      ],
+      "missing_artifacts_warning_only": [],
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
+      "warnings": [],
+      "hard_fails": [],
+      "live_github_actions_status": "not_executed_in_chatgpt_container"
+    },
+    {
+      "workflow": "query-page-repair.yml",
+      "path": ".github/workflows/query-page-repair.yml",
+      "workflow_key": "query_page_repair",
+      "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/query-page-repair.yml",
+      "purpose": "workflow lane",
+      "status": "passed",
+      "proof_type": "local-equivalent-structure-and-artifact-trace",
+      "commands_checked": [
+        "npm run build",
+        "npm run validate:all"
+      ],
+      "artifacts_checked": [],
+      "missing_artifacts_warning_only": [],
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -230,8 +360,8 @@
         "dist/sitemap.xml"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.951Z",
-      "finished_at": "2026-08-07T13:58:49.951Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"
@@ -254,8 +384,8 @@
         "_ops/reports/generation_contract_report.json"
       ],
       "missing_artifacts_warning_only": [],
-      "started_at": "2026-08-07T13:58:49.951Z",
-      "finished_at": "2026-08-07T13:58:49.951Z",
+      "started_at": "2026-08-07T13:58:56.000Z",
+      "finished_at": "2026-08-07T13:58:56.000Z",
       "warnings": [],
       "hard_fails": [],
       "live_github_actions_status": "not_executed_in_chatgpt_container"

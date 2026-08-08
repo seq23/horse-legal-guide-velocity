@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-07T02:09:36.604043+00:00",
+  "repo": "horse-legal-guide-velocity",
+  "source_zip": "horse-legal-guide-velocity-main.zip",
+  "source_zip_sha256": "2ec23cf7dfc32f70dcc8e9b77c985ed18372ab93e108a303389f7df772f10e40",
+  "phase": "Phase 1 \u2014 Truth and uniqueness foundation",
+  "implemented": [
+    "fresh rendered-page uniqueness audit on every release build",
+    "freshness-fingerprinted SEO dashboard",
+    "owner-review consolidation ledger for existing live pages",
+    "automatic bounded draft differentiation before approval eligibility",
+    "validator reconciliation for warning-level live-page findings",
+    "generated uniqueness reports linked from the existing admin SEO surface"
+  ],
+  "not_implemented": [
+    "admin redesign",
+    "GitHub authentication controls",
+    "agency dashboard",
+    "GSC or Bing connectors",
+    "provider-fed query intelligence",
+    "live-page redirects, canonicals, noindex changes, removals, or rewrites",
+    "automatic approval",
+    "automatic publication"
+  ],
+  "metrics": {
+    "rendered_public_pages": 560,
+    "indexable_pages_measured": 556,
+    "duplicate_title_groups": 79,
+    "duplicate_description_groups": 4,
+    "high_similarity_pairs": 251,
+    "intent_overlap_pairs": 198,
+    "owner_review_clusters": 71,
+    "drafts_total": 300,
+    "drafts_passed": 300,
+    "drafts_automatically_differentiated": 234,
+    "draft_uniqueness_failures": 0,
+    "automatic_approval": false,
+    "automatic_publication": false,
+    "automatic_live_changes_allowed": false,
+    "backlog_status_counts": {
+      "pending": 300
+    }
+  },
+  "validation": {
+    "command": "npm run validate:all",
+    "result": "PASS",
+    "local_updater_validation_required": true
+  },
+  "artifact_status": "STRUCTURALLY CHECKED \u2014 LOCAL VALIDATION REQUIRED"
+}

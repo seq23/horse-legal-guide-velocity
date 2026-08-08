@@ -47,12 +47,15 @@ async function collectSource(source, throttle) {
   const timeoutMs = Number(process.env.SIGNAL_SOURCE_TIMEOUT_MS || 7000);
   try {
     let timer;
-    const rows = await throttle.run(() => Promise.race([
-      adapter.collect(source).finally(() => clearTimeout(timer)),
-      new Promise((resolve) => { timer = setTimeout(() => resolve([]), timeoutMs); })
+    const collected = await throttle.run(() => Promise.race([
+      Promise.resolve(adapter.collect(source)).finally(() => clearTimeout(timer)),
+      new Promise((resolve) => { timer = setTimeout(() => resolve({ rows: [], status: 'timed_out', error: `source timeout after ${timeoutMs}ms` }), timeoutMs); })
     ]));
     clearTimeout(timer);
-    return { source_key: source.source_key, platform: source.platform, status: 'ok', count: rows.length, rows };
+    const envelope = Array.isArray(collected) ? { rows: collected, status: 'success_with_data' } : (collected || { rows: [], status: 'success_empty' });
+    const rows = Array.isArray(envelope.rows) ? envelope.rows : [];
+    const status = envelope.status || (rows.length ? 'success_with_data' : 'success_empty');
+    return { source_key: source.source_key, platform: source.platform, status, error: envelope.error, count: rows.length, rows };
   } catch (err) {
     console.warn(`[collect_signals] ${source.source_key} failed: ${err.message}`);
     return { source_key: source.source_key, platform: source.platform, status: 'failed', error: err.message, count: 0, rows: [] };

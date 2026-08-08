@@ -25,7 +25,12 @@ function requiredArtifactsFor(workflowFile) {
   if (workflowFile.includes('sitemap')) return ['dist/sitemap.xml'];
   if (workflowFile.includes('validate')) return ['_ops/reports/generation_contract_report.json'];
   if (workflowFile.includes('build')) return ['dist/index.html', '.build/distribution-manifest.json'];
-  if (workflowFile.includes('admin-bulk')) return ['scripts/admin/approve_many.js', 'scripts/admin/reject_many.js', 'scripts/admin/set_publish_date_many.js'];
+  if (workflowFile.includes('editorial-continuity')) return ['scripts/continuity/replenish_editorial_runway.mjs', 'data/continuity/editorial_continuity_report.json'];
+  if (workflowFile.includes('admin-bulk')) return ['scripts/admin/approve_many.js', 'scripts/admin/reject_many.js', 'scripts/admin/set_publish_date_many.js', 'scripts/admin/write_action_receipt.js'];
+  if (workflowFile.includes('admin-maintenance')) return ['scripts/quality/run_self_heal.js', 'scripts/quality/run_prevalidation.js', 'scripts/admin/write_action_receipt.js'];
+  if (workflowFile.includes('agency-search-monitor')) return ['scripts/agency/refresh_search_health.js', 'data/agency/dashboard.json', 'data/query_intelligence/provider_opportunities.json'];
+  if (workflowFile.includes('query-intelligence')) return ['scripts/query/build_provider_query_intelligence.js', 'scripts/query/admit_provider_candidates.js', 'data/query_intelligence/provider_opportunities.json'];
+  if (workflowFile.includes('page-remediation')) return ['scripts/remediation/manage_remediations.js', 'data/remediation/remediation_queue.json', 'data/remediation/applied_search_controls.json'];
   if (workflowFile.includes('approved-content-email')) return ['scripts/social/send_approved_content_email.py', 'data/social/approved_content_email_state.json'];
   return [];
 }
@@ -37,7 +42,12 @@ function classifyWorkflow(name) {
   if (name.includes('sitemap')) return 'manual indexing utility; retained intentionally as a narrow operator tool';
   if (name.includes('validate')) return 'repository validation lane';
   if (name.includes('build')) return 'manual build artifact lane; retained as non-mutating utility';
-  if (name.includes('admin-bulk')) return 'owner-initiated bulk approval/rejection/publish-date actions';
+  if (name.includes('editorial-continuity')) return 'scheduled manual-review editorial runway replenishment; new work remains pending';
+  if (name.includes('admin-bulk')) return 'owner-initiated bulk approval/rejection/publish-date actions; existing manual method preserved';
+  if (name.includes('admin-maintenance')) return 'authenticated self-heal, prevalidation, and repository validation without approval-state mutation';
+  if (name.includes('agency-search-monitor')) return 'scheduled and owner-triggered GSC, Bing, live-route, query-intelligence, and remediation monitoring';
+  if (name.includes('query-intelligence')) return 'provider-fed recommendations and owner-selected pending draft admission only';
+  if (name.includes('page-remediation')) return 'owner-approved existing-page remediation with separate approve and apply gates';
   if (name.includes('approved-content-email')) return 'approved-content social copy email notification to Claire';
   return 'workflow lane';
 }

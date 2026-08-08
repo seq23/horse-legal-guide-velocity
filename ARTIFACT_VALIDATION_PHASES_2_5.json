@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-07T02:42:59.714676+00:00",
+  "repo": "horse-legal-guide-velocity",
+  "artifact_scope": "Phases 2-5: additive GitHub-auth admin controls, private GSC/Bing agency monitoring, provider query intelligence, and owner-approved remediation tooling",
+  "approval_boundary": {
+    "mode": "assisted",
+    "auto_approve": false,
+    "auto_publish_approved_due": false,
+    "legal_review_required": true,
+    "editorial_backlog": 300,
+    "pending_editorial_items": 300,
+    "approved_editorial_items": 0
+  },
+  "draft_self_healing": {
+    "total": 300,
+    "passed": 300,
+    "repaired": 234,
+    "failed": 0,
+    "automatic_repair": true,
+    "automatic_approval": false,
+    "automatic_publication": false,
+    "approval_eligible": 300
+  },
+  "page_uniqueness": {
+    "indexable_pages_measured": 556,
+    "duplicate_title_groups": 79,
+    "duplicate_description_groups": 4,
+    "high_similarity_pairs": 251,
+    "intent_overlap_pairs": 198
+  },
+  "provider_intelligence": {
+    "gsc_status": "not_connected",
+    "bing_status": "not_connected",
+    "opportunities": 0,
+    "live_provider_success_claimed": false
+  },
+  "remediation": {
+    "proposals": 71,
+    "pending_owner_approval": 71,
+    "approved": 0,
+    "applied": 0,
+    "active_search_controls": 0,
+    "automatic_live_mutation": false
+  },
+  "validation": {
+    "validate_all": "PASS",
+    "javascript_syntax": "PASS",
+    "json_parse": "PASS",
+    "workflow_yaml_parse": "PASS",
+    "credential_pattern_scan": "PASS",
+    "assisted_operations_e2e_assertions": 20,
+    "workflow_simulation": {
+      "status": "passed",
+      "workflow_count": 14,
+      "passed": 14,
+      "failed": 0,
+      "live_followups_count": 3
+    }
+  },
+  "unproven_external_layers": [
+    "deployed Cloudflare Pages Functions",
+    "live GitHub OAuth and workflow dispatch",
+    "live GSC provider refresh",
+    "live Bing provider refresh",
+    "proposal-specific owner remediation approvals"
+  ]
+}

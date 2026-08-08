@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-08T01:31:47.458Z",
+  "actions": [
+    {
+      "id": "gemini_grounded_query",
+      "file": "scripts/search/live_query_observer.js",
+      "exists": true,
+      "declared": "REAL_BUT_PROVIDER_GATED",
+      "placeholder_detected": false,
+      "live_proof_requirement": "Runtime receipt required; source presence alone is not proof."
+    },
+    {
+      "id": "gsc_search_monitor",
+      "file": "scripts/agency/refresh_search_health.js",
+      "exists": true,
+      "declared": "REAL_BUT_PROVIDER_GATED",
+      "placeholder_detected": false,
+      "live_proof_requirement": "Runtime receipt required; source presence alone is not proof."
+    },
+    {
+      "id": "gsc_sitemap_ops",
+      "file": "scripts/distribution/gsc_provider_ops.mjs",
+      "exists": true,
+      "declared": "REAL_BUT_PROVIDER_GATED",
+      "placeholder_detected": false,
+      "live_proof_requirement": "Runtime receipt required; source presence alone is not proof."
+    },
+    {
+      "id": "bing_monitor",
+      "file": "scripts/agency/refresh_search_health.js",
+      "exists": true,
+      "declared": "REAL_BUT_PROVIDER_GATED",
+      "placeholder_detected": false,
+      "live_proof_requirement": "Runtime receipt required; source presence alone is not proof."
+    },
+    {
+      "id": "indexnow_submission",
+      "file": "distribution_scripts/indexnow_submit.sh",
+      "exists": true,
+      "declared": "REAL_LIVE_OR_DRY_RUN",
+      "placeholder_detected": false,
+      "live_proof_requirement": "Runtime receipt required; source presence alone is not proof."
+    },
+    {
+      "id": "public_signal_collection",
+      "file": "scripts/community/collect_signals.js",
+      "exists": true,
+      "declared": "REAL_WITH_PER_SOURCE_HEALTH",
+      "placeholder_detected": false,
+      "live_proof_requirement": "Runtime receipt required; source presence alone is not proof."
+    }
+  ],
+  "truth_boundary": "This ledger classifies implementation shape. It does not itself prove live provider success."
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "policy": "Every mutating action requires an authenticated allowlisted GitHub identity, a server-side workflow dispatch, explicit confirmation, and a durable receipt. Existing manual command and GitHub workflow methods remain authoritative fallbacks.",
+  "actions": {
+    "content_dry_run": {
+      "workflow": "admin-bulk-content-actions.yml",
+      "mutating": false,
+      "requires_ids": false
+    },
+    "approve_selected": {
+      "workflow": "admin-bulk-content-actions.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "client_approval_action": true
+    },
+    "reject_selected": {
+      "workflow": "admin-bulk-content-actions.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "client_approval_action": true
+    },
+    "needs_revision_selected": {
+      "workflow": "admin-bulk-content-actions.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "client_approval_action": true
+    },
+    "set_publish_date_selected": {
+      "workflow": "admin-bulk-content-actions.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "client_approval_action": true
+    },
+    "clear_publish_date_selected": {
+      "workflow": "admin-bulk-content-actions.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "client_approval_action": true
+    },
+    "self_heal_prevalidate": {
+      "workflow": "admin-maintenance.yml",
+      "mutating": true,
+      "approval_state_change": false
+    },
+    "validate_repo": {
+      "workflow": "admin-maintenance.yml",
+      "mutating": false,
+      "approval_state_change": false
+    },
+    "refresh_search": {
+      "workflow": "agency-search-monitor.yml",
+      "mutating": true,
+      "approval_state_change": false
+    },
+    "rebuild_query_intelligence": {
+      "workflow": "query-intelligence.yml",
+      "mutating": true,
+      "approval_state_change": false
+    },
+    "admit_query_candidates": {
+      "workflow": "query-intelligence.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "creates_pending_only": true
+    },
+    "refresh_remediation_queue": {
+      "workflow": "page-remediation.yml",
+      "mutating": true,
+      "approval_state_change": false
+    },
+    "approve_remediation": {
+      "workflow": "page-remediation.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "client_approval_action": true
+    },
+    "reject_remediation": {
+      "workflow": "page-remediation.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "client_approval_action": true
+    },
+    "apply_remediation": {
+      "workflow": "page-remediation.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "requires_prior_approval": true
+    },
+    "approve_query_repair": {
+      "workflow": "query-page-repair.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "client_approval_action": true
+    },
+    "reject_query_repair": {
+      "workflow": "query-page-repair.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "client_approval_action": true
+    },
+    "apply_query_repair": {
+      "workflow": "query-page-repair.yml",
+      "mutating": true,
+      "requires_ids": true,
+      "requires_prior_approval": true
+    }
+  }
+}

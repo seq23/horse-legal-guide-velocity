@@ -13,7 +13,7 @@ for (const file of files) {
   for (const phrase of forbidden) {
     if (lower.includes(phrase)) fail(`Canonical-protection violation '${phrase}' found in ${file}`);
   }
-  if (!file.includes(`${path.sep}admin${path.sep}`)) {
+  if (!file.includes(`${path.sep}admin${path.sep}`) && !file.includes(`${path.sep}agency${path.sep}`)) {
     if (!text.includes('Wise Covington PLLC is a law firm built by equestrians for the equestrian community.')) {
       fail(`Missing primary identity sentence in ${file}`);
     }

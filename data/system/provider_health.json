@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-08T01:31:47.332Z",
+  "providers": {
+    "gemini_grounded_search": {
+      "state": "NOT_CONFIGURED",
+      "configured": false,
+      "capabilities": {
+        "live_web": true,
+        "grounded_citations": true,
+        "literal_organic_rank": false
+      }
+    },
+    "gsc": {
+      "state": "NOT_CONFIGURED",
+      "capabilities": {
+        "search_analytics": true,
+        "sitemaps": true,
+        "url_inspection": true,
+        "force_indexing": false
+      }
+    },
+    "bing": {
+      "state": "NOT_CONFIGURED",
+      "capabilities": {
+        "traffic": true,
+        "crawl_stats": true,
+        "query_stats": true
+      }
+    },
+    "indexnow": {
+      "state": "DRY_RUN_ONLY",
+      "capabilities": {
+        "submission": true
+      }
+    }
+  },
+  "truth_boundary": "Presence of a script is not provider proof. Only a successful external receipt can mark live provider behavior as connected/successful."
+}

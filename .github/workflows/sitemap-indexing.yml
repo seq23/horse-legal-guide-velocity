@@ -10,7 +10,11 @@ jobs:
       SITE_DOMAIN: https://horselegalguide.com
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
-      GSC_SITE_URL: sc-domain:horselegalguide.com
+      GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+      GSC_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GSC_SERVICE_ACCOUNT_EMAIL }}
+      GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
+      GSC_ACCESS_TOKEN: ${{ secrets.GSC_ACCESS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,6 +27,6 @@ jobs:
       - name: Submit IndexNow
         run: ./distribution_scripts/indexnow_submit.sh || true
       - name: Submit sitemaps to GSC
-        run: python3 distribution_scripts/gsc_submit_sitemaps.py || true
+        run: node scripts/distribution/gsc_provider_ops.mjs submit-sitemaps
       - name: Inspect priority URLs
-        run: python3 distribution_scripts/gsc_inspect_urls.py .build/distribution-priority-urls.txt || true
+        run: node scripts/distribution/gsc_provider_ops.mjs inspect
