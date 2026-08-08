@@ -20,7 +20,7 @@ uniqueness_strategy: evidence-timeline
 
 The practical question behind **Can I Ignore a Demand Letter** is not answered safely by repeating a general horse-contract overview. This version focuses on how the chronology, records, and sequence of events change the practical risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-07-10/where-what-should-i-do-if-i-receive-a-demand-letter-usually-goes-sideways/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Evidence and timeline audit
 
@@ -74,18 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Am I Overreacting or Is This Risky** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-08-21/where-can-a-buyer-sue-after-an-as-is-horse-sale-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-08-07/the-quiet-risk-inside-am-i-overreacting-or-is-this-risky/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**overreacting · risky · due · diligence · verification · emotional · screwed**
+**overreacting · risky · notice · communication · controls · emotional · screwed**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -42,15 +42,15 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | --- | --- | --- |
 | overreacting | Identify the notice facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | risky | Identify the email facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| due | Identify the text message facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| diligence | Identify the deadline facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| verification | Identify the delivery method facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| notice | Identify the text message facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| communication | Identify the deadline facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| controls | Identify the delivery method facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **Am I Overreacting or Is This Risky** before anyone acts?
 2. Collect the notice, email, and text message evidence instead of relying on memory.
-3. Separate the roles connected to overreacting, risky, due so authority and responsibility are not blurred.
+3. Separate the roles connected to overreacting, risky, notice so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
@@ -74,18 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

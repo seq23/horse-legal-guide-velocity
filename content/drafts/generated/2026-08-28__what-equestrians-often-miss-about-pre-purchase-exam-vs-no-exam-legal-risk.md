@@ -20,7 +20,7 @@ uniqueness_strategy: insurance-liability
 
 The practical question behind **Pre-Purchase Exam vs No Exam: Legal Risk** is not answered safely by repeating a general horse-contract overview. This version focuses on how injury, coverage, waiver language, and responsibility allocation affect risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-06-17/what-equestrians-often-miss-about-llc-vs-insurance-for-liability-protection/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Insurance, injury, and liability allocation
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**pre · purchase · exam · legal · risk · equestrians · often · miss**
+**pre · purchase · exam · legal · risk · insurance · injury · liability**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 

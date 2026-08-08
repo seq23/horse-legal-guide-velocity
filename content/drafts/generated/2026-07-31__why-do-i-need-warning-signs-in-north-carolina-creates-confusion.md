@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Do I Need Warning Signs in North Carolina** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-05-20/why-can-you-end-a-horse-lease-early-creates-confusion/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-07-27/how-to-think-about-do-i-need-a-horse-sale-contract-in-north-carolina-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 

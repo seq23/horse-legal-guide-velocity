@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Intellectual Property & Brand: The Clauses, Risks, and Assumptions People Usually Overlook** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-08-18/horse-sale-purchase-the-clauses-risks-and-assumptions-people-usually-overlook/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-06-23/real-property-leases-the-clauses-risks-and-assumptions-people-usually-overlook/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 
@@ -74,54 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

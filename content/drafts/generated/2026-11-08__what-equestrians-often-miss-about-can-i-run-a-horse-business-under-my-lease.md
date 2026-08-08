@@ -20,7 +20,7 @@ uniqueness_strategy: authority-roles
 
 The practical question behind **Can I Run a Horse Business Under My Lease** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-10-27/what-equestrians-often-miss-about-can-i-ignore-a-demand-letter/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-07-24/a-plain-english-note-on-can-i-run-a-horse-business-under-my-lease/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Authority, roles, and decision rights
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**run · horse · business · lease · insurance · injury · liability · allocation**
+**run · horse · business · lease · authority · roles · decision · rights**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | horse | Identify the agent facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | business | Identify the owner facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | lease | Identify the trainer facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| insurance | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| authority | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
@@ -74,30 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

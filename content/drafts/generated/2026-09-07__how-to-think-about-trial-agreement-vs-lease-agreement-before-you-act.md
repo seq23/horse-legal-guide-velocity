@@ -20,7 +20,7 @@ uniqueness_strategy: money-risk-transfer
 
 The practical question behind **Trial Agreement vs Lease Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on when money, possession, care duties, and loss exposure move from one party to another. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-06-03/how-to-think-about-what-happens-if-a-boarder-damages-property-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-05-23/where-trial-agreement-vs-lease-agreement-usually-goes-sideways/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Money, possession, and risk transfer
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**trial · agreement · lease · think · act · horse**
+**trial · agreement · lease · money · possession · risk · transfer · horse**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -43,8 +43,8 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | trial | Identify the deposit facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | agreement | Identify the payment facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | lease | Identify the possession facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| think | Identify the delivery facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| act | Identify the custody facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| money | Identify the delivery facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| possession | Identify the custody facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

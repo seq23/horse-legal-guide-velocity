@@ -20,7 +20,7 @@ uniqueness_strategy: authority-roles
 
 The practical question behind **Do I Need a Liability Waiver in South Carolina** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-08-13/the-quiet-risk-inside-when-does-ownership-legally-transfer-in-a-horse-sale/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-07-29/what-equestrians-often-miss-about-do-i-need-a-liability-waiver-in-south-carolina/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Authority, roles, and decision rights
 
@@ -74,12 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

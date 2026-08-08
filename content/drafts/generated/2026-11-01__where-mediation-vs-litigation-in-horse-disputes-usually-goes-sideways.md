@@ -20,7 +20,7 @@ uniqueness_strategy: operations-handoff
 
 The practical question behind **Mediation vs Litigation in Horse Disputes** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-08-09/where-do-i-need-a-contract-to-sell-a-horse-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-07-17/what-equestrians-often-miss-about-mediation-vs-litigation-in-horse-disputes/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Operational handoff and responsibility map
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**mediation · litigation · horse · disputes · notice · communication · controls · demand**
+**mediation · litigation · horse · disputes · operational · handoff · responsibility · map**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | litigation | Identify the maintenance facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | horse | Identify the transport facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | disputes | Identify the boarding facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| notice | Identify the training facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| operational | Identify the training facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
@@ -74,12 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

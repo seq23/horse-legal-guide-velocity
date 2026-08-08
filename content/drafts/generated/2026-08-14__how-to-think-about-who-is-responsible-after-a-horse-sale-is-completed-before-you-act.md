@@ -1,5 +1,5 @@
 ---
-title: Evidence and timeline audit for Who Is Responsible After a Horse Sale Is Completed
+title: Authority, roles, and decision rights for Who Is Responsible After a Horse Sale Is Completed
 entry_id: draft-insight-2026-08-14-who-is-responsible-after-a-horse-sale-is-completed
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2026-08-14/how-to-think-about-who-is-responsible-after-a-horse-sal
 review_status: pending
 github_path: content/drafts/generated/2026-08-14__how-to-think-about-who-is-responsible-after-a-horse-sale-is-completed-before-you-act.md
 uniqueness_status: passed
-uniqueness_strategy: evidence-timeline
+uniqueness_strategy: authority-roles
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Evidence and timeline audit for Who Is Responsible After a Horse Sale Is Completed
+# Authority, roles, and decision rights for Who Is Responsible After a Horse Sale Is Completed
 
 ## Citation-ready answer
 
-The practical question behind **Who Is Responsible After a Horse Sale Is Completed** is not answered safely by repeating a general horse-contract overview. This version focuses on how the chronology, records, and sequence of events change the practical risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **Who Is Responsible After a Horse Sale Is Completed** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/, while remaining educational and approval-gated.
 
-## Distinctive focus: Evidence and timeline audit
+## Distinctive focus: Authority, roles, and decision rights
 
-For this version, the useful lens is **evidence and timeline audit**. That means the reader should identify the chronology, sequence, timestamp, handoff, and notice facts that actually belong to **Who Is Responsible After a Horse Sale Is Completed**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **authority, roles, and decision rights**. That means the reader should identify the authority, agent, owner, trainer, and representative facts that actually belong to **Who Is Responsible After a Horse Sale Is Completed**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**responsible · horse · sale · completed · money · possession · risk · transfer**
+**responsible · horse · sale · completed · evidence · timeline · audit · purchase**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| responsible | Identify the chronology facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| horse | Identify the sequence facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| sale | Identify the timestamp facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| completed | Identify the handoff facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| money | Identify the notice facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| responsible | Identify the authority facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the agent facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| sale | Identify the owner facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| completed | Identify the trainer facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| evidence | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **Who Is Responsible After a Horse Sale Is Completed** before anyone acts?
-2. Collect the chronology, sequence, and timestamp evidence instead of relying on memory.
+2. Collect the authority, agent, and owner evidence instead of relying on memory.
 3. Separate the roles connected to responsible, horse, sale so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **Who Is Responsible After a Horse Sale Is Completed**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The evidence and timeline audit lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **Who Is Responsible After a Horse Sale Is Completed**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The authority, roles, and decision rights lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 
@@ -74,54 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

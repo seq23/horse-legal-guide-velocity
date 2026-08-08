@@ -20,7 +20,7 @@ uniqueness_strategy: evidence-timeline
 
 The practical question behind **What Should I Do If I Receive a Demand Letter** is not answered safely by repeating a general horse-contract overview. This version focuses on how the chronology, records, and sequence of events change the practical risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-09-26/where-what-type-of-insurance-do-trainers-need-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-07-10/where-what-should-i-do-if-i-receive-a-demand-letter-usually-goes-sideways/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Evidence and timeline audit
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**receive · demand · letter · operational · handoff · responsibility · map · letters**
+**receive · demand · letter · evidence · timeline · audit · letters · disputes**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -43,8 +43,8 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | receive | Identify the chronology facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | demand | Identify the sequence facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | letter | Identify the timestamp facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| operational | Identify the handoff facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| handoff | Identify the notice facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| evidence | Identify the handoff facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| timeline | Identify the notice facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
@@ -74,18 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

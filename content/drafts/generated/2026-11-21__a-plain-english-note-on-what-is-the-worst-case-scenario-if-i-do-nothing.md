@@ -20,7 +20,7 @@ uniqueness_strategy: evidence-timeline
 
 The practical question behind **What Is the Worst-Case Scenario If I Do Nothing** is not answered safely by repeating a general horse-contract overview. This version focuses on how the chronology, records, and sequence of events change the practical risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-05-31/a-plain-english-note-on-can-a-boarding-barn-sell-a-horse-for-unpaid-bills/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-08-06/why-what-is-the-worst-case-scenario-if-i-do-nothing-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Evidence and timeline audit
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**worst · case · scenario · nothing · plain · english · note · emotional**
+**worst · case · scenario · nothing · evidence · timeline · audit · emotional**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | case | Identify the sequence facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | scenario | Identify the timestamp facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | nothing | Identify the handoff facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| plain | Identify the notice facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| evidence | Identify the notice facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

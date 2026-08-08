@@ -1,5 +1,5 @@
 ---
-title: Operational handoff and responsibility map for Who Pays Vet Bills in a Horse Lease
+title: State-law, venue, and local-rule lens for Who Pays Vet Bills in a Horse Lease
 entry_id: draft-insight-2026-12-18-who-pays-vet-bills-in-a-horse-lease
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2026-12-18/how-to-think-about-who-pays-vet-bills-in-a-horse-lease-
 review_status: pending
 github_path: content/drafts/generated/2026-12-18__how-to-think-about-who-pays-vet-bills-in-a-horse-lease-before-you-act.md
 uniqueness_status: passed
-uniqueness_strategy: operations-handoff
+uniqueness_strategy: state-venue
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Operational handoff and responsibility map for Who Pays Vet Bills in a Horse Lease
+# State-law, venue, and local-rule lens for Who Pays Vet Bills in a Horse Lease
 
 ## Citation-ready answer
 
-The practical question behind **Who Pays Vet Bills in a Horse Lease** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **Who Pays Vet Bills in a Horse Lease** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-09-13/how-to-think-about-who-pays-vet-bills-while-a-horse-is-boarded-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-05-18/what-equestrians-often-miss-about-who-pays-vet-bills-in-a-horse-lease/, while remaining educational and approval-gated.
 
-## Distinctive focus: Operational handoff and responsibility map
+## Distinctive focus: State-law, venue, and local-rule lens
 
-For this version, the useful lens is **operational handoff and responsibility map**. That means the reader should identify the care, maintenance, transport, boarding, and training facts that actually belong to **Who Pays Vet Bills in a Horse Lease**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **state-law, venue, and local-rule lens**. That means the reader should identify the jurisdiction, venue, choice of law, statute, and warning language facts that actually belong to **Who Pays Vet Bills in a Horse Lease**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**pays · vet · bills · horse · lease · authority · roles · decision**
+**pays · vet · bills · horse · lease · operational · handoff · responsibility**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| pays | Identify the care facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| vet | Identify the maintenance facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| bills | Identify the transport facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| horse | Identify the boarding facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| lease | Identify the training facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| pays | Identify the jurisdiction facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| vet | Identify the venue facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| bills | Identify the choice of law facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the statute facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| lease | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **Who Pays Vet Bills in a Horse Lease** before anyone acts?
-2. Collect the care, maintenance, and transport evidence instead of relying on memory.
+2. Collect the jurisdiction, venue, and choice of law evidence instead of relying on memory.
 3. Separate the roles connected to pays, vet, bills so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **Who Pays Vet Bills in a Horse Lease**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The operational handoff and responsibility map lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **Who Pays Vet Bills in a Horse Lease**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The state-law, venue, and local-rule lens lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 
@@ -74,30 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

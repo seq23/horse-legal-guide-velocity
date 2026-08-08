@@ -20,7 +20,7 @@ uniqueness_strategy: state-venue
 
 The practical question behind **What Should Be Included in a Horse Boarding Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-08-30/why-what-should-be-included-in-a-horse-lease-agreement-creates-confusion/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-05-25/a-plain-english-note-on-what-should-be-included-in-a-horse-boarding-agreement/, while remaining educational and approval-gated.
 
 ## Distinctive focus: State-law, venue, and local-rule lens
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**included · horse · boarding · agreement · operational · handoff · responsibility · map**
+**included · horse · boarding · agreement · state · law · venue · local**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | horse | Identify the venue facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | boarding | Identify the choice of law facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | agreement | Identify the statute facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| operational | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| state | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
@@ -74,18 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

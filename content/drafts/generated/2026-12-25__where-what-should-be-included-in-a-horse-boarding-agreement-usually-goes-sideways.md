@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **What Should Be Included in a Horse Boarding Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-11-26/what-equestrians-often-miss-about-what-should-be-included-in-a-horse-bill-of-sale/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-05-25/a-plain-english-note-on-what-should-be-included-in-a-horse-boarding-agreement/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**included · horse · boarding · agreement · document · architecture · missing · terms**
+**included · horse · boarding · agreement · due · diligence · verification · training**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | horse | Identify the verification facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | boarding | Identify the records facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | agreement | Identify the representation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| document | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| due | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
@@ -74,18 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

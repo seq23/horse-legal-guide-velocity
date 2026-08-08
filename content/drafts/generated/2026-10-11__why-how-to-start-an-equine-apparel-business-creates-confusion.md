@@ -20,7 +20,7 @@ uniqueness_strategy: document-architecture
 
 The practical question behind **How to Start an Equine Apparel Business** is not answered safely by repeating a general horse-contract overview. This version focuses on which documents work together, which terms are absent, and which informal messages may matter. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-10-10/a-plain-english-note-on-how-to-start-an-equine-assisted-therapy-business/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-06-25/why-how-to-start-an-equine-assisted-therapy-business-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Document architecture and missing terms
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**start · equine · apparel · business · operational · handoff · responsibility · map**
+**start · equine · apparel · business · document · architecture · missing · terms**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | equine | Identify the schedule facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | apparel | Identify the attachment facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | business | Identify the definition facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| operational | Identify the integration facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| document | Identify the integration facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
@@ -74,18 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

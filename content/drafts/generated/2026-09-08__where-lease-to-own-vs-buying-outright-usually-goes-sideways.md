@@ -20,7 +20,7 @@ uniqueness_strategy: dispute-readiness
 
 The practical question behind **Lease to Own vs Buying Outright** is not answered safely by repeating a general horse-contract overview. This version focuses on how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. It is designed to be materially distinct from /drafts/2026-08-29/a-plain-english-note-on-lease-to-purchase-vs-outright-purchase/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. It is designed to be materially distinct from /drafts/2026-05-24/what-equestrians-often-miss-about-lease-to-own-vs-buying-outright/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Dispute readiness and early resolution
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**lease · buying · outright · usually · goes · sideways · horse · trial**
+**lease · buying · outright · dispute · readiness · early · resolution · horse**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -43,8 +43,8 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | lease | Identify the demand facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | buying | Identify the preservation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | outright | Identify the settlement facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| usually | Identify the position facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| goes | Identify the documentation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| dispute | Identify the position facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| readiness | Identify the documentation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

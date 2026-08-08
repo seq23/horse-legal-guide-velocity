@@ -20,7 +20,7 @@ uniqueness_strategy: remedies-exit
 
 The practical question behind **Does My Contract Need Statutory Warning Language** is not answered safely by repeating a general horse-contract overview. This version focuses on what exit paths, cure opportunities, and damage-control steps may exist before escalation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2026-05-09/the-quiet-risk-inside-what-if-i-bought-a-horse-without-a-contract/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2026-06-15/how-to-think-about-does-my-contract-need-statutory-warning-language-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Remedies, exit paths, and damage control
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**contract · need · statutory · warning · language · quiet · risk · inside**
+**contract · need · statutory · warning · language · remedies · exit · paths**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -74,12 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

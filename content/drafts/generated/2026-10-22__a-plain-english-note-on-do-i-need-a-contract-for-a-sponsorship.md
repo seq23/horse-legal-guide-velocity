@@ -20,7 +20,7 @@ uniqueness_strategy: evidence-timeline
 
 The practical question behind **Do I Need a Contract for a Sponsorship** is not answered safely by repeating a general horse-contract overview. This version focuses on how the chronology, records, and sequence of events change the practical risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-05-31/a-plain-english-note-on-can-a-boarding-barn-sell-a-horse-for-unpaid-bills/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-07-07/why-do-i-need-a-contract-for-a-sponsorship-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Evidence and timeline audit
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**need · contract · sponsorship · plain · english · note · intellectual · property**
+**need · contract · sponsorship · evidence · timeline · audit · intellectual · property**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -43,8 +43,8 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | need | Identify the chronology facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | contract | Identify the sequence facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | sponsorship | Identify the timestamp facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| plain | Identify the handoff facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| english | Identify the notice facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| evidence | Identify the handoff facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| timeline | Identify the notice facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

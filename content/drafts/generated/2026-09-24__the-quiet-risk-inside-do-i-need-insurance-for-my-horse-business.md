@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **Do I Need Insurance for My Horse Business** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-09-15/what-equestrians-often-miss-about-can-a-boarding-barn-sell-a-horse-for-unpaid-bills/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-06-09/how-to-think-about-do-i-need-insurance-for-my-horse-business-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**need · insurance · horse · business · remedies · exit · paths · damage**
+**need · insurance · horse · business · due · diligence · verification · liability**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | insurance | Identify the verification facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | horse | Identify the records facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | business | Identify the representation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| remedies | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| due | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
@@ -74,18 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

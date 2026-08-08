@@ -20,7 +20,7 @@ uniqueness_strategy: evidence-timeline
 
 The practical question behind **A Practical Framework for Liability, Waivers & Insurance** is not answered safely by repeating a general horse-contract overview. This version focuses on how the chronology, records, and sequence of events change the practical risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-08-25/a-practical-framework-for-intellectual-property-brand/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-06-16/liability-waivers-insurance-a-plain-english-guide-to-the-parts-that-usually-matter-most/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Evidence and timeline audit
 

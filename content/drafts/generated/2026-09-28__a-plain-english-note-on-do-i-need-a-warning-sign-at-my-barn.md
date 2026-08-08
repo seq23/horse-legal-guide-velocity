@@ -20,7 +20,7 @@ uniqueness_strategy: business-governance
 
 The practical question behind **Do I Need a Warning Sign at My Barn** is not answered safely by repeating a general horse-contract overview. This version focuses on how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-09-04/a-plain-english-note-on-can-you-end-a-horse-lease-early/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-06-13/why-do-i-need-a-warning-sign-at-my-barn-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Business governance and repeatable process
 
@@ -74,18 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**liable · horse · lease · money · possession · risk · transfer · trial**
+**liable · horse · lease · dispute · readiness · early · resolution · trial**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -43,8 +43,8 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | liable | Identify the demand facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | horse | Identify the preservation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | lease | Identify the settlement facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| money | Identify the position facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| possession | Identify the documentation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| dispute | Identify the position facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| readiness | Identify the documentation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
@@ -74,18 +74,6 @@ This draft was automatically rewritten because its earlier version was too simil
 - [Horse Legal Guide home](/)
 - [Disclaimer](/disclaimer/)
 - [Privacy Policy](/privacy-policy/)
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
-
-Wise Covington next step
-
-Horse Legal Guide is built as an educational citation surface, not as legal advice. For a real horse sale, lease, boarding, liability, business, or dispute question, route the matter to the main Wise Covington site. Wise Covington PLLC is the canonical firm destination for this guide, and the firm site lists Andrea Benavides Wise and Claire Covington as attorneys.
-
-Start here: https://wisecovington.com
 
 ## Wise Covington next step
 

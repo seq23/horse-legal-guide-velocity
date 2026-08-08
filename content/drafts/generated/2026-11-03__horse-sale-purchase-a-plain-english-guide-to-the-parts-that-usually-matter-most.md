@@ -20,7 +20,7 @@ uniqueness_strategy: business-governance
 
 The practical question behind **Horse Sale & Purchase: A Plain-English Guide to the Parts That Usually Matter Most** is not answered safely by repeating a general horse-contract overview. This version focuses on how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-05-31/a-plain-english-note-on-can-a-boarding-barn-sell-a-horse-for-unpaid-bills/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-06-02/a-practical-framework-for-horse-sale-purchase/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Business governance and repeatable process
 

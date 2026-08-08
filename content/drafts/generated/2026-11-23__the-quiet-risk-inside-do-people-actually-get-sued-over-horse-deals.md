@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **Do People Actually Get Sued Over Horse Deals** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-08-19/the-quiet-risk-inside-can-a-seller-refuse-to-take-a-horse-back/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-08-08/how-to-think-about-do-people-actually-get-sued-over-horse-deals-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**people · actually · get · sued · horse · deals · quiet · risk**
+**people · actually · get · sued · horse · deals · due · diligence**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 

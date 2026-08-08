@@ -20,7 +20,7 @@ uniqueness_strategy: money-risk-transfer
 
 The practical question behind **Am I Subject to HIPAA in Equine Therapy** is not answered safely by repeating a general horse-contract overview. This version focuses on when money, possession, care duties, and loss exposure move from one party to another. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-07-21/how-to-think-about-what-waivers-are-required-for-equine-therapy-programs-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-07-19/why-am-i-subject-to-hipaa-in-equine-therapy-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Money, possession, and risk transfer
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**subject · hipaa · equine · therapy · plain · english · note · therapeutic**
+**subject · hipaa · equine · therapy · money · possession · risk · transfer**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | hipaa | Identify the payment facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | equine | Identify the possession facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | therapy | Identify the delivery facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| plain | Identify the custody facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| money | Identify the custody facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
