@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**happens · boarder · damages · property · due · diligence · verification · boarding**
+**happens · boarder · damages · property · insurance · injury · liability · allocation**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | boarder | Identify the waiver facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | damages | Identify the injury facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | property | Identify the indemnity facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| due | Identify the coverage facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| insurance | Identify the coverage facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

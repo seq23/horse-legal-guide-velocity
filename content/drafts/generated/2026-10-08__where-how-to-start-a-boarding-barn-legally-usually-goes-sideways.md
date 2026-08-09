@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**start · boarding · barn · legally · dispute · readiness · early · resolution**
+**start · boarding · barn · legally · business · governance · repeatable · process**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | boarding | Identify the procedure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | barn | Identify the entity facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | legally | Identify the approval facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| dispute | Identify the recordkeeping facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| business | Identify the recordkeeping facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

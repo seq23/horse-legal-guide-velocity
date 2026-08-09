@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**happens · boarder · doesn · pay · insurance · injury · liability · allocation**
+**happens · boarder · doesn · pay · due · diligence · verification · boarding**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | boarder | Identify the verification facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | doesn | Identify the records facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | pay | Identify the representation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| insurance | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| due | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

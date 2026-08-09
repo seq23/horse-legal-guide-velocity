@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**horse · trial · agreement · money · possession · risk · transfer · lease**
+**horse · trial · agreement · authority · roles · decision · rights · lease**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -43,8 +43,8 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | horse | Identify the authority facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | trial | Identify the agent facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | agreement | Identify the owner facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| money | Identify the trainer facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| possession | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| authority | Identify the trainer facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| roles | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

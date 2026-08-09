@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**start · horse · retail · business · operational · handoff · responsibility · map**
+**start · horse · retail · business · state · law · venue · local**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | horse | Identify the venue facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | retail | Identify the choice of law facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | business | Identify the statute facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| operational | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| state | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
