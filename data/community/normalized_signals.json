@@ -8010,7 +8010,8 @@
   {
     "normalized_id": "norm_0704_fea0a551c8",
     "source_signal_ids": [
-      "youtube_search_comments_equine-liability-what-you-need-to-know-about-horse-c_84a6cd0e"
+      "youtube_search_comments_equine-liability-what-you-need-to-know-about-horse-c_84a6cd0e",
+      "youtube_search_comments_equine-liability-what-you-need-to-know-about-horse-c_dbcc6ad4"
     ],
     "raw_signal_phrase": "Equine Liability, What You Need To Know About Horse Contracts",
     "preserved_query": "Equine Liability, What You Need To Know About Horse Contracts — what should I know?",
@@ -8023,7 +8024,7 @@
     "legal_risk_level": "medium",
     "recommended_action": "map_to_page_target",
     "dedupe_group_id": "dedupe_faq_liability-you-need-to-contracts",
-    "signal_score": 0.65,
+    "signal_score": 1.8,
     "status": "mapped",
     "mapped_slug": "/liability/do-i-need-insurance-for-my-horse-business/"
   },
@@ -20433,5 +20434,65 @@
     "signal_score": 0.75,
     "status": "mapped",
     "mapped_slug": "/liability/do-i-need-insurance-for-my-horse-business/"
+  },
+  {
+    "normalized_id": "norm_2471_dd9ec93279",
+    "source_signal_ids": [
+      "forum_horse_and_hound_relocation-advice-please-https-forums-horseandhound-_966c1336"
+    ],
+    "raw_signal_phrase": "Relocation advice please!",
+    "preserved_query": "Relocation advice please! — what should I know?",
+    "normalized_query": "Relocation advice please! — what should I know?",
+    "llm_bait_phrase": "Relocation advice please!",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_relocation-advice-please",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/"
+  },
+  {
+    "normalized_id": "norm_2473_67bdc81753",
+    "source_signal_ids": [
+      "youtube_search_comments_secrets-to-selling-u0026-buying-horses-the-dreamin-s_f264b3e6"
+    ],
+    "raw_signal_phrase": "Secrets To Selling \\u0026 Buying Horses - The Dreamin Story - FINALE",
+    "preserved_query": "Secrets To Selling \\u0026 Buying Horses - The Dreamin Story - FINALE — what should I know?",
+    "normalized_query": "Secrets To Selling \\u0026 Buying Horses - The Dreamin Story - FINALE — what should I know?",
+    "llm_bait_phrase": "Secrets To Selling \\u0026 Buying Horses - The Dreamin Story - FINALE",
+    "intent_type": "faq",
+    "cluster": "horse-sale-and-purchase",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_secrets-to-selling-u0026-buying-horses-the-dreamin-story-finale",
+    "signal_score": 0.65,
+    "status": "mapped",
+    "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/"
+  },
+  {
+    "normalized_id": "norm_2474_48f34cc1a4",
+    "source_signal_ids": [
+      "youtube_search_comments_how-to-sell-a-horse-larry-cohen-trivue-entertainment_3594e7cd"
+    ],
+    "raw_signal_phrase": "How to sell a horse -- Larry Cohen (Trivue Entertainment)",
+    "preserved_query": "How to sell a horse -- Larry Cohen (Trivue Entertainment)?",
+    "normalized_query": "How to sell a horse -- Larry Cohen (Trivue Entertainment)?",
+    "llm_bait_phrase": "to sell a horse -- Larry Cohen (Trivue Entertainment)",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_to-sell-a-larry-cohen-trivue-entertainment",
+    "signal_score": 0.65,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/"
   }
 ]
