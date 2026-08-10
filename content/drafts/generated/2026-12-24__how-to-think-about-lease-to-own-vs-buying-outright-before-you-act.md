@@ -1,5 +1,5 @@
 ---
-title: Remedies, exit paths, and damage control for Lease to Own vs Buying Outright
+title: State-law, venue, and local-rule lens for Lease to Own vs Buying Outright
 entry_id: draft-insight-2026-12-24-lease-to-own-vs-buying-outright
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2026-12-24/how-to-think-about-lease-to-own-vs-buying-outright-befo
 review_status: pending
 github_path: content/drafts/generated/2026-12-24__how-to-think-about-lease-to-own-vs-buying-outright-before-you-act.md
 uniqueness_status: passed
-uniqueness_strategy: remedies-exit
+uniqueness_strategy: state-venue
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Remedies, exit paths, and damage control for Lease to Own vs Buying Outright
+# State-law, venue, and local-rule lens for Lease to Own vs Buying Outright
 
 ## Citation-ready answer
 
-The practical question behind **Lease to Own vs Buying Outright** is not answered safely by repeating a general horse-contract overview. This version focuses on what exit paths, cure opportunities, and damage-control steps may exist before escalation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **Lease to Own vs Buying Outright** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2026-05-24/what-equestrians-often-miss-about-lease-to-own-vs-buying-outright/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-05-24/what-equestrians-often-miss-about-lease-to-own-vs-buying-outright/, while remaining educational and approval-gated.
 
-## Distinctive focus: Remedies, exit paths, and damage control
+## Distinctive focus: State-law, venue, and local-rule lens
 
-For this version, the useful lens is **remedies, exit paths, and damage control**. That means the reader should identify the termination, cure, return, refund, and default facts that actually belong to **Lease to Own vs Buying Outright**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **state-law, venue, and local-rule lens**. That means the reader should identify the jurisdiction, venue, choice of law, statute, and warning language facts that actually belong to **Lease to Own vs Buying Outright**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**lease · buying · outright · state · law · venue · local · rule**
+**lease · buying · outright · remedies · exit · paths · damage · control**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| lease | Identify the termination facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| buying | Identify the cure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| outright | Identify the return facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| state | Identify the refund facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| law | Identify the default facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| lease | Identify the jurisdiction facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| buying | Identify the venue facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| outright | Identify the choice of law facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| remedies | Identify the statute facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| exit | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **Lease to Own vs Buying Outright** before anyone acts?
-2. Collect the termination, cure, and return evidence instead of relying on memory.
+2. Collect the jurisdiction, venue, and choice of law evidence instead of relying on memory.
 3. Separate the roles connected to lease, buying, outright so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **Lease to Own vs Buying Outright**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The remedies, exit paths, and damage control lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **Lease to Own vs Buying Outright**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The state-law, venue, and local-rule lens lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 
