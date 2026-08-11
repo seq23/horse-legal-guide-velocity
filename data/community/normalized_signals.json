@@ -7965,7 +7965,7 @@
     "dedupe_group_id": "dedupe_faq_recommendation-please-for-good-back-person-in-oxfordshire",
     "signal_score": 0.9,
     "status": "mapped",
-    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+    "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/"
   },
   {
     "normalized_id": "norm_0702_8e18aea9aa",
@@ -11557,7 +11557,7 @@
     "dedupe_group_id": "dedupe_faq_please-kindly-explain-to-me-tight-loose-my-muscles-be",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+    "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/"
   },
   {
     "normalized_id": "norm_1235_6af75d35f2",
@@ -12238,7 +12238,7 @@
     "dedupe_group_id": "dedupe_faq_opinions-please",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+    "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/"
   },
   {
     "normalized_id": "norm_1314_fc7b26be5d",
@@ -18633,7 +18633,7 @@
     "dedupe_group_id": "dedupe_faq_stallion-ideas-please",
     "signal_score": 0.9,
     "status": "mapped",
-    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+    "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/"
   },
   {
     "normalized_id": "norm_2253_95983ece92",
@@ -20494,5 +20494,205 @@
     "signal_score": 0.65,
     "status": "mapped",
     "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/"
+  },
+  {
+    "normalized_id": "norm_2476_f18bdfd231",
+    "source_signal_ids": [
+      "reddit_equestrian_do-you-only-have-one-horse-alone-on-your-property-ht_ab1b895a"
+    ],
+    "raw_signal_phrase": "Do you only have one horse alone on your property",
+    "preserved_query": "Do you only have one horse alone on your property?",
+    "normalized_query": "Do you only have one horse alone on your property?",
+    "llm_bait_phrase": "you only have one horse alone on your property",
+    "intent_type": "faq",
+    "cluster": "real-property-and-leases",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_do-you-only-have-one-alone-on-your-property",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/leases/what-liability-applies-in-a-horse-property-lease/"
+  },
+  {
+    "normalized_id": "norm_2477_f45aa426a6",
+    "source_signal_ids": [
+      "reddit_equestrian_can-someone-recommend-a-tilting-cattle-squeeze-comfo_fcf49194"
+    ],
+    "raw_signal_phrase": "Can someone recommend a tilting cattle squeeze comfortable for 16 h elderly horses",
+    "preserved_query": "Can someone recommend a tilting cattle squeeze comfortable for 16 h elderly horses?",
+    "normalized_query": "Can someone recommend a tilting cattle squeeze comfortable for 16 h elderly horses?",
+    "llm_bait_phrase": "someone recommend a tilting cattle squeeze comfortable for 16 h elderly horses",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_recommend-a-tilting-cattle-squeeze-comfortable-for-16-h-elderly-horses",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/"
+  },
+  {
+    "normalized_id": "norm_2478_57e607b713",
+    "source_signal_ids": [
+      "reddit_equestrian_help-horse-suddenly-won-t-let-farrier-touch-back-hoo_0740e2dc"
+    ],
+    "raw_signal_phrase": "Help: Horse suddenly won't let farrier touch back hooves",
+    "preserved_query": "Help: Horse suddenly won't let farrier touch back hooves — what should I know?",
+    "normalized_query": "Help: Horse suddenly won't let farrier touch back hooves — what should I know?",
+    "llm_bait_phrase": "Help: Horse suddenly won't let farrier touch back hooves",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "conflict / escalation",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_help-suddenly-won-t-let-farrier-touch-back-hooves",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/"
+  },
+  {
+    "normalized_id": "norm_2479_2327a3c591",
+    "source_signal_ids": [
+      "reddit_equestrian_what-to-do-when-a-horse-spooks-when-leading-https-ww_c69fd28b"
+    ],
+    "raw_signal_phrase": "What to do when a horse spooks when leading",
+    "preserved_query": "What to do when a horse spooks when leading?",
+    "normalized_query": "What to do when a horse spooks when leading?",
+    "llm_bait_phrase": "to do when a horse spooks when leading",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_to-do-a-spooks-leading",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_2482_58717b0319",
+    "source_signal_ids": [
+      "reddit_equestrian_book-recommendations-for-a-mature-beginner-horseman-_59fde1d5"
+    ],
+    "raw_signal_phrase": "Book recommendations for a mature beginner horseman.",
+    "preserved_query": "Book recommendations for a mature beginner horseman. — what should I know?",
+    "normalized_query": "Book recommendations for a mature beginner horseman. — what should I know?",
+    "llm_bait_phrase": "Book recommendations for a mature beginner horseman.",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_book-recommendations-for-a-mature-beginner-horseman",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_2486_b1c1fc3899",
+    "source_signal_ids": [
+      "reddit_equestrian_should-i-change-my-horse-riding-coach-https-www-redd_1559e0ac"
+    ],
+    "raw_signal_phrase": "Should I change my horse riding coach",
+    "preserved_query": "Should I change my horse riding coach?",
+    "normalized_query": "Should I change my horse riding coach?",
+    "llm_bait_phrase": "I change my horse riding coach",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_i-change-my-riding-coach",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/"
+  },
+  {
+    "normalized_id": "norm_2490_93e75ceb94",
+    "source_signal_ids": [
+      "reddit_equestrian_help-with-very-itchy-gelding-https-www-reddit-com-r-_d0cd94ac"
+    ],
+    "raw_signal_phrase": "Help with very itchy gelding",
+    "preserved_query": "Help with very itchy gelding — what should I know?",
+    "normalized_query": "Help with very itchy gelding — what should I know?",
+    "llm_bait_phrase": "Help with very itchy gelding",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_help-with-very-itchy-gelding",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/"
+  },
+  {
+    "normalized_id": "norm_2491_244b2cf833",
+    "source_signal_ids": [
+      "reddit_equestrian_how-old-is-this-horse-https-www-reddit-com-r-equestr_94cf411c"
+    ],
+    "raw_signal_phrase": "How old is this horse",
+    "preserved_query": "How old is this horse?",
+    "normalized_query": "How old is this horse?",
+    "llm_bait_phrase": "old is this horse",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_old-is-this",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/"
+  },
+  {
+    "normalized_id": "norm_2495_973ddc4699",
+    "source_signal_ids": [
+      "forum_horse_and_hound_medical-mystery-stumped-about-what-s-wrong-with-my-h_b1afae7d"
+    ],
+    "raw_signal_phrase": "Medical Mystery! Stumped about what’s wrong with my horse.",
+    "preserved_query": "Medical Mystery! Stumped about what’s wrong with my horse. — what should I know?",
+    "normalized_query": "Medical Mystery! Stumped about what’s wrong with my horse. — what should I know?",
+    "llm_bait_phrase": "Medical Mystery! Stumped about what’s wrong with my horse.",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_medical-mystery-stumped-s-wrong-with-my",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_2496_096641e0bf",
+    "source_signal_ids": [
+      "forum_horse_and_hound_pony-trekking-horse-riding-https-forums-horseandhoun_cb19c3d3"
+    ],
+    "raw_signal_phrase": "Pony trekking / Horse riding",
+    "preserved_query": "Pony trekking / Horse riding — what should I know?",
+    "normalized_query": "Pony trekking / Horse riding — what should I know?",
+    "llm_bait_phrase": "Pony trekking / Horse riding",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_pony-trekking-riding",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/"
   }
 ]
