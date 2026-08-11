@@ -13,8 +13,8 @@ jobs:
       INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
       GSC_SITE_URL: sc-domain:horselegalguide.com
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
       - name: Install
@@ -24,7 +24,7 @@ jobs:
       - name: Generate workflow trace
         run: npm run ops:trace-workflows
       - name: Upload dist
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: horse-legal-guide-dist
           path: |

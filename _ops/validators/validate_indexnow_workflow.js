@@ -18,7 +18,7 @@ function main() {
     requireContains(workflowPath, workflow, 'GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}', 'workflow_missing_gsc_secret', 'Workflow must expose the GSC service-account secret.', 'Add GSC_SERVICE_ACCOUNT_JSON.');
     requireContains(workflowPath, workflow, 'INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}', 'workflow_missing_indexnow_secret', 'Workflow must expose INDEXNOW_KEY.', 'Add INDEXNOW_KEY.');
     requireContains(workflowPath, workflow, 'git add data/distribution', 'workflow_missing_receipt_commit', 'Workflow must commit durable distribution receipts.', 'Commit data/distribution only.');
-    requireContains(workflowPath, workflow, 'actions/upload-artifact@v4', 'workflow_missing_report_upload', 'Workflow must upload evidence.', 'Upload data/distribution, .build, and reports.');
+    requireContains(workflowPath, workflow, 'actions/upload-artifact@', 'workflow_missing_report_upload', 'Workflow must upload evidence.', 'Upload data/distribution, .build, and reports.');
   }
   const runnerPath = 'scripts/distribution/run_post_publish_distribution.mjs';
   const runner = read(runnerPath);

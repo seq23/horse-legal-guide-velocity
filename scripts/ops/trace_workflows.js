@@ -66,10 +66,20 @@ function main() {
     const missingArtifacts = artifacts.filter((artifact) => !fileExists(artifact));
     const hard_fails = [];
     const warnings = [];
-    if (!yaml.includes('uses: actions/checkout@v4')) hard_fails.push('missing checkout action');
-    if (!yaml.includes('actions/setup-node@v4')) warnings.push('workflow does not set up node directly; verify if intentional');
+    const checkout = yaml.match(/uses:\s*actions\/checkout@v(\d+)/);
+    const setupNode = yaml.match(/uses:\s*actions\/setup-node@v(\d+)/);
+    if (!checkout) hard_fails.push('missing checkout action');
+    else if (Number(checkout[1]) < 7) warnings.push(`checkout action major v${checkout[1]} is behind the current supported workflow baseline`);
+    if (!setupNode) warnings.push('workflow does not set up node directly; verify if intentional');
+    else if (Number(setupNode[1]) < 7) warnings.push(`setup-node action major v${setupNode[1]} is behind the current supported workflow baseline`);
     if (missingScripts.length) hard_fails.push(`referenced npm scripts missing: ${missingScripts.join(', ')}`);
     if (missingArtifacts.length) warnings.push(`expected local-equivalent artifacts not present yet: ${missingArtifacts.join(', ')}`);
+    const writesMain = /permissions:\s*[\s\S]*?contents:\s*write/.test(yaml) && /git\s+push/.test(yaml);
+    if (writesMain) {
+      if (!/concurrency:\s*\n\s*group:\s*horse-legal-guide-main-writer\s*\n\s*cancel-in-progress:\s*false/.test(yaml)) {
+        hard_fails.push('main-writer workflow must use shared horse-legal-guide-main-writer concurrency with cancel-in-progress false');
+      }
+    }
     const trace = {
       workflow: file,
       path: rel,

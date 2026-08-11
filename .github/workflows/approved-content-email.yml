@@ -25,6 +25,10 @@ permissions:
   contents: write
   actions: read
 
+concurrency:
+  group: horse-legal-guide-main-writer
+  cancel-in-progress: false
+
 jobs:
   email-approved-content:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
@@ -38,23 +42,27 @@ jobs:
       SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
       SMTP_FROM: ${{ secrets.SMTP_FROM }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: true
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
       - name: Build current generated surfaces
         run: npm ci && npm run build
       - name: Generate and send approved content email
+        env:
+          EMAIL_IDS: ${{ github.event.inputs.ids || '' }}
+          EMAIL_FORCE_RESEND: ${{ github.event.inputs.force_resend || 'false' }}
+          EMAIL_DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
         run: |
           set -euo pipefail
-          IDS="${{ github.event.inputs.ids || '' }}"
-          FORCE="${{ github.event.inputs.force_resend || 'false' }}"
-          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+          IDS="$EMAIL_IDS"
+          FORCE="$EMAIL_FORCE_RESEND"
+          DRY="$EMAIL_DRY_RUN"
           ARGS=()
           if [ -n "$IDS" ]; then
             # shellcheck disable=SC2206
@@ -65,11 +73,13 @@ jobs:
           if [ "$DRY" = "true" ]; then ARGS+=(--dry-run); fi
           python3 scripts/social/send_approved_content_email.py "${ARGS[@]}"
       - name: Upload email preview artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: approved-content-email-preview
           path: reports/approved-content-email-preview.md
           if-no-files-found: warn
+      - name: Validate repository after notification-state update
+        run: npm run validate:all
       - name: Commit sent-email state
         if: ${{ github.event.inputs.dry_run != 'true' }}
         run: |

@@ -1,3 +1,4 @@
+// AUDIT MODE IS PARTIAL: only validators using helpers.createReport() soften blocking findings in audit mode. Legacy fail()/exitCode validators remain blocking.
 const { spawnSync } = require('child_process');
 const validators = [
   '_ops/validators/validate_query_traceability.js',

@@ -31,6 +31,10 @@ npm run publish:mode
 npm run validate:all
 ```
 
+## Authority-scale truth boundary
+
+The `100,000` authority-scale figure is a deterministic **fanout/opportunity-ID space** used to stress-test and organize planning intelligence. It is not 100,000 curated article opportunities, a page quota, a citation count, or an observed search/LLM outcome. Semantically actionable work is represented only by the downstream candidate/recommendation ledgers after clustering, deduplication, ownership, risk, and evidence gates.
+
 ## Packaging
 
 Package from the true repo root as a baseline snapshot ZIP after validation.
@@ -53,3 +57,7 @@ Setup:
 - `docs/runbooks/AGENCY_SEARCH_PROVIDER_SETUP.md`
 - `docs/runbooks/OWNER_APPROVED_REMEDIATION_RUNBOOK.md`
 
+
+## Validator mode truth boundary
+
+`validate:foundation:audit` softens only validators implemented through the shared `createReport()` helper. Legacy validators that call `fail()` or set a non-zero exit code directly remain blocking in both audit and enforce modes. Therefore **audit mode is not a globally non-blocking validation pass**. `validate:foundation:enforce` remains the authoritative blocking foundation mode.

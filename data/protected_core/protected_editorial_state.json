@@ -1,22 +1,16 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "repo": "horse",
-  "policy": "PRESERVE_BASELINE_EDITORIAL_IDENTITY_ALLOW_NATIVE_REVIEW_AND_PUBLISH_TRANSITIONS",
+  "policy": "PRESERVE_BASELINE_EDITORIAL_SOURCE_IDENTITY_ALLOW_NATIVE_QUALITY_REPAIR_REVIEW_SCHEDULING_AND_PUBLISH_TRANSITIONS",
   "backlog_fields": [
     "entry_id",
-    "date",
-    "title",
     "content_type",
     "cadence",
     "source_page_id",
     "source_cluster",
-    "source_query_title",
-    "slug",
-    "github_path",
-    "notes"
+    "source_query_title"
   ],
   "calendar_fields": [
-    "date",
     "entry_id"
   ],
   "baseline_backlog_count": 300,
@@ -24,2405 +18,2450 @@
   "backlog_records": [
     {
       "entry_id": "draft-insight-2026-04-24-do-i-need-a-contract-to-sell-a-horse",
-      "sha256": "8a39f72fd856496423b3bc7556c2748e4095a2f5d3ef52a33fb6f972b031730b"
+      "sha256": "e844035c273d6a03ce671e05283162ddd08b155f18f21f53e59505e81e51c6fc"
     },
     {
       "entry_id": "draft-insight-2026-04-25-do-i-need-a-contract-to-buy-a-horse",
-      "sha256": "0de9dd37e4c260f1b895cba0d4a43bc0be6c0fbd20a5b1a685bf9598e2ec5b46"
+      "sha256": "1aafbffe7696e58da9c73ea7b3307cabe9159cddbe5ac3163a6e64880fc62fa8"
     },
     {
       "entry_id": "draft-insight-2026-04-26-what-should-be-included-in-a-horse-bill-of-sale",
-      "sha256": "5ca8a7cee9e3c364786cc4df6765292db84db0f185b0207e91e25517cba92909"
+      "sha256": "e56f1120932b93a6698516d137463c8b589d0ccb7834bed2022ee9c851ed1bf9"
     },
     {
       "entry_id": "draft-insight-2026-04-27-what-should-be-included-in-a-horse-sale-contract",
-      "sha256": "556e338ee719d4eb2999c8680810c2dc7194fa150348fd73832be35822f86f2b"
+      "sha256": "8987fd924118060cd23b142ec1eae32d0ee92b286cc99827c774200e2c7b9b51"
     },
     {
       "entry_id": "draft-article-2026-04-28-boarding-training-and-barn-operations",
-      "sha256": "236006cd40f6587de3e7ccae0faeb12b1ba745d28c192b5f8fc78e186aee13d3"
+      "sha256": "8a0777f39a6896a33085ed65e2605ab0fd2c49a283f2bed9254f0f1c72225e3e"
     },
     {
       "entry_id": "draft-insight-2026-04-28-when-does-ownership-legally-transfer-in-a-horse-sale",
-      "sha256": "5c4079a1837b55d2c122d8ec81deae3b447b4451b7f94b9d2dcf69b58de6074d"
+      "sha256": "e80e42ed3e8286522069d43f12764c40ead2ed3a0d66fdd39a28e4967da408d7"
     },
     {
       "entry_id": "draft-insight-2026-04-29-who-is-responsible-after-a-horse-sale-is-completed",
-      "sha256": "4f58863d958e7ff8a953d4a144bf44c6dad99d5211ee2258c381052000d8d828"
+      "sha256": "f987d40d1c6bf175fae301b98631bdf98cbc1c4b0ba29f5aab0b18c0a51105ee"
     },
     {
       "entry_id": "draft-insight-2026-04-30-is-a-verbal-agreement-legally-binding-in-a-horse-sale",
-      "sha256": "760ef569aefe6672c192911f6fcb873e0537ae43061734423118a3d2fdde38d0"
+      "sha256": "8ea03f4138ac300acbc8bf87e5161f75097b66a1c820111cfa9c182a0fd0c442"
     },
     {
       "entry_id": "draft-whitepaper-2026-04-30-horse-sale-and-purchase",
-      "sha256": "f45329062e0fda8dde0c9b02d77e6c1ce4faebe218c50637fca4c190423a5c5f"
+      "sha256": "e48a5cf9799728c4a9df57dd01a7884006aa5a832e19a3c956c9dc69783ba770"
     },
     {
       "entry_id": "draft-insight-2026-05-01-what-happens-if-there-is-no-written-agreement-in-a-horse-sale",
-      "sha256": "fab7d4d7355fcb94e3108d410792d83726409069751ba6a9a5858c3aadcb0a00"
+      "sha256": "77af82cc1c742992ac7fb02000601b7a5d2e72be9b1cbccfd3411cc3e659f656"
     },
     {
       "entry_id": "draft-whitepaper-2026-05-01-boarding-training-and-barn-operations",
-      "sha256": "869236b97f621d877916d1e09d6d13004129674e27a021c440b2109282a53b64"
+      "sha256": "79d80f07dcdd350632a8d1f8edccc4b3c54fa3c60822c96c1c79a2360b32a929"
     },
     {
       "entry_id": "draft-insight-2026-05-02-what-happens-if-a-horse-is-misrepresented-in-a-sale",
-      "sha256": "586bb44bf75ab97beacaddc49bcdbaa6441236ddb5dbb5e9f8874284c58e50d3"
+      "sha256": "1099ed19d921012fa10ca55d0d2362cbc228bcce5e69951e9879a807830579ef"
     },
     {
       "entry_id": "draft-insight-2026-05-03-can-a-buyer-return-a-horse-after-purchase",
-      "sha256": "9b4912ca9c3fb6d10c198f6a1801abaa9056f9325245847fdc03496b0428aa1b"
+      "sha256": "70350a28950886cd96d37df430b885ba54401894844f4aa69a19c75762d353e6"
     },
     {
       "entry_id": "draft-insight-2026-05-04-can-a-seller-refuse-to-take-a-horse-back",
-      "sha256": "afc7e4058308a9a583f74b2bedfb6be5bd8d2b0f22878dc75349bbfc31507f01"
+      "sha256": "14d336bbed5d381b78b6c1b1fa21ca5fe4b4f6adc819a3b35fbc420bf508f2a4"
     },
     {
       "entry_id": "draft-article-2026-05-05-demand-letters-and-disputes",
-      "sha256": "c1bb0aa1874446ea4e9569cc16a58104111c34e8e02e0b3efc50303af02aca7c"
+      "sha256": "d9edbeb9ce37f106d7d98299fd93f9ac6ec11cbc1682b96229b89b30f7b10874"
     },
     {
       "entry_id": "draft-insight-2026-05-05-what-happens-if-a-horse-becomes-lame-after-sale",
-      "sha256": "f0488d97a6a0fec13513bde8903ba776135153bf55071913ae504b153ad26a61"
+      "sha256": "d682d5bbb81c904a423c0f0ffb775695ceee3d3687df4656f33b932f63af6853"
     },
     {
       "entry_id": "draft-insight-2026-05-06-can-a-buyer-sue-after-an-as-is-horse-sale",
-      "sha256": "7e8dc9d5d7056ad76c7cffe63d6b69ad20d6a4902094ca845607860b8d694645"
+      "sha256": "03ef2ebbdb7b9a514d753835f8e005505c2f7fa7585f346ad706043b375a84bd"
     },
     {
       "entry_id": "draft-insight-2026-05-07-what-happens-if-a-horse-sale-goes-wrong",
-      "sha256": "b83f80566e76aac3071314e7f72cf7fa996cadce6f5aa20a8781282cb2cc497a"
+      "sha256": "aba0e202990722a3e73fd76d480570451689b85589222ab0171848b6345b515e"
     },
     {
       "entry_id": "draft-insight-2026-05-08-what-if-i-sold-a-horse-without-a-contract",
-      "sha256": "c3863b81d84a9e00881f103b8131f5c2c6fbfea411683bcd63f9b73979affe4f"
+      "sha256": "35df6f7b6481ca6b3ea51fe4fd8e1234353036f7d55432dad13d76c97d00576c"
     },
     {
       "entry_id": "draft-insight-2026-05-09-what-if-i-bought-a-horse-without-a-contract",
-      "sha256": "84cd8416ade886baf51601af2af3df0debb023b23f2ff34987c821f2c34a0b5f"
+      "sha256": "9914bf717ff46b95a4787211920ad84fd49c048881a88f8c4d7bd5c7d24da75a"
     },
     {
       "entry_id": "draft-insight-2026-05-10-horse-sale-contract-vs-bill-of-sale",
-      "sha256": "c894be51ac235d258043f1d140916d2e4b66a80e62d085e09f7e193cb2adbf7a"
+      "sha256": "42b45c0c4a28054ce2f1d911f7a0c5cf5ca326dbb64e43f9ac1f051c8a60d9e9"
     },
     {
       "entry_id": "draft-insight-2026-05-11-contract-vs-handshake-deal-in-a-horse-sale",
-      "sha256": "050737d2cf26939c4b9fd375b6ca9df3ac6e54f6389a3734261024f67709e757"
+      "sha256": "9e2d861eb7116ea6a6609e3ab86964bd6147b982bd1d0a5e5af8e5f12c15788c"
     },
     {
       "entry_id": "draft-article-2026-05-12-emotional-am-i-screwed",
-      "sha256": "a18ed8840b0da220c6512c163c565eb36295db90f7d3d310a410e6394c07376c"
+      "sha256": "b6756bc4823937aa055a1508a16210bca9ce2417fa8e758804163d8fdbc94a83"
     },
     {
       "entry_id": "draft-insight-2026-05-12-template-contract-vs-custom-horse-contract",
-      "sha256": "c1c4991d649a48b28411f16cdac2187a84b579ae80e9a0dd322a92597bb83f13"
+      "sha256": "898fb54cb6adfdfb3474fa95cf5455cd343f5305d95ce96053f91ed024e799a0"
     },
     {
       "entry_id": "draft-insight-2026-05-13-pre-purchase-exam-vs-no-exam-legal-risk",
-      "sha256": "224b45ab763f66af54d6809399d06d64296296712e5b10a06157dd89e0ad9310"
+      "sha256": "33bcdab123145e21c840e9b3c81a0f7cc20c66e265a54ff77317f185fab66ac9"
     },
     {
       "entry_id": "draft-insight-2026-05-14-lease-to-purchase-vs-outright-purchase",
-      "sha256": "d37e03de55ed7fe43e8c001d60f91c150b032ae90f6af2b397178f293c9fab29"
+      "sha256": "893f63e40d6129a8c0c98e051388894c543b2244922becb1b3259902c0450558"
     },
     {
       "entry_id": "draft-insight-2026-05-15-what-should-be-included-in-a-horse-lease-agreement",
-      "sha256": "1c355ee6819f9cf671cbe0ecbd59d29145459923c702482f4b4e4d4e3c267307"
+      "sha256": "a529ee7754c1e793b6b24edbba51c54084458c3a7aa668748d73defe199adcf6"
     },
     {
       "entry_id": "draft-insight-2026-05-16-what-is-a-horse-trial-agreement",
-      "sha256": "edb057e673cec056a20def73c85e05eb167e6747f355d39aa1ce25b145fbe39e"
+      "sha256": "5dc21ca42f2c1ddb06f926bd4887d210a2217b605008028a0422a2e1b990bc53"
     },
     {
       "entry_id": "draft-insight-2026-05-17-who-is-liable-during-a-horse-lease",
-      "sha256": "c1b195b246b47499530be32e1478c0440b139bb82c44a5d316e4b5b4b8088e2c"
+      "sha256": "73ff6fcd6bf4141acb976c4e087fee1ef00c96d33d46efa4cd8a5918ccea4527"
     },
     {
       "entry_id": "draft-insight-2026-05-18-who-pays-vet-bills-in-a-horse-lease",
-      "sha256": "6a9069018d5695d23ca5d8a75c2e874c5b2d59652d088c7eac1cbf0ad497ef3b"
+      "sha256": "17a39b49b9de1151336bd2d904c6d4ea56a2b20ed6f90b48e7ab2651c96b85e2"
     },
     {
       "entry_id": "draft-article-2026-05-19-equine-business-formation",
-      "sha256": "63f243a017431390f5737ca2c37da57823ba286668ba45be26702a1f9c3f2741"
+      "sha256": "e806e2a38d13ef8b51ea37df630681c51d10bdd3b5e71f2d3188f6c088407f5f"
     },
     {
       "entry_id": "draft-insight-2026-05-19-what-happens-if-a-leased-horse-is-injured",
-      "sha256": "d5ddcf8535bae096c2c7c066cd9314b4845e38004eb4c8e3f8f32bb5e611323d"
+      "sha256": "f0180de20f428324f3f684dac9a9cee4d23022a9a227150ae48ce8a017b5d275"
     },
     {
       "entry_id": "draft-insight-2026-05-20-can-you-end-a-horse-lease-early",
-      "sha256": "50bbe1c2cc994ddeecd8bfcf6bef9523509b136a49d02b8bc321a89440fe2210"
+      "sha256": "1f3bec9828f2882f3ea90cb8f3db3a419224aad6f30a0a6485c93f0c85bf11a1"
     },
     {
       "entry_id": "draft-insight-2026-05-21-what-happens-if-a-leased-horse-becomes-unsound",
-      "sha256": "0965522e7e9cb286a6ae5f5f7737bd607618f3cb47aa3e294b14c8bc29f6c0a3"
+      "sha256": "5739b84538b48f58173bac01d54be6c4cbd6ba26fce092962bd0d101525575e3"
     },
     {
       "entry_id": "draft-insight-2026-05-22-lease-vs-purchase-horse",
-      "sha256": "f943af57e58d61789d5ddb889992d5d937f0e8e3464078d7bff1fdea8a975523"
+      "sha256": "a55c274432e1e624e852f8a5ef196cd0a9557732e36f34f415bba318b642f331"
     },
     {
       "entry_id": "draft-insight-2026-05-23-trial-agreement-vs-lease-agreement",
-      "sha256": "2674d13e8897dd67a0734b6e6c13f4d0823edbf5d01684611a22d79ca3b5690c"
+      "sha256": "8ca7dd2c248f6e967fbfbf25d3fe9a7ea3b8e6c873c076f20fc26bb5605da860"
     },
     {
       "entry_id": "draft-insight-2026-05-24-lease-to-own-vs-buying-outright",
-      "sha256": "9b239f9aee5094c1e6ca9d56a6a0333d8e1f7fca6ee32c326867a2289f1ada98"
+      "sha256": "842607153c8beec03aa3c57a4dd700d63afbf93028439cea2287f03ed23b4073"
     },
     {
       "entry_id": "draft-insight-2026-05-25-what-should-be-included-in-a-horse-boarding-agreement",
-      "sha256": "3be63ae4618840322b11857e04061e48a1f7a2cf92f74bfabd407937ddd76890"
+      "sha256": "54930bc1ef04ed58241ded18586554eb51b63225cab5408051ad14ec9c2f9768"
     },
     {
       "entry_id": "draft-article-2026-05-26-horse-lease-and-trial",
-      "sha256": "0772a25369351a3e7b7d2d1217dbdaa4cf753a2f1aef3cef8be3ec68b0ea6b1c"
+      "sha256": "c755e6821e03065d5322de6b2dbd435576d72bb6903f70350e227e414f740b24"
     },
     {
       "entry_id": "draft-insight-2026-05-26-what-should-be-included-in-a-training-agreement",
-      "sha256": "9f723930d66b43717a3b4f4b772f41e949a2fc41b9a59f7d06415f8006517953"
+      "sha256": "896ed4b5a6159dbf5e5ea0757b6d4b471e883874d1ef6fb840b5dafc4bfdbea2"
     },
     {
       "entry_id": "draft-insight-2026-05-27-what-legal-documents-do-i-need-to-run-a-boarding-barn",
-      "sha256": "cc2c21e1991f5f3b5e6e3a6878a61fd319f773a2d42ee8bdbe6000481100a5db"
+      "sha256": "7f8b33959d5d5bf6014c2adc64950895d5c1d2f44b3a49470fc7c7c89ed3a753"
     },
     {
       "entry_id": "draft-insight-2026-05-28-who-is-liable-if-a-horse-is-injured-while-boarded",
-      "sha256": "0584c995c5fefbeddcfb59a2ddd214cb323f8db38cc9c7263cb33419069a0d19"
+      "sha256": "d7f256c162e96dc5293444a29eb3f5b4fe25310698f9e6a8877e2adaf445ab95"
     },
     {
       "entry_id": "draft-insight-2026-05-29-who-pays-vet-bills-while-a-horse-is-boarded",
-      "sha256": "29ebdebb5bc1d241fd53701521bca72156c2d154773bab1cd40932afb8b31f90"
+      "sha256": "d76acce3f4709267a602ff8f35e5a2cf98f8d5f9598ad03415168c6b55beefb5"
     },
     {
       "entry_id": "draft-insight-2026-05-30-what-happens-if-a-boarder-doesn-t-pay",
-      "sha256": "f261fbf09e9d43b0fb4c80b5400533be17fc9afa0ae7315c562fdd99936c3e18"
+      "sha256": "0846947e6c8c9e21a2601c4a73d0f98cafd19d88d77c8c2d35d146953f382751"
     },
     {
       "entry_id": "draft-insight-2026-05-31-can-a-boarding-barn-sell-a-horse-for-unpaid-bills",
-      "sha256": "333a0647c1145e8e403bb13e4c9cb04641b7dc1f1188e4af6c87631a1ef20935"
+      "sha256": "fb2a2a1b9f69310b5d2254b052f390325efe7ef0a2a6c3579efd96127ff37bf1"
     },
     {
       "entry_id": "draft-insight-2026-06-01-what-happens-if-a-contract-does-not-address-responsibility",
-      "sha256": "803dd0ff0a323bb7065fefba6f73db7ca05c69c4318c4ea230757549d5d32ef2"
+      "sha256": "a9146c1afd7d9a6cea6b1fb4364dee7efbe8e6f240d8e9cc59d87fc32a76acfa"
     },
     {
       "entry_id": "draft-whitepaper-2026-06-01-demand-letters-and-disputes",
-      "sha256": "9a9074903d974b396bf8852e8110e31fe8ba1e1fba77544152a9ed8396ccf936"
+      "sha256": "a7bc33dc41b8ca7b93ac31331dfde610e97953703326831bd2e150384eec19b4"
     },
     {
       "entry_id": "draft-article-2026-06-02-horse-sale-and-purchase",
-      "sha256": "1f9e690afb5f55a4e84a23b224a0c916d0531d14336ffd0d222868b9b1217dde"
+      "sha256": "d570e7fe2514d6e8e9c2323c489666f2806a02971d8bcb2fa4ac01f4761fbc84"
     },
     {
       "entry_id": "draft-insight-2026-06-02-what-happens-if-a-horse-dies-while-boarded",
-      "sha256": "0707201c90c57e882c8a3b3f126d51f44d4e70e7f1dcce84309050d7bacb6554"
+      "sha256": "41dda90945cec90c26dc9322cec8561d3c7ced572ca8f5205cb39c0228108a3b"
     },
     {
       "entry_id": "draft-insight-2026-06-03-what-happens-if-a-boarder-damages-property",
-      "sha256": "98dfb86d855e879c01c32fe9d127b204b43c93de3ea19ca3ca0ec762042728d8"
+      "sha256": "ccba7c5fb91e0dbfc896c9ab8d6915f705daae12aacb027dcd82def227c32478"
     },
     {
       "entry_id": "draft-insight-2026-06-04-what-liability-does-a-trainer-have",
-      "sha256": "674f005d50f6b6d0a6c24c2ecd9419e32353bf3f31d0cd5355b21fc90cd8d684"
+      "sha256": "a768412ef9d61e610593a5d75efb875f2ce2f28f405f03b507e9135050b9f4bb"
     },
     {
       "entry_id": "draft-insight-2026-06-05-if-someone-gets-hurt-riding-my-horse-am-i-liable",
-      "sha256": "212a4fc3ad3b8b32bd61a5e6e4fcac6dd1f89c95680976c8266b924a62a8df92"
+      "sha256": "555c44ca7b9125868fcbbc26c7d359b398aad5a0cb64ecab0bb6cb04698e4ab8"
     },
     {
       "entry_id": "draft-insight-2026-06-06-what-does-equine-liability-law-actually-protect-me-from",
-      "sha256": "3e9ef74cd5e49e7058577f50891f95acb3e06cffd554bb151361002945410c73"
+      "sha256": "79d76f04e62bfa1d74731317509379d757b5b398a4b7828a3e1fb6c2341f70b0"
     },
     {
       "entry_id": "draft-insight-2026-06-07-can-i-still-be-sued-if-i-have-a-waiver",
-      "sha256": "8992f53f3797b62358bcd7ae1a363a6b5d3324ad7297d5f1d105ead3a309af15"
+      "sha256": "9918c3e7c585d11fb87fcb667e03fd6b744fbd526357caa5065586ff551f21cc"
     },
     {
       "entry_id": "draft-insight-2026-06-08-do-i-need-a-liability-waiver-for-my-horse-business",
-      "sha256": "f49c1b533ac1f6aeedbc6ce4d12e9833c395b08dac746ac475716c244013c509"
+      "sha256": "318cd10606b6adb8240e69e43eb706a376a478ab0cca497a7ed8bd231f0fff00"
     },
     {
       "entry_id": "draft-article-2026-06-09-intellectual-property-and-brand",
-      "sha256": "6d6ec04a9d69783d77c19d0902e7207bd7f8d82e950475f667f15327d0c49c85"
+      "sha256": "8a6ddc26eaf17abaa1f9a1c5cdc78d8891972c0e62f60ae40c25c3d657f8d95e"
     },
     {
       "entry_id": "draft-insight-2026-06-09-do-i-need-insurance-for-my-horse-business",
-      "sha256": "2cabc0ee401ac41275f0a1a7c9fbb1fa52ca6fc5e408671ec048aa7b1f3c0480"
+      "sha256": "8137cf023e62da93d2e3afc369166ab9113b3e5ee37fd5c3cbae9cf4deb48f2e"
     },
     {
       "entry_id": "draft-insight-2026-06-10-what-type-of-insurance-do-horse-owners-need",
-      "sha256": "a5095b346f969133eee4288e5259c1945f5f47d3c4e69e27e610901f9d15677d"
+      "sha256": "b6cc4078cadc684ac4aadfedbfd0660a302ccf3cc4be45177ec1b5f9e772cf8e"
     },
     {
       "entry_id": "draft-insight-2026-06-11-what-type-of-insurance-do-trainers-need",
-      "sha256": "ac82d2685a25682b28a850764efcfde8a6739e2fc4274765d646dfeb0555bcd5"
+      "sha256": "3447a2fe52b69a24163d09aa4867c15a114eab542b9103719bd63adb346c80eb"
     },
     {
       "entry_id": "draft-insight-2026-06-12-what-is-the-equine-activity-liability-act",
-      "sha256": "15fd7f02538761eab62348cf5044f28e1eb172b62a7dc040304442a16acffa6a"
+      "sha256": "a5861ccd2581a71d7193e5d393e60813a2d838d76c328d90b8b18e0f3fe1e99c"
     },
     {
       "entry_id": "draft-insight-2026-06-13-do-i-need-a-warning-sign-at-my-barn",
-      "sha256": "2a8123d9b4ddab25acfcb003d7d84d947df15e91f0716ab61cfe73498f5041a5"
+      "sha256": "19b68c5861cf8007e806e39ddca97012882edfe4ce56943d046fc76281b0285b"
     },
     {
       "entry_id": "draft-insight-2026-06-14-what-happens-if-i-don-t-post-the-required-sign",
-      "sha256": "e2e4f1f0d76b866a7e5218561ecb51677f544b36fc4ec842e745669c97174d6b"
+      "sha256": "34206d80772ca0519a0f3555b21be465887919601c4cf9082b2a967ea95c2912"
     },
     {
       "entry_id": "draft-insight-2026-06-15-does-my-contract-need-statutory-warning-language",
-      "sha256": "04b5d9b0d8c3d26845d6f78f22c9472c38c614b88cdc00ad6e34b332fe217ce0"
+      "sha256": "18c039c8bd9ffae4f2762d2e69d8a148bc327d85da19b1e2e27886691d3088df"
     },
     {
       "entry_id": "draft-article-2026-06-16-liability-waivers-insurance",
-      "sha256": "640118a9830a3ef04acb1a5a11c24b1ed0cb91f3d9a395360c21dc24baba4016"
+      "sha256": "7e26751965b234c322534cec4b4fc9ad824d6e4a1676c66dd39e083c9a4517c7"
     },
     {
       "entry_id": "draft-insight-2026-06-16-waiver-vs-insurance-for-horse-liability",
-      "sha256": "1ad36a8fb0f55670bfefe4fd7755b303e6858e92cb2e7d16e8e351a7a3403a9d"
+      "sha256": "40b8c67531e74c62346eb57b42aafdb311f441858c1d5bdc5d27cdb059ba36e5"
     },
     {
       "entry_id": "draft-insight-2026-06-17-llc-vs-insurance-for-liability-protection",
-      "sha256": "954902d118e3cdfd9833d3083e81eb858be700a2ace86d517c84aa5820afcc74"
+      "sha256": "a776b33ca2914818bf26051845d617a404252b88bbad405206fcd3bdff941313"
     },
     {
       "entry_id": "draft-insight-2026-06-18-do-i-need-an-llc-to-start-a-horse-business",
-      "sha256": "4cb8abe3348a20b1e28793388515c71d92f89f0992680de9ad4e67dc9c7251e6"
+      "sha256": "1cd41a83447ad19df3a92e0679c1cc95850bafeaceead5861d01875d98416bd4"
     },
     {
       "entry_id": "draft-insight-2026-06-19-how-do-i-legally-start-a-horse-business",
-      "sha256": "cfba9732bb1203ae6a1423a5aa840d87184941c22fc3df1acd6a5f59ddd62306"
+      "sha256": "f145b6e9a25c01e243d9adb68c0582ce363e8ed0aee849e280ba9c4b37f034cb"
     },
     {
       "entry_id": "draft-insight-2026-06-20-what-legal-documents-do-i-need-for-a-horse-business",
-      "sha256": "79965c4de6902fea0dbce4444a45eed7f0653fb7453094013e4637e04be3fe95"
+      "sha256": "7379966cca1169c9ab4de2c81de6ce85c2cc94dd81616ea6dac9747e85a9d1b3"
     },
     {
       "entry_id": "draft-insight-2026-06-21-how-do-i-separate-my-horse-business-from-personal-assets",
-      "sha256": "57b0ee81e1e8345e18e4ff6bf3baa22249a00bf02739c0fcf8a0b90d9c2492fa"
+      "sha256": "e033b4040ea3117c966198be65cb514c8a3506c94049d47b07310233ecd8281d"
     },
     {
       "entry_id": "draft-insight-2026-06-22-can-i-run-a-horse-business-under-another-company",
-      "sha256": "0f4878b2596b3d0b11c647f265bcd563a1f4983ab64074a038a4516796e16376"
+      "sha256": "a8237f095c259009f410c1dd0578f1a3812e5fb8552458def8075a40a0f075e8"
     },
     {
       "entry_id": "draft-article-2026-06-23-real-property-and-leases",
-      "sha256": "03834fe2e798ca2ae63450d198921fb54f9b16f0c12d20325c3dce4f452b3d21"
+      "sha256": "cf8925b0474343aded2963a4e8250bc7f7d75a1d51cdef7a204c5c8632bd9923"
     },
     {
       "entry_id": "draft-insight-2026-06-23-how-to-start-a-boarding-barn-legally",
-      "sha256": "f66b13f2235c5cd4a19c2a921a9efd4d6a2364be0c617aeb32e85daaafb61175"
+      "sha256": "730a1f154c9689dc443b9e75b6200cf3fdb86b073ac0686eba61563d5973d544"
     },
     {
       "entry_id": "draft-insight-2026-06-24-how-to-start-a-training-barn-legally",
-      "sha256": "26bcb0d4ed82b0c728adc79ed5bda374e2e741a4d3b09b0e2b7e1f42e51048b4"
+      "sha256": "3083efff8078db7bac92f8d445ccb20e10228a0e9433031d39699d51ee534fd8"
     },
     {
       "entry_id": "draft-insight-2026-06-25-how-to-start-an-equine-assisted-therapy-business",
-      "sha256": "74c367377d94c5569292f1ec196f596b47d18b45cb60e998529755f6a49cd236"
+      "sha256": "3a0775d982ec5dbc3eeee2e19a5b8190459aaeb79625e63919c79c9491a1d848"
     },
     {
       "entry_id": "draft-insight-2026-06-26-how-to-start-an-equine-apparel-business",
-      "sha256": "aae86258fb78ad68ed26150f7abb03ded8eefc19a8aae17d43a977c0b57eb7fc"
+      "sha256": "5db30aaa85992b7bc5e050a61e0e93d52d8661dc3d5d2ce7c0f7eecef4ac8503"
     },
     {
       "entry_id": "draft-insight-2026-06-27-how-to-start-a-horse-retail-business",
-      "sha256": "34b2d66e8710ca2f83c5b10fe15c4c144713b8e661848e435ad2bde4e80be728"
+      "sha256": "15ac3bc829e50d2ce9dd65832feaed23d8279c2d305b1b62c650b38350c6c8bd"
     },
     {
       "entry_id": "draft-insight-2026-06-28-llc-vs-sole-proprietor-horse-business",
-      "sha256": "4b2b3c1abc7e065a123d797b2df9e664fabc2069c268fb601ac41ae0dd0b7519"
+      "sha256": "6aff8bb0beefee64d354f084d20b9f739bc087352d88469cc870b582af6b0a8e"
     },
     {
       "entry_id": "draft-insight-2026-06-29-partnership-agreement-for-a-horse-business",
-      "sha256": "2203f2fe7ad11748166a675a0257ea3353baf1c9583ef2dd60a50156c1a86b0c"
+      "sha256": "62d88aaf1c71aae80f03252cc00640a8df2858d51dceacc3e9417b59965654b8"
     },
     {
       "entry_id": "draft-article-2026-06-30-state-specific",
-      "sha256": "9c29af903bd059fbf5aa2110124c973a5e7de5b94203fc9e350b69ea3b6095ad"
+      "sha256": "b1198e77f08243bccc4e020c70e2480bff36b463c69f36c6b0aef647ae36c3a0"
     },
     {
       "entry_id": "draft-deep_authority-2026-06-30-liability-waivers-insurance",
-      "sha256": "4a3902c932949440800370e11534d3c8063865c595a7b3d3602e694dfa934eef"
+      "sha256": "2673793e55979b62b2847bb69e835c89f48a04da5bbda0d2f2e93f92aa71a6e8"
     },
     {
       "entry_id": "draft-insight-2026-06-30-horse-syndicate-legal-structure",
-      "sha256": "eea2b6326291f20f889d16ae16d565fd036c2ec099467a551c1095e6bcfd12b2"
+      "sha256": "ba98b30e15f2cc5ad4996ec430de536b4e87ba910968977ad044afeaec9dbb68"
     },
     {
       "entry_id": "draft-deep-2026-07-01-equine-business-formation",
-      "sha256": "e912398e2fec956938cc2f3ad5056f719a1ce0d24fdd26939b212d8b47f1d8a8"
+      "sha256": "762bf8380e8c87c4bc352dcdd04a7efdc01887014a79a866b87fa61f786126d5"
     },
     {
       "entry_id": "draft-insight-2026-07-01-joint-venture-agreement-for-an-equine-business",
-      "sha256": "2c3d43f880ec101e76249e15c34f8313c76131eeab076166227e219de926e9b2"
+      "sha256": "a4e8a57299a052d50a21ff0092cc05e5fecbfd19fe747de7fed8a49d1372c50c"
     },
     {
       "entry_id": "draft-whitepaper-2026-07-01-emotional-am-i-screwed",
-      "sha256": "b5077267b73a6f862a55d9016337992d7e6f49ccf3631df7f077ff314aa754da"
+      "sha256": "edf4ea7e286604b2e6fffcfc5583b4019a82cc8569ce104327c92adaaa0f47a3"
     },
     {
       "entry_id": "draft-insight-2026-07-02-should-i-trademark-my-barn-name",
-      "sha256": "ba385e5896ab5b4c08ab57dd31a1259804baa9156631b5dd26d80bffb1a65de1"
+      "sha256": "577f386ceeddd33d87d481f820591369e370216ff6a4f730655e883adc505e30"
     },
     {
       "entry_id": "draft-insight-2026-07-03-how-do-i-protect-my-horse-business-brand",
-      "sha256": "67ce9a3e8e91467292973ed2b58da1be255ec35b93079c2a133972a3513e15b6"
+      "sha256": "c5b45be20c45c149481a76371b7a067ae5794331ee0015def7f0cb192ded233f"
     },
     {
       "entry_id": "draft-insight-2026-07-04-trademark-vs-llc-name-for-a-horse-business",
-      "sha256": "175e94eca7436ce3e816923370af20a2da2fd4046096b1f2242bbd2c1739c893"
+      "sha256": "cb7ff43f11a47d97fc0d1a37015a3c2e59d37907c9949ff98c7e11fdffdd715b"
     },
     {
       "entry_id": "draft-insight-2026-07-05-do-i-need-a-trademark-for-an-equestrian-brand",
-      "sha256": "b00952942c5002a8146393b2e7f0aea16e2da79d3c0adc7cb553596daeee218d"
+      "sha256": "a1093947f4c13c426d3cf9eae06222531af9f0d212087e7a5d0dcc5f4a844378"
     },
     {
       "entry_id": "draft-insight-2026-07-06-how-do-i-get-a-sponsorship-for-horse-riding",
-      "sha256": "beb60ba8f3f9445ec52bdeed2aa895be1da75daae41a5e63b01e5c4d3d8d0ba8"
+      "sha256": "27c2eb4122f5faf15c3922b036f83d1439a5a4c05001bf7605dd76ffa141795e"
     },
     {
       "entry_id": "draft-article-2026-07-07-therapeutic-riding-and-hipaa",
-      "sha256": "a1270e16e06ba37a576f711b041894afd9d67af5715a47650778969d688b3a3a"
+      "sha256": "beafd17b50e04445ead7b28708b7c640632af6d3c05c82fe02b74925eddd5744"
     },
     {
       "entry_id": "draft-insight-2026-07-07-do-i-need-a-contract-for-a-sponsorship",
-      "sha256": "6bf1f3819806e002a3c08de66eda8c377c1888632bbca99e8b0a6539c8b3ef4b"
+      "sha256": "286917713f5dfcdb12791e140885099f60a9019443c8c84aa56ad059936ed342"
     },
     {
       "entry_id": "draft-insight-2026-07-08-what-should-be-in-an-equestrian-sponsorship-agreement",
-      "sha256": "9d335ebf59444a6d21bfac0304ebdb856fa4f1ab6c47d4037acb1da05ccc4231"
+      "sha256": "e8f9bf5fb5086675a4d9936a42279a692dc0a07bbbf33c44b8560e261bf99b50"
     },
     {
       "entry_id": "draft-insight-2026-07-09-can-a-sponsor-use-my-image-without-permission",
-      "sha256": "33d270e377832c56d9fe26c8813d69a136f3c933c26edaa3333ccd7d15bc0616"
+      "sha256": "d28a89f1ec0df590168daf6796c6d5640f47c6342b9529ee3e3c596d01cd4e9b"
     },
     {
       "entry_id": "draft-insight-2026-07-10-what-should-i-do-if-i-receive-a-demand-letter",
-      "sha256": "1b55a87c80c4459f17daeda701dab6f605fd578267d5ec9ed0e1bc911ee7485d"
+      "sha256": "43213dcabe990247821b73e92b818c7c48e1aec312dabe64ea748172cacfbc0a"
     },
     {
       "entry_id": "draft-insight-2026-07-11-how-serious-is-a-legal-demand-letter",
-      "sha256": "912fad861a47e01dc0e37764cd75b4fd8760a7c38a1f7bfa47bbbac74cd639c5"
+      "sha256": "12d613944db7769c908cf3a59df9d40dab9a447d74234da592bceec3ee542f1d"
     },
     {
       "entry_id": "draft-insight-2026-07-12-can-i-ignore-a-demand-letter",
-      "sha256": "b9a75953133080115a48a7c162b46b8ef17b99affb6557dfa59d7ef06a79858e"
+      "sha256": "09ab9c14b8ce269930b4a59f535cce3a1c9fa371d9d5b9bd4634561bce9cd92f"
     },
     {
       "entry_id": "draft-insight-2026-07-13-do-i-need-a-lawyer-to-respond-to-a-demand-letter",
-      "sha256": "764e1f7af48628f6d07f90fddf8a7e0c4f7262d282b283312494809abd1b9000"
+      "sha256": "5737149d27d62815b4da7919d177f0ba9288ccdab70ab313726642ea9a3e7598"
     },
     {
       "entry_id": "draft-article-2026-07-14-boarding-training-and-barn-operations",
-      "sha256": "2c84ece61a9bb55eac14eab2b88106c397df9c58972d12e991b9d07d448c8051"
+      "sha256": "1b0ec071ce4cb0f20b28c835b162eaba218092c8be3b413710479390c0811255"
     },
     {
       "entry_id": "draft-insight-2026-07-14-what-happens-if-i-don-t-respond-to-a-legal-letter",
-      "sha256": "3d194e51377e977237def05fea2d68cbcc4ba65ef419cfa39776efa938dde498"
+      "sha256": "470510fdba86881ac1c9067c1ee9be702d9c943e71946fccda035a8c82120fac"
     },
     {
       "entry_id": "draft-insight-2026-07-15-can-a-contract-dispute-be-resolved-without-court",
-      "sha256": "60a25fb67a814f2029f5863a72a0097056a156dc18e3571d33d3f89102338086"
+      "sha256": "d2184e022767ea492a054d33d38a062c2ef90772e06fbb7a332fc24bee0a0366"
     },
     {
       "entry_id": "draft-insight-2026-07-16-demand-letter-vs-lawsuit",
-      "sha256": "09f228919e80679573599b04466c01eed07ba71651a7a6adcd884484ade7c6c0"
+      "sha256": "30e726fcf9e46f98a481b8de024aee75db7fe09a9f20bec4ea7f24eb42ae2149"
     },
     {
       "entry_id": "draft-insight-2026-07-17-mediation-vs-litigation-in-horse-disputes",
-      "sha256": "b366f6228a44a3dcb7d1b2cba35627616775bf4215ed5bf8b0b62494feb6e909"
+      "sha256": "63af25ae087a9ae27081f53bd5e4c866aea22103c9ef088d3514ed80d0364471"
     },
     {
       "entry_id": "draft-insight-2026-07-18-how-do-i-start-an-equine-assisted-therapy-program-legally",
-      "sha256": "ff29851c7f1651b5c90f6643c532ce76f7a7a7bbf71d4b91fb9e90ebd49980ac"
+      "sha256": "40df97ddeb306d656ca9d248594a52708a87cc50c2940f6dc53175723a2f1d7d"
     },
     {
       "entry_id": "draft-insight-2026-07-19-am-i-subject-to-hipaa-in-equine-therapy",
-      "sha256": "7c85d9d9c7164d9d203207d23f436ff32019672d304e9e33e19446ec1c4ad280"
+      "sha256": "fef96de603b812f03c75d0efb829094c8b0ea2f5b0a9f6ff5709862f8889d794"
     },
     {
       "entry_id": "draft-insight-2026-07-20-what-legal-requirements-apply-to-therapeutic-riding-programs",
-      "sha256": "456234f3003817046a1bbce20304e811b81c7fda53f91d3c8e2683cceb8ce595"
+      "sha256": "40dc5283522ea743bf5e6678591c13107f92d82f4bfabfb2b2fdfcd61474d8e1"
     },
     {
       "entry_id": "draft-article-2026-07-21-demand-letters-and-disputes",
-      "sha256": "c6bff0e788838537d50f0c9d275fd325a1606746b0eadefa5c2d19058f0d0b81"
+      "sha256": "720ffafce97fa03502a7306ddbb3519278f9132fdebae305d4c19c224ccb7e6b"
     },
     {
       "entry_id": "draft-insight-2026-07-21-what-waivers-are-required-for-equine-therapy-programs",
-      "sha256": "e501ecfe8a3b4f7a0f5466df566bca27b15368d676bb82aa0f8ee097bccc31e1"
+      "sha256": "67ab1137893c07a462a16cea4a8091a8b879b897f070d386d14d4c1792a7e86e"
     },
     {
       "entry_id": "draft-insight-2026-07-22-do-i-need-insurance-for-therapeutic-riding",
-      "sha256": "383473172e262f35193402bd677d3414ecbc544272ae2841ca2eff4d9191da83"
+      "sha256": "bd88faf7642544943cece48f70320b6d7b826f090cc94f5a85c9940576058603"
     },
     {
       "entry_id": "draft-insight-2026-07-23-what-should-be-included-in-a-barn-lease",
-      "sha256": "48b17977b7340d01a1a7220b3715ead4bd9d91238b8b805ec973c395143f5e46"
+      "sha256": "d826e510a5b88a02fd129c3dbe1c7912ac9a9cb1735db4807c7916662e8b0762"
     },
     {
       "entry_id": "draft-insight-2026-07-24-can-i-run-a-horse-business-under-my-lease",
-      "sha256": "6c0fe22a0e4465d86298e6a9aef9fda3a944dc0e389b340f75a45ba7b6f2d415"
+      "sha256": "995a60418145036797527e4d846d46a9cbfdfbbfeebf32b61dd461f74440696d"
     },
     {
       "entry_id": "draft-insight-2026-07-25-who-is-responsible-for-repairs-in-a-barn-lease",
-      "sha256": "751dcffe6e6ad9d32d48950055387bda2a229aac57789ca28d6e8416e6b7e042"
+      "sha256": "d816025b75cf6fb8baa932b0d1889b09c1178ffbb9e24c0990fe9004b49ab793"
     },
     {
       "entry_id": "draft-insight-2026-07-26-what-liability-applies-in-a-horse-property-lease",
-      "sha256": "aee8b3bb82538ea4b243ff5c3d5afc0dabc94e65a31a28f84f16290b6035e8c7"
+      "sha256": "03369990f8076d90aec744c9d9e4e9ab68881556bdec4e794c71c24044865c40"
     },
     {
       "entry_id": "draft-insight-2026-07-27-do-i-need-a-horse-sale-contract-in-north-carolina",
-      "sha256": "1963b7ef2f5dad2f2ac3743600912d6b5c47d7a79a4b329ee86c43f45a89ba14"
+      "sha256": "ff7a74f11f649699540faa6f765a333b5a682575a2f1a8787a7b4decd069d4e9"
     },
     {
       "entry_id": "draft-article-2026-07-28-emotional-am-i-screwed",
-      "sha256": "d01a3acb19b23a5b86503f75bf5d89321c3a75aefc2401a175130559da7a2ce2"
+      "sha256": "c13aafa8cb16e42fd5a6fab8a6ac1762a0091af15422d136978f0d9b48edbb98"
     },
     {
       "entry_id": "draft-insight-2026-07-28-what-does-north-carolina-equine-liability-law-cover",
-      "sha256": "ac61035b43c0f40f7e7ee50ba689421f7f827de2c4764d0ae0b1c17f60efd0a7"
+      "sha256": "a912bc69bfbd3190eb58aa9e53179a7e716261387beea5c1ca80107927b36632"
     },
     {
       "entry_id": "draft-insight-2026-07-29-do-i-need-a-liability-waiver-in-south-carolina",
-      "sha256": "c4500446986127707b734b5a9e5f3c7cd9c6c38c0d0457498d6ba45597cdba2c"
+      "sha256": "0a106c51f3908fc996ca9c86859e431428b222449f6bc338afdc34d63b1eca1e"
     },
     {
       "entry_id": "draft-insight-2026-07-30-what-does-illinois-equine-liability-law-cover",
-      "sha256": "e9243f416cc72d91e81674963be300905c8610b30653cc1d9603706430784a59"
+      "sha256": "bfb4059804013d6e041f6ff1c5545b5782d1fe963df224760f559811fca3a8c1"
     },
     {
       "entry_id": "draft-insight-2026-07-31-do-i-need-warning-signs-in-north-carolina",
-      "sha256": "2d36a23443b5729ce7a47fed2907f25cdd8412d7a9589903338d3a2b15dcc4f5"
+      "sha256": "acd43122085e7ff48a298fc825581bcdcb55b75727de97ebfb36ac7e4cc1c529"
     },
     {
       "entry_id": "draft-insight-2026-08-01-can-i-be-sued-in-south-carolina-if-i-have-a-waiver",
-      "sha256": "e18788d1c46978a40e077fb60e40018d900c14754ac8126443aa5d331fd850ca"
+      "sha256": "e06e0209d612d1122da259e5cec5c5ca84d7ee84665dae33af39df80e8d6ce02"
     },
     {
       "entry_id": "draft-insight-2026-08-02-i-sold-a-horse-without-a-contract-am-i-screwed",
-      "sha256": "6a4523f278bb93d40a14748cb33819ad8c8d17b6c32eea6a09ef0bdc9ba13990"
+      "sha256": "7869b484753b3117e5afaefe2d338d2f42086e28edad09731f0840088ad4ad10"
     },
     {
       "entry_id": "draft-insight-2026-08-03-i-bought-a-horse-and-something-is-wrong-what-now",
-      "sha256": "e9c0b853a720d11571974b0e9dc5b93c6948ee86454e5336742c7a36f1648fa4"
+      "sha256": "0c2b4cbee88271f379852b1f2bc28cf26181699bc05addb504a6225aeb051f8f"
     },
     {
       "entry_id": "draft-whitepaper-2026-08-03-equine-business-formation",
-      "sha256": "9cf5dc70bb660954335242d89ccdd926cfb3a68e5768472a9fc4f28cd0729e83"
+      "sha256": "b67ae33d2f9a8243f369f7820ff8b7d07e796fc7dc00a21144009affe8cb6b84"
     },
     {
       "entry_id": "draft-article-2026-08-04-equine-business-formation",
-      "sha256": "147a3511b4266684129b019e0d7f53e39da5736c007010aca97fd459d50a7fa6"
+      "sha256": "a0186df242eb0929285da5d9714671e275063a7e634d736b989a028f37dc9899"
     },
     {
       "entry_id": "draft-insight-2026-08-04-did-i-mess-up-by-trusting-a-handshake-deal",
-      "sha256": "5b0132d9236a6fe8c97843933bfc74622dce669e627048046d3b2723cb7f7458"
+      "sha256": "9ec919c3d5b2f43e73b78d6cbeee6913c8b97ec1fd468cb1e8943c741303eccd"
     },
     {
       "entry_id": "draft-insight-2026-08-05-is-it-too-late-to-fix-a-bad-horse-sale",
-      "sha256": "2f356fc2558e5e87c1df123d036cb1bbb8968eb10e43c62eb88de59131e42a3e"
+      "sha256": "f29c639778533a101a4fd5b687676610f15a07d354da019cc95e4033a162f7a7"
     },
     {
       "entry_id": "draft-insight-2026-08-06-what-is-the-worst-case-scenario-if-i-do-nothing",
-      "sha256": "601d27b4cabb8a2223f5b975ba2597b427456aae02ac249fa9ced84df456588f"
+      "sha256": "5799dd5919c566a253efca4863a6acbd75e33f74703dfe10eaa04f04ee1f4888"
     },
     {
       "entry_id": "draft-insight-2026-08-07-am-i-overreacting-or-is-this-risky",
-      "sha256": "9c1c46823a1bfd5df8d15ba9c58eba6cbb30261af96cf72e38e27b4c4e3cb803"
+      "sha256": "88c5258373726506427f90150d96922eac24de9b7874bac926c62839e322e37f"
     },
     {
       "entry_id": "draft-insight-2026-08-08-do-people-actually-get-sued-over-horse-deals",
-      "sha256": "9d472b3557b765051de5e62d2bb9ef34829cd6ad8728da503dcd644ed4cfc03a"
+      "sha256": "d27293272c43e74d35ef1d0466841de2ba2f5adb38b214c642f22456d78cde75"
     },
     {
       "entry_id": "draft-insight-2026-08-09-do-i-need-a-contract-to-sell-a-horse",
-      "sha256": "f831a64f3e697219bd51668d7ed03021673a56cbb143e0829828be3cce93576d"
+      "sha256": "d85e749dbcd81dccc3b6de88c8d9286a1b89f3737ef2444b649e1eef697d19dc"
     },
     {
       "entry_id": "draft-insight-2026-08-10-do-i-need-a-contract-to-buy-a-horse",
-      "sha256": "32e7cca391b65a4f0b019f9ac09e26787dc4f0a882c3a1d78f757d4169f9b2c8"
+      "sha256": "8e182d52bce12e4b1d8b3714f16150ed21d39cc42bdbd5a0411d781f8e8da5c4"
     },
     {
       "entry_id": "draft-article-2026-08-11-horse-lease-and-trial",
-      "sha256": "429fe139fa57b5869c1bff4298e51d8a9a6d87003bd127818cea0b0fd9145b5b"
+      "sha256": "39f915fcc78bbc39937ba1e440af00a3006c1f1fa625ac2461a942006a9d1381"
     },
     {
       "entry_id": "draft-insight-2026-08-11-what-should-be-included-in-a-horse-bill-of-sale",
-      "sha256": "40433b5389a52ca1a2bf7aeed33732c9376a2db29a94499cd07699bf0287db4c"
+      "sha256": "4c6f4c7b79c86c08cf224e5c80b9297a38b45ad2005808b30636906b517af9c7"
     },
     {
       "entry_id": "draft-insight-2026-08-12-what-should-be-included-in-a-horse-sale-contract",
-      "sha256": "38b927a5f1ba1c2a1da6ac6c5295c87d471f66dbd8eadf87a66ca2cd8890cb77"
+      "sha256": "55cec9f6d3049295c7de6c5c73e7d760813a2dbb6a6b67f005612abab2d92eb9"
     },
     {
       "entry_id": "draft-insight-2026-08-13-when-does-ownership-legally-transfer-in-a-horse-sale",
-      "sha256": "0f6f8cd8224e302923ad827a223f19fe45ef58b17d06a0021995d42e76e42504"
+      "sha256": "6097f79e88708810c429a829723b82fc3c7d5d841f37d1777767c23e7bce7072"
     },
     {
       "entry_id": "draft-insight-2026-08-14-who-is-responsible-after-a-horse-sale-is-completed",
-      "sha256": "40ca312e2196b6bbbb3813f352348f509015fc32e4e5a5e2d09d756041d80371"
+      "sha256": "4328cffc7d20fac36d2e1ce7c4166185d79e48fca98b56198c5ee89a15259aaf"
     },
     {
       "entry_id": "draft-insight-2026-08-15-is-a-verbal-agreement-legally-binding-in-a-horse-sale",
-      "sha256": "962da243277ac46553e4e2b75675c257b2cc066f0e23cc0fbc28cdc13ac0775b"
+      "sha256": "5d9f9b774fa966079139e6e73f5a943d8ddb53b844709617d36b263aab8e5e8b"
     },
     {
       "entry_id": "draft-insight-2026-08-16-what-happens-if-there-is-no-written-agreement-in-a-horse-sale",
-      "sha256": "e924f6222f2ff89b71beaab20873cd9e3d6eeb2caf239f64dcc046245be44431"
+      "sha256": "2cb669b71a00b571cf024f161761cffa01a22cf99c39c229b70708f2abe22fbb"
     },
     {
       "entry_id": "draft-insight-2026-08-17-what-happens-if-a-horse-is-misrepresented-in-a-sale",
-      "sha256": "28774b319f37c529144aac1dab6394db335c07df35d6d1c769080136a831bf9e"
+      "sha256": "362d6facaed2d750a74c072c96426ecbbaf7ce09d2b2c97f556980c7beebdcc5"
     },
     {
       "entry_id": "draft-article-2026-08-18-horse-sale-and-purchase",
-      "sha256": "8c28e6037edeca8e870b7d9bbbc3646fb66440192ef77c04e45c1f682af26931"
+      "sha256": "cc300527be10574d21907c00b102551265597a412569dd9cc2355b5b791913b0"
     },
     {
       "entry_id": "draft-insight-2026-08-18-can-a-buyer-return-a-horse-after-purchase",
-      "sha256": "291bcda797710201f70212101d09aa309a5fad63ab5275ca4bfeca99ab525f7a"
+      "sha256": "40918d2f54b80014253fddaca114a40595bb03f062426abf16a511de5fc4f0c0"
     },
     {
       "entry_id": "draft-insight-2026-08-19-can-a-seller-refuse-to-take-a-horse-back",
-      "sha256": "dc08ea234771afc67efa54e1a7d1e8bb2a297d645e7458dcd8177f36ca22876b"
+      "sha256": "3e4c4617faedc116e768aef73c7cd5d44b81a4b0053d95fa0efe134909f041c1"
     },
     {
       "entry_id": "draft-insight-2026-08-20-what-happens-if-a-horse-becomes-lame-after-sale",
-      "sha256": "a1d61e6ec38f6f06a1ea86e78997031670a07bc896e7be8705b0140fbad4f629"
+      "sha256": "ab237a17a7b9858b2d27607f9b5a92d6dc8871306c0bd43fd28eb22f857cde83"
     },
     {
       "entry_id": "draft-insight-2026-08-21-can-a-buyer-sue-after-an-as-is-horse-sale",
-      "sha256": "64f99d946a2bbdf49f508489dcb61497e374d789e9227668e02c485f05bb354a"
+      "sha256": "72c6421609494cae1714e27d99a2d4f5e271d0440bcd72cf058ff026bd834157"
     },
     {
       "entry_id": "draft-insight-2026-08-22-what-happens-if-a-horse-sale-goes-wrong",
-      "sha256": "7182b6767f27a55d5ff2e9239b004d3b5700f85221746ad7ed50325988ecc3e1"
+      "sha256": "136fec6a9301939b7a8c1153735c51990d93d48ae8124b7da74f87d57ed57a25"
     },
     {
       "entry_id": "draft-insight-2026-08-23-what-if-i-sold-a-horse-without-a-contract",
-      "sha256": "3e2edefdf730ae12515a3a2d5b07e22e8257eecde1f4d65b34a16dcf3390ad20"
+      "sha256": "63839d5089496eb5f16804b743ab5f7a252af87e6ab00bd34162090231b2a708"
     },
     {
       "entry_id": "draft-insight-2026-08-24-what-if-i-bought-a-horse-without-a-contract",
-      "sha256": "aff1f3b56d98523ed1d7decaf2357a2d7255db4319df64201194d532f668dabd"
+      "sha256": "7479523a15035382eb8195982a0b386e835aeaa40f322c8bed9a34dd09cfc7e4"
     },
     {
       "entry_id": "draft-article-2026-08-25-intellectual-property-and-brand",
-      "sha256": "25aa7be4ce85a7ae1f208d5c79972f9d1b0cefa96647312f9cca4506532a10af"
+      "sha256": "908ff1f9041e75f6cb62d51eb13cb21906fc77725f2aa1557ec25de5d9de0ec0"
     },
     {
       "entry_id": "draft-insight-2026-08-25-horse-sale-contract-vs-bill-of-sale",
-      "sha256": "74f76725a3e4df116521c756c9d89d2edd0c178f222956cafafc006133fe57ff"
+      "sha256": "379ed62df65792b54a5d310701198888df947716f736ef967d0f67ec31078abe"
     },
     {
       "entry_id": "draft-insight-2026-08-26-contract-vs-handshake-deal-in-a-horse-sale",
-      "sha256": "7efd260aeda052c3073e59a3c0d481c48d179f31801a4a60b86c4cf85f09dbe1"
+      "sha256": "00c024192adb7282f506f7c54d91ef44b79b8146a8cc41878fb0fb79ab1abf60"
     },
     {
       "entry_id": "draft-insight-2026-08-27-template-contract-vs-custom-horse-contract",
-      "sha256": "eeb26af880285b3545abc13c1be46d51a9c48cebbef69d3a68f183fdd4ef5051"
+      "sha256": "03a0294364311aa5daf686e36e5750178a6e91cc852fd6f0f6b28c19c0b4406c"
     },
     {
       "entry_id": "draft-insight-2026-08-28-pre-purchase-exam-vs-no-exam-legal-risk",
-      "sha256": "271275dfec27f7a1e6ccac3769c337e74d068736c9e0274ce7db0189f830d72f"
+      "sha256": "339a6cecaf5300092f447785f9bebed4a8f14ec67cb1e61527fb71b566eb1eea"
     },
     {
       "entry_id": "draft-insight-2026-08-29-lease-to-purchase-vs-outright-purchase",
-      "sha256": "9101ff50059b37df1bb1c75528468f1db3cf243fbe81921cd6769d5463241e40"
+      "sha256": "f2eff0424ddd62324111a1b129d86f0307a7ca9caf843e2c1e2ce61e1a48d69a"
     },
     {
       "entry_id": "draft-insight-2026-08-30-what-should-be-included-in-a-horse-lease-agreement",
-      "sha256": "b840ef62e2d97be931c97c320258aaba23f464c1073db78d97cc9bd7034dd1ab"
+      "sha256": "b4cfc14832eefe6ee5fc80f2e646459037345197be818b8cdcce3c9c7dc14082"
     },
     {
       "entry_id": "draft-insight-2026-08-31-what-is-a-horse-trial-agreement",
-      "sha256": "55bfb26357155d7e845ee9a0652bada118033eba475bca6c26d83f2f7d6447ad"
+      "sha256": "4e978e4ec70a3a3e5419b55c1985aceaef68e702d9f736c720454e49c0cc7e67"
     },
     {
       "entry_id": "draft-article-2026-09-01-liability-waivers-insurance",
-      "sha256": "1206e8616e1883c225f602c12fb8a4e502ebe8a206626631936e46075b9871c6"
+      "sha256": "7ea17068f7f3cf5775216cb743371b26c8a3809fb440108aa651aa0d5d479a73"
     },
     {
       "entry_id": "draft-insight-2026-09-01-who-is-liable-during-a-horse-lease",
-      "sha256": "5c91aad1105af9dd4fe628c95937d9542c3da06886666a7c5b703e8071ba08c1"
+      "sha256": "4e25b0dd30711a811f317576834ad75f912457d81018e8c7fe28b694329461eb"
     },
     {
       "entry_id": "draft-whitepaper-2026-09-01-horse-lease-and-trial",
-      "sha256": "20d7fe080308c0e057b1f34cd5a3e1a61c73c7d7dcc9ad37eca03f71e2c9c092"
+      "sha256": "1dbdb911c6d29d16a37f2239c2d90c68d8998690ea89989a492a92d22d4f128d"
     },
     {
       "entry_id": "draft-insight-2026-09-02-who-pays-vet-bills-in-a-horse-lease",
-      "sha256": "3b207112a4b2a2eb91456348dcde77316e2fdda66419b116f4586bb4335301d4"
+      "sha256": "3ec11cd020b157bb9b15cea5a4020616a2d79d502769c4f296bebbadff93969d"
     },
     {
       "entry_id": "draft-insight-2026-09-03-what-happens-if-a-leased-horse-is-injured",
-      "sha256": "d6ade90f3e5423ecb8152364e7135f3516f5cc621f62bfa78275b16537057216"
+      "sha256": "87fa64d9a19e4d53b3114c7cc746e19945751fa36dc2cc5728b4998a6bd1f730"
     },
     {
       "entry_id": "draft-insight-2026-09-04-can-you-end-a-horse-lease-early",
-      "sha256": "0d66e879ed39012bef93f8529bf82e89ba27c31e298ef91738fb2d71dee34c60"
+      "sha256": "55ebc5340737f29f9e24faeb7d517d60b77abc921f1ca11c8dd4122914978523"
     },
     {
       "entry_id": "draft-insight-2026-09-05-what-happens-if-a-leased-horse-becomes-unsound",
-      "sha256": "467e4e44d897cbdf08423fb7721e0f13d4685b58fb1543f1fb41eb5fd946c8bc"
+      "sha256": "f5a5e6ddf13528808762610ac7045f9d06b0f02c4a2380b8b282aba7b670d903"
     },
     {
       "entry_id": "draft-insight-2026-09-06-lease-vs-purchase-horse",
-      "sha256": "03bfe28a23072492ba1d61a3da0f65ba57d47d05c1eca4d0bc5f648b1e1785be"
+      "sha256": "f05d8753b1b9cb0d06b04656bc3e30f4d542be20e3145b3bbd3a2bb9a8bbb1a0"
     },
     {
       "entry_id": "draft-insight-2026-09-07-trial-agreement-vs-lease-agreement",
-      "sha256": "ff8cbb556f05f442a6dc5d8a8ab1493317c4b4a4a66f62c5fe975290112e47d4"
+      "sha256": "fe7fc22df2340ec0659512eaa4c87ef0dd7f27f43d0deb5cb9c0bda92c40ddcd"
     },
     {
       "entry_id": "draft-article-2026-09-08-real-property-and-leases",
-      "sha256": "255ecfd6861e73939d89224e4bbd3d71ba70788720b66498ab5efd34d7b53222"
+      "sha256": "3faba61611d6b5f4b575e0f996af9b9a4706e1ea1c4eda16f0e905631c26b858"
     },
     {
       "entry_id": "draft-insight-2026-09-08-lease-to-own-vs-buying-outright",
-      "sha256": "bd8506efbdb1b1ee3ef9ac7f8a0da736f08fa5110e3cac51f1d55c7dfd1378fe"
+      "sha256": "6e38ed2f0d962b116cc45e6c3fa720815ed6279a80a5391b44157000b5b5cfef"
     },
     {
       "entry_id": "draft-insight-2026-09-09-what-should-be-included-in-a-horse-boarding-agreement",
-      "sha256": "038e0e9e56fa1340d052d14d096ed69499b6c981115488d8bfd7c643a4b4674d"
+      "sha256": "17954b39d014ffa5eb480c3f1cd871329c6c7634a6edc5379892a6fd979e702a"
     },
     {
       "entry_id": "draft-insight-2026-09-10-what-should-be-included-in-a-training-agreement",
-      "sha256": "0b4199dc8e34c83331b9be142c06cecc651f24b0c10f7d1f4cecef3f4b93b94b"
+      "sha256": "8cf00676c49eab45f276a0cc6106f74fe8e8a7852389c1eeefd4e931c1af6658"
     },
     {
       "entry_id": "draft-insight-2026-09-11-what-legal-documents-do-i-need-to-run-a-boarding-barn",
-      "sha256": "be9fea18a744ad123a8e56b7148a83473296b8e581a72ba0fd951199f5fbd81b"
+      "sha256": "838693585d795d23e37c156200af152170f99ea2fc3c748a9388ad9e4a65ac8c"
     },
     {
       "entry_id": "draft-insight-2026-09-12-who-is-liable-if-a-horse-is-injured-while-boarded",
-      "sha256": "d6f7b80de44e496ef6efa19cd8d30971cf2065eb46205780461dc61e3cf7567c"
+      "sha256": "547224a8f7aff535d6b4eeeff549e8bc90ab0c0f8b1dcddd15910b55ca8ec17c"
     },
     {
       "entry_id": "draft-insight-2026-09-13-who-pays-vet-bills-while-a-horse-is-boarded",
-      "sha256": "da461d6e5a466e3ae970544cb663af8a86f85c5abb2ec021fe385204951ee7e4"
+      "sha256": "cadcdbe98546813a059c050346de2ad9a452d40b485d7044029fab9aa4d7f478"
     },
     {
       "entry_id": "draft-insight-2026-09-14-what-happens-if-a-boarder-doesn-t-pay",
-      "sha256": "42b721bc496a38a03e33646f81c2518488b0a750e53349fa7a4f2390344b508d"
+      "sha256": "0c4c9677795f25cb6e79c27486364f9b04f8ba96377d6bf2cf621bb1a25a4681"
     },
     {
       "entry_id": "draft-article-2026-09-15-state-specific",
-      "sha256": "abc7b9e69565326c42269b2e2a8086c2c8fd8fc117091bfa9413234438e66d6f"
+      "sha256": "5ecda60fe01a38c9c103434c518795609db968c451b1a8f2d5033b000cf9889a"
     },
     {
       "entry_id": "draft-insight-2026-09-15-can-a-boarding-barn-sell-a-horse-for-unpaid-bills",
-      "sha256": "c14a9497eda1fb47c20d13003dbfe07db5eadb52b6883736fa45a1daf16631f2"
+      "sha256": "57ffc6fd00ef84d34a7d565885a84fd78adb795e2df0b2e45a9dab2b242e1bd5"
     },
     {
       "entry_id": "draft-insight-2026-09-16-what-happens-if-a-contract-does-not-address-responsibility",
-      "sha256": "47b51221caba0f49488f2f497cbda7fc6d79704534317305d06f5e91df827ceb"
+      "sha256": "d0bb99f73ee40f077b0d4cf91b78f6c69673ee35f2b1a3d17ddc072579ed3ca4"
     },
     {
       "entry_id": "draft-insight-2026-09-17-what-happens-if-a-horse-dies-while-boarded",
-      "sha256": "ff3b3aa46d68b5a16b4d6b3b499621bd246d77cb831bbd430bd995cee87a3def"
+      "sha256": "d1b0b3b90384bb5719db22354dc884e3f06c9c10d7628f6279893d681111df7f"
     },
     {
       "entry_id": "draft-insight-2026-09-18-what-happens-if-a-boarder-damages-property",
-      "sha256": "40f32e78ab433c8bb99d1b80535aa95e7dbb825b0d939f81a203e80269508964"
+      "sha256": "deb782bfb07e8bb24da1d209925974b92f8f403e792f00e311355a7a2eeea541"
     },
     {
       "entry_id": "draft-insight-2026-09-19-what-liability-does-a-trainer-have",
-      "sha256": "f37c6c4a94d0f7313e98525e3111ec95fe79908c8decff850bff4859a5d21c56"
+      "sha256": "ac5385dad685935a9e935fdcf1101908ed35bb445cc7e0fc6d4c2077d5d16805"
     },
     {
       "entry_id": "draft-insight-2026-09-20-if-someone-gets-hurt-riding-my-horse-am-i-liable",
-      "sha256": "b9b6efbead5301848ac46b21cb8e37ef37ea0c6227ef5a3182f2f0d12a4da449"
+      "sha256": "2ff4587edadb42e203fb8356fe811bba9144d857dcf6ae4022e6723fbe56f89f"
     },
     {
       "entry_id": "draft-insight-2026-09-21-what-does-equine-liability-law-actually-protect-me-from",
-      "sha256": "afc6d17780110dbb76585c0c08d44af0348ffa8c3b8f239a31b90b27f2bbf0d7"
+      "sha256": "7736bc411a422f4f2e84aae54e9d00acf4c541019cda140702d62e0214c30a7b"
     },
     {
       "entry_id": "draft-article-2026-09-22-therapeutic-riding-and-hipaa",
-      "sha256": "81eb25f34246232d1c4e2c6d79cf6f06a50288ca71b0b0fc86ea100964ffbb16"
+      "sha256": "309e59660b0879a5598efbea7d056f3147e5839d53f5659e2d6a206c1a0988c5"
     },
     {
       "entry_id": "draft-insight-2026-09-22-can-i-still-be-sued-if-i-have-a-waiver",
-      "sha256": "511f8f196413423c4788415370ab68687b5c538fc52ae4a0606f8bcaf7f127ae"
+      "sha256": "48ca367b0607aa3a6e4b9227e514dbf369c346d83b5d1d5e952f178dfe4160fe"
     },
     {
       "entry_id": "draft-insight-2026-09-23-do-i-need-a-liability-waiver-for-my-horse-business",
-      "sha256": "77425c4b857d2449563c5fc782b5d9dc83d3963d811882335150b18a1869dd02"
+      "sha256": "0c1fcabaaadaaa2fff3306133c6c31e05f0ea42f0fab407a934cde10739cbaa8"
     },
     {
       "entry_id": "draft-insight-2026-09-24-do-i-need-insurance-for-my-horse-business",
-      "sha256": "43d476d8c46aeedcc156dd5ca5d0db56a9b3980340c46b731b5e88cc47049de4"
+      "sha256": "68a46438658f9d6996cb3c8979a7ece0bdda2a7a2aa9dba7cd83a39f4712017f"
     },
     {
       "entry_id": "draft-insight-2026-09-25-what-type-of-insurance-do-horse-owners-need",
-      "sha256": "bb00c308f6f8c460b1778d2dd026b30ec8073b4585636100166603fd86ef1209"
+      "sha256": "d4ed0f89743e0ffca00ff4d84755aee293f1e2a282505ac8ac227561729ecc82"
     },
     {
       "entry_id": "draft-insight-2026-09-26-what-type-of-insurance-do-trainers-need",
-      "sha256": "65a6ddb7d3b9c41762a79ddb98dfc6994fd8e8c89096bb45493e77b66bf03511"
+      "sha256": "5c509dba090fe7a9874375189c248b26c1f4bd4267e63afadbc4c63187ef8f91"
     },
     {
       "entry_id": "draft-insight-2026-09-27-what-is-the-equine-activity-liability-act",
-      "sha256": "00dc918c3732c02932f03b98202326f151aa488e276de6282a7525879b78e1ea"
+      "sha256": "f7d8e264ee51af16d8ebf5b9a743c821dce0e0ee644cff143fe7907aeca38995"
     },
     {
       "entry_id": "draft-insight-2026-09-28-do-i-need-a-warning-sign-at-my-barn",
-      "sha256": "e4d41522b6e52ce81de04332469cfe834fe347337b6ccac7596aea8efca9c636"
+      "sha256": "91c1d4878f940cdb7dee0cb0154dd61a9232ce76600b1b7aabad6287b37cedf2"
     },
     {
       "entry_id": "draft-article-2026-09-29-boarding-training-and-barn-operations",
-      "sha256": "67b66a4657233203fa80702ebc7da52cd629f801c752a0c63a99b9b2ef79d957"
+      "sha256": "250dfa110bbb0728be7b5203ae768cfd3000d8a82b4de4f9888965631e10a9d0"
     },
     {
       "entry_id": "draft-insight-2026-09-29-what-happens-if-i-don-t-post-the-required-sign",
-      "sha256": "488584585a0df6b35265f2db13ccf0eed7f46c20f182e1142c0678eb326d0183"
+      "sha256": "2e42a17027b4483a997d6952b4a48b24263b54b3872803fb4b0fa4f6f69416a5"
     },
     {
       "entry_id": "draft-insight-2026-09-30-does-my-contract-need-statutory-warning-language",
-      "sha256": "dab8803e26d4db12d4141551326963e7c0cbf184fc22ba97f97ebfd34bae3169"
+      "sha256": "c642cbdbdb3965d241e86d07426d05714df781c10d94002904cf405e9ccda004"
     },
     {
       "entry_id": "draft-deep-2026-10-01-horse-lease-and-trial",
-      "sha256": "baa941ca46284f7af73f2b965588deeb69ef35f5d164463ca6a1eeda4d27e912"
+      "sha256": "c86b4c750c544056cc5ce78832cd4c70bda573b22ccd7bc60ab0b07720dec632"
     },
     {
       "entry_id": "draft-insight-2026-10-01-waiver-vs-insurance-for-horse-liability",
-      "sha256": "35770e6e87ff2b306ff6b02cca06cd60d7707192c3f73f7bee7cf70186a70273"
+      "sha256": "f6fb36f7e58e213f049cbcc05a1aa318f1e1ce05c14d46cf04196b19aee9cf5b"
     },
     {
       "entry_id": "draft-whitepaper-2026-10-01-horse-sale-and-purchase",
-      "sha256": "c072c3e8df5f563556ec4a5a874cd904a3a4c171c040473e81d98d54528bdff9"
+      "sha256": "bbd034a8e7ed7b32d93dcb4ac56e5c3ea55c2fdaf6fdad3d2561d318e8643f7d"
     },
     {
       "entry_id": "draft-insight-2026-10-02-llc-vs-insurance-for-liability-protection",
-      "sha256": "d89b3b40fce2c2a57a7eb723cc88ed68fb7b846eb97ec14d3b49a9d53116decb"
+      "sha256": "36b96504959a0b5342d914e382fcdd1a314b38072b7f578c699286363c1445cd"
     },
     {
       "entry_id": "draft-insight-2026-10-03-do-i-need-an-llc-to-start-a-horse-business",
-      "sha256": "1592991b27d3fa98ddf3d48502c5eaa98f473d7c90b9e3bf93c955663e6c6374"
+      "sha256": "f65ef62ba05d3b20a222fb444610b037d9f375528f8e7367e392ca2a55536bc7"
     },
     {
       "entry_id": "draft-insight-2026-10-04-how-do-i-legally-start-a-horse-business",
-      "sha256": "739053246943cc86318bfb539087d2e8ed6bcef4111031bff318ef913ce74b48"
+      "sha256": "b030d9feefeeaccb371633057ef53d90cf9d6963e065c17783739adc1044cf10"
     },
     {
       "entry_id": "draft-insight-2026-10-05-what-legal-documents-do-i-need-for-a-horse-business",
-      "sha256": "4af9d1e7c7cdc4bb548e7baf58859494549ea22d1de104ec4dad12a56bfc886a"
+      "sha256": "f0b124c582a100ef6976a40c634356ea8bf1e3994eaa1f0a803ec50eb5b699c3"
     },
     {
       "entry_id": "draft-article-2026-10-06-demand-letters-and-disputes",
-      "sha256": "f028c4acc2ab26d140a16e72521408aa9ad0f6f5b2b486c3d76f7fd041faf30d"
+      "sha256": "666b0fe3e66716bea8f32ffa491a4c4f6586c412da7812d3ac7eb578be75ac6e"
     },
     {
       "entry_id": "draft-insight-2026-10-06-how-do-i-separate-my-horse-business-from-personal-assets",
-      "sha256": "61a7fd760fd5d37594f766fd3e8eeca194466a4864ef8b4bcdc0ca5874575543"
+      "sha256": "ece707a390e387ba603f23ab9e3b7fdd2483657d44fa52b66fb8fea4eda41acd"
     },
     {
       "entry_id": "draft-insight-2026-10-07-can-i-run-a-horse-business-under-another-company",
-      "sha256": "396af28d94c96e847d1375cc01c6985970d2a46eb3b8839faa3a3fe81934dade"
+      "sha256": "35bd0c5bb4e757debeb861e80af7cfffabb7dc61e5aa788f9f8fdc589806102c"
     },
     {
       "entry_id": "draft-insight-2026-10-08-how-to-start-a-boarding-barn-legally",
-      "sha256": "c807fd4da322c65562b2a784b3f78d69a6c9e3c5bbc5a33e296c8fef4fc735c8"
+      "sha256": "897dfc67b3d32514de8c482630b3e7436f1e9efe4a02987e31b1c7490a095d2d"
     },
     {
       "entry_id": "draft-insight-2026-10-09-how-to-start-a-training-barn-legally",
-      "sha256": "13da64d0dbf7eff518962f130cf2bf7411ff54f83ffc00af439321c47e5c8625"
+      "sha256": "e59a594606adcb9fc1ee8d8b68ab0e8fee535dabe2398ef6720d49a92a3cb063"
     },
     {
       "entry_id": "draft-insight-2026-10-10-how-to-start-an-equine-assisted-therapy-business",
-      "sha256": "97d48120f96717d300eae146f9c8e5726b452b9b1038849ecdc06932b36db1a2"
+      "sha256": "ea1cb6d48ad8f4a0497f00f24f0156f3131f1fc2320a1e584859c2cc808f6325"
     },
     {
       "entry_id": "draft-insight-2026-10-11-how-to-start-an-equine-apparel-business",
-      "sha256": "d30a5e3e7a2b176b8dd0b7c89688b8ffa12f78bbc512d483b51c80614398aab0"
+      "sha256": "f681c23f774f62946a2a9d9cd6bf84e943c41e34b9407ac1154d1c38ff5985a8"
     },
     {
       "entry_id": "draft-insight-2026-10-12-how-to-start-a-horse-retail-business",
-      "sha256": "0acc263e9436fbcf234e8d244ab445c17073a3436e30011871b5bdccae574256"
+      "sha256": "6cfff89e64f69bbe051e947d35e2381ee059faf93ab2a20bbdd42a90198755cc"
     },
     {
       "entry_id": "draft-article-2026-10-13-emotional-am-i-screwed",
-      "sha256": "e7af025d25f120425813161469052f346fb424d98647b38226ccbb69141ddfe6"
+      "sha256": "ff811619c0cdd8ee9882963cf466e012b63c15e1e0e1370419d20bf591ee0a29"
     },
     {
       "entry_id": "draft-insight-2026-10-13-llc-vs-sole-proprietor-horse-business",
-      "sha256": "a800e53cd1d8dd976d46cc492debf9c224c3ef348997ff0421678ce6e51c6407"
+      "sha256": "5e84f912e23fde24c7cc3ad2aea1b1b7e1998a1249a764b4ec6b407a22291612"
     },
     {
       "entry_id": "draft-insight-2026-10-14-partnership-agreement-for-a-horse-business",
-      "sha256": "761e87aba3fdfdba4db6e544132a7a39c492dcb98dc82a3bd5f46a3d4c3f1970"
+      "sha256": "31c5330579beea28b6ec00fe24cf7ae611611c6e6a8fe83e1e2f202d5f521f81"
     },
     {
       "entry_id": "draft-insight-2026-10-15-horse-syndicate-legal-structure",
-      "sha256": "b09985b1a582d0e29864abb5c0a8efa5a5bea7bbe0528b0044ed98450fc74892"
+      "sha256": "c43701bea0486507a9ede497e63e0685ca6f363b1df43a8f643c4a9f200af9b9"
     },
     {
       "entry_id": "draft-insight-2026-10-16-joint-venture-agreement-for-an-equine-business",
-      "sha256": "25d2ef9387582693a02b7ee82c6d660fd4c66008f81c98da605b522a9a924e17"
+      "sha256": "6da86742b5996bfdc6d7edc859318f5db78c87aacdf2d08bafde61c7217211f4"
     },
     {
       "entry_id": "draft-insight-2026-10-17-should-i-trademark-my-barn-name",
-      "sha256": "ff65f8e06369113c9ef11523d8cab6a02cb52b56091a20118764c5cf1380c105"
+      "sha256": "5a0915ff4fe2829b89c7e4868e09bc0035f99d1721ed874e13be74ab773377bb"
     },
     {
       "entry_id": "draft-insight-2026-10-18-how-do-i-protect-my-horse-business-brand",
-      "sha256": "35186fcf4d3933efadc86cfbe368037b7eebe185312c7eff96277b55cb37dd45"
+      "sha256": "01a5c1f2c4a1704e5c29bdb473cc9e08a530893c41f208edf7a1f3060081de7c"
     },
     {
       "entry_id": "draft-insight-2026-10-19-trademark-vs-llc-name-for-a-horse-business",
-      "sha256": "31b66699b73a609f98aea28e5745c9fb0b767565cb7bb1043df5edff2e7ef1fe"
+      "sha256": "4460c78672b448bc98fdd0f1154e4be6ba9710aff0c9b2b043a98230c730f9d8"
     },
     {
       "entry_id": "draft-article-2026-10-20-equine-business-formation",
-      "sha256": "dafd8a6a3191326a56ea8461501fd2132e8dcb58cb3b6c13c3ad4aedfd0b6d92"
+      "sha256": "3b5ba3f260ddb628c78637d19ad70072b391fd7c6e49a58bef503ccad7fa5fe5"
     },
     {
       "entry_id": "draft-insight-2026-10-20-do-i-need-a-trademark-for-an-equestrian-brand",
-      "sha256": "eba0648d7bdfd5a8cbd448b5bd5d00fb584767e8d9efb0e1121e98389e3ae73b"
+      "sha256": "3dade7fb4c184ef3d6b5210adadc4bc623c42092ba057ca2959dd84e1b0d0e22"
     },
     {
       "entry_id": "draft-insight-2026-10-21-how-do-i-get-a-sponsorship-for-horse-riding",
-      "sha256": "d2e892c33d186f1dfc381d3177eb05cb793163d835adb9fec25dc6914f8cd523"
+      "sha256": "d28fc7d18ee1e29ba52da159e435f8eb4620b3fda36827806b2e549006ea2f4a"
     },
     {
       "entry_id": "draft-insight-2026-10-22-do-i-need-a-contract-for-a-sponsorship",
-      "sha256": "fd98f1876f609b76f8c726bd0e9a020a2e060df2807444a08b2e640de0ed5dbc"
+      "sha256": "c64a41876f403181eb3fed7c199daffc8aa776a31ca20046eb22852cea6f9f2c"
     },
     {
       "entry_id": "draft-insight-2026-10-23-what-should-be-in-an-equestrian-sponsorship-agreement",
-      "sha256": "d2b53e06359f488ac9e03bc0b04230bebe8d3fa750a6ade44598fe65297f9a6a"
+      "sha256": "839226d86a8427d2475c76bbeb70a6ef66d32cd2e82582e09f863237909a1ea3"
     },
     {
       "entry_id": "draft-insight-2026-10-24-can-a-sponsor-use-my-image-without-permission",
-      "sha256": "10b19d203280dfd9138ca05700e71d5853215aaefbfe514489daf3bd3af42f06"
+      "sha256": "f44cf7309997aaffc5a3066f128713934767c90176bb7a992e8b3bc5aa639734"
     },
     {
       "entry_id": "draft-insight-2026-10-25-what-should-i-do-if-i-receive-a-demand-letter",
-      "sha256": "14bb9c2a2cb91505d73f9f1b5b3d0d105df3e6008b757b8c523a64bb2fed5898"
+      "sha256": "d4d1a2ed3c5dd8858c2de1f91be34209ef867ae87e6c28b489bb7ccd204e05c9"
     },
     {
       "entry_id": "draft-insight-2026-10-26-how-serious-is-a-legal-demand-letter",
-      "sha256": "5c3fd746b8ba932e3cada14a8d666379da24aa33b3dbef8b2aca9bd9f95b56fe"
+      "sha256": "44afa996fdf0eff6058a4bf2c224cbe90a4b27485d772c7edc16ea92567212ac"
     },
     {
       "entry_id": "draft-article-2026-10-27-horse-lease-and-trial",
-      "sha256": "d92c8b76148fdfd1d9c110eae9eb7d4898823b7163a15e930c477226f978f6bd"
+      "sha256": "d2b9862b4d685c59c588972b07e76fbc24e8398c815e64f2af987a20e0f8e51e"
     },
     {
       "entry_id": "draft-insight-2026-10-27-can-i-ignore-a-demand-letter",
-      "sha256": "dd589d032bd8b5274c24d8864ac7b9f0d877f71a4fa2799ca4c3d32afb7d93e1"
+      "sha256": "a1b42f7e34df76b1da396edc5a2d8618313926754dfd0c4bef1632561025ca4d"
     },
     {
       "entry_id": "draft-insight-2026-10-28-do-i-need-a-lawyer-to-respond-to-a-demand-letter",
-      "sha256": "a80ed80b208945771b15784595df46f22b33f63b538c724150efe7bc50aead63"
+      "sha256": "e756ad51f4971e0e392ee95f8a01be2da6a79e8b56401c5ed7aafd92b1834798"
     },
     {
       "entry_id": "draft-insight-2026-10-29-what-happens-if-i-don-t-respond-to-a-legal-letter",
-      "sha256": "62cbb2bb5b51b27157e5f1cbb4e46bf21de6eaf127543ca8c93b35524218b566"
+      "sha256": "d4431bb14f4c811d52429832332f24bfeefd2ce8892b6b856b49ebb7a50aa827"
     },
     {
       "entry_id": "draft-insight-2026-10-30-can-a-contract-dispute-be-resolved-without-court",
-      "sha256": "34c9fd6df9859b6c47fc02a057c8ac847d46471d0519ae9dc7e538d5a902f006"
+      "sha256": "384b8150b2429295e28c6950fe9ca341003c80eb8a8499cae22fe386ea4436f4"
     },
     {
       "entry_id": "draft-insight-2026-10-31-demand-letter-vs-lawsuit",
-      "sha256": "3a64ddc7b692246a3e2cc09f5a646555fe7c28c088deab1a1828ee5874883deb"
+      "sha256": "ae7bf1f79d6549e03916865ee4c5d3853b9509ff845dc8240b557c54d66b9d41"
     },
     {
       "entry_id": "draft-insight-2026-11-01-mediation-vs-litigation-in-horse-disputes",
-      "sha256": "d182c7d2ad4541be84f53557b47e6da84d36be0d2e626547c559e89cfd780649"
+      "sha256": "15bf2d50b6a0dcae2697f121e504017e566cf213c2135dc101ef3875673a9847"
     },
     {
       "entry_id": "draft-insight-2026-11-02-how-do-i-start-an-equine-assisted-therapy-program-legally",
-      "sha256": "8f3de3fbbd040d8aff64f68df4e506444aab39d0675def959951fcff88003698"
+      "sha256": "b21a9cfd6330f81e72751cc8de9fd775e3de8ad06b13e81bdbb1c56973e51a50"
     },
     {
       "entry_id": "draft-whitepaper-2026-11-02-intellectual-property-and-brand",
-      "sha256": "84db4e852d4d178354d46fb8d61e45d30479870eb7e2902e30f61ff041f2c99d"
+      "sha256": "a900ed86341acffb6b41a9ffd944001ac7c2797475cf5a8163509cf1711df16f"
     },
     {
       "entry_id": "draft-article-2026-11-03-horse-sale-and-purchase",
-      "sha256": "3a10b7c066192419884d818c3435bcbd7a609c7cac7ad45b32d957e47b685da2"
+      "sha256": "34e8859a6e7666bef7b27a7a8d211ce94104a84071458a622764f4d720287d91"
     },
     {
       "entry_id": "draft-insight-2026-11-03-am-i-subject-to-hipaa-in-equine-therapy",
-      "sha256": "df3057fc0b12105ee26030f2805a7416f59859ae85ec82758b58b966e55ea047"
+      "sha256": "b335faad61ca5593fae30b18dd1f34f6315223a537463f2c1a6df828cee0ad98"
     },
     {
       "entry_id": "draft-insight-2026-11-04-what-legal-requirements-apply-to-therapeutic-riding-programs",
-      "sha256": "f1fbeb71f9aa4cc3ff48e98c12ce17a58316683c4c5644d55aa2236b4efccf17"
+      "sha256": "75320f5e9cbe9be2b664840ce18b6a9cd73058c2552ad8ca638ea93c1974cf65"
     },
     {
       "entry_id": "draft-insight-2026-11-05-what-waivers-are-required-for-equine-therapy-programs",
-      "sha256": "cfd5d7625f140ddcf4990a1137fff86b971db7538b0194575cb954b25cbd0ac7"
+      "sha256": "d966a07fa4e7b40acb1a6ad8d6231ee0657dec0d762bdcdb057499b38e34a411"
     },
     {
       "entry_id": "draft-insight-2026-11-06-do-i-need-insurance-for-therapeutic-riding",
-      "sha256": "0ff8ee601081bcb210e75777deaa93398e565718024d033c86921a17ecf200a0"
+      "sha256": "42a718d3f52ac595d4cab5ea97909ce8927e2c25883a9d405f1d56a473a7d457"
     },
     {
       "entry_id": "draft-insight-2026-11-07-what-should-be-included-in-a-barn-lease",
-      "sha256": "7f3dc386286bc25e4c655231a14bb8b5af5c6b0657dd00afc2169f529360eb71"
+      "sha256": "6f92313851bb108b25bbe5f2e946f022ce1740375eab9e26406930e44bb44317"
     },
     {
       "entry_id": "draft-insight-2026-11-08-can-i-run-a-horse-business-under-my-lease",
-      "sha256": "3ce68ac5b4db31b2ed8de25eb7097e342cc465567aef7c6c25f0ebc660745c40"
+      "sha256": "ac6cc35970b2f63f4fe31eb1a3f904e7dc340c2785803d317276d6ab06d19b04"
     },
     {
       "entry_id": "draft-insight-2026-11-09-who-is-responsible-for-repairs-in-a-barn-lease",
-      "sha256": "bf492c7530fd0cf471ca77eac375cb1fa9f5270d75a549be0f82d0a838176530"
+      "sha256": "a6e794c59fc55b4d179e3267d4cd3049e34d5c373d0abc9faac07991e4bc30e8"
     },
     {
       "entry_id": "draft-article-2026-11-10-intellectual-property-and-brand",
-      "sha256": "358344da94dbe95f0337be690670cdb7a0ba37bddf7293b139bbe3e1370fe97d"
+      "sha256": "039b67a1db7a79f2f8aa252804cb13462eb8e055822400cc29c323e08cbc9597"
     },
     {
       "entry_id": "draft-insight-2026-11-10-what-liability-applies-in-a-horse-property-lease",
-      "sha256": "c4d1f94c9dedbdc1a5d2dbf831eb9c027b3ca966765cfc84d170f725b566aa06"
+      "sha256": "28184715fac78f849b86eb728feccf76fdf043aef5181d9e5a25c3c26002b042"
     },
     {
       "entry_id": "draft-insight-2026-11-11-do-i-need-a-horse-sale-contract-in-north-carolina",
-      "sha256": "523e5aad0eafe5f93a74928dff58c3021a3d1b161c3e68453c4ad7364da04510"
+      "sha256": "36c2d3c839944c9eb6f69cf9ffcac2e4552a328f0a860d06630a41d8dd50fd68"
     },
     {
       "entry_id": "draft-insight-2026-11-12-what-does-north-carolina-equine-liability-law-cover",
-      "sha256": "33ca8dcb7be8a6ba9fd5246ed502e37b243a2159a01fdd0a5c628b1ed9646671"
+      "sha256": "751933e5367edca44d3444be5c800b01e460cb7856f11711008b90e8df9d5410"
     },
     {
       "entry_id": "draft-insight-2026-11-13-do-i-need-a-liability-waiver-in-south-carolina",
-      "sha256": "343ec002658db9558f62ccf5266d7c112f08602f59172ee8bb442a3a0e56e1cd"
+      "sha256": "b14b97a1a652730b67ec3ebfa6ba832e25a530f2fa8c5062d1842a7e1c0b088d"
     },
     {
       "entry_id": "draft-insight-2026-11-14-what-does-illinois-equine-liability-law-cover",
-      "sha256": "c0698650689ead774dc9a791d71832060f616a6c5d4c6b2ca3d86512660127f6"
+      "sha256": "877175e9e8ab7d7988db25c35b40d044fdc886753fa0f1e8215a6b2769e4f662"
     },
     {
       "entry_id": "draft-insight-2026-11-15-do-i-need-warning-signs-in-north-carolina",
-      "sha256": "586d1831da1cbd351877804d7926ef7427134b8e10424b491f4e2f48665a7b5b"
+      "sha256": "a83096a38d492c3640a7dbbc8241b0ab971092f91a1e779adc94aea2145d471f"
     },
     {
       "entry_id": "draft-insight-2026-11-16-can-i-be-sued-in-south-carolina-if-i-have-a-waiver",
-      "sha256": "3188c095443b33209810b43089817fc11e805f265c5a7e6c486a1be1a3cd7efb"
+      "sha256": "9a074bd946cd584d192f5c6c0ad187840e625ce661374d95b904ecf02042f432"
     },
     {
       "entry_id": "draft-article-2026-11-17-liability-waivers-insurance",
-      "sha256": "d65d44e2dcae440fefdf9fc6379bed932903a26cdadc21008ea17f9520485acf"
+      "sha256": "222d78311cfc63f55ab4dc022a7c507101e725ba68e7930da0424f2e5ddaa20d"
     },
     {
       "entry_id": "draft-insight-2026-11-17-i-sold-a-horse-without-a-contract-am-i-screwed",
-      "sha256": "297f1ae56708e92b448bce3105b1ed21f06775b06f1fd63fc50d2e4627068093"
+      "sha256": "7ddf16cbf6c8c1a0f2a08f05c78779a0dacd88ba81f2012761b11eef1fd5d11c"
     },
     {
       "entry_id": "draft-insight-2026-11-18-i-bought-a-horse-and-something-is-wrong-what-now",
-      "sha256": "48d27a2eb88dcfd2aca10f5297fea715099ef848db4510bee2e4c65adf967041"
+      "sha256": "bea835e620f3c91e1eced38fd344543a0babace4abe5efe32ecc83bbeac30e5d"
     },
     {
       "entry_id": "draft-insight-2026-11-19-did-i-mess-up-by-trusting-a-handshake-deal",
-      "sha256": "ee9aa765902e86d3e9d99bf660c5f5347a2630e5089e13a41d3554b2201f7ebf"
+      "sha256": "11a7d56668fcd5cd84c5efcf4524052046220f44f7d78772098539b15cf7fa6f"
     },
     {
       "entry_id": "draft-insight-2026-11-20-is-it-too-late-to-fix-a-bad-horse-sale",
-      "sha256": "74047d312d8af02d1d972f9deb2a000ca470b7a428bd4cf61229795de7291be3"
+      "sha256": "142b363594f72bd891cbf15b04bc5e27325a50016d51f97f26ca7c9b6c00498c"
     },
     {
       "entry_id": "draft-insight-2026-11-21-what-is-the-worst-case-scenario-if-i-do-nothing",
-      "sha256": "7efa3e9c7a65e42b22a36e70b0d740f1533ec2ade67d3d93c217b1247f24a388"
+      "sha256": "38d72d693fa0a7cc3260a988bbba6975c0b21d868dcbf75f13a674fa36590b4b"
     },
     {
       "entry_id": "draft-insight-2026-11-22-am-i-overreacting-or-is-this-risky",
-      "sha256": "c8fe81b34c7bccc7ca5c266741dfd85451b725180e37c6a4c923e3b42296d479"
+      "sha256": "d31170b7985516cf1022e776015c558fe784f8c7aafc635d8d977e63e2faf4f9"
     },
     {
       "entry_id": "draft-insight-2026-11-23-do-people-actually-get-sued-over-horse-deals",
-      "sha256": "8ea61f851546810ae732e4d84fd8ba661869fb982a5e7327fccf01b4be9bff2d"
+      "sha256": "58fe4619222c3bb08f488e7d9bd9048e70feaebdc3c4bc071764b343008738c7"
     },
     {
       "entry_id": "draft-article-2026-11-24-real-property-and-leases",
-      "sha256": "2eb8559e651030b44c328ecef3d183850ba5d2bd860595637a230b481019e2b8"
+      "sha256": "c2f400d9b18bd647445610a081259fac2ecdd374aadd4afcb158bec86074b981"
     },
     {
       "entry_id": "draft-insight-2026-11-24-do-i-need-a-contract-to-sell-a-horse",
-      "sha256": "08b1938f54f68aeb075d12c4ec0627147015c202da896a0a51309d2a393afa1c"
+      "sha256": "b494c08bed81277d6e62c79cc00545aac64c1e669f11ac84ee30a35854c0afa2"
     },
     {
       "entry_id": "draft-insight-2026-11-25-do-i-need-a-contract-to-buy-a-horse",
-      "sha256": "ceab2c3ce7c4d6ebe4afe959f36ff2399711487943065db3dab3c4214cb2e1ca"
+      "sha256": "3c72a5e4c99e385093ee2d97a4c69ac666b0a8ba16a5531cf8e7d57cdeca74f2"
     },
     {
       "entry_id": "draft-insight-2026-11-26-what-should-be-included-in-a-horse-bill-of-sale",
-      "sha256": "7d85dc706c0315cd607a2ff5edd85476c907812d7d34a391dbce4e99e51a69bd"
+      "sha256": "d1d9a6c0f31644fe4d683b9485da865c287ed570b8f84b8b6d97c0fca2860dc3"
     },
     {
       "entry_id": "draft-insight-2026-11-27-what-should-be-included-in-a-horse-sale-contract",
-      "sha256": "e7bdc81f9c358dd4e931c8502ffc03f9360859b0fb657fe19d78392d2a0a3276"
+      "sha256": "b196027d4b3909b371dbf0ff36e0ba31d027da5c14be885f1f8daceb4561497f"
     },
     {
       "entry_id": "draft-insight-2026-11-28-when-does-ownership-legally-transfer-in-a-horse-sale",
-      "sha256": "bd23f7987b24cf89ae441444f7890bae8e07e2ea1d6db7b2d02c497dae94e0a4"
+      "sha256": "1ca6109ba08a62c01370d85a519147ddc8331541abfbe30b316b2aa729e4e2af"
     },
     {
       "entry_id": "draft-insight-2026-11-29-who-is-responsible-after-a-horse-sale-is-completed",
-      "sha256": "fe989315c4659d0f39537c346f30e707ef8c3e80051b8c96489e7217e754af01"
+      "sha256": "64f5d7d52fcd3f49b9fd7ff3888ba94e939750ad60fe43d37ac1776a045785c9"
     },
     {
       "entry_id": "draft-insight-2026-11-30-is-a-verbal-agreement-legally-binding-in-a-horse-sale",
-      "sha256": "4b979615026bb770455bb9f7b9771d5ae705a9dcdc2c65c33f9edd801e1068cc"
+      "sha256": "9a06f86b0fe4e4285c778d4f96ccfe5388a05a7f20b6b4fc6d26c6539d022539"
     },
     {
       "entry_id": "draft-article-2026-12-01-state-specific",
-      "sha256": "437a723a9fe973498c894e5ccc10202065878deaf924e1eab4831688a0451fac"
+      "sha256": "7a36b6cb4c2086fd8df98d8092cbd23237aeacde3faf563d3e6884ffd9299bee"
     },
     {
       "entry_id": "draft-insight-2026-12-01-what-happens-if-there-is-no-written-agreement-in-a-horse-sale",
-      "sha256": "565dbff6660bc44e411fd11fc67a163316c356b241b9f61a7c13d9c4cf53b563"
+      "sha256": "7bb9a631095f491042bc5db1a3e62206ad759c3bd5d293788bc9fd400020ae32"
     },
     {
       "entry_id": "draft-whitepaper-2026-12-01-liability-waivers-insurance",
-      "sha256": "f5c4e5b25d4d6597b0e60f9944bb4341d0d294016d0df47b0cab23a0bb3d468f"
+      "sha256": "3d841818f4f118e1b9e9078c0f4524a5301a17eb05c70f34fdc2734fb474fb52"
     },
     {
       "entry_id": "draft-insight-2026-12-02-what-happens-if-a-horse-is-misrepresented-in-a-sale",
-      "sha256": "3f8ed599ef47c8944c701dd0b66d02af44edb07ed0c8ce1f655cb7eb53949eeb"
+      "sha256": "31f024fe171bab1cfe90e659c9efb98d51fc6cf03ad2a086134ce2561002f447"
     },
     {
       "entry_id": "draft-insight-2026-12-03-can-a-buyer-return-a-horse-after-purchase",
-      "sha256": "b167eae4cff40cd7bebf4cd22e44d2d5a354b0b18aba5c0e7e41302619ed344a"
+      "sha256": "17805a4f6ea5e39c6881a670360432e5c6de4adcef711339c37db29ad7b4dc6c"
     },
     {
       "entry_id": "draft-insight-2026-12-04-can-a-seller-refuse-to-take-a-horse-back",
-      "sha256": "96d8d6b3ac71c2d41f6aefbc6e06da8901c89e1cee72a39f243064d4b5ff172c"
+      "sha256": "ac75972b05f2ee61c7bc571f789b406c0d788d25bc122fb861dacc04db05ab0f"
     },
     {
       "entry_id": "draft-insight-2026-12-05-what-happens-if-a-horse-becomes-lame-after-sale",
-      "sha256": "889eb618202caa2b483c58a17d45ce467f4623174cb27ebd0ea4de1d9f5830cc"
+      "sha256": "3c96806d5a234b30122f9fc3c1fbf6ef7070925423a8f2704848734582b11c32"
     },
     {
       "entry_id": "draft-insight-2026-12-06-can-a-buyer-sue-after-an-as-is-horse-sale",
-      "sha256": "c0c46fc4eae089c7e3199897427da4b9e82c77eca755fe5f433976d8e7e0b181"
+      "sha256": "ef19abf01c0b281c4d9ffc1fbca91bbb1ea2a1ff028a2b20f64a1a105ad728f3"
     },
     {
       "entry_id": "draft-insight-2026-12-07-what-happens-if-a-horse-sale-goes-wrong",
-      "sha256": "3c0123abc931430dd9b5bb6c7271addfe5f9427a1ad6060aff45f49681c985ea"
+      "sha256": "4622f8a9414576dd1ad7f0dfe4a7281b28d797ec948044b137033bf6c2eca9dd"
     },
     {
       "entry_id": "draft-article-2026-12-08-therapeutic-riding-and-hipaa",
-      "sha256": "e17f314a3ba062ff6afc7670e0fd3d74949ec1463faf23dd3e24945ae3f5bb46"
+      "sha256": "cea5099fb0bf236bfab5e1d1f4cd2c7a93c85c949c5d9a9feb0a728392fc1c8d"
     },
     {
       "entry_id": "draft-insight-2026-12-08-what-if-i-sold-a-horse-without-a-contract",
-      "sha256": "364d675fb3c461d885e9c9ab04a7cdef6e733d17dc50b1cb9258f274ffb096dd"
+      "sha256": "4d890cd4b6eb9515c9374cd06978fb52b537d2093f4ea71ef953fc3e1472b1a6"
     },
     {
       "entry_id": "draft-insight-2026-12-09-what-if-i-bought-a-horse-without-a-contract",
-      "sha256": "4ba80831445eee91a12d4979a6a76c300b0c13d54e3e8c83e578054ce47ba6db"
+      "sha256": "3e6c32b250fce91984f6d51964fa210525b838ce29427aaee363f1f1abb33d32"
     },
     {
       "entry_id": "draft-insight-2026-12-10-horse-sale-contract-vs-bill-of-sale",
-      "sha256": "71ea85b9df482260feeb7bfe09478a51f35489aed3c28b461d2c03c252d32dd1"
+      "sha256": "c9b659634dff254beee8c6c782e5d02563d04615f02698b6ff40bc8b75f525d8"
     },
     {
       "entry_id": "draft-insight-2026-12-11-contract-vs-handshake-deal-in-a-horse-sale",
-      "sha256": "32937ac4a176ddf562a8eb3d5ef923786d24f2e3cc5a9e7f91cb00a2a17d87c4"
+      "sha256": "c1db0bad5a43561c931013362e7f22b51d7501f736f1eae439d7b714ca671d8c"
     },
     {
       "entry_id": "draft-insight-2026-12-12-template-contract-vs-custom-horse-contract",
-      "sha256": "f20f529dbdede49e1ffff3efd201705990ebaab45e9217036bad2c72400a6ad8"
+      "sha256": "cf153cd0c12d178d803a62b8a3565c56edb3e2c727910d160a5fe4a83bfd7d14"
     },
     {
       "entry_id": "draft-insight-2026-12-13-pre-purchase-exam-vs-no-exam-legal-risk",
-      "sha256": "f19042cf6de3a2726754c94b85907e2828623d5a5052f37faa555c1a28c344f7"
+      "sha256": "0ec0545e28757ac0a059b87d6ac1108ba1f132b08e53e9f11eac125a518976ca"
     },
     {
       "entry_id": "draft-insight-2026-12-14-lease-to-purchase-vs-outright-purchase",
-      "sha256": "98d0c2afcd937c5f109c84aef72d25e50b948c4cd512727e4ac7971cdf3343e3"
+      "sha256": "7dd88871cf37bfe7784cd80ced6b643b853b8212734fbd627bae2afbe2e439b3"
     },
     {
       "entry_id": "draft-article-2026-12-15-boarding-training-and-barn-operations",
-      "sha256": "68ea7825b26c0cf08ae6491a75bc1f6d290080ec66f9d051ccfdb15ea82f1273"
+      "sha256": "f453b2185c0a19fbd8ec217a047838275bf5be02b9acffed04bfaaca5b5bc936"
     },
     {
       "entry_id": "draft-insight-2026-12-15-what-should-be-included-in-a-horse-lease-agreement",
-      "sha256": "f3109c1df4c516b043cb9d28c37d1aeffaa13d01ce019f0082e198675a0e315c"
+      "sha256": "0506d461e3e4062072551926fe5a00943c353d28c166850fd1b186b8a50110c2"
     },
     {
       "entry_id": "draft-insight-2026-12-16-what-is-a-horse-trial-agreement",
-      "sha256": "8c94759dfe5cad72c82d82d383464f6466ebdb48fabd4e7d679803a2bcaed677"
+      "sha256": "0f7fc12800b6eb39fdef07b97960296628ea603e9018f45b52e98f2cb51a7e96"
     },
     {
       "entry_id": "draft-insight-2026-12-17-who-is-liable-during-a-horse-lease",
-      "sha256": "ba6a7fc3456ad40872268ff0434c1327c9f339d6466506a9412fb38694f5ea1f"
+      "sha256": "83853980e09a1e7edbc43152bed25fefb47a65be8597f18172c3c541cc2a1a89"
     },
     {
       "entry_id": "draft-insight-2026-12-18-who-pays-vet-bills-in-a-horse-lease",
-      "sha256": "8c8d57e7ec0753ed11482fb0518ac6a79e820b0d3400ebbc74023a793528f372"
+      "sha256": "e571b81e3b148fd5a29e0a4ffb78f7cb8335db2be5679405673a4b96f3dc4fb1"
     },
     {
       "entry_id": "draft-insight-2026-12-19-what-happens-if-a-leased-horse-is-injured",
-      "sha256": "e4578f095e614825ce13132181107a39aae12b4518e9ca82d4daa7c4d1fca19f"
+      "sha256": "4012f5b158ea5d719adaa82a0329dc68749ba1a5ea6426d103cf168296ef52eb"
     },
     {
       "entry_id": "draft-insight-2026-12-20-can-you-end-a-horse-lease-early",
-      "sha256": "e1067f9f93522d6ffb55cbfe23fb744c7695b1ec77e2cbf0512a52b68f1ddc1b"
+      "sha256": "6cda5deb61313ce31428b1524ac0602949cf0dfc5223a16ee28d5e48033f2693"
     },
     {
       "entry_id": "draft-insight-2026-12-21-what-happens-if-a-leased-horse-becomes-unsound",
-      "sha256": "e051bc6cf405bbf6d06c1d39c4cb58a6090772cb89b3dfbe7e25e45af7b36bcb"
+      "sha256": "a37fbec6f14f4223d94e101c49e4af4b8e0a6613bb889b0dbcbac2e924650f53"
     },
     {
       "entry_id": "draft-article-2026-12-22-demand-letters-and-disputes",
-      "sha256": "cd720a4f41912d79401e5bab0d19cb7b48d91bcda709153e0b3f028ca0698704"
+      "sha256": "635990ce69781b852ed1141d45f315a2d32e72a893cc35b8a1c957b365bb4b6a"
     },
     {
       "entry_id": "draft-insight-2026-12-22-lease-vs-purchase-horse",
-      "sha256": "74016708ed9798c0cfb9b9307dc5437c2785d6665e0d5aadc7e712abb5010b83"
+      "sha256": "c7bc113053595ecc4549f3d1551cec437da5f93fdc83e040781fd55db86713d1"
     },
     {
       "entry_id": "draft-insight-2026-12-23-trial-agreement-vs-lease-agreement",
-      "sha256": "fec890f30d80a8996992c810dacc634cb27cfe6fe951b48438da1348c3ec4b10"
+      "sha256": "c9770bbc8f5f096a4555e7d11005b2ce9da8a58d9a7e371b8a5cff8edfd5b47c"
     },
     {
       "entry_id": "draft-insight-2026-12-24-lease-to-own-vs-buying-outright",
-      "sha256": "1fbb23b17a8bf1c632256544d57247eba2c4ff506062f7e5704369bcbe9e351e"
+      "sha256": "21650970e8b967afe4d0f31d6341d2ce00af471e0cc8bfb15e9ea5b74a310815"
     },
     {
       "entry_id": "draft-insight-2026-12-25-what-should-be-included-in-a-horse-boarding-agreement",
-      "sha256": "b74bc8f5a74ab3f8620cb34c064eb184a8dcaa658bc498a3162a61b98fb9cbfe"
+      "sha256": "f37f56d1402a527cb929feda1508d8ac3fd6d9a4c7d2ad8cfcbcef5ced842ea0"
     },
     {
       "entry_id": "draft-insight-2026-12-26-what-should-be-included-in-a-training-agreement",
-      "sha256": "7a651b4673f01f1d3000901940bd25285cc96e361a4cc669d86df470ebbed9d1"
+      "sha256": "4911a80835c3546670ac3ced4e53487e617c8603747194f1f05af7cd9850347b"
     },
     {
       "entry_id": "draft-insight-2026-12-27-what-legal-documents-do-i-need-to-run-a-boarding-barn",
-      "sha256": "615eb7cbfd9bc8a0a8d84696a0d17073b170d616d6f057b30cadbc8b3d89c110"
+      "sha256": "6dd29409f37c97e415439b568cbff2b1c82d505667bfcc69f5a512c9e72d447f"
     },
     {
       "entry_id": "draft-insight-2026-12-28-who-is-liable-if-a-horse-is-injured-while-boarded",
-      "sha256": "da47b2d4ac24b10640c092177798203d86a27546fee8951cbeacdf1fd29654aa"
+      "sha256": "fa6ae1b2da6391a7cebe77e5cff13b1e89b99496a2dfc3dda317fb53b3576fc8"
     },
     {
       "entry_id": "draft-article-2026-12-29-emotional-am-i-screwed",
-      "sha256": "334d68e69d9904e4401b6e48942e31253e7fe05722569d5ac0ffb59bde6cacd6"
+      "sha256": "f8fafcb6e4b5bff2eda24e15565b01c21bdf7bb7c8224a016fce8e4e2af87f39"
     },
     {
       "entry_id": "draft-insight-2026-12-29-who-pays-vet-bills-while-a-horse-is-boarded",
-      "sha256": "5717a925ea084da59537bdbe55aad8feee0d5fdab8c61134a8d56d31be53baec"
+      "sha256": "291c82a7342a2b968203c19e2632daa193742cdc72840f1d12bab5ab94eb9189"
     },
     {
       "entry_id": "draft-insight-2026-12-30-what-happens-if-a-boarder-doesn-t-pay",
-      "sha256": "2b4f2347afd64e77c23812e607da03cef336c6e0e21eb7c3ce82e94bd0af2608"
+      "sha256": "db626be6ee4d43550ed7609ff3b83dbe7403a62d7be3f1b1eabbd3599a4e6847"
     },
     {
       "entry_id": "draft-insight-2026-12-31-can-a-boarding-barn-sell-a-horse-for-unpaid-bills",
-      "sha256": "7d8f8bd74cba7498b363bb01e38a5380ef581c321830cee518456740533b762a"
+      "sha256": "777cbcf83fbcaaf6b78f0e0624b809093af7e95a443b3ea03e5cd8bda33b9ed5"
     }
   ],
   "calendar_records": [
     {
       "entry_id": "draft-insight-2026-04-24-do-i-need-a-contract-to-sell-a-horse",
-      "sha256": "c36f2290b16a3e583dd40fc0f356669cbd4c1e895abb7deccfd0ab7344ab3024"
+      "sha256": "4a47d97a5ffe2bda57f8bae65ec49764a4760c8086c435fecdfcd3c5e2d17201"
     },
     {
       "entry_id": "draft-insight-2026-04-25-do-i-need-a-contract-to-buy-a-horse",
-      "sha256": "8e85d7b7c652695fe77151b7325b7d8ba6f623d39bda609e7d4281474c489bd5"
+      "sha256": "2d44f9ba47cd9346a38f281890b106f7f571c9fc8d27a9be3f81b57045ff5a88"
     },
     {
       "entry_id": "draft-insight-2026-04-26-what-should-be-included-in-a-horse-bill-of-sale",
-      "sha256": "345bd8c8688ea53ce3a13522b26a56631b6934326efa1d24c459cc27d6b29818"
+      "sha256": "a223e6707c1a374a1346e1d1d72832e407a131e774e04162e96b321f087e3072"
     },
     {
       "entry_id": "draft-insight-2026-04-27-what-should-be-included-in-a-horse-sale-contract",
-      "sha256": "19a5a6e21b13863679d42c66ded5a2b55976a82976a9ea7808415491f95abd1d"
+      "sha256": "620849c43c0210d33ace7b675843e080c3f374cd647cd2b87f63f394c66fd3d4"
     },
     {
       "entry_id": "draft-article-2026-04-28-boarding-training-and-barn-operations",
-      "sha256": "e86bbac6550b3c16701815c2dd2fed041539a2d273fd97132a5adf4b9a411879"
+      "sha256": "e2eb74a06550a4067a6641da739c488be0fba54a3c806738ac9714aef2ef50df"
     },
     {
       "entry_id": "draft-insight-2026-04-28-when-does-ownership-legally-transfer-in-a-horse-sale",
-      "sha256": "72cb5447306442a91ce7bfc92937c42672a9c82e0aa0e81c2e7ea7ca26ba7839"
+      "sha256": "b80f76796133bd97be59d9a78dcc36787472021b62c8092a766a9983e4620029"
     },
     {
       "entry_id": "draft-insight-2026-04-29-who-is-responsible-after-a-horse-sale-is-completed",
-      "sha256": "22b7329e4d43a46145572b07be80be65413fdf3b2b1931bb47e41ceaa8ba1945"
+      "sha256": "43e18155bca1995d9d4e2dd9daa519d7b603b78b3ebad7a7f459e3584f69bcfc"
     },
     {
       "entry_id": "draft-insight-2026-04-30-is-a-verbal-agreement-legally-binding-in-a-horse-sale",
-      "sha256": "3c119ba8263705dc6fdb2b4c14618e8f0914ab0e87edc2038047bb7f6af1e3c1"
+      "sha256": "c969cd6490a288f3804c5d824961dd9de4e22d57b45fdbf36182334a922375cd"
     },
     {
       "entry_id": "draft-whitepaper-2026-04-30-horse-sale-and-purchase",
-      "sha256": "33984424e2400ac18d90245676777da71bbd8ae9b116f81f998a491929db3ef2"
+      "sha256": "95f3cda133f607eb6b8e81d2fd1dacac41509f16f903023de823747133e1eb59"
     },
     {
       "entry_id": "draft-insight-2026-05-01-what-happens-if-there-is-no-written-agreement-in-a-horse-sale",
-      "sha256": "006476e775bf851bd2188a641591831e32dab2e0b9f9a97bb8edbec0bf4e4d7a"
+      "sha256": "450a4345fc7ef92e0825bb5236963a9661f7fbf7b0b6b880b019f0b892493acd"
     },
     {
       "entry_id": "draft-whitepaper-2026-05-01-boarding-training-and-barn-operations",
-      "sha256": "ec17d9689c77c6dc3a2a6528b6a24ad85a93b8d304af61df4b455e4e2aeaaf6a"
+      "sha256": "a1ccb4e5e543091dc68599858453b74a2cea31fdbfc8287cedc8b6c036a62d7c"
     },
     {
       "entry_id": "draft-insight-2026-05-02-what-happens-if-a-horse-is-misrepresented-in-a-sale",
-      "sha256": "77889470b545e825d00cd3ff7848cc4f4729f7325c72b9b6e32d234e9e615458"
+      "sha256": "da8b881c5a182f32b378ac6af2bbacf01c17c4582c5c7980f1ee273173a6ef22"
     },
     {
       "entry_id": "draft-insight-2026-05-03-can-a-buyer-return-a-horse-after-purchase",
-      "sha256": "b28a74e1738e28f02ef2e86e55a1a4cb63261318b31ad9e796240be61964a160"
+      "sha256": "3b7ec380832e2e58b81e3f324dba7199869d7a937df529e6851ed44a06352e25"
     },
     {
       "entry_id": "draft-insight-2026-05-04-can-a-seller-refuse-to-take-a-horse-back",
-      "sha256": "026119be798c2ee0dfea77b55dc55829c5362f0b90cf440f522e7e976bf557e9"
+      "sha256": "94c79891d7ddface3934149dc25fa4715757113e572b4f4e21f80cec90811730"
     },
     {
       "entry_id": "draft-article-2026-05-05-demand-letters-and-disputes",
-      "sha256": "2c37d0ad61c6752403ca18928923d9e4b446656409ccb0a15b9ca122d9b1b445"
+      "sha256": "8558b35851e64eff47ab4e53d07f4b3e6972767a31418e000f23ac810582b609"
     },
     {
       "entry_id": "draft-insight-2026-05-05-what-happens-if-a-horse-becomes-lame-after-sale",
-      "sha256": "274394365d5cf5a972f65b1c6396d05d7a37515fb9ab1b1a87b41f361e649ace"
+      "sha256": "874a4094035d733300d4754106dca2a295852281197505ba54abcb0a8f6976fd"
     },
     {
       "entry_id": "draft-insight-2026-05-06-can-a-buyer-sue-after-an-as-is-horse-sale",
-      "sha256": "740068bf747f8f285079eabfac064e8d3246643e667d38521f8c49621231b159"
+      "sha256": "b16324920184276cd264c974ff11abbe16bac01b58935ee633a5a908ad29970d"
     },
     {
       "entry_id": "draft-insight-2026-05-07-what-happens-if-a-horse-sale-goes-wrong",
-      "sha256": "c65f67266db8632c6effc2905efe1efde527f51c0486499044195acc2dd3b12c"
+      "sha256": "2cd192d9375424c2f0f2a038578679596308ec17490a83ce4ea2f475513b2c67"
     },
     {
       "entry_id": "draft-insight-2026-05-08-what-if-i-sold-a-horse-without-a-contract",
-      "sha256": "eaf4a24326e74349bf95d5fa2352a2c74679e6bdefadeffa7c7788df301a7927"
+      "sha256": "4e9eb949ad9318fd83f0a0db03fcae7edcd73a9ddb118f592020fa53a921a4e6"
     },
     {
       "entry_id": "draft-insight-2026-05-09-what-if-i-bought-a-horse-without-a-contract",
-      "sha256": "f5ccc0696ae28b0842c2d20808eea69fcefeec7818d54f9fa831f5e7a1f44203"
+      "sha256": "d9be9d291593afc8b73e48e9c46a793ab903f9402f70835cf302fe5bee1ddc25"
     },
     {
       "entry_id": "draft-insight-2026-05-10-horse-sale-contract-vs-bill-of-sale",
-      "sha256": "8eb508ef67f715f3d33b3d4f7d5fd3c66b0841ecf2ddfdcce383129cd2f03317"
+      "sha256": "9a7215e624fb15d6a27cd3ed2caf70606d6c2c3add0eaf63cc29cd86fdefb265"
     },
     {
       "entry_id": "draft-insight-2026-05-11-contract-vs-handshake-deal-in-a-horse-sale",
-      "sha256": "e5848bdc0a9c590793ce5ef1e51aba6a7896ef65ffc1a55ba6a2dcebe0c08d72"
+      "sha256": "b9ccf6185c85cba025247310f50e233b22c97b58536c10038c8d53bb260db513"
     },
     {
       "entry_id": "draft-article-2026-05-12-emotional-am-i-screwed",
-      "sha256": "b9babfd5c3dc8156305e73db950d09e9b08d09404bfa8f70bc619b12f64628dc"
+      "sha256": "fe98ccd3b7208f21ea9538eae0f5823ea696471cd80a8419c444534ca4a55d90"
     },
     {
       "entry_id": "draft-insight-2026-05-12-template-contract-vs-custom-horse-contract",
-      "sha256": "e1ff551935e8df4f888adbf64cc2b47b549d397d98cc8224e28f5fe7a7b43c8d"
+      "sha256": "3282210aa95d012563301d28918d2313d1e574612b98f039ec275967b3b3b8a3"
     },
     {
       "entry_id": "draft-insight-2026-05-13-pre-purchase-exam-vs-no-exam-legal-risk",
-      "sha256": "195c7d9c0bfe3d588036b09b72c4effa988706b2a207d4e1b590fd9d7df1ccfe"
+      "sha256": "9d6bf9f1238f446dcfb6655680b3ec104194b2ad080cd9671359120bcf6476af"
     },
     {
       "entry_id": "draft-insight-2026-05-14-lease-to-purchase-vs-outright-purchase",
-      "sha256": "57db7725ae84e230cc90f56525aa2dcb4d062a7d65d98b6bb4a46b00f500cdf5"
+      "sha256": "08b3a3e8d19031d15ead9727220a9229158e90a55b7b6bbf149a96305a450fd4"
     },
     {
       "entry_id": "draft-insight-2026-05-15-what-should-be-included-in-a-horse-lease-agreement",
-      "sha256": "3fac618769784a7ba2a747bd0d65e51380dc35b6a2e47069e0d093b07e43934a"
+      "sha256": "cbf4d24236cd99c30403e40c469e3ff56e1643d536758c7629c3ffb99437c1c5"
     },
     {
       "entry_id": "draft-insight-2026-05-16-what-is-a-horse-trial-agreement",
-      "sha256": "6c3681082462bc7b3d93f6cb0f5eef347da7aa134168182dd08f4140b075b0d4"
+      "sha256": "8a47962ba955169e31f139aee75d67bd40de71620a9892ea2b4bd6a858c47186"
     },
     {
       "entry_id": "draft-insight-2026-05-17-who-is-liable-during-a-horse-lease",
-      "sha256": "90530a6849cc1a897718ebefa8aa657f87e356b90f1d65f3af71da56faecc6eb"
+      "sha256": "457e6a9644e1c00938b211c3f2f137db405185222816f42760c27828e136f142"
     },
     {
       "entry_id": "draft-insight-2026-05-18-who-pays-vet-bills-in-a-horse-lease",
-      "sha256": "1075116e57452a171ab58f29f08b3c154fb1a3a359bcb06bc1546309487dcc4b"
+      "sha256": "df10e270532576860ac860332a1e9c4250b103205825cec04b28720f4907f048"
     },
     {
       "entry_id": "draft-article-2026-05-19-equine-business-formation",
-      "sha256": "168fa31d4e267405edf292a42e8264e43e3915045c91354255fe35ed9a131605"
+      "sha256": "3dc78a4337d000e73dd38f6b220d601f0cdc3facd88da7675dfe5c7e69d70c2d"
     },
     {
       "entry_id": "draft-insight-2026-05-19-what-happens-if-a-leased-horse-is-injured",
-      "sha256": "fd169c9f12254f62a03bdb2eb47016820d086325694a30c2516aac9a9a206f97"
+      "sha256": "36f1a21dd8a3aeecf9373fbbedd779985e15e00167040a3a2f58bbf25b8bfba6"
     },
     {
       "entry_id": "draft-insight-2026-05-20-can-you-end-a-horse-lease-early",
-      "sha256": "8908df8fcfdbe637df10629b9f24ad2346f015db7fddc84e36b10b283eae1932"
+      "sha256": "6d56cd6c78169a06769af9ea8d791f2b72555e71404cff8841eb6e411ab67aa7"
     },
     {
       "entry_id": "draft-insight-2026-05-21-what-happens-if-a-leased-horse-becomes-unsound",
-      "sha256": "e96b16b3c9b00fc1ea2a88c60255b097172aa62bcbd3c4f4d3677518ff05e2c2"
+      "sha256": "30f84bf19a2141d3d599b5f045d8c9002108d6668d52740bee0b4a24bdaf6b38"
     },
     {
       "entry_id": "draft-insight-2026-05-22-lease-vs-purchase-horse",
-      "sha256": "56d2d6bfa9afe396d16faa2600a4f24af9a0dce0f5774a4177effbd2dca36931"
+      "sha256": "acc326b147cbd02bc756c22e7ce89e0aabbc509958d5f0ad3b46476d2ccda2c4"
     },
     {
       "entry_id": "draft-insight-2026-05-23-trial-agreement-vs-lease-agreement",
-      "sha256": "de5b6da136cc72c386c6fa5cda1e05799bf16e368edd9be77b5e0c3a6ea29cf8"
+      "sha256": "9a5672ded4e8384360bb2aa91ad41a22761b77492a18e953faa305f69793adf8"
     },
     {
       "entry_id": "draft-insight-2026-05-24-lease-to-own-vs-buying-outright",
-      "sha256": "e5971cf96208f411985b7a4c1ccdd913e11f7106845376ea289bed4380d562bf"
+      "sha256": "46a9bdfcb432fd5c350537e1fe167ead9ff41f025f23752648c17e9e316b2386"
     },
     {
       "entry_id": "draft-insight-2026-05-25-what-should-be-included-in-a-horse-boarding-agreement",
-      "sha256": "67581b58cc771683740d82317e85d0c8416f4e4dac1d3550d4a618a88c573b1e"
+      "sha256": "1a339ccd0a5857c52ac140ac6f90a0c821fe78b6e880aae838b16acf5ad76b04"
     },
     {
       "entry_id": "draft-article-2026-05-26-horse-lease-and-trial",
-      "sha256": "9b6b1a98f64c633d09a566522d08a4acebb0fcd51ab72bc999ef38768d4ffcc3"
+      "sha256": "4eca24dcbc5a489dbc787d20533313993c4bd8551464c8940151b4b7dfa1b23c"
     },
     {
       "entry_id": "draft-insight-2026-05-26-what-should-be-included-in-a-training-agreement",
-      "sha256": "a4ecad991faff369369b272c47cc8d58d26c0bff2944712d20a499e8b62b2e72"
+      "sha256": "66069c0024787bdaa9facec75531376a5f2abbf85ffb898b914fc5d40c05b3c0"
     },
     {
       "entry_id": "draft-insight-2026-05-27-what-legal-documents-do-i-need-to-run-a-boarding-barn",
-      "sha256": "5bfc4373a436b38aac3728eb3579be5741621da02e747997442f678a9312633c"
+      "sha256": "bfe3daa3628ee80993a96436c2faeb4c2c66db7b4f38dd36af8e250526208086"
     },
     {
       "entry_id": "draft-insight-2026-05-28-who-is-liable-if-a-horse-is-injured-while-boarded",
-      "sha256": "48bd82e7b7cffbfc86a14bd939c37491a88b744a51429de1daa3d7b6a4c70a83"
+      "sha256": "de628d8a5b29daa40075d4989419786d97f88e0716549fa523bd1932958fa35c"
     },
     {
       "entry_id": "draft-insight-2026-05-29-who-pays-vet-bills-while-a-horse-is-boarded",
-      "sha256": "32450b5933b830c2c041869f2f51168e7f8e78b984e439a200b159e5c7e6e267"
+      "sha256": "4a022230f1df3528aa5f8e79a76d0c2d9ef1f357ef979918179d6a28e1fdbbb7"
     },
     {
       "entry_id": "draft-insight-2026-05-30-what-happens-if-a-boarder-doesn-t-pay",
-      "sha256": "08e7d002aab9c9076c6c147b06353f496870390d8dc28a41c9e8ed0fd7e474c5"
+      "sha256": "81cd8639f870fa700dc98fe15ebf121a29349bb5d202a83f127b4799f49bbfb7"
     },
     {
       "entry_id": "draft-insight-2026-05-31-can-a-boarding-barn-sell-a-horse-for-unpaid-bills",
-      "sha256": "3e403fd5b25cee421370f91146c2253f48ca435bf941bde6652c251a273a95a2"
+      "sha256": "5a56a0ce4e126903a91ab7d07648e2e72ce564c50746567dc55b0d1c4a8572cd"
     },
     {
       "entry_id": "draft-insight-2026-06-01-what-happens-if-a-contract-does-not-address-responsibility",
-      "sha256": "32e5c626bfea77c79ffbd4b501776730f519a31d739ae7425f2a2186bd28531b"
+      "sha256": "e3b1f2af4306e0a679e79a0ee26409d27dda3df2ce238e3a0339d7b621622864"
     },
     {
       "entry_id": "draft-whitepaper-2026-06-01-demand-letters-and-disputes",
-      "sha256": "2383357ff7b54ee54be7f2833a0db9647ba9499e6576ac773bc17cb53383277d"
+      "sha256": "982d309ef2de57ecf71bbea1a90b9edb2fa8b32facebde823110f20d6811d90d"
     },
     {
       "entry_id": "draft-article-2026-06-02-horse-sale-and-purchase",
-      "sha256": "099cc39ebc67b1ce0879036763b5bc704310a3a18a0cf26c5ed5bb49a2caeb8b"
+      "sha256": "8c539bf33c3865d1f5ab952ac4cb3370487f61dd722ddf7b7fde63b17140576f"
     },
     {
       "entry_id": "draft-insight-2026-06-02-what-happens-if-a-horse-dies-while-boarded",
-      "sha256": "2dcc3e7662e13798538567431dd74ef91391df5d474e282da0a635985ca6f3ec"
+      "sha256": "3eb753d76c5609eef5f3bfae3449d1a8259e81a5fc901f61842b2aa154c78bc3"
     },
     {
       "entry_id": "draft-insight-2026-06-03-what-happens-if-a-boarder-damages-property",
-      "sha256": "10ac92609b9fae31cfc94763545bbd81f44e2284b45273df2f7e49787cda7d64"
+      "sha256": "6e30fe4fb86cfc2b26e0ac1d86c4e723e52b22ec6083e3466dd83b624202fe3d"
     },
     {
       "entry_id": "draft-insight-2026-06-04-what-liability-does-a-trainer-have",
-      "sha256": "5ef6307ecf55b9040ad51aabf3466668bcfe484ae2bccd113bb2a09ff43020b9"
+      "sha256": "c10671d4af6a11fbe7abb407de8f28e7a29dd427dcaf3ef5aa24015dcae6d2d4"
     },
     {
       "entry_id": "draft-insight-2026-06-05-if-someone-gets-hurt-riding-my-horse-am-i-liable",
-      "sha256": "551dbd93b2b9a71d5b65b83cf871d8c79c3b9d4bdf368162dc323f434aabbf6b"
+      "sha256": "ffec4102d766dc1b33ef8b7c8eff54fb61f2e04c6f87d156d91ce6c9a71b4d3f"
     },
     {
       "entry_id": "draft-insight-2026-06-06-what-does-equine-liability-law-actually-protect-me-from",
-      "sha256": "2a82cede893f7b222585251094650f0df9ed6cb6aa1161af8c21129b4c5e2141"
+      "sha256": "d27d793557786fce90eeac0dc30cb98292b42cd973b599501f84572e86c6cf5d"
     },
     {
       "entry_id": "draft-insight-2026-06-07-can-i-still-be-sued-if-i-have-a-waiver",
-      "sha256": "af7b9fec126210415671c5cd48190e05a8aa96c5f78d37edd9f37b40a682aa60"
+      "sha256": "d1df643348636cc7fc860dc26c854656ff8064dc27a6d481b1c31d19ccab58a0"
     },
     {
       "entry_id": "draft-insight-2026-06-08-do-i-need-a-liability-waiver-for-my-horse-business",
-      "sha256": "28addadb2a1232bcf2e8385c0473d761f2daab5b676376783cf960ddd8c66748"
+      "sha256": "d190786ef115dd3ac84f7a0a8aa043c9b7dbc9c6027f84fdce2db0bf758604f9"
     },
     {
       "entry_id": "draft-article-2026-06-09-intellectual-property-and-brand",
-      "sha256": "921c98bd471bec1b4549bf4cd984411944cac1e77711ad23fb2a7a1d6ee0f60c"
+      "sha256": "c8b3a8312a08213318f21f8cfc7a28f5999313b0f1b7ece27ea007561bd7f3c1"
     },
     {
       "entry_id": "draft-insight-2026-06-09-do-i-need-insurance-for-my-horse-business",
-      "sha256": "746775689fc28a61cf30c0a82bdbea74f161dd168fa76eec265c7e82f9b8000e"
+      "sha256": "b3cf8b240170ee07ff036963ff0021ce4c4776a81f8e0748d47ee942c7d25387"
     },
     {
       "entry_id": "draft-insight-2026-06-10-what-type-of-insurance-do-horse-owners-need",
-      "sha256": "f3512c43ba81bf1cd8e8a1297a1eaff56b6b1d67c62a362be3648def25b85dea"
+      "sha256": "8db578ad9e81a5342d81afc5c30c189c71a1076b285806f4cd8a03edd94620eb"
     },
     {
       "entry_id": "draft-insight-2026-06-11-what-type-of-insurance-do-trainers-need",
-      "sha256": "1ab5aeb3994d4630a6fa9998a0dd3eea8a05590de6f33533f695f68406fd83aa"
+      "sha256": "c56bce1302afd7242ce46d1a3f1a7ffe7f226e2af7f75f292c31a20fa86720a5"
     },
     {
       "entry_id": "draft-insight-2026-06-12-what-is-the-equine-activity-liability-act",
-      "sha256": "3668c8cba8ccb2874ed88155d9372c79622f163396459839ddccb1e2382681fd"
+      "sha256": "83060f7381e1313841e9231624ef1fb3bfbac77fb23f4fe5231fefeee87b1ac6"
     },
     {
       "entry_id": "draft-insight-2026-06-13-do-i-need-a-warning-sign-at-my-barn",
-      "sha256": "8d6fb74c87e8c89c57b50321164c486a1978be63ab19c806f731fdcc6fe1efbc"
+      "sha256": "24a60f120418f457785998f06f415a078a41df0f4d943536978ebf15aac41094"
     },
     {
       "entry_id": "draft-insight-2026-06-14-what-happens-if-i-don-t-post-the-required-sign",
-      "sha256": "ba376b2cb6d7673b0bdee6e080c9cfabf1bfb086c3310f1b564c4fb16ba2cd42"
+      "sha256": "bd321d067fd878d4b4e7cb379553a6167e619ec506f90d1482ad3697f17566d3"
     },
     {
       "entry_id": "draft-insight-2026-06-15-does-my-contract-need-statutory-warning-language",
-      "sha256": "4be982280ce13f904498db8fc3e9ac5e6bda7be365af3cd0ab86e453653a6614"
+      "sha256": "12450714f6038ae7b584c7d760b74ab8efa6811c9791f71369339c91d51d1c2f"
     },
     {
       "entry_id": "draft-article-2026-06-16-liability-waivers-insurance",
-      "sha256": "5e7b21ac04f6d05cb6996b99c97b0bcdf9d9cfc1846bbba7590a61debb4890d6"
+      "sha256": "ac59fbaea26cd0109b23ce494dc6b7a2c2a2312d4a8fae63329eb582364e7cb9"
     },
     {
       "entry_id": "draft-insight-2026-06-16-waiver-vs-insurance-for-horse-liability",
-      "sha256": "602c3d6b97fbddb79adb44d51d6d7d9b45232918fb8723e50b24c5a1432e4933"
+      "sha256": "43e60ee38e41250529e808f7ff46ead027e3a438e8268868d86694f88d2b93c6"
     },
     {
       "entry_id": "draft-insight-2026-06-17-llc-vs-insurance-for-liability-protection",
-      "sha256": "8a061268e91662b9a4c91516fa3d947d37eeb1274176a685aa6437230972bf98"
+      "sha256": "6053106c500b6e358e83d4dc872758e0c341d6e540d05de6728e1fc4cd427499"
     },
     {
       "entry_id": "draft-insight-2026-06-18-do-i-need-an-llc-to-start-a-horse-business",
-      "sha256": "7dda14cf3d5c56c6c35f30a04b5687228a94dab3b1fe89322b84a5d0f3db5728"
+      "sha256": "dce41fa593cf97e1964439ff997488653ffe80da4a2994f9596ce9db9eb317b4"
     },
     {
       "entry_id": "draft-insight-2026-06-19-how-do-i-legally-start-a-horse-business",
-      "sha256": "2c40012941c69169ed2b87b3b22ada9de60ad1ef5514e543459a205bc4f07d7f"
+      "sha256": "be18470b95e8198c7effdfe577aaa379f815edd5cef8d9c95f1b9c47e69646b9"
     },
     {
       "entry_id": "draft-insight-2026-06-20-what-legal-documents-do-i-need-for-a-horse-business",
-      "sha256": "9fb84361c346645725c8558ebea720344c7fe61d2b946fc752ccf74d04dfb7dc"
+      "sha256": "014d09f3ecdfbbdba17410b6caffb2b7446a3477c09931b64166c985741e8fe5"
     },
     {
       "entry_id": "draft-insight-2026-06-21-how-do-i-separate-my-horse-business-from-personal-assets",
-      "sha256": "8a4c947a1c827b2719bc8f6b70be05bf4df4424ee4b711ad58c717225516c5a1"
+      "sha256": "50d79bd0397c0776693aa5e93687af4460230fa2a36a3c5f7e61c399a0afb7f6"
     },
     {
       "entry_id": "draft-insight-2026-06-22-can-i-run-a-horse-business-under-another-company",
-      "sha256": "68602a57951064c6bb97257a0da3c3e90b8d56bb6dd513101e3c4e5d940a88ad"
+      "sha256": "d6f0578116b8234edad19ae37f6fc67fc65854152db4bac1060bc46d4adbdc5a"
     },
     {
       "entry_id": "draft-article-2026-06-23-real-property-and-leases",
-      "sha256": "d804704f1063c30512bb65cd1f2b8b963bf7b06960026579d0e157a9ee049ff4"
+      "sha256": "412ffa5b58baf28abdb94fbbdfc754b59988a344f477c7eae156f024476d2e80"
     },
     {
       "entry_id": "draft-insight-2026-06-23-how-to-start-a-boarding-barn-legally",
-      "sha256": "986f857f544860bbee437a383de640b8b8da93bc063a88d81bbb9f040e13919e"
+      "sha256": "4938fdd3f65c9ddb8ec1d3553df48057fe5129727e1e10872c79eb46b72922db"
     },
     {
       "entry_id": "draft-insight-2026-06-24-how-to-start-a-training-barn-legally",
-      "sha256": "7bfa8c8a8b28bb6727f3f998106bf049167a3a673e87cdb5cd25289cb6d96d4b"
+      "sha256": "3cf32120049df0a6ce04404481c1dc672345d17d6a63eafee631d41fb6aa6ff0"
     },
     {
       "entry_id": "draft-insight-2026-06-25-how-to-start-an-equine-assisted-therapy-business",
-      "sha256": "77153bea0f2f2e79b1acf9c2aa9afea591ee7f3c5d90240aacdf7745ba501ec1"
+      "sha256": "9038781585fc3b2a46c269c4f070a4e0a702a729d62eb37d1ffd1e38f12f18c2"
     },
     {
       "entry_id": "draft-insight-2026-06-26-how-to-start-an-equine-apparel-business",
-      "sha256": "d4234edbf8e45f6c0a7ea14069f1cbbe5c37b469549f913dd9795a41392ebebb"
+      "sha256": "e01d85401830206cb5cd1b3210727bd38a3958e3cf30728dcf8fa8a3a7e99454"
     },
     {
       "entry_id": "draft-insight-2026-06-27-how-to-start-a-horse-retail-business",
-      "sha256": "e368b9d3e2238d21b9c2ffe41c4df3fd577811037b5283d93663d066d773b725"
+      "sha256": "94cbfbf10adaaabb9b1b3dbcf2820148582191108a302dbf6fdb98a6e23ea057"
     },
     {
       "entry_id": "draft-insight-2026-06-28-llc-vs-sole-proprietor-horse-business",
-      "sha256": "23d593cec67b83d48a42de1f7017e05fd8634458c0d95c6346cbc5aea4ea1eae"
+      "sha256": "b802cfa3ffa358e2fcb24a0ed5cfaaa3ba7b08198f3ebb28aa850f5ea810848e"
     },
     {
       "entry_id": "draft-insight-2026-06-29-partnership-agreement-for-a-horse-business",
-      "sha256": "87cb24fb7f6fd2c406d799803db19bbf197b0adfa89124996ac78ba3728336ca"
+      "sha256": "68aea3726f7b1b85f0739e0be065e83904e9b761f89a779257e6043b381f8e27"
     },
     {
       "entry_id": "draft-article-2026-06-30-state-specific",
-      "sha256": "036414ad0f39b82557b37aa8f0fe8c3f9eaaecd1013e15f93350ab3e20a853b2"
+      "sha256": "704b56f41f30690b784b81a5b57e7878fc7f5485de5b2884fd6c2c31f739f55f"
     },
     {
       "entry_id": "draft-deep_authority-2026-06-30-liability-waivers-insurance",
-      "sha256": "ebc5f64d15cd5de6077f52028c28d6d00b6611761ae8030d069cb1eb9cccb2ab"
+      "sha256": "4bd74591d6a49d43e0553108a27a9f02926e838fc82efd0b7218552db94a034a"
     },
     {
       "entry_id": "draft-insight-2026-06-30-horse-syndicate-legal-structure",
-      "sha256": "175009c7de179e3c5f0406b359a8a4c8c064298931996e7dfff477d81d4fbac8"
+      "sha256": "a76c0e9623d8abf36e45ca72996a50f72523b086879d2db4b196f0f23b9b22ce"
     },
     {
       "entry_id": "draft-deep-2026-07-01-equine-business-formation",
-      "sha256": "71356e8e0ca28324b270aaba0f4072e840bccc77deb688024ea2751fd56d0a6b"
+      "sha256": "9d729fa82ad4b24006c4799525490e669052c3963ed952f8ef0a49142a12bbb1"
     },
     {
       "entry_id": "draft-insight-2026-07-01-joint-venture-agreement-for-an-equine-business",
-      "sha256": "2d9519e337b9ae8eebb8a755eb904ef185bf3b8cc34aba24b003b778ba58bf3e"
+      "sha256": "221044244489a4179fffe0fedea62acee47517d1174cb498c623c78d75a6e1c1"
     },
     {
       "entry_id": "draft-whitepaper-2026-07-01-emotional-am-i-screwed",
-      "sha256": "e3ed6973f4bb3d5b468b9baf3337c3364e39401fd2bc094722a206cc56461eff"
+      "sha256": "18f5de69411a17478f537f907513b7dd4288b2147a26ebaa8ef28a652373f0a8"
     },
     {
       "entry_id": "draft-insight-2026-07-02-should-i-trademark-my-barn-name",
-      "sha256": "7a69bcbb09444012a0ed15120c3c79133347440b641072a3bc6c229f408b5d1f"
+      "sha256": "b6d6ec2dca570d6b3cedbd0137dfe465a37d254c2864444fcc01d5071dd826e1"
     },
     {
       "entry_id": "draft-insight-2026-07-03-how-do-i-protect-my-horse-business-brand",
-      "sha256": "a90c01583967cc010ffef3982d4d7cfbc60fc8373647551c4e63ee89f1a20a9d"
+      "sha256": "4d3b5a2e0cba884cc5da5b5cb968d3550ffcc98ff6be6c4cafbd27ac589f5147"
     },
     {
       "entry_id": "draft-insight-2026-07-04-trademark-vs-llc-name-for-a-horse-business",
-      "sha256": "f7487340293bdbc17b2d51c6027a9d05f47ccb042065b7e2fe8ff437d153c3c9"
+      "sha256": "86829d545a9109c0e358f559244b178dce08378859f291303252eeb13014dad3"
     },
     {
       "entry_id": "draft-insight-2026-07-05-do-i-need-a-trademark-for-an-equestrian-brand",
-      "sha256": "e893c2aded560f1e8d865025ae2330df3e427d72072c3e3a3c2bf01b1ec24c23"
+      "sha256": "799a66dfd373a59d061ca49b3a73869d0c19211c97f2038d65d9b1dd4c8eaa7c"
     },
     {
       "entry_id": "draft-insight-2026-07-06-how-do-i-get-a-sponsorship-for-horse-riding",
-      "sha256": "71c254decfc7c999e6436d85183fa8d570cecaadcc611c46bcf305461ffed052"
+      "sha256": "659fa7650f8c1d83e7b2ec0fe7a8cffae1527c77c913892288bfbcfc26e0c560"
     },
     {
       "entry_id": "draft-article-2026-07-07-therapeutic-riding-and-hipaa",
-      "sha256": "267ea4dccaa192f5d1d4214d6cb716d4334029739475a7334cd9b4981d771469"
+      "sha256": "a866e1b22935ebfd731353cb1c6d54d4a94b74569c4cd85da2347893e2aaa1a5"
     },
     {
       "entry_id": "draft-insight-2026-07-07-do-i-need-a-contract-for-a-sponsorship",
-      "sha256": "c9c1e184b5320acaca68477ab1258587ce0bc07d79c24898fe03eac89ff68d34"
+      "sha256": "4b50ac5b7c1238c7888cbebeb3a9ae8dbadd500fca58e448bb00057d0a792820"
     },
     {
       "entry_id": "draft-insight-2026-07-08-what-should-be-in-an-equestrian-sponsorship-agreement",
-      "sha256": "d2d7fb5ea49f3b5bd4d58d4fb02985e3146478fd9c7425b19173ed801503663f"
+      "sha256": "e43e717c685bbfa9a30ee4467e2fb829a8bfdca6c59a5fb10a138f6a1d605dd1"
     },
     {
       "entry_id": "draft-insight-2026-07-09-can-a-sponsor-use-my-image-without-permission",
-      "sha256": "99716736840da4c4f5c7a05c4600667258ce24ed52a2d71ac36f5b37df8dc729"
+      "sha256": "23c8fc44fa3fe874782cd6f3e7b65928c5b9229a84825f2ad42c191d1b2c0130"
     },
     {
       "entry_id": "draft-insight-2026-07-10-what-should-i-do-if-i-receive-a-demand-letter",
-      "sha256": "ae1e7dc9d2621f576b237abfbae3b96a463096f26cd956829b300779d92699b1"
+      "sha256": "9d57a0b8271dd963a2df2dcaa568bb28d544800cf9a98dc5f04e77c28ae8d44e"
     },
     {
       "entry_id": "draft-insight-2026-07-11-how-serious-is-a-legal-demand-letter",
-      "sha256": "ca6173fbec7de0dbfc30dfea7692a786a86bc6fc51747ba19c1cad756899d6e9"
+      "sha256": "f02f31bac2d654897a436033e9940f5e68bfb4616a756a9001e33b4c584ab057"
     },
     {
       "entry_id": "draft-insight-2026-07-12-can-i-ignore-a-demand-letter",
-      "sha256": "f985590b87c80218803e0a48658a7a942a021e0d1220973cbebba14dc467819c"
+      "sha256": "616771ac13a49f4984fe16634da0738e47b6db0d8b8b4fe51668384e93e1cb50"
     },
     {
       "entry_id": "draft-insight-2026-07-13-do-i-need-a-lawyer-to-respond-to-a-demand-letter",
-      "sha256": "9472b72922ca8f05925f4867e901cf2d607c861a65f0034014e223760eca44f9"
+      "sha256": "339bb54dbe34a550f2a37d695dc660f51c0ba44589cfa387e58f0919a5f398c1"
     },
     {
       "entry_id": "draft-article-2026-07-14-boarding-training-and-barn-operations",
-      "sha256": "cf928986860f5fe8891b074413ff4d3cb6b5d4e4ebdf9c0aea4ef1abff54efbd"
+      "sha256": "255e826949c2bfeca9a1e2733b5d5584252f904ec3a113d9cf9b5a4de9945199"
     },
     {
       "entry_id": "draft-insight-2026-07-14-what-happens-if-i-don-t-respond-to-a-legal-letter",
-      "sha256": "5f85d33da30a51fcae1d49bd5d9d49e0baec0ad79619a534d7fb422b1ca111e1"
+      "sha256": "8a4f99e2638af9c0d7e1e2302f8b824d7c08c63fde6ce5b3630ffbe95e4ac8cc"
     },
     {
       "entry_id": "draft-insight-2026-07-15-can-a-contract-dispute-be-resolved-without-court",
-      "sha256": "09e2adb14886d91b2c272d0073b704d34489856337cdf6d501b378da813fde81"
+      "sha256": "4a3450b65c0bf20cd35b0f842fc10cbe97ef8af0389330597ad86ef81174cf33"
     },
     {
       "entry_id": "draft-insight-2026-07-16-demand-letter-vs-lawsuit",
-      "sha256": "a6ec7df9864c01f4394c9e2ab76c6a2952540253b365a0dc3b1db4442abd31b4"
+      "sha256": "35bc4f6e3002619149bd2a22196aef625dbd39faf72dae4ded70a8605be31aa0"
     },
     {
       "entry_id": "draft-insight-2026-07-17-mediation-vs-litigation-in-horse-disputes",
-      "sha256": "41cb6622baf21d6818b99284d6b544caf1e0ff8b7a8a3f3a97242158cb021e68"
+      "sha256": "32ef0f6c0d4b1d4126ad25a6965bf1823b8a4f65fde228994c2eab4110d69a87"
     },
     {
       "entry_id": "draft-insight-2026-07-18-how-do-i-start-an-equine-assisted-therapy-program-legally",
-      "sha256": "f81054d00643644e0dd9dfeed1f84936fdcf73b715a9d4debb5bd12c2ebf9114"
+      "sha256": "54db7ee3e5e466deb9d02216a6631ad0edd63e331e05298dbdc4771bf8e01bf5"
     },
     {
       "entry_id": "draft-insight-2026-07-19-am-i-subject-to-hipaa-in-equine-therapy",
-      "sha256": "c314db3e42bc7701ff75596ee671f449ec2598fa59c95a4c0e32f18959b09bc5"
+      "sha256": "0146f4e4fa19a617562e3f5924c83f131dfa09f3caf189f0943fbf6013e8db64"
     },
     {
       "entry_id": "draft-insight-2026-07-20-what-legal-requirements-apply-to-therapeutic-riding-programs",
-      "sha256": "574e85372bbfbb1f27da21377c786e99373d6aff101a9a854db0ab0f4ce857e9"
+      "sha256": "840f322102f85ae6687ee9b8da69852f1be7fa0fd2f7fe114f1de772db6b2f17"
     },
     {
       "entry_id": "draft-article-2026-07-21-demand-letters-and-disputes",
-      "sha256": "fde13e2852aec500d8f16e926f78bd7475078f1bcc1c57457e6d768c990d1bfe"
+      "sha256": "8a4f660d94cb401df814e989fee98b81e6b94bab38e61670561a569e8292133a"
     },
     {
       "entry_id": "draft-insight-2026-07-21-what-waivers-are-required-for-equine-therapy-programs",
-      "sha256": "52768d563caa1573b8b7b0a8ad7f69dcd4008b0f44dae794c3aa3c6fe08daeb7"
+      "sha256": "88946c7f67445bbeb7f504f2e0dea1e69572c5a285242a80827948289c8ebac1"
     },
     {
       "entry_id": "draft-insight-2026-07-22-do-i-need-insurance-for-therapeutic-riding",
-      "sha256": "702906b52879aff0b7d84e001a1a46c8b207e73283d11e1cf481983c462e2c41"
+      "sha256": "eea96302bc515b25e8318e69adbffcd7d9537c6346642339e91394de2425e247"
     },
     {
       "entry_id": "draft-insight-2026-07-23-what-should-be-included-in-a-barn-lease",
-      "sha256": "09eda71a8d5529f6ce36c10bfab293e2f8bd9b09f2cd8ea112e530db6485823c"
+      "sha256": "d19f0f44c1f092fcf4127c55a2593f18e189b46256e802d12a217f7d72aba95d"
     },
     {
       "entry_id": "draft-insight-2026-07-24-can-i-run-a-horse-business-under-my-lease",
-      "sha256": "692f28d3527f3c706de6c20c67fb3f81e2d9a6f11537ae3ef869ae30dfea098e"
+      "sha256": "17719b9b4ceeedf28339dc68935ea1b3ff6d7bcbde2bce3cac207d6a95ccb543"
     },
     {
       "entry_id": "draft-insight-2026-07-25-who-is-responsible-for-repairs-in-a-barn-lease",
-      "sha256": "1df51d1ea7071b6873fdc42d6c385cb5a346660fc89f6c85a8fd1cf6dc13e810"
+      "sha256": "a86dea028d2bfab66ac0902ce99dd4ca68ba90fa4bed0f928f9ddb888ba4cd87"
     },
     {
       "entry_id": "draft-insight-2026-07-26-what-liability-applies-in-a-horse-property-lease",
-      "sha256": "f8908ac903aff71e282d65c62d67bbe53cdeb471c6f5933dda9370cb711fe313"
+      "sha256": "921edf21043f99b4a146fa0f1127fa48a794f968cb2dd13f4ecb220caef7395a"
     },
     {
       "entry_id": "draft-insight-2026-07-27-do-i-need-a-horse-sale-contract-in-north-carolina",
-      "sha256": "6b9448f4816f463627083f8218d360d628c3b43fa72bed533a307b78009e1886"
+      "sha256": "9a908d7148108ecde2fe4ef792dfa83a28d8f8532ad731245e64c92466adcd63"
     },
     {
       "entry_id": "draft-article-2026-07-28-emotional-am-i-screwed",
-      "sha256": "75caa030bbf9f9b95d95b2168d91c9ca7999a1d27ec86d48aca4338cee91af22"
+      "sha256": "c76d0f1a533d3e767c82b4293990daf5fbb3d56160c4deb7271dbcdffb873771"
     },
     {
       "entry_id": "draft-insight-2026-07-28-what-does-north-carolina-equine-liability-law-cover",
-      "sha256": "ea2dc41631d382e1dbf6ac71c701b9ebc5875b8b57307331f434ee64c51fa72a"
+      "sha256": "a3f66edbfac4a459817347eadea98d6e369ebba45ec5bc9c4c0a74ed184cefe1"
     },
     {
       "entry_id": "draft-insight-2026-07-29-do-i-need-a-liability-waiver-in-south-carolina",
-      "sha256": "25b757536308a3ff5f13925fde11a05470ae8cb49d0fa42b7442db9a709bea9f"
+      "sha256": "56e9a31b43d5ea628147951499025e966c713f54febf25b59dda6ca2a2803e74"
     },
     {
       "entry_id": "draft-insight-2026-07-30-what-does-illinois-equine-liability-law-cover",
-      "sha256": "bbc88c1d90fe11a35aa3bcf765e31fc87885b6053fbfe960ceadf66f01ffb508"
+      "sha256": "34275de1b64863f193e302471e68caaf62ded579bfe2883f88ab757d8a590ff1"
     },
     {
       "entry_id": "draft-insight-2026-07-31-do-i-need-warning-signs-in-north-carolina",
-      "sha256": "a7eb6f243ec8dfcd901de8e0cb04a92b1f820953107772268f35ed2725410310"
+      "sha256": "f1b4f82ea8f984b5f39a310744c4576ee559b94ea045dc19d14bf8c85d746b0c"
     },
     {
       "entry_id": "draft-insight-2026-08-01-can-i-be-sued-in-south-carolina-if-i-have-a-waiver",
-      "sha256": "a68f79eaa61a0474bc2f0a9db8801406c2e3a63f85aeb1ebc49b0ba69d912004"
+      "sha256": "6f553a4567570644966afd4c7c89d7d5279d776e39d748f35a36226f837f703b"
     },
     {
       "entry_id": "draft-insight-2026-08-02-i-sold-a-horse-without-a-contract-am-i-screwed",
-      "sha256": "a9756fc01fe4ef19be32075015446c670aff2c0e3cfa36a26f39bba1f01be7d5"
+      "sha256": "a2071e0575984a302089fffae07b790ec7bf5962e223d59ab9bf263c29d7ca48"
     },
     {
       "entry_id": "draft-insight-2026-08-03-i-bought-a-horse-and-something-is-wrong-what-now",
-      "sha256": "ef5708c50a29d623dd093380429259fc4fe42349930ce8eb86b6a9a443e0360d"
+      "sha256": "3900a5d71837c73f9ba8a9fe1541c08623e22b3b68e091cfbd8c662209b8f6ee"
     },
     {
       "entry_id": "draft-whitepaper-2026-08-03-equine-business-formation",
-      "sha256": "bb0f393eca0448b54ba752f45855f8ccc552b604a7e9d9e2c080db6ecc2a3039"
+      "sha256": "d49e234c3818ecbff4f2a937334f83410e30037144cfd97ae1f7403b86208327"
     },
     {
       "entry_id": "draft-article-2026-08-04-equine-business-formation",
-      "sha256": "5e7b1c714580ca18e77767312c1a77ade8763667bca6e36db338a83d9eb73816"
+      "sha256": "2d602c22fe0223365e532e02b1fa6d690c3098d94afa062d7b727bef2b4bd39a"
     },
     {
       "entry_id": "draft-insight-2026-08-04-did-i-mess-up-by-trusting-a-handshake-deal",
-      "sha256": "a06d81ebdb25cbe60f9dee9e45bb4df59c7ab8950e9efd4d87b56fca63464689"
+      "sha256": "20d8a35654403e887d8e2cae6dd7726b24238889a3923c6cbbe086b636d2ebf0"
     },
     {
       "entry_id": "draft-insight-2026-08-05-is-it-too-late-to-fix-a-bad-horse-sale",
-      "sha256": "1b498a8e8bc40000fea4e639fd5c24182678e02704244fb7612f9abcb4b05bf6"
+      "sha256": "e05c9eda19aa05025e79a6ae761f097ad7741b223e3793b8b4af2436bc8e843e"
     },
     {
       "entry_id": "draft-insight-2026-08-06-what-is-the-worst-case-scenario-if-i-do-nothing",
-      "sha256": "c34902200b29cd03650b08677271261aef24a2429e8cf1d93086fa21f0c76651"
+      "sha256": "5f9f0b41767a1c1d26b9f58e9c49988d7e8b3d8c85ded61e241e525c24321802"
     },
     {
       "entry_id": "draft-insight-2026-08-07-am-i-overreacting-or-is-this-risky",
-      "sha256": "592a33d2f7b3bdd215535d633efceb0d104c710d67cb31431b2b2a9a41b112ba"
+      "sha256": "48cc91223b9427d078ed204e6fb9de87c508a318d17fdf04b264d4bad0a0e72e"
     },
     {
       "entry_id": "draft-insight-2026-08-08-do-people-actually-get-sued-over-horse-deals",
-      "sha256": "80e6bca3573b93e3d5534d51cc2fb520dc5d7222f9e4b72c4cfa8b1ca46743f3"
+      "sha256": "c08988cd4e497679c90e125533554adc1c73492a964e49c94c82950bcf9c1531"
     },
     {
       "entry_id": "draft-insight-2026-08-09-do-i-need-a-contract-to-sell-a-horse",
-      "sha256": "ba13afa1b0d8b3cf5aa6348cb1c5814cf997a640e2861fd77f91ffaa04ebf581"
+      "sha256": "af648b6e873a33f1820d4edf0539cda874016a04287a9349fe91f4767d8b5552"
     },
     {
       "entry_id": "draft-insight-2026-08-10-do-i-need-a-contract-to-buy-a-horse",
-      "sha256": "e850210d173b7dda14a4481e886a00d1c4cfb4004921c22b62fbac0767ec1012"
+      "sha256": "e294c3181f6051f8c9950d24c8c8f51bd2126a142ede7e6ca3d07070a8ed0ab1"
     },
     {
       "entry_id": "draft-article-2026-08-11-horse-lease-and-trial",
-      "sha256": "ad7fc831520606273514d51fc60df525daa597aadde26a790ac4f30bda81dd96"
+      "sha256": "e96d4804b1cc3e530621c5d0917562762fae2980580369652590da249fd92db9"
     },
     {
       "entry_id": "draft-insight-2026-08-11-what-should-be-included-in-a-horse-bill-of-sale",
-      "sha256": "f72d8b2c6e88f40085fe3683bbee0c10fbbe5810a8abbcfedbc3b207e6fe4fd8"
+      "sha256": "366072f2a710da5c09349e3a7d897070fe735e88da07c73505f7a8e73b39c337"
     },
     {
       "entry_id": "draft-insight-2026-08-12-what-should-be-included-in-a-horse-sale-contract",
-      "sha256": "9838ca5eecbc1b75c83f731695f8c68f964494031988c6ca9bc1e5213aca4c25"
+      "sha256": "c59c8a08d2abc33411b85490e31ce801b6c127999564fd4b1c5cca3606810e44"
     },
     {
       "entry_id": "draft-insight-2026-08-13-when-does-ownership-legally-transfer-in-a-horse-sale",
-      "sha256": "2c29aa22e6d3dc312ad7ac04a3d3723857d4b93dee57dc14224ce0aba6f40c7c"
+      "sha256": "8f7380357f267a3860f2de7bad21127fb5d1fabb6371b30fa32755f312d7b13f"
     },
     {
       "entry_id": "draft-insight-2026-08-14-who-is-responsible-after-a-horse-sale-is-completed",
-      "sha256": "30a929e36904b88b5302dfb1afcb7fb0ebf3720edf4ea04eb58dfd70108490fc"
+      "sha256": "c5ceb637142a1de5e1f117478ab1ad2c3114e3d1b06293e83cca64be1e0ea26e"
     },
     {
       "entry_id": "draft-insight-2026-08-15-is-a-verbal-agreement-legally-binding-in-a-horse-sale",
-      "sha256": "010d159c8f13cfc3a8b448cf1f6d3d014e9c9a32f3d78addbe8a2c480dbfc17c"
+      "sha256": "d93c8dae3b7198f853dcce80f4d82369f3a470deea5d8edc197f4a5eee598c3b"
     },
     {
       "entry_id": "draft-insight-2026-08-16-what-happens-if-there-is-no-written-agreement-in-a-horse-sale",
-      "sha256": "c99acf742223ece47933096461f81b22869e447974e50336514e9ae95f0fab2a"
+      "sha256": "cab4d95dd80407749c8c515df831a10f57ca6f5b4146a29777b73c56749bf604"
     },
     {
       "entry_id": "draft-insight-2026-08-17-what-happens-if-a-horse-is-misrepresented-in-a-sale",
-      "sha256": "64a3e80e57059041238544eb1ccc80f362b77861d38ccb36ad471e3ada0f37e9"
+      "sha256": "f306d100912599c6c9fdbe2ab0508eb0e91be2515e3d490d69d470bc639d048f"
     },
     {
       "entry_id": "draft-article-2026-08-18-horse-sale-and-purchase",
-      "sha256": "a9a04791568c60ea3328c3676c78e2cbcb6cb8c4b6e8f1b46a9192829fd13796"
+      "sha256": "a020cc95bbd82b0c81d265c1115f590a3d73d20476ccf4f07da829dfe66d7ce5"
     },
     {
       "entry_id": "draft-insight-2026-08-18-can-a-buyer-return-a-horse-after-purchase",
-      "sha256": "eed7109c11d4adba05bde9b546ac63c8205e7f96a6d08c6eb204a94736aff9de"
+      "sha256": "a4b628aa02d6a35e755019e56121be462d064343afce146ac312074581b1dcd3"
     },
     {
       "entry_id": "draft-insight-2026-08-19-can-a-seller-refuse-to-take-a-horse-back",
-      "sha256": "24a4df90e3f738b33204588d079c9aa1cf641ea08b910fa842ff3fe5b8b3f56b"
+      "sha256": "695cb3fd0b8f616168eff106009a44b8a7bf97e2963b0175c5fc7eef7bbe1206"
     },
     {
       "entry_id": "draft-insight-2026-08-20-what-happens-if-a-horse-becomes-lame-after-sale",
-      "sha256": "6aa0a6f1d4c244df283f828f89489fd6254a3affac727ff3a730a040dbf1e871"
+      "sha256": "90657b2f5dbf27576399611c161f56f3e3517eb435533127f04705b48cda8755"
     },
     {
       "entry_id": "draft-insight-2026-08-21-can-a-buyer-sue-after-an-as-is-horse-sale",
-      "sha256": "d4d2bbe0ae87155ecb116661d33d76209e7cdcdeed178a9d1e2d4c5c6a26cc18"
+      "sha256": "c554bed54d876f8014892093e56915f7c7afad61526f9e298118969c59a5b672"
     },
     {
       "entry_id": "draft-insight-2026-08-22-what-happens-if-a-horse-sale-goes-wrong",
-      "sha256": "946fba378af41ea3016de6460c32ecb62be1586c8771831c32ff8cc3d761b39d"
+      "sha256": "3a563832e7dbe0cb55828dd1ef53595c52f86844ba91f957ee81492b7e9d2979"
     },
     {
       "entry_id": "draft-insight-2026-08-23-what-if-i-sold-a-horse-without-a-contract",
-      "sha256": "088a07faf5e3788a9aa07a1dcd2fe68c1cac24298a489e86449ba9b2b72ae6f1"
+      "sha256": "877e0f060229c8dbf0e911a39cea531b398551fbb7a21bdb58c6ca438e993f0f"
     },
     {
       "entry_id": "draft-insight-2026-08-24-what-if-i-bought-a-horse-without-a-contract",
-      "sha256": "757d9716fcab01f14d73fcb746d9d98d0465256e3e7c25666b59fb986dc80ad1"
+      "sha256": "0b83cbd293f0e660b683e56a8ca795c49af7e8052538a0e8dc3d79c699420678"
     },
     {
       "entry_id": "draft-article-2026-08-25-intellectual-property-and-brand",
-      "sha256": "df95c30393a42c70787c72e2c8f4f7bb508e36017dc960006a871b22b19e40cf"
+      "sha256": "bf545317436bb9f0a9be5889b1c3b6178eee118f5b0040709b38daf6df1f5d1a"
     },
     {
       "entry_id": "draft-insight-2026-08-25-horse-sale-contract-vs-bill-of-sale",
-      "sha256": "cfd5613cb660ff78a5bd85c729d5e01449ee7a585d467cc8ec6f9c116b66a62f"
+      "sha256": "dcdae55ea4b24c4bc0fe585499d3f3816595e31588fffe0069d97162c57ab1c9"
     },
     {
       "entry_id": "draft-insight-2026-08-26-contract-vs-handshake-deal-in-a-horse-sale",
-      "sha256": "def0d1ea2317d3b06f036dd2ac7c582f5bad4745e6ac0ba9e72558e21e935830"
+      "sha256": "1aa4a3ffe0d78860e3e4e11fb088bfffc92de46748bd938bad3b65a0bcdd879c"
     },
     {
       "entry_id": "draft-insight-2026-08-27-template-contract-vs-custom-horse-contract",
-      "sha256": "f57290e5eb51f6b422ee9b2549a87f742f7a761c45179aa4c7129569f724bb8d"
+      "sha256": "4db52dcb922b819e56b636670b6268160400fa8da639d09381d69750ca10f5ca"
     },
     {
       "entry_id": "draft-insight-2026-08-28-pre-purchase-exam-vs-no-exam-legal-risk",
-      "sha256": "cb3bbadcdc1b90756970d5986edbea0d9ce28c17461e4b32407968c1bf9e653e"
+      "sha256": "adda003bab831cda8432b1ab9d23d50c061f4d316787a429237ae3865e598d7a"
     },
     {
       "entry_id": "draft-insight-2026-08-29-lease-to-purchase-vs-outright-purchase",
-      "sha256": "e932162fb75ba96c50d19eff67ffecf62380e0b0d397da6d8392d52202c6efa1"
+      "sha256": "642facf1c8858c633536a3e09cf6be69e7ce587157253cb4eaa14bf8bdf5c404"
     },
     {
       "entry_id": "draft-insight-2026-08-30-what-should-be-included-in-a-horse-lease-agreement",
-      "sha256": "6e126d58e29ad5487376b4700bf341d84c6adfe41bbd096281979a6505490089"
+      "sha256": "0d3b048a3eb6d6d791fa7afed5aa65b273b19e8e52d0feb1ad0836c43b4b8609"
     },
     {
       "entry_id": "draft-insight-2026-08-31-what-is-a-horse-trial-agreement",
-      "sha256": "0bee1c4cb9502f770b7dd73c9377a24c7570e166c2ec3b8a4a5f02253996dd14"
+      "sha256": "454107f88100b5182980fdb6a7edf787b2aeb991cf35d0478cf1f422a4b6174c"
     },
     {
       "entry_id": "draft-article-2026-09-01-liability-waivers-insurance",
-      "sha256": "0584ae42327e8fa4cd7573b9128b76d2ccc42ff05ff9f2f5f5824b24235ed399"
+      "sha256": "1e883b327b6c051f056991ab01d20d435a14f4c056c66f183f36567811ce9732"
     },
     {
       "entry_id": "draft-insight-2026-09-01-who-is-liable-during-a-horse-lease",
-      "sha256": "c4894a0a663816e7b627c0f5be2c9557c4e975807a08f4c444cc8696aac221fa"
+      "sha256": "a9de7b1e8415f1258e33594105a6e825ec8b429914a5c9f78c9ceef3956b7685"
     },
     {
       "entry_id": "draft-whitepaper-2026-09-01-horse-lease-and-trial",
-      "sha256": "5ee87b50805c2e427bd25216bcb5ced140e242b25887d15ee475c439e2169ff0"
+      "sha256": "30ba2aa977cc2e18cad7d84551450bc0dc03654ae2d13ee698ca417116b6b113"
     },
     {
       "entry_id": "draft-insight-2026-09-02-who-pays-vet-bills-in-a-horse-lease",
-      "sha256": "2428f58538fe4024b87aca26c7df32fb449995a8bfd5ca1882be7b26823d0140"
+      "sha256": "45e517e39a47c66eb5bef5bb4ee69839d4c7ab555fd2d3b7376bfb46144ddab9"
     },
     {
       "entry_id": "draft-insight-2026-09-03-what-happens-if-a-leased-horse-is-injured",
-      "sha256": "1d85282105700d9f32bbbf4bf5d98ad761b0948a4a5636429e2919ad9ae97e4a"
+      "sha256": "3b4a137841bdf66aa0da78fcc79da92720d32ff1f5d68cbc08661b771ce5c33b"
     },
     {
       "entry_id": "draft-insight-2026-09-04-can-you-end-a-horse-lease-early",
-      "sha256": "99e469406b62ebd9b257d82adeabd6ca03931e1496a20083c7b1cf7f3a632f02"
+      "sha256": "45a72690ad9029d1b119958c759291ad281aae457790e232095c7888dc81e3be"
     },
     {
       "entry_id": "draft-insight-2026-09-05-what-happens-if-a-leased-horse-becomes-unsound",
-      "sha256": "457427c5145440969fd687de095a5ed1c7b0414e4f73a406468f7833d8a0e719"
+      "sha256": "fc18c616c156b741a9d8d5777fa6c29143801c2de6d3740cdb3511325d82d5e2"
     },
     {
       "entry_id": "draft-insight-2026-09-06-lease-vs-purchase-horse",
-      "sha256": "d5f064995fa985f9d8161c0eadb776518e7bbfba597ee56558ef0c9d9407bfdc"
+      "sha256": "9351553e95eb97b9e8b81e2edf80548612b00aa49950a395069267472d873b8f"
     },
     {
       "entry_id": "draft-insight-2026-09-07-trial-agreement-vs-lease-agreement",
-      "sha256": "66f3d4bf86cd366ee82d4fcea9635b470fc911f73d9c3e4af15b36149c174c94"
+      "sha256": "11404bc0544807049da8ea64aed419a5b59e68f92d30cc50041cd48e88d099db"
     },
     {
       "entry_id": "draft-article-2026-09-08-real-property-and-leases",
-      "sha256": "7c9d14505a966dc2c9e66798950fd69ff0047a08a7fe22cb347ee4f414830912"
+      "sha256": "12fc128a84914a9d864f52e55b728c40d9a1f95f0b6b1d57b179c827eb163b47"
     },
     {
       "entry_id": "draft-insight-2026-09-08-lease-to-own-vs-buying-outright",
-      "sha256": "56d511b52033fb943f61624457f53383e16f3927cd3ecb96efd0bb476619af62"
+      "sha256": "95a2bd87ed3c8940fce397e0ebb32db6951735e5b58dec3b082a829ac4f2134b"
     },
     {
       "entry_id": "draft-insight-2026-09-09-what-should-be-included-in-a-horse-boarding-agreement",
-      "sha256": "78a334260a65a0cbb6b0acb8d2814e7fd4fcac6e60cc2ffba9e04a945b5c004b"
+      "sha256": "7ece4770605ebf01308386c0c233accc6e8b56daab4e38e3937a6f3daff494dc"
     },
     {
       "entry_id": "draft-insight-2026-09-10-what-should-be-included-in-a-training-agreement",
-      "sha256": "eef05cbe3a14755c1d36a559672b6716a59bd47ec6bbaa1d407c6539cb6dc42a"
+      "sha256": "173ef9ccaf73fd30d265f1092905912023c1a2c9e3138a195da7f4e35f3505d3"
     },
     {
       "entry_id": "draft-insight-2026-09-11-what-legal-documents-do-i-need-to-run-a-boarding-barn",
-      "sha256": "1d5d201045de7cb2346568480682eebf220ff1e6865363c5ce38ca0307267279"
+      "sha256": "ae928a8e4ced7f2231f88a93d96d1a14e58fb4fa02d3b362764ba702a78a391c"
     },
     {
       "entry_id": "draft-insight-2026-09-12-who-is-liable-if-a-horse-is-injured-while-boarded",
-      "sha256": "e1e3d1ce1605d9c489749c92f2ae1d7693bb4956be3d953543ee11ef8158bb9a"
+      "sha256": "339dafe43e8f472ea9b83526be80be3bf9c2e6dddc0945534b9b9b18c1240de9"
     },
     {
       "entry_id": "draft-insight-2026-09-13-who-pays-vet-bills-while-a-horse-is-boarded",
-      "sha256": "0babfd637711c6ca0cdf011ba8d6a0d2b02735cf72c89b6f6f9b6b3b6d1deb73"
+      "sha256": "88282708c3c1e433fbab9ab0157ff112ff2d25380d2528326b921223dd76b1c8"
     },
     {
       "entry_id": "draft-insight-2026-09-14-what-happens-if-a-boarder-doesn-t-pay",
-      "sha256": "5f390bce174ee15832d7199bb7418284e8391221b0293c1444839a44c748f9e6"
+      "sha256": "fe5d8bd797c08b78d9e03e2db92e47e6185a9829bc6edbcf93623dd9735d6d5e"
     },
     {
       "entry_id": "draft-article-2026-09-15-state-specific",
-      "sha256": "94c4ab1504ac6aac8c2e1bd6050f60be7b9cde43fc65732e0efb2ccee38165e3"
+      "sha256": "5ba81af08f445e00e95c1b9fd335d3005f5ceebb198ae5cc6b8fece3745f8aa9"
     },
     {
       "entry_id": "draft-insight-2026-09-15-can-a-boarding-barn-sell-a-horse-for-unpaid-bills",
-      "sha256": "85c74430e0815ff11b5b4ad2b79ba42d99dac0494a71e02be24e17de0e0723c9"
+      "sha256": "4d3d5cede84de00e3fad11bdb152e05a669937b0a63af4fca143f80a07301271"
     },
     {
       "entry_id": "draft-insight-2026-09-16-what-happens-if-a-contract-does-not-address-responsibility",
-      "sha256": "1f4d7ca9e5895a917a222a23cbbbdb43a48bef3d8984a26e4af4c0f8de078df3"
+      "sha256": "6ccd67b58a34a8915d56733e8a19e5fd4c793a0c9b4f9e3f0023f490da37ff06"
     },
     {
       "entry_id": "draft-insight-2026-09-17-what-happens-if-a-horse-dies-while-boarded",
-      "sha256": "726819ad549651f66f28957b880f86387838126670f4b71ef9d23faf7e4b1932"
+      "sha256": "d4aaa354b058cfa5159bca0dd9e6ba3e3e5b2ccb5bfe03506518955aff881ab1"
     },
     {
       "entry_id": "draft-insight-2026-09-18-what-happens-if-a-boarder-damages-property",
-      "sha256": "a278767172315420d643498130ebe98cfb24757ba9c22a727ebc205d597548bd"
+      "sha256": "dd8c9de9619d17e5e95d545eb638eea6fe9c21173b78ca50c8e627968709b4a5"
     },
     {
       "entry_id": "draft-insight-2026-09-19-what-liability-does-a-trainer-have",
-      "sha256": "92f094c2d32cdc936f6436ae91655a7efd830345779c60bce70ac207abb292c3"
+      "sha256": "d247446aeb6e96a8dd363ff89fd6f427b39e67a4189607a93419231b3a8ab9ae"
     },
     {
       "entry_id": "draft-insight-2026-09-20-if-someone-gets-hurt-riding-my-horse-am-i-liable",
-      "sha256": "73aa48648d75c15bb741ce3b8eeb9ce23fe3d7ff32e2abb34055178b325dd2f7"
+      "sha256": "d2573eaa7f9063829699bfc955e374be654fba158015d7e8a79cd0d3d919f861"
     },
     {
       "entry_id": "draft-insight-2026-09-21-what-does-equine-liability-law-actually-protect-me-from",
-      "sha256": "ed373c46a6c4e20c5b46ad17248578f936b471d886edb731b11893a0f18c311b"
+      "sha256": "2a96009f583f7016f5735e290781f7b763a4686073eb4f5f120b0d9e93120304"
     },
     {
       "entry_id": "draft-article-2026-09-22-therapeutic-riding-and-hipaa",
-      "sha256": "885eb360623883fd3818a865259112cb1b114ed0b4843e3861ed5f9f73216a74"
+      "sha256": "873f556f3aed82a6f4238dbadc5913449c112516cd029b4c2038341c44b60702"
     },
     {
       "entry_id": "draft-insight-2026-09-22-can-i-still-be-sued-if-i-have-a-waiver",
-      "sha256": "eb1060032fe514630cd905ac2e075a59d9c0baf913b9053655205dc54d8738e5"
+      "sha256": "e5a7f239816cba9b9300902b77a83749d7aa56c26d3ad0a5bfe20b393a6bfa14"
     },
     {
       "entry_id": "draft-insight-2026-09-23-do-i-need-a-liability-waiver-for-my-horse-business",
-      "sha256": "5933721021f258b6cb30a5a03b2f62d1b34be15a9208486ea4f0c6912a52b70c"
+      "sha256": "a14a04464a0f33f0a4217757c8be20fe94f776c027734728d967b05fbdbdedb0"
     },
     {
       "entry_id": "draft-insight-2026-09-24-do-i-need-insurance-for-my-horse-business",
-      "sha256": "0024806df7f8825997171f3f437617c6f280f91abf72a1ec755b558fba7d4e9b"
+      "sha256": "ea41c6114a5539a3b95e90963400d0a672600a412eb4fb3e521f4fd6ec68d92e"
     },
     {
       "entry_id": "draft-insight-2026-09-25-what-type-of-insurance-do-horse-owners-need",
-      "sha256": "13bbd0ba4a8d092fbd4fb502de622fd5c979303e33fa84b2a94828e8ec153e5a"
+      "sha256": "c912408fdeaf1a6ede7666fe0f7cd0cd3cc9a00fdc8dc542ee58dbda6201d4fa"
     },
     {
       "entry_id": "draft-insight-2026-09-26-what-type-of-insurance-do-trainers-need",
-      "sha256": "f26a505ac82677dc6fa8b3838b5d04bfbae8b2f02d8e4536d714a6888bf663a6"
+      "sha256": "dacd1e8ac417b16991ff1aa663bfb7b27aca2b5a3f65500bc938be65b4f1827f"
     },
     {
       "entry_id": "draft-insight-2026-09-27-what-is-the-equine-activity-liability-act",
-      "sha256": "15544a40108c6687289b6eec17d8574f8d6be14dffbe147edf79e2c1013584d9"
+      "sha256": "8a26be5889e6c917322c4616ebd09ddbca43253945420f660c216818a5159c35"
     },
     {
       "entry_id": "draft-insight-2026-09-28-do-i-need-a-warning-sign-at-my-barn",
-      "sha256": "8b81b71477c669c0cec6fa20a85ec6d5ef911040ae2d6111ca1c0dee5f7d1716"
+      "sha256": "6a6f2e41dcc6823fe36f6112d337b70f3e436b4415956c3504cb51a0828aa060"
     },
     {
       "entry_id": "draft-article-2026-09-29-boarding-training-and-barn-operations",
-      "sha256": "1eaa53166e3469d28fc139667787415fa8d911abdfea94a4e4cc6582d7f0e576"
+      "sha256": "373078264969835a94f3cf94dcc599e1788a632ba9a87cba571281f641fd71cc"
     },
     {
       "entry_id": "draft-insight-2026-09-29-what-happens-if-i-don-t-post-the-required-sign",
-      "sha256": "209863ed56e2d9d0f526370b5caaf47123dbf5c1d4bce50057eb497933d37f0c"
+      "sha256": "5f5b587c5c70797af326a5eaa0f21bfd59241f3b45a060f227576ad32df97618"
     },
     {
       "entry_id": "draft-insight-2026-09-30-does-my-contract-need-statutory-warning-language",
-      "sha256": "0b15e6ec11f37e1322e03b8b968a15db7901aa426cd41f8b978fc3c98a949e97"
+      "sha256": "cf29baccf222c205814152de2054d82d6a6d589729e5cb616b829f33e41a210e"
     },
     {
       "entry_id": "draft-deep-2026-10-01-horse-lease-and-trial",
-      "sha256": "ea5ce23f206f4e6ac1e74cf71ebfe38ced2da6ef1eae85b3a0b78fba17a1dc62"
+      "sha256": "ffae07877da57aac5d1d061aff2ebb592ed64c61195cbb276fdc13fae9a54e9f"
     },
     {
       "entry_id": "draft-insight-2026-10-01-waiver-vs-insurance-for-horse-liability",
-      "sha256": "9172920119a8531a59f2bf03912685c06330515c793f841b72fa6132c42a0547"
+      "sha256": "3a2f58c3ccdd4bf697647463fbf0ff9c6e6bfcfe0e93630aff2d2d3e9616cb5f"
     },
     {
       "entry_id": "draft-whitepaper-2026-10-01-horse-sale-and-purchase",
-      "sha256": "2cf54591460006599af5b63e72df90c8404d3440754b775f5e9c9fb7fdb89f96"
+      "sha256": "545dccce2b0c58712650d3a439fbe6c8eed25f2bfc22601d1bdc47a2e3c64e70"
     },
     {
       "entry_id": "draft-insight-2026-10-02-llc-vs-insurance-for-liability-protection",
-      "sha256": "994d87f0b196c1af0f97480da82551342e4004653bdf8834585b6e8c726e62c2"
+      "sha256": "a95b90d5252148e7fc68a29fcb3fea2057c34472d7208953f7c57ad83c5902c1"
     },
     {
       "entry_id": "draft-insight-2026-10-03-do-i-need-an-llc-to-start-a-horse-business",
-      "sha256": "4a1d6d6d5f109fb139837819455c4e2386ab6ca9e7f73ac7443eee7f1815c4e0"
+      "sha256": "23bd36824350172274833420d95819419129953e8d4b1e95937b597764efcf06"
     },
     {
       "entry_id": "draft-insight-2026-10-04-how-do-i-legally-start-a-horse-business",
-      "sha256": "4a380ee566b83910178be903140cddc39c0b3e58018213a2d392dbb365a43e6f"
+      "sha256": "963c8ea75f69ff7c6b0f3fc8b0ff4ac416c0da1d0890243617873df568df5ae5"
     },
     {
       "entry_id": "draft-insight-2026-10-05-what-legal-documents-do-i-need-for-a-horse-business",
-      "sha256": "9100d0e55bdb7fe488c1c875efdbd6b94816217df48020808096ee2d8adf953e"
+      "sha256": "81b236ae05760ae6e4285b71ff9a31b1d4252343d124549fb2d93274bb6da60e"
     },
     {
       "entry_id": "draft-article-2026-10-06-demand-letters-and-disputes",
-      "sha256": "02a4a1899af94163b742d6b7f7e3c3d4ca7de56eb398ac59d160c7836672b511"
+      "sha256": "a12df12ad2628bffef67366dd81ca368a533ae23446d97be6a0fd3a1ab427b58"
     },
     {
       "entry_id": "draft-insight-2026-10-06-how-do-i-separate-my-horse-business-from-personal-assets",
-      "sha256": "b40d939bd5d60531aadc5ee2e12b045d2236de6cb1b3842e854ed6eda8dc28ca"
+      "sha256": "e6fff83995835cebac4d34f5a7a88f5cfecb3d84f3b7e1edc71021b714e0abc2"
     },
     {
       "entry_id": "draft-insight-2026-10-07-can-i-run-a-horse-business-under-another-company",
-      "sha256": "aea0ffe1a06fec44ba9e1e33f226d80cc4885cc9d4a92e1e2efdfb8e56ea75f3"
+      "sha256": "3cf5d694605a1d37fd5c4ac0642fe8fee07ff3bb01fa3e06ecd255d414ab432e"
     },
     {
       "entry_id": "draft-insight-2026-10-08-how-to-start-a-boarding-barn-legally",
-      "sha256": "52b679e499186b5a1eb44eaef8b276033d8bb9082e16483e2671e9d9b1fd7261"
+      "sha256": "6b1e07b53b763726d6eb55551c2070d4bade24f14d1d975ae589a7bfae955dcf"
     },
     {
       "entry_id": "draft-insight-2026-10-09-how-to-start-a-training-barn-legally",
-      "sha256": "978bfbbf759a9183bb620be0710ad13bb73dd5e1e5073d5268ec06fee0d3472b"
+      "sha256": "bbdde1c443a02d9b40d952ca6326700f80b87cb6f871054e52f05424db5af29f"
     },
     {
       "entry_id": "draft-insight-2026-10-10-how-to-start-an-equine-assisted-therapy-business",
-      "sha256": "a54816836589bdf5bbc5aa91ce76a43d3356229a7b267abfbbb212b64535c57a"
+      "sha256": "b5fbc26a3083fed69f140b4c848340ca38d4393850e1ee4a87c286b74a685e5e"
     },
     {
       "entry_id": "draft-insight-2026-10-11-how-to-start-an-equine-apparel-business",
-      "sha256": "d055ffb16a5e1c58d4074a9f1ba754f5d14deb326f49b1e0325ea7a9b1474645"
+      "sha256": "6d82a691070c722275e8ecff61d8dc041482f96c31673d25caa26a0aaa936162"
     },
     {
       "entry_id": "draft-insight-2026-10-12-how-to-start-a-horse-retail-business",
-      "sha256": "a0436e2e6cd8c76db3bcb1d56d737435fec816d5bd7209fcb54055ac59ffc25c"
+      "sha256": "55a84877870e7fd6923efe7f8aa007bf7b05e92edd47a1dc3e3099057ee71d2e"
     },
     {
       "entry_id": "draft-article-2026-10-13-emotional-am-i-screwed",
-      "sha256": "a6e1adca14543ddbd9e2a088d89cfefbed05cb8d7c5c8ea1a8804af2e073d8fc"
+      "sha256": "d0e9f57c6bc44b3faf5187507036fa67e4070a8409fed9b1d970227ceab0f31d"
     },
     {
       "entry_id": "draft-insight-2026-10-13-llc-vs-sole-proprietor-horse-business",
-      "sha256": "294f57211e3e043fd562ba2a0d0698cc2f546ff989134728311c9d175040c8b0"
+      "sha256": "739c9228efc67a31cd4d286867c5ad4f6a55dc7317b929f226927cc8defaf0b4"
     },
     {
       "entry_id": "draft-insight-2026-10-14-partnership-agreement-for-a-horse-business",
-      "sha256": "a7ac47182919d6954fffb330755c17d648d4cde7f7ff4c2ce75bb0c5f4d1469a"
+      "sha256": "a607f75dccab1d3f578049f12fa3755dc733113da2403bf308402cdb82d0af51"
     },
     {
       "entry_id": "draft-insight-2026-10-15-horse-syndicate-legal-structure",
-      "sha256": "1bf8f4e3421a368fc97ddd9688b5cb65e9018317be6a81f65553b7b77d70d669"
+      "sha256": "25a880da2979640df64bdb58fc243144070c074791c8ec671c23683a642368c9"
     },
     {
       "entry_id": "draft-insight-2026-10-16-joint-venture-agreement-for-an-equine-business",
-      "sha256": "9f3bacd9588b854e8d5fd673f6e6cfd2866f737256ed6acbbd71c5f837ca503a"
+      "sha256": "6c2a44c95c4a2e748cb9fc1ab6bde08083e512e36441acd15f613f6a9604e993"
     },
     {
       "entry_id": "draft-insight-2026-10-17-should-i-trademark-my-barn-name",
-      "sha256": "aa5bc90948f5b8a70f164dba0fe4e2e084a1425bffdbdad1b8744d9361adf642"
+      "sha256": "1fe2e0963dc05796a2085d54a8be991c8e32af02232a291c4fd4ab6ab8f0c743"
     },
     {
       "entry_id": "draft-insight-2026-10-18-how-do-i-protect-my-horse-business-brand",
-      "sha256": "4a82e7341f59f5f2fa089733b9a31cbf7202507a4dd09189284e44ab0284d212"
+      "sha256": "ab95f5d07ebfaf8e75ef1673005e7fd106e5492139e1e8f3f14bf0ba1b6c4482"
     },
     {
       "entry_id": "draft-insight-2026-10-19-trademark-vs-llc-name-for-a-horse-business",
-      "sha256": "7ada331fcb0e50a39b8d90e9aba37ed27baef4be59e557c7a6e5d56578e0f017"
+      "sha256": "ad0da3a4b376e13b45b3ce9445a040b55795a66c49f97b2fa595dd94961bac92"
     },
     {
       "entry_id": "draft-article-2026-10-20-equine-business-formation",
-      "sha256": "f01fbfdf55e980b53c03dd589c0537ba9e9fd33cf6a4a3d243c457c8ca80ffac"
+      "sha256": "87342961127e302ddb989d5e9860de4d2cd99d5d1998d7393e2b919eaa8ec94f"
     },
     {
       "entry_id": "draft-insight-2026-10-20-do-i-need-a-trademark-for-an-equestrian-brand",
-      "sha256": "dae1654d929149483451746644de435cec1769066dec68a9b96d269a0bd544d9"
+      "sha256": "af3b105f6e58b14f13cdd66f0ad1f6bf2016775e557e3621ff3ffe557555497b"
     },
     {
       "entry_id": "draft-insight-2026-10-21-how-do-i-get-a-sponsorship-for-horse-riding",
-      "sha256": "97728b49fba90af07a68fb7607d3edce51ea2f06d3e0678f0ca6fd72979006fe"
+      "sha256": "081d4cfca3cafe9a72138a7113827e57d9498dbbba0beeccd03c4791488fb2aa"
     },
     {
       "entry_id": "draft-insight-2026-10-22-do-i-need-a-contract-for-a-sponsorship",
-      "sha256": "21725872a7e85fe9c4cd216d0e1ad5824a58e83a1cf429d46e4dfcdee081c366"
+      "sha256": "d26eda100c2327c4964e0f362226397e1b3111a12e54b3b93100a4a57eacc4dd"
     },
     {
       "entry_id": "draft-insight-2026-10-23-what-should-be-in-an-equestrian-sponsorship-agreement",
-      "sha256": "81f94638f92d87763b1bbf92912dba1405a702a64b95ef69ce94669ee56bb88a"
+      "sha256": "6809a125278a213ea63fd868d61a7f32f4b2c5201322ae46161e8b5edee5eb2f"
     },
     {
       "entry_id": "draft-insight-2026-10-24-can-a-sponsor-use-my-image-without-permission",
-      "sha256": "cdc483ead43315ccfbc2c96b50520de5dccb4939c1d9f8592450bbafee3b2e30"
+      "sha256": "9327243f23b0bc3d6f4eda9906a0655af10349bb11c956448113b7e15f230f5f"
     },
     {
       "entry_id": "draft-insight-2026-10-25-what-should-i-do-if-i-receive-a-demand-letter",
-      "sha256": "05ca63f2538415e4dfb26f3eee2fea5c0ba2598b59cb8447fbbef458655fb603"
+      "sha256": "bc2896fa000071bb5a1f17b26c9568e5843d8a431860bf82c35fbb61831faade"
     },
     {
       "entry_id": "draft-insight-2026-10-26-how-serious-is-a-legal-demand-letter",
-      "sha256": "b0ff62f9136a76a891270e6f402d8889a6efcb89a18d26597e69f6ebfb5364ce"
+      "sha256": "1175383a91c054714a80e31f1c91343b93a5c073a03c479b8681683fbb18de00"
     },
     {
       "entry_id": "draft-article-2026-10-27-horse-lease-and-trial",
-      "sha256": "0ec15bd8e4ed81c9cec2c6c39e4c2b6f8f44c743b43574587b021d53a61e0364"
+      "sha256": "a8e43679436c3b6da556f666c9255f8d89f8c9dc63e6f26f0064b45d667f7eae"
     },
     {
       "entry_id": "draft-insight-2026-10-27-can-i-ignore-a-demand-letter",
-      "sha256": "30ff38c4bce572183cd124b9722493bef64dbe70fdaba24a7a79f262240d0243"
+      "sha256": "3af3417e409650291006bdac659ed626f70db6328af7ac896055a368daaeafa4"
     },
     {
       "entry_id": "draft-insight-2026-10-28-do-i-need-a-lawyer-to-respond-to-a-demand-letter",
-      "sha256": "3d41d892bf4b0eddd791c27b9604f5d702f38f06730dad00e7416a11a34381f7"
+      "sha256": "7025e3ce445255666807a25c75d60d4f07f8a8f47577ea509ed2953ba0dc4d5e"
     },
     {
       "entry_id": "draft-insight-2026-10-29-what-happens-if-i-don-t-respond-to-a-legal-letter",
-      "sha256": "c003e97aae38d30a28909886de56c6aee186603535d4c9d9a5e5276ca93c227c"
+      "sha256": "4d97f73f75838aaaf34d30c9a5e8e9907efebcdf5f515331ca71070c152f514b"
     },
     {
       "entry_id": "draft-insight-2026-10-30-can-a-contract-dispute-be-resolved-without-court",
-      "sha256": "c180289ff580d27f371eb702e6145a1ea4dc891ba40da6c131875f6be68fbf2d"
+      "sha256": "007fc16b97f842a562dd7fb0ccf1f7020ab1997185dc9a9154525bf474826e20"
     },
     {
       "entry_id": "draft-insight-2026-10-31-demand-letter-vs-lawsuit",
-      "sha256": "b4862a4c2017328f2b9cc37fa8dc147c8668790a700e33fcc7edd6c2daf3a549"
+      "sha256": "50a1695d5d534f6c71fb8a09c9c23ee60952cb25dfed164e679298c847121390"
     },
     {
       "entry_id": "draft-insight-2026-11-01-mediation-vs-litigation-in-horse-disputes",
-      "sha256": "9b0b6ead8b6e37663d695459ffe6c17e45d1a8cf5b0a03a4dbdff478522ad704"
+      "sha256": "82e2ab0030362adbdb1107ffc506b0fdf736558fe8e59ca8eae30644f404839f"
     },
     {
       "entry_id": "draft-insight-2026-11-02-how-do-i-start-an-equine-assisted-therapy-program-legally",
-      "sha256": "c9c3216c9dcd3870de7ab862f5f08ae9ea1aa75954309330e8b0a6490a49430e"
+      "sha256": "84daad36224c17e48d293258d3f4979886d45471f2d477fc34c48876515d5c7e"
     },
     {
       "entry_id": "draft-whitepaper-2026-11-02-intellectual-property-and-brand",
-      "sha256": "3f63c75ede6f44f0e240ac2ee6bfaa188a95ddb4d0957db5ba7534f1d902f4ff"
+      "sha256": "7be60ecbc1a75ba63eb45517eff32df728bf591305c9c99dc33e5b31185bf8ae"
     },
     {
       "entry_id": "draft-article-2026-11-03-horse-sale-and-purchase",
-      "sha256": "859030c8a45f0b27005442c617e63b1bc7a28d8a4a1d3faca4564ea9448c1164"
+      "sha256": "223310777b297c133d64cbd70de1296a3cc8d64026e8a32e9332cebecfa9d2e5"
     },
     {
       "entry_id": "draft-insight-2026-11-03-am-i-subject-to-hipaa-in-equine-therapy",
-      "sha256": "6d70e7ddf1d3d240809a3cdff982613f7b603d23a0ac48437e8e315f10012cf0"
+      "sha256": "5a2b9c6645defb2703e8de1232aa900fee3b051eb40d8c536f2ee8e2e72d6dbf"
     },
     {
       "entry_id": "draft-insight-2026-11-04-what-legal-requirements-apply-to-therapeutic-riding-programs",
-      "sha256": "63503a09a67120d72018a3437363ce52d8063e9c3e19338d8ff18aff169db235"
+      "sha256": "092aaa8a406ff9f5019b123047e4113d5943a7c90cd047fde55ce6111589dd44"
     },
     {
       "entry_id": "draft-insight-2026-11-05-what-waivers-are-required-for-equine-therapy-programs",
-      "sha256": "3d7713b16f656a0ee580d80335a96091505c2f1588112a3cb503f485e2d20245"
+      "sha256": "dd2cd79bb901f8a53c6b1c27c0dbc48b2604abbf3d3a79034f7b98cd4d1e26e3"
     },
     {
       "entry_id": "draft-insight-2026-11-06-do-i-need-insurance-for-therapeutic-riding",
-      "sha256": "d18a136b4ae7401cb787cc0c5025627c80d8059b96dd0e34b1d4578d9c65fb43"
+      "sha256": "c2e6f62fcc658d2c0c8d28b767c450f7881e19bb7f19ebbb00e581e623bfaa8e"
     },
     {
       "entry_id": "draft-insight-2026-11-07-what-should-be-included-in-a-barn-lease",
-      "sha256": "d7b753ce544519a98f9da311255b4b0ac39d2dfbb3ab54b83be2feabf6d5ff96"
+      "sha256": "973326cb5d2c7e213b2ea50e9f4b1c5073146269e715586248adaa6af011fc0f"
     },
     {
       "entry_id": "draft-insight-2026-11-08-can-i-run-a-horse-business-under-my-lease",
-      "sha256": "68ac94fac2ad0adab5256d7820727ed0d98f29b303ddca67b210c8786ccc2821"
+      "sha256": "6537ae41db5bb2489076d8377f50f06bfe2eec41a67065065eb08d8435807139"
     },
     {
       "entry_id": "draft-insight-2026-11-09-who-is-responsible-for-repairs-in-a-barn-lease",
-      "sha256": "2a9cfefa5aec8cddb788088bd602c26dbf6a0eeed44c14bc080c08c921c9e66b"
+      "sha256": "3f79427d8c6616c6d6c0ccf297c1d45d862f4167af7df39d3121575fe7785209"
     },
     {
       "entry_id": "draft-article-2026-11-10-intellectual-property-and-brand",
-      "sha256": "15e21cb6fcbca7912c9948131fa300c4d239ecef23a7b6d8fa41838706d5d98b"
+      "sha256": "a5349b583079b4e1dbd8bd8f474cc99d826afb7535dd463779f1614c2a586e04"
     },
     {
       "entry_id": "draft-insight-2026-11-10-what-liability-applies-in-a-horse-property-lease",
-      "sha256": "e4a9fec28952c26de9dc37f076f12d28a58cad47792c6abb6af8131900f4fc72"
+      "sha256": "3e3e9808928ea5786ef7dffa165d3c24f49f987587059a290e39d85edab834ca"
     },
     {
       "entry_id": "draft-insight-2026-11-11-do-i-need-a-horse-sale-contract-in-north-carolina",
-      "sha256": "b11b1b9f31828b0752dbea400e3c88b75edf7c9724dee6fe6cd23740b1eb5cb9"
+      "sha256": "37115bd3b65ce4d54d9b4c95a7d251c5df30025eface0f3b5629ebd38249792c"
     },
     {
       "entry_id": "draft-insight-2026-11-12-what-does-north-carolina-equine-liability-law-cover",
-      "sha256": "cbbf7ad58708887269c665334de565abd9be1426fdc4a39fcb1d3a57fec5a47a"
+      "sha256": "92e7175c4cf4c3c07ef4faf928db12a81f6106afb22e1c2fc8fdd4dfb212fbc9"
     },
     {
       "entry_id": "draft-insight-2026-11-13-do-i-need-a-liability-waiver-in-south-carolina",
-      "sha256": "326c2ceb640a7b3229f05c4f21b3f3db6299d0b0ba728fce5dbf64acb03709f6"
+      "sha256": "96fcda1ada125226496cbce288640b2f9a1e792339bad0eb722a93e995fb195f"
     },
     {
       "entry_id": "draft-insight-2026-11-14-what-does-illinois-equine-liability-law-cover",
-      "sha256": "38ef9c4db35af196bea325f095dd3ef7db447375adecd6d3807052b402054aef"
+      "sha256": "b79a0152a3a26debd29b8b46ce865952c86ba4f1538035c7df0e4f7e2c82c50b"
     },
     {
       "entry_id": "draft-insight-2026-11-15-do-i-need-warning-signs-in-north-carolina",
-      "sha256": "b5a2a18c25603c43d4d7ebc8db181415a946e1e435e5c0bedf5196e60278388e"
+      "sha256": "578ba0b56fb59946e80cf69f1200861348c8cd3b1cf40c85f56d325afd37cd33"
     },
     {
       "entry_id": "draft-insight-2026-11-16-can-i-be-sued-in-south-carolina-if-i-have-a-waiver",
-      "sha256": "c3c3d280d2dfbf9e3b0733f00428fcda92af8d82c7e26d4ebba16edbe4ddf87c"
+      "sha256": "424f2c869710c67ec28a26933f1efefa00f1429217a470021a79366ee0a68d18"
     },
     {
       "entry_id": "draft-article-2026-11-17-liability-waivers-insurance",
-      "sha256": "fbfcd76dbcb165fad69df693141c425d46db8a351c78955dd9217f877aa5ac65"
+      "sha256": "1335a8624778639c51f7f0e1439fa156c9d527f4685a008576885f965485ea9f"
     },
     {
       "entry_id": "draft-insight-2026-11-17-i-sold-a-horse-without-a-contract-am-i-screwed",
-      "sha256": "3d23970fc38af1b011f87c5617d2c7d56d51c44d76b4c9a2ce7bbf5755e68386"
+      "sha256": "034608bf6501776899cbf17142f41c49a93f6a4480677749321bb47026b6f53f"
     },
     {
       "entry_id": "draft-insight-2026-11-18-i-bought-a-horse-and-something-is-wrong-what-now",
-      "sha256": "28cece86887a764f0b49bc340fa0712f39548b8f34cf87f306cb00489dbe3817"
+      "sha256": "20c6421592162bd046999fc44d87a5572dec22c44aaa5ae39c792d56f9eac1a1"
     },
     {
       "entry_id": "draft-insight-2026-11-19-did-i-mess-up-by-trusting-a-handshake-deal",
-      "sha256": "9bb901fe7e5a15e213be55e2a5b825fad8b0159ce546f5441a34a9965845d86a"
+      "sha256": "778c514351071e83cb51dcf27486afa5c14dbaada12dea23644b09be9f60dc16"
     },
     {
       "entry_id": "draft-insight-2026-11-20-is-it-too-late-to-fix-a-bad-horse-sale",
-      "sha256": "b994b14e93270966a89206b4efb4f6a6e48038e503900c9e7c1604ae3444f250"
+      "sha256": "e96ac8205ce87c02e2a3a02157aac85d38407f63866b53819f3a19947b3097c2"
     },
     {
       "entry_id": "draft-insight-2026-11-21-what-is-the-worst-case-scenario-if-i-do-nothing",
-      "sha256": "78fa5fcd9832da0b2e25c46ff96aea28b24e3a22a575a2d19095ac792624e3db"
+      "sha256": "b6b1a9468e30950422a28ff2fbeecdc2318f864bc258428a0a8af0d89586ab81"
     },
     {
       "entry_id": "draft-insight-2026-11-22-am-i-overreacting-or-is-this-risky",
-      "sha256": "3e0be4f94f34df77e44ae040691ae4f29afe7fa6b96c14cacb37ee4cdff96a96"
+      "sha256": "e7bc88a0eabb7dadcf5f297892e59a25ad298dacdb4a3ad6850025709d0a24ab"
     },
     {
       "entry_id": "draft-insight-2026-11-23-do-people-actually-get-sued-over-horse-deals",
-      "sha256": "5dc976023c289726696385ddaee6df1b66793d5d9c0f241ef2e3b71566ab1874"
+      "sha256": "a45daf6e00fa405f771397c9de4e26b77bff86572250af9a8412fd8b2720d5fd"
     },
     {
       "entry_id": "draft-article-2026-11-24-real-property-and-leases",
-      "sha256": "bddc24ac3c2b9d813e5188de4d7e91d418a94ff29b3d0ac8e76346a56cf29526"
+      "sha256": "d269b59b29b48b46dd9349534aad1bfaceb2ac1bf8ef13d15bd4cb669ee8daac"
     },
     {
       "entry_id": "draft-insight-2026-11-24-do-i-need-a-contract-to-sell-a-horse",
-      "sha256": "38ae76f621334599ce6514d2631c74b70b71a038b35ad48857f8c6233c4092e6"
+      "sha256": "7a879be41c97fcb55387e433ba72a7a5c85380de81d7548a59e2afa487481119"
     },
     {
       "entry_id": "draft-insight-2026-11-25-do-i-need-a-contract-to-buy-a-horse",
-      "sha256": "5a18428d7200f5a81e65ac8e907d4235aef8e3f3c25e9df653cbf00bbedeaadc"
+      "sha256": "e16934c921146aba55143b889105b09c4ce158da6ffed17070a60aec5a57fe0d"
     },
     {
       "entry_id": "draft-insight-2026-11-26-what-should-be-included-in-a-horse-bill-of-sale",
-      "sha256": "0ef9510781b9fa3de4ec208f8b2f23742b1df8bdf75781c0d5b7bcb453e4bd07"
+      "sha256": "0f0ca05c05eae9e42855e1aa69b8a94c8a0efa0079308e9f25e17a7d3a9cad84"
     },
     {
       "entry_id": "draft-insight-2026-11-27-what-should-be-included-in-a-horse-sale-contract",
-      "sha256": "5c019e1b24d27d8c7e76858a2873d7d4e3b649b002e89b6279638a73461e057c"
+      "sha256": "46d1beaf4dad523f1c276e09862e46d6af97d3b7f1087def2e559fa346183aee"
     },
     {
       "entry_id": "draft-insight-2026-11-28-when-does-ownership-legally-transfer-in-a-horse-sale",
-      "sha256": "d8205efb886c533eb9605724d8734b0670ff19dc5a8b00e5a6a2fac8456a0fdd"
+      "sha256": "ed51b41e43d0bf1a4a9072a4c22ac09edc7e2968cb9ff14e38f73613ca5ce614"
     },
     {
       "entry_id": "draft-insight-2026-11-29-who-is-responsible-after-a-horse-sale-is-completed",
-      "sha256": "60ef50258645b2064a7eab567404a1bfdfeea94b8c4ca151a5bc86de7ae00a7f"
+      "sha256": "69decb1005345194306771ee037808b19ab77c3db44e23dca70a034ea45928b2"
     },
     {
       "entry_id": "draft-insight-2026-11-30-is-a-verbal-agreement-legally-binding-in-a-horse-sale",
-      "sha256": "8d77df8bad72668aaab291664896b774f87e33ae5cb34d901110b55946255462"
+      "sha256": "f16b9302100218fbd3e662002e20b22f02895df3ef19571972c94e29203f5d7f"
     },
     {
       "entry_id": "draft-article-2026-12-01-state-specific",
-      "sha256": "dde5449c141ae476a6911ca142a5c7ca3fe6437e2b9432458fae7e79b8bc3d28"
+      "sha256": "91e44b6da1a77b787aab842ecd202e3a32522c03ca017c42e625d29cafddd5f0"
     },
     {
       "entry_id": "draft-insight-2026-12-01-what-happens-if-there-is-no-written-agreement-in-a-horse-sale",
-      "sha256": "ba200f4b13c5a1c840be48edd6be979caaf6946ad29c2eceb5d4a7fba3cdbe15"
+      "sha256": "87a01e7c467e52d57c777b89e14d370e3c3546bf83fd5f4d0a99a0000f0e7a1b"
     },
     {
       "entry_id": "draft-whitepaper-2026-12-01-liability-waivers-insurance",
-      "sha256": "d135331a8d00bb430a88382de5e3bfbf804e4e1dd9bd59c6754a102819a908cb"
+      "sha256": "cde643e9044434af7506c50c57006a1e84ae511d751812e30fd8b22d25143dd7"
     },
     {
       "entry_id": "draft-insight-2026-12-02-what-happens-if-a-horse-is-misrepresented-in-a-sale",
-      "sha256": "3b9b1eefac3ce91f5910395d17678c191d5f8e282f665b6696213bf81455b5dc"
+      "sha256": "d00743099ab4c0ca6844f1a52787d561a619fef17ac776134f9ed05b48a25b5c"
     },
     {
       "entry_id": "draft-insight-2026-12-03-can-a-buyer-return-a-horse-after-purchase",
-      "sha256": "b557d41f429f838d84eaff1c215aa04c9f9c003b688e1917af64689378b823fb"
+      "sha256": "edc09dcfcc370c57e952b7d7aed4bb90d75a37abf310ffa63998da3f79c44ee7"
     },
     {
       "entry_id": "draft-insight-2026-12-04-can-a-seller-refuse-to-take-a-horse-back",
-      "sha256": "f8ed07376c505556bff49aafc3ff9f5c84334271903e2b0968f3f1f41ebe6a3c"
+      "sha256": "feba433bf9178913b6d7f202588555be364ec6f7d96bf1c3af5cc76c934d5304"
     },
     {
       "entry_id": "draft-insight-2026-12-05-what-happens-if-a-horse-becomes-lame-after-sale",
-      "sha256": "ba89a81d964ebb293016a959d489671e3af79f0669a2985c485b5e5fd9661201"
+      "sha256": "79b9bd07c7db001f406945ce89299cbb5ba34557dc1ac517f8b17b8b588abc85"
     },
     {
       "entry_id": "draft-insight-2026-12-06-can-a-buyer-sue-after-an-as-is-horse-sale",
-      "sha256": "49bb47bb5e663fb02ab3c7532a869a719bcd1aed3bbff2a9109af23aa22f69e8"
+      "sha256": "93922563ad24eae20bdc148f9c96d6adc0d8f37fce0fc7724e70ae211f4b9def"
     },
     {
       "entry_id": "draft-insight-2026-12-07-what-happens-if-a-horse-sale-goes-wrong",
-      "sha256": "783e4213aef9f325b08c0dec88470e77ca28fecdaec9fada20322ae03b115e78"
+      "sha256": "fa8bafac9976699917299e55ce9aba13293554bddaa40459df82e435eafdcc51"
     },
     {
       "entry_id": "draft-article-2026-12-08-therapeutic-riding-and-hipaa",
-      "sha256": "5398a7de9f8f8af4ab16390f3c1796897df4131e50e83d999fe687c54fcc4849"
+      "sha256": "00471f3b8d65b20ddef0b1dd722fd54c41391ac2652d3c420314a58c781376a2"
     },
     {
       "entry_id": "draft-insight-2026-12-08-what-if-i-sold-a-horse-without-a-contract",
-      "sha256": "a456897dfef8be2c5e62f12d4f7a1316e2869801c5835c66e100ee95caf86f8c"
+      "sha256": "3510552218a7e8eaf0370036ef6fd0871924d086f4216993b90bc8edd08c7c01"
     },
     {
       "entry_id": "draft-insight-2026-12-09-what-if-i-bought-a-horse-without-a-contract",
-      "sha256": "6cf9a5dc1de8f1e6170e97e0a7f3cca7be7b3bb1139135f384168899410e7ffd"
+      "sha256": "138f3147486ab7c08b6db6064bf8810d9e76a8c19f299c328b15295706379c23"
     },
     {
       "entry_id": "draft-insight-2026-12-10-horse-sale-contract-vs-bill-of-sale",
-      "sha256": "cc18d39861f534745a188c8237e1b3e6b3a5b599a52a6267c56d9d01d90d497e"
+      "sha256": "5dae8d5fe0c2647f9f8b4bc1f302868c44fa0731bb824f7ec5625a22e2d9e03a"
     },
     {
       "entry_id": "draft-insight-2026-12-11-contract-vs-handshake-deal-in-a-horse-sale",
-      "sha256": "202ef31a05acde1eab3fdcfa2ebcd3a50d86c3a8e3b4b6940765aff5451fc61b"
+      "sha256": "09795bbf16be029425bb9e8d08174b1af19d0c770385977f39d699228a2f946b"
     },
     {
       "entry_id": "draft-insight-2026-12-12-template-contract-vs-custom-horse-contract",
-      "sha256": "c97138184db084a0175d6aa586e9f37f9cf2b35658b6841fb96aff8b3da4aa36"
+      "sha256": "89b8d159f1fc3c0ee450adf733f41a838ca0488e0b2f1785e9af29d170c018a4"
     },
     {
       "entry_id": "draft-insight-2026-12-13-pre-purchase-exam-vs-no-exam-legal-risk",
-      "sha256": "6fb3de8919e1c2d79b580bc14d1a725c1f5d7a9ba33d836f5b639f49aa2981c5"
+      "sha256": "02e9e861fe7d7a613b69c840e3ffd55be1b97c7347adea9ddbb6891d33249377"
     },
     {
       "entry_id": "draft-insight-2026-12-14-lease-to-purchase-vs-outright-purchase",
-      "sha256": "701e5ddd2060b52318e476beff2d1a42b30529bad75c761ddf1d411b25f399b3"
+      "sha256": "0987760b28789cc3db543a57bfe6d7a1bf7a96b86f4761fa2a4a54d4ce4ecdb2"
     },
     {
       "entry_id": "draft-article-2026-12-15-boarding-training-and-barn-operations",
-      "sha256": "55028f38d70b1e26066127384a8f225540409561718051d3b2bc4c42c2e0dd9c"
+      "sha256": "353e1f245d8e8a398d31531cd9ac680a123df85261ff83daae84e2e26ed4ca8f"
     },
     {
       "entry_id": "draft-insight-2026-12-15-what-should-be-included-in-a-horse-lease-agreement",
-      "sha256": "a4ce27ad6b1ad45a54d5d1e3e1c98d5d9f008fa4fab7f637260884715666d628"
+      "sha256": "83cdbee63a6d1d6d5f9e48bf0524705537dfd6372b0288441316af3462855531"
     },
     {
       "entry_id": "draft-insight-2026-12-16-what-is-a-horse-trial-agreement",
-      "sha256": "98f84778b4d20c95ae66d974719e4bc0f8bbab346c176e5dabf54404e68675e9"
+      "sha256": "6f7f39e1a2edd739f036c6e68afb26b62e3515acba11eb9712229902674dec3e"
     },
     {
       "entry_id": "draft-insight-2026-12-17-who-is-liable-during-a-horse-lease",
-      "sha256": "a10e8493381bf4845f367a20ed9f645307e100eaeb456342fa81b35b15d21f4a"
+      "sha256": "0fddd0ecb74c8e552b27b2b8732a32d84e93d9c58a6a532ad250417eb2f2b62b"
     },
     {
       "entry_id": "draft-insight-2026-12-18-who-pays-vet-bills-in-a-horse-lease",
-      "sha256": "16ec6d280746f8d64b959c8b19b3b36a2cf71a9ccd622e8dafd82a4294c26639"
+      "sha256": "a167d4f26927aa6b8ceecfac7eb761b377ceed44e12691adb96c9e538649c432"
     },
     {
       "entry_id": "draft-insight-2026-12-19-what-happens-if-a-leased-horse-is-injured",
-      "sha256": "1fdc19eff308ceabea470d9b32889e4204a226614ac04b8b68b16e604a2c6f9f"
+      "sha256": "d2e35a7bc2962239db4038fc9fae0c29c49910d9fb83867fbb14b68f31eab61a"
     },
     {
       "entry_id": "draft-insight-2026-12-20-can-you-end-a-horse-lease-early",
-      "sha256": "647ea5e1cfd35f41ca6529fb43cc0de02dc417952b3b9b360c03efd39cefd536"
+      "sha256": "c027e8d6b2ca0a79940c08eadc286245e328bfd960ce9999a7857cc809915cea"
     },
     {
       "entry_id": "draft-insight-2026-12-21-what-happens-if-a-leased-horse-becomes-unsound",
-      "sha256": "759e23b167c187b3170e22575d24d48d590a588f1bbb023748757ae8b96974ea"
+      "sha256": "d084a2f388bcfb81b4ce2effdd2e70eccea00425289de249a4a4ee2da8c3ef73"
     },
     {
       "entry_id": "draft-article-2026-12-22-demand-letters-and-disputes",
-      "sha256": "e5774baaf7a10d1fbf9ba361c7057539a47c2e5bba4d8b97c208217023010a98"
+      "sha256": "efcc466ab857d0227e1845abbdbd32f2bb036211ca0b44e8fc7771a2a38c9dbd"
     },
     {
       "entry_id": "draft-insight-2026-12-22-lease-vs-purchase-horse",
-      "sha256": "5892f9c0c90373cf39d5c8e77aaff9927fd982ccb382c94fe23369d20d3d3eca"
+      "sha256": "c1b3b05f99fac5496bcde460176ab52b129419ea92c401f6015fd56cdd735628"
     },
     {
       "entry_id": "draft-insight-2026-12-23-trial-agreement-vs-lease-agreement",
-      "sha256": "c243bea4bc35d9dd626840911b5e71ed36b5d9d0cb174b379a844c8955141010"
+      "sha256": "60eb0ae24eb936afae57fb0aa19f6d2abe0cfd9735b422722547758071d37597"
     },
     {
       "entry_id": "draft-insight-2026-12-24-lease-to-own-vs-buying-outright",
-      "sha256": "2d5a5ddc5919fabb94160d71e1303fcd47f5f73867ee673c4cd977bd47b184f7"
+      "sha256": "ba4fa3f148dfe32c74a1d47f30c30a47478fc93516f1149633635ca4b8e7f583"
     },
     {
       "entry_id": "draft-insight-2026-12-25-what-should-be-included-in-a-horse-boarding-agreement",
-      "sha256": "465ce24ea29ed7bf41ab964b040b758034fb89905dd44902319ea60260ee46d3"
+      "sha256": "46ac635ab383fbff4d4cad78dfaf1ef520fbbbd99c90c80d168792ea6c523e64"
     },
     {
       "entry_id": "draft-insight-2026-12-26-what-should-be-included-in-a-training-agreement",
-      "sha256": "2209297ff53be969281cf0df9652003920542ca71abbedb3c75ff3f4bcd88617"
+      "sha256": "e6a13a1cf9412e9cc0730a59cd58546c7007a7d7a2948177cbbb1b8b110839ba"
     },
     {
       "entry_id": "draft-insight-2026-12-27-what-legal-documents-do-i-need-to-run-a-boarding-barn",
-      "sha256": "3ddaf1c32088473ef8268b0eac5b8d9024e244d5ff6c055b1ec2eaeefbb24915"
+      "sha256": "6eb8f3bd1fd97597ad5b94918154fca4b94575228339a4fb48f5d891430a6d49"
     },
     {
       "entry_id": "draft-insight-2026-12-28-who-is-liable-if-a-horse-is-injured-while-boarded",
-      "sha256": "60a3fae38beafcddf287eb2b766a0f4295305e155c79976698ec9c702c4c3b41"
+      "sha256": "378caf32771456807ce4feeb5ae759cfc24c7cfebca158e64288a3b3db69c309"
     },
     {
       "entry_id": "draft-article-2026-12-29-emotional-am-i-screwed",
-      "sha256": "4d11274681f60a5705658f49a85149f97041f5b3a30332dab1984215df12d4f3"
+      "sha256": "47b087d7761644118e729fa48b63e4f688e6f48553f6ca04e79b5d7324da423e"
     },
     {
       "entry_id": "draft-insight-2026-12-29-who-pays-vet-bills-while-a-horse-is-boarded",
-      "sha256": "5e62ae30af25baa4af358970115b1e7ea2a7531efbde5813d9e15306283b46e4"
+      "sha256": "807261b27b357a1302ca8842a7d35198cc66df20e58e0c51e1826d5182ac3cef"
     },
     {
       "entry_id": "draft-insight-2026-12-30-what-happens-if-a-boarder-doesn-t-pay",
-      "sha256": "83368e4520e18d4bf8e696d3d21f2e3543340ee3684d7faf781832fc6ff012cd"
+      "sha256": "15704cd7f92b8be515c39db6e948a5a7fe19563a4dcd1c0c8d0a10c87880699a"
     },
     {
       "entry_id": "draft-insight-2026-12-31-can-a-boarding-barn-sell-a-horse-for-unpaid-bills",
-      "sha256": "199cef884d25f95f602cbfb6e8849182996ffa464bb369db520b3314f559a4b8"
+      "sha256": "5aca1da06e625fee4cbf3c9f19e9d6b361dc256caa5ef189e982f9c98232c267"
     }
-  ]
+  ],
+  "rebaselined_at": "2026-08-10T14:33:39.529Z",
+  "rebaseline_reason": "Owner-approved protected editorial source-identity contract v2 reconciliation. Immutable source/question identity is rebaselined; native quality repair, uniqueness repair, scheduling, review, and publish-state movement remain allowed operational mutations.",
+  "mutable_operational_fields": [
+    "date",
+    "title",
+    "slug",
+    "github_path",
+    "notes",
+    "status",
+    "review_status",
+    "publish_date",
+    "scheduled_date",
+    "generation_validation",
+    "self_heal_status",
+    "self_heal_last_run_at",
+    "self_heal_warnings",
+    "self_heal_hard_fails",
+    "approval_eligible",
+    "prevalidation_status",
+    "prevalidation_last_run_at",
+    "quality_warnings",
+    "hard_fails",
+    "humanization_score",
+    "seo_score",
+    "aeo_score",
+    "geo_score",
+    "llm_citation_score",
+    "routing_score",
+    "legal_safety_score",
+    "uniqueness_status",
+    "uniqueness_strategy",
+    "uniqueness_threshold",
+    "uniqueness_repair_attempts",
+    "uniqueness_initial_similarity",
+    "uniqueness_max_similarity",
+    "uniqueness_nearest_page",
+    "uniqueness_nearest_family",
+    "uniqueness_last_run_at",
+    "approved_at",
+    "rejected_at",
+    "rejection_reason",
+    "revision_requested_at",
+    "revision_reason"
+  ],
+  "identity_contract_note": "Protected identity covers the durable editorial source/question identity. Native self-heal, uniqueness repair, scheduling, review, and publish workflows may change presentation, path, date, quality, and status fields without requiring a protected-core rebaseline."
 }

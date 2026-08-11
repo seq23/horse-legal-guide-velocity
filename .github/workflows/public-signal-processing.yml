@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: horse-legal-guide-main-writer
+  cancel-in-progress: false
+
 jobs:
   process-public-signals:
     runs-on: ubuntu-latest
@@ -30,10 +34,10 @@ jobs:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_SEARCH_MODEL: gemini-2.5-flash-lite
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: true
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
       - name: Install
@@ -48,6 +52,8 @@ jobs:
         run: npm run report:ingestion
       - name: Build admin signal health
         run: npm run build
+      - name: Validate approved-only public output
+        run: npm run validate:publish-safety
       - name: Generate workflow trace
         run: npm run ops:trace-workflows
       - name: Validate

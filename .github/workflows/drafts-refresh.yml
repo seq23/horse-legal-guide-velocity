@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: horse-legal-guide-main-writer
+  cancel-in-progress: false
+
 jobs:
   refresh-drafts:
     runs-on: ubuntu-latest
@@ -18,10 +22,10 @@ jobs:
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: true
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
       - name: Install
@@ -34,6 +38,8 @@ jobs:
         run: npm run content:prevalidate
       - name: Build site and admin dashboards
         run: npm run build
+      - name: Validate approved-only public output
+        run: npm run validate:publish-safety
       - name: Generate workflow trace
         run: npm run ops:trace-workflows
       - name: Apply manual mode

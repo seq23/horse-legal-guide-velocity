@@ -35,7 +35,7 @@ function renderBrandHeader(config) {
 </header>`;
 }
 
-function renderLayout({ title, description, url, body, schemaType = 'Article', includeBrandChrome = true }) {
+function renderLayout({ title, description, url, body, schemaType = 'Article', includeBrandChrome = true, schemaOptions = {} }) {
   const config = readConfig();
   const footer = includeBrandChrome ? readText('templates/partial.footer.html') : '';
   const brandHeader = includeBrandChrome ? renderBrandHeader(config) : '';
@@ -237,7 +237,7 @@ ${body}
 ${footer}
     </div>
   </main>
-  <script type="application/ld+json">${writeJsonLd(schemaType.toLowerCase() === 'faqpage' ? 'faq' : 'article', title, description, url)}</script>
+  <script type="application/ld+json">${writeJsonLd(schemaType.toLowerCase() === 'faqpage' ? 'faq' : 'article', title, description, url, schemaOptions)}</script>
 </body>
 </html>`;
 }

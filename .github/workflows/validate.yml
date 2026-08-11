@@ -16,8 +16,8 @@ jobs:
       INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
       GSC_SITE_URL: sc-domain:horselegalguide.com
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
       - name: Install
@@ -28,5 +28,9 @@ jobs:
         run: npm run build
       - name: Generate workflow trace
         run: npm run ops:trace-workflows
+      - name: Behavioral publish-safety tests
+        run: npm test
+      - name: Authority modernization gate
+        run: npm run validate:authority-modernization
       - name: Validate
         run: npm run validate:all

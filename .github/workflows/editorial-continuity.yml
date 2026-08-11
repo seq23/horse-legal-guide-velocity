@@ -5,14 +5,18 @@ on:
     - cron: "7 10 * * 1"
 permissions:
   contents: write
+concurrency:
+  group: horse-legal-guide-main-writer
+  cancel-in-progress: false
+
 jobs:
   continuity:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
       - run: npm ci
@@ -40,6 +44,9 @@ jobs:
       - name: Rebuild existing admin and public surfaces
         if: steps.continuity_status.outputs.changed == 'true'
         run: npm run build
+      - name: Validate approved-only public output
+        if: steps.continuity_status.outputs.changed == 'true'
+        run: npm run validate:publish-safety
       - name: Validate continuity contract
         run: npm run validate:authority-modernization
       - name: Validate existing client system after continuity generation

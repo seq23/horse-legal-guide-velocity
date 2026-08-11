@@ -61,3 +61,16 @@ It refreshes:
 Route: `/agency/`
 
 Access requires an authenticated, allowlisted GitHub admin session. The route is `noindex,nofollow` and excluded from public sitemaps.
+
+## Source implementation status
+
+The GSC and Bing clients, scheduled workflow, snapshot schema, dashboard integration, and provider-truth fallbacks are already implemented in source. The remaining activation is external account configuration, not a new code phase.
+
+After secrets are provisioned, dispatch **Agency Search Monitor** once and verify:
+
+```text
+data/agency/gsc_snapshot.json status = connected/ok with real metrics
+data/agency/bing_snapshot.json status = connected/ok with real provider rows
+```
+
+If credentials are absent or rejected, snapshots must remain `not_connected`/degraded and must never be represented as live measurement proof.
