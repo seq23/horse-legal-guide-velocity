@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-06T14:19:32.580Z",
-  "total_signals": 2471,
+  "generated_at": "2026-08-12T14:02:16.742Z",
+  "total_signals": 2476,
   "signals_by_source": {
     "reddit_equestrian": 1107,
     "reddit_horses": 648,
@@ -8,45 +8,45 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 140,
+    "youtube_search_comments": 141,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 151,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 34
+    "forum_horse_and_hound": 38
   },
   "signals_by_platform": {
     "reddit": 2121,
-    "equestrian_forums": 93,
+    "equestrian_forums": 97,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 140,
+    "youtube": 141,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1020,
+  "normalized_count": 1025,
   "duplicates_collapsed": 1451,
   "pages_created": 0,
-  "pages_strengthened": 1020,
+  "pages_strengthened": 1025,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 537
+      "count": 539
+    },
+    {
+      "name": "boarding-training-and-barn-operations",
+      "count": 128
     },
     {
       "name": "horse-sale-and-purchase",
       "count": 128
     },
     {
-      "name": "boarding-training-and-barn-operations",
-      "count": 127
-    },
-    {
       "name": "horse-lease-and-trial",
-      "count": 124
+      "count": 126
     },
     {
       "name": "liability-waivers-insurance",
@@ -88,7 +88,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 140
+      "count": 141
     },
     {
       "name": "reddit_legaladvice",
@@ -100,7 +100,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 34
+      "count": 38
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -131,79 +131,86 @@
     {
       "source_key": "reddit_equestrian",
       "platform": "reddit",
-      "status": "ok",
-      "count": 20
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
-      "status": "ok",
-      "count": 0
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "ok",
-      "count": 0
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "ok",
-      "count": 20
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
-      "status": "ok",
-      "count": 0
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "forum_the_horse_forum",
       "platform": "equestrian_forums",
-      "status": "ok",
+      "status": "success_with_data",
       "count": 0
     },
     {
       "source_key": "forum_chronicle_of_the_horse",
       "platform": "equestrian_forums",
-      "status": "ok",
+      "status": "success_with_data",
       "count": 1
     },
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "ok",
-      "count": 7
+      "status": "success_with_data",
+      "count": 9
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "ok",
-      "count": 0
+      "status": "skipped_not_configured",
+      "count": 0,
+      "error": "GEMINI_API_KEY missing"
     },
     {
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
-      "status": "ok",
-      "count": 1
+      "status": "skipped_not_configured",
+      "count": 0,
+      "error": "No live query observations are available yet."
     },
     {
       "source_key": "youtube_search_comments",
       "platform": "youtube",
-      "status": "ok",
+      "status": "success_with_data",
       "count": 40
     },
     {
       "source_key": "instagram_public_social_framing",
       "platform": "instagram",
-      "status": "ok",
+      "status": "success_with_data",
       "count": 0
     },
     {
       "source_key": "quora_question_patterns",
       "platform": "quora",
-      "status": "ok",
+      "status": "success_with_data",
       "count": 0
     }
   ],
@@ -17580,6 +17587,91 @@
       "intent_type": "faq",
       "signal_score": 0.75,
       "mapped_slug": "/liability/do-i-need-insurance-for-my-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1020_greetings-from-finland-50-years-with-horses-and-foals",
+      "normalized_id": "norm_2471_6750c3e1c9",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_greetings-from-finland-50-years-with-horses-and-foal_354090d6"
+      ],
+      "preserved_query": "Greetings from Finland – 50 years with horses and foals — what should I know?",
+      "normalized_query": "Greetings from Finland – 50 years with horses and foals — what should I know?",
+      "llm_bait_phrase": "Greetings from Finland – 50 years with horses and foals",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1021_training-canter-transition-big-moving-horse",
+      "normalized_id": "norm_2472_306a5947d9",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_training-canter-transition-big-moving-horse-https-fo_25addd60"
+      ],
+      "preserved_query": "Training canter transition - big moving horse — what should I know?",
+      "normalized_query": "Training canter transition - big moving horse — what should I know?",
+      "llm_bait_phrase": "Training canter transition - big moving horse",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1022_pony-trekking-horse-riding",
+      "normalized_id": "norm_2473_096641e0bf",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_pony-trekking-horse-riding-https-forums-horseandhoun_cb19c3d3"
+      ],
+      "preserved_query": "Pony trekking / Horse riding — what should I know?",
+      "normalized_query": "Pony trekking / Horse riding — what should I know?",
+      "llm_bait_phrase": "Pony trekking / Horse riding",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1023_relocation-advice-please",
+      "normalized_id": "norm_2474_dd9ec93279",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_relocation-advice-please-https-forums-horseandhound-_56b14acb"
+      ],
+      "preserved_query": "Relocation advice please! — what should I know?",
+      "normalized_query": "Relocation advice please! — what should I know?",
+      "llm_bait_phrase": "Relocation advice please!",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1024_to-structure-a-zero-down-master-lease-deal",
+      "normalized_id": "norm_2475_148d206b1e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-structure-a-zero-down-master-lease-deal-https_18c23a01"
+      ],
+      "preserved_query": "How To Structure A Zero Down Master Lease Deal?",
+      "normalized_query": "How To Structure A Zero Down Master Lease Deal?",
+      "llm_bait_phrase": "To Structure A Zero Down Master Lease Deal",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
