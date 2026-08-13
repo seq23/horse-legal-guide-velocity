@@ -1,48 +1,48 @@
 {
-  "generated_at": "2026-08-12T14:02:16.742Z",
-  "total_signals": 2476,
+  "generated_at": "2026-08-13T14:02:35.440Z",
+  "total_signals": 2498,
   "signals_by_source": {
-    "reddit_equestrian": 1107,
+    "reddit_equestrian": 1127,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 141,
+    "youtube_search_comments": 142,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 151,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 38
+    "forum_horse_and_hound": 39
   },
   "signals_by_platform": {
-    "reddit": 2121,
-    "equestrian_forums": 97,
+    "reddit": 2141,
+    "equestrian_forums": 98,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 141,
+    "youtube": 142,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1025,
-  "duplicates_collapsed": 1451,
+  "normalized_count": 1036,
+  "duplicates_collapsed": 1462,
   "pages_created": 0,
-  "pages_strengthened": 1025,
+  "pages_strengthened": 1036,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 539
+      "count": 543
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 128
+      "count": 132
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 128
+      "count": 130
     },
     {
       "name": "horse-lease-and-trial",
@@ -66,7 +66,7 @@
     },
     {
       "name": "intellectual-property-and-brand",
-      "count": 7
+      "count": 8
     },
     {
       "name": "therapeutic-riding-and-hipaa",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1107
+      "count": 1127
     },
     {
       "name": "reddit_horses",
@@ -88,7 +88,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 141
+      "count": 142
     },
     {
       "name": "reddit_legaladvice",
@@ -100,7 +100,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 38
+      "count": 39
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -131,9 +131,8 @@
     {
       "source_key": "reddit_equestrian",
       "platform": "reddit",
-      "status": "timed_out",
-      "count": 0,
-      "error": "source timeout after 7000ms"
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_horses",
@@ -179,7 +178,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 9
+      "count": 10
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -6985,7 +6984,7 @@
       "cluster": "horse-lease-and-trial",
       "intent_type": "faq",
       "signal_score": 0.9,
-      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -10039,7 +10038,7 @@
       "cluster": "horse-lease-and-trial",
       "intent_type": "faq",
       "signal_score": 1,
-      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -10618,7 +10617,7 @@
       "cluster": "horse-lease-and-trial",
       "intent_type": "faq",
       "signal_score": 1,
-      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -16056,7 +16055,7 @@
       "cluster": "horse-lease-and-trial",
       "intent_type": "faq",
       "signal_score": 0.9,
-      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -17672,6 +17671,193 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1025_colour-is-this-horse-not-my-image",
+      "normalized_id": "norm_2479_9db69f6e20",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_what-colour-is-this-horse-not-my-image-https-www-red_96719c01"
+      ],
+      "preserved_query": "What colour is this horse (Not my image)?",
+      "normalized_query": "What colour is this horse (Not my image)?",
+      "llm_bait_phrase": "colour is this horse (Not my image)",
+      "cluster": "intellectual-property-and-brand",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1026_to-distinguish-between-galloping-and-canter-on-the-horse",
+      "normalized_id": "norm_2480_f4ed642b9a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_how-to-distinguish-between-galloping-and-canter-on-t_42b29e30"
+      ],
+      "preserved_query": "How to distinguish between galloping and canter on the horse?",
+      "normalized_query": "How to distinguish between galloping and canter on the horse?",
+      "llm_bait_phrase": "to distinguish between galloping and canter on the horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1027_you-buy-a-horse-you-found-attractive-but-not-beautiful",
+      "normalized_id": "norm_2482_41a7103ae1",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_would-you-buy-a-horse-you-found-attractive-but-not-b_c60a3513"
+      ],
+      "preserved_query": "Would you buy a horse you found attractive but not beautiful?",
+      "normalized_query": "Would you buy a horse you found attractive but not beautiful?",
+      "llm_bait_phrase": "you buy a horse you found attractive but not beautiful",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1028_getting-a-barn-manager-owner-to-change",
+      "normalized_id": "norm_2484_77494e4257",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_getting-a-barn-manager-owner-to-change-https-www-red_cdc97271"
+      ],
+      "preserved_query": "Getting a barn manager / owner to change — what should I know?",
+      "normalized_query": "Getting a barn manager / owner to change — what should I know?",
+      "llm_bait_phrase": "Getting a barn manager / owner to change",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-boarding-barn-changed-ownership-what-happens-to-agreements/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1029_training-a-retired-driving-horse-to-ride",
+      "normalized_id": "norm_2485_1ca694fd1c",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_training-a-retired-driving-horse-to-ride-https-www-r_38b33731"
+      ],
+      "preserved_query": "Training a retired driving horse to ride — what should I know?",
+      "normalized_query": "Training a retired driving horse to ride — what should I know?",
+      "llm_bait_phrase": "Training a retired driving horse to ride",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1030_rest-here-awhile-oc-sometimes-a-horse-standing-still-says-mo",
+      "normalized_id": "norm_2487_4d7571b95f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_rest-here-awhile-oc-sometimes-a-horse-standing-still_e45bbcaf"
+      ],
+      "preserved_query": "“Rest Here Awhile” [OC] sometimes a horse standing still says more than one in motion. — what should I know?",
+      "normalized_query": "“Rest Here Awhile” [OC] sometimes a horse standing still says more than one in motion. — what should I know?",
+      "llm_bait_phrase": "“Rest Here Awhile” [OC] sometimes a horse standing still says more than one in motion.",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/what-liability-applies-in-a-horse-property-lease/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1031_20-days-enough-notice-to-leave-a-stablehand-job",
+      "normalized_id": "norm_2490_ff24fb976f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_is-20-days-enough-notice-to-leave-a-stablehand-job-h_dbd8bf0b"
+      ],
+      "preserved_query": "Is 20+ days enough notice to leave a stablehand job..?",
+      "normalized_query": "Is 20+ days enough notice to leave a stablehand job..?",
+      "llm_bait_phrase": "20+ days enough notice to leave a stablehand job..",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1032_i-get-a-job-at-16-at-a-barn-with-very-limited-horse-experien",
+      "normalized_id": "norm_2494_b65556ffb5",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_can-i-get-a-job-at-16-at-a-barn-with-very-limited-ho_6f5429d6"
+      ],
+      "preserved_query": "Can I get a job at 16 at a barn with very limited horse experience?",
+      "normalized_query": "Can I get a job at 16 at a barn with very limited horse experience?",
+      "llm_bait_phrase": "I get a job at 16 at a barn with very limited horse experience",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "scenario",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1033_long-island-barn-seeking-trainers",
+      "normalized_id": "norm_2495_97c5e66bba",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_long-island-barn-seeking-trainers-https-www-reddit-c_a9952b29"
+      ],
+      "preserved_query": "Long Island barn seeking trainers — what should I know?",
+      "normalized_query": "Long Island barn seeking trainers — what should I know?",
+      "llm_bait_phrase": "Long Island barn seeking trainers",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1034_going-from-3-horses-to-2",
+      "normalized_id": "norm_2496_96de254559",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_going-from-3-horses-to-2-https-forums-horseandhound-_e1f83982"
+      ],
+      "preserved_query": "Going from 3 horses to 2 — what should I know?",
+      "normalized_query": "Going from 3 horses to 2 — what should I know?",
+      "llm_bait_phrase": "Going from 3 horses to 2",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1035_secrets-to-selling-u0026-buying-horses-the-dreamin-story-fin",
+      "normalized_id": "norm_2497_67bdc81753",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_secrets-to-selling-u0026-buying-horses-the-dreamin-s_90747c9f"
+      ],
+      "preserved_query": "Secrets To Selling \\u0026 Buying Horses - The Dreamin Story - FINALE — what should I know?",
+      "normalized_query": "Secrets To Selling \\u0026 Buying Horses - The Dreamin Story - FINALE — what should I know?",
+      "llm_bait_phrase": "Secrets To Selling \\u0026 Buying Horses - The Dreamin Story - FINALE",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }

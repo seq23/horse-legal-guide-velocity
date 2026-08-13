@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-12T14:39:27.000Z",
+  "generated_at": "2026-08-13T11:32:07.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "not_connected",
       "checked_at": "2026-08-12T14:39:10.446Z",
-      "age_hours": 0,
+      "age_hours": 20.9,
       "message": "Add GSC service-account secrets or GSC_ACCESS_TOKEN to GitHub Actions."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-08-12T14:39:10.446Z",
-      "age_hours": 0,
+      "age_hours": 20.9,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-08-12T14:39:10.446Z",
-      "age_hours": 0,
+      "age_hours": 20.9,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -86,7 +86,7 @@
       "content_atom_coverage": 100,
       "legal_safety": 100,
       "workflow_trace": 100,
-      "signal_ingestion": 95,
+      "signal_ingestion": 100,
       "internal_linking": 100,
       "schema_coverage": 100,
       "metadata_completeness": 100
@@ -100,7 +100,7 @@
       "canonical_present": 560,
       "duplicate_title_groups": 78,
       "duplicate_description_groups": 4,
-      "high_similarity_pairs": 251,
+      "high_similarity_pairs": 250,
       "intent_overlap_pairs": 198,
       "uniqueness_review_clusters": 71,
       "drafts_automatically_differentiated": 195,
@@ -122,21 +122,21 @@
       "workflow_count": 15,
       "workflow_passed": 15,
       "workflow_warning_count": 0,
-      "signal_raw_store_count": 2476,
-      "signal_fresh_collected_count": 50,
+      "signal_raw_store_count": 2498,
+      "signal_fresh_collected_count": 71,
       "signal_failed_sources": 0,
-      "signal_zero_reddit_warning": true,
+      "signal_zero_reddit_warning": false,
       "github_actions_simulation_status": "passed",
       "github_actions_simulated_workflows": 15,
       "github_actions_simulation_warnings": 0,
-      "github_actions_live_followups": 4,
+      "github_actions_live_followups": 3,
       "github_actions_simulation_failures": 0
     },
     "page_uniqueness": {
       "indexable_pages_measured": 556,
       "duplicate_title_groups": 79,
       "duplicate_description_groups": 4,
-      "high_similarity_pairs": 251,
+      "high_similarity_pairs": 250,
       "intent_overlap_pairs": 198
     },
     "family_metrics": {
@@ -191,7 +191,7 @@
       "ip": {
         "pages": 7,
         "duplicate_title_memberships": 7,
-        "high_similarity_pair_memberships": 24,
+        "high_similarity_pair_memberships": 22,
         "intent_overlap_pair_memberships": 7
       },
       "leases": {

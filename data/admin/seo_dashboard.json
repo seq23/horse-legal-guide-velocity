@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-12T14:39:27.000Z",
-  "measurement_fingerprint": "0ded0e643f54fed0c7354c7e5d495447beae931de70ab6b9da35865f4b82000e",
+  "generated_at": "2026-08-13T11:32:07.000Z",
+  "measurement_fingerprint": "fb1980f7312e36f93144c78690489851d76c19d6bb8209385cdef63d3ed68b61",
   "title": "LLM Citation Velocity Dashboard",
   "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, page uniqueness, and workflow trace next steps.",
   "truth_boundary": "Scores are regenerated from the current repo files and freshly rendered dist HTML on every release build. Existing-page similarity findings are advisory and require owner approval before any live change. Draft similarity is automatically repaired before approval eligibility. These local measurements do not prove live GitHub Actions, live GSC, Bing, or IndexNow until those provider workflows run after apply.",
@@ -29,7 +29,7 @@
     "content_atom_coverage": 100,
     "legal_safety": 100,
     "workflow_trace": 100,
-    "signal_ingestion": 95,
+    "signal_ingestion": 100,
     "internal_linking": 100,
     "schema_coverage": 100,
     "metadata_completeness": 100
@@ -43,7 +43,7 @@
     "canonical_present": 560,
     "duplicate_title_groups": 78,
     "duplicate_description_groups": 4,
-    "high_similarity_pairs": 251,
+    "high_similarity_pairs": 250,
     "intent_overlap_pairs": 198,
     "uniqueness_review_clusters": 71,
     "drafts_automatically_differentiated": 195,
@@ -65,14 +65,14 @@
     "workflow_count": 15,
     "workflow_passed": 15,
     "workflow_warning_count": 0,
-    "signal_raw_store_count": 2476,
-    "signal_fresh_collected_count": 50,
+    "signal_raw_store_count": 2498,
+    "signal_fresh_collected_count": 71,
     "signal_failed_sources": 0,
-    "signal_zero_reddit_warning": true,
+    "signal_zero_reddit_warning": false,
     "github_actions_simulation_status": "passed",
     "github_actions_simulated_workflows": 15,
     "github_actions_simulation_warnings": 0,
-    "github_actions_live_followups": 4,
+    "github_actions_live_followups": 3,
     "github_actions_simulation_failures": 0
   },
   "summary": {
@@ -131,7 +131,7 @@
       "instructions": "Workflow trace must pass locally before ZIP delivery. Local simulation may record live follow-ups separately from warnings. Live GitHub Actions run after the ZIP is applied and pushed."
     },
     "signal_ingestion": {
-      "score": 95,
+      "score": 100,
       "instructions": "Preserve collect:signals, normalize:signals, map:signals, and report:ingestion. Stored/manual signals preserve the pipeline in container; live GitHub must prove fresh collection after apply."
     },
     "internal_linking": {
@@ -280,7 +280,7 @@
       "github_edit_urls": [
         "https://github.com/seq23/horse-legal-guide-velocity/blob/main/data/admin/consolidation_review_ledger.json"
       ],
-      "source_metric": "251 pairs at or above 0.85 body similarity",
+      "source_metric": "250 pairs at or above 0.85 body similarity",
       "measurement": ""
     },
     {
