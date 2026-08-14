@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-13T11:32:07.000Z",
+  "generated_at": "2026-08-14T11:31:30.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "fb1980f7312e36f93144c78690489851d76c19d6bb8209385cdef63d3ed68b61",
+  "source_fingerprint": "d6c94de69be5f94db0132414ed780e57d56632d4d0cb8a8f00b46384af9299dc",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
@@ -12,7 +12,7 @@
     "indexable_pages_measured": 556,
     "duplicate_title_groups": 79,
     "duplicate_description_groups": 4,
-    "high_similarity_pairs": 250,
+    "high_similarity_pairs": 247,
     "intent_overlap_pairs": 198
   },
   "family_metrics": {
@@ -67,7 +67,7 @@
     "ip": {
       "pages": 7,
       "duplicate_title_memberships": 7,
-      "high_similarity_pair_memberships": 22,
+      "high_similarity_pair_memberships": 16,
       "intent_overlap_pair_memberships": 7
     },
     "leases": {
@@ -2895,18 +2895,6 @@
       "title_b": "Can You End a Horse Lease Early?"
     },
     {
-      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8651,
-      "cosine_similarity": 0.8937,
-      "shingle_similarity": 0.8119,
-      "intent_similarity": 0,
-      "title_a": "What Should Be in an Equestrian Sponsorship Agreement?",
-      "title_b": "Can a Sponsor Use My Image Without Permission?"
-    },
-    {
       "a": "/reference/what-legal-documents-do-i-need-for-a-horse-business/",
       "b": "/reference/do-i-need-an-llc-to-start-a-horse-business/",
       "family_a": "reference",
@@ -3171,18 +3159,6 @@
       "title_b": "What Liability Does a Trainer Have?"
     },
     {
-      "a": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
-      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8594,
-      "cosine_similarity": 0.8864,
-      "shingle_similarity": 0.8094,
-      "intent_similarity": 0,
-      "title_a": "How Do I Get a Sponsorship for Horse Riding?",
-      "title_b": "Can a Sponsor Use My Image Without Permission?"
-    },
-    {
       "a": "/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
       "b": "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
       "family_a": "faq",
@@ -3397,18 +3373,6 @@
       "intent_similarity": 0.2857,
       "title_a": "A horse was hurt while boarded. Who is responsible?",
       "title_b": "A horse died while boarded or in training. What should be documented?"
-    },
-    {
-      "a": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
-      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8565,
-      "cosine_similarity": 0.8815,
-      "shingle_similarity": 0.8101,
-      "intent_similarity": 0,
-      "title_a": "Do I Need a Trademark for an Equestrian Brand?",
-      "title_b": "Can a Sponsor Use My Image Without Permission?"
     },
     {
       "a": "/reference/what-should-someone-know-about-a-boarding-barn-changed-ownership-what-happens-to-agreements/",
@@ -4443,16 +4407,6 @@
       "title_b": "Can You End a Horse Lease Early?"
     },
     {
-      "a": "/reference/can-a-sponsor-use-my-image-without-permission/",
-      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
-      "family_a": "reference",
-      "family_b": "ip",
-      "body_similarity": 0.5117,
-      "intent_similarity": 1,
-      "title_a": "Can a Sponsor Use My Image Without Permission?",
-      "title_b": "Can a Sponsor Use My Image Without Permission?"
-    },
-    {
       "a": "/reference/what-legal-documents-do-i-need-for-a-horse-business/",
       "b": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
       "family_a": "reference",
@@ -4661,6 +4615,16 @@
       "intent_similarity": 1,
       "title_a": "What Is a Horse Trial Agreement?",
       "title_b": "What Is a Horse Trial Agreement?"
+    },
+    {
+      "a": "/reference/can-a-sponsor-use-my-image-without-permission/",
+      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
+      "family_a": "reference",
+      "family_b": "ip",
+      "body_similarity": 0.4565,
+      "intent_similarity": 1,
+      "title_a": "Can a Sponsor Use My Image Without Permission?",
+      "title_b": "Can a Sponsor Use My Image Without Permission?"
     },
     {
       "a": "/reference/can-i-run-a-horse-business-under-my-lease/",

@@ -5701,7 +5701,7 @@
     "dedupe_group_id": "dedupe_faq_i-m-taking-over-barn-managing-with-no-experience",
     "signal_score": 2.029,
     "status": "mapped",
-    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+    "mapped_slug": "/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/"
   },
   {
     "normalized_id": "norm_0406_4b21b15087",
@@ -7283,7 +7283,7 @@
     "dedupe_group_id": "dedupe_faq_saw-this-absolutely-stunning-yesterday-with-my-husband",
     "signal_score": 0.95,
     "status": "mapped",
-    "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/"
+    "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/"
   },
   {
     "normalized_id": "norm_0540_619dcd7a15",
@@ -11616,7 +11616,7 @@
     "dedupe_group_id": "dedupe_faq_please-fill-out-this-survey-in-support-of-sports-having-access-to-trails-without",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/leases/what-is-a-horse-trial-agreement/"
+    "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/"
   },
   {
     "normalized_id": "norm_1242_36010910d5",
@@ -17112,7 +17112,7 @@
     "dedupe_group_id": "dedupe_faq_in-memory-of-marvin-made-with-his-real-hair-3",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/"
+    "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/"
   },
   {
     "normalized_id": "norm_2040_ed66bd4198",
@@ -20753,5 +20753,25 @@
     "signal_score": 0.65,
     "status": "mapped",
     "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/"
+  },
+  {
+    "normalized_id": "norm_2498_42b54fce23",
+    "source_signal_ids": [
+      "youtube_search_comments_racehorse-leasing-explained-what-a-lease-interest-ac_c2d8e345"
+    ],
+    "raw_signal_phrase": "Racehorse Leasing Explained: What a Lease Interest Actually Means",
+    "preserved_query": "Racehorse Leasing Explained: What a Lease Interest Actually Means — what should I know?",
+    "normalized_query": "Racehorse Leasing Explained: What a Lease Interest Actually Means — what should I know?",
+    "llm_bait_phrase": "Racehorse Leasing Explained: What a Lease Interest Actually Means",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_racehorse-leasing-explained-a-lease-interest-actually-means",
+    "signal_score": 0.65,
+    "status": "mapped",
+    "mapped_slug": "/leases/what-is-a-horse-trial-agreement/"
   }
 ]

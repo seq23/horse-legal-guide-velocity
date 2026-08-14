@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-13T11:32:07.000Z",
-  "source_fingerprint": "fb1980f7312e36f93144c78690489851d76c19d6bb8209385cdef63d3ed68b61",
+  "generated_at": "2026-08-14T11:31:30.000Z",
+  "source_fingerprint": "d6c94de69be5f94db0132414ed780e57d56632d4d0cb8a8f00b46384af9299dc",
   "policy": "Owner review only. This ledger never mutates live pages, routes, canonicals, robots directives, or redirects.",
   "automatic_live_changes_allowed": false,
-  "entry_count": 71,
+  "entry_count": 72,
   "entries": [
     {
       "ledger_id": "uniqueness-0001",
@@ -152,14 +152,12 @@
       "action_applied": "none",
       "candidate_primary": "/ip/do-i-need-a-contract-for-a-sponsorship/",
       "members": [
-        "/ip/can-a-sponsor-use-my-image-without-permission/",
         "/ip/do-i-need-a-contract-for-a-sponsorship/",
         "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
         "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
         "/ip/how-do-i-protect-my-horse-business-brand/",
         "/ip/should-i-trademark-my-barn-name/",
         "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-        "/reference/can-a-sponsor-use-my-image-without-permission/",
         "/reference/do-i-need-a-contract-for-a-sponsorship/",
         "/reference/do-i-need-a-trademark-for-an-equestrian-brand/",
         "/reference/how-do-i-get-a-sponsorship-for-horse-riding/",
@@ -1220,6 +1218,26 @@
       "ledger_id": "uniqueness-0056",
       "status": "owner_review_required",
       "action_applied": "none",
+      "candidate_primary": "/ip/can-a-sponsor-use-my-image-without-permission/",
+      "members": [
+        "/ip/can-a-sponsor-use-my-image-without-permission/",
+        "/reference/can-a-sponsor-use-my-image-without-permission/"
+      ],
+      "families": [
+        "ip",
+        "reference"
+      ],
+      "reasons": [
+        "duplicate_title"
+      ],
+      "maximum_body_similarity": null,
+      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true
+    },
+    {
+      "ledger_id": "uniqueness-0057",
+      "status": "owner_review_required",
+      "action_applied": "none",
       "candidate_primary": "/business/can-i-run-a-horse-business-under-another-company/",
       "members": [
         "/business/can-i-run-a-horse-business-under-another-company/",
@@ -1237,7 +1255,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0057",
+      "ledger_id": "uniqueness-0058",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/can-i-run-a-horse-business-under-my-lease/",
@@ -1257,7 +1275,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0058",
+      "ledger_id": "uniqueness-0059",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
@@ -1277,7 +1295,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0059",
+      "ledger_id": "uniqueness-0060",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
@@ -1297,7 +1315,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0060",
+      "ledger_id": "uniqueness-0061",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
@@ -1317,7 +1335,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0061",
+      "ledger_id": "uniqueness-0062",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-happens-if-a-boarder-damages-property/",
@@ -1337,7 +1355,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0062",
+      "ledger_id": "uniqueness-0063",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-happens-if-a-boarder-does-not-pay/",
@@ -1357,7 +1375,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0063",
+      "ledger_id": "uniqueness-0064",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
@@ -1377,7 +1395,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0064",
+      "ledger_id": "uniqueness-0065",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-happens-if-a-horse-dies-while-boarded/",
@@ -1397,7 +1415,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0065",
+      "ledger_id": "uniqueness-0066",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
@@ -1417,7 +1435,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0066",
+      "ledger_id": "uniqueness-0067",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/what-happens-if-a-leased-horse-is-injured/",
@@ -1437,7 +1455,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0067",
+      "ledger_id": "uniqueness-0068",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/liability/what-happens-if-i-do-not-post-the-required-sign/",
@@ -1457,7 +1475,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0068",
+      "ledger_id": "uniqueness-0069",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/disputes/what-happens-if-i-do-not-respond-to-a-legal-letter/",
@@ -1477,7 +1495,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0069",
+      "ledger_id": "uniqueness-0070",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
@@ -1497,7 +1515,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0070",
+      "ledger_id": "uniqueness-0071",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/what-is-a-horse-trial-agreement/",
@@ -1517,7 +1535,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0071",
+      "ledger_id": "uniqueness-0072",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/what-liability-applies-in-a-horse-property-lease/",

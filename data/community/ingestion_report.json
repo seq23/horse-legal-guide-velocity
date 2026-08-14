@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-13T14:02:35.440Z",
-  "total_signals": 2498,
+  "generated_at": "2026-08-14T14:00:37.138Z",
+  "total_signals": 2499,
   "signals_by_source": {
     "reddit_equestrian": 1127,
     "reddit_horses": 648,
@@ -8,7 +8,7 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 142,
+    "youtube_search_comments": 143,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
@@ -21,14 +21,14 @@
     "equestrian_forums": 98,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 142,
+    "youtube": 143,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1036,
+  "normalized_count": 1037,
   "duplicates_collapsed": 1462,
   "pages_created": 0,
-  "pages_strengthened": 1036,
+  "pages_strengthened": 1037,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
@@ -46,7 +46,7 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 126
+      "count": 127
     },
     {
       "name": "liability-waivers-insurance",
@@ -88,7 +88,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 142
+      "count": 143
     },
     {
       "name": "reddit_legaladvice",
@@ -131,8 +131,9 @@
     {
       "source_key": "reddit_equestrian",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "reddit_horses",
@@ -5059,7 +5060,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 2.029,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -6404,7 +6405,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 0.95,
-      "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -10089,7 +10090,7 @@
       "cluster": "horse-lease-and-trial",
       "intent_type": "faq",
       "signal_score": 1,
-      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
+      "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -14763,7 +14764,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 1,
-      "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -17858,6 +17859,23 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1036_racehorse-leasing-explained-what-a-lease-interest-actually-m",
+      "normalized_id": "norm_2498_42b54fce23",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_racehorse-leasing-explained-what-a-lease-interest-ac_c2d8e345"
+      ],
+      "preserved_query": "Racehorse Leasing Explained: What a Lease Interest Actually Means — what should I know?",
+      "normalized_query": "Racehorse Leasing Explained: What a Lease Interest Actually Means — what should I know?",
+      "llm_bait_phrase": "Racehorse Leasing Explained: What a Lease Interest Actually Means",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/leases/what-is-a-horse-trial-agreement/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
