@@ -18,7 +18,7 @@ function runPushCase(mode) {
 
   const fakeGit = `#!/usr/bin/env bash
 set -u
-if [ "${1:-}" != "push" ]; then
+if [ "\${1:-}" != "push" ]; then
   echo "unexpected git command: $*" >&2
   exit 99
 fi
