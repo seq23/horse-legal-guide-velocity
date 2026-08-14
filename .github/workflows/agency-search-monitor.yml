@@ -76,7 +76,7 @@ jobs:
             echo "No monitoring changes to commit."
           else
             git commit -m "chore: refresh GSC Bing and agency intelligence"
-            git push origin main
+            bash scripts/ops/push_with_retry.sh origin main
           fi
       - name: Upload monitoring evidence
         if: always()
@@ -113,7 +113,7 @@ jobs:
             echo "No receipt change to commit."
           else
             git commit -m "chore: record authenticated admin action"
-            git push origin main
+            bash scripts/ops/push_with_retry.sh origin main
           fi
       - name: Preserve operation failure
         if: ${{ steps.operation.outcome != 'success' }}
