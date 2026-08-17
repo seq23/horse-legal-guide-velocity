@@ -10092,7 +10092,7 @@
     "dedupe_group_id": "dedupe_faq_taking-lessons-at-another-barn",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+    "mapped_slug": "/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/"
   },
   {
     "normalized_id": "norm_1021_f90ba49aa8",
@@ -11776,7 +11776,7 @@
     "dedupe_group_id": "dedupe_faq_hair-locket",
     "signal_score": 0.95,
     "status": "mapped",
-    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+    "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/"
   },
   {
     "normalized_id": "norm_1259_6af0414baf",
@@ -13281,7 +13281,7 @@
     "dedupe_group_id": "dedupe_faq_trails-in-virginia",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+    "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/"
   },
   {
     "normalized_id": "norm_1457_ebc6c6fc3a",
@@ -14385,7 +14385,7 @@
     "dedupe_group_id": "dedupe_faq_to-bond-with-a-horsey-i-don-t-get-to-see-every-day",
     "signal_score": 0.95,
     "status": "mapped",
-    "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/"
+    "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/"
   },
   {
     "normalized_id": "norm_1631_0790afc998",
@@ -14425,7 +14425,7 @@
     "dedupe_group_id": "dedupe_faq_cwd-brands-to-fit-large-sport-horses",
     "signal_score": 0.95,
     "status": "mapped",
-    "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/"
+    "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/"
   },
   {
     "normalized_id": "norm_1635_7ed4d55f82",
@@ -15128,7 +15128,7 @@
     "dedupe_group_id": "dedupe_faq_i-made-a-twilight-3",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+    "mapped_slug": "/ip/can-a-sponsor-use-my-image-without-permission/"
   },
   {
     "normalized_id": "norm_1741_d973cdb929",
@@ -20773,5 +20773,85 @@
     "signal_score": 0.65,
     "status": "mapped",
     "mapped_slug": "/leases/what-is-a-horse-trial-agreement/"
+  },
+  {
+    "normalized_id": "norm_2499_461dc0a486",
+    "source_signal_ids": [
+      "forum_horse_and_hound_the-horse-whisperer-animal-communicator-https-forums_26a7e674"
+    ],
+    "raw_signal_phrase": "The Horse whisperer (Animal communicator)",
+    "preserved_query": "The Horse whisperer (Animal communicator) — what should I know?",
+    "normalized_query": "The Horse whisperer (Animal communicator) — what should I know?",
+    "llm_bait_phrase": "The Horse whisperer (Animal communicator)",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_the-whisperer-animal-communicator",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_2500_8f4cecc6a8",
+    "source_signal_ids": [
+      "forum_horse_and_hound_quick-fly-spray-recommendation-please-https-forums-h_2f968756"
+    ],
+    "raw_signal_phrase": "Quick fly spray recommendation please",
+    "preserved_query": "Quick fly spray recommendation please — what should I know?",
+    "normalized_query": "Quick fly spray recommendation please — what should I know?",
+    "llm_bait_phrase": "Quick fly spray recommendation please",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_quick-fly-spray-recommendation-please",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/"
+  },
+  {
+    "normalized_id": "norm_2501_ccb52cfc03",
+    "source_signal_ids": [
+      "forum_horse_and_hound_estimating-horses-weight-https-forums-horseandhound-_9325fc71"
+    ],
+    "raw_signal_phrase": "Estimating Horses Weight",
+    "preserved_query": "Estimating Horses Weight — what should I know?",
+    "normalized_query": "Estimating Horses Weight — what should I know?",
+    "llm_bait_phrase": "Estimating Horses Weight",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_estimating-horses-weight",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/"
+  },
+  {
+    "normalized_id": "norm_2502_63374c099c",
+    "source_signal_ids": [
+      "youtube_search_comments_selling-your-horse-ways-to-cope-and-move-forward-htt_91a86de5"
+    ],
+    "raw_signal_phrase": "SELLING YOUR HORSE: Ways to Cope and Move Forward!",
+    "preserved_query": "SELLING YOUR HORSE: Ways to Cope and Move Forward! — what should I know?",
+    "normalized_query": "SELLING YOUR HORSE: Ways to Cope and Move Forward! — what should I know?",
+    "llm_bait_phrase": "SELLING YOUR HORSE: Ways to Cope and Move Forward!",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_selling-your-ways-to-cope-and-move-forward",
+    "signal_score": 0.65,
+    "status": "mapped",
+    "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/"
   }
 ]
