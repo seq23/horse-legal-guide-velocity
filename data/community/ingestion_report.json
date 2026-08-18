@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-17T13:47:35.022Z",
-  "total_signals": 2503,
+  "generated_at": "2026-08-18T13:48:42.021Z",
+  "total_signals": 2508,
   "signals_by_source": {
     "reddit_equestrian": 1127,
     "reddit_horses": 648,
@@ -8,7 +8,7 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 144,
+    "youtube_search_comments": 149,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
@@ -21,20 +21,20 @@
     "equestrian_forums": 101,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 144,
+    "youtube": 149,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1041,
-  "duplicates_collapsed": 1462,
+  "normalized_count": 1045,
+  "duplicates_collapsed": 1463,
   "pages_created": 0,
-  "pages_strengthened": 1041,
+  "pages_strengthened": 1045,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 546
+      "count": 548
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -42,7 +42,7 @@
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 130
+      "count": 131
     },
     {
       "name": "horse-lease-and-trial",
@@ -54,7 +54,7 @@
     },
     {
       "name": "equine-business-formation",
-      "count": 28
+      "count": 29
     },
     {
       "name": "demand-letters-and-disputes",
@@ -88,7 +88,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 144
+      "count": 149
     },
     {
       "name": "reddit_legaladvice",
@@ -179,7 +179,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 10
+      "count": 8
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -7028,14 +7028,15 @@
       "normalized_id": "norm_0704_fea0a551c8",
       "action": "strengthen_existing_page",
       "source_signal_ids": [
-        "youtube_search_comments_equine-liability-what-you-need-to-know-about-horse-c_84a6cd0e"
+        "youtube_search_comments_equine-liability-what-you-need-to-know-about-horse-c_84a6cd0e",
+        "youtube_search_comments_equine-liability-what-you-need-to-know-about-horse-c_dbcc6ad4"
       ],
       "preserved_query": "Equine Liability, What You Need To Know About Horse Contracts — what should I know?",
       "normalized_query": "Equine Liability, What You Need To Know About Horse Contracts — what should I know?",
       "llm_bait_phrase": "Equine Liability, What You Need To Know About Horse Contracts",
       "cluster": "liability-waivers-insurance",
       "intent_type": "faq",
-      "signal_score": 0.65,
+      "signal_score": 1.8,
       "mapped_slug": "/liability/do-i-need-insurance-for-my-horse-business/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
@@ -17944,6 +17945,74 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1041_reinventing-the-horse-business-the-solo-select-model-87",
+      "normalized_id": "norm_2504_f3db853c6d",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_reinventing-the-horse-business-the-solo-select-model_4b38b01e"
+      ],
+      "preserved_query": "Reinventing the Horse Business: The Solo Select Model #87 — what should I know?",
+      "normalized_query": "Reinventing the Horse Business: The Solo Select Model #87 — what should I know?",
+      "llm_bait_phrase": "Reinventing the Horse Business: The Solo Select Model #87",
+      "cluster": "equine-business-formation",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1042_to-sell-a-horse-larry-cohen-trivue-entertainment",
+      "normalized_id": "norm_2505_48f34cc1a4",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-sell-a-horse-larry-cohen-trivue-entertainment_4a9d98df"
+      ],
+      "preserved_query": "How to sell a horse -- Larry Cohen (Trivue Entertainment)?",
+      "normalized_query": "How to sell a horse -- Larry Cohen (Trivue Entertainment)?",
+      "llm_bait_phrase": "to sell a horse -- Larry Cohen (Trivue Entertainment)",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1043_q-u0026a-with-clinton-anderson-should-you-list-a-horse-s-sal",
+      "normalized_id": "norm_2506_ea225e0a2f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_q-u0026a-with-clinton-anderson-should-you-list-a-hor_de279337"
+      ],
+      "preserved_query": "Q\\u0026A With Clinton Anderson: Should You List a Horse's Sale Price Up Front — what should I know?",
+      "normalized_query": "Q\\u0026A With Clinton Anderson: Should You List a Horse's Sale Price Up Front — what should I know?",
+      "llm_bait_phrase": "Q\\u0026A With Clinton Anderson: Should You List a Horse's Sale Price Up Front",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1044_to-write-horse-breeding-contracts-equine-law-101",
+      "normalized_id": "norm_2507_e28e16fbb0",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-write-horse-breeding-contracts-equine-law-101_87141b7b"
+      ],
+      "preserved_query": "How To Write Horse Breeding Contracts | Equine Law 101?",
+      "normalized_query": "How To Write Horse Breeding Contracts | Equine Law 101?",
+      "llm_bait_phrase": "To Write Horse Breeding Contracts | Equine Law 101",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
