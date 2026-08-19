@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-18T13:48:42.021Z",
-  "total_signals": 2508,
+  "generated_at": "2026-08-19T13:49:03.820Z",
+  "total_signals": 2510,
   "signals_by_source": {
     "reddit_equestrian": 1127,
     "reddit_horses": 648,
@@ -14,27 +14,27 @@
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 151,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 42
+    "forum_horse_and_hound": 44
   },
   "signals_by_platform": {
     "reddit": 2141,
-    "equestrian_forums": 101,
+    "equestrian_forums": 103,
     "google_paa": 29,
     "serp_competitors": 30,
     "youtube": 149,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1045,
+  "normalized_count": 1047,
   "duplicates_collapsed": 1463,
   "pages_created": 0,
-  "pages_strengthened": 1045,
+  "pages_strengthened": 1047,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 548
+      "count": 550
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -100,7 +100,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 42
+      "count": 44
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -179,7 +179,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 8
+      "count": 9
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -18012,6 +18012,40 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 0.65,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1045_horse-just-bit-me",
+      "normalized_id": "norm_2508_81ff09eb02",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_horse-just-bit-me-https-forums-horseandhound-co-uk_3dde3af8"
+      ],
+      "preserved_query": "Horse just bit me — what should I know?",
+      "normalized_query": "Horse just bit me — what should I know?",
+      "llm_bait_phrase": "Horse just bit me",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1046_equine-massage-recommendations-oxfordshire",
+      "normalized_id": "norm_2509_b1f24143ba",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_equine-massage-recommendations-oxfordshire-https-for_be295df4"
+      ],
+      "preserved_query": "Equine Massage Recommendations -Oxfordshire — what should I know?",
+      "normalized_query": "Equine Massage Recommendations -Oxfordshire — what should I know?",
+      "llm_bait_phrase": "Equine Massage Recommendations -Oxfordshire",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
       "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
