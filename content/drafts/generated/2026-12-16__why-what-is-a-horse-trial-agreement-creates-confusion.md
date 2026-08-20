@@ -1,5 +1,5 @@
 ---
-title: Document architecture and missing terms for What Is a Horse Trial Agreement
+title: Money, possession, and risk transfer for What Is a Horse Trial Agreement
 entry_id: draft-insight-2026-12-16-what-is-a-horse-trial-agreement
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2026-12-16/why-what-is-a-horse-trial-agreement-creates-confusion/
 review_status: pending
 github_path: content/drafts/generated/2026-12-16__why-what-is-a-horse-trial-agreement-creates-confusion.md
 uniqueness_status: passed
-uniqueness_strategy: document-architecture
+uniqueness_strategy: money-risk-transfer
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Document architecture and missing terms for What Is a Horse Trial Agreement
+# Money, possession, and risk transfer for What Is a Horse Trial Agreement
 
 ## Citation-ready answer
 
-The practical question behind **What Is a Horse Trial Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on which documents work together, which terms are absent, and which informal messages may matter. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **What Is a Horse Trial Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on when money, possession, care duties, and loss exposure move from one party to another. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-05-16/how-to-think-about-what-is-a-horse-trial-agreement-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-05-16/how-to-think-about-what-is-a-horse-trial-agreement-before-you-act/, while remaining educational and approval-gated.
 
-## Distinctive focus: Document architecture and missing terms
+## Distinctive focus: Money, possession, and risk transfer
 
-For this version, the useful lens is **document architecture and missing terms**. That means the reader should identify the clause, schedule, attachment, definition, and integration facts that actually belong to **What Is a Horse Trial Agreement**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **money, possession, and risk transfer**. That means the reader should identify the deposit, payment, possession, delivery, and custody facts that actually belong to **What Is a Horse Trial Agreement**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**horse · trial · agreement · money · possession · risk · transfer · lease**
+**horse · trial · agreement · document · architecture · missing · terms · lease**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| horse | Identify the clause facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| trial | Identify the schedule facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| agreement | Identify the attachment facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| money | Identify the definition facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| possession | Identify the integration facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the deposit facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| trial | Identify the payment facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| agreement | Identify the possession facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| document | Identify the delivery facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| architecture | Identify the custody facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **What Is a Horse Trial Agreement** before anyone acts?
-2. Collect the clause, schedule, and attachment evidence instead of relying on memory.
+2. Collect the deposit, payment, and possession evidence instead of relying on memory.
 3. Separate the roles connected to horse, trial, agreement so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Is a Horse Trial Agreement**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The document architecture and missing terms lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Is a Horse Trial Agreement**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The money, possession, and risk transfer lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 
