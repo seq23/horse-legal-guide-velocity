@@ -8493,12 +8493,13 @@
   {
     "normalized_id": "norm_0798_31de7cb8d5",
     "source_signal_ids": [
-      "youtube_search_comments_lease-horse-https-www-youtube-com-results-search-que_f82e7bb4"
+      "youtube_search_comments_lease-horse-https-www-youtube-com-results-search-que_f82e7bb4",
+      "reddit_equestrian_lease-question-https-www-reddit-com-r-equestrian-com_9c63e738"
     ],
-    "raw_signal_phrase": "Lease Horse",
-    "preserved_query": "Lease Horse — what should I know?",
-    "normalized_query": "Lease Horse — what should I know?",
-    "llm_bait_phrase": "Lease Horse",
+    "raw_signal_phrase": "Lease question",
+    "preserved_query": "Lease question — what should I know?",
+    "normalized_query": "Lease question — what should I know?",
+    "llm_bait_phrase": "Lease question",
     "intent_type": "faq",
     "cluster": "horse-lease-and-trial",
     "emotional_frame": "practical confusion",
@@ -8506,7 +8507,7 @@
     "legal_risk_level": "low",
     "recommended_action": "map_to_page_target",
     "dedupe_group_id": "dedupe_faq_lease",
-    "signal_score": 0.65,
+    "signal_score": 2.15,
     "status": "mapped",
     "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
   },
@@ -20974,5 +20975,165 @@
     "signal_score": 0.9,
     "status": "mapped",
     "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_2511_0faf3371a4",
+    "source_signal_ids": [
+      "reddit_equestrian_bump-on-underside-of-horse-neck-https-www-reddit-com_83d3e70b"
+    ],
+    "raw_signal_phrase": "Bump on underside of horse neck",
+    "preserved_query": "Bump on underside of horse neck — what should I know?",
+    "normalized_query": "Bump on underside of horse neck — what should I know?",
+    "llm_bait_phrase": "Bump on underside of horse neck",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_bump-on-underside-of-neck",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_2519_7945769ae7",
+    "source_signal_ids": [
+      "reddit_equestrian_are-stunt-horses-truly-safe-https-www-reddit-com-r-e_08d49ce4"
+    ],
+    "raw_signal_phrase": "Are stunt horses truly safe",
+    "preserved_query": "Are stunt horses truly safe?",
+    "normalized_query": "Are stunt horses truly safe?",
+    "llm_bait_phrase": "stunt horses truly safe",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_are-stunt-horses-truly-safe",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/"
+  },
+  {
+    "normalized_id": "norm_2520_f6c83e4254",
+    "source_signal_ids": [
+      "reddit_equestrian_what-are-we-using-as-barn-work-boots-these-days-http_19ea1563"
+    ],
+    "raw_signal_phrase": "What are we using as barn work boots these days",
+    "preserved_query": "What are we using as barn work boots these days?",
+    "normalized_query": "What are we using as barn work boots these days?",
+    "llm_bait_phrase": "are we using as barn work boots these days",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_are-we-using-as-barn-work-boots-these-days",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/"
+  },
+  {
+    "normalized_id": "norm_2521_e6d5cf6f54",
+    "source_signal_ids": [
+      "reddit_equestrian_officially-a-gelding-https-www-reddit-com-r-equestri_61ec5de0"
+    ],
+    "raw_signal_phrase": "Officially a gelding",
+    "preserved_query": "Officially a gelding — what should I know?",
+    "normalized_query": "Officially a gelding — what should I know?",
+    "llm_bait_phrase": "Officially a gelding",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_officially-a-gelding",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/what-happens-if-a-boarder-damages-property/"
+  },
+  {
+    "normalized_id": "norm_2525_6da795e52a",
+    "source_signal_ids": [
+      "reddit_equestrian_what-is-a-reasonable-horse-price-https-www-reddit-co_166f3c99"
+    ],
+    "raw_signal_phrase": "What is a reasonable horse price",
+    "preserved_query": "What is a reasonable horse price?",
+    "normalized_query": "What is a reasonable horse price?",
+    "llm_bait_phrase": "is a reasonable horse price",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_is-a-reasonable-price",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/leases/what-is-a-horse-trial-agreement/"
+  },
+  {
+    "normalized_id": "norm_2528_b224e40a4c",
+    "source_signal_ids": [
+      "reddit_equestrian_my-horse-just-did-her-check-ligament-https-www-reddi_b1334b5d"
+    ],
+    "raw_signal_phrase": "My horse just did her check ligament 🫠",
+    "preserved_query": "My horse just did her check ligament 🫠 — what should I know?",
+    "normalized_query": "My horse just did her check ligament 🫠 — what should I know?",
+    "llm_bait_phrase": "My horse just did her check ligament 🫠",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_my-just-did-her-check-ligament",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/"
+  },
+  {
+    "normalized_id": "norm_2550_ddbe4f3481",
+    "source_signal_ids": [
+      "youtube_search_comments_contract-clarity-from-the-horse-s-mouth-podcast-epis_b505bcd7"
+    ],
+    "raw_signal_phrase": "Contract Clarity | From the Horse's Mouth Podcast | Episode #32",
+    "preserved_query": "Contract Clarity | From the Horse's Mouth Podcast | Episode #32 — what should I know?",
+    "normalized_query": "Contract Clarity | From the Horse's Mouth Podcast | Episode #32 — what should I know?",
+    "llm_bait_phrase": "Contract Clarity | From the Horse's Mouth Podcast | Episode #32",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "medium",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_contract-clarity-from-the-s-mouth-podcast-episode-32",
+    "signal_score": 0.65,
+    "status": "mapped",
+    "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/"
+  },
+  {
+    "normalized_id": "norm_2551_effd2e0bcf",
+    "source_signal_ids": [
+      "youtube_search_comments_how-to-make-millions-selling-horses-stars-of-the-fut_0a5b41a5"
+    ],
+    "raw_signal_phrase": "How to make millions selling horses - stars of the future at Newsells Park",
+    "preserved_query": "How to make millions selling horses - stars of the future at Newsells Park?",
+    "normalized_query": "How to make millions selling horses - stars of the future at Newsells Park?",
+    "llm_bait_phrase": "to make millions selling horses - stars of the future at Newsells Park",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_to-make-millions-selling-horses-stars-of-the-future-at-newsells-park",
+    "signal_score": 0.65,
+    "status": "mapped",
+    "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/"
   }
 ]
