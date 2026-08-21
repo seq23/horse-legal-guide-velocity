@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-08-20T13:49:36.163Z",
+  "generated_at": "2026-08-21T13:49:27.812Z",
   "adapter_status": [
     {
       "source_key": "reddit_equestrian",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "reddit_horses",
@@ -24,8 +25,9 @@
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -85,8 +87,8 @@
       "count": 0
     }
   ],
-  "collected_count": 81,
-  "reddit_collected_count": 40,
-  "zero_reddit_warning": false,
+  "collected_count": 41,
+  "reddit_collected_count": 0,
+  "zero_reddit_warning": true,
   "raw_store_count": 2552
 }

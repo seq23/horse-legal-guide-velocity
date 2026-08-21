@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T13:49:39.111Z",
+  "generated_at": "2026-08-21T13:49:30.682Z",
   "total_signals": 2552,
   "signals_by_source": {
     "reddit_equestrian": 1147,
@@ -131,8 +131,9 @@
     {
       "source_key": "reddit_equestrian",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "reddit_horses",
@@ -151,8 +152,9 @@
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 7000ms"
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -6369,7 +6371,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 1,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -9647,7 +9649,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 0.95,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -15104,7 +15106,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 0.65,
-      "mapped_slug": "/scenario/a-buyer-wants-a-refund-after-changing-their-mind-what-matters/",
+      "mapped_slug": "/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
