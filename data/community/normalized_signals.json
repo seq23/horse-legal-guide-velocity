@@ -15532,7 +15532,7 @@
     "dedupe_group_id": "dedupe_faq_probably-the-coolest-i-ve-seen-all-day",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+    "mapped_slug": "/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/"
   },
   {
     "normalized_id": "norm_1817_edfc6b8f61",
@@ -21135,5 +21135,25 @@
     "signal_score": 0.65,
     "status": "mapped",
     "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/"
+  },
+  {
+    "normalized_id": "norm_2552_669a41d71b",
+    "source_signal_ids": [
+      "forum_horse_and_hound_looking-for-classical-dressage-trainer-https-forums-_d14b095c"
+    ],
+    "raw_signal_phrase": "Looking for classical dressage trainer",
+    "preserved_query": "Looking for classical dressage trainer — what should I know?",
+    "normalized_query": "Looking for classical dressage trainer — what should I know?",
+    "llm_bait_phrase": "Looking for classical dressage trainer",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_looking-for-classical-dressage-trainer",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/"
   }
 ]

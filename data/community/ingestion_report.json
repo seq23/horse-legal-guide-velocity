@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-21T13:49:30.682Z",
-  "total_signals": 2552,
+  "generated_at": "2026-08-24T13:50:20.743Z",
+  "total_signals": 2553,
   "signals_by_source": {
     "reddit_equestrian": 1147,
     "reddit_horses": 648,
@@ -14,21 +14,21 @@
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 171,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 44
+    "forum_horse_and_hound": 45
   },
   "signals_by_platform": {
     "reddit": 2181,
-    "equestrian_forums": 103,
+    "equestrian_forums": 104,
     "google_paa": 29,
     "serp_competitors": 30,
     "youtube": 151,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1055,
+  "normalized_count": 1056,
   "duplicates_collapsed": 1497,
   "pages_created": 0,
-  "pages_strengthened": 1055,
+  "pages_strengthened": 1056,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
@@ -38,7 +38,7 @@
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 133
+      "count": 134
     },
     {
       "name": "horse-sale-and-purchase",
@@ -100,7 +100,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 44
+      "count": 45
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -179,7 +179,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 0
+      "count": 8
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -13421,7 +13421,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 1,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -18184,6 +18184,23 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1055_looking-for-classical-dressage-trainer",
+      "normalized_id": "norm_2552_669a41d71b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_looking-for-classical-dressage-trainer-https-forums-_d14b095c"
+      ],
+      "preserved_query": "Looking for classical dressage trainer — what should I know?",
+      "normalized_query": "Looking for classical dressage trainer — what should I know?",
+      "llm_bait_phrase": "Looking for classical dressage trainer",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
