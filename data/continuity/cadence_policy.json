@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "note": "2026 content is locked and client-approved. Only the from_2027 lane is adjustable. Both lanes generate status:pending entries that still require manual approval through the existing admin flow - changing cadence changes how much is PROPOSED, never what is published.",
+  "locked_through": "2026-12-31",
+  "lanes": {
+    "locked_2026": {
+      "insight_every_day": true,
+      "article_weekday": 2,
+      "whitepaper_day_of_month": 1,
+      "deep_authority_months": [
+        0,
+        3,
+        6,
+        9
+      ]
+    },
+    "from_2027": {
+      "insight_every_day": true,
+      "article_weekday": 2,
+      "whitepaper_day_of_month": 1,
+      "deep_authority_months": [
+        0,
+        3,
+        6,
+        9
+      ]
+    }
+  }
+}
