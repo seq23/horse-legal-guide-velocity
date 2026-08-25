@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.0",
+  "validator": "validate_content_pattern_contract",
+  "spec": ".clarity/content-pattern-spec.json",
+  "generated_at": "2026-08-25T22:12:52.772Z",
+  "issue_severity": "report_only",
+  "pages_checked": 557,
+  "blocking_backlog_count": 22,
+  "summary": [
+    {
+      "id": "direct_answer",
+      "blocking_check": true,
+      "pages_missing": 22,
+      "coverage_pct": 96.1,
+      "message": "No quick-answer block; nothing on this page is quotable without surrounding context."
+    },
+    {
+      "id": "query_in_heading",
+      "blocking_check": true,
+      "pages_missing": 0,
+      "coverage_pct": 100,
+      "message": "H1 missing or too short to carry the searcher phrasing."
+    },
+    {
+      "id": "no_empty_table_cells",
+      "blocking_check": true,
+      "pages_missing": 0,
+      "coverage_pct": 100,
+      "message": "Table ships empty cells, so the columns no longer line up with their headers."
+    },
+    {
+      "id": "conversion_path",
+      "blocking_check": true,
+      "pages_missing": 0,
+      "coverage_pct": 100,
+      "message": "No conversion path; an answer-engine citation lands with nowhere to go."
+    },
+    {
+      "id": "checklist",
+      "blocking_check": false,
+      "pages_missing": 199,
+      "coverage_pct": 64.3,
+      "message": "No checklist or numbered protocol (agent request #1, 730 occurrences)."
+    },
+    {
+      "id": "comparison_table",
+      "blocking_check": false,
+      "pages_missing": 160,
+      "coverage_pct": 71.3,
+      "message": "No comparison or cost table (agent request #2, 529 occurrences)."
+    },
+    {
+      "id": "concrete_numbers",
+      "blocking_check": false,
+      "pages_missing": 0,
+      "coverage_pct": 100,
+      "message": "No concrete cost or timeline figures (agent request #5, 365 occurrences)."
+    },
+    {
+      "id": "named_sources",
+      "blocking_check": false,
+      "pages_missing": 557,
+      "coverage_pct": 0,
+      "message": "No named primary source (agent request #6, 288 occurrences)."
+    },
+    {
+      "id": "faq",
+      "blocking_check": false,
+      "pages_missing": 22,
+      "coverage_pct": 96.1,
+      "message": "No FAQ block or FAQPage schema (agent request #9)."
+    },
+    {
+      "id": "structured_data",
+      "blocking_check": false,
+      "pages_missing": 0,
+      "coverage_pct": 100,
+      "message": "No JSON-LD structured data (agent request #10)."
+    }
+  ],
+  "worst_gaps": {
+    "checklist": [
+      "dist/articles/index.html",
+      "dist/authority/index.html",
+      "dist/insights/index.html",
+      "dist/reference/can-i-back-out-of-a-horse-deal-without-getting-sued/index.html",
+      "dist/reference/can-i-ignore-a-demand-letter/index.html",
+      "dist/reference/can-i-run-a-horse-business-under-another-company/index.html",
+      "dist/reference/can-i-run-a-horse-business-under-my-lease/index.html",
+      "dist/reference/can-i-still-be-sued-if-i-have-a-waiver/index.html",
+      "dist/reference/can-i-use-a-template-i-found-online-for-a-horse-contract/index.html",
+      "dist/reference/do-people-actually-get-sued-over-horse-deals-like-this/index.html",
+      "dist/reference/do-people-actually-get-sued-over-horse-deals/index.html",
+      "dist/reference/how-should-someone-compare-as-is-clause-vs-disclosure-clause-in-a-horse-sale-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-barn-lease-vs-boarding-agreement-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-bill-of-sale-vs-transfer-of-ownership-clause-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-boarder-default-notice-vs-demand-letter-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-boarding-agreement-vs-training-agreement-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-boarding-contract-vs-barn-lease-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-boarding-lien-rights-vs-collections-lawsuit-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-business-name-registration-vs-trademark-filing-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-choice-of-law-clause-vs-venue-clause-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-contract-review-vs-diy-horse-agreement-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-contract-vs-handshake-deal-in-a-horse-sale-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-custom-contract-review-vs-online-legal-template-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-demand-letter-vs-informal-text-dispute-in-an-equine-legal-situation/index.html",
+      "dist/reference/how-should-someone-compare-demand-letter-vs-lawsuit-in-a-horse-dispute-in-an-equine-legal-situation/index.html"
+    ],
+    "comparison_table": [
+      "dist/articles/index.html",
+      "dist/authority/index.html",
+      "dist/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/index.html",
+      "dist/boarding/what-happens-if-a-boarder-does-not-pay/index.html",
+      "dist/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/index.html",
+      "dist/boarding/what-liability-does-a-trainer-have/index.html",
+      "dist/boarding/what-should-be-included-in-a-horse-boarding-agreement/index.html",
+      "dist/boarding/what-should-be-included-in-a-training-agreement/index.html",
+      "dist/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/index.html",
+      "dist/boarding/who-pays-vet-bills-while-a-horse-is-boarded/index.html",
+      "dist/business/do-i-need-an-llc-to-start-a-horse-business/index.html",
+      "dist/business/horse-syndicate-legal-structure/index.html",
+      "dist/business/how-do-i-legally-start-a-horse-business/index.html",
+      "dist/business/how-do-i-separate-my-horse-business-from-personal-assets/index.html",
+      "dist/business/how-to-start-a-boarding-barn-legally/index.html",
+      "dist/business/how-to-start-a-horse-retail-business/index.html",
+      "dist/business/how-to-start-a-training-barn-legally/index.html",
+      "dist/business/how-to-start-an-equine-apparel-business/index.html",
+      "dist/business/how-to-start-an-equine-assisted-therapy-business/index.html",
+      "dist/business/joint-venture-agreement-equine-business/index.html",
+      "dist/business/partnership-agreement-for-horse-business/index.html",
+      "dist/business/what-legal-documents-do-i-need-for-a-horse-business/index.html",
+      "dist/compare/index.html",
+      "dist/disputes/can-a-contract-dispute-be-resolved-without-court/index.html",
+      "dist/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/index.html"
+    ],
+    "concrete_numbers": [],
+    "named_sources": [
+      "dist/articles/index.html",
+      "dist/authority/index.html",
+      "dist/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/index.html",
+      "dist/boarding/what-happens-if-a-boarder-damages-property/index.html",
+      "dist/boarding/what-happens-if-a-boarder-does-not-pay/index.html",
+      "dist/boarding/what-happens-if-a-contract-does-not-address-responsibility/index.html",
+      "dist/boarding/what-happens-if-a-horse-dies-while-boarded/index.html",
+      "dist/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/index.html",
+      "dist/boarding/what-liability-does-a-trainer-have/index.html",
+      "dist/boarding/what-should-be-included-in-a-horse-boarding-agreement/index.html",
+      "dist/boarding/what-should-be-included-in-a-training-agreement/index.html",
+      "dist/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/index.html",
+      "dist/boarding/who-pays-vet-bills-while-a-horse-is-boarded/index.html",
+      "dist/business/can-i-run-a-horse-business-under-another-company/index.html",
+      "dist/business/do-i-need-an-llc-to-start-a-horse-business/index.html",
+      "dist/business/horse-syndicate-legal-structure/index.html",
+      "dist/business/how-do-i-legally-start-a-horse-business/index.html",
+      "dist/business/how-do-i-separate-my-horse-business-from-personal-assets/index.html",
+      "dist/business/how-to-start-a-boarding-barn-legally/index.html",
+      "dist/business/how-to-start-a-horse-retail-business/index.html",
+      "dist/business/how-to-start-a-training-barn-legally/index.html",
+      "dist/business/how-to-start-an-equine-apparel-business/index.html",
+      "dist/business/how-to-start-an-equine-assisted-therapy-business/index.html",
+      "dist/business/joint-venture-agreement-equine-business/index.html",
+      "dist/business/partnership-agreement-for-horse-business/index.html"
+    ],
+    "faq": [
+      "dist/articles/index.html",
+      "dist/authority/index.html",
+      "dist/compare/index.html",
+      "dist/faq/index.html",
+      "dist/hubs/boarding-training-and-barn-operations/index.html",
+      "dist/hubs/demand-letters-and-disputes/index.html",
+      "dist/hubs/emotional-am-i-screwed/index.html",
+      "dist/hubs/equine-business-formation/index.html",
+      "dist/hubs/horse-lease-and-trial/index.html",
+      "dist/hubs/horse-sale-and-purchase/index.html",
+      "dist/hubs/index.html",
+      "dist/hubs/intellectual-property-and-brand/index.html",
+      "dist/hubs/liability-waivers-insurance/index.html",
+      "dist/hubs/real-property-and-leases/index.html",
+      "dist/hubs/state-specific/index.html",
+      "dist/hubs/therapeutic-riding-and-hipaa/index.html",
+      "dist/index.html",
+      "dist/insights/index.html",
+      "dist/reference/index.html",
+      "dist/scenario/index.html",
+      "dist/state/index.html",
+      "dist/whitepapers/index.html"
+    ],
+    "structured_data": []
+  },
+  "blocking_backlog": [
+    {
+      "path": "dist/articles/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/authority/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/compare/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/faq/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/boarding-training-and-barn-operations/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/demand-letters-and-disputes/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/emotional-am-i-screwed/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/equine-business-formation/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/horse-lease-and-trial/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/horse-sale-and-purchase/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/intellectual-property-and-brand/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/liability-waivers-insurance/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/real-property-and-leases/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/state-specific/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/hubs/therapeutic-riding-and-hipaa/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/insights/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/reference/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/scenario/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/state/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/whitepapers/index.html",
+      "check": "direct_answer"
+    }
+  ]
+}

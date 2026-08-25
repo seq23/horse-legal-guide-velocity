@@ -15,16 +15,16 @@ That caveat applies more widely than it reads:
 
 | Class | Count | Share | Behaviour in audit mode |
 |---|---:|---:|---|
-| `SOFTENABLE` — uses `createReport()` | 17 | 24% | Downgraded to a report; does not block |
-| `ALWAYS_BLOCKING` — legacy `fail()` / `exit(1)` | 54 | 76% | Blocks in audit **and** enforce |
+| `SOFTENABLE` — uses `createReport()` | 18 | 25% | Downgraded to a report; does not block |
+| `ALWAYS_BLOCKING` — legacy `fail()` / `exit(1)` | 54 | 75% | Blocks in audit **and** enforce |
 
-**54 of 71 single-command validators ignore audit mode.**
+**54 of 72 single-command validators ignore audit mode.**
 Treat audit mode as "softens a quarter of the suite", not as a dry run.
 
 Migrating a legacy validator to `createReport()` is what moves it from the
 second table to the first. Nothing here changes behaviour; it records it.
 
-## Softenable in audit mode (17)
+## Softenable in audit mode (18)
 
 | Validator | Source |
 |---|---|
@@ -34,6 +34,7 @@ second table to the first. Nothing here changes behaviour; it records it.
 | `npm run validate:authority-graph` | `_ops/validators/validate_internal_authority_graph.js` |
 | `npm run validate:canonical-contract` | `_ops/validators/validate_canonical_url_contract.js` |
 | `npm run validate:compare-contract` | `_ops/validators/validate_compare_family_contract.js` |
+| `npm run validate:content-pattern` | `_ops/validators/validate_content_pattern_contract.js` |
 | `npm run validate:crawl-contract` | `_ops/validators/validate_crawl_contract.js` |
 | `npm run validate:distribution` | `_ops/validators/validate_distribution.js` |
 | `npm run validate:entity-coverage` | `_ops/validators/validate_entity_coverage.js` |
