@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "taxonomy_source": "query_derived",
+  "policy": "Full taxonomy coverage is an index, not a publishing queue. Pages may only be generated against evidence_tier T1-T3. T4 synthetic permutations are a hypothesis reserve consulted when a cluster has no evidence, and never publish on their own.",
+  "evidence_weights": {
+    "T1": 1,
+    "T2a": 0.8,
+    "T2b": 0.6,
+    "T3": 0.35
+  },
+  "taxonomy": {
+    "topics": null,
+    "audiences": null,
+    "modifiers": null,
+    "formats": null,
+    "materialized_reserve": 0,
+    "reserve_path": "data/authority_scale/fanout_100k"
+  },
+  "coverage": {
+    "clusters_total": 5,
+    "clusters_with_evidence": 5,
+    "clusters_reserve_only": 0,
+    "reserve_only_clusters": []
+  },
+  "evidence_backed_count": 6,
+  "unmatched_count": 0,
+  "unmatched": [],
+  "queries": [
+    {
+      "query": "equine bill of sale",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 1300,
+      "keyword_difficulty": 9,
+      "weak_incumbent_score": 0.91,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "target_domain": "horselegalguide.com",
+      "inherited": {
+        "taxonomy_source": "query_derived",
+        "topic": null,
+        "topic_confidence": 0,
+        "audience": null,
+        "modifier": null,
+        "format": null,
+        "semantic_cluster": "equine-bill"
+      },
+      "rank_score": 709.8,
+      "publishable": true
+    },
+    {
+      "query": "horse bill of sale",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 1300,
+      "keyword_difficulty": 17,
+      "weak_incumbent_score": 0.83,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "target_domain": "horselegalguide.com",
+      "inherited": {
+        "taxonomy_source": "query_derived",
+        "topic": null,
+        "topic_confidence": 0,
+        "audience": null,
+        "modifier": null,
+        "format": null,
+        "semantic_cluster": "horse-bill"
+      },
+      "rank_score": 647.4,
+      "publishable": true
+    },
+    {
+      "query": "horse lease agreement",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 720,
+      "keyword_difficulty": 12,
+      "weak_incumbent_score": 0.88,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "target_domain": "horselegalguide.com",
+      "inherited": {
+        "taxonomy_source": "query_derived",
+        "topic": null,
+        "topic_confidence": 0,
+        "audience": null,
+        "modifier": null,
+        "format": null,
+        "semantic_cluster": "horse-lease"
+      },
+      "rank_score": 380.16,
+      "publishable": true
+    },
+    {
+      "query": "horse boarding contract",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 320,
+      "keyword_difficulty": 0,
+      "weak_incumbent_score": 1,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "target_domain": "horselegalguide.com",
+      "inherited": {
+        "taxonomy_source": "query_derived",
+        "topic": null,
+        "topic_confidence": 0,
+        "audience": null,
+        "modifier": null,
+        "format": null,
+        "semantic_cluster": "horse-boarding"
+      },
+      "rank_score": 192,
+      "publishable": true
+    },
+    {
+      "query": "horse boarding agreement",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 260,
+      "keyword_difficulty": 0,
+      "weak_incumbent_score": 1,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "target_domain": "horselegalguide.com",
+      "inherited": {
+        "taxonomy_source": "query_derived",
+        "topic": null,
+        "topic_confidence": 0,
+        "audience": null,
+        "modifier": null,
+        "format": null,
+        "semantic_cluster": "horse-boarding"
+      },
+      "rank_score": 156,
+      "publishable": true
+    },
+    {
+      "query": "horse purchase agreement",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 70,
+      "keyword_difficulty": 2,
+      "weak_incumbent_score": 0.98,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "target_domain": "horselegalguide.com",
+      "inherited": {
+        "taxonomy_source": "query_derived",
+        "topic": null,
+        "topic_confidence": 0,
+        "audience": null,
+        "modifier": null,
+        "format": null,
+        "semantic_cluster": "horse-purchase"
+      },
+      "rank_score": 41.16,
+      "publishable": true
+    }
+  ]
+}

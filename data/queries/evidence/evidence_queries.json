@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "note": "Evidence-backed queries only. evidence_tier is required. T4 (synthetic fanout) is never stored here - it is a hypothesis reserve and is not publishable.",
+  "tiers": {
+    "T1": "GSC-measured",
+    "T2a": "Bing/Keyword Planner measured",
+    "T2b": "Semrush modeled",
+    "T3": "real phrasing, no volume"
+  },
+  "source": "portfolio-search-packet.zip / query_universe_T2b.json",
+  "owned_domains": [
+    "horselegalguide.com"
+  ],
+  "queries": [
+    {
+      "query": "horse boarding contract",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 320,
+      "keyword_difficulty": 0,
+      "weak_incumbent_score": 1.0,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "serp_features": [],
+      "vertical": "equine",
+      "target_domain": "horselegalguide.com",
+      "cpc_usd": 1.08,
+      "paid_competition": 1.0,
+      "competitor_ranking_url": "NO_DATA"
+    },
+    {
+      "query": "horse boarding agreement",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 260,
+      "keyword_difficulty": 0,
+      "weak_incumbent_score": 1.0,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "serp_features": [],
+      "vertical": "equine",
+      "target_domain": "horselegalguide.com",
+      "cpc_usd": 0.75,
+      "paid_competition": 0.97,
+      "competitor_ranking_url": "NO_DATA"
+    },
+    {
+      "query": "horse purchase agreement",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 70,
+      "keyword_difficulty": 2,
+      "weak_incumbent_score": 0.98,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "serp_features": [],
+      "vertical": "equine",
+      "target_domain": "horselegalguide.com",
+      "cpc_usd": 1.25,
+      "paid_competition": 0.84,
+      "competitor_ranking_url": "NO_DATA"
+    },
+    {
+      "query": "equine bill of sale",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 1300,
+      "keyword_difficulty": 9,
+      "weak_incumbent_score": 0.91,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "serp_features": [],
+      "vertical": "equine",
+      "target_domain": "horselegalguide.com",
+      "cpc_usd": 1.16,
+      "paid_competition": 0.89,
+      "competitor_ranking_url": "NO_DATA"
+    },
+    {
+      "query": "horse lease agreement",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 720,
+      "keyword_difficulty": 12,
+      "weak_incumbent_score": 0.88,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "serp_features": [],
+      "vertical": "equine",
+      "target_domain": "horselegalguide.com",
+      "cpc_usd": 0.77,
+      "paid_competition": 0.6,
+      "competitor_ranking_url": "NO_DATA"
+    },
+    {
+      "query": "horse bill of sale",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "volume": 1300,
+      "keyword_difficulty": 17,
+      "weak_incumbent_score": 0.83,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "serp_features": [],
+      "vertical": "equine",
+      "target_domain": "horselegalguide.com",
+      "cpc_usd": 1.11,
+      "paid_competition": 0.73,
+      "competitor_ranking_url": "NO_DATA"
+    }
+  ]
+}
