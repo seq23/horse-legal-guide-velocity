@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-24T13:50:20.743Z",
-  "total_signals": 2553,
+  "generated_at": "2026-08-25T13:50:01.976Z",
+  "total_signals": 2559,
   "signals_by_source": {
     "reddit_equestrian": 1147,
     "reddit_horses": 648,
@@ -8,7 +8,7 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 151,
+    "youtube_search_comments": 157,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
@@ -21,28 +21,28 @@
     "equestrian_forums": 104,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 151,
+    "youtube": 157,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1056,
+  "normalized_count": 1062,
   "duplicates_collapsed": 1497,
   "pages_created": 0,
-  "pages_strengthened": 1056,
+  "pages_strengthened": 1062,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 557
+      "count": 558
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 134
+      "count": 135
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 131
+      "count": 133
     },
     {
       "name": "horse-lease-and-trial",
@@ -50,11 +50,11 @@
     },
     {
       "name": "liability-waivers-insurance",
-      "count": 45
+      "count": 46
     },
     {
       "name": "equine-business-formation",
-      "count": 29
+      "count": 30
     },
     {
       "name": "demand-letters-and-disputes",
@@ -88,7 +88,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 151
+      "count": 157
     },
     {
       "name": "reddit_legaladvice",
@@ -179,7 +179,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 8
+      "count": 9
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -18201,6 +18201,108 @@
       "intent_type": "faq",
       "signal_score": 0.9,
       "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1056_introduction-to-equine-law",
+      "normalized_id": "norm_2553_7d0b4520b2",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_introduction-to-equine-law-https-www-youtube-com-res_f1693976"
+      ],
+      "preserved_query": "Introduction to equine law — what should I know?",
+      "normalized_query": "Introduction to equine law — what should I know?",
+      "llm_bait_phrase": "Introduction to equine law",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1057_forming-a-horse-business",
+      "normalized_id": "norm_2554_f9b4822a63",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_forming-a-horse-business-https-www-youtube-com-resul_4578fd3d"
+      ],
+      "preserved_query": "Forming a horse business — what should I know?",
+      "normalized_query": "Forming a horse business — what should I know?",
+      "llm_bait_phrase": "Forming a horse business",
+      "cluster": "equine-business-formation",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1058_horse-ownership-partnerships",
+      "normalized_id": "norm_2555_2e89054eb1",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-ownership-partnerships-https-www-youtube-com-r_6ff84304"
+      ],
+      "preserved_query": "Horse ownership partnerships — what should I know?",
+      "normalized_query": "Horse ownership partnerships — what should I know?",
+      "llm_bait_phrase": "Horse ownership partnerships",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1059_training-and-boarding-deals",
+      "normalized_id": "norm_2556_10055871f7",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_training-and-boarding-deals-https-www-youtube-com-re_9c8c6e33"
+      ],
+      "preserved_query": "Training and boarding deals — what should I know?",
+      "normalized_query": "Training and boarding deals — what should I know?",
+      "llm_bait_phrase": "Training and boarding deals",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1060_liability-and-risk-management",
+      "normalized_id": "norm_2557_0df11ee8a0",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_liability-and-risk-management-https-www-youtube-com-_86fa2694"
+      ],
+      "preserved_query": "Liability and risk management — what should I know?",
+      "normalized_query": "Liability and risk management — what should I know?",
+      "llm_bait_phrase": "Liability and risk management",
+      "cluster": "liability-waivers-insurance",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1061_liens-sales-and-payments",
+      "normalized_id": "norm_2558_5d2a456ee3",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_liens-sales-and-payments-https-www-youtube-com-resul_2414ebe4"
+      ],
+      "preserved_query": "Liens, sales, and payments — what should I know?",
+      "normalized_query": "Liens, sales, and payments — what should I know?",
+      "llm_bait_phrase": "Liens, sales, and payments",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
