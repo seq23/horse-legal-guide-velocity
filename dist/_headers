@@ -3,3 +3,31 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Cloudflare Pages is serving this project from the repository root rather than
+# from `dist` (wrangler.toml sets pages_build_output_dir = "dist", but the Pages
+# project itself is not using it - dist/ contains no .md and no package.json,
+# yet https://horselegalguide.com/README.md returns 200).
+#
+# That publishes 585 content/*.md source files - the Markdown originals of pages
+# that are also published as HTML - plus AGENTS.md, REPO_IDENTITY.md and
+# package.json. Duplicate content at scale dilutes crawl budget and can suppress
+# the HTML originals, which is precisely the risk WO-15 was written to catch.
+#
+# robots.txt is Allow: / with no exclusions, so noindex must be served as a
+# header: disallowing these paths would stop crawlers reading the directive and
+# leave anything already indexed in place.
+#
+# This is mitigation, not the fix. The fix is to point the Pages project at
+# `dist`, which needs dashboard access this token does not have.
+/*.md
+  X-Robots-Tag: noindex, nofollow
+
+/content/*
+  X-Robots-Tag: noindex, nofollow
+
+/package.json
+  X-Robots-Tag: noindex, nofollow
+
+/package-lock.json
+  X-Robots-Tag: noindex, nofollow
