@@ -29,10 +29,28 @@ if (!outDir) {
 }
 
 const index = fs.readFileSync(path.join(outDir, 'index.html'), 'utf8');
-const styles = (index.match(/<style[\s\S]*?<\/style>/gi) || []).join('\n');
+// Carry both inline <style> blocks and external stylesheet/font links so the
+// page matches the site whichever way it loads its CSS.
+const styles = [
+  ...(index.match(/<style[\s\S]*?<\/style>/gi) || []),
+  ...(index.match(/<link[^>]+rel=["'](?:stylesheet|preconnect)["'][^>]*>/gi) || []),
+].join('\n');
 const siteName = (index.match(/<title>([^<]*)<\/title>/i) || [, 'This site'])[1]
   .split(/\s+[|—-]\s+/)[0]
   .trim();
+// Reuse the site's own footer so the 404 carries the same legal/nav links every
+// other page does, rather than becoming a dead end.
+const footer = (index.match(/<footer[\s\S]*?<\/footer>/i) || [''])[0];
+// Derive the origin from the homepage's canonical so the 404 can self-canonicalize
+// without this script knowing any repo's domain.
+// Attribute order varies across these repos, so match either arrangement.
+const canonicalTagRaw = (index.match(/<link[^>]*rel=["']canonical["'][^>]*>/i)
+  || index.match(/<link[^>]*href=[^>]*rel=["']canonical["'][^>]*>/i) || [''])[0];
+const canonicalHref = (canonicalTagRaw.match(/href=["']([^"']+)["']/i) || [])[1];
+let origin = '';
+try { origin = canonicalHref ? new URL(canonicalHref).origin : ''; } catch { origin = ''; }
+const canonicalTag = origin ? `\n  <link rel="canonical" href="${origin}/404.html">` : '';
+
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 const html = `<!doctype html>
@@ -42,6 +60,7 @@ const html = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found &middot; ${esc(siteName)}</title>
   <meta name="robots" content="noindex, follow">
+  <meta name="description" content="That page could not be found on ${esc(siteName)}. The address may be mistyped, or the page may have been moved or retired.">${canonicalTag}
 ${styles}
   <style>
     .nf-wrap { max-width: 40rem; margin: 0 auto; padding: 4rem 1.25rem; }
@@ -58,6 +77,14 @@ ${styles}
     <p>The address may be mistyped, or the page may have been moved or retired since it was linked.</p>
     <p><a class="nf-home" href="/">Return to ${esc(siteName)}</a></p>
   </main>
+${footer}
+  <script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": `Page not found \u00b7 ${siteName}`,
+    ...(origin ? { "@id": `${origin}/404.html`, url: `${origin}/404.html`,
+                   isPartOf: { "@type": "WebSite", name: siteName, url: `${origin}/` } } : {}),
+  }, null, 2)}</script>
 </body>
 </html>
 `;
