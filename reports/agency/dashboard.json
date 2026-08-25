@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-25T11:26:00.000Z",
+  "generated_at": "2026-08-25T13:50:20.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -8,20 +8,20 @@
   "health": {
     "gsc": {
       "status": "not_connected",
-      "checked_at": "2026-08-24T14:29:11.169Z",
-      "age_hours": 20.9,
+      "checked_at": "2026-08-25T14:30:56.632Z",
+      "age_hours": -0.7,
       "message": "Add GSC service-account secrets or GSC_ACCESS_TOKEN to GitHub Actions."
     },
     "bing": {
       "status": "not_connected",
-      "checked_at": "2026-08-24T14:29:11.169Z",
-      "age_hours": 20.9,
+      "checked_at": "2026-08-25T14:30:56.632Z",
+      "age_hours": -0.7,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
-      "checked_at": "2026-08-24T14:29:11.169Z",
-      "age_hours": 20.9,
+      "checked_at": "2026-08-25T14:30:56.632Z",
+      "age_hours": -0.7,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -3238,7 +3238,7 @@
   },
   "provider_health": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-08-24T14:29:20.185Z",
+    "generated_at": "2026-08-25T14:31:05.636Z",
     "providers": {
       "gemini_grounded_search": {
         "state": "NOT_CONFIGURED",
@@ -3277,7 +3277,7 @@
   },
   "external_action_truth": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-08-24T14:29:20.327Z",
+    "generated_at": "2026-08-25T14:31:05.780Z",
     "actions": [
       {
         "id": "gemini_grounded_query",
