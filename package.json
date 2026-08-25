@@ -138,6 +138,8 @@
     "test": "node --test test/*.test.js",
     "validate:publish-safety": "node _ops/validators/validate_publish_safety_gate.js",
     "validate:public-page-phrase-contract": "node _ops/validators/validate_public_page_phrase_contract.js",
-    "protected-editorial-core:refresh": "node scripts/authority_scale/refresh_protected_editorial_core.mjs"
+    "protected-editorial-core:refresh": "node scripts/authority_scale/refresh_protected_editorial_core.mjs",
+    "atlas:build": "node scripts/atlas/build_query_atlas.mjs",
+    "validate:query-atlas": "node scripts/atlas/validate_query_atlas.mjs"
   }
 }
