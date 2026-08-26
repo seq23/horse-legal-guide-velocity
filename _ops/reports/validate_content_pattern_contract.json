@@ -2,7 +2,7 @@
   "validator": "validate_content_pattern_contract",
   "scope": "page",
   "mode": "enforce",
-  "issue_count": 26,
+  "issue_count": 29,
   "issues": [
     {
       "validator": "validate_content_pattern_contract",
@@ -287,6 +287,36 @@
       "code": "coverage_faq",
       "message": "No FAQ block or FAQPage schema (agent request #9).",
       "fixHint": "Turn recurring sub-questions into a visible Q&A block backed by FAQPage. Full list: reports/content-pattern-contract.json",
+      "autofix": false,
+      "blocking": false
+    },
+    {
+      "validator": "validate_content_pattern_contract",
+      "scope": "page",
+      "file": "467 page(s), coverage 16.2%",
+      "severity": "warning",
+      "code": "coverage_recommendation_summary",
+      "fixHint": "undefined Full list: reports/content-pattern-contract.json",
+      "autofix": false,
+      "blocking": false
+    },
+    {
+      "validator": "validate_content_pattern_contract",
+      "scope": "page",
+      "file": "21 page(s), coverage 96.2%",
+      "severity": "warning",
+      "code": "coverage_definition_callout",
+      "fixHint": "undefined Full list: reports/content-pattern-contract.json",
+      "autofix": false,
+      "blocking": false
+    },
+    {
+      "validator": "validate_content_pattern_contract",
+      "scope": "page",
+      "file": "557 page(s), coverage 0%",
+      "severity": "warning",
+      "code": "coverage_trust_block",
+      "fixHint": "undefined Full list: reports/content-pattern-contract.json",
       "autofix": false,
       "blocking": false
     }
