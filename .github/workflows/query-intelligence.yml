@@ -44,6 +44,19 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: git pull --rebase origin main
+      # Real measured demand before anything reasons about queries. Evidence-only:
+      # it merges rather than overwrites, never drops existing rows, and does not
+      # admit, publish, or change the publishing cadence. Without credentials it
+      # exits 0 and leaves the evidence file untouched.
+      - name: Ingest measured Search Console queries
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: |
+          if [ -z "${GSC_SERVICE_ACCOUNT_JSON:-}" ]; then echo 'GSC skipped: not configured'; exit 0; fi
+          python3 -m pip install --quiet --upgrade pip
+          python3 -m pip install --quiet google-api-python-client google-auth
+          npm run queries:ingest
       - name: Execute query-intelligence operation
         id: operation
         continue-on-error: true
