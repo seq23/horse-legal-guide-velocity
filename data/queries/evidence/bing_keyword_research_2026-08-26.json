@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "source": "Bing Webmaster Tools Keyword Research",
+  "site_url": "https://horselegalguide.com",
+  "measured_at": "2026-08-26",
+  "window": "25 May 2026 - 22 Aug 2026",
+  "measured_by": "operator-signed-in browser session, read directly from the Keyword Research panel",
+  "note": "Companion measurement for the seeds listed in WPP-llm/docs/query-coverage/measurement-plan.md (seeds 3, 13, 18 and the Tier C candidates in blue-ocean.md). This file is DELIBERATELY SEPARATE from evidence_queries.json. That file is consumed by scripts/atlas/build_query_atlas.mjs, whose rank_score sorts on the `volume` field, and `volume` there already holds two incompatible units (T1 GSC impressions and T2b Semrush modelled volume). Adding a third unit - Bing impressions - to the same array would deepen that defect. Nothing here is written back into evidence_queries.json without a deliberate unit decision first.",
+  "tier": "T2a",
+  "tier_definition": "Bing/Keyword Planner measured, per data/queries/evidence/evidence_queries.json",
+  "unit": "Bing Webmaster Tools impressions for the seed over the stated window. NOT Google impressions and NOT Semrush modelled market volume. Do not compare these figures directly against T1 or T2b numbers.",
+  "reading_rule": "'insufficient_data' is what Bing itself returns ('Bing doesn't have enough data to show trend here'). It is a measured absence at Bing's reporting floor, not a measured zero, and not a statement about Google. It is sufficient to REFUSE a build; it is not sufficient to assert that nobody searches the query.",
+  "tab_coverage": {
+    "related_keywords": "0 rows on every horselegalguide.com seed listed below",
+    "question_keywords": "0 rows / 'No data available' on every horselegalguide.com seed listed below",
+    "newly_discovered": "0 rows on every horselegalguide.com seed listed below",
+    "consequence": "The free fan-out and blue-ocean sources named in measurement-plan.md return nothing for this property. There is no measured question set to build a question-per-URL programme against. This is the single most decision-relevant result in this file."
+  },
+  "seeds": [
+    {
+      "query": "horse bill of sale",
+      "impressions": 307,
+      "country_breakdown": {
+        "United States": 255,
+        "Canada": 44,
+        "United Kingdom": 6,
+        "India": 1
+      },
+      "related_keywords_rows": 0,
+      "question_keywords_rows": 0,
+      "newly_discovered_rows": 0,
+      "top_10_url_ranking": [
+        "https://easylegaldocs.com/templates/bill-of-sale/horse-bill-of-sale/",
+        "https://freeforms.com/bill-of-sale/horse/",
+        "https://eforms.com/bill-of-sale/horse/",
+        "https://www.freeprintablelegalforms.com/business-forms/bill-of-sale/horse-bill-of-sale-form/",
+        "https://templatelab.com/horse-bill-of-sale/",
+        "https://equinebillofsale.com/",
+        "https://equusfoundation.org/action-centers/uploads/1509/1509-rehome-Bill_of_Sale_Template.pdf",
+        "https://legaltemplates.net/form/bill-of-sale/horse/",
+        "https://opendocs.com/bill-of-sale/horse/",
+        "https://esign.com/bill-of-sale/horse/"
+      ],
+      "serp_shape": "10 of 10 results are a downloadable or fillable document. Zero are explanatory prose.",
+      "cross_reference": "evidence_queries.json holds a T1 record for this same string: 16 GSC impressions, position 54.06, window 2026-05-25 to 2026-08-23. The two numbers are different engines over near-identical windows and are not additive."
+    },
+    {
+      "query": "horse boarding contract",
+      "impressions": "insufficient_data",
+      "bing_message": "Bing doesn't have enough data to show trend here.",
+      "related_keywords_rows": 0,
+      "question_keywords_rows": 0,
+      "newly_discovered_rows": 0,
+      "top_10_url_ranking": [
+        "https://stablewise.com/pdf/boarding_agreement_2.pdf",
+        "http://horselawyers.com/PDF/board_agree.PDF",
+        "https://butterscotch.io/contracts/horse-boarding-contract",
+        "https://equestrianapp.com/files/sampleboardingagreement02.pdf",
+        "https://www.printablecontracts.com/Horse_Boarding_Contract.php",
+        "https://www.mofoxtrot.com/forms/horse_boarding_agreement.htm",
+        "https://mystableforms.com/free-resources/horse-boarding-contracts-guide/",
+        "https://www.dochub.com/fillable-form/18281-printable-horse-boarding-contract",
+        "https://paintedbarstables.com/documents/Boarding_Agreement_2009.03.pdf",
+        "https://www.hillsidestable.net/full-board-contract"
+      ],
+      "serp_shape": "10 of 10 results are a document - PDF, fillable form, or a hosted contract page.",
+      "supersedes": "evidence_queries.json carries a T2b Semrush record for this query at volume 320, weak_incumbent_score 1.0, keyword_difficulty 0. WPP-llm/docs/query-coverage/fan-out-coverage.md named it one of only two new pages justified anywhere in the portfolio, conditional on measuring it in Bing first. It has now been measured. Bing returns no trend data for it, and the SERP is entirely documents. The recommendation does not survive its own gate. Do not build this page."
+    },
+    {
+      "query": "equine liability waiver",
+      "impressions": "insufficient_data",
+      "bing_message": "Bing doesn't have enough data to show trend here.",
+      "related_keywords_rows": 0,
+      "question_keywords_rows": 0,
+      "newly_discovered_rows": 0,
+      "top_10_url_ranking": [
+        "https://www.usef.org/forms-pubs/8xdkw6lXmMU/state-specific-waiver-release-of",
+        "https://www.stablewise.com/pdf/hold_harmless.pdf",
+        "https://www.dochub.com/fillable-form/5527-equine-release-hold",
+        "https://www.usef.org/forms-pubs/fZIRaFDZ3rg/usef-waiver-release-of-liability",
+        "https://windhorseequinelearning.org/file_download/cd1fea81-9a53-4d7a-9e41-fe6436ca03bb",
+        "https://www.equiniction.com/understanding-and-drafting-a-horse-liability-waiver-a-complete-guide-for-equestrian-businesses-and-riders/",
+        "https://equineops.com/resources/state-liability-waivers-horse-back-riding",
+        "https://whitehorseboarding.com/wp-content/uploads/2025/05/Equine-Activity-Release-and-Hold-Harmless-Agreement.pdf",
+        "https://www.gallopingacres.com/docs/Lessons-Forms/Liability-Release-Form.pdf",
+        "https://www.eqgroup.com/library/equine-liability-release-guidelines/"
+      ],
+      "serp_shape": "9 of 10 are a document. The two national-governing-body results (usef.org) are the authority here, and they publish state-specific waivers directly.",
+      "note": "Seed 18 in measurement-plan.md, run for the Newly discovered tab. The tab is empty."
+    },
+    {
+      "query": "does a horse bill of sale need to be notarized",
+      "impressions": "insufficient_data",
+      "bing_message": "Bing doesn't have enough data to show trend here.",
+      "related_keywords_rows": 0,
+      "question_keywords_rows": 0,
+      "newly_discovered_rows": 0,
+      "top_10_url_ranking": [
+        "https://equinebillofsale.com/",
+        "https://billofsale.app/blog/bill-of-sale-requirements-by-state",
+        "https://billofsale.app/blog/notarized-bill-of-sale",
+        "https://www.horsebook.app/blog/buying-selling-horse-paperwork",
+        "https://www.enotaryoncall.com/blog/does-a-bill-of-sale-need-to-be-notarized/",
+        "https://irundocs.com/guides/bill-of-sale-state-requirements",
+        "https://madbarn.com/horse-bill-of-sale/",
+        "https://www.recordinglaw.com/bill-of-sale/horse/",
+        "https://templatespark.com/resource/1811-horse-bill-of-sale/",
+        "https://www.adobe.com/acrobat/hub/does-bill-of-sale-need-to-be-notarized.html"
+      ],
+      "serp_shape": "Mixed - roughly half documents, half state-requirement explainers.",
+      "note": "Ranked #2 on the blue-ocean.md 'genuinely promising' list. It does not clear the demand gate. It is also the single riskiest item on that list: answering it correctly means asserting notarisation requirements per jurisdiction, which requires a cited statute per state. See docs/strategy/equine-document-gap-legal-review.md."
+    },
+    {
+      "query": "cost of owning a horse per year",
+      "impressions": "insufficient_data",
+      "bing_message": "Bing doesn't have enough data to show trend here.",
+      "related_keywords_rows": 0,
+      "question_keywords_rows": 0,
+      "newly_discovered_rows": 0,
+      "top_10_url_ranking": [
+        "https://www.midsouthhorsereview.com/the-real-cost-of-owning-a-horse-a-complete-financial-breakdown",
+        "https://www.farmkeep.com/farm-guides/livestock/how-much-does-a-horse-cost",
+        "https://insiderhorse.com/yearly-annual-cost-to-own-horse/",
+        "https://horseracingsense.com/real-annual-cost-to-own-a-horse/",
+        "https://www.horseeducationonline.com/post/horse-ownership-cost-calculator-and-guide",
+        "https://madbarn.com/how-much-does-it-cost-to-own-a-horse/",
+        "https://eathealthy365.com/the-annual-cost-breakdown-of-owning-a-horse/",
+        "https://hoofkit.launchyard.app/blog/horse-cost-per-year",
+        "https://equinehelper.com/what-does-it-cost-to-own-a-horse/",
+        "https://latestcost.com/horse-ownership-cost-per-year-price/"
+      ],
+      "serp_shape": "10 of 10 are prose cost breakdowns. This is the one equine SERP tested that a prose publisher could contest on shape - but it is an equine-husbandry SERP, not an equine-legal one, and it is off this property's declared competence.",
+      "note": "Tier C3 in blue-ocean.md. Fails the demand gate."
+    }
+  ],
+  "conclusions": [
+    "Exactly one horselegalguide.com seed returns a measurable Bing figure: `horse bill of sale`, 307 impressions. Every other seed tested is below Bing's reporting floor.",
+    "That one measurable query has a SERP in which 10 of 10 results are a downloadable document. It cannot be contested with prose, and this repository publishes prose - 0 of 564 dist pages contain the string 'download' and 0 contain 'notariz' (grepped 2026-08-26).",
+    "The Related, Question and Newly-discovered tabs are empty for every equine seed. measurement-plan.md proposed those tabs as the free fan-out and blue-ocean source for this property. They are not a source here. Tier C of blue-ocean.md remains unpriced and, on this evidence, unbuildable.",
+    "docs/strategy/publishing-cadence.md requires a measured query before a new page. data/cadence/policy.json sets new_pages_per_week to 0 with the note 'Client repo. Publishing is client-approved only.' Both gates independently say: add nothing.",
+    "The correct equine action from this measurement is subtraction and repair on the existing 564 pages, which is client-approved work this repository is currently frozen against, plus the legal review scoped in docs/strategy/equine-document-gap-legal-review.md before any document ships."
+  ]
+}
