@@ -146,6 +146,7 @@
     "selfheal": "node _ops/selfheal/heal_until_clean.js",
     "selfheal:dry": "node _ops/selfheal/heal_until_clean.js --dry-run",
     "queries:ingest": "python3 scripts/queries/ingest_gsc_evidence.py",
-    "clarity:install": "node scripts/install_clarity.js"
+    "clarity:install": "node scripts/install_clarity.js",
+    "cadence:headroom": "node scripts/cadence/publish_headroom.mjs"
   }
 }
