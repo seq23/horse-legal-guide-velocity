@@ -1,27 +1,27 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-26T13:35:51.000Z",
+  "generated_at": "2026-08-26T14:16:14.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
   },
   "health": {
     "gsc": {
-      "status": "not_connected",
-      "checked_at": "2026-08-25T14:30:56.632Z",
-      "age_hours": 23.1,
-      "message": "Add GSC service-account secrets or GSC_ACCESS_TOKEN to GitHub Actions."
+      "status": "ok",
+      "checked_at": "2026-08-26T14:30:47.543Z",
+      "age_hours": -0.2,
+      "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
-      "checked_at": "2026-08-25T14:30:56.632Z",
-      "age_hours": 23.1,
+      "checked_at": "2026-08-26T14:30:47.543Z",
+      "age_hours": -0.2,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
-      "checked_at": "2026-08-25T14:30:56.632Z",
-      "age_hours": 23.1,
+      "checked_at": "2026-08-26T14:30:47.543Z",
+      "age_hours": -0.2,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -40,7 +40,7 @@
         }
       },
       "gsc": {
-        "state": "NOT_CONFIGURED",
+        "state": "CONNECTED",
         "capabilities": {
           "search_analytics": true,
           "sitemaps": true,
@@ -65,11 +65,1841 @@
     }
   },
   "performance": {
-    "gsc": {},
-    "gsc_top_queries": [],
-    "gsc_top_pages": [],
+    "gsc": {
+      "clicks": 2,
+      "impressions": 317,
+      "ctr": 0.006309148264984227,
+      "position": 49.97791798107256,
+      "previous_clicks": 0,
+      "previous_impressions": 0,
+      "previous_ctr": 0,
+      "previous_position": 0
+    },
+    "gsc_top_queries": [
+      {
+        "keys": [
+          "bill of sale horse"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 59
+      },
+      {
+        "keys": [
+          "can i pay using my stables"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "keys": [
+          "choice of venue"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "difference between insurance policy and insurance certificate"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 79
+      },
+      {
+        "keys": [
+          "difference between partnership agreement and operating agreement"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 80
+      },
+      {
+        "keys": [
+          "do i need liability insurance for my horse in nc?"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 42.714285714285715
+      },
+      {
+        "keys": [
+          "equine bill of sale"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 53.166666666666664
+      },
+      {
+        "keys": [
+          "equine business"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "equine law"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 92
+      },
+      {
+        "keys": [
+          "equine law advice"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 78.5
+      },
+      {
+        "keys": [
+          "equine law suit protection"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 95.33333333333333
+      },
+      {
+        "keys": [
+          "equine lease agreement"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "equine lease agreement law firm wellington"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "keys": [
+          "equine legal"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 92
+      },
+      {
+        "keys": [
+          "equine legal advice"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 67.33333333333333
+      },
+      {
+        "keys": [
+          "equine purchase agreement"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 73
+      },
+      {
+        "keys": [
+          "equine sales agreement"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "keys": [
+          "equine veterinary treatment disputes"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 78
+      },
+      {
+        "keys": [
+          "fictitious business name vs trademark ownership"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "keys": [
+          "guides and instructors insurance"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 98
+      },
+      {
+        "keys": [
+          "horse bill of sale"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 54.0625
+      },
+      {
+        "keys": [
+          "horse bills"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 67
+      },
+      {
+        "keys": [
+          "horse law"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "horse lease agreement"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 80.5
+      },
+      {
+        "keys": [
+          "horse lease agreements"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "keys": [
+          "horse leaze"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 82.5
+      },
+      {
+        "keys": [
+          "horse ownership dispute"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "keys": [
+          "horse purchase agreement"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 69
+      },
+      {
+        "keys": [
+          "horse purchase contract"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 61
+      },
+      {
+        "keys": [
+          "horse purchase dispute"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 79
+      },
+      {
+        "keys": [
+          "horse sale disputes"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 90
+      },
+      {
+        "keys": [
+          "horse sales agreement"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 70.66666666666667
+      },
+      {
+        "keys": [
+          "horse sales contract"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 67
+      },
+      {
+        "keys": [
+          "horse trial agreement"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 44
+      },
+      {
+        "keys": [
+          "horse vet dispute resolution"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 88.5
+      },
+      {
+        "keys": [
+          "horse vet disputes"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "how to become a horse business entrepreneur"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "keys": [
+          "how to start a horse business"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "how to start a therapeutic riding program"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "how to start an equestrian business"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 77.5
+      },
+      {
+        "keys": [
+          "insurance policy vs certificate"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 88
+      },
+      {
+        "keys": [
+          "is equine therapy covered by insurance"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 78
+      },
+      {
+        "keys": [
+          "leasing a horse contract"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "operating agreement vs partnership agreement"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 69
+      },
+      {
+        "keys": [
+          "partnership agreement vs operating agreement"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 74.4
+      },
+      {
+        "keys": [
+          "release vs waiver"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 67
+      },
+      {
+        "keys": [
+          "release waiver"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 100
+      },
+      {
+        "keys": [
+          "standard training agreement"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "keys": [
+          "start an equestrian business"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 72.5
+      },
+      {
+        "keys": [
+          "transfer of horse ownership agreement"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 66
+      },
+      {
+        "keys": [
+          "usef liability insurance"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 42
+      },
+      {
+        "keys": [
+          "usef trainer insurance"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 60.5
+      },
+      {
+        "keys": [
+          "usef waiver"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "keys": [
+          "waiver and release of liability"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 86
+      },
+      {
+        "keys": [
+          "waiver release"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 99
+      },
+      {
+        "keys": [
+          "waiver vs release"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "what are the legal aspects of horse sale contracts"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 87.5
+      },
+      {
+        "keys": [
+          "what is a liability release form"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 72.5
+      },
+      {
+        "keys": [
+          "what is the difference between a policy and a certificate of insurance"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 99
+      },
+      {
+        "keys": [
+          "what s the difference between a syndicate and full horse ownership?"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 76.5
+      }
+    ],
+    "gsc_top_pages": [
+      {
+        "keys": [
+          "https://horselegalguide.com/"
+        ],
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 6.4
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/sponsorship-agreement-vs-brand-ambassador-agreement/"
+        ],
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/authority/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/boarding/what-happens-if-a-boarder-does-not-pay/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/boarding/what-should-be-included-in-a-training-agreement/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/boarding/who-pays-vet-bills-while-a-horse-is-boarded/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/business/can-i-run-a-horse-business-under-another-company/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/business/do-i-need-an-llc-to-start-a-horse-business/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/business/how-do-i-legally-start-a-horse-business/"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 70.88888888888889
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 72.66666666666667
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/business-name-registration-vs-trademark-filing/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/choice-of-law-clause-vs-venue-clause/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 41.666666666666664
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/horse-co-ownership-agreement-vs-syndicate-structure/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 76.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/insurance-certificate-vs-actual-policy-coverage/"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 86
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/liability-waiver-vs-insurance-for-horse-activities/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 62.666666666666664
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/llc-vs-insurance-for-horse-business-liability/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/mediation-vs-litigation-in-a-horse-dispute/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 66.33333333333333
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/release-form-vs-liability-waiver/"
+        ],
+        "clicks": 0,
+        "impressions": 24,
+        "ctr": 0,
+        "position": 80.125
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/release-of-claims-vs-settlement-agreement/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/text-message-agreement-vs-signed-contract/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 84.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/trademark-vs-llc-name-horse-business/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 25.333333333333332
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/trial-agreement-vs-lease-agreement/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 41
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/use-of-image-rights-vs-copyright-ownership/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/compare/waiver-vs-insurance-horse-liability/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 50.666666666666664
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/coverage/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/disclaimer/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/disputes/can-a-contract-dispute-be-resolved-without-court/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/faq/can-a-buyer-return-a-horse-after-purchase/"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 36.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/faq/do-i-need-a-contract-to-sell-a-horse/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/faq/what-happens-if-a-horse-becomes-lame-after-sale/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 44
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/faq/what-should-be-included-in-a-horse-bill-of-sale/"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 51.26086956521739
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/faq/what-should-be-included-in-a-horse-sale-contract/"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 73.2
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/faq/when-does-ownership-legally-transfer-in-a-horse-sale/"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 48.125
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/hubs/"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 75.66666666666667
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/hubs/equine-business-formation/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/hubs/intellectual-property-and-brand/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/insights/"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 80.11764705882354
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/leases/can-you-end-a-horse-lease-early/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-is-injured/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/leases/what-liability-applies-in-a-horse-property-lease/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/leases/what-should-be-included-in-a-horse-lease-agreement/"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 56.666666666666664
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/leases/who-pays-vet-bills-in-a-horse-lease/"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 8.636363636363637
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 59
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/liability/what-is-the-equine-activity-liability-act/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/privacy-policy/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 37.2
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/can-i-run-a-horse-business-under-my-lease/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 86
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/do-i-need-a-contract-to-sell-a-horse/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 89
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/do-i-need-a-lawyer-to-respond-to-a-demand-letter/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/how-do-i-start-an-equine-assisted-therapy-program-legally/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 76.33333333333333
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/how-should-someone-compare-contract-vs-handshake-deal-in-a-horse-sale-in-an-equine-legal-situation/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/how-should-someone-compare-equine-therapy-consent-form-vs-liability-waiver-in-an-equine-legal-situation/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/how-should-someone-compare-llc-vs-insurance-for-liability-protection-in-an-equine-legal-situation/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/how-should-someone-compare-llc-vs-sole-proprietor-horse-business-in-an-equine-legal-situation/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 87
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/how-should-someone-compare-operating-agreement-vs-partnership-agreement-for-horse-businesses-in-an-equine-legal-situation/"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 80.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/how-should-someone-compare-purchase-deposit-agreement-vs-refundable-trial-payment-in-an-equine-legal-situation/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/how-should-someone-compare-risk-of-loss-clause-vs-possession-transfer-in-an-equine-legal-situation/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/how-to-start-an-equine-assisted-therapy-business/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 86.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/should-i-trademark-my-barn-name/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-does-equine-liability-law-actually-protect-me-from/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 88
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-equine-legal-issues-should-someone-consider-in-what-does-north-carolina-equine-liability-law-cover/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 82
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-happens-if-a-horse-dies-while-boarded/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-is-a-horse-trial-agreement/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-is-the-equine-activity-liability-act/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 66.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-be-included-in-a-horse-lease-agreement/"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-a-contract-names-the-wrong-party-why-does-that-matter/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 73.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-a-horse-sale-involved-a-minor-what-extra-issues-can-arise/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-a-trainer-wants-commission-after-a-sale-what-should-be-checked/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-am-i-subject-to-hipaa-in-equine-therapy/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-did-i-mess-up-by-trusting-a-handshake-deal/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-should-someone-know-about-there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-type-of-insurance-do-trainers-need/"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 73
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/what-waivers-are-required-for-equine-therapy-programs/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/who-pays-vet-bills-in-a-horse-lease/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 58
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/reference/who-pays-vet-bills-while-a-horse-is-boarded/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 67
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 80.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 22.5
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 87
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/a-buyer-wants-to-return-the-horse-what-matters/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/a-horse-lease-ended-early-what-issues-usually-come-up/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/a-horse-sale-involved-a-minor-what-extra-issues-can-arise/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/i-sold-a-horse-without-a-contract-what-now/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/insurance-denied-a-horse-related-claim-what-should-be-gathered/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      }
+    ],
     "gsc_sitemaps": [],
-    "gsc_inspections": [],
+    "gsc_inspections": [
+      {
+        "url": "https://horselegalguide.com/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=UGv-teTufA2tGsdnXm-dYg&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-21T03:42:23Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/",
+            "userCanonical": "https://horselegalguide.com/",
+            "referringUrls": [
+              "https://horselegalguide.com/compare/bill-of-sale-vs-transfer-of-ownership-clause/",
+              "http://horselegalguide.com/",
+              "https://www.professionalresourcelibrary.com/equine-legal-resource-library.html",
+              "https://www.professionalresourcelibrary.com/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "url": "https://horselegalguide.com/compare/sponsorship-agreement-vs-brand-ambassador-agreement/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=0cEyS-voCu26_G0biQaGPQ&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-07T13:37:05Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/compare/sponsorship-agreement-vs-brand-ambassador-agreement/",
+            "userCanonical": "https://horselegalguide.com/compare/sponsorship-agreement-vs-brand-ambassador-agreement/",
+            "referringUrls": [
+              "https://horselegalguide.com/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+              "https://horselegalguide.com/compare/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "url": "https://horselegalguide.com/authority/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=vvGIxsQdg5Jm2cvZ_dovAQ&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-26T07:53:25Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/authority/",
+            "userCanonical": "https://horselegalguide.com/authority/",
+            "referringUrls": [
+              "https://horselegalguide.com/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "url": "https://horselegalguide.com/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=YeIVvLG6Ad3BsyGqIr2smg&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-22T17:38:36Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+            "userCanonical": "https://horselegalguide.com/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+            "referringUrls": [
+              "https://horselegalguide.com/reference/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+              "https://horselegalguide.com/faq/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "url": "https://horselegalguide.com/boarding/what-happens-if-a-boarder-does-not-pay/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=zVFxiTyxQkBLVfs73dGh9A&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-07T14:32:43Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-boarder-does-not-pay/",
+            "userCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-boarder-does-not-pay/",
+            "referringUrls": [
+              "https://horselegalguide.com/hubs/boarding-training-and-barn-operations/",
+              "https://horselegalguide.com/faq/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "url": "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=DpobMe-at0ZfQu5UKliVHg&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-07T13:17:05Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/",
+            "userCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/",
+            "referringUrls": [
+              "https://horselegalguide.com/faq/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "url": "https://horselegalguide.com/boarding/what-should-be-included-in-a-training-agreement/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=a5Bt6F9r6rGrOJn0n-MdNA&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-07T14:41:47Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/boarding/what-should-be-included-in-a-training-agreement/",
+            "userCanonical": "https://horselegalguide.com/boarding/what-should-be-included-in-a-training-agreement/",
+            "referringUrls": [
+              "https://horselegalguide.com/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
+              "https://horselegalguide.com/faq/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "url": "https://horselegalguide.com/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=AFQ4ryaU4pCUpFGKh3JMZw&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-07T13:19:30Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+            "userCanonical": "https://horselegalguide.com/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+            "referringUrls": [
+              "https://horselegalguide.com/faq/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "url": "https://horselegalguide.com/business/can-i-run-a-horse-business-under-another-company/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=PcgTxRUBgSYVxEzWAEQsTw&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-07T14:49:53Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/business/can-i-run-a-horse-business-under-another-company/",
+            "userCanonical": "https://horselegalguide.com/business/can-i-run-a-horse-business-under-another-company/",
+            "referringUrls": [
+              "https://horselegalguide.com/coverage/",
+              "https://horselegalguide.com/faq/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "url": "https://horselegalguide.com/business/do-i-need-an-llc-to-start-a-horse-business/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=x4S9X1In2CbhyEYFkHJv3Q&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "PASS",
+            "coverageState": "Submitted and indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-07T13:16:14Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/business/do-i-need-an-llc-to-start-a-horse-business/",
+            "userCanonical": "https://horselegalguide.com/business/do-i-need-an-llc-to-start-a-horse-business/",
+            "referringUrls": [
+              "https://horselegalguide.com/faq/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          },
+          "richResultsResult": {
+            "verdict": "PASS",
+            "detectedItems": [
+              {
+                "richResultType": "Breadcrumbs",
+                "items": [
+                  {
+                    "name": "Unnamed item"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
     "bing_top_queries": [],
     "bing_metrics": {
       "rank_and_traffic": [],
@@ -802,19 +2632,2026 @@
   },
   "query_intelligence": {
     "provider_status": {
-      "gsc": "not_connected",
+      "gsc": "ok",
       "bing": "not_connected",
       "grounded_search": "NOT_CONFIGURED"
     },
     "summary": {
-      "opportunities": 0,
-      "new_candidates": 0,
+      "opportunities": 60,
+      "new_candidates": 47,
       "improve_existing": 0,
-      "differentiate_existing": 0,
-      "cannibalization_review": 0,
+      "differentiate_existing": 4,
+      "cannibalization_review": 9,
       "active_query_failures": 0
     },
-    "opportunities": []
+    "opportunities": [
+      {
+        "opportunity_id": "provider-opportunity-0021",
+        "query": "horse bill of sale",
+        "type": "cannibalization_review",
+        "target_page": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "provider_pages": [
+          "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+          "/compare/horse-purchase-agreement-vs-bill-of-sale/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 32,
+          "average_position": 58.4
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.4,
+        "confidence": 0.582,
+        "reasons": [
+          "provider_query_maps_to_multiple_pages",
+          "impressions_without_clicks",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0006",
+        "query": "do i need liability insurance for my horse in nc?",
+        "type": "cannibalization_review",
+        "target_page": "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
+        "provider_pages": [
+          "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
+          "/reference/what-equine-legal-issues-should-someone-consider-in-what-does-north-carolina-equine-liability-law-cover/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 15,
+          "average_position": 53.81
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.7,
+        "confidence": 0.64,
+        "reasons": [
+          "provider_query_maps_to_multiple_pages",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0007",
+        "query": "equine bill of sale",
+        "type": "new_candidate",
+        "target_page": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "provider_pages": [
+          "/faq/what-should-be-included-in-a-horse-bill-of-sale/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 12,
+          "average_position": 53.17
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.3,
+        "confidence": 0.537,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0045",
+        "query": "partnership agreement vs operating agreement",
+        "type": "cannibalization_review",
+        "target_page": "/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/",
+        "provider_pages": [
+          "/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/",
+          "/reference/how-should-someone-compare-operating-agreement-vs-partnership-agreement-for-horse-businesses-in-an-equine-legal-situation/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 10,
+          "average_position": 75.74
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.25,
+        "confidence": 0.522,
+        "reasons": [
+          "provider_query_maps_to_multiple_pages",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0009",
+        "query": "equine law",
+        "type": "new_candidate",
+        "target_page": "/insights/",
+        "provider_pages": [
+          "/insights/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 10,
+          "average_position": 92
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.222,
+        "confidence": 0.516,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0015",
+        "query": "equine legal advice",
+        "type": "cannibalization_review",
+        "target_page": "/insights/",
+        "provider_pages": [
+          "/insights/",
+          "/hubs/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 8,
+          "average_position": 76.39
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.154,
+        "confidence": 0.496,
+        "reasons": [
+          "provider_query_maps_to_multiple_pages",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0034",
+        "query": "horse trial agreement",
+        "type": "cannibalization_review",
+        "target_page": "/compare/trial-agreement-vs-lease-agreement/",
+        "provider_pages": [
+          "/compare/trial-agreement-vs-lease-agreement/",
+          "/faq/what-should-be-included-in-a-horse-sale-contract/",
+          "/scenario/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 6,
+          "average_position": 65
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.5,
+        "confidence": 0.581,
+        "reasons": [
+          "provider_query_maps_to_multiple_pages",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0028",
+        "query": "horse purchase agreement",
+        "type": "new_candidate",
+        "target_page": "/compare/horse-purchase-agreement-vs-bill-of-sale/",
+        "provider_pages": [
+          "/compare/horse-purchase-agreement-vs-bill-of-sale/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 6,
+          "average_position": 69
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.333,
+        "confidence": 0.539,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0032",
+        "query": "horse sales agreement",
+        "type": "new_candidate",
+        "target_page": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "provider_pages": [
+          "/faq/what-should-be-included-in-a-horse-sale-contract/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 6,
+          "average_position": 70.67
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.333,
+        "confidence": 0.539,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0029",
+        "query": "horse purchase contract",
+        "type": "new_candidate",
+        "target_page": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "provider_pages": [
+          "/faq/what-should-be-included-in-a-horse-sale-contract/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 6,
+          "average_position": 61
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.286,
+        "confidence": 0.527,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0042",
+        "query": "is equine therapy covered by insurance",
+        "type": "new_candidate",
+        "target_page": "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
+        "provider_pages": [
+          "/therapeutic/do-i-need-insurance-for-therapeutic-riding/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 6,
+          "average_position": 78
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.286,
+        "confidence": 0.527,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0011",
+        "query": "equine law suit protection",
+        "type": "cannibalization_review",
+        "target_page": "/insights/",
+        "provider_pages": [
+          "/insights/",
+          "/reference/what-does-equine-liability-law-actually-protect-me-from/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 6,
+          "average_position": 94.11
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.222,
+        "confidence": 0.512,
+        "reasons": [
+          "provider_query_maps_to_multiple_pages",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0056",
+        "query": "waiver vs release",
+        "type": "new_candidate",
+        "target_page": "/compare/release-form-vs-liability-waiver/",
+        "provider_pages": [
+          "/compare/release-form-vs-liability-waiver/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 6,
+          "average_position": 71
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.214,
+        "confidence": 0.51,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0014",
+        "query": "equine legal",
+        "type": "new_candidate",
+        "target_page": "/hubs/",
+        "provider_pages": [
+          "/hubs/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 6,
+          "average_position": 92
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.154,
+        "confidence": 0.494,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0013",
+        "query": "equine lease agreement law firm wellington",
+        "type": "cannibalization_review",
+        "target_page": "/compare/",
+        "provider_pages": [
+          "/compare/",
+          "/reference/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 5,
+          "average_position": 73.83
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.231,
+        "confidence": 0.513,
+        "reasons": [
+          "provider_query_maps_to_multiple_pages",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0040",
+        "query": "how to start an equestrian business",
+        "type": "differentiate_existing",
+        "target_page": "/business/how-to-start-an-equine-apparel-business/",
+        "provider_pages": [
+          "/business/how-do-i-legally-start-a-horse-business/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 77.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.714,
+        "confidence": 0.633,
+        "reasons": [
+          "query_matches_existing_coverage",
+          "target_is_in_live_similarity_cluster",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0058",
+        "query": "what is a liability release form",
+        "type": "new_candidate",
+        "target_page": "/compare/release-form-vs-liability-waiver/",
+        "provider_pages": [
+          "/compare/release-form-vs-liability-waiver/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 72.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.5,
+        "confidence": 0.579,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0049",
+        "query": "start an equestrian business",
+        "type": "new_candidate",
+        "target_page": "/business/how-do-i-legally-start-a-horse-business/",
+        "provider_pages": [
+          "/business/how-do-i-legally-start-a-horse-business/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 72.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.429,
+        "confidence": 0.561,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0057",
+        "query": "what are the legal aspects of horse sale contracts",
+        "type": "new_candidate",
+        "target_page": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "provider_pages": [
+          "/faq/what-should-be-included-in-a-horse-sale-contract/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 87.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.4,
+        "confidence": 0.554,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0024",
+        "query": "horse lease agreement",
+        "type": "new_candidate",
+        "target_page": "/reference/what-should-be-included-in-a-horse-lease-agreement/",
+        "provider_pages": [
+          "/reference/what-should-be-included-in-a-horse-lease-agreement/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 80.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.333,
+        "confidence": 0.537,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0060",
+        "query": "what s the difference between a syndicate and full horse ownership?",
+        "type": "new_candidate",
+        "target_page": "/compare/horse-co-ownership-agreement-vs-syndicate-structure/",
+        "provider_pages": [
+          "/compare/horse-co-ownership-agreement-vs-syndicate-structure/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 76.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.308,
+        "confidence": 0.531,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0031",
+        "query": "horse sale disputes",
+        "type": "cannibalization_review",
+        "target_page": "/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
+        "provider_pages": [
+          "/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
+          "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 90
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.25,
+        "confidence": 0.516,
+        "reasons": [
+          "provider_query_maps_to_multiple_pages",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0033",
+        "query": "horse sales contract",
+        "type": "new_candidate",
+        "target_page": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "provider_pages": [
+          "/faq/what-should-be-included-in-a-horse-sale-contract/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 67
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.25,
+        "confidence": 0.516,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0035",
+        "query": "horse vet dispute resolution",
+        "type": "new_candidate",
+        "target_page": "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
+        "provider_pages": [
+          "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 88.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.25,
+        "confidence": 0.516,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0036",
+        "query": "horse vet disputes",
+        "type": "new_candidate",
+        "target_page": "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
+        "provider_pages": [
+          "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 71
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.25,
+        "confidence": 0.516,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0010",
+        "query": "equine law advice",
+        "type": "cannibalization_review",
+        "target_page": "/authority/",
+        "provider_pages": [
+          "/authority/",
+          "/insights/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 78.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.222,
+        "confidence": 0.51,
+        "reasons": [
+          "provider_query_maps_to_multiple_pages",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0054",
+        "query": "waiver and release of liability",
+        "type": "new_candidate",
+        "target_page": "/compare/release-form-vs-liability-waiver/",
+        "provider_pages": [
+          "/compare/release-form-vs-liability-waiver/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 86
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.214,
+        "confidence": 0.508,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0017",
+        "query": "equine sales agreement",
+        "type": "new_candidate",
+        "target_page": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "provider_pages": [
+          "/faq/what-should-be-included-in-a-horse-sale-contract/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 70
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.167,
+        "confidence": 0.496,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0026",
+        "query": "horse leaze",
+        "type": "new_candidate",
+        "target_page": "/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/",
+        "provider_pages": [
+          "/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 82.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.167,
+        "confidence": 0.496,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0052",
+        "query": "usef trainer insurance",
+        "type": "new_candidate",
+        "target_page": "/reference/what-type-of-insurance-do-trainers-need/",
+        "provider_pages": [
+          "/reference/what-type-of-insurance-do-trainers-need/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 4,
+          "average_position": 60.5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.167,
+        "confidence": 0.496,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0038",
+        "query": "how to start a horse business",
+        "type": "differentiate_existing",
+        "target_page": "/business/how-to-start-a-horse-retail-business/",
+        "provider_pages": [
+          "/business/how-do-i-legally-start-a-horse-business/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 71
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.857,
+        "confidence": 0.666,
+        "reasons": [
+          "query_matches_existing_coverage",
+          "target_is_in_live_similarity_cluster",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0037",
+        "query": "how to become a horse business entrepreneur",
+        "type": "differentiate_existing",
+        "target_page": "/business/how-to-start-a-horse-retail-business/",
+        "provider_pages": [
+          "/business/how-do-i-legally-start-a-horse-business/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 63
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.714,
+        "confidence": 0.631,
+        "reasons": [
+          "query_matches_existing_coverage",
+          "target_is_in_live_similarity_cluster",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0039",
+        "query": "how to start a therapeutic riding program",
+        "type": "differentiate_existing",
+        "target_page": "/business/how-to-start-a-boarding-barn-legally/",
+        "provider_pages": [
+          "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 53
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.571,
+        "confidence": 0.595,
+        "reasons": [
+          "query_matches_existing_coverage",
+          "target_is_in_live_similarity_cluster",
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0001",
+        "query": "bill of sale horse",
+        "type": "new_candidate",
+        "target_page": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "provider_pages": [
+          "/faq/what-should-be-included-in-a-horse-bill-of-sale/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 59
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.4,
+        "confidence": 0.552,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0043",
+        "query": "leasing a horse contract",
+        "type": "new_candidate",
+        "target_page": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+        "provider_pages": [
+          "/leases/what-should-be-included-in-a-horse-lease-agreement/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 74
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.375,
+        "confidence": 0.546,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0002",
+        "query": "can i pay using my stables",
+        "type": "new_candidate",
+        "target_page": "/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/",
+        "provider_pages": [
+          "/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 63
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.333,
+        "confidence": 0.535,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0019",
+        "query": "fictitious business name vs trademark ownership",
+        "type": "new_candidate",
+        "target_page": "/compare/business-name-registration-vs-trademark-filing/",
+        "provider_pages": [
+          "/compare/business-name-registration-vs-trademark-filing/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 75
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.333,
+        "confidence": 0.535,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0050",
+        "query": "transfer of horse ownership agreement",
+        "type": "new_candidate",
+        "target_page": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+        "provider_pages": [
+          "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 66
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.333,
+        "confidence": 0.535,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0008",
+        "query": "equine business",
+        "type": "new_candidate",
+        "target_page": "/hubs/equine-business-formation/",
+        "provider_pages": [
+          "/hubs/equine-business-formation/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 56
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.286,
+        "confidence": 0.523,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0025",
+        "query": "horse lease agreements",
+        "type": "new_candidate",
+        "target_page": "/reference/what-should-be-included-in-a-horse-lease-agreement/",
+        "provider_pages": [
+          "/reference/what-should-be-included-in-a-horse-lease-agreement/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 75
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.286,
+        "confidence": 0.523,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0030",
+        "query": "horse purchase dispute",
+        "type": "new_candidate",
+        "target_page": "/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
+        "provider_pages": [
+          "/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 79
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.286,
+        "confidence": 0.523,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0059",
+        "query": "what is the difference between a policy and a certificate of insurance",
+        "type": "new_candidate",
+        "target_page": "/compare/insurance-certificate-vs-actual-policy-coverage/",
+        "provider_pages": [
+          "/compare/insurance-certificate-vs-actual-policy-coverage/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 99
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.286,
+        "confidence": 0.523,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0041",
+        "query": "insurance policy vs certificate",
+        "type": "new_candidate",
+        "target_page": "/compare/insurance-certificate-vs-actual-policy-coverage/",
+        "provider_pages": [
+          "/compare/insurance-certificate-vs-actual-policy-coverage/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 88
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.267,
+        "confidence": 0.519,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0022",
+        "query": "horse bills",
+        "type": "new_candidate",
+        "target_page": "/reference/who-pays-vet-bills-while-a-horse-is-boarded/",
+        "provider_pages": [
+          "/reference/who-pays-vet-bills-while-a-horse-is-boarded/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 67
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.25,
+        "confidence": 0.514,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0044",
+        "query": "operating agreement vs partnership agreement",
+        "type": "new_candidate",
+        "target_page": "/reference/how-should-someone-compare-operating-agreement-vs-partnership-agreement-for-horse-businesses-in-an-equine-legal-situation/",
+        "provider_pages": [
+          "/reference/how-should-someone-compare-operating-agreement-vs-partnership-agreement-for-horse-businesses-in-an-equine-legal-situation/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 69
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.25,
+        "confidence": 0.514,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0048",
+        "query": "standard training agreement",
+        "type": "new_candidate",
+        "target_page": "/boarding/what-should-be-included-in-a-training-agreement/",
+        "provider_pages": [
+          "/boarding/what-should-be-included-in-a-training-agreement/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 72
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.25,
+        "confidence": 0.514,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0012",
+        "query": "equine lease agreement",
+        "type": "new_candidate",
+        "target_page": "/reference/what-should-be-included-in-a-horse-lease-agreement/",
+        "provider_pages": [
+          "/reference/what-should-be-included-in-a-horse-lease-agreement/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 74
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.231,
+        "confidence": 0.51,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0027",
+        "query": "horse ownership dispute",
+        "type": "new_candidate",
+        "target_page": "/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
+        "provider_pages": [
+          "/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 70
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.222,
+        "confidence": 0.508,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0046",
+        "query": "release vs waiver",
+        "type": "new_candidate",
+        "target_page": "/compare/release-form-vs-liability-waiver/",
+        "provider_pages": [
+          "/compare/release-form-vs-liability-waiver/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 67
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.214,
+        "confidence": 0.506,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0003",
+        "query": "choice of venue",
+        "type": "new_candidate",
+        "target_page": "/compare/choice-of-law-clause-vs-venue-clause/",
+        "provider_pages": [
+          "/compare/choice-of-law-clause-vs-venue-clause/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 52
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.2,
+        "confidence": 0.502,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0004",
+        "query": "difference between insurance policy and insurance certificate",
+        "type": "new_candidate",
+        "target_page": "/compare/insurance-certificate-vs-actual-policy-coverage/",
+        "provider_pages": [
+          "/compare/insurance-certificate-vs-actual-policy-coverage/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 79
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.2,
+        "confidence": 0.502,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0005",
+        "query": "difference between partnership agreement and operating agreement",
+        "type": "new_candidate",
+        "target_page": "/reference/how-should-someone-compare-operating-agreement-vs-partnership-agreement-for-horse-businesses-in-an-equine-legal-situation/",
+        "provider_pages": [
+          "/reference/how-should-someone-compare-operating-agreement-vs-partnership-agreement-for-horse-businesses-in-an-equine-legal-situation/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 80
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.188,
+        "confidence": 0.499,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0016",
+        "query": "equine purchase agreement",
+        "type": "new_candidate",
+        "target_page": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "provider_pages": [
+          "/faq/what-should-be-included-in-a-horse-sale-contract/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 73
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.188,
+        "confidence": 0.499,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0023",
+        "query": "horse law",
+        "type": "new_candidate",
+        "target_page": "/whitepapers/",
+        "provider_pages": [
+          "/whitepapers/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 5
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.167,
+        "confidence": 0.494,
+        "reasons": [],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0051",
+        "query": "usef liability insurance",
+        "type": "new_candidate",
+        "target_page": "/compare/liability-waiver-vs-insurance-for-horse-activities/",
+        "provider_pages": [
+          "/compare/liability-waiver-vs-insurance-for-horse-activities/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 42
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.167,
+        "confidence": 0.494,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0018",
+        "query": "equine veterinary treatment disputes",
+        "type": "new_candidate",
+        "target_page": "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
+        "provider_pages": [
+          "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 78
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.143,
+        "confidence": 0.488,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0020",
+        "query": "guides and instructors insurance",
+        "type": "new_candidate",
+        "target_page": "/reference/what-type-of-insurance-do-trainers-need/",
+        "provider_pages": [
+          "/reference/what-type-of-insurance-do-trainers-need/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 98
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.143,
+        "confidence": 0.488,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0047",
+        "query": "release waiver",
+        "type": "new_candidate",
+        "target_page": "/compare/release-form-vs-liability-waiver/",
+        "provider_pages": [
+          "/compare/release-form-vs-liability-waiver/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 100
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.143,
+        "confidence": 0.488,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0055",
+        "query": "waiver release",
+        "type": "new_candidate",
+        "target_page": "/compare/release-form-vs-liability-waiver/",
+        "provider_pages": [
+          "/compare/release-form-vs-liability-waiver/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 99
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.143,
+        "confidence": 0.488,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0053",
+        "query": "usef waiver",
+        "type": "new_candidate",
+        "target_page": "/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/",
+        "provider_pages": [
+          "/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 50
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.111,
+        "confidence": 0.48,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      }
+    ]
   },
   "query_repairs": {
     "summary": {
@@ -3238,7 +7075,7 @@
   },
   "provider_health": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-08-25T14:31:05.636Z",
+    "generated_at": "2026-08-26T14:31:55.028Z",
     "providers": {
       "gemini_grounded_search": {
         "state": "NOT_CONFIGURED",
@@ -3250,7 +7087,7 @@
         }
       },
       "gsc": {
-        "state": "NOT_CONFIGURED",
+        "state": "CONNECTED",
         "capabilities": {
           "search_analytics": true,
           "sitemaps": true,
@@ -3277,7 +7114,7 @@
   },
   "external_action_truth": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-08-25T14:31:05.780Z",
+    "generated_at": "2026-08-26T14:31:55.178Z",
     "actions": [
       {
         "id": "gemini_grounded_query",
@@ -3579,6 +7416,106 @@
         "draft-whitepaper-2026-12-01-liability-waivers-insurance"
       ],
       "recommended_action": "Review only if the page also lacks an answer, atom, routing block, or useful links. Never block approval on word count alone."
+    },
+    {
+      "source": "provider_query",
+      "severity": "high",
+      "code": "cannibalization_review",
+      "message": "horse bill of sale",
+      "routes": [
+        "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "/compare/horse-purchase-agreement-vs-bill-of-sale/"
+      ],
+      "recommended_action": "The system prepares a finished repair from approved page content; the owner must approve before any live legal-page change."
+    },
+    {
+      "source": "provider_query",
+      "severity": "high",
+      "code": "cannibalization_review",
+      "message": "do i need liability insurance for my horse in nc?",
+      "routes": [
+        "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
+        "/reference/what-equine-legal-issues-should-someone-consider-in-what-does-north-carolina-equine-liability-law-cover/"
+      ],
+      "recommended_action": "The system prepares a finished repair from approved page content; the owner must approve before any live legal-page change."
+    },
+    {
+      "source": "provider_query",
+      "severity": "high",
+      "code": "cannibalization_review",
+      "message": "partnership agreement vs operating agreement",
+      "routes": [
+        "/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/",
+        "/reference/how-should-someone-compare-operating-agreement-vs-partnership-agreement-for-horse-businesses-in-an-equine-legal-situation/"
+      ],
+      "recommended_action": "The system prepares a finished repair from approved page content; the owner must approve before any live legal-page change."
+    },
+    {
+      "source": "provider_query",
+      "severity": "high",
+      "code": "cannibalization_review",
+      "message": "equine legal advice",
+      "routes": [
+        "/insights/",
+        "/hubs/"
+      ],
+      "recommended_action": "The system prepares a finished repair from approved page content; the owner must approve before any live legal-page change."
+    },
+    {
+      "source": "provider_query",
+      "severity": "high",
+      "code": "cannibalization_review",
+      "message": "horse trial agreement",
+      "routes": [
+        "/compare/trial-agreement-vs-lease-agreement/",
+        "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "/scenario/"
+      ],
+      "recommended_action": "The system prepares a finished repair from approved page content; the owner must approve before any live legal-page change."
+    },
+    {
+      "source": "provider_query",
+      "severity": "high",
+      "code": "cannibalization_review",
+      "message": "equine law suit protection",
+      "routes": [
+        "/insights/",
+        "/reference/what-does-equine-liability-law-actually-protect-me-from/"
+      ],
+      "recommended_action": "The system prepares a finished repair from approved page content; the owner must approve before any live legal-page change."
+    },
+    {
+      "source": "provider_query",
+      "severity": "high",
+      "code": "cannibalization_review",
+      "message": "equine lease agreement law firm wellington",
+      "routes": [
+        "/compare/",
+        "/reference/"
+      ],
+      "recommended_action": "The system prepares a finished repair from approved page content; the owner must approve before any live legal-page change."
+    },
+    {
+      "source": "provider_query",
+      "severity": "high",
+      "code": "cannibalization_review",
+      "message": "horse sale disputes",
+      "routes": [
+        "/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
+        "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/"
+      ],
+      "recommended_action": "The system prepares a finished repair from approved page content; the owner must approve before any live legal-page change."
+    },
+    {
+      "source": "provider_query",
+      "severity": "high",
+      "code": "cannibalization_review",
+      "message": "equine law advice",
+      "routes": [
+        "/authority/",
+        "/insights/"
+      ],
+      "recommended_action": "The system prepares a finished repair from approved page content; the owner must approve before any live legal-page change."
     }
   ],
   "truth_boundary": "Live provider data is authoritative only after a provider returns a successful external receipt. Grounded-search observations are not literal rank. Local quality measurements are regenerated during every build. No live legal-page repair occurs without owner approval."
