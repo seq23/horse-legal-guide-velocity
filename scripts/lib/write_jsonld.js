@@ -74,12 +74,30 @@ function writeJsonLd(type, title, description, url, options = {}) {
     },
     breadcrumbList(config, url, title)
   ];
-  if (String(type || '').toLowerCase() === 'faq' || String(type || '').toLowerCase() === 'faqpage') {
+  // FAQPage, built from the Q&A that is already visible on the page.
+  //
+  // This used to emit `mainEntity: []` on every page whose page_type was `faq`
+  // and on all 262 /reference/ surfaces: 346 files carrying an FAQPage entity
+  // with nothing in it, which is a worse signal than no FAQPage at all. The
+  // pairs now come from options.faq, which scripts/lib/render_page.js reads out
+  // of the rendered body after page patches have been applied - so the schema
+  // mirrors what a reader actually sees, on patched and unpatched pages alike.
+  //
+  // Nothing is invented to raise coverage: a page with no visible Q&A gets no
+  // FAQPage node, whatever its page_type says.
+  const faqPairs = (options.faq || []).filter((pair) => pair && pair.question && pair.answer);
+  if (faqPairs.length) {
     graph.push({
       '@type': 'FAQPage',
       '@id': `${pageUrl}#faq`,
       name: `${title} FAQ`,
-      mainEntity: []
+      url: pageUrl,
+      isPartOf: { '@id': websiteId },
+      mainEntity: faqPairs.map((pair) => ({
+        '@type': 'Question',
+        name: pair.question,
+        acceptedAnswer: { '@type': 'Answer', text: pair.answer }
+      }))
     });
   }
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });

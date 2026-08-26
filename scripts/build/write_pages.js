@@ -6,6 +6,7 @@ const { loadPageContent } = require('../lib/content_loader');
 const { renderModule, comparisonSides, quickAnswerForPage } = require('../lib/answer_shape');
 const { validatePostRenderPage } = require('./validate_page_contract_post_render');
 const { findManifest, loadPatchForManifest, loadPatchForSlug, applyZoneOperations } = require('../lib/page_patch_utils');
+const { breadcrumbNav, pickSiblings, rotate, siblingBlock, wayfindingNav } = require('../lib/site_navigation');
 
 function ensureDir(dirPath) { fs.mkdirSync(dirPath, { recursive: true }); }
 function esc(value) { return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -13,10 +14,17 @@ function titleCase(value) { return String(value || '').replace(/-/g, ' ').replac
 function readJson(rel, fallback) { try { return JSON.parse(fs.readFileSync(path.resolve(process.cwd(), rel), 'utf8')); } catch { return fallback; } }
 function unique(list) { return [...new Set((list || []).filter(Boolean))]; }
 
+// The cap was six, and the six were the same six for every page in the cluster:
+// a 65-page cluster pointed all of its internal links at six destinations and
+// left the other 58 on one inbound link from the hub. The window now rotates by
+// slug and runs to twelve, which is what carries a page to the 18 unique
+// internal links the most-cited property in the estate measures at.
+const RELATED_LINK_CAP = 12;
+
 function formatRelatedLinks(relatedPages = [], fallbackPages = []) {
   const combined = [...relatedPages];
-  for (const page of fallbackPages.slice(0, 5)) combined.push(`${page.title} (${page.slug})`);
-  const clean = unique(combined).slice(0, 6);
+  for (const page of fallbackPages) combined.push(`${page.title} (${page.slug})`);
+  const clean = unique(combined).slice(0, RELATED_LINK_CAP);
   if (!clean.length) return '';
   const items = clean.map((item) => {
     const alt = String(item).match(/^(.*)\s+\((\/.*\/?)\)$/);
@@ -136,8 +144,30 @@ function routingBlock(canonical) {
 </section>`;
 }
 
+/** Reference surfaces, filed by the cluster the candidate record already carries. */
+function loadReferenceByCluster() {
+  const candidates = readJson('data/reference/incoming_candidates.json', []) || [];
+  const bySlug = new Map();
+  for (const c of candidates) {
+    const slug = c.slug || String(c.query || c.raw_phrasing || c.candidate_id || '')
+      .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    if (!slug) continue;
+    const cluster = c.cluster || 'general';
+    if (!bySlug.has(cluster)) bySlug.set(cluster, []);
+    bySlug.get(cluster).push({ slug: `/reference/${slug}/`, title: c.query || c.raw_phrasing || slug });
+  }
+  return bySlug;
+}
+
+function otherHubs(cluster) {
+  return (readJson('data/queries/clusters.json', []) || [])
+    .filter((c) => c.cluster !== cluster)
+    .map((c) => ({ slug: c.slug, title: c.title || titleCase(c.cluster) }));
+}
+
 function writeApprovedPages(distDir, approvedPages) {
   const canonical = resolveCanonicalTarget();
+  const referenceByCluster = loadReferenceByCluster();
   const { rawById, normBySlug } = loadSignalIndexes();
   const byCluster = approvedPages.reduce((acc, p) => { (acc[p.cluster] ||= []).push(p); return acc; }, {});
   const results = [];
@@ -149,7 +179,14 @@ function writeApprovedPages(distDir, approvedPages) {
     const signals = unique([...(page.source_signal_ids || []), ...norms.flatMap((n) => n.source_signal_ids || [])]).map((id) => rawById.get(id)).filter(Boolean);
     const queries = querySet(page, norms);
     const clusterPhrase = clusterContext(page.cluster);
-    const related = (byCluster[page.cluster] || []).filter((p) => p.slug !== page.slug && p.review_status === 'approved').slice(0, 6);
+    const clusterPeers = (byCluster[page.cluster] || []).filter((p) => p.slug !== page.slug && p.review_status === 'approved');
+    // The five this page already linked stay first and stay linked: widening a
+    // published block must be a superset, never a reshuffle that silently drops
+    // a live internal link. The rotated remainder fills the rest, so a 65-page
+    // cluster stops pointing every one of its pages at the same six.
+    const related = [...clusterPeers.slice(0, 5), ...rotate(clusterPeers, page.slug)]
+      .filter((p, i, arr) => arr.findIndex((q) => q.slug === p.slug) === i)
+      .slice(0, RELATED_LINK_CAP);
     const answerShape = renderModule(page);
     const rawQuick = String(content.quick_answer || page.quick_answer || '').trim();
     const normalizedQuick = rawQuick.replace(/^short answer:\s*/i, '');
@@ -158,6 +195,7 @@ function writeApprovedPages(distDir, approvedPages) {
       ? quickAnswerForPage(page)
       : rawQuick;
     let body = `
+${breadcrumbNav(page.slug, page.title)}
 <header class="content-header">
   <span class="eyebrow">${esc(titleCase(page.page_type))} page</span>
   <h1>${esc(page.title)}</h1>
@@ -181,8 +219,33 @@ ${defaultBody(page, queries, clusterPhrase)}
 ${accordion(faqItems(page, queries, clusterPhrase), 'Signal-backed FAQ')}
 ${formatRelatedLinks(content.related_pages, related)}
 <nav><p><a href="/">Home</a> · <a href="/hubs/${esc(page.cluster)}/">Back to ${esc(titleCase(page.cluster))}</a> · <a href="/reference/">Reference index</a></p></nav>
+${wayfindingNav(page.cluster)}
 ${routingBlock(canonical)}`;
     body = applyPersistedPatchIfPresent(page, body);
+    // Patches replace whole zones, related_links_block among them, so the
+    // top-up is measured after they run. A cluster of four pages cannot fill a
+    // block from its own members; the reference surfaces mapped to the same
+    // cluster and then the other topic hubs are the next-nearest real pages,
+    // both already published and both filed under the taxonomy this repo keeps.
+    const topUp = pickSiblings(body, page.slug, [
+      ...rotate(clusterPeers, `${page.slug}-topup`).map((p) => ({ slug: p.slug, title: p.title, why: titleCase(p.page_type) })),
+      ...rotate(referenceByCluster.get(page.cluster) || [], page.slug)
+        .map((r) => ({ slug: r.slug, title: r.title, why: 'reference surface' })),
+      ...otherHubs(page.cluster).map((h) => ({ slug: h.slug, title: h.title, why: 'topic hub' })),
+    ]);
+    const topUpHtml = siblingBlock({
+      heading: 'More in this topic',
+      intro: 'Other published pages filed under the same cluster, and the neighbouring topic hubs.',
+      items: topUp,
+    });
+    if (topUpHtml) {
+      // Before the routing block, not after it: the routing block carries the
+      // not-legal-advice line and stays the last thing on the page.
+      const routingIdx = body.lastIndexOf('<section class="routing-block"');
+      body = routingIdx >= 0
+        ? `${body.slice(0, routingIdx)}${topUpHtml}\n${body.slice(routingIdx)}`
+        : `${body}\n${topUpHtml}`;
+    }
     const html = renderLayout({
       title: page.title,
       description: quick.slice(0, 155),

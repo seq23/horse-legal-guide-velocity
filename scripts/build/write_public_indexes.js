@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
+const { clusterIndex, siblingBlock } = require('../lib/site_navigation');
 const { toAbsoluteUrl } = require('../lib/write_canonical_tag');
 function dir(p) { fs.mkdirSync(p, { recursive: true }); }
 function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;'); }
@@ -15,8 +16,15 @@ function idx(dist, { slug, title, description, items }) {
   dir(d);
   const list = items.length ? items.map((i) => '<li><a href="' + i.slug + '">' + esc(i.title) + '</a>' + (i.cluster ? ' <span class="muted">— ' + esc(tit(i.cluster)) + '</span>' : '') + '</li>').join('\n') : '<li>No approved pages are currently available in this index.</li>';
   const body = '<header class="content-header"><span class="eyebrow">Public index</span><h1>' + esc(title) + '</h1><p class="muted">' + esc(description) + '</p></header>' +
-    '<nav><p><a href="/">Home</a> · <a href="/coverage/">Coverage map</a> · <a href="/reference/">Reference index</a> · <a href="/sitemap.xml">Sitemap</a></p></nav>' +
-    '<section><h2>Pages</h2><ul>' + list + '</ul></section>';
+    '<nav><p><a href="/">Home</a> · <a href="/hubs/">Topic hubs</a> · <a href="/faq/">Questions</a> · <a href="/scenario/">Scenarios</a> · <a href="/compare/">Comparisons</a> · <a href="/state/">State pages</a> · <a href="/coverage/">Coverage map</a> · <a href="/reference/">Reference index</a> · <a href="/sitemap.xml">Sitemap</a></p></nav>' +
+    '<section><h2>Pages</h2><ul>' + list + '</ul></section>' +
+    // An index page's job is navigation, and none of them could reach a topic
+    // hub before this. /state/ in particular lists six pages and nothing else.
+    siblingBlock({
+      heading: 'Topic hubs',
+      intro: 'The clusters this library covers, each collecting the educational pages filed under it.',
+      items: [...clusterIndex().values()].map((h) => ({ slug: h.slug, title: h.title })),
+    });
   fs.writeFileSync(path.join(d, 'index.html'), renderLayout({ title, description, url: slug, body }));
 }
 function coveragePage(dist, targets, clusters, cands) {

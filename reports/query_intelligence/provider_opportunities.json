@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-26T18:38:07.000Z",
+  "generated_at": "2026-08-26T20:49:31.000Z",
   "provider_status": {
     "gsc": "ok",
     "bing": "not_connected",
@@ -9,8 +9,8 @@
   "summary": {
     "opportunities": 60,
     "new_candidates": 47,
-    "improve_existing": 0,
-    "differentiate_existing": 4,
+    "improve_existing": 1,
+    "differentiate_existing": 3,
     "cannibalization_review": 9,
     "active_query_failures": 0
   },
@@ -1102,7 +1102,7 @@
     {
       "opportunity_id": "provider-opportunity-0039",
       "query": "how to start a therapeutic riding program",
-      "type": "differentiate_existing",
+      "type": "improve_existing",
       "target_page": "/business/how-to-start-a-boarding-barn-legally/",
       "provider_pages": [
         "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/"
@@ -1121,7 +1121,6 @@
       "confidence": 0.595,
       "reasons": [
         "query_matches_existing_coverage",
-        "target_is_in_live_similarity_cluster",
         "ranking_opportunity"
       ],
       "status": "pending_owner_review",

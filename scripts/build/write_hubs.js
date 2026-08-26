@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
+const { breadcrumbNav, pickSiblings, rotate, siblingBlock, wayfindingNav } = require('../lib/site_navigation');
 
 function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
@@ -10,13 +11,36 @@ function titleize(slug) {
   return slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 }
 
+function readJson(rel, fallback) {
+  try { return JSON.parse(fs.readFileSync(path.resolve(process.cwd(), rel), 'utf8')); } catch { return fallback; }
+}
+
+/** Reference surfaces filed under a cluster, from the candidate records. */
+function referenceSurfacesByCluster() {
+  const out = new Map();
+  for (const c of readJson('data/reference/incoming_candidates.json', []) || []) {
+    const slug = c.slug || String(c.query || c.raw_phrasing || c.candidate_id || '')
+      .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    if (!slug) continue;
+    const key = c.cluster || 'general';
+    if (!out.has(key)) out.set(key, []);
+    out.get(key).push({ slug: `/reference/${slug}/`, title: c.query || c.raw_phrasing || slug });
+  }
+  return out;
+}
+
 function writeHubPages(distDir, clusters, approvedPages) {
+  // A hub for a four-page cluster carried six internal links and no route back
+  // to the homepage, the hub index, or the reference layer. The wayfinding row
+  // and the top-up below fix that from pages that already exist.
+  const referenceByCluster = referenceSurfacesByCluster();
   for (const cluster of clusters) {
     const clusterPages = approvedPages.filter((page) => page.cluster === cluster.cluster);
     const targetDir = path.join(distDir, cluster.slug.replace(/^\//, ''));
     ensureDir(targetDir);
     const list = clusterPages.map((page) => `<li><a href="${page.slug}">${page.title}</a></li>`).join('\n');
-    const body = `
+    let body = `
+${breadcrumbNav(cluster.slug, cluster.title || titleize(cluster.cluster))}
 <header class="content-header">
   <h1>${cluster.title || titleize(cluster.cluster)}</h1>
   <p class="muted">This hub collects the core educational pages for ${cluster.title || titleize(cluster.cluster)} so readers can move from broad questions to more specific issues without leaving the topic cluster.</p>
@@ -41,6 +65,22 @@ function writeHubPages(distDir, clusters, approvedPages) {
   <p>Legal requirements can vary depending on jurisdiction, so evaluating your specific situation is important.</p>
   <p><a href="https://wisecovington.com">More information</a>.</p>
 </section>`;
+    const wayfinding = `\n${wayfindingNav(cluster.cluster)}`;
+    const topUp = pickSiblings(body + wayfinding, cluster.slug, [
+      ...rotate(referenceByCluster.get(cluster.cluster) || [], cluster.cluster)
+        .map((r) => ({ ...r, why: 'reference surface' })),
+      ...clusters.filter((c) => c.cluster !== cluster.cluster)
+        .map((c) => ({ slug: c.slug, title: c.title || titleize(c.cluster), why: 'topic hub' })),
+    ]);
+    const routingIdx = body.lastIndexOf('<section class="routing-block"');
+    const block = siblingBlock({
+      heading: 'Related surfaces and neighbouring hubs',
+      intro: 'The reference surfaces mapped to this cluster, and the other topic hubs on the site.',
+      items: topUp,
+    });
+    body = routingIdx >= 0
+      ? `${body.slice(0, routingIdx)}${wayfinding}\n${block}\n${body.slice(routingIdx)}`
+      : `${body}${wayfinding}\n${block}`;
     const html = renderLayout({
       title: cluster.title || titleize(cluster.cluster),
       description: `Hub page for ${cluster.title || titleize(cluster.cluster)} questions.`,

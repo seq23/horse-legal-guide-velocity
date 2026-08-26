@@ -2,7 +2,7 @@
   "validator": "validate_content_pattern_contract",
   "scope": "page",
   "mode": "enforce",
-  "issue_count": 29,
+  "issue_count": 28,
   "issues": [
     {
       "validator": "validate_content_pattern_contract",
@@ -243,17 +243,6 @@
       "code": "missing_direct_answer",
       "message": "No quick-answer block; nothing on this page is quotable without surrounding context.",
       "fixHint": "Render a data-answer-summary=\"true\" block before the main body.",
-      "autofix": false,
-      "blocking": false
-    },
-    {
-      "validator": "validate_content_pattern_contract",
-      "scope": "page",
-      "file": "199 page(s), coverage 64.3%",
-      "severity": "warning",
-      "code": "coverage_checklist",
-      "message": "No checklist or numbered protocol (agent request #1, 730 occurrences).",
-      "fixHint": "Add a scannable checklist with concrete, verifiable steps. Full list: reports/content-pattern-contract.json",
       "autofix": false,
       "blocking": false
     },

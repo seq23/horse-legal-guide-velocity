@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { writeJsonLd } = require('./write_jsonld');
 const { writeCanonicalTag } = require('./write_canonical_tag');
+const { clusterIndex, siblingBlock } = require('./site_navigation');
 
 function readText(relPath) {
   return fs.readFileSync(path.resolve(process.cwd(), relPath), 'utf8');
@@ -33,6 +34,56 @@ function renderBrandHeader(config) {
     <p class="brand-tagline">${tagline}</p>
   </div>
 </header>`;
+}
+
+
+/**
+ * The Q&A a reader can actually see on the page.
+ *
+ * Read off the rendered body, after page patches have been applied, so the
+ * FAQPage schema built from it cannot drift from the visible markup. Two
+ * patterns exist in this repo and only two:
+ *
+ *   1. the accordion on approved pages -
+ *      <details ...><summary>question</summary><p>answer</p></details>
+ *   2. the reference surfaces, where the question and its answer sit in two
+ *      visible sections - <h2>Question</h2><p>...</p> earlier in the page and
+ *      <h2>Clean extraction answer</h2><p>...</p> further down.
+ *
+ * Nothing is synthesised. A page with neither pattern returns [], and
+ * write_jsonld.js then emits no FAQPage node for it.
+ */
+function decodeEntities(value) {
+  return String(value || '')
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/&amp;/g, '&');
+}
+
+function plainText(html) {
+  return decodeEntities(String(html || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+}
+
+function extractVisibleFaq(body) {
+  const pairs = [];
+  const seen = new Set();
+  const push = (question, answer) => {
+    const q = plainText(question);
+    const a = plainText(answer);
+    if (!q || !a || seen.has(q)) return;
+    seen.add(q);
+    pairs.push({ question: q, answer: a });
+  };
+
+  const details = /<details\b[^>]*>\s*<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>\s*<\/details>/gi;
+  let m;
+  while ((m = details.exec(body))) push(m[1], m[2]);
+  if (pairs.length) return pairs;
+
+  const question = body.match(/<h2>Question<\/h2>\s*<p>([\s\S]*?)<\/p>/i);
+  const answer = body.match(/<h2>Clean extraction answer<\/h2>\s*<p>([\s\S]*?)<\/p>/i);
+  if (question && answer) push(question[1], answer[1]);
+  return pairs;
 }
 
 function renderLayout({ title, description, url, body, schemaType = 'Article', includeBrandChrome = true, schemaOptions = {} }) {
@@ -237,7 +288,7 @@ ${body}
 ${footer}
     </div>
   </main>
-  <script type="application/ld+json">${writeJsonLd(schemaType.toLowerCase() === 'faqpage' ? 'faq' : 'article', title, description, url, schemaOptions)}</script>
+  <script type="application/ld+json">${writeJsonLd(schemaType.toLowerCase() === 'faqpage' ? 'faq' : 'article', title, description, url, { ...schemaOptions, faq: schemaOptions.faq || extractVisibleFaq(body) })}</script>
 </body>
 </html>`;
 }
@@ -272,6 +323,11 @@ function renderIndex(config) {
     <li><a href="/sitemap.xml">Sitemap</a></li>
   </ul>
 </nav>
+${siblingBlock({
+    heading: 'Topic hubs',
+    intro: 'The clusters this library covers. Each hub collects the educational pages filed under it.',
+    items: [...clusterIndex().values()].map((h) => ({ slug: h.slug, title: h.title })),
+  })}
 <section>
   <h2>Current publishing state</h2>
   <p>Publishing mode is manual. Drafts may exist internally, but only approved content is allowed into live output.</p>
