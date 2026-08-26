@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-26T07:02:17.000Z",
+  "generated_at": "2026-08-26T13:25:00.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "not_connected",
       "checked_at": "2026-08-25T14:30:56.632Z",
-      "age_hours": 16.5,
+      "age_hours": 22.9,
       "message": "Add GSC service-account secrets or GSC_ACCESS_TOKEN to GitHub Actions."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-08-25T14:30:56.632Z",
-      "age_hours": 16.5,
+      "age_hours": 22.9,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-08-25T14:30:56.632Z",
-      "age_hours": 16.5,
+      "age_hours": 22.9,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
