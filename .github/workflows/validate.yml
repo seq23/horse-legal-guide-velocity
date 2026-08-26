@@ -34,3 +34,8 @@ jobs:
         run: npm run validate:authority-modernization
       - name: Validate
         run: npm run validate:all
+      - name: Cadence gate
+        # Blocks publishing faster than the library can be kept inside the
+        # 91-day window where pages stay citable. Warnings are reported
+        # without failing the run.
+        run: npm run cadence:gate
