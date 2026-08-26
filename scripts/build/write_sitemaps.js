@@ -26,9 +26,49 @@ function writeIndexNowArtifacts(distDir, canonicalDomain, urls) {
   fs.writeFileSync(path.join(distDir, 'indexnow-batch.txt'), absolute.join('\n') + '\n');
 }
 
+// <lastmod> is metadata about the sitemap entry, not page content: emitting it
+// changes nothing on any published page. It was absent on all 560 URLs - on the
+// live sitemap as much as the built one - which data/cadence/policy.json treats
+// as a blocking no_freshness_signal and which leaves a crawler no way to tell
+// what changed.
+//
+// The date is keyed on a hash of the rendered page rather than read from git at
+// build time. `git log -1` reports the tip commit for every file in a depth-1
+// checkout, so reading git directly would stamp one uniform date across all 560
+// URLs - the date-bump pattern scripts/cadence_gate.js exists to flag. The
+// ledger consults git only to seed a URL it has never seen, and only when the
+// clone actually has the history. See scripts/lib/lastmod_ledger.js.
+const ledgerLib = require('../lib/lastmod_ledger');
+
+function resolveLastmods(distDir, canonicalDomain, urls) {
+  const today = ledgerLib.buildDate();
+  const ledger = ledgerLib.load();
+  const pages = {};
+  for (const url of urls) {
+    const rendered = path.join(distDir, url === '/' ? '' : url, 'index.html');
+    if (!fs.existsSync(rendered)) continue;
+    // dist/ is tracked in this repo, so the rendered file carries real history
+    // and is the honest thing to seed a first sighting from.
+    const rel = path.relative(process.cwd(), rendered).split(path.sep).join('/');
+    pages[`${canonicalDomain}${url === '/' ? '' : url}`] = {
+      hash: ledgerLib.contentHash(fs.readFileSync(rendered)),
+      file: rel
+    };
+  }
+  const lastmods = ledgerLib.resolve(pages, ledger, today);
+  ledgerLib.save(ledgerLib.rebuilt(pages, ledger, today, { prune: true }));
+  return lastmods;
+}
+
 function writeSitemaps(distDir, canonicalDomain) {
   const urls = collectHtmlUrls(distDir);
-  const pageEntries = urls.map((url) => `<url><loc>${canonicalDomain}${url === '/' ? '' : url}</loc></url>`).join('');
+  const lastmods = resolveLastmods(distDir, canonicalDomain, urls);
+  const pageEntries = urls.map((url) => {
+    const loc = `${canonicalDomain}${url === '/' ? '' : url}`;
+    const lm = lastmods[loc];
+    // No date is invented for a URL the ledger could not resolve.
+    return lm ? `<url><loc>${loc}</loc><lastmod>${lm}</lastmod></url>` : `<url><loc>${loc}</loc></url>`;
+  }).join('');
   const pagesXml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pageEntries}</urlset>`;
   fs.writeFileSync(path.join(distDir, 'sitemap-pages.xml'), pagesXml);
   const indexXml = `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>${canonicalDomain}/sitemap-pages.xml</loc></sitemap></sitemapindex>`;

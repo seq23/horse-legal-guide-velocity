@@ -41,9 +41,24 @@ function manifestIndexPath() {
   return path.join(manifestRoot(), 'manifest-index.json');
 }
 
+// Written by `npm run build`. Degrading to an empty manifest list when it is
+// absent makes every findManifest() return null, so a patch step reports "no
+// such page" instead of "the build has not run" - and the difference is not
+// visible in the log. A missing manifest is a broken job, so fail on it.
 function loadManifestIndex(options = {}) {
   if (!options.force && manifestIndexCache) return manifestIndexCache;
-  manifestIndexCache = readJson(manifestIndexPath(), { generated_at: null, manifests: [] });
+  const file = manifestIndexPath();
+  if (!fs.existsSync(file)) {
+    throw new Error(`Missing ${path.relative(process.cwd(), file)}. Run \`npm run build\` before any page-patch step - it writes the page manifests used to resolve pages.`);
+  }
+  const index = readJson(file, null);
+  if (!index || !Array.isArray(index.manifests)) {
+    throw new Error(`${path.relative(process.cwd(), file)} is unreadable or has no manifests array.`);
+  }
+  if (!index.manifests.length) {
+    throw new Error(`${path.relative(process.cwd(), file)} lists zero manifests; the build produced no pages to patch.`);
+  }
+  manifestIndexCache = index;
   return manifestIndexCache;
 }
 

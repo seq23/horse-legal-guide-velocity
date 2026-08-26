@@ -66,6 +66,13 @@ jobs:
         run: |
           set -euo pipefail
           read -r -a IDS <<< "$IDS_INPUT"
+          # search:cycle ends in search:prepare-repairs, which reads the page
+          # manifests `npm run build` writes to .build/page-manifests/. Build
+          # first so the repair plan is derived from this run's own pages rather
+          # than from whatever manifest the previous run left committed. The
+          # build after the cycle then carries its query_repair_queue.json into
+          # dist/data/.
+          npm run build
           npm run search:cycle
           node scripts/query/build_provider_query_intelligence.js
           case "$OPERATION_INPUT" in

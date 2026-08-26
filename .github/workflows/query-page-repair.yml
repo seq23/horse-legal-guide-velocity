@@ -51,6 +51,11 @@ jobs:
         run: |
           set -euo pipefail
           read -r -a REPAIR_IDS <<< "$REPAIR_IDS_INPUT"
+          # `apply` spawns scripts/patch/apply_page_patch.js, which resolves the
+          # page it is patching through .build/page-manifests/manifest-index.json
+          # - written by `npm run build`. That build used to run only after the
+          # patch, so the patch was resolved against the previous run's manifest.
+          npm run build
           node scripts/search/manage_query_repairs.js "$OPERATION_INPUT" "${REPAIR_IDS[@]}"
           if [[ "$OPERATION_INPUT" == "apply" ]]; then
             npm run build

@@ -56,6 +56,13 @@ jobs:
         run: |
           set -euo pipefail
           read -r -a PROPOSAL_IDS <<< "$PROPOSAL_IDS_INPUT"
+          # `apply` spawns scripts/patch/apply_page_patch.js, which resolves the
+          # page it is patching through .build/page-manifests/manifest-index.json
+          # - written by `npm run build`. The build below used to be the only one
+          # in this job, so the patch was resolved against the previous run's
+          # manifest. Build first so the manifest describes the pages actually
+          # being patched.
+          npm run build
           case "$OPERATION_INPUT" in
             refresh_queue) node scripts/remediation/manage_remediations.js refresh_queue "" ;;
             dry_run) node scripts/remediation/manage_remediations.js dry_run "" "${PROPOSAL_IDS[@]}" ;;

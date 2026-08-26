@@ -1,8 +1,30 @@
 const fs=require('fs');const path=require('path');
 function read(r,f){try{return JSON.parse(fs.readFileSync(path.resolve(process.cwd(),r),'utf8'));}catch{return f;}}function write(r,v){const p=path.resolve(process.cwd(),r);fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');}function esc(v){return String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function manifest(route){const idx=read('.build/page-manifests/manifest-index.json',{manifests:[]});return (idx.manifests||[]).find(x=>x.slug===route)||null;}function zoneInner(html,name){const m=String(html||'').match(new RegExp(`<section[^>]*data-editable-zone=["']${name}["'][^>]*>([\\s\\S]*?)<\\/section>`,'i'));return m?.[1]?.trim()||'';}function visible(html){return String(html||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();}
+// The page manifests are written by `npm run build`. Falling back to an empty
+// list when they are missing turned "the build has not run" into "no page needs
+// repair" - a plan that looks like a clean result, gets committed to main, and
+// reports nothing wrong. A missing manifest is a broken job, so say so.
+function manifestIndex(){
+  const rel='.build/page-manifests/manifest-index.json';
+  const p=path.resolve(process.cwd(),rel);
+  if(!fs.existsSync(p))throw new Error(`Missing ${rel}. Run \`npm run build\` before search:prepare-repairs - it writes the page manifests this step reads. Refusing to emit an empty repair plan.`);
+  let idx;
+  try{idx=JSON.parse(fs.readFileSync(p,'utf8'));}
+  catch(err){throw new Error(`${rel} is not valid JSON: ${err.message}`);}
+  if(!Array.isArray(idx.manifests))throw new Error(`${rel} has no manifests array.`);
+  if(!idx.manifests.length)throw new Error(`${rel} lists zero manifests. The build produced no pages, so a repair plan cannot be derived.`);
+  return idx;
+}
+let manifestIndexCache=null;
+function manifest(route){if(!manifestIndexCache)manifestIndexCache=manifestIndex();return (manifestIndexCache.manifests||[]).find(x=>x.slug===route)||null;}function zoneInner(html,name){const m=String(html||'').match(new RegExp(`<section[^>]*data-editable-zone=["']${name}["'][^>]*>([\\s\\S]*?)<\\/section>`,'i'));return m?.[1]?.trim()||'';}function visible(html){return String(html||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();}
 function buildPatch(item,revision=1){const m=manifest(item.target_page);if(!m||!fs.existsSync(path.resolve(process.cwd(),m.filePath)))return {status:'unavailable',reason:'page_manifest_or_rendered_target_missing'};const html=fs.readFileSync(path.resolve(process.cwd(),m.filePath),'utf8');const quick=zoneInner(html,'quick_answer_block');if(!quick)return {status:'unavailable',reason:'quick_answer_block_missing'};const allowed=new Set((m.editable_zones||[]).map(z=>z.name));const preferred=revision===1?['faq_block','top_answer_module']:['top_answer_module','related_links_block'];const zone=preferred.find(z=>allowed.has(z));if(!zone)return {status:'unavailable',reason:'no_safe_editable_zone'};const query=esc(item.query);const excerpt=quick.length>3000?`<p>${esc(visible(quick).slice(0,900))}</p>`:quick;const label=revision===1?'Search question':'Search answer reinforcement';const addition=`<div class="query-alignment-repair" data-query-panel="${esc(item.panel_id)}" data-revision="${revision}"><p><strong>${label}:</strong> ${query}</p>${excerpt}</div>`;return {status:'prepared',plan:{mode:'page',slug:item.target_page,operations:[{zone,action:'append_html',html:addition}]},source_reuse:'Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.'};}
-function main(){const d=read('data/search/query_diagnostics.json',{items:[]}),previous=read('data/remediation/query_repair_queue.json',{repairs:[]});const byPanel=new Map();for(const r of previous.repairs||[]){if(!byPanel.has(r.panel_id))byPanel.set(r.panel_id,[]);byPanel.get(r.panel_id).push(r);}for(const rows of byPanel.values())rows.sort((a,b)=>(a.revision||1)-(b.revision||1));const repairs=[];const maxRevisions=2;
+function main(){
+  // Assert the manifests up front rather than on first lookup. When there are
+  // no diagnostics to walk, nothing ever calls manifest(), so a lazy check
+  // passes and the step writes an empty queue and exits 0 - the exact silent
+  // success this guard exists to prevent.
+  manifestIndex();
+  const d=read('data/search/query_diagnostics.json',{items:[]}),previous=read('data/remediation/query_repair_queue.json',{repairs:[]});const byPanel=new Map();for(const r of previous.repairs||[]){if(!byPanel.has(r.panel_id))byPanel.set(r.panel_id,[]);byPanel.get(r.panel_id).push(r);}for(const rows of byPanel.values())rows.sort((a,b)=>(a.revision||1)-(b.revision||1));const repairs=[];const maxRevisions=2;
  for(const item of d.items||[]){const history=byPanel.get(item.panel_id)||[];const latest=history.at(-1)||null;
    // Preserve historical repair records for durable receipts.
    for(const old of history)repairs.push({...old});

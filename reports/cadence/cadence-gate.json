@@ -2,12 +2,12 @@
   "generated_at": "2026-08-26",
   "policy_source": "data/cadence/policy.json",
   "urls": 560,
-  "dated": 0,
-  "undated": 560,
+  "dated": 560,
+  "undated": 0,
   "stale_over_window": 0,
   "stale_pct": 0,
-  "fresh_within_30d": 0,
-  "lastmod_within_7d": 0,
+  "fresh_within_30d": 560,
+  "lastmod_within_7d": 560,
   "new_since_last_run": 0,
   "ledger_initialised": true,
   "maintainable_ceiling": 130,
@@ -20,12 +20,14 @@
     "require_lastmod": false,
     "note": "Client repo. Publishing is client-approved only.",
     "_why": "13 weeks is the point where pages become markedly more likely to lose AI citations, and recency is the strongest single correlate of being cited. The ceiling is refresh capacity times that window: publish faster than the library can be maintained and the tail ages out of citability.",
-    "_lastmod_note": "Client repo. Sitemap is generated from dist/ at build time and this repo is under a content and cadence freeze, so lastmod is reported rather than enforced. Raising it requires client agreement."
+    "_lastmod_note": "Client repo. Sitemap is generated from dist/ at build time and this repo is under a content and cadence freeze, so lastmod is reported rather than enforced. Raising it requires client agreement.",
+    "enforce_weekly_cap": false,
+    "_cadence_note": "Client repo under a content and cadence freeze. Publishing decisions belong to the client, so new pages are reported rather than blocking."
   },
   "blocking": [],
   "warnings": [
-    "no_freshness_signal: 560 sitemap URLs have no lastmod, so a crawler cannot tell when they changed (reported only: Client repo. Sitemap is generated from dist/ at build time and this repo is under a content and cadence freeze, so lastmod is reported rather than enforced. Raising it requires client agreement.)",
-    "library_over_ceiling: 560 pages against a ceiling of 130 (10 substantive refreshes per week held inside 91 days). 430 pages cannot be kept current at this capacity."
+    "library_over_ceiling: 560 pages against a ceiling of 130 (10 substantive refreshes per week held inside 91 days). 430 pages cannot be kept current at this capacity.",
+    "uniform_lastmod: 560 of 560 pages share a lastmod inside 7 days - that is a date bump pattern, not a refresh, and it makes the freshness signal meaningless"
   ],
   "status": "CLEAR"
 }

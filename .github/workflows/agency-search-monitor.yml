@@ -59,6 +59,19 @@ jobs:
         run: |
           set -euo pipefail
           node scripts/agency/refresh_search_health.js
+          # search:cycle ends in search:prepare-repairs, which reads the page
+          # manifests that `npm run build` writes to .build/page-manifests/.
+          # It used to run before the build, so the repair plan was derived from
+          # whatever manifest the previous run had committed rather than from
+          # this run's own pages.
+          #
+          # The dependency runs both ways, which is why one build cannot sit at
+          # either end: the cycle needs the manifests the build produces, and
+          # build_site_release.js copies the cycle's query_repair_queue.json into
+          # dist/data/. So build to produce the manifests, run the cycle against
+          # them, then rebuild so dist carries this run's repair queue rather
+          # than the previous run's.
+          npm run build
           npm run search:cycle
           node scripts/query/build_provider_query_intelligence.js
           node scripts/remediation/build_remediation_queue.js
