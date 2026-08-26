@@ -144,6 +144,7 @@
     "validate:query-atlas": "node scripts/atlas/validate_query_atlas.mjs",
     "validation:matrix": "node _ops/tools/generate_validation_matrix.mjs",
     "selfheal": "node _ops/selfheal/heal_until_clean.js",
-    "selfheal:dry": "node _ops/selfheal/heal_until_clean.js --dry-run"
+    "selfheal:dry": "node _ops/selfheal/heal_until_clean.js --dry-run",
+    "queries:ingest": "python3 scripts/queries/ingest_gsc_evidence.py"
   }
 }
