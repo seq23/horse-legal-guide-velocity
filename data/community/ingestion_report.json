@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-25T13:50:01.976Z",
-  "total_signals": 2559,
+  "generated_at": "2026-08-26T13:51:00.999Z",
+  "total_signals": 2560,
   "signals_by_source": {
     "reddit_equestrian": 1147,
     "reddit_horses": 648,
@@ -14,27 +14,27 @@
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 171,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 45
+    "forum_horse_and_hound": 46
   },
   "signals_by_platform": {
     "reddit": 2181,
-    "equestrian_forums": 104,
+    "equestrian_forums": 105,
     "google_paa": 29,
     "serp_competitors": 30,
     "youtube": 157,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1062,
+  "normalized_count": 1063,
   "duplicates_collapsed": 1497,
   "pages_created": 0,
-  "pages_strengthened": 1062,
+  "pages_strengthened": 1063,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 558
+      "count": 559
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -100,7 +100,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 45
+      "count": 46
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -179,7 +179,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 9
+      "count": 10
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -18303,6 +18303,23 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1062_courcheval-horseboxes",
+      "normalized_id": "norm_2559_083af64208",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_courcheval-horseboxes-https-forums-horseandhound-co-_b0828415"
+      ],
+      "preserved_query": "Courcheval Horseboxes — what should I know?",
+      "normalized_query": "Courcheval Horseboxes — what should I know?",
+      "llm_bait_phrase": "Courcheval Horseboxes",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
