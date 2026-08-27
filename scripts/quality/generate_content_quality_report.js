@@ -1,7 +1,7 @@
 const {
   readJson, writeJson, readText, loadBacklog, wordCount, excerpt, advisoryWordBand,
   canonicalRoutingPresent, dataAtomPresent, directAnswerPresent, repeatedPhraseWarnings,
-  githubEditUrl, githubBlobUrl, workflowUrl
+  githubEditUrl, githubBlobUrl, workflowUrl, draftPreviewUrl
 } = require('./content_ops_common');
 
 function avg(nums) {
@@ -35,7 +35,7 @@ function main() {
       github_edit_url: githubEditUrl(config, entry.github_path),
       github_metadata_url: githubEditUrl(config, 'data/system/editorial_backlog.json'),
       github_workflow_url: workflowUrl(config, 'admin-bulk-content-actions.yml'),
-      preview_url: entry.slug || '',
+      preview_url: draftPreviewUrl(config, entry),
       public_url: entry.live_slug || '',
       excerpt: excerpt(raw, 420),
       word_count: wc,

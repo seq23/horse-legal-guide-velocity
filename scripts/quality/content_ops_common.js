@@ -60,6 +60,45 @@ function githubEditUrl(config, relPath) {
   if (!base || base.includes('REPLACE_OWNER') || base.includes('REPLACE_REPO') || !relPath) return '';
   return `${base}/edit/main/${relPath}`;
 }
+// Draft preview URLs.
+//
+// Two generators publish `preview_url` into the owner admin surface -
+// scripts/quality/generate_content_quality_report.js and
+// scripts/admin/generate_admin_manifest.js - and they had drifted: one emitted
+// the bare relative slug `/drafts/<date>/<slug>/` and the other emitted null.
+// Neither was a URL a reviewer could open, so the admin table's "Preview/live"
+// link never rendered and the only readable surface left was raw markdown in a
+// private repo. Both now call draftPreviewUrl() so they cannot disagree again.
+//
+// The preview namespace is deliberately under /admin/. Every surface that
+// sweeps dist/ - the sitemap writer, indexnow batches, validate_review_flow,
+// validate_page_contract, validate_canonical_url_contract, the crawl and
+// content-pattern contracts - already treats /admin/ as an operator surface and
+// skips it. Rendering unapproved drafts there means an unapproved page cannot
+// reach a sitemap or a public index because somebody forgot to add one more
+// exclusion. It is not the URL an approved draft later publishes at: that path
+// is computed separately by liveSlug() in scripts/build/write_editorial_pages.js
+// and lands under /insights/, /articles/, /whitepapers/ or /authority/.
+const DRAFT_PREVIEW_PREFIX = '/admin/drafts/';
+
+function draftPreviewPath(entry) {
+  const slug = String((entry && entry.slug) || '').trim();
+  if (!slug) return '';
+  const tail = slug.replace(/^\/+/, '').replace(/^drafts\//, '').replace(/\/+$/, '');
+  if (!tail) return '';
+  return `${DRAFT_PREVIEW_PREFIX}${tail}/`;
+}
+
+function draftPreviewUrl(config, entry) {
+  const previewPath = draftPreviewPath(entry);
+  if (!previewPath) return '';
+  const siteDomain = String((config && config.site_domain) || '').trim().replace(/\/$/, '');
+  // A missing site_domain must not quietly degrade to a relative path: that is
+  // precisely the defect this helper exists to remove.
+  if (!siteDomain) throw new Error('draftPreviewUrl: data/system/config.json is missing site_domain; cannot build an absolute preview URL.');
+  return `${siteDomain}${previewPath}`;
+}
+
 function workflowUrl(config, workflowFile) {
   const base = (config.github_repo_url || '').replace(/\/$/, '');
   if (!base || base.includes('REPLACE_OWNER') || base.includes('REPLACE_REPO')) return '';
@@ -144,6 +183,7 @@ function syncCalendar(backlog, calendar) {
 module.exports = {
   ROOT, abs, ensureDir, readJson, writeJson, readText, writeText, slugify, parseFrontmatter,
   wordCount, excerpt, githubBlobUrl, githubEditUrl, workflowUrl, advisoryWordBand,
+  DRAFT_PREVIEW_PREFIX, draftPreviewPath, draftPreviewUrl,
   atomTypeForEntry, atomIdForEntry, canonicalRoutingPresent, dataAtomPresent, directAnswerPresent,
   unresolvedTokens, repeatedPhraseWarnings, scoreFromFindings, loadBacklog, loadCalendar,
   saveBacklog, saveCalendar, syncCalendar

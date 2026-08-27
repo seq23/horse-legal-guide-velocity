@@ -1,6 +1,6 @@
 const {
   readJson, writeJson, readText, loadBacklog, excerpt, wordCount, githubBlobUrl, githubEditUrl, workflowUrl,
-  canonicalRoutingPresent, dataAtomPresent, directAnswerPresent
+  canonicalRoutingPresent, dataAtomPresent, directAnswerPresent, draftPreviewUrl
 } = require('../quality/content_ops_common');
 
 function main() {
@@ -35,7 +35,7 @@ function main() {
       github_workflow_url: workflowUrl(config, 'admin-bulk-content-actions.yml'),
       github_publish_workflow_url: workflowUrl(config, 'publish.yml'),
       github_signal_workflow_url: workflowUrl(config, 'public-signal-processing.yml'),
-      preview_url: null,
+      preview_url: draftPreviewUrl(config, entry),
       public_url: entry.live_slug || null,
       excerpt: qualityItem.excerpt || excerpt(raw, 420),
       word_count: qualityItem.word_count || wordCount(raw),

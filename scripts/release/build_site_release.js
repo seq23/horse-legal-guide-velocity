@@ -178,7 +178,7 @@ function writeAdminIndex() {
   <p class="eyebrow">Owner cockpit · manual publishing only</p>
   <h1>Horse Legal Guide Admin</h1>
   <p class="muted">Review, filter, approve, reject, revise, and monitor content built to improve LLM citation opportunities and route legal matters back to Wise Covington.</p>
-  <p><a href="/admin/seo/">Open /admin/seo/ AEO / SEO / GEO dashboard</a> · <a href="/agency/">Open private /agency/ search intelligence</a> · <a href="${escapeHtml(normalizeRepoUrl(config))}/actions">Open GitHub Actions</a></p>
+  <p><a href="/admin/drafts/">Read the queued drafts</a> · <a href="/admin/seo/">Open /admin/seo/ AEO / SEO / GEO dashboard</a> · <a href="/agency/">Open private /agency/ search intelligence</a> · <a href="${escapeHtml(normalizeRepoUrl(config))}/actions">Open GitHub Actions</a></p>
 </header>
 <section id="login-landing" class="login-grid">
   <div class="card login-card">

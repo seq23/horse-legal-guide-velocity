@@ -41,15 +41,29 @@ const siteName = (index.match(/<title>([^<]*)<\/title>/i) || [, 'This site'])[1]
 // Reuse the site's own footer so the 404 carries the same legal/nav links every
 // other page does, rather than becoming a dead end.
 const footer = (index.match(/<footer[\s\S]*?<\/footer>/i) || [''])[0];
-// Derive the origin from the homepage's canonical so the 404 can self-canonicalize
-// without this script knowing any repo's domain.
+// Derive the origin from the homepage's canonical so this script needs to know
+// no repo's domain.
 // Attribute order varies across these repos, so match either arrangement.
 const canonicalTagRaw = (index.match(/<link[^>]*rel=["']canonical["'][^>]*>/i)
   || index.match(/<link[^>]*href=[^>]*rel=["']canonical["'][^>]*>/i) || [''])[0];
 const canonicalHref = (canonicalTagRaw.match(/href=["']([^"']+)["']/i) || [])[1];
 let origin = '';
 try { origin = canonicalHref ? new URL(canonicalHref).origin : ''; } catch { origin = ''; }
-const canonicalTag = origin ? `\n  <link rel="canonical" href="${origin}/404.html">` : '';
+
+// No rel=canonical on the error page.
+//
+// This file is the body Cloudflare Pages returns for every unknown path, so a
+// fixed self-canonical here made every 404 in the site claim to be a duplicate
+// of one specific URL. /guides/ is the visible example: it 404s, and the tag
+// told crawlers the authoritative version of it was the error page. An error
+// response has no canonical URL to name, and the page already carries
+// `noindex, follow`, which is the directive that does the real work.
+//
+// The URL it named was wrong twice over: Cloudflare Pages 308s /404.html to the
+// extensionless /404, so the canonical pointed at a redirect rather than a
+// 200-serving address. The JSON-LD below now names /404 for the same reason.
+const canonicalTag = '';
+const errorPageUrl = origin ? `${origin}/404` : '';
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -82,7 +96,7 @@ ${footer}
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": `Page not found \u00b7 ${siteName}`,
-    ...(origin ? { "@id": `${origin}/404.html`, url: `${origin}/404.html`,
+    ...(errorPageUrl ? { "@id": errorPageUrl, url: errorPageUrl,
                    isPartOf: { "@type": "WebSite", name: siteName, url: `${origin}/` } } : {}),
   }, null, 2)}</script>
 </body>
