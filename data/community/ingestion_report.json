@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-08-26T13:51:00.999Z",
-  "total_signals": 2560,
+  "generated_at": "2026-08-27T17:19:55.166Z",
+  "total_signals": 2583,
   "signals_by_source": {
-    "reddit_equestrian": 1147,
+    "reddit_equestrian": 1167,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 30,
-    "youtube_search_comments": 157,
+    "youtube_search_comments": 158,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 171,
     "reddit_farming_ranching": 75,
-    "forum_horse_and_hound": 46
+    "forum_horse_and_hound": 48
   },
   "signals_by_platform": {
-    "reddit": 2181,
-    "equestrian_forums": 105,
+    "reddit": 2201,
+    "equestrian_forums": 107,
     "google_paa": 29,
     "serp_competitors": 30,
-    "youtube": 157,
+    "youtube": 158,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1063,
-  "duplicates_collapsed": 1497,
+  "normalized_count": 1073,
+  "duplicates_collapsed": 1510,
   "pages_created": 0,
-  "pages_strengthened": 1063,
+  "pages_strengthened": 1073,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 559
+      "count": 565
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 135
+      "count": 136
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 133
+      "count": 134
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 128
+      "count": 130
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1147
+      "count": 1167
     },
     {
       "name": "reddit_horses",
@@ -88,7 +88,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 157
+      "count": 158
     },
     {
       "name": "reddit_legaladvice",
@@ -100,7 +100,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 46
+      "count": 48
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -131,9 +131,8 @@
     {
       "source_key": "reddit_equestrian",
       "platform": "reddit",
-      "status": "timed_out",
-      "count": 0,
-      "error": "source timeout after 7000ms"
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_horses",
@@ -179,7 +178,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 10
+      "count": 11
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -18320,6 +18319,176 @@
       "intent_type": "faq",
       "signal_score": 0.9,
       "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1063_injured-lease-horse",
+      "normalized_id": "norm_2562_61563867e9",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_injured-lease-horse-https-www-reddit-com-r-equestria_48f02efb"
+      ],
+      "preserved_query": "Injured lease horse — what should I know?",
+      "normalized_query": "Injured lease horse — what should I know?",
+      "llm_bait_phrase": "Injured lease horse",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1064_supposed-bomb-proof-horse-is-scared-of-everything-after-purc",
+      "normalized_id": "norm_2563_069273a6bf",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_supposed-bomb-proof-horse-is-scared-of-everything-af_1a92ad7e"
+      ],
+      "preserved_query": "Supposed bomb proof horse is scared of everything after purchase — what should I know?",
+      "normalized_query": "Supposed bomb proof horse is scared of everything after purchase — what should I know?",
+      "llm_bait_phrase": "Supposed bomb proof horse is scared of everything after purchase",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1065_update-1-movement-of-wide-hind-stance-mare",
+      "normalized_id": "norm_2565_e75a020a58",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_update-1-movement-of-wide-hind-stance-mare-https-www_cde3f0af"
+      ],
+      "preserved_query": "Update 1: Movement of “wide hind stance” mare — what should I know?",
+      "normalized_query": "Update 1: Movement of “wide hind stance” mare — what should I know?",
+      "llm_bait_phrase": "Update 1: Movement of “wide hind stance” mare",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1066_advice-needed-how-to-find-a-coach-as-an-experienced-rider-wi",
+      "normalized_id": "norm_2568_5bd788341e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_advice-needed-how-to-find-a-coach-as-an-experienced-_da5fd42b"
+      ],
+      "preserved_query": "Advice needed-how to find a coach as an experienced rider with no horse — what should I know?",
+      "normalized_query": "Advice needed-how to find a coach as an experienced rider with no horse — what should I know?",
+      "llm_bait_phrase": "Advice needed-how to find a coach as an experienced rider with no horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1067_horse-bolted-need-advice",
+      "normalized_id": "norm_2574_571ad3f3d5",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-bolted-need-advice-https-www-reddit-com-r-eque_a3707763"
+      ],
+      "preserved_query": "Horse bolted… need advice — what should I know?",
+      "normalized_query": "Horse bolted… need advice — what should I know?",
+      "llm_bait_phrase": "Horse bolted… need advice",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/what-happens-if-a-boarder-damages-property/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1068_i-think-my-trainer-and-i-broke-up-was-i-in-the-wrong",
+      "normalized_id": "norm_2575_bbe9ae7bae",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_i-think-my-trainer-and-i-broke-up-was-i-in-the-wrong_34f90972"
+      ],
+      "preserved_query": "I think my trainer and I broke up - was I in the wrong — what should I know?",
+      "normalized_query": "I think my trainer and I broke up - was I in the wrong — what should I know?",
+      "llm_bait_phrase": "I think my trainer and I broke up - was I in the wrong",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1069_question-on-free-lease",
+      "normalized_id": "norm_2579_2509ac2587",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_question-on-free-lease-https-www-reddit-com-r-equest_dd67bbb3"
+      ],
+      "preserved_query": "Question on free lease — what should I know?",
+      "normalized_query": "Question on free lease — what should I know?",
+      "llm_bait_phrase": "Question on free lease",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1070_pts-dog-v-horse",
+      "normalized_id": "norm_2580_1a07a18583",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_pts-dog-v-horse-https-forums-horseandhound-co-uk_d1fe1433"
+      ],
+      "preserved_query": "PTS dog v horse — what should I know?",
+      "normalized_query": "PTS dog v horse — what should I know?",
+      "llm_bait_phrase": "PTS dog v horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1071_horses-ever-learn-from-watching",
+      "normalized_id": "norm_2581_fef95c86b8",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_do-horses-ever-learn-from-watching-https-forums-hors_02425429"
+      ],
+      "preserved_query": "Do horses ever learn from watching?",
+      "normalized_query": "Do horses ever learn from watching?",
+      "llm_bait_phrase": "horses ever learn from watching",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1072_as-is-claus-in-horse-contracts-and-how-it-affects-you-catane",
+      "normalized_id": "norm_2582_3bbd4d79f9",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_as-is-claus-in-horse-contracts-and-how-it-affects-yo_ab41dc72"
+      ],
+      "preserved_query": "As Is Claus in Horse Contracts and how it affects you | Catanese \\u0026 Wells — what should I know?",
+      "normalized_query": "As Is Claus in Horse Contracts and how it affects you | Catanese \\u0026 Wells — what should I know?",
+      "llm_bait_phrase": "As Is Claus in Horse Contracts and how it affects you | Catanese \\u0026 Wells",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }

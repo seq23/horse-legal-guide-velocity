@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-27T13:35:38.000Z",
+  "generated_at": "2026-08-27T16:29:01.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-08-26T14:30:47.543Z",
-      "age_hours": 23.1,
+      "age_hours": 26,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-08-26T14:30:47.543Z",
-      "age_hours": 23.1,
+      "age_hours": 26,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-08-26T14:30:47.543Z",
-      "age_hours": 23.1,
+      "age_hours": 26,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -1916,7 +1916,7 @@
       "content_atom_coverage": 100,
       "legal_safety": 100,
       "workflow_trace": 100,
-      "signal_ingestion": 95,
+      "signal_ingestion": 100,
       "internal_linking": 100,
       "schema_coverage": 100,
       "metadata_completeness": 100
@@ -1952,14 +1952,14 @@
       "workflow_count": 15,
       "workflow_passed": 15,
       "workflow_warning_count": 0,
-      "signal_raw_store_count": 2560,
-      "signal_fresh_collected_count": 51,
+      "signal_raw_store_count": 2583,
+      "signal_fresh_collected_count": 72,
       "signal_failed_sources": 0,
-      "signal_zero_reddit_warning": true,
+      "signal_zero_reddit_warning": false,
       "github_actions_simulation_status": "passed",
       "github_actions_simulated_workflows": 15,
       "github_actions_simulation_warnings": 0,
-      "github_actions_live_followups": 4,
+      "github_actions_live_followups": 3,
       "github_actions_simulation_failures": 0
     },
     "page_uniqueness": {

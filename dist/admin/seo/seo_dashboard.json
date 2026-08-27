@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-27T13:35:38.000Z",
-  "measurement_fingerprint": "abd1041c0a5651343dee25657a726ea5d8ca813f166a14b41d384166ba984ac5",
+  "generated_at": "2026-08-27T16:29:01.000Z",
+  "measurement_fingerprint": "7d00555e5024b20287643ebd3d5f72db0ace4c4bd855f55e43794afa50935144",
   "title": "LLM Citation Velocity Dashboard",
   "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, page uniqueness, and workflow trace next steps.",
   "truth_boundary": "Scores are regenerated from the current repo files and freshly rendered dist HTML on every release build. Existing-page similarity findings are advisory and require owner approval before any live change. Draft similarity is automatically repaired before approval eligibility. These local measurements do not prove live GitHub Actions, live GSC, Bing, or IndexNow until those provider workflows run after apply.",
@@ -29,7 +29,7 @@
     "content_atom_coverage": 100,
     "legal_safety": 100,
     "workflow_trace": 100,
-    "signal_ingestion": 95,
+    "signal_ingestion": 100,
     "internal_linking": 100,
     "schema_coverage": 100,
     "metadata_completeness": 100
@@ -65,14 +65,14 @@
     "workflow_count": 15,
     "workflow_passed": 15,
     "workflow_warning_count": 0,
-    "signal_raw_store_count": 2560,
-    "signal_fresh_collected_count": 51,
+    "signal_raw_store_count": 2583,
+    "signal_fresh_collected_count": 72,
     "signal_failed_sources": 0,
-    "signal_zero_reddit_warning": true,
+    "signal_zero_reddit_warning": false,
     "github_actions_simulation_status": "passed",
     "github_actions_simulated_workflows": 15,
     "github_actions_simulation_warnings": 0,
-    "github_actions_live_followups": 4,
+    "github_actions_live_followups": 3,
     "github_actions_simulation_failures": 0
   },
   "summary": {
@@ -131,7 +131,7 @@
       "instructions": "Workflow trace must pass locally before ZIP delivery. Local simulation may record live follow-ups separately from warnings. Live GitHub Actions run after the ZIP is applied and pushed."
     },
     "signal_ingestion": {
-      "score": 95,
+      "score": 100,
       "instructions": "Preserve collect:signals, normalize:signals, map:signals, and report:ingestion. Stored/manual signals preserve the pipeline in container; live GitHub must prove fresh collection after apply."
     },
     "internal_linking": {

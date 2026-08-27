@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T13:35:38.000Z",
+  "generated_at": "2026-08-27T16:29:01.000Z",
   "inventory_errors": [],
   "truth_boundary": "This is a local simulated GitHub Actions data trace. It combines workflow YAML presence, local command validation already executed in this workspace, artifact presence, dry-run distribution checks, and source-specific warning inspection. It does not prove live GitHub Actions, live GitHub secrets, live GSC, live IndexNow, or deployed runtime behavior.",
   "status": "passed",
@@ -17,7 +17,7 @@
       "repair": "dashboard now measures rendered dist HTML, sitemap files, schema coverage, internal links, signal health, workflow trace, and GitHub Actions simulation trace"
     }
   ],
-  "live_followups_count": 4,
+  "live_followups_count": 3,
   "workflows": [
     {
       "workflow": "build.yml",
@@ -47,9 +47,7 @@
       "workflow": "public-signal-processing.yml",
       "status": "passed",
       "warnings": [],
-      "live_followups": [
-        "Reddit produced 0 fresh signals in local container simulation; live GitHub run should be reviewed."
-      ],
+      "live_followups": [],
       "hard_fails": [],
       "report": "reports/github-actions-simulation/public-signal-processing.json"
     },
