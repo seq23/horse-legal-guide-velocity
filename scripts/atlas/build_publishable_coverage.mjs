@@ -107,10 +107,17 @@ function main() {
       rank_score: q.rank_score ?? null,
       evidence_tier: q.evidence_tier || null,
       source_type: q.source_type || null,
-      // Deliberately labelled. For a gsc_search_analytics row this is this
-      // domain's impressions in the measured window, not market volume.
-      volume_field: q.volume ?? null,
-      volume_means: q.source_type === 'gsc_search_analytics' ? 'impressions_for_this_domain_in_measured_window' : 'estimated_monthly_search_volume',
+      // `volume` was removed because one field held two incompatible quantities:
+      // modelled monthly search volume on keyword-tool rows, and this domain's own
+      // impressions on GSC rows. Reading `q.volume ?? null` here did not throw once
+      // the key was gone -- it silently produced null for every row, which is exactly
+      // what validate_atlas_units check 5 exists to catch.
+      //
+      // The two quantities are carried separately now and never collapsed.
+      search_volume: q.search_volume ?? null,
+      search_volume_source: q.search_volume_source || null,
+      impressions_90d: q.impressions_90d ?? null,
+      demand_basis: q.demand_basis || null,
       keyword_difficulty: q.keyword_difficulty ?? null,
       intent: q.intent || null,
       covered_by: hit ? { kind: hit.kind, id: hit.id, status: hit.status, how: hit.how, matched_on: hit.matched_on } : null,
