@@ -9,6 +9,7 @@ const { writeHubPages } = require('./write_hubs');
 const { writeSitemaps } = require('./write_sitemaps');
 const { writeLlmsTxt } = require('./write_feeds');
 const { writeAdminPage } = require('./write_admin');
+const { writeDraftPreviews } = require('./write_draft_previews');
 const { writeEditorialPages } = require('./write_editorial_pages');
 const { writePublicIndexes } = require('./write_public_indexes');
 const { generateAnswerSurfaceReports } = require('../monitoring/generate_answer_surface_reports');
@@ -120,6 +121,12 @@ function main() {
   writeSitemaps(distDir, config.site_domain || 'https://example.com');
   writeLlmsTxt(distDir, config.canonical_domain);
   writeAdminPage(distDir);
+  // After writeSitemaps, deliberately. The sitemap and indexnow writers sweep
+  // dist/ for index.html, so an unapproved draft preview written before that
+  // sweep would be advertised for crawling. write_sitemaps.js also excludes the
+  // operator namespaces by name, so this is belt and braces rather than the only
+  // thing standing between a draft and a sitemap entry.
+  writeDraftPreviews(distDir);
   prepareDistributionArtifacts();
 
   writePageManifests({ approved: pageResults, reference: referenceResults });

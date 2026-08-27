@@ -1,6 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 
+// Operator surfaces, not published answers: the owner admin cockpit, the
+// private agency dashboard, and the /admin/drafts/ previews of unapproved
+// drafts. None of them belong in a sitemap, an indexnow batch, or any other
+// crawl invitation.
+//
+// These were previously excluded only by build ordering - writeSitemaps happens
+// to run before the admin surfaces are written - which is invisible and one
+// reordering away from advertising unapproved client content for indexing.
+// Naming them makes the exclusion explicit and independent of call order. The
+// emitted URL set is unchanged.
+const OPERATOR_DIRS = new Set(['admin', 'agency']);
+
 function collectHtmlUrls(baseDir, root = '') {
   const urls = [];
   const entries = fs.readdirSync(baseDir, { withFileTypes: true });
@@ -8,6 +20,7 @@ function collectHtmlUrls(baseDir, root = '') {
     const fullPath = path.join(baseDir, entry.name);
     const relPath = path.join(root, entry.name);
     if (entry.isDirectory()) {
+      if (root === '' && OPERATOR_DIRS.has(entry.name)) continue;
       urls.push(...collectHtmlUrls(fullPath, relPath));
     } else if (entry.isFile() && entry.name === 'index.html') {
       let urlPath = '/' + root.replace(/\\/g, '/');
