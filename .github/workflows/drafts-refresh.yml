@@ -30,8 +30,19 @@ jobs:
           node-version: 20
       - name: Install
         run: npm ci
+      # Cadence for a client repo is measured in drafts the client can still get
+      # through, not in drafts produced. 306 are pending and the last approval was
+      # 2026-04-29, so this stops adding to a queue nobody is emptying. It never
+      # fails - a full queue is a decision waiting on a person, not a broken build.
+      - name: Draft queue cadence gate
+        id: draft_gate
+        run: node scripts/cadence/draft_queue_gate.mjs
       - name: Generate drafts
+        if: steps.draft_gate.outputs.should_draft == 'true'
         run: npm run generate:drafts
+      - name: Report why no drafts were generated
+        if: steps.draft_gate.outputs.should_draft != 'true'
+        run: echo "Skipped drafting - ${{ steps.draft_gate.outputs.pending }} drafts are awaiting client approval. Approve via Admin Bulk Content Actions (workflow_dispatch)."
       - name: Self-heal generated drafts
         run: npm run content:self-heal
       - name: Prevalidate generated drafts
@@ -50,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/drafts/generated data/system/content_calendar.json data/system/editorial_backlog.json data/admin data/content_atoms reports/workflow-trace dist .build data/content_refresh_state.json data/system/automation_mode.json data/firm
+          git add content/drafts/generated data/system/content_calendar.json data/system/editorial_backlog.json data/admin data/content_atoms reports/workflow-trace reports/cadence dist .build data/content_refresh_state.json data/system/automation_mode.json data/firm
           if git diff --cached --quiet; then
             echo "No draft queue changes to commit."
             exit 0
