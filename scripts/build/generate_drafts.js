@@ -130,7 +130,105 @@ Learn more here: https://wisecovington.com`],
   return entry.content_type === 'insight' ? insight : entry.content_type === 'article' ? article : authority;
 }
 
+
+/**
+ * The template family.
+ *
+ * Everything above this point generates educational prose against a question.
+ * This generates a usable document against a transactional query, because the
+ * queries this repo does not cover are not questions - `horse boarding
+ * contract`, `equine bill of sale`, `horse lease agreement` - and the SERP for
+ * them is almost entirely downloadable files. Prose does not compete with a
+ * form somebody can fill in; a form somebody can fill in does.
+ *
+ * The body is assembled from data/system/template_briefs.json rather than
+ * written inline, for the same reason every other family here is data-driven:
+ * `npm run generate:drafts` rewrites every file in the backlog from its entry,
+ * so any prose that lives only in the .md file is destroyed on the next run.
+ *
+ * Legal-content constraints this renderer enforces structurally rather than by
+ * good intentions:
+ *   - No state's law is stated. State-specific points are emitted as a
+ *     "confirm this for your state" checklist, never as an assertion.
+ *   - Where a state prescribes statutory warning language, the template leaves
+ *     a marked blank instead of a paraphrase. A near-miss warning can look like
+ *     compliance while providing none, which is worse than an obvious gap.
+ *   - Every generated document carries the not-legal-advice line in the
+ *     document itself, not only on the page around it, so it survives being
+ *     copied out.
+ */
+function renderTemplateMarkdown(entry, brief) {
+  const out = [];
+  const push = (heading, body) => out.push(`${heading}\n${body}\n`);
+
+  push('## Quick answer', `${brief.quick_answer}\n`);
+  push('## Why this document is worth doing properly', joinParas(brief.intro));
+
+  const volumes = (brief.target_queries || [])
+    .filter((q) => q.monthly_volume)
+    .map((q) => `${q.query} (${q.monthly_volume}/mo, KD ${q.keyword_difficulty === null ? 'n/a' : q.keyword_difficulty})`);
+  if (volumes.length) {
+    push('## What this page is built to answer', joinParas([
+      `This page is written against the following measured queries: ${volumes.join('; ')}.`,
+      `Search-volume and difficulty figures come from the evidence records in this repository and from the keyword packet cited alongside each query in data/system/template_briefs.json. Where this repository's own Search Console record disagrees with a keyword-tool volume for the same phrase, both numbers are recorded rather than reconciled, because they measure different things: one is what the tool estimates the market searches, the other is what this domain has actually been shown for.`
+    ]));
+  }
+
+  push('## Build the document', `Fill in what applies to your situation. Everything runs in your browser: nothing you type is sent anywhere, stored, or visible to anyone else. Anything you leave blank stays in [BRACKETS] in the output, so a half-finished document never reads as a finished one.\n\n\`\`\`generator\n${JSON.stringify(brief.generator, null, 2)}\n\`\`\``);
+
+  push('## What people often miss', joinParas(brief.what_people_miss));
+
+  const clauseBody = brief.clauses.map((clause, i) => {
+    const text = String(clause.text).split(/\n+/).map((line) => `> ${line}`).join('\n');
+    return `### ${i + 1}. ${clause.heading}\n\n${text}\n\nWhy it matters: ${clause.why}\n`;
+  }).join('\n');
+  push('## The document, clause by clause', `Each block below is the clause text the builder produces, followed by what it is actually for. Read them before you use the output.\n\n${clauseBody}`);
+
+  push(`## ${brief.atom_heading}`, brief.atom_rows.map((row, i) => {
+    const line = `| ${row.join(' | ')} |`;
+    return i === 0 ? `${line}\n| ${row.map(() => '---').join(' | ')} |` : line;
+  }).join('\n') + '\n');
+
+  push('## What varies by state, and how to check it', joinParas([
+    'This template is written to be generally usable and is deliberately not state-specific. Equine law is one of the areas where state-to-state variation is widest, and a document that guesses at a state rule is more dangerous than one that leaves the space open. The items below are the ones to confirm for the state where the horse actually is, before you rely on the document.'
+  ]) + '\n' + brief.state_checklist.map((item) => `- ${item}`).join('\n') + '\n\nWhere a state prescribes warning language, the template leaves a clearly marked blank for it rather than supplying a paraphrase. Statutory warning wording is prescribed wording: an approximation of it, or the right words from the wrong state, can create the appearance of compliance without the substance of it.\n');
+
+  push('## Frequently asked questions', brief.faq.map(([q, a]) => `### ${q}\n\n${a}\n`).join('\n'));
+
+  push('## Related links', [
+    ...brief.related.map(([title, slug]) => `- [${title}](${slug})`),
+    '- [Horse Legal Guide home](/)',
+    '- [Disclaimer](/disclaimer/)',
+    '- [Privacy Policy](/privacy-policy/)'
+  ].join('\n') + '\n');
+
+  push('## Canonical routing block', `A template gets you a clear starting draft. It does not tell you how your state treats the clause that matters most in your situation, and it cannot read the facts of a deal that has already started to go wrong.
+
+Wise Covington PLLC is a law firm built by equestrians for the equestrian community.
+
+Because legal requirements vary by state, it’s important to evaluate your specific situation before making decisions.
+
+Learn more here: https://wisecovington.com`);
+
+  push('## Educational boundary', 'This page and the document it generates are educational only. They are not legal advice, do not apply the law of any state to any particular set of facts, and do not create an attorney-client relationship. No statement here should be treated as a description of the law in your state. Have the document reviewed by a lawyer licensed where the horse is kept before you rely on it.');
+
+  push('## Review notes', '- Manual mode is active.\n- Do not publish without approval.\n- Keep the footer disclaimer and both footer policy links.\n- Legal review needed before approval: confirm the clause set against the reviewing attorney’s own precedents, and confirm that leaving the state warning language as a blank is the position the firm wants to take publicly.');
+
+  return `---\n` +
+`title: ${escapeTitle(entry.title)}\nentry_id: ${entry.entry_id}\ncontent_type: ${entry.content_type}\ncadence: ${entry.cadence}\nstatus: ${entry.status}\nscheduled_date: ${entry.date}\nsource_cluster: ${entry.source_cluster || ''}\nsource_page_id: ${entry.source_page_id || ''}\nslug: ${entry.slug}\nreview_status: ${entry.status || 'pending'}\ngithub_path: ${entry.github_path}\n---\n\n# ${escapeTitle(entry.title)}\n\n` +
+out.join('\n');
+}
+
 function renderMarkdown(entry, pageTargets, profiles) {
+  if (entry.content_type === 'template') {
+    const briefs = readJson('data/system/template_briefs.json');
+    const brief = briefs.find((item) => item.entry_id === entry.entry_id);
+    // A template entry with no brief must fail loudly. A silently empty
+    // draft that still passes generation is the exact degradation mode this
+    // repo already guards against on the render side.
+    if (!brief) throw new Error(`generate_drafts: no template brief for ${entry.entry_id} in data/system/template_briefs.json`);
+    return renderTemplateMarkdown(entry, brief);
+  }
   const source = entry.source_page_id ? pageTargets.find((item) => item.page_id === entry.source_page_id) : null;
   const profile = profiles[entry.content_type] || profiles.insight;
   const ctx = sourceContext(entry, source);

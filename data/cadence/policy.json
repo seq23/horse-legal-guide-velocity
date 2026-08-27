@@ -5,9 +5,23 @@
   "require_lastmod": false,
   "new_pages_per_week": 0,
   "refresh_capacity_per_week": 10,
-  "note": "Client repo. Publishing is client-approved only.",
+  "note": "Client repo. Publishing is client-approved only, and no scheduled workflow can approve or publish.",
   "_why": "13 weeks is the point where pages become markedly more likely to lose AI citations, and recency is the strongest single correlate of being cited. The ceiling is refresh capacity times that window: publish faster than the library can be maintained and the tail ages out of citability.",
   "_lastmod_note": "Client repo. Sitemap is generated from dist/ at build time and this repo is under a content and cadence freeze, so lastmod is reported rather than enforced. Raising it requires client agreement.",
   "enforce_weekly_cap": false,
-  "_cadence_note": "Client repo under a content and cadence freeze. Publishing decisions belong to the client, so new pages are reported rather than blocking."
+  "_cadence_note": "Client repo under a content and cadence freeze. Publishing decisions belong to the client, so new pages are reported rather than blocking.",
+  "unapproved_draft_ceiling": 50,
+  "_cadence_unit": "For this repo the cadence is drafts ready for client approval, not pages published. Publishing cadence is 0/week by design and enforced by _ops/validators/validate_publish_safety_gate.js; review_status only becomes \"approved\" through scripts/admin/*, reachable exclusively by workflow_dispatch.",
+  "_draft_cadence_measurement": {
+    "measured_on": "2026-08-27",
+    "repo_age_weeks": 18.0,
+    "drafts_on_disk": 306,
+    "drafts_pending_client_approval": 306,
+    "draft_production_per_week": 17.0,
+    "targets_approved": 273,
+    "last_client_approval": "2026-04-29",
+    "approvals_in_the_17_weeks_since": 0,
+    "finding": "Drafting has run daily for 17 weeks into a queue nobody is emptying. The binding constraint in a client repo is the client's approval bandwidth, which is a fact about a person rather than a number a generator may choose. Draft production is therefore capped by queue depth, not by a rate."
+  },
+  "_ceiling_basis": "50 is deliberately generous against an observed approval rate of zero since 2026-04-29. It exists to stop unbounded growth, not to model a throughput this repo has never demonstrated. Raising or lowering it is a client conversation, and scripts/cadence/draft_queue_gate.mjs reports the queue on every run either way."
 }
