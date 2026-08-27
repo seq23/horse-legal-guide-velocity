@@ -10,7 +10,7 @@
     },
     {
       "path": ".github/workflows/drafts-refresh.yml",
-      "sha256": "62973bf8e3328ab5b5e5315c548656baf68d944aeaba8a3e34b251d9c559a297",
+      "sha256": "00e974ad462f073adc67b906caefb54665954cba3460d26a3a6393aa7fb69a75",
       "bytes": 2022
     },
     {
@@ -133,5 +133,10 @@
       "sha256": "823d856ec05cc3eccf6adbbcf1b4839fc45ac012111af34d031cca4e07876279",
       "bytes": 1230
     }
+  ],
+  "baseline_refreshed_at": "2026-08-27T16:27:04.459619Z",
+  "baseline_reason": "Gave Draft Queue Refresh a cadence. The workflow generated drafts every day at 11:15 with no ceiling: 306 drafts now sit in content/drafts/generated, every one pending, while the last client approval was 2026-04-29 - 17 weeks and 0 approvals ago. It was producing into a queue nobody is emptying, and a 307th draft makes review less likely rather than more. scripts/cadence/draft_queue_gate.mjs now reports the queue and the Generate drafts step is conditional on it; the gate never fails, because a full queue is a decision waiting on the client and not a broken build. Nothing about approval or publishing changed: validate_publish_safety_gate.js still blocks every non-approved route from public output, review_status still only becomes 'approved' through scripts/admin/*, and those remain reachable exclusively by workflow_dispatch. Only the drafts-refresh workflow's hash moved, and only to add the gate and commit reports/cadence.",
+  "baseline_refresh_changed_files": [
+    ".github/workflows/drafts-refresh.yml"
   ]
 }
