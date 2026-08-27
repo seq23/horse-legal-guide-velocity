@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-27T00:40:05.000Z",
+  "generated_at": "2026-08-27T17:20:29.000Z",
   "provider_status": {
     "gsc": "ok",
     "bing": "not_connected",
@@ -8,10 +8,10 @@
   },
   "summary": {
     "opportunities": 60,
-    "new_candidates": 47,
+    "new_candidates": 44,
     "improve_existing": 1,
     "differentiate_existing": 3,
-    "cannibalization_review": 9,
+    "cannibalization_review": 12,
     "active_query_failures": 0
   },
   "policy": "Provider and grounded-search data may create recommendations, pending candidates, and finished owner-review repairs only. They may not approve, publish, or mutate live legal pages.",
@@ -76,6 +76,39 @@
       "confidence": 0.64,
       "reasons": [
         "provider_query_maps_to_multiple_pages",
+        "ranking_opportunity"
+      ],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0009",
+      "query": "equine law",
+      "type": "new_candidate",
+      "target_page": "/insights/",
+      "provider_pages": [
+        "/insights/"
+      ],
+      "providers": [
+        "gsc"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 14,
+        "average_position": 92.29
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.222,
+      "confidence": 0.52,
+      "reasons": [
         "ranking_opportunity"
       ],
       "status": "pending_owner_review",
@@ -157,11 +190,80 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0009",
-      "query": "equine law",
+      "opportunity_id": "provider-opportunity-0028",
+      "query": "horse purchase agreement",
       "type": "new_candidate",
-      "target_page": "/insights/",
+      "target_page": "/compare/horse-purchase-agreement-vs-bill-of-sale/",
       "provider_pages": [
+        "/compare/horse-purchase-agreement-vs-bill-of-sale/"
+      ],
+      "providers": [
+        "gsc"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 8,
+        "average_position": 69
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.333,
+      "confidence": 0.541,
+      "reasons": [
+        "ranking_opportunity"
+      ],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0032",
+      "query": "horse sales agreement",
+      "type": "cannibalization_review",
+      "target_page": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "provider_pages": [
+        "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "/compare/horse-purchase-agreement-vs-bill-of-sale/"
+      ],
+      "providers": [
+        "gsc"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 8,
+        "average_position": 71.64
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.333,
+      "confidence": 0.541,
+      "reasons": [
+        "provider_query_maps_to_multiple_pages",
+        "ranking_opportunity"
+      ],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0014",
+      "query": "equine legal",
+      "type": "cannibalization_review",
+      "target_page": "/hubs/",
+      "provider_pages": [
+        "/hubs/",
         "/insights/"
       ],
       "providers": [
@@ -169,14 +271,15 @@
       ],
       "metrics": {
         "clicks": 0,
-        "impressions": 10,
-        "average_position": 92
+        "impressions": 8,
+        "average_position": 86.58
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
-      "coverage_match_score": 0.222,
-      "confidence": 0.516,
+      "coverage_match_score": 0.154,
+      "confidence": 0.496,
       "reasons": [
+        "provider_query_maps_to_multiple_pages",
         "ranking_opportunity"
       ],
       "status": "pending_owner_review",
@@ -248,72 +351,6 @@
       "confidence": 0.581,
       "reasons": [
         "provider_query_maps_to_multiple_pages",
-        "ranking_opportunity"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0028",
-      "query": "horse purchase agreement",
-      "type": "new_candidate",
-      "target_page": "/compare/horse-purchase-agreement-vs-bill-of-sale/",
-      "provider_pages": [
-        "/compare/horse-purchase-agreement-vs-bill-of-sale/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 6,
-        "average_position": 69
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.333,
-      "confidence": 0.539,
-      "reasons": [
-        "ranking_opportunity"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0032",
-      "query": "horse sales agreement",
-      "type": "new_candidate",
-      "target_page": "/faq/what-should-be-included-in-a-horse-sale-contract/",
-      "provider_pages": [
-        "/faq/what-should-be-included-in-a-horse-sale-contract/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 6,
-        "average_position": 70.67
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.333,
-      "confidence": 0.539,
-      "reasons": [
         "ranking_opportunity"
       ],
       "status": "pending_owner_review",
@@ -447,39 +484,6 @@
       "grounded_competitors": [],
       "coverage_match_score": 0.214,
       "confidence": 0.51,
-      "reasons": [
-        "ranking_opportunity"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0014",
-      "query": "equine legal",
-      "type": "new_candidate",
-      "target_page": "/hubs/",
-      "provider_pages": [
-        "/hubs/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 6,
-        "average_position": 92
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.154,
-      "confidence": 0.494,
       "reasons": [
         "ranking_opportunity"
       ],
@@ -951,6 +955,41 @@
       "coverage_match_score": 0.167,
       "confidence": 0.496,
       "reasons": [
+        "ranking_opportunity"
+      ],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0023",
+      "query": "horse law",
+      "type": "cannibalization_review",
+      "target_page": "/insights/",
+      "provider_pages": [
+        "/insights/",
+        "/whitepapers/"
+      ],
+      "providers": [
+        "gsc"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 4,
+        "average_position": 50.5
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.167,
+      "confidence": 0.496,
+      "reasons": [
+        "provider_query_maps_to_multiple_pages",
         "ranking_opportunity"
       ],
       "status": "pending_owner_review",
@@ -1783,37 +1822,6 @@
       "reasons": [
         "ranking_opportunity"
       ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0023",
-      "query": "horse law",
-      "type": "new_candidate",
-      "target_page": "/whitepapers/",
-      "provider_pages": [
-        "/whitepapers/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 2,
-        "average_position": 5
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.167,
-      "confidence": 0.494,
-      "reasons": [],
       "status": "pending_owner_review",
       "automatic_actions_completed": [
         "measurement",
