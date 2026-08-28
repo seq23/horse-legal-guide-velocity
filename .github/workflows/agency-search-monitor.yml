@@ -17,7 +17,7 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: '17 14 * * 1'
+    - cron: '17 14 * * *'
 
 permissions:
   contents: write
@@ -29,10 +29,6 @@ jobs:
   monitor:
     runs-on: ubuntu-latest
     env:
-      # Billing is per RESULT (~$4/1,000), not per query. 30 queries daily at
-      # max_results 10 is ~$1.20/day - about $36/month for this repo alone,
-      # against a $20/month ceiling for the whole portfolio.
-      PROBE_WEB_MAX_RESULTS: "3"
       LIVE_SITE_URL: https://horselegalguide.com
       SITE_DOMAIN: https://horselegalguide.com
       GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}

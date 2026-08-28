@@ -32,6 +32,11 @@
  * look like a working integration.
  */
 const fs=require('fs');const path=require('path');
+// OpenRouter bills the web plugin per REQUEST on the parallel engine with 10
+// results included - measured at $0.00127/call on this account against ~$0.04
+// on the default engine's per-result billing. Identical url_citation schema.
+const WEB_ENGINE=process.env.OPENROUTER_WEB_ENGINE||'parallel';
+const WEB_MODE=process.env.OPENROUTER_WEB_MODE||'turbo';
 function read(rel,fallback){try{return JSON.parse(fs.readFileSync(path.resolve(process.cwd(),rel),'utf8'));}catch{return fallback;}}
 function write(rel,v){const p=path.resolve(process.cwd(),rel);fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');}
 function clean(v){return String(v||'').replace(/\s+/g,' ').trim();}function host(u){try{return new URL(u).hostname.replace(/^www\./,'').toLowerCase();}catch{return '';}}function attributedHost(c){const title=String(c?.title||'').trim().toLowerCase().replace(/^www\./,'');if(/^[a-z0-9.-]+\.[a-z]{2,}$/.test(title))return title;return host(c?.url||'');}function isHorseCitation(c){const h=attributedHost(c);return h==='horselegalguide.com'||h.endsWith('.horselegalguide.com')||String(c?.title||'').toLowerCase().includes('horselegalguide.com');}
@@ -48,7 +53,7 @@ function promptFor(item){return `Use live web search to investigate this exact e
 async function observeOpenRouter(item,env){
   const model=env.OPENROUTER_SEARCH_MODEL||'openai/gpt-4o-mini';
   const maxResults=Math.max(1,Math.min(20,Number(env.OPENROUTER_WEB_MAX_RESULTS||10)));
-  const r=await fetch('https://openrouter.ai/api/v1/chat/completions',{method:'POST',headers:{'content-type':'application/json',authorization:`Bearer ${env.OPENROUTER_API_KEY}`},body:JSON.stringify({model,temperature:0,max_tokens:600,plugins:[{id:'web',max_results:maxResults}],messages:[{role:'user',content:promptFor(item)}]}),signal:AbortSignal.timeout(Number(env.LIVE_QUERY_TIMEOUT_MS||45000))});
+  const r=await fetch('https://openrouter.ai/api/v1/chat/completions',{method:'POST',headers:{'content-type':'application/json',authorization:`Bearer ${env.OPENROUTER_API_KEY}`},body:JSON.stringify({model,temperature:0,max_tokens:600,plugins:[{id:'web',engine:WEB_ENGINE,mode:WEB_MODE,max_results:maxResults}],messages:[{role:'user',content:promptFor(item)}]}),signal:AbortSignal.timeout(Number(env.LIVE_QUERY_TIMEOUT_MS||45000))});
   const t=await r.text();
   if(!r.ok)throw new Error(`${r.status}: ${t.slice(0,500)}`);
   const body=JSON.parse(t);const message=body?.choices?.[0]?.message||{};
