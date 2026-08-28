@@ -107,9 +107,13 @@ const key = process.env.GEMINI_API_KEY || process.env.GOOGLE_GEMINI_API_KEY || '
 // Google Search; OpenRouter grounds via the ":online" suffix, which returns the
 // pages the answer was built from as url_citation annotations. Preferring a
 // provider we have no key for is how grounded mode silently skipped every run.
-const PROVIDER = arg('--provider', GROUNDED
-  ? (key ? 'gemini' : (orKey ? 'openrouter' : 'gemini'))
-  : (orKey ? 'openrouter' : 'gemini'));
+// Grounded mode used to prefer Gemini whenever GEMINI_API_KEY was present. In
+// this repo both keys are present in the same job, so grounded runs always chose
+// the one path that cannot work here: Gemini's google_search tool returns 429
+// RESOURCE_EXHAUSTED on this project, reproduced across three models, while
+// plain generateContent on the same key returns 200. OpenRouter's ":online"
+// suffix does return url_citation annotations, so it goes first in both modes.
+const PROVIDER = arg('--provider', orKey ? 'openrouter' : 'gemini');
 // Three small models rather than one, because a single model's idiosyncrasies
 // are not a measurement.
 //

@@ -108,9 +108,12 @@ function main() {
   const collectionStatus = readJson('data/community/collection_status.json', {});
   const adapterStatus = collectionStatus.adapter_status || (ingestionReport && ingestionReport.collection_status) || [];
   const failedSources = adapterStatus.filter((s) => s && s.status === 'failed');
+  // A refused source must never roll up as healthy. Reddit is blocked for this
+  // pipeline and says so by name now, so the trace reports it by name too.
+  const blockedSources = adapterStatus.filter((s) => s && String(s.status || '').startsWith('blocked'));
   const freshCollected = Number(collectionStatus.collected_count || 0);
   const zeroReddit = Boolean(collectionStatus.zero_reddit_warning) || Number(collectionStatus.reddit_collected_count || 0) === 0;
-  const signalHealth = signalTrace && ingestionReport && !failedSources.length && (Array.isArray(rawSignals) ? rawSignals.length : 0) > 0 ? (freshCollected > 0 && !zeroReddit ? 'healthy' : 'healthy_with_live_followup') : 'warning';
+  const signalHealth = signalTrace && ingestionReport && !failedSources.length && (Array.isArray(rawSignals) ? rawSignals.length : 0) > 0 ? (freshCollected > 0 && !zeroReddit && !blockedSources.length ? 'healthy' : 'healthy_with_live_followup') : 'warning';
   const signalStatus = {
     generated_at: new Date().toISOString(),
     status: signalHealth,
@@ -119,6 +122,9 @@ function main() {
     normalized_signal_count: Array.isArray(normalizedSignals) ? normalizedSignals.length : 0,
     fresh_collected_count: freshCollected,
     failed_source_count: failedSources.length,
+    blocked_source_count: blockedSources.length,
+    blocked_sources: blockedSources.slice(0, 20).map((s) => ({ source_key: s.source_key, platform: s.platform, status: s.status, reason: s.error || s.status })),
+    collection_health: collectionStatus.collection_health || null,
     zero_reddit_warning: zeroReddit,
     live_followup_required: signalHealth === 'healthy_with_live_followup',
     failed_sources: failedSources.slice(0, 20).map((s) => ({ source_key: s.source_key, platform: s.platform, error: s.error || s.status })),
@@ -133,6 +139,8 @@ function main() {
     status: signalStatus.status,
     fresh_collected_count: freshCollected,
     failed_source_count: failedSources.length,
+    blocked_source_count: blockedSources.length,
+    collection_health: collectionStatus.collection_health || null,
     zero_reddit_warning: zeroReddit,
     live_followup_required: signalHealth === 'healthy_with_live_followup',
     trace_file: 'reference/signal_trace.json',

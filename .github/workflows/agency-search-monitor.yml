@@ -17,7 +17,7 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: '17 14 * * *'
+    - cron: '17 14 * * 1'
 
 permissions:
   contents: write
@@ -29,6 +29,10 @@ jobs:
   monitor:
     runs-on: ubuntu-latest
     env:
+      # Billing is per RESULT (~$4/1,000), not per query. 30 queries daily at
+      # max_results 10 is ~$1.20/day - about $36/month for this repo alone,
+      # against a $20/month ceiling for the whole portfolio.
+      PROBE_WEB_MAX_RESULTS: "3"
       LIVE_SITE_URL: https://horselegalguide.com
       SITE_DOMAIN: https://horselegalguide.com
       GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
@@ -51,20 +55,32 @@ jobs:
       GSC_INSPECTION_LIMIT: 10
       BING_SITE_URL: ${{ secrets.BING_SITE_URL }}
       BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+      # OpenRouter's web plugin is the primary citation observer. Gemini's
+      # grounded path (tools:[{google_search:{}}]) returns 429 RESOURCE_EXHAUSTED
+      # on this project - reproduced across three models, while plain
+      # generateContent on the same key returns 200 - so it is the fallback, not
+      # the measurement. Without this secret the observer had no working provider
+      # and every observation was recorded as provider_error.
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_SEARCH_MODEL: gemini-flash-lite-latest
       QUERY_MEASUREMENT_PANEL_SIZE: "30"
       LIVE_QUERY_LIMIT: "30"
     steps:
+      # Dispatching this workflow on a branch used to run the branch's YAML
+      # against main's code, so a change to the search cycle could not be
+      # exercised before it was merged. The checkout follows the dispatch ref
+      # now; every write below stays gated to main.
       - uses: actions/checkout@v7
         with:
-          ref: main
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
           node-version: 20
       - run: npm ci
-      - run: git pull --rebase origin main
+      - if: ${{ github.ref_name == 'main' }}
+        run: git pull --rebase origin main
       - name: Refresh providers, intelligence, and private agency report
         id: operation
         continue-on-error: true
@@ -101,8 +117,9 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           CITATION_PROBE_MODE: grounded
         run: node scripts/llm_citation_probe.mjs --limit 25
+      # Writes only ever land on main. A branch run is a read-only rehearsal.
       - name: Commit monitoring snapshots
-        if: ${{ steps.operation.outcome == 'success' }}
+        if: ${{ steps.operation.outcome == 'success' && github.ref_name == 'main' }}
         run: |
           git config user.name "horse-search-monitor"
           git config user.email "actions@github.com"

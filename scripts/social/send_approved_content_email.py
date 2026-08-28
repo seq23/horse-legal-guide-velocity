@@ -224,9 +224,25 @@ def render_markdown(packages: List[Dict[str, Any]], recipient: str, skipped_not_
     return "\n".join(lines).strip() + "\n"
 
 
+REQUIRED_SMTP_VARS = ["SMTP_HOST", "SMTP_USERNAME", "SMTP_PASSWORD", "SMTP_FROM"]
+
+
+def missing_smtp_vars() -> List[str]:
+    """Which credentials the transport needs and does not have.
+
+    SMTP_PASSWORD is not in this repository's secrets - SMTP_FROM, SMTP_HOST,
+    SMTP_PORT and SMTP_USERNAME are - so send_email() has returned False on every
+    scheduled run since the workflow was added, main() returned 0 anyway, and the
+    daily job has been green while sending nothing. This is the only mechanism
+    that tells the client anything is waiting, and the approval queue has not
+    moved in 17 weeks. A missing credential is a fault with a name, not a
+    successful no-op.
+    """
+    return [name for name in REQUIRED_SMTP_VARS if not os.environ.get(name)]
+
+
 def send_email(subject: str, markdown_body: str, recipient: str) -> bool:
-    required = ["SMTP_HOST", "SMTP_USERNAME", "SMTP_PASSWORD", "SMTP_FROM"]
-    missing = [name for name in required if not os.environ.get(name)]
+    missing = missing_smtp_vars()
     if missing:
         print(f"SMTP not configured; preview written only. Missing: {', '.join(missing)}")
         return False
@@ -285,6 +301,8 @@ def main() -> int:
             "copy": social_copy(title, url, context),
         })
 
+    missing = missing_smtp_vars()
+
     if not packages:
         PREVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
         lines = ["# Approved Horse Legal Guide Content Ready to Share", "", "No approved content pieces with live public URLs needed an email."]
@@ -296,6 +314,16 @@ def main() -> int:
         print("No approved content pieces with live public URLs needed an email.")
         if skipped_not_live:
             print(f"Skipped {len(skipped_not_live)} approved item(s) without live public URLs.")
+        # An empty approval queue is a legitimate stop and gets a name. A missing
+        # credential is not, and is reported even when there was nothing to send -
+        # otherwise the fault stays invisible until the day it matters.
+        print("NAMED_STOP: APPROVAL_QUEUE_EMPTY - no approved content piece with a live public URL is waiting to be "
+              "emailed. Nothing to send is a correct resting state for a client repo where approval is manual.")
+        if missing and not args.dry_run:
+            print(f"NAMED_FAILURE: EMAIL_DELIVERY_DISABLED_MISSING_CREDENTIAL - missing {', '.join(missing)}. "
+                  "This job cannot deliver mail at all, so its green runs have proved nothing. "
+                  "Add the missing secret(s) in repository settings; do not invent a value.", file=sys.stderr)
+            return 2
         return 0
 
     markdown_body = render_markdown(packages, args.recipient, skipped_not_live)
@@ -303,6 +331,11 @@ def main() -> int:
     PREVIEW_PATH.write_text(markdown_body, encoding="utf-8")
 
     subject = f"Approved Horse Legal Guide content ready to share ({len(packages)})"
+    if missing and not args.dry_run:
+        print(f"NAMED_FAILURE: EMAIL_DELIVERY_DISABLED_MISSING_CREDENTIAL - {len(packages)} approved item(s) are ready "
+              f"to send and cannot be delivered because {', '.join(missing)} is not set. Preview written to "
+              f"{PREVIEW_PATH}. Add the missing secret(s) in repository settings; do not invent a value.", file=sys.stderr)
+        return 2
     sent = False if args.dry_run else send_email(subject, markdown_body, args.recipient)
     if sent:
         sent_ids = list(dict.fromkeys([*(state.get("sent_entry_ids") or []), *[item["entry_id"] for item in packages]]))
@@ -317,6 +350,11 @@ def main() -> int:
         print(f"Sent approved content email to {args.recipient} for {len(packages)} item(s).")
     else:
         print(f"Preview generated at {PREVIEW_PATH}. Email was not sent.")
+        if args.dry_run:
+            print("NAMED_STOP: DRY_RUN_PREVIEW_ONLY - sending was disabled by --dry-run.")
+        else:
+            print("NAMED_FAILURE: EMAIL_SEND_FAILED - the transport was configured but did not deliver.", file=sys.stderr)
+            return 2
     return 0
 
 

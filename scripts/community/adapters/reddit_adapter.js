@@ -114,13 +114,22 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function trySource(label, fn) {
+// Every attempt is recorded, successful or not. Reddit refuses this pipeline
+// from GitHub runners and from a residential IP alike (429/403, no app
+// available), and swallowing those errors into an empty array is what made a
+// blocked source indistinguishable from a quiet subreddit: collect_signals
+// labelled the empty array success_with_data and the dashboards read green.
+const ACCESS_DENIED = /HTTP (401|403|429)|public access unavailable/i;
+
+async function trySource(label, fn, attempts) {
   const delayMs = Number(process.env.REDDIT_PUBLIC_DELAY_MS || (isCi() ? 900 : 150));
   try {
     const rows = await fn();
+    attempts.push({ label, status: 'ok', rows: rows.length });
     if (delayMs > 0) await sleep(delayMs);
     return rows;
   } catch (err) {
+    attempts.push({ label, status: ACCESS_DENIED.test(err.message) ? 'access_denied' : 'error', error: err.message });
     console.warn(`[reddit_adapter] ${label} unavailable: ${err.message}`);
     if (delayMs > 0) await sleep(delayMs);
     return [];
@@ -128,10 +137,11 @@ async function trySource(label, fn) {
 }
 
 async function collect(source) {
+  const attempts = [];
   const subreddit = subredditFromBaseUrl(source.base_url, source.source_key);
   if (!subreddit) {
     console.warn(`[reddit_adapter] missing subreddit for ${source.source_key}`);
-    return [];
+    return { status: 'misconfigured_no_subreddit', rows: [], error: `No subreddit could be derived for ${source.source_key}.` };
   }
 
   const limit = Number(process.env.REDDIT_PUBLIC_LIMIT || (isCi() ? 5 : 10));
@@ -142,23 +152,23 @@ async function collect(source) {
   const preferRss = String(process.env.REDDIT_PUBLIC_PREFER_RSS || '').toLowerCase() === 'true' || isCi();
 
   if (preferRss) {
-    all.push(...await trySource(`${source.source_key} RSS new`, () => collectRssNew(source, subreddit, 0)));
-    if (all.length === 0) all.push(...await trySource(`${source.source_key} JSON new`, () => collectJsonNew(source, subreddit, limit, 0)));
+    all.push(...await trySource(`${source.source_key} RSS new`, () => collectRssNew(source, subreddit, 0), attempts));
+    if (all.length === 0) all.push(...await trySource(`${source.source_key} JSON new`, () => collectJsonNew(source, subreddit, limit, 0), attempts));
   } else {
-    all.push(...await trySource(`${source.source_key} JSON new`, () => collectJsonNew(source, subreddit, limit, 0)));
-    if (all.length === 0) all.push(...await trySource(`${source.source_key} RSS new`, () => collectRssNew(source, subreddit, 0)));
+    all.push(...await trySource(`${source.source_key} JSON new`, () => collectJsonNew(source, subreddit, limit, 0), attempts));
+    if (all.length === 0) all.push(...await trySource(`${source.source_key} RSS new`, () => collectRssNew(source, subreddit, 0), attempts));
   }
 
   for (let i = 0; i < terms.length; i++) {
     const offset = (i + 1) * limit;
     if (preferRss) {
-      const rssRows = await trySource(`${source.source_key} RSS search:${terms[i]}`, () => collectRssSearch(source, subreddit, terms[i], offset));
+      const rssRows = await trySource(`${source.source_key} RSS search:${terms[i]}`, () => collectRssSearch(source, subreddit, terms[i], offset), attempts);
       if (rssRows.length > 0) all.push(...rssRows);
-      else all.push(...await trySource(`${source.source_key} JSON search:${terms[i]}`, () => collectJsonSearch(source, subreddit, terms[i], limit, offset)));
+      else all.push(...await trySource(`${source.source_key} JSON search:${terms[i]}`, () => collectJsonSearch(source, subreddit, terms[i], limit, offset), attempts));
     } else {
-      const jsonRows = await trySource(`${source.source_key} JSON search:${terms[i]}`, () => collectJsonSearch(source, subreddit, terms[i], limit, offset));
+      const jsonRows = await trySource(`${source.source_key} JSON search:${terms[i]}`, () => collectJsonSearch(source, subreddit, terms[i], limit, offset), attempts);
       if (jsonRows.length > 0) all.push(...jsonRows);
-      else all.push(...await trySource(`${source.source_key} RSS search:${terms[i]}`, () => collectRssSearch(source, subreddit, terms[i], offset)));
+      else all.push(...await trySource(`${source.source_key} RSS search:${terms[i]}`, () => collectRssSearch(source, subreddit, terms[i], offset), attempts));
     }
   }
 
@@ -171,10 +181,24 @@ async function collect(source) {
     return true;
   }).slice(0, maxSignals);
 
-  if (rows.length === 0 && isCi()) {
-    console.warn(`[reddit_adapter] ${source.source_key} returned 0 rows in GitHub Actions; Reddit public surfaces may be blocking runner IPs.`);
+  const denied = attempts.filter((a) => a.status === 'access_denied');
+  const succeeded = attempts.filter((a) => a.status === 'ok');
+  if (rows.length === 0 && denied.length > 0) {
+    // Named blocked state. Reddit is settled as unavailable to this pipeline -
+    // 429/403 from GitHub runners and from a residential IP, with no app
+    // available - so the honest report is "blocked", not "nothing was posted".
+    const codes = [...new Set(denied.map((a) => (a.error.match(/HTTP (\d{3})/) || [])[1]).filter(Boolean))];
+    const detail = `Reddit refused ${denied.length} of ${attempts.length} attempt(s) for ${source.source_key}${codes.length ? ` (HTTP ${codes.join('/')})` : ''}. Reddit public access is blocked for this pipeline; no app credential is available.`;
+    console.warn(`[reddit_adapter] BLOCKED_SOURCE ${source.source_key}: ${detail}`);
+    return { status: 'blocked_source', rows: [], error: detail, attempts };
   }
-  return rows;
+  if (rows.length === 0 && succeeded.length > 0) {
+    return { status: 'success_empty', rows: [], error: `Reddit answered ${succeeded.length} request(s) for ${source.source_key} but returned no usable public posts.`, attempts };
+  }
+  if (rows.length === 0) {
+    return { status: 'failed', rows: [], error: `No Reddit attempt for ${source.source_key} produced a response.`, attempts };
+  }
+  return { status: 'success_with_data', rows, attempts };
 }
 
 module.exports = { collect };
