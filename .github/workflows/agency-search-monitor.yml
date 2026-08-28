@@ -40,7 +40,7 @@ jobs:
       BING_SITE_URL: ${{ secrets.BING_SITE_URL }}
       BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GEMINI_SEARCH_MODEL: gemini-2.5-flash-lite
+      GEMINI_SEARCH_MODEL: gemini-flash-lite-latest
       QUERY_MEASUREMENT_PANEL_SIZE: "30"
       LIVE_QUERY_LIMIT: "30"
     steps:
