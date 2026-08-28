@@ -40,6 +40,15 @@ jobs:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_SEARCH_MODEL: gemini-flash-lite-latest
     steps:
+      # REFUSE_NON_MAIN: this lane pushes HEAD:main, so a dispatch from any other
+      # ref would publish that branch to main. The push target is deliberately
+      # literal, so the ref is gated here instead of making the target dynamic.
+      - name: Refuse to process signals from a non-main ref
+        run: |
+          if [ "$GITHUB_REF_NAME" != "main" ]; then
+            echo "REFUSED: this lane pushes HEAD:main; refusing to run on $GITHUB_REF_NAME" >&2
+            exit 1
+          fi
       - uses: actions/checkout@v7
         with:
           persist-credentials: true
