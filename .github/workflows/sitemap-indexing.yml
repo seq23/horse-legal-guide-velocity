@@ -12,9 +12,21 @@ jobs:
       INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
       GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
       GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
-      GSC_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GSC_SERVICE_ACCOUNT_EMAIL }}
-      GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
-      GSC_ACCESS_TOKEN: ${{ secrets.GSC_ACCESS_TOKEN }}
+          # Only GSC_SERVICE_ACCOUNT_JSON is passed, and the other three names are
+          # removed rather than left empty.
+          #
+          # They were dead: no secret of those names exists on this repo, and
+          # scripts/queries/ingest_gsc_evidence.py reads GSC_SERVICE_ACCOUNT_JSON and
+          # nothing else. gsc_provider_ops.mjs prefers the JSON too, so the
+          # EMAIL/PRIVATE_KEY pair could not shadow it here - unlike
+          # hicks-consulting-canonical, where the opposite precedence meant a revoked
+          # pair won every run.
+          #
+          # GSC_ACCESS_TOKEN is the one that mattered: token() returns it before it
+          # ever builds a service-account JWT, so setting it would silently outrank the
+          # working credential. It was harmless only because it resolved to an empty
+          # string. Passing a name that can outrank the real credential, for a secret
+          # that does not exist, is a trap waiting for someone to set it.
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
