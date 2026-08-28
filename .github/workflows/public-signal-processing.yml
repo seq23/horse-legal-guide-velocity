@@ -21,9 +21,15 @@ jobs:
       GSC_SITE_URL: sc-domain:horselegalguide.com
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
-      SIGNAL_SOURCE_TIMEOUT_MS: "7000"
-      SIGNAL_COLLECTION_RUNTIME_MS: "90000"
-      SIGNAL_FETCH_TIMEOUT_MS: "7000"
+      # The Reddit adapters cannot finish inside 7s and never could. Collection is
+      # sequential on purpose, each Reddit source walks 3 search terms, and
+      # REDDIT_PUBLIC_DELAY_MS puts a deliberate 900ms pause between them to stay
+      # under Reddit's rate limit - so ~2.7s of every source's budget is spent
+      # sleeping before a single response is parsed. Measured locally at the old
+      # values, all five Reddit sources timed out; at these values none do.
+      SIGNAL_SOURCE_TIMEOUT_MS: "25000"
+      SIGNAL_COLLECTION_RUNTIME_MS: "360000"
+      SIGNAL_FETCH_TIMEOUT_MS: "12000"
       SIGNAL_COLLECT_SEQUENTIAL: "true"
       REDDIT_PUBLIC_PREFER_RSS: "true"
       REDDIT_PUBLIC_LIMIT: "5"
