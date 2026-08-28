@@ -52,9 +52,16 @@ async function collectSource(source, throttle) {
       new Promise((resolve) => { timer = setTimeout(() => resolve({ rows: [], status: 'timed_out', error: `source timeout after ${timeoutMs}ms` }), timeoutMs); })
     ]));
     clearTimeout(timer);
-    const envelope = Array.isArray(collected) ? { rows: collected, status: 'success_with_data' } : (collected || { rows: [], status: 'success_empty' });
+    // An adapter that returns a bare array gets its status from the row count,
+    // never from the fact that it returned. Labelling an empty array
+    // success_with_data is how four blocked Reddit sources reported healthy with
+    // count 0 in the same status file.
+    const envelope = Array.isArray(collected) ? { rows: collected } : (collected || { rows: [] });
     const rows = Array.isArray(envelope.rows) ? envelope.rows : [];
     const status = envelope.status || (rows.length ? 'success_with_data' : 'success_empty');
+    if (rows.length === 0 && status === 'success_with_data') {
+      return { source_key: source.source_key, platform: source.platform, status: 'success_empty', error: envelope.error, count: 0, rows };
+    }
     return { source_key: source.source_key, platform: source.platform, status, error: envelope.error, count: rows.length, rows };
   } catch (err) {
     console.warn(`[collect_signals] ${source.source_key} failed: ${err.message}`);
@@ -97,6 +104,14 @@ async function run() {
   }
   const redditCount = collected.filter((s) => s && s.platform === 'reddit').length;
   const zeroRedditWarning = adapterStatus.some((r) => String(r.source_key || '').startsWith('reddit_')) && redditCount === 0;
+  // A source that was refused is not a source that had nothing to say. Blocked
+  // sources are counted and named separately so no downstream dashboard can
+  // read a refused source as a healthy quiet one.
+  const blockedSources = adapterStatus.filter((r) => String(r.status || '').startsWith('blocked'));
+  const failedSources = adapterStatus.filter((r) => r.status === 'failed' || r.status === 'timed_out' || r.status === 'misconfigured_no_subreddit');
+  const collectionHealth = failedSources.length ? 'degraded_failed_sources'
+    : (blockedSources.length ? 'degraded_blocked_sources'
+      : (collected.length ? 'healthy' : 'degraded_no_fresh_signals'));
   writeJson('data/community/raw_signals.json', merged);
   writeJson('data/community/collection_status.json', {
     generated_at: new Date().toISOString(),
@@ -104,18 +119,34 @@ async function run() {
     collected_count: collected.length,
     reddit_collected_count: redditCount,
     zero_reddit_warning: zeroRedditWarning,
+    collection_health: collectionHealth,
+    blocked_source_count: blockedSources.length,
+    blocked_sources: blockedSources.map((r) => ({ source_key: r.source_key, platform: r.platform, status: r.status, reason: r.error || 'blocked' })),
     raw_store_count: merged.length
   });
   throttle.checkpoint({
     last_refresh_completed_at: new Date().toISOString(),
     last_refresh_status: 'passed',
+    last_collection_health: collectionHealth,
+    blocked_source_count: blockedSources.length,
     collected_count: collected.length,
     raw_store_count: merged.length
   });
+  for (const blocked of blockedSources) {
+    console.warn(`[collect_signals] BLOCKED_SOURCE ${blocked.source_key} (${blocked.platform}): ${blocked.error || blocked.status}`);
+  }
   if (zeroRedditWarning) console.warn('[collect_signals] WARNING: Reddit contributed 0 fresh public signals in this run. Pipeline continues, but production Reddit access is not healthy.');
-  console.log(`Collected ${collected.length} candidate signals; Reddit contributed ${redditCount}; raw store now has ${merged.length}.`);
+  console.log(`Collected ${collected.length} candidate signals; Reddit contributed ${redditCount}; raw store now has ${merged.length}. Collection health: ${collectionHealth}${blockedSources.length ? ` (${blockedSources.length} blocked source(s): ${blockedSources.map((b) => b.source_key).join(', ')})` : ''}.`);
+  // Rule 0: a collection run that added nothing at all is not a success. Named
+  // stop, non-zero, rather than a green run over an empty result.
+  if (collected.length === 0) {
+    console.error(`COLLECT_SIGNALS_STOP: NO_FRESH_SIGNALS_COLLECTED - every configured source returned nothing (${collectionHealth}).`);
+    process.exitCode = 1;
+  }
 }
-if (require.main === module) run().then(() => process.exit(0)).catch((err) => {
+// process.exit(0) here would have discarded the named-stop exit code set in
+// run(), which is the whole point of setting it.
+if (require.main === module) run().then(() => process.exit(process.exitCode || 0)).catch((err) => {
   try {
     const throttle = createThrottle({ sourceKey: 'public_signal_collection', stateFile: 'data/content_refresh_state.json' });
     throttle.checkpoint({ last_refresh_completed_at: new Date().toISOString(), last_refresh_status: 'failed', last_error: err.message });
