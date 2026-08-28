@@ -20,7 +20,7 @@ uniqueness_strategy: document-architecture
 
 The practical question behind **Do I Need a Contract to Buy a Horse** is not answered safely by repeating a general horse-contract overview. This version focuses on which documents work together, which terms are absent, and which informal messages may matter. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-11-11/the-quiet-risk-inside-do-i-need-a-horse-sale-contract-in-north-carolina/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Document architecture and missing terms
 

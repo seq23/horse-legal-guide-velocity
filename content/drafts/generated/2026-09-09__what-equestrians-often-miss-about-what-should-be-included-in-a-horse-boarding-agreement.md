@@ -20,7 +20,7 @@ uniqueness_strategy: state-venue
 
 The practical question behind **What Should Be Included in a Horse Boarding Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-05-25/a-plain-english-note-on-what-should-be-included-in-a-horse-boarding-agreement/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-09-05/why-what-happens-if-a-leased-horse-becomes-unsound-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: State-law, venue, and local-rule lens
 

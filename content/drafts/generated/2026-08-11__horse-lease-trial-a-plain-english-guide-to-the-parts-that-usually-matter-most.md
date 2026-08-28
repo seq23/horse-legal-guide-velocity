@@ -20,7 +20,7 @@ uniqueness_strategy: state-venue
 
 The practical question behind **Horse Lease & Trial: A Plain-English Guide to the Parts That Usually Matter Most** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-05-26/horse-lease-trial-the-clauses-risks-and-assumptions-people-usually-overlook/, while remaining educational and approval-gated.
+This draft is intentionally scoped to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-07-14/boarding-training-barn-operations-a-plain-english-guide-to-the-parts-that-usually-matter-most/, while remaining educational and approval-gated.
 
 ## Distinctive focus: State-law, venue, and local-rule lens
 

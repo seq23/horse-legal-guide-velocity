@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **Do I Need Insurance for My Horse Business** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-06-09/how-to-think-about-do-i-need-insurance-for-my-horse-business-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-08-20/how-to-think-about-what-happens-if-a-horse-becomes-lame-after-sale-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 

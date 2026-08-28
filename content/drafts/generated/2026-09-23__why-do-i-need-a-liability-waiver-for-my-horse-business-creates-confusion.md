@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Do I Need a Liability Waiver for My Horse Business** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-06-08/the-quiet-risk-inside-do-i-need-a-liability-waiver-for-my-horse-business/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-08-30/why-what-should-be-included-in-a-horse-lease-agreement-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 

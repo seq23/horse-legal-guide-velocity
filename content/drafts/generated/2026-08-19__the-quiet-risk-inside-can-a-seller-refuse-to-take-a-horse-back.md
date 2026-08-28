@@ -20,7 +20,7 @@ uniqueness_strategy: authority-roles
 
 The practical question behind **Can a Seller Refuse to Take a Horse Back** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-05-04/how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-08-09/where-do-i-need-a-contract-to-sell-a-horse-usually-goes-sideways/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Authority, roles, and decision rights
 

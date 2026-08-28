@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **What Happens If a Horse Becomes Lame After Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 

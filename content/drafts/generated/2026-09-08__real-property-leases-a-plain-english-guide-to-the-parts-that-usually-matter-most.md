@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Real Property & Leases: A Plain-English Guide to the Parts That Usually Matter Most** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-06-23/real-property-leases-the-clauses-risks-and-assumptions-people-usually-overlook/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-08-11/horse-lease-trial-a-plain-english-guide-to-the-parts-that-usually-matter-most/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 

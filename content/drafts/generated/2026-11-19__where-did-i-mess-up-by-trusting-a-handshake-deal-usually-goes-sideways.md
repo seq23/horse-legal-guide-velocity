@@ -20,7 +20,7 @@ uniqueness_strategy: document-architecture
 
 The practical question behind **Did I Mess Up by Trusting a Handshake Deal** is not answered safely by repeating a general horse-contract overview. This version focuses on which documents work together, which terms are absent, and which informal messages may matter. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-08-04/what-equestrians-often-miss-about-did-i-mess-up-by-trusting-a-handshake-deal/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-09-12/the-quiet-risk-inside-who-is-liable-if-a-horse-is-injured-while-boarded/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Document architecture and missing terms
 
