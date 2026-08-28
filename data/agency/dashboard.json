@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-28T03:46:56.000Z",
+  "generated_at": "2026-08-28T03:52:47.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-08-27T17:57:36.388Z",
-      "age_hours": 9.8,
+      "age_hours": 9.9,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-08-27T17:57:36.388Z",
-      "age_hours": 9.8,
+      "age_hours": 9.9,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-08-27T17:57:36.388Z",
-      "age_hours": 9.8,
+      "age_hours": 9.9,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -31,8 +31,8 @@
     },
     "providers": {
       "gemini_grounded_search": {
-        "state": "NOT_CONFIGURED",
-        "configured": false,
+        "state": "DEGRADED",
+        "configured": true,
         "capabilities": {
           "live_web": true,
           "grounded_citations": true,
@@ -2099,24 +2099,1148 @@
     }
   },
   "active_search": {
-    "provider_state": "NOT_CONFIGURED",
+    "provider_state": "DEGRADED",
     "summary": {
       "queries": 30,
       "observed": 0,
       "missing": 0,
       "wrong_page": 0,
       "cannibalization": 0,
-      "unknown": 30
+      "unknown": 0
     },
-    "observations": [],
+    "observations": [
+      {
+        "panel_id": "qpanel-001",
+        "query": "What Should Be Included in a Horse Boarding Agreement",
+        "cluster": "boarding-training-and-barn-operations",
+        "target_page": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:23.156Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+          "status": "ok",
+          "title": "What Should Be Included in a Horse Boarding Agreement?",
+          "description": "Short answer: What Should Be Included in a Horse Boarding Agreement? is rarely answered by vibe or horse-world custom alone. Start with the controlling doc",
+          "h1": "What Should Be Included in a Horse Boarding Agreement?",
+          "headings": [
+            "Quick answer",
+            "Must-have boarding clauses",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic",
+            "Need the right next move?"
+          ],
+          "text_chars": 6178,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-002",
+        "query": "What Should I Do If I Receive a Demand Letter",
+        "cluster": "demand-letters-and-disputes",
+        "target_page": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:23.256Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
+          "status": "ok",
+          "title": "What Should I Do If I Receive a Demand Letter?",
+          "description": "Short answer: What Should I Do If I Receive a Demand Letter? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, t",
+          "h1": "What Should I Do If I Receive a Demand Letter?",
+          "headings": [
+            "Quick answer",
+            "First 24-hour response checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic",
+            "Need the right next move?"
+          ],
+          "text_chars": 6018,
+          "internal_links": 30
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-003",
+        "query": "I Sold a Horse Without a Contract — Am I Screwed",
+        "cluster": "emotional-am-i-screwed",
+        "target_page": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:23.355Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+          "status": "ok",
+          "title": "I Sold a Horse Without a Contract — Am I Screwed?",
+          "description": "Short answer: Do not guess and do not escalate blindly. First pin down the exact problem, preserve the written record, and sort the issue into the right la",
+          "h1": "I Sold a Horse Without a Contract — Am I Screwed?",
+          "headings": [
+            "Quick answer",
+            "Yes / no / depends",
+            "Real question patterns this page is built around",
+            "What matters first",
+            "Fast triage framework",
+            "What to gather before you act",
+            "What not to do",
+            "Practical next move",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6694,
+          "internal_links": 26
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-004",
+        "query": "Do I Need an LLC to Start a Horse Business",
+        "cluster": "equine-business-formation",
+        "target_page": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:23.458Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+          "status": "ok",
+          "title": "Do I Need an LLC to Start a Horse Business?",
+          "description": "Short answer: Do I Need an LLC to Start a Horse Business? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the",
+          "h1": "Do I Need an LLC to Start a Horse Business?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 7118,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-005",
+        "query": "What Should Be Included in a Horse Lease Agreement",
+        "cluster": "horse-lease-and-trial",
+        "target_page": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:23.555Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+          "status": "ok",
+          "title": "What Should Be Included in a Horse Lease Agreement?",
+          "description": "Short answer: What Should Be Included in a Horse Lease Agreement? is rarely answered by vibe or horse-world custom alone. Start with the controlling docume",
+          "h1": "What Should Be Included in a Horse Lease Agreement?",
+          "headings": [
+            "Quick answer",
+            "Must-have lease clauses",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic",
+            "Need the right next move?"
+          ],
+          "text_chars": 6173,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-006",
+        "query": "Do I Need a Contract to Sell a Horse",
+        "cluster": "horse-sale-and-purchase",
+        "target_page": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:23.658Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+          "status": "ok",
+          "title": "Do I Need a Contract to Sell a Horse?",
+          "description": "Short answer: Do I Need a Contract to Sell a Horse? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real t",
+          "h1": "Do I Need a Contract to Sell a Horse?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 5802,
+          "internal_links": 30
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-007",
+        "query": "Should I Trademark My Barn Name",
+        "cluster": "intellectual-property-and-brand",
+        "target_page": "/ip/should-i-trademark-my-barn-name/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:23.746Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/ip/should-i-trademark-my-barn-name/",
+          "status": "ok",
+          "title": "Should I Trademark My Barn Name?",
+          "description": "Short answer: Should I Trademark My Barn Name? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeli",
+          "h1": "Should I Trademark My Barn Name?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 5623,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-008",
+        "query": "If Someone Gets Hurt Riding My Horse, Am I Liable",
+        "cluster": "liability-waivers-insurance",
+        "target_page": "/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:23.865Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
+          "status": "ok",
+          "title": "If Someone Gets Hurt Riding My Horse, Am I Liable?",
+          "description": "Short answer: What should someone know about if someone gets hurt riding my horse, am i liable? is rarely answered by vibe or horse-world custom alone. Sta",
+          "h1": "If Someone Gets Hurt Riding My Horse, Am I Liable?",
+          "headings": [
+            "Quick answer",
+            "Liability decision tree",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic",
+            "Need the right next move?"
+          ],
+          "text_chars": 6497,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-009",
+        "query": "What Should Be Included in a Barn Lease",
+        "cluster": "real-property-and-leases",
+        "target_page": "/leases/what-should-be-included-in-a-barn-lease/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:23.948Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/leases/what-should-be-included-in-a-barn-lease/",
+          "status": "ok",
+          "title": "What Should Be Included in a Barn Lease?",
+          "description": "Short answer: What Should Be Included in a Barn Lease? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the rea",
+          "h1": "What Should Be Included in a Barn Lease?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 5227,
+          "internal_links": 24
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-010",
+        "query": "Do I Need a Horse Sale Contract in North Carolina",
+        "cluster": "state-specific",
+        "target_page": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.064Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+          "status": "ok",
+          "title": "Do I Need a Horse Sale Contract in North Carolina?",
+          "description": "Short answer: What equine legal issues should someone consider in Do I Need a Horse Sale Contract in North Carolina? is rarely answered by vibe or horse-wo",
+          "h1": "Do I Need a Horse Sale Contract in North Carolina?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6240,
+          "internal_links": 25
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-011",
+        "query": "How Do I Start an Equine-Assisted Therapy Program Legally",
+        "cluster": "therapeutic-riding-and-hipaa",
+        "target_page": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.146Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
+          "status": "ok",
+          "title": "How Do I Start an Equine-Assisted Therapy Program Legally?",
+          "description": "Short answer: How Do I Start an Equine-Assisted Therapy Program Legally? is rarely answered by vibe or horse-world custom alone. Start with the controlling",
+          "h1": "How Do I Start an Equine-Assisted Therapy Program Legally?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6090,
+          "internal_links": 24
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-012",
+        "query": "What Should Be Included in a Training Agreement",
+        "cluster": "boarding-training-and-barn-operations",
+        "target_page": "/boarding/what-should-be-included-in-a-training-agreement/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.255Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/boarding/what-should-be-included-in-a-training-agreement/",
+          "status": "ok",
+          "title": "What Should Be Included in a Training Agreement?",
+          "description": "Short answer: What Should Be Included in a Training Agreement? is rarely answered by vibe or horse-world custom alone. Start with the controlling document,",
+          "h1": "What Should Be Included in a Training Agreement?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6086,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-013",
+        "query": "How Serious Is a Legal Demand Letter",
+        "cluster": "demand-letters-and-disputes",
+        "target_page": "/disputes/how-serious-is-a-legal-demand-letter/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.366Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/disputes/how-serious-is-a-legal-demand-letter/",
+          "status": "ok",
+          "title": "How Serious Is a Legal Demand Letter?",
+          "description": "Short answer: How Serious Is a Legal Demand Letter? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real t",
+          "h1": "How Serious Is a Legal Demand Letter?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 5546,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-014",
+        "query": "I Bought a Horse and Something Is Wrong — What Now",
+        "cluster": "emotional-am-i-screwed",
+        "target_page": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.444Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
+          "status": "ok",
+          "title": "I Bought a Horse and Something Is Wrong — What Now?",
+          "description": "Short answer: Do not guess and do not escalate blindly. First pin down the exact problem, preserve the written record, and sort the issue into the right la",
+          "h1": "I Bought a Horse and Something Is Wrong — What Now?",
+          "headings": [
+            "Quick answer",
+            "Yes / no / depends",
+            "Real question patterns this page is built around",
+            "What matters first",
+            "Fast triage framework",
+            "What to gather before you act",
+            "What not to do",
+            "Practical next move",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6677,
+          "internal_links": 26
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-015",
+        "query": "How Do I Legally Start a Horse Business",
+        "cluster": "equine-business-formation",
+        "target_page": "/business/how-do-i-legally-start-a-horse-business/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.547Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/business/how-do-i-legally-start-a-horse-business/",
+          "status": "ok",
+          "title": "How Do I Legally Start a Horse Business?",
+          "description": "Short answer: How Do I Legally Start a Horse Business? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the rea",
+          "h1": "How Do I Legally Start a Horse Business?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 5838,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-016",
+        "query": "What Is a Horse Trial Agreement",
+        "cluster": "horse-lease-and-trial",
+        "target_page": "/leases/what-is-a-horse-trial-agreement/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.635Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/leases/what-is-a-horse-trial-agreement/",
+          "status": "ok",
+          "title": "What Is a Horse Trial Agreement?",
+          "description": "Short answer: What Is a Horse Trial Agreement? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeli",
+          "h1": "What Is a Horse Trial Agreement?",
+          "headings": [
+            "Quick answer",
+            "Timeline and process map",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 7338,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-017",
+        "query": "Do I Need a Contract to Buy a Horse",
+        "cluster": "horse-sale-and-purchase",
+        "target_page": "/faq/do-i-need-a-contract-to-buy-a-horse/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.735Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/faq/do-i-need-a-contract-to-buy-a-horse/",
+          "status": "ok",
+          "title": "Do I Need a Contract to Buy a Horse?",
+          "description": "Short answer: Do I Need a Contract to Buy a Horse? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real ti",
+          "h1": "Do I Need a Contract to Buy a Horse?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6909,
+          "internal_links": 30
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-018",
+        "query": "How Do I Protect My Horse Business Brand",
+        "cluster": "intellectual-property-and-brand",
+        "target_page": "/ip/how-do-i-protect-my-horse-business-brand/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.833Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/ip/how-do-i-protect-my-horse-business-brand/",
+          "status": "ok",
+          "title": "How Do I Protect My Horse Business Brand?",
+          "description": "Short answer: How Do I Protect My Horse Business Brand? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the re",
+          "h1": "How Do I Protect My Horse Business Brand?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 5686,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-019",
+        "query": "What Does Equine Liability Law Actually Protect Me From",
+        "cluster": "liability-waivers-insurance",
+        "target_page": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:24.924Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
+          "status": "ok",
+          "title": "What Does Equine Liability Law Actually Protect Me From?",
+          "description": "Short answer: What Does Equine Liability Law Actually Protect Me From? is rarely answered by vibe or horse-world custom alone. Start with the controlling d",
+          "h1": "What Does Equine Liability Law Actually Protect Me From?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 7447,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-020",
+        "query": "Can I Run a Horse Business Under My Lease",
+        "cluster": "real-property-and-leases",
+        "target_page": "/leases/can-i-run-a-horse-business-under-my-lease/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.023Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/leases/can-i-run-a-horse-business-under-my-lease/",
+          "status": "ok",
+          "title": "Can I Run a Horse Business Under My Lease?",
+          "description": "Short answer: Can I Run a Horse Business Under My Lease? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the r",
+          "h1": "Can I Run a Horse Business Under My Lease?",
+          "headings": [
+            "Quick answer",
+            "Yes / no / depends",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6661,
+          "internal_links": 24
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-021",
+        "query": "What Does North Carolina Equine Liability Law Cover",
+        "cluster": "state-specific",
+        "target_page": "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.129Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
+          "status": "ok",
+          "title": "What Does North Carolina Equine Liability Law Cover?",
+          "description": "Short answer: What equine legal issues should someone consider in What Does North Carolina Equine Liability Law Cover? is rarely answered by vibe or horse-",
+          "h1": "What Does North Carolina Equine Liability Law Cover?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6276,
+          "internal_links": 25
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-022",
+        "query": "Am I Subject to HIPAA in Equine Therapy",
+        "cluster": "therapeutic-riding-and-hipaa",
+        "target_page": "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.221Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
+          "status": "ok",
+          "title": "Am I Subject to HIPAA in Equine Therapy?",
+          "description": "Short answer: What should someone know about am i subject to hipaa in equine therapy? is rarely answered by vibe or horse-world custom alone. Start with th",
+          "h1": "Am I Subject to HIPAA in Equine Therapy?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 7288,
+          "internal_links": 24
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-023",
+        "query": "What Legal Documents Do I Need to Run a Boarding Barn",
+        "cluster": "boarding-training-and-barn-operations",
+        "target_page": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.321Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+          "status": "ok",
+          "title": "What Legal Documents Do I Need to Run a Boarding Barn?",
+          "description": "Short answer: What Legal Documents Do I Need to Run a Boarding Barn? is rarely answered by vibe or horse-world custom alone. Start with the controlling doc",
+          "h1": "What Legal Documents Do I Need to Run a Boarding Barn?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 7196,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-024",
+        "query": "Can I Ignore a Demand Letter",
+        "cluster": "demand-letters-and-disputes",
+        "target_page": "/disputes/can-i-ignore-a-demand-letter/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.412Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/disputes/can-i-ignore-a-demand-letter/",
+          "status": "ok",
+          "title": "Can I Ignore a Demand Letter?",
+          "description": "Short answer: Can I Ignore a Demand Letter? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline,",
+          "h1": "Can I Ignore a Demand Letter?",
+          "headings": [
+            "Quick answer",
+            "Yes / no / depends",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 5407,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-025",
+        "query": "Did I Mess Up by Trusting a Handshake Deal",
+        "cluster": "emotional-am-i-screwed",
+        "target_page": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.497Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+          "status": "ok",
+          "title": "Did I Mess Up by Trusting a Handshake Deal?",
+          "description": "Short answer: Do not guess and do not escalate blindly. First pin down the exact problem, preserve the written record, and sort the issue into the right la",
+          "h1": "Did I Mess Up by Trusting a Handshake Deal?",
+          "headings": [
+            "Quick answer",
+            "Yes / no / depends",
+            "Real question patterns this page is built around",
+            "What matters first",
+            "Fast triage framework",
+            "What to gather before you act",
+            "What not to do",
+            "Practical next move",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6634,
+          "internal_links": 26
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-026",
+        "query": "What Legal Documents Do I Need for a Horse Business",
+        "cluster": "equine-business-formation",
+        "target_page": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.603Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+          "status": "ok",
+          "title": "What Legal Documents Do I Need for a Horse Business?",
+          "description": "Short answer: What Legal Documents Do I Need for a Horse Business? is rarely answered by vibe or horse-world custom alone. Start with the controlling docum",
+          "h1": "What Legal Documents Do I Need for a Horse Business?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 7108,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-027",
+        "query": "Who Is Liable During a Horse Lease",
+        "cluster": "horse-lease-and-trial",
+        "target_page": "/leases/who-is-liable-during-a-horse-lease/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.687Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/leases/who-is-liable-during-a-horse-lease/",
+          "status": "ok",
+          "title": "Who Is Liable During a Horse Lease?",
+          "description": "Short answer: Who Is Liable During a Horse Lease? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real tim",
+          "h1": "Who Is Liable During a Horse Lease?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 6748,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-028",
+        "query": "What Should Be Included in a Horse Bill of Sale",
+        "cluster": "horse-sale-and-purchase",
+        "target_page": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.784Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+          "status": "ok",
+          "title": "What Should Be Included in a Horse Bill of Sale?",
+          "description": "Short answer: What Should Be Included in a Horse Bill of Sale? is rarely answered by vibe or horse-world custom alone. Start with the controlling document,",
+          "h1": "What Should Be Included in a Horse Bill of Sale?",
+          "headings": [
+            "Quick answer",
+            "Decision checklist",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 7356,
+          "internal_links": 30
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-029",
+        "query": "Trademark vs LLC Name for a Horse Business",
+        "cluster": "intellectual-property-and-brand",
+        "target_page": "/compare/trademark-vs-llc-name-horse-business/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.880Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/compare/trademark-vs-llc-name-horse-business/",
+          "status": "ok",
+          "title": "Trademark vs LLC Name for a Horse Business",
+          "description": "Short answer: How should someone compare trademark and llc name for a horse business in an equine legal situation? are not interchangeable. Use the version",
+          "h1": "Trademark vs LLC Name for a Horse Business",
+          "headings": [
+            "Quick answer",
+            "Fast comparison table",
+            "Real question patterns this page is built around",
+            "Bottom-line decision",
+            "Best fit / worst fit",
+            "What usually decides the comparison",
+            "Practical verdict",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 7808,
+          "internal_links": 30
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      },
+      {
+        "panel_id": "qpanel-030",
+        "query": "Can I Still Be Sued If I Have a Waiver",
+        "cluster": "liability-waivers-insurance",
+        "target_page": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
+        "status": "provider_error",
+        "observed_at": "2026-08-28T03:56:25.979Z",
+        "provider": "gemini_google_search_grounding",
+        "rank_verified": false,
+        "site_surfaced": false,
+        "error": "404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+        "own_page": {
+          "route": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
+          "status": "ok",
+          "title": "Can I Still Be Sued If I Have a Waiver?",
+          "description": "Short answer: Can I Still Be Sued If I Have a Waiver? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real",
+          "h1": "Can I Still Be Sued If I Have a Waiver?",
+          "headings": [
+            "Quick answer",
+            "Yes / no / depends",
+            "Real question patterns this page is built around",
+            "Bottom line",
+            "What usually decides the answer",
+            "Practical answer framework",
+            "Common mistakes",
+            "What to do next",
+            "Signal-backed FAQ",
+            "Related pages in this cluster",
+            "More in this topic"
+          ],
+          "text_chars": 7042,
+          "internal_links": 29
+        },
+        "diagnosis": [
+          "PROVIDER_ERROR"
+        ]
+      }
+    ],
     "diagnostics": [
       {
         "panel_id": "qpanel-001",
         "query": "What Should Be Included in a Horse Boarding Agreement",
         "cluster": "boarding-training-and-barn-operations",
         "target_page": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2133,8 +3257,10 @@
         "query": "What Should I Do If I Receive a Demand Letter",
         "cluster": "demand-letters-and-disputes",
         "target_page": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2151,8 +3277,10 @@
         "query": "I Sold a Horse Without a Contract — Am I Screwed",
         "cluster": "emotional-am-i-screwed",
         "target_page": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2169,8 +3297,10 @@
         "query": "Do I Need an LLC to Start a Horse Business",
         "cluster": "equine-business-formation",
         "target_page": "/business/do-i-need-an-llc-to-start-a-horse-business/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2187,8 +3317,10 @@
         "query": "What Should Be Included in a Horse Lease Agreement",
         "cluster": "horse-lease-and-trial",
         "target_page": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2205,8 +3337,10 @@
         "query": "Do I Need a Contract to Sell a Horse",
         "cluster": "horse-sale-and-purchase",
         "target_page": "/faq/do-i-need-a-contract-to-sell-a-horse/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2223,8 +3357,10 @@
         "query": "Should I Trademark My Barn Name",
         "cluster": "intellectual-property-and-brand",
         "target_page": "/ip/should-i-trademark-my-barn-name/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2241,8 +3377,10 @@
         "query": "If Someone Gets Hurt Riding My Horse, Am I Liable",
         "cluster": "liability-waivers-insurance",
         "target_page": "/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2259,8 +3397,10 @@
         "query": "What Should Be Included in a Barn Lease",
         "cluster": "real-property-and-leases",
         "target_page": "/leases/what-should-be-included-in-a-barn-lease/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2277,8 +3417,10 @@
         "query": "Do I Need a Horse Sale Contract in North Carolina",
         "cluster": "state-specific",
         "target_page": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2295,8 +3437,10 @@
         "query": "How Do I Start an Equine-Assisted Therapy Program Legally",
         "cluster": "therapeutic-riding-and-hipaa",
         "target_page": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2313,8 +3457,10 @@
         "query": "What Should Be Included in a Training Agreement",
         "cluster": "boarding-training-and-barn-operations",
         "target_page": "/boarding/what-should-be-included-in-a-training-agreement/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2331,8 +3477,10 @@
         "query": "How Serious Is a Legal Demand Letter",
         "cluster": "demand-letters-and-disputes",
         "target_page": "/disputes/how-serious-is-a-legal-demand-letter/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2349,8 +3497,10 @@
         "query": "I Bought a Horse and Something Is Wrong — What Now",
         "cluster": "emotional-am-i-screwed",
         "target_page": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2367,8 +3517,10 @@
         "query": "How Do I Legally Start a Horse Business",
         "cluster": "equine-business-formation",
         "target_page": "/business/how-do-i-legally-start-a-horse-business/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2385,8 +3537,10 @@
         "query": "What Is a Horse Trial Agreement",
         "cluster": "horse-lease-and-trial",
         "target_page": "/leases/what-is-a-horse-trial-agreement/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2403,8 +3557,10 @@
         "query": "Do I Need a Contract to Buy a Horse",
         "cluster": "horse-sale-and-purchase",
         "target_page": "/faq/do-i-need-a-contract-to-buy-a-horse/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2421,8 +3577,10 @@
         "query": "How Do I Protect My Horse Business Brand",
         "cluster": "intellectual-property-and-brand",
         "target_page": "/ip/how-do-i-protect-my-horse-business-brand/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2439,8 +3597,10 @@
         "query": "What Does Equine Liability Law Actually Protect Me From",
         "cluster": "liability-waivers-insurance",
         "target_page": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2457,8 +3617,10 @@
         "query": "Can I Run a Horse Business Under My Lease",
         "cluster": "real-property-and-leases",
         "target_page": "/leases/can-i-run-a-horse-business-under-my-lease/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2475,8 +3637,10 @@
         "query": "What Does North Carolina Equine Liability Law Cover",
         "cluster": "state-specific",
         "target_page": "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2493,8 +3657,10 @@
         "query": "Am I Subject to HIPAA in Equine Therapy",
         "cluster": "therapeutic-riding-and-hipaa",
         "target_page": "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2511,8 +3677,10 @@
         "query": "What Legal Documents Do I Need to Run a Boarding Barn",
         "cluster": "boarding-training-and-barn-operations",
         "target_page": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2529,8 +3697,10 @@
         "query": "Can I Ignore a Demand Letter",
         "cluster": "demand-letters-and-disputes",
         "target_page": "/disputes/can-i-ignore-a-demand-letter/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2547,8 +3717,10 @@
         "query": "Did I Mess Up by Trusting a Handshake Deal",
         "cluster": "emotional-am-i-screwed",
         "target_page": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2565,8 +3737,10 @@
         "query": "What Legal Documents Do I Need for a Horse Business",
         "cluster": "equine-business-formation",
         "target_page": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2583,8 +3757,10 @@
         "query": "Who Is Liable During a Horse Lease",
         "cluster": "horse-lease-and-trial",
         "target_page": "/leases/who-is-liable-during-a-horse-lease/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2601,8 +3777,10 @@
         "query": "What Should Be Included in a Horse Bill of Sale",
         "cluster": "horse-sale-and-purchase",
         "target_page": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2619,8 +3797,10 @@
         "query": "Trademark vs LLC Name for a Horse Business",
         "cluster": "intellectual-property-and-brand",
         "target_page": "/compare/trademark-vs-llc-name-horse-business/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2637,8 +3817,10 @@
         "query": "Can I Still Be Sued If I Have a Waiver",
         "cluster": "liability-waivers-insurance",
         "target_page": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
-        "state": "UNKNOWN",
-        "reasons": [],
+        "state": "PROVIDER_ERROR",
+        "reasons": [
+          "PROVIDER_ERROR"
+        ],
         "evidence": {
           "grounded_site_surfaced": false,
           "gsc_impressions": 0,
@@ -2658,7 +3840,7 @@
     "provider_status": {
       "gsc": "ok",
       "bing": "not_connected",
-      "grounded_search": "NOT_CONFIGURED"
+      "grounded_search": "DEGRADED"
     },
     "summary": {
       "opportunities": 60,
@@ -7395,11 +8577,11 @@
   },
   "provider_health": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-08-27T17:58:54.644Z",
+    "generated_at": "2026-08-28T03:56:26.384Z",
     "providers": {
       "gemini_grounded_search": {
-        "state": "NOT_CONFIGURED",
-        "configured": false,
+        "state": "DEGRADED",
+        "configured": true,
         "capabilities": {
           "live_web": true,
           "grounded_citations": true,
@@ -7434,7 +8616,7 @@
   },
   "external_action_truth": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-08-27T17:58:54.789Z",
+    "generated_at": "2026-08-28T03:56:26.517Z",
     "actions": [
       {
         "id": "gemini_grounded_query",
