@@ -20,7 +20,7 @@ uniqueness_strategy: document-architecture
 
 The practical question behind **What Should Be Included in a Horse Lease Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on which documents work together, which terms are absent, and which informal messages may matter. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-05-20/why-can-you-end-a-horse-lease-early-creates-confusion/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-10-18/the-quiet-risk-inside-how-do-i-protect-my-horse-business-brand/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Document architecture and missing terms
 
