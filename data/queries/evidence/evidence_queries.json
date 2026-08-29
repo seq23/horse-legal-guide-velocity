@@ -13,51 +13,57 @@
   ],
   "queries": [
     {
-      "query": "horse boarding contract",
-      "evidence_tier": "T2b",
-      "source_type": "semrush_keyword_magic",
-      "keyword_difficulty": 0,
-      "weak_incumbent_score": 1.0,
+      "query": "equine bill of sale",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 53.17,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "keyword_difficulty": 9,
+      "weak_incumbent_score": 0.91,
       "intent": "transactional",
       "intent_method": "derived_from_modifier_syntax_and_cpc",
       "serp_features": [],
       "vertical": "equine",
-      "target_domain": "horselegalguide.com",
-      "cpc_usd": 1.08,
-      "paid_competition": 1.0,
+      "cpc_usd": 1.16,
+      "paid_competition": 0.89,
       "competitor_ranking_url": "NO_DATA",
-      "search_volume": 320,
-      "impressions_90d": null,
+      "superseded_tier": "T2b",
+      "search_volume": 1300,
+      "impressions_90d": 6,
       "demand_basis": "search_volume",
       "search_volume_source": "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)",
       "volume_sources": {
-        "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 320
+        "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 1300
       },
-      "volume_conflict": false
-    },
-    {
-      "query": "horse boarding agreement",
-      "evidence_tier": "T2b",
-      "source_type": "semrush_keyword_magic",
-      "keyword_difficulty": 0,
-      "weak_incumbent_score": 1.0,
-      "intent": "transactional",
-      "intent_method": "derived_from_modifier_syntax_and_cpc",
-      "serp_features": [],
-      "vertical": "equine",
-      "target_domain": "horselegalguide.com",
-      "cpc_usd": 0.75,
-      "paid_competition": 0.97,
-      "competitor_ranking_url": "NO_DATA",
-      "search_volume": 260,
-      "impressions_90d": null,
-      "demand_basis": "search_volume",
-      "search_volume_source": "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)",
-      "volume_sources": {
-        "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 260,
-        "semrush_keyword_compare (blue-ocean packet, 2026-08)": 260
-      },
-      "volume_conflict": false
+      "volume_conflict": false,
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.4,
+        "platform_share": 0,
+        "institutional_share": 0.2,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "cms.agr.wa.gov",
+          "legaltemplates.net",
+          "usef.org",
+          "madbarn.com",
+          "esign.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse bill of sale",
@@ -65,7 +71,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 16,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 54.06,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -91,307 +97,27 @@
         "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 1300,
         "semrush_keyword_compare (blue-ocean packet, 2026-08)": 1300
       },
-      "volume_conflict": false
-    },
-    {
-      "query": "do i need liability insurance for my horse in nc?",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 7,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 42.71,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 7,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "equine bill of sale",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 6,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 53.17,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "keyword_difficulty": 9,
-      "weak_incumbent_score": 0.91,
-      "intent": "transactional",
-      "intent_method": "derived_from_modifier_syntax_and_cpc",
-      "serp_features": [],
-      "vertical": "equine",
-      "cpc_usd": 1.16,
-      "paid_competition": 0.89,
-      "competitor_ranking_url": "NO_DATA",
-      "superseded_tier": "T2b",
-      "search_volume": 1300,
-      "impressions_90d": 6,
-      "demand_basis": "search_volume",
-      "search_volume_source": "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)",
-      "volume_sources": {
-        "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 1300
-      },
-      "volume_conflict": false
-    },
-    {
-      "query": "equine law",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 5,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 92.0,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 5,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "partnership agreement vs operating agreement",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 5,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 74.4,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 5,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "equine law suit protection",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 95.33,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 3,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "equine legal",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 92.0,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 3,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "equine legal advice",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 67.33,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 3,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "horse purchase agreement",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 69.0,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "keyword_difficulty": 2,
-      "weak_incumbent_score": 0.98,
-      "intent": "transactional",
-      "intent_method": "derived_from_modifier_syntax_and_cpc",
-      "serp_features": [],
-      "vertical": "equine",
-      "cpc_usd": 1.25,
-      "paid_competition": 0.84,
-      "competitor_ranking_url": "NO_DATA",
-      "superseded_tier": "T2b",
-      "search_volume": 70,
-      "impressions_90d": 3,
-      "demand_basis": "search_volume",
-      "search_volume_source": "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)",
-      "volume_sources": {
-        "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 70
-      },
-      "volume_conflict": false
-    },
-    {
-      "query": "horse purchase contract",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 61.0,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 3,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "horse sales agreement",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 70.67,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 3,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "is equine therapy covered by insurance",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 78.0,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 3,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "waiver vs release",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 71.0,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 3,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "equine law advice",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 78.5,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "equine lease agreement law firm wellington",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 72.0,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
-    },
-    {
-      "query": "equine sales agreement",
-      "evidence_tier": "T1",
-      "source_type": "gsc_search_analytics",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 70.0,
-      "target_domain": "horselegalguide.com",
-      "measured_window_days": 90,
-      "measured_start": "2026-05-25",
-      "measured_end": "2026-08-23",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "search_volume": null,
-      "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "volume_conflict": false,
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "rocketlawyer.com",
+          "legaltemplates.net",
+          "document.com",
+          "esign.com",
+          "madbarn.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse lease agreement",
@@ -399,7 +125,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 80.5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -430,7 +156,655 @@
         "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 12,
         "semrush_keyword_compare (blue-ocean packet, 2026-08)": 17
       },
-      "kd_conflict": true
+      "kd_conflict": true,
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "HELD",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.3,
+        "platform_share": 0,
+        "institutional_share": 0.4,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "buffalo.extension.wisc.edu",
+          "extension.umd.edu",
+          "contractscounsel.com",
+          "speedytemplate.com",
+          "trinityriverfarmtx.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "horse boarding contract",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "keyword_difficulty": 0,
+      "weak_incumbent_score": 1,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "serp_features": [],
+      "vertical": "equine",
+      "target_domain": "horselegalguide.com",
+      "cpc_usd": 1.08,
+      "paid_competition": 1,
+      "competitor_ranking_url": "NO_DATA",
+      "search_volume": 320,
+      "impressions_90d": null,
+      "demand_basis": "search_volume",
+      "search_volume_source": "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)",
+      "volume_sources": {
+        "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 320
+      },
+      "volume_conflict": false,
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "butterscotch.io",
+          "pandadoc.com",
+          "stablewise.com",
+          "utecreekequine.com",
+          "cedarridgeequine.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "horse boarding agreement",
+      "evidence_tier": "T2b",
+      "source_type": "semrush_keyword_magic",
+      "keyword_difficulty": 0,
+      "weak_incumbent_score": 1,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "serp_features": [],
+      "vertical": "equine",
+      "target_domain": "horselegalguide.com",
+      "cpc_usd": 0.75,
+      "paid_competition": 0.97,
+      "competitor_ranking_url": "NO_DATA",
+      "search_volume": 260,
+      "impressions_90d": null,
+      "demand_basis": "search_volume",
+      "search_volume_source": "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)",
+      "volume_sources": {
+        "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 260,
+        "semrush_keyword_compare (blue-ocean packet, 2026-08)": 260
+      },
+      "volume_conflict": false,
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "stablewise.com",
+          "butterscotch.io",
+          "campus.equestrian.ca",
+          "utecreekequine.com",
+          "cocosign.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "horse purchase agreement",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 69,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "keyword_difficulty": 2,
+      "weak_incumbent_score": 0.98,
+      "intent": "transactional",
+      "intent_method": "derived_from_modifier_syntax_and_cpc",
+      "serp_features": [],
+      "vertical": "equine",
+      "cpc_usd": 1.25,
+      "paid_competition": 0.84,
+      "competitor_ranking_url": "NO_DATA",
+      "superseded_tier": "T2b",
+      "search_volume": 70,
+      "impressions_90d": 3,
+      "demand_basis": "search_volume",
+      "search_volume_source": "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)",
+      "volume_sources": {
+        "semrush_keyword_magic (Portfolio Search Packet v2, pulled 2026-08-24)": 70
+      },
+      "volume_conflict": false,
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "madbarn.com",
+          "equineworld.co.uk",
+          "img1.wsimg.com",
+          "equinelegalsolutions.com",
+          "ehorses.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "do i need liability insurance for my horse in nc?",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 7,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 42.71,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 7,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "ncleg.net",
+          "nchorsecouncil.com",
+          "petindustryins.com",
+          "equineinsurancecenter.com",
+          "wardandsmith.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "equine law",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 92,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 5,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "equinelawyer.com",
+          "equinelawblog.com",
+          "fosterswift.com",
+          "equilawllc.com",
+          "stites.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "partnership agreement vs operating agreement",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 74.4,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 5,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "legalclarity.org",
+          "pandadoc.com",
+          "upcounsel.com",
+          "foroes.net",
+          "targetcapitalaccount.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "equine law suit protection",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 95.33,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 3,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.4,
+        "platform_share": 0,
+        "institutional_share": 0.2,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "useventing.com",
+          "texasbarsections.com",
+          "ncleg.net",
+          "aglaw.psu.edu",
+          "law.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "equine legal",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 92,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 3,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "equinelawyer.com",
+          "equinelegalsolutions.com",
+          "equilawllc.com",
+          "equinelawuk.co.uk"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "equine legal advice",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 67.33,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 3,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "equinelawuk.co.uk",
+          "equinelawyer.com",
+          "grsm.com",
+          "teperlegal.com",
+          "equilawllc.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "horse purchase contract",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 61,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 3,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "ehorses.com",
+          "equinelegalsolutions.com",
+          "img1.wsimg.com",
+          "eauqena97rj.exactdn.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "horse sales agreement",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 70.67,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 3,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "madbarn.com",
+          "ehorses.com",
+          "equineworld.co.uk",
+          "netlawman.com.au",
+          "miequinelaw.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "is equine therapy covered by insurance",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 78,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 3,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T2_COST_IN_MARKET",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "equestriantherapy.com",
+          "legalclarity.org",
+          "amerihealthcaritasla.com",
+          "damorementalhealth.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "waiver vs release",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 71,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 3,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "waiversign.com",
+          "upcounsel.com",
+          "legalclarity.org",
+          "lexisnexis.co.uk",
+          "oeblawtn.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "equine law advice",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 78.5,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 2,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "equinelawuk.co.uk",
+          "rotherabray.co.uk",
+          "setfords.co.uk",
+          "jacksons.law",
+          "bhs.org.uk"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "equine lease agreement law firm wellington",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 72,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 2,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 2,
+        "cited_hosts": [
+          "gueronnierelaw.com",
+          "zwpfirm.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
+    },
+    {
+      "query": "equine sales agreement",
+      "evidence_tier": "T1",
+      "source_type": "gsc_search_analytics",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "average_position": 70,
+      "target_domain": "horselegalguide.com",
+      "measured_window_days": 90,
+      "measured_start": "2026-05-25",
+      "measured_end": "2026-08-23",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "search_volume": null,
+      "impressions_90d": 2,
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "lacykimballlaw.com",
+          "madbarn.com",
+          "miequinelaw.com",
+          "aria-grace.com",
+          "equusfoundation.org"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse leaze",
@@ -438,7 +812,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 82.5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -448,7 +822,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "yeovilhistory.info",
+          "streetlist.co.uk",
+          "oed.com",
+          "tfl.gov.uk",
+          "carescopeintel.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse sale disputes",
@@ -456,8 +850,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 90.0,
+      "ctr": 0,
+      "average_position": 90,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -466,7 +860,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.4,
+        "platform_share": 0,
+        "institutional_share": 0.2,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "ecf.ksd.uscourts.gov",
+          "franklinlaw.co.nz",
+          "jacksons.law",
+          "equilegal.com.au",
+          "hrjforemanlaws.co.uk"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse sales contract",
@@ -474,8 +888,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 67.0,
+      "ctr": 0,
+      "average_position": 67,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -484,7 +898,26 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "ehorses.com",
+          "miequinelaw.com",
+          "madbarn.com",
+          "img1.wsimg.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse trial agreement",
@@ -492,8 +925,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 44.0,
+      "ctr": 0,
+      "average_position": 44,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -502,7 +935,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "usef.org",
+          "equinelaw.alisonrowelaw.com",
+          "equestriancounsel.com",
+          "equinelegalsolutions.com",
+          "alifeofheritage.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse vet dispute resolution",
@@ -510,7 +963,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 88.5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -520,7 +973,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "scottbailey.co.uk",
+          "hrjforemanlaws.co.uk",
+          "vetmediation.co.uk",
+          "ruthgodfrey.co.uk",
+          "cvbc.ca"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse vet disputes",
@@ -528,8 +1001,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 71.0,
+      "ctr": 0,
+      "average_position": 71,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -538,7 +1011,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "hrjforemanlaws.co.uk",
+          "jacksons.law",
+          "ashfords.co.uk",
+          "blackstonesolicitorsltd.co.uk",
+          "scottbailey.co.uk"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "how to start an equestrian business",
@@ -546,7 +1039,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 77.5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -556,7 +1049,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "fairwaystables.com",
+          "infohorse.com",
+          "jim.com",
+          "chwals.com",
+          "horsesport.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "start an equestrian business",
@@ -564,7 +1077,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 72.5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -574,7 +1087,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "jim.com",
+          "projects.sare.org",
+          "zenbusiness.com",
+          "crossbowequine.com",
+          "horsesport.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "usef trainer insurance",
@@ -582,7 +1115,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 60.5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -592,7 +1125,25 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 3,
+        "cited_hosts": [
+          "usef.org",
+          "equisure-inc.com",
+          "markel.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "waiver and release of liability",
@@ -600,8 +1151,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 86.0,
+      "ctr": 0,
+      "average_position": 86,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -610,7 +1161,26 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "docusign.com",
+          "lawdepot.com",
+          "legaltemplates.net",
+          "business-in-a-box.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "what are the legal aspects of horse sale contracts",
@@ -618,7 +1188,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 87.5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -628,7 +1198,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "doi.org",
+          "natlawreview.com",
+          "equinelegalsolutions.com",
+          "blackstonesolicitorsltd.co.uk",
+          "oregonhorsecouncil.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "what is a liability release form",
@@ -636,7 +1226,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 72.5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -646,7 +1236,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.4,
+        "platform_share": 0,
+        "institutional_share": 0.2,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "legalclarity.org",
+          "en.wikipedia.org",
+          "legalzoom.com",
+          "legalmatch.com",
+          "rocketlawyer.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "what s the difference between a syndicate and full horse ownership?",
@@ -654,7 +1264,7 @@
       "source_type": "gsc_search_analytics",
       "impressions": 2,
       "clicks": 0,
-      "ctr": 0.0,
+      "ctr": 0,
       "average_position": 76.5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
@@ -664,7 +1274,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 2,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "pastthewire.com",
+          "britishhorseracing.com",
+          "racehorseownership101.com",
+          "streetsbloodstock.co.uk",
+          "racingclub.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "bill of sale horse",
@@ -672,8 +1302,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 59.0,
+      "ctr": 0,
+      "average_position": 59,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -682,7 +1312,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "legaltemplates.net",
+          "document.com",
+          "esign.com",
+          "madbarn.com",
+          "helpfulhorsehints.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "can i pay using my stables",
@@ -690,8 +1340,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 63.0,
+      "ctr": 0,
+      "average_position": 63,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -700,7 +1350,26 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "support.stables.money",
+          "stables.money",
+          "stables.co",
+          "docs.stripe.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "choice of venue",
@@ -708,8 +1377,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 52.0,
+      "ctr": 0,
+      "average_position": 52,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -718,7 +1387,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.4,
+        "platform_share": 0,
+        "institutional_share": 0.2,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "fynk.com",
+          "berkeley.pressbooks.pub",
+          "law.cornell.edu",
+          "maddinhauser.com",
+          "contracts.justia.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "difference between insurance policy and insurance certificate",
@@ -726,8 +1415,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 79.0,
+      "ctr": 0,
+      "average_position": 79,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -736,7 +1425,26 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "brokerageaudit.com",
+          "illumend.ai",
+          "winsurtech.com",
+          "thecontractormatrix.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "difference between partnership agreement and operating agreement",
@@ -744,8 +1452,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 80.0,
+      "ctr": 0,
+      "average_position": 80,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -754,7 +1462,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "legalclarity.org",
+          "foroes.net",
+          "targetcapitalaccount.com",
+          "legalshield.com",
+          "taxsharkinc.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "equine business",
@@ -762,8 +1490,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 56.0,
+      "ctr": 0,
+      "average_position": 56,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -772,7 +1500,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "equinebusinessassociation.com",
+          "equinegenie.com",
+          "equestrianprofessional.com",
+          "equinebusinessmagazine.com",
+          "horsebusinessmanager.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "equine lease agreement",
@@ -780,8 +1528,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 74.0,
+      "ctr": 0,
+      "average_position": 74,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -790,7 +1538,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "HELD",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.2,
+        "platform_share": 0,
+        "institutional_share": 0.6,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "extension.umd.edu",
+          "equinelegalsolutions.com",
+          "qld.equestrian.org.au",
+          "buffalo.extension.wisc.edu",
+          "wyandot.osu.edu"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "equine purchase agreement",
@@ -798,8 +1566,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 73.0,
+      "ctr": 0,
+      "average_position": 73,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -808,7 +1576,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "equusfoundation.org",
+          "files.usef.org",
+          "equinelegalsolutions.com",
+          "madbarn.com",
+          "img1.wsimg.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "equine veterinary treatment disputes",
@@ -816,8 +1604,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 78.0,
+      "ctr": 0,
+      "average_position": 78,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -826,7 +1614,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "knyvet.bailii.org",
+          "ashfords.co.uk",
+          "hrjforemanlaws.co.uk",
+          "blackstonesolicitorsltd.co.uk",
+          "rotherabray.co.uk"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "fictitious business name vs trademark ownership",
@@ -834,8 +1642,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 75.0,
+      "ctr": 0,
+      "average_position": 75,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -844,7 +1652,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "HELD",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.3,
+        "platform_share": 0,
+        "institutional_share": 0.4,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "pa.gov",
+          "legalclarity.org",
+          "keenerlegal.com",
+          "schenklawfirm.com",
+          "leginfo.legislature.ca.gov"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "guides and instructors insurance",
@@ -852,8 +1680,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 98.0,
+      "ctr": 0,
+      "average_position": 98,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -862,7 +1690,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "vinsurancegroup.com",
+          "kandkinsurance.com",
+          "mountain-training.org",
+          "guidesgonewild.com",
+          "britishcycling.org.uk"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse bills",
@@ -870,8 +1718,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 67.0,
+      "ctr": 0,
+      "average_position": 67,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -880,7 +1728,25 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 3,
+        "cited_hosts": [
+          "horsebills.com",
+          "barnbills.com",
+          "softwarereview.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse law",
@@ -888,8 +1754,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 5.0,
+      "ctr": 0,
+      "average_position": 5,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -898,7 +1764,26 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "HELD",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.25,
+        "platform_share": 0,
+        "institutional_share": 0.5,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "animallaw.info",
+          "aphis.usda.gov",
+          "uscode.house.gov",
+          "legislation.gov.uk"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse lease agreements",
@@ -906,8 +1791,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 75.0,
+      "ctr": 0,
+      "average_position": 75,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -916,7 +1801,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "HELD",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.3,
+        "platform_share": 0,
+        "institutional_share": 0.4,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "buffalo.extension.wisc.edu",
+          "extension.umd.edu",
+          "pandadoc.com",
+          "bigskyhorseleasing.com",
+          "speedytemplate.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse ownership dispute",
@@ -924,8 +1829,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 70.0,
+      "ctr": 0,
+      "average_position": 70,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -934,7 +1839,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.4,
+        "platform_share": 0,
+        "institutional_share": 0.2,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "knyvet.bailii.org",
+          "ols-solicitors.co.uk",
+          "cataneselaw.com",
+          "wicourts.gov",
+          "exa.ai"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "horse purchase dispute",
@@ -942,8 +1867,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 79.0,
+      "ctr": 0,
+      "average_position": 79,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -952,7 +1877,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "teeslaw.com",
+          "hrjforemanlaws.co.uk",
+          "michaelbowerequinelaw.co.uk",
+          "jacksons.law",
+          "edmondsonhall.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "how to become a horse business entrepreneur",
@@ -960,8 +1905,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 63.0,
+      "ctr": 0,
+      "average_position": 63,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -970,7 +1915,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "theplaidhorse.com",
+          "infohorse.com",
+          "horsejournals.intsi.net",
+          "tsln.com",
+          "zenbusiness.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "how to start a horse business",
@@ -978,8 +1943,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 71.0,
+      "ctr": 0,
+      "average_position": 71,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -988,7 +1953,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "legalclarity.org",
+          "theplaidhorse.com",
+          "zenbusiness.com",
+          "tsln.com",
+          "pureequine.com.au"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "how to start a therapeutic riding program",
@@ -996,8 +1981,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 53.0,
+      "ctr": 0,
+      "average_position": 53,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1006,7 +1991,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.4,
+        "platform_share": 0,
+        "institutional_share": 0.2,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "pathintl.org",
+          "liveabout.com",
+          "atouchofbusiness.com",
+          "lessonsintr.com",
+          "extension.usu.edu"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "insurance policy vs certificate",
@@ -1014,8 +2019,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 88.0,
+      "ctr": 0,
+      "average_position": 88,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1024,7 +2029,26 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "illumend.ai",
+          "brokerageaudit.com",
+          "winsurtech.com",
+          "thecontractormatrix.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "leasing a horse contract",
@@ -1032,8 +2056,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 74.0,
+      "ctr": 0,
+      "average_position": 74,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1042,7 +2066,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "HELD",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.1,
+        "platform_share": 0,
+        "institutional_share": 0.8,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "buffalo.extension.wisc.edu",
+          "extension.umd.edu",
+          "washington.osu.edu",
+          "putnam.osu.edu",
+          "loio.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "operating agreement vs partnership agreement",
@@ -1050,8 +2094,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 69.0,
+      "ctr": 0,
+      "average_position": 69,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1060,7 +2104,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "pandadoc.com",
+          "upcounsel.com",
+          "legalclarity.org",
+          "foroes.net",
+          "targetcapitalaccount.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "release vs waiver",
@@ -1068,8 +2132,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 67.0,
+      "ctr": 0,
+      "average_position": 67,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1078,7 +2142,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "waiversign.com",
+          "legalclarity.org",
+          "upcounsel.com",
+          "lawdepot.com",
+          "oeblawtn.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "release waiver",
@@ -1086,8 +2170,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 100.0,
+      "ctr": 0,
+      "average_position": 100,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1096,7 +2180,26 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "HELD",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.375,
+        "platform_share": 0,
+        "institutional_share": 0.25,
+        "distinct_cited_hosts": 4,
+        "cited_hosts": [
+          "rocketlawyer.com",
+          "lawdepot.com",
+          "docusign.com",
+          "en.wikipedia.org"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "standard training agreement",
@@ -1104,8 +2207,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 72.0,
+      "ctr": 0,
+      "average_position": 72,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1114,7 +2217,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "aresracingaustralia.com.au",
+          "forms.mgcs.gov.on.ca",
+          "icaew.com",
+          "tor.racingaustralia.horse",
+          "charliehr.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "transfer of horse ownership agreement",
@@ -1122,8 +2245,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 66.0,
+      "ctr": 0,
+      "average_position": 66,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1132,7 +2255,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "usef.org",
+          "aqha.com",
+          "abcdocz.com",
+          "madbarn.com",
+          "equusfoundation.org"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "usef liability insurance",
@@ -1140,8 +2283,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 42.0,
+      "ctr": 0,
+      "average_position": 42,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1150,7 +2293,23 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 1,
+        "cited_hosts": [
+          "usef.org"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "usef waiver",
@@ -1158,8 +2317,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 50.0,
+      "ctr": 0,
+      "average_position": 50,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1168,7 +2327,23 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 1,
+        "cited_hosts": [
+          "usef.org"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "waiver release",
@@ -1176,8 +2351,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 99.0,
+      "ctr": 0,
+      "average_position": 99,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1186,7 +2361,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T4_INFORMATIONAL",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "lawdepot.com",
+          "docusign.com",
+          "eforms.com",
+          "waiversign.com",
+          "esign.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     },
     {
       "query": "what is the difference between a policy and a certificate of insurance",
@@ -1194,8 +2389,8 @@
       "source_type": "gsc_search_analytics",
       "impressions": 1,
       "clicks": 0,
-      "ctr": 0.0,
-      "average_position": 99.0,
+      "ctr": 0,
+      "average_position": 99,
       "target_domain": "horselegalguide.com",
       "measured_window_days": 90,
       "measured_start": "2026-05-25",
@@ -1204,7 +2399,27 @@
       "last_seen": "2026-08-25",
       "search_volume": null,
       "impressions_90d": 1,
-      "demand_basis": "impressions_90d"
+      "demand_basis": "impressions_90d",
+      "lead_intent_tier": "T3_SELECTION",
+      "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
+      "occupancy": {
+        "verdict": "CONTESTED",
+        "reason": "GROUNDED_CITATION_OBSERVATION",
+        "openness_score": 0.5,
+        "platform_share": 0,
+        "institutional_share": 0,
+        "distinct_cited_hosts": 5,
+        "cited_hosts": [
+          "illumend.ai",
+          "mycoitracking.com",
+          "brokerageaudit.com",
+          "thecontractormatrix.com",
+          "winsurtech.com"
+        ],
+        "cited_ours": [],
+        "observed_at": "2026-08-29T01:15:24.757Z",
+        "engine": "openrouter:ibm-granite/granite-4.0-h-micro"
+      }
     }
   ],
   "last_gsc_ingest": {
@@ -1223,5 +2438,44 @@
     "removed_field": "`volume` is removed. It previously held BOTH monthly search volume (semrush rows) and this domain's own 90d impressions (gsc rows), so rank_score compared incompatible units. A missing key throws; a wrong number does not.",
     "never": "Do not sum or compare across units. Volumes from disagreeing packets are recorded in volume_sources with volume_conflict=true and are never averaged.",
     "precedent": "Follows portfolio_demand.json (portfolio-demand-v1), which separated volume_mo from demand_signal/demand_signal_unit for this same defect."
+  },
+  "discovery_gap_pass": {
+    "at": "2026-08-29T01:29:17.874Z",
+    "by": "scripts/queries/score_discovery_gap.mjs",
+    "why": "62 measured queries carried demand and nothing else. Demand says how many people ask; it does not say whether the answer is winnable or whether the asker is near a form. Both of those are now recorded.",
+    "expansion_sources": [
+      "data/agency/gsc_snapshot.json (live Search Console snapshot) - joined for phrasing not yet ingested"
+    ],
+    "refused_sources": [
+      "data/queries/evidence/bing_keyword_research_2026-08-26.json - T2a in a third unit (Bing Webmaster impressions). A T2a row with demand_basis \"none\" is refused by scripts/atlas/validate_query_atlas.mjs, correctly. Left separate pending a deliberate unit decision, as its own note asks.",
+      "data/queries/query_universe.json - page targets derived from existing content, not observed phrasing. Not evidence.",
+      "any modelled or estimated search volume - no live paid keyword source exists on this account."
+    ],
+    "lead_intent_classifier": {
+      "T1_LOCAL_READY": "near me / open now / in <City ST> / in-network",
+      "T2_COST_IN_MARKET": "how much / cost / price / fee / does insurance cover / worth it / out of pocket",
+      "T3_SELECTION": "how to choose|compare|find / red flags / vs / difference between / which is better / what to ask / best",
+      "T4_INFORMATIONAL": "everything else - definitions, lists, process explanations",
+      "note": "Word-boundary anchored. `\\bfees?\\b` deliberately does not match \"feel\"."
+    },
+    "openness_method": {
+      "input": "cited_hosts from a grounded run of scripts/llm_citation_probe.mjs (OpenRouter web plugin, engine=parallel, mode=turbo)",
+      "formula": "openness_score = clamp(0.5 + 0.5*platform_share - 0.5*institutional_share, 0, 1)",
+      "platform_share": "share of distinct cited hosts that are user-generated or aggregator platforms",
+      "institutional_share": "share of distinct cited hosts on .gov/.edu/.mil or wikipedia",
+      "verdicts": {
+        "HELD_BY_US": "the engine already cited one of our own domains - not an opportunity, a position to defend",
+        "OPEN": "openness_score >= 0.6 - the answer is assembled from platforms and no authoritative page owns it",
+        "CONTESTED": "0.4 <= openness_score < 0.6",
+        "HELD": "openness_score < 0.4 - institutions or established publishers occupy the answer",
+        "UNMEASURED": "the probe has not answered for this query; NOT a zero and never to be read as one"
+      },
+      "not_measured": "search volume, keyword difficulty, organic rank. None are inferable from a citation observation and none are written."
+    },
+    "counts": {
+      "total_queries": 62,
+      "added_this_pass": 0,
+      "with_openness_reading": 62
+    }
   }
 }
