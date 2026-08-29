@@ -244,3 +244,11 @@ prior.latest_summary = {
 fs.mkdirSync(path.join(ROOT, path.dirname(OUT)), { recursive: true });
 fs.writeFileSync(path.join(ROOT, OUT), JSON.stringify(prior, null, 2) + '\n');
 console.log(`citation probe [${PROVIDER}/${MODE}]: ${cited}/${observations.length} observations named one of our domains (${prior.latest_summary.self_cited_rate_pct}%); ${errored} provider error(s). Recorded in ${OUT}`);
+// 25 rows of provider_error and a green step read as "the probe ran". It did
+// not: nothing was observed. The blackout gets a name in the log for the same
+// reason live_query_observer.js names its stop.
+if (observations.length && errored === observations.length) {
+  const first = observations.find((o) => o.status === 'provider_error');
+  console.log(`NAMED_STOP: CITATION_PROBE_NO_OBSERVATION_TAKEN - all ${errored} probe attempt(s) failed at the provider, so this run measured nothing. First error: ${String(first?.error || 'unknown').slice(0, 300)}`);
+  console.log('If this is a credit or quota condition on the provider account, clear it there; the probe resumes on the next run.');
+}

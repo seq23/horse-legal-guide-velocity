@@ -26,10 +26,27 @@
  * Truth boundary: these are citation/surfacing observations, not organic rank.
  * rank_verified:false is recorded on every row for that reason.
  *
- * Rule 0: this stage may not exit 0 having done nothing. If no provider is
- * configured, or every provider fails for every panel query, it records the
- * named stop and exits non-zero. A silent green run is what let 30 dead rows
- * look like a working integration.
+ * Rule 0: this stage may not exit 0 having done nothing. If every provider fails
+ * for every panel query it records a named stop. A silent green run is what let
+ * 30 dead rows look like a working integration.
+ *
+ * What decides red from a clean stop is WHY every provider failed, and the two
+ * are not the same fault:
+ *
+ *   - Owner-held: 401/403 (key rejected or revoked), 402 (OpenRouter out of
+ *     credits), 429 (Gemini quota exhausted), or no key configured at all.
+ *     Nobody but the account owner can clear these, and a permanently red lane
+ *     for a billing balance teaches everyone to ignore the monitor. These stop
+ *     with a name, the provider, the HTTP status and the owner action, and exit
+ *     0. Nothing is recorded as observed and provider_state stays DEGRADED.
+ *   - Anything else: 5xx, connection failures, JSON that will not parse, a
+ *     response shape the observer does not understand. That is a real break in
+ *     the provider integration and it still exits non-zero. Making the whole
+ *     blackout unconditionally green would convert exactly this case into a
+ *     silent no-op, which is the defect the paragraph above exists to prevent.
+ *
+ * Observation resumes on the next run the moment credits or quota return; no
+ * provider is disabled by any of this.
  */
 const fs=require('fs');const path=require('path');
 // OpenRouter bills the web plugin per REQUEST on the parallel engine with 10
@@ -37,6 +54,26 @@ const fs=require('fs');const path=require('path');
 // on the default engine's per-result billing. Identical url_citation schema.
 const WEB_ENGINE=process.env.OPENROUTER_WEB_ENGINE||'parallel';
 const WEB_MODE=process.env.OPENROUTER_WEB_MODE||'turbo';
+// The only HTTP statuses that mean "the account owner has to do something",
+// never "the integration is broken". 401/403 key rejected, 402 out of credits,
+// 429 quota or rate limit exhausted.
+const OWNER_HELD_HTTP_STATUS=new Set([401,402,403,429]);
+const OWNER_ACTION_BY_STATUS={401:'the API key was rejected - re-issue it and update the repository secret',403:'the API key is forbidden for this call - check the key\'s permissions/billing state on the provider account',402:'the account is out of credits - add credits (OpenRouter: https://openrouter.ai/settings/credits)',429:'the account quota or rate limit is exhausted - raise the quota or wait for the window to reset'};
+function providerError(status,text){const e=new Error(`${status}: ${String(text).slice(0,500)}`);e.httpStatus=status;return e;}
+// Every recorded failure must be classifiable. An attempt with no HTTP status -
+// a timeout, a DNS failure, a JSON parse error, an unexpected body - is by
+// definition not owner-held and keeps the lane red.
+function isOwnerHeldAttempt(a){return Number.isInteger(a?.http_status)&&OWNER_HELD_HTTP_STATUS.has(a.http_status);}
+function blackoutProviderStatuses(observations){
+  const byKey=new Map();
+  for(const o of observations)for(const a of o.provider_attempts||[]){
+    if(a.status==='ok')continue;
+    const key=`${a.provider}:${a.http_status??'no_http_status'}`;
+    const row=byKey.get(key)||{provider:a.provider,http_status:Number.isInteger(a.http_status)?a.http_status:null,owner_held:isOwnerHeldAttempt(a),attempts:0,sample_error:String(a.error||'').slice(0,300)};
+    row.attempts+=1;byKey.set(key,row);
+  }
+  return [...byKey.values()];
+}
 function read(rel,fallback){try{return JSON.parse(fs.readFileSync(path.resolve(process.cwd(),rel),'utf8'));}catch{return fallback;}}
 function write(rel,v){const p=path.resolve(process.cwd(),rel);fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');}
 function clean(v){return String(v||'').replace(/\s+/g,' ').trim();}function host(u){try{return new URL(u).hostname.replace(/^www\./,'').toLowerCase();}catch{return '';}}function attributedHost(c){const title=String(c?.title||'').trim().toLowerCase().replace(/^www\./,'');if(/^[a-z0-9.-]+\.[a-z]{2,}$/.test(title))return title;return host(c?.url||'');}function isHorseCitation(c){const h=attributedHost(c);return h==='horselegalguide.com'||h.endsWith('.horselegalguide.com')||String(c?.title||'').toLowerCase().includes('horselegalguide.com');}
@@ -55,7 +92,7 @@ async function observeOpenRouter(item,env){
   const maxResults=Math.max(1,Math.min(20,Number(env.OPENROUTER_WEB_MAX_RESULTS||10)));
   const r=await fetch('https://openrouter.ai/api/v1/chat/completions',{method:'POST',headers:{'content-type':'application/json',authorization:`Bearer ${env.OPENROUTER_API_KEY}`},body:JSON.stringify({model,temperature:0,max_tokens:600,plugins:[{id:'web',engine:WEB_ENGINE,mode:WEB_MODE,max_results:maxResults}],messages:[{role:'user',content:promptFor(item)}]}),signal:AbortSignal.timeout(Number(env.LIVE_QUERY_TIMEOUT_MS||45000))});
   const t=await r.text();
-  if(!r.ok)throw new Error(`${r.status}: ${t.slice(0,500)}`);
+  if(!r.ok)throw providerError(r.status,t);
   const body=JSON.parse(t);const message=body?.choices?.[0]?.message||{};
   const seen=new Set();const citations=[];
   for(const a of message.annotations||[]){const c=a?.url_citation;if(!c?.url||seen.has(c.url))continue;seen.add(c.url);citations.push({url:c.url,title:clean(c.title||'')});}
@@ -70,7 +107,7 @@ async function observeGemini(item,env){
   const endpoint=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(env.GEMINI_API_KEY)}`;
   const r=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({contents:[{role:'user',parts:[{text:promptFor(item)}]}],tools:[{google_search:{}}],generationConfig:{temperature:.1}}),signal:AbortSignal.timeout(Number(env.GEMINI_SEARCH_TIMEOUT_MS||30000))});
   const t=await r.text();
-  if(!r.ok)throw new Error(`${r.status}: ${t.slice(0,500)}`);
+  if(!r.ok)throw providerError(r.status,t);
   return {provider:'gemini_google_search_grounding',model,...parts(JSON.parse(t))};
 }
 
@@ -89,7 +126,7 @@ async function observeOne(item,env,chain){
   const attempts=[];
   for(const p of chain){
     try{const result=await p.run(item,env);attempts.push({provider:p.key,status:'ok'});return {result,attempts};}
-    catch(e){attempts.push({provider:p.key,status:'provider_error',error:e.message});}
+    catch(e){attempts.push({provider:p.key,status:'provider_error',http_status:Number.isInteger(e?.httpStatus)?e.httpStatus:null,error:e.message});}
   }
   return {result:null,attempts};
 }
@@ -120,9 +157,31 @@ async function main(){
   const state=!chain.length?'NOT_CONFIGURED':(succeeded.length?(succeeded.length===observations.length?'CONNECTED':'DEGRADED'):'DEGRADED');
   // A named stop, never a silent zero. Both blackout shapes get their own name
   // so the reason is readable from the artifact without opening a log.
-  const stop=!chain.length
-    ?{reason:'NO_SEARCH_PROVIDER_CONFIGURED',detail:'Neither OPENROUTER_API_KEY nor GEMINI_API_KEY is set, so no live citation observation could be taken.'}
-    :(succeeded.length?null:{reason:'ALL_SEARCH_PROVIDERS_FAILED',detail:`${observations.length} panel quer${observations.length===1?'y':'ies'} attempted against ${chain.map(p=>p.key).join(', ')}; every attempt failed.`,first_error:observations[0]?.error||null});
+  let stop=null;
+  if(!chain.length){
+    // No key at all is owner-held by definition: nobody but the owner can add
+    // one. It is still a stop with a name, never a quiet success.
+    stop={reason:'NO_SEARCH_PROVIDER_CONFIGURED',detail:'Neither OPENROUTER_API_KEY nor GEMINI_API_KEY is set, so no live citation observation could be taken.',owner_held:true,owner_action:'Add OPENROUTER_API_KEY (and optionally GEMINI_API_KEY) to the repository secrets.',provider_statuses:[]};
+  }else if(!succeeded.length){
+    const providerStatuses=blackoutProviderStatuses(observations);
+    // Owner-held only when EVERY recorded failure is owner-held. One 500, one
+    // timeout, one unparseable body anywhere in the run and the whole blackout
+    // is a real break that must stay red.
+    const ownerHeld=providerStatuses.length>0&&providerStatuses.every(row=>row.owner_held);
+    const notOwnerHeld=providerStatuses.filter(row=>!row.owner_held);
+    stop=ownerHeld
+      ?{reason:'SEARCH_PROVIDER_BILLING_OR_QUOTA_BLOCKED',
+        detail:`${observations.length} panel quer${observations.length===1?'y':'ies'} attempted against ${chain.map(p=>p.key).join(', ')}; every attempt was refused by the provider account, not by the integration: ${providerStatuses.map(row=>`${row.provider} HTTP ${row.http_status}`).join('; ')}.`,
+        owner_held:true,
+        owner_action:providerStatuses.map(row=>`${row.provider} HTTP ${row.http_status}: ${OWNER_ACTION_BY_STATUS[row.http_status]||'clear the condition on the provider account'}`).join(' | '),
+        provider_statuses:providerStatuses,
+        first_error:observations[0]?.error||null}
+      :{reason:'ALL_SEARCH_PROVIDERS_FAILED',
+        detail:`${observations.length} panel quer${observations.length===1?'y':'ies'} attempted against ${chain.map(p=>p.key).join(', ')}; every attempt failed, and ${notOwnerHeld.length} failure shape${notOwnerHeld.length===1?' is':'s are'} not an owner-held credential/billing/quota condition: ${notOwnerHeld.map(row=>`${row.provider} ${row.http_status===null?'no HTTP status':`HTTP ${row.http_status}`}`).join('; ')}.`,
+        owner_held:false,
+        provider_statuses:providerStatuses,
+        first_error:observations[0]?.error||null};
+  }
   const out={schema_version:'1.1.0',generated_at:new Date().toISOString(),provider_state:state,providers_attempted:chain.map(p=>p.key),primary_provider:chain[0]?.key||null,stop,truth_boundary:'Live web-search observations show which public sources a search-backed answer was built from, not literal organic SERP rank. GSC remains the owned-site source for Google impressions, clicks, CTR, and average position.',observations};
   write('data/search/query_observations.json',out);
   const hist=read('data/search/query_observation_history.json',{schema_version:'1.0.0',observations:[]});
@@ -131,6 +190,18 @@ async function main(){
   write('data/search/query_observation_history.json',hist);
   const citationCount=succeeded.reduce((n,o)=>n+(o.citations?.length||0),0);
   console.log(JSON.stringify({ok:Boolean(succeeded.length),provider_state:state,stop:stop?.reason||null,observed:observations.length,succeeded:succeeded.length,citations:citationCount,surfaced:observations.filter(x=>x.site_surfaced).length},null,2));
+  if(stop&&stop.owner_held){
+    // A named, legitimate, logged stop - and exit 0. Nothing was observed and
+    // nothing claims to have been: provider_state is DEGRADED, every row is
+    // provider_error, and the reason names the provider, the HTTP status and
+    // what the owner has to do. Observation resumes by itself once the account
+    // is unblocked; no provider is disabled here.
+    console.log(`LIVE_QUERY_OBSERVER_STOP: ${stop.reason} - ${stop.detail}`);
+    console.log(`NAMED_STOP: ${stop.reason} - owner action: ${stop.owner_action}`);
+    console.log('This is a successful run with no observation taken. An exhausted provider account is a decision waiting on a person, not a broken integration - a non-owner-held provider failure still fails this lane red.');
+    if(stop.first_error)console.log(`first provider error: ${String(stop.first_error).slice(0,400)}`);
+    return out;
+  }
   if(stop){
     console.error(`LIVE_QUERY_OBSERVER_STOP: ${stop.reason} - ${stop.detail}`);
     if(stop.first_error)console.error(`first provider error: ${String(stop.first_error).slice(0,400)}`);

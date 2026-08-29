@@ -103,6 +103,14 @@ jobs:
           npm run validate:agency-monitoring
           npm run validate:query-intelligence
           npm run validate:remediation-workflow
+      # The "Report why" half of the gate convention used by drafts-refresh.yml
+      # and approved-content-email.yml. live_query_observer.js exits 0 only when
+      # every provider failure was owner-held (401/403/402/429 or no key); any
+      # other failure shape still fails the step above and this lane stays red.
+      # So when a blackout is green, this step is what names it.
+      - name: Report whether live citation observation happened
+        if: always()
+        run: node scripts/search/report_provider_blackout.mjs
       - name: Observe whether answer engines cite us
         # The probe shipped in seven repos and was invoked by none, so no
         # citation observation was ever taken. Grounded mode reads the pages
