@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const { collectFiles, readJson, createReport } = require('./helpers');
+const { collectRequired, readJson, createReport } = require('./helpers');
 
 const report = createReport('validate_canonical_url_contract', 'repo');
 const config = readJson('data/system/config.json');
 const siteDomain = String(config.site_domain || '').replace(/\/$/, '');
-for (const file of collectFiles('dist', (file) => file.endsWith('index.html'))) {
+for (const file of collectRequired('dist', (file) => file.endsWith('index.html'), 'validate:canonical-contract')) {
   if (file.includes(`${path.sep}admin${path.sep}`) || file.includes(`${path.sep}agency${path.sep}`)) continue;
   const html = fs.readFileSync(path.resolve(process.cwd(), file), 'utf8');
   const match = html.match(/<link rel="canonical" href="([^"]+)"/i);

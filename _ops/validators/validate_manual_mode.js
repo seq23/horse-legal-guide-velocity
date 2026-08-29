@@ -1,6 +1,6 @@
 const fs = require('fs');
-const { collectFiles, fail, ok } = require('./helpers');
-const files = collectFiles('dist', (file) => file.endsWith('index.html'));
+const { collectRequired, fail, ok } = require('./helpers');
+const files = collectRequired('dist', (file) => file.endsWith('index.html'), 'validate:manual');
 for (const file of files) {
   if (file.replace(/\\/g, '/').includes('/dist/admin/')) continue;
   const html = fs.readFileSync(file, 'utf8').toLowerCase();

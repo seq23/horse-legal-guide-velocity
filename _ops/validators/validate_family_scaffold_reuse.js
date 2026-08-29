@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { createReport, readJson } = require('./helpers');
+const { createReport, readJson, assertExamined } = require('./helpers');
 
 const report = createReport('validate_family_scaffold_reuse', 'page');
 const targets = readJson('data/queries/page_targets.json').filter((t) => t.review_status === 'approved');
@@ -12,10 +12,12 @@ const bannedPhrases = [
   'This page is a general educational explanation for equestrians, horse owners, trainers, barn operators, sponsors, and equine businesses.'
 ];
 
+let examined = 0;
 for (const page of targets) {
   if (!['comparison', 'scenario', 'faq'].includes(String(page.page_type || '').toLowerCase())) continue;
   const file = path.resolve(process.cwd(), 'dist', page.slug.replace(/^\//, ''), 'index.html');
   if (!fs.existsSync(file)) continue;
+  examined += 1;
   const html = fs.readFileSync(file, 'utf8');
   const hits = bannedPhrases.filter((phrase) => html.includes(phrase));
   if (hits.length) {
@@ -29,4 +31,5 @@ for (const page of targets) {
   }
 }
 
+assertExamined('validate:family-scaffold', examined, targets.length);
 report.finalize('Family-level generic scaffold reuse is not present in stabilized families.');

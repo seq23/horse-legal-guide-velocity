@@ -1,12 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-const { createReport, readJson } = require('./helpers');
+const { createReport, readJson, assertExamined } = require('./helpers');
 
 const report = createReport('validate_extractability', 'page');
 const targets = readJson('data/queries/page_targets.json').filter((t) => t.review_status === 'approved');
+let examined = 0;
 for (const page of targets) {
   const file = path.resolve(process.cwd(), 'dist', page.slug.replace(/^\//, ''), 'index.html');
   if (!fs.existsSync(file)) continue;
+  examined += 1;
   const html = fs.readFileSync(file, 'utf8');
   const bodyStart = html.indexOf('<div class="page-card">');
   const firstChunk = html.slice(bodyStart >= 0 ? bodyStart : 0, (bodyStart >= 0 ? bodyStart : 0) + 6000).toLowerCase();
@@ -20,4 +22,5 @@ for (const page of targets) {
     report.addIssue({ file: page.slug, code: 'generator_language_leak', message: 'Generator meta-language leaked into the visible answer.', fixHint: 'Replace generator instructions with direct user-facing answer copy.', blocking: true });
   }
 }
+assertExamined('validate:extractability', examined, targets.length);
 report.finalize('Pages expose extractable answer-first structures.');

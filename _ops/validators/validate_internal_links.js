@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const { collectFiles, fail, ok } = require('./helpers');
-const files = collectFiles('dist', (file) => file.endsWith('index.html'));
-const allDistFiles = collectFiles('dist');
+const { collectRequired, fail, ok } = require('./helpers');
+const files = collectRequired('dist', (file) => file.endsWith('index.html'), 'validate:links');
+const allDistFiles = collectRequired('dist', null, 'validate:links (all dist files)');
 const knownPaths = new Set(['/','/disclaimer/','/privacy-policy/']);
 for (const file of files) {
   const rel = file.split('/dist')[1].replace(/\/index\.html$/, '/').replace(/\\/g, '/');

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { createReport, readJson } = require('./helpers');
+const { createReport, readJson, assertExamined } = require('./helpers');
 
 const report = createReport('validate_scenario_family_contract', 'page');
 const targets = readJson('data/queries/page_targets.json').filter((t) => String(t.review_status) === 'approved' && String(t.page_type) === 'scenario');
@@ -11,9 +11,11 @@ const requiredSnippets = [
   'What not to do',
   'Practical next move'
 ];
+let examined = 0;
 for (const page of targets) {
   const file = path.resolve(process.cwd(), 'dist', page.slug.replace(/^\//, ''), 'index.html');
   if (!fs.existsSync(file)) continue;
+  examined += 1;
   const html = fs.readFileSync(file, 'utf8');
   for (const snippet of requiredSnippets) {
     if (!html.includes(snippet)) {
@@ -27,4 +29,5 @@ for (const page of targets) {
     }
   }
 }
+assertExamined('validate:scenario-contract', examined, targets.length);
 report.finalize('Scenario-family triage contract blocks are present for approved scenario pages.');

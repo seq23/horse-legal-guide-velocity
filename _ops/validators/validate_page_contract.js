@@ -1,6 +1,6 @@
 const fs = require('fs');
-const { collectFiles, fail, ok } = require('./helpers');
-const files = collectFiles('dist', (file) => file.endsWith('index.html'));
+const { collectRequired, fail, ok } = require('./helpers');
+const files = collectRequired('dist', (file) => file.endsWith('index.html'), 'validate:content');
 for (const file of files) {
   if (file.includes('/admin/') || file.includes('\\admin\\') || file.includes('/agency/') || file.includes('\\agency\\')) continue;
   const html = fs.readFileSync(file, 'utf8');

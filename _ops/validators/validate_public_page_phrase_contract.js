@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const { readJson, collectFiles, fail, ok } = require('./helpers');
+const { readJson, collectRequired, fail, ok } = require('./helpers');
 const rules = readJson('data/system/compliance_rules.json');
 const forbiddenCanonical = ['best equine lawyer', 'top horse lawyer', 'hire now', 'book now'];
 const footerDisclaimer = 'This content does not constitute legal advice or create an attorney-client relationship.';
 const identity = 'Wise Covington PLLC is a law firm built by equestrians for the equestrian community.';
-const files = collectFiles('dist', (file) => file.endsWith('index.html'));
+const files = collectRequired('dist', (file) => file.endsWith('index.html'), 'validate:public-page-phrase-contract');
 function stripTags(html) { return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf8');

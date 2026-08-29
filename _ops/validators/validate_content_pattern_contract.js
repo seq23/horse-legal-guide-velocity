@@ -33,7 +33,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { createReport } = require('./helpers');
+const { createReport, assertExamined } = require('./helpers');
 
 const ROOT = process.cwd();
 const DIST = path.join(ROOT, 'dist');
@@ -146,6 +146,9 @@ if (fs.existsSync(DIST)) {
   })(DIST, 0);
 }
 pages.sort();
+// dist/ absent or empty leaves `pages` empty, every CHECK vacuously satisfied,
+// and the contract reporting success against zero rendered pages.
+assertExamined('validate:content-pattern', pages.length);
 
 const missingByCheck = Object.fromEntries(CHECKS.map((c) => [c.id, []]));
 for (const rel of pages) {

@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const { collectFiles, createReport } = require('./helpers');
+const { collectRequired, createReport } = require('./helpers');
 
 const report = createReport('validate_sitemap_page_parity', 'repo');
 const sitemap = fs.readFileSync(path.resolve(process.cwd(), 'dist/sitemap-pages.xml'), 'utf8');
 const normalizeUrl = (url) => String(url || '').replace(/\/$/, '');
 const pageUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => normalizeUrl(m[1])));
-for (const file of collectFiles('dist', (file) => file.endsWith('index.html'))) {
+for (const file of collectRequired('dist', (file) => file.endsWith('index.html'), 'validate:sitemap-parity')) {
   const rel = file.replace(/^.*?dist[\/]/, '').replace(/[\\]/g, '/').replace(/index\.html$/, '');
   const pathPart = rel ? `/${rel}` : '/';
   const normalized = pathPart.endsWith('/') ? pathPart : `${pathPart}/`;
