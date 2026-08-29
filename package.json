@@ -89,7 +89,7 @@
     "validate:firm-routing": "node _ops/validators/validate_firm_routing.js",
     "validate:contact-coverage": "node _ops/validators/validate_contact_coverage.js",
     "validate:llm-citation-readiness": "node _ops/validators/validate_llm_citation_readiness.js",
-    "validate:content-ops": "npm run validate:self-heal-report && npm run validate:prevalidation-report && npm run validate:draft-uniqueness && npm run validate:admin-manifest && npm run validate:content-atoms && npm run validate:humanization-quality",
+    "validate:content-ops": "npm run validate:self-heal-report && npm run validate:self-heal-loop && npm run validate:prevalidation-report && npm run validate:draft-uniqueness && npm run validate:admin-manifest && npm run validate:content-atoms && npm run validate:humanization-quality",
     "validate:seo-aeo-geo": "npm run validate:admin-seo-dashboard && npm run validate:page-uniqueness && npm run validate:schema-completeness && npm run validate:meta-uniqueness",
     "validate:llm-velocity": "npm run validate:llm-citation-readiness && npm run validate:wise-covington-contact && npm run validate:firm-routing && npm run validate:contact-coverage",
     "ops:simulate-github-actions": "node scripts/ops/simulate_github_actions.js",
@@ -156,6 +156,7 @@
     "cadence:gate": "node scripts/cadence_gate.js",
     "sitemap:lastmod": "node scripts/sitemap_lastmod.js",
     "citation:probe": "node scripts/llm_citation_probe.mjs",
-    "validate:atlas-units": "node scripts/atlas/validate_atlas_units.mjs"
+    "validate:atlas-units": "node scripts/atlas/validate_atlas_units.mjs",
+    "validate:self-heal-loop": "node _ops/validators/validate_self_heal_loop.js"
   }
 }

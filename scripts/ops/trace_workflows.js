@@ -18,6 +18,7 @@ function referencedNpmScripts(yaml) {
   return Array.from(new Set(matches));
 }
 function requiredArtifactsFor(workflowFile) {
+  if (workflowFile.includes('self-heal-loop')) return ['_ops/selfheal/heal_until_clean.js', '_ops/validators/validate_self_heal_loop.js', '_ops/reports/self-heal-loop.json'];
   if (workflowFile.includes('public-signal')) return ['reference/signal_trace.json', 'reports/recommendation_normalized_intake.json', 'reports/recommendation_cluster_gap_backlog.json'];
   if (workflowFile.includes('drafts')) return ['data/system/editorial_backlog.json', 'data/system/content_calendar.json', 'data/admin/editorial_manifest.json', 'data/admin/content_quality_report.json'];
   if (workflowFile.includes('publish')) return ['data/publish_state.json', 'dist/editorial-publishing-state.json'];
@@ -37,6 +38,7 @@ function requiredArtifactsFor(workflowFile) {
 function classifyWorkflow(name) {
   if (name.includes('public-signal')) return 'public/social signal ingestion; keep and protect';
   if (name.includes('drafts')) return 'content generation, self-heal, prevalidation, quality reports, admin refresh';
+  if (name.includes('self-heal-loop')) return 'scheduled detect-repair-revalidate loop; regenerates failing data artifacts, never touches drafts or published pages';
   if (name.includes('publish')) return 'manual publish of approved and due content only';
   if (name.includes('deploy')) return 'deployment/distribution and indexing submission';
   if (name.includes('sitemap')) return 'manual indexing utility; retained intentionally as a narrow operator tool';
