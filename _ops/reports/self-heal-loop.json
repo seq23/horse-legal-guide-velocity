@@ -1,10 +1,40 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-29T15:40:39.678Z",
+  "generated_at": "2026-08-29T21:21:04.065Z",
   "mode": "repair-non-content",
   "max_attempts": 3,
-  "steps_checked": 65,
+  "steps_checked": 64,
   "status": "CLEAN",
   "unresolved": [],
-  "attempts": []
+  "attempts": [
+    {
+      "attempt": 1,
+      "failed_before": [
+        "validate:generated-surfaces",
+        "validate:links",
+        "validate:public-surfaces"
+      ],
+      "actions": [
+        {
+          "step": "validate:generated-surfaces",
+          "action": "npm run build",
+          "ran": true,
+          "repair_exit": 0,
+          "why": "The check reads dist/; build is what writes it. A stale or missing surface is regenerated, not hand-patched."
+        },
+        {
+          "step": "validate:links",
+          "action": "no declared repair",
+          "ran": false
+        },
+        {
+          "step": "validate:public-surfaces",
+          "action": "npm run build",
+          "ran": true,
+          "repair_exit": 0,
+          "why": "Reads rendered public surfaces under dist/; the build is their only writer."
+        }
+      ]
+    }
+  ]
 }
