@@ -257,8 +257,69 @@ if (!fs.existsSync(path.join(ROOT, COVERAGE))) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// 5. Nothing the build writes under dist/ may be unkeepable.
+//
+// The last shape of the same defect: a stage that does its work and cannot
+// deliver it. .gitignore carried an unanchored `coverage/`, which matches a
+// directory of that name at any depth - including dist/coverage/, the site's
+// public Coverage Map. It is linked from 559 built pages and listed in
+// sitemap-pages.xml, every build wrote it, and no commit could ever keep it, so
+// it was absent from dist/ on main at every commit checked.
+//
+// The cost was hidden by ordering. validate:generated-surfaces, validate:links
+// and validate:public-surfaces all fail on a fresh checkout of main because of
+// it, but validate:all builds before it validates, so CI was green; and the
+// self-heal loop used to build during detection, so it reported CLEAN. With
+// detection made read-only the lane would have found those three failing every
+// scheduled run, "repaired" them with a build, been unable to commit the one
+// file that mattered, and committed ~598 files of timestamp churn under a
+// message claiming a repair - exactly the defect that lane was cleaned up to
+// stop.
+//
+// dist/ is tracked in this repo, so this is a real check with real teeth: any
+// build output git refuses to track is a page that cannot reach the site.
+// ---------------------------------------------------------------------------
+let distFilesExamined = 0;
+const distDir = path.join(ROOT, 'dist');
+if (!fs.existsSync(distDir)) {
+  fail('dist/ is missing - run npm run build before this validator.');
+} else {
+  const { spawnSync } = require('node:child_process');
+  // --no-index matters. `git ls-files --others --ignored` only sees UNTRACKED
+  // ignored files, so once dist/coverage/index.html was force-added it would
+  // report clean even with the unanchored rule back in place - a guard that
+  // stops being able to see the thing it guards. check-ignore --no-index
+  // answers "does a rule match this path", tracked or not.
+  const distFiles = [];
+  (function walkDist(dir) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walkDist(full);
+      else distFiles.push(path.relative(ROOT, full));
+    }
+  })(distDir);
+  if (!distFiles.length) {
+    fail('dist/ contains 0 files - this sweep examined nothing. Run npm run build.');
+  } else {
+    const checked = spawnSync('git', ['check-ignore', '--no-index', '--stdin'], {
+      cwd: ROOT, encoding: 'utf8', input: `${distFiles.join('\n')}\n`, maxBuffer: 64 * 1024 * 1024,
+    });
+    // check-ignore exits 0 when something matched, 1 when nothing did, >1 on error.
+    if (checked.status !== 0 && checked.status !== 1) {
+      fail(`could not ask git which files under dist/ are ignored (exit ${checked.status}): ${String(checked.stderr || '').trim() || 'no output'}`);
+    } else {
+      const ignored = String(checked.stdout || '').split('\n').map((line) => line.trim()).filter(Boolean);
+      if (ignored.length) {
+        fail(`${ignored.length} of ${distFiles.length} built file(s) under dist/ match a .gitignore rule, so the build produces them and the repo cannot keep them: ${ignored.slice(0, 10).join(', ')}${ignored.length > 10 ? ', ...' : ''}. Anchor the offending rule to the repo root with a leading / rather than deleting the page.`);
+      }
+      distFilesExamined = distFiles.length;
+    }
+  }
+}
+
 if (failures) {
   console.error(`No-inert-stages contract FAILED with ${failures} problem(s).`);
   process.exit(1);
 }
-console.log(`No inert stages: ${aliasesChecked} npm script target(s) resolve, ${entryPointsChecked} script entry point(s) carry real work, ${gatesScanned} validator(s) use the guarded file walker, ${REQUIRED_COVERAGE.length} page gate(s) recorded a non-zero examined count, sitemap lastmod served by the ledger.`);
+console.log(`No inert stages: ${aliasesChecked} npm script target(s) resolve, ${entryPointsChecked} script entry point(s) carry real work, ${gatesScanned} validator(s) use the guarded file walker, ${REQUIRED_COVERAGE.length} page gate(s) recorded a non-zero examined count, sitemap lastmod served by the ledger, ${distFilesExamined} built file(s) under dist/ all keepable by git.`);

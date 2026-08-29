@@ -1,6 +1,13 @@
 node_modules/
-coverage/
-tmp/
+# Anchored to the repo root on purpose. Unanchored, `coverage/` matches a
+# directory of that name at ANY depth - and it did: dist/coverage/index.html
+# is the site's public Coverage Map, linked from 559 built pages and listed in
+# sitemap-pages.xml, and git refused to track it. Every build wrote it, no
+# commit could keep it, and validate:generated-surfaces, validate:links and
+# validate:public-surfaces failed on every fresh checkout of main. Nobody saw
+# it because validate:all builds before it validates. Same reasoning for tmp/.
+/coverage/
+/tmp/
 .DS_Store
 *.log
 __pycache__/
