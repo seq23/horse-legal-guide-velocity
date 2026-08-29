@@ -1,10 +1,32 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-28T03:56:26.384Z",
+  "generated_at": "2026-08-29T15:18:23.010Z",
   "providers": {
-    "gemini_grounded_search": {
-      "state": "DEGRADED",
+    "openrouter_web_search": {
+      "state": "CONNECTED",
       "configured": true,
+      "role": "primary_citation_observer",
+      "capabilities": {
+        "live_web": true,
+        "grounded_citations": true,
+        "literal_organic_rank": false
+      }
+    },
+    "gemini_grounded_search": {
+      "state": "DISCONNECTED",
+      "configured": true,
+      "role": "fallback_citation_observer",
+      "note": "Grounded google_search tool use returns 429 RESOURCE_EXHAUSTED on this project; plain generateContent returns 200.",
+      "capabilities": {
+        "live_web": true,
+        "grounded_citations": true,
+        "literal_organic_rank": false
+      }
+    },
+    "live_query_observer": {
+      "state": "CONNECTED",
+      "stop": null,
+      "primary_provider": "openrouter_web_search",
       "capabilities": {
         "live_web": true,
         "grounded_citations": true,

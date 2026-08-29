@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-28T16:06:30.000Z",
+  "generated_at": "2026-08-29T15:30:57.000Z",
   "inventory_errors": [],
   "truth_boundary": "This is a local simulated GitHub Actions data trace. It combines workflow YAML presence, local command validation already executed in this workspace, artifact presence, dry-run distribution checks, and source-specific warning inspection. It does not prove live GitHub Actions, live GitHub secrets, live GSC, live IndexNow, or deployed runtime behavior.",
   "status": "passed",
-  "workflow_count": 15,
-  "passed": 15,
+  "workflow_count": 16,
+  "passed": 16,
   "passed_with_warnings": 0,
   "failed": 0,
   "hostile_review_repairs": [
@@ -26,6 +26,14 @@
       "live_followups": [],
       "hard_fails": [],
       "report": "reports/github-actions-simulation/build.json"
+    },
+    {
+      "workflow": "self-heal-loop.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/self-heal-loop.json"
     },
     {
       "workflow": "validate.yml",
