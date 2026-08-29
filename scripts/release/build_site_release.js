@@ -84,7 +84,12 @@ function htmlShell(title, body) {
 <meta name="description" content="Owner operations dashboard for Horse Legal Guide citation velocity, admin review, SEO, AEO, GEO, workflow health, and Wise Covington routing.">
 <meta name="robots" content="noindex,nofollow">
 <style>
-:root{color-scheme:light;background:#f7f1e8;color:#1d1a16;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{margin:0}.shell{max-width:1180px;margin:0 auto;padding:32px 20px 60px}.card{background:#fffaf1;border:1px solid #e4d7c5;border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 12px 28px rgba(56,39,20,.07)}h1{font-size:clamp(2rem,5vw,4rem);line-height:.95;margin:0 0 12px}h2{margin-top:0}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#7c6245;font-weight:800}.muted{color:#66594b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.metric{border:1px solid #eadfce;border-radius:14px;padding:16px;background:white}.metric strong{display:block;font-size:2rem}.pill{display:inline-block;border:1px solid #d8c8b4;border-radius:999px;padding:6px 10px;margin:3px;background:#fff}code,pre{background:#241e17;color:#f7ead7;border-radius:10px;padding:.12rem .35rem}pre{overflow:auto;padding:14px}a{color:#764b20;font-weight:700}table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #eadfce;padding:10px}textarea,input,select{font:inherit;border:1px solid #d8c8b4;border-radius:10px;padding:10px;background:white}button,.button-link{border:0;border-radius:999px;padding:10px 14px;background:#2c2118;color:white;font-weight:800;text-decoration:none;display:inline-block}button.metric{color:#1d1a16;background:white;text-align:left;cursor:pointer}.warn{background:#fff3cd;border-color:#e6cf82}.ok{background:#edf8ed;border-color:#b9dfb9}.fail{background:#ffe8e6;border-color:#ebb1ab}.login-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;align-items:stretch}.password-display code{font-size:1.15rem;word-break:break-all}.filter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.filter-grid label{display:flex;flex-direction:column;gap:5px;font-weight:750}.button-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.sticky-admin-bar{position:sticky;top:0;z-index:4}.compact-metrics .metric{cursor:pointer}.table-scroll{max-height:780px;overflow:auto;border:1px solid #eadfce;border-radius:14px}.small{font-size:.86rem}textarea#bulk-command{width:100%;box-sizing:border-box}th{position:sticky;top:0;background:#fffaf1}</style>
+:root{color-scheme:light;background:#f7f1e8;color:#1d1a16;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{margin:0}.shell{max-width:1180px;margin:0 auto;padding:32px 20px 60px}.card{background:#fffaf1;border:1px solid #e4d7c5;border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 12px 28px rgba(56,39,20,.07)}h1{font-size:clamp(2rem,5vw,4rem);line-height:.95;margin:0 0 12px}h2{margin-top:0}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#7c6245;font-weight:800}.muted{color:#66594b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.metric{border:1px solid #eadfce;border-radius:14px;padding:16px;background:white}.metric strong{display:block;font-size:2rem}.pill{display:inline-block;border:1px solid #d8c8b4;border-radius:999px;padding:6px 10px;margin:3px;background:#fff}code,pre{background:#241e17;color:#f7ead7;border-radius:10px;padding:.12rem .35rem}pre{overflow:auto;padding:14px}a{color:#764b20;font-weight:700}table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #eadfce;padding:10px}textarea,input,select{font:inherit;border:1px solid #d8c8b4;border-radius:10px;padding:10px;background:white}button,.button-link{border:0;border-radius:999px;padding:10px 14px;background:#2c2118;color:white;font-weight:800;text-decoration:none;display:inline-block}button.metric{color:#1d1a16;background:white;text-align:left;cursor:pointer}.warn{background:#fff3cd;border-color:#e6cf82}.ok{background:#edf8ed;border-color:#b9dfb9}.fail{background:#ffe8e6;border-color:#ebb1ab}.login-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;align-items:stretch}.password-display code{font-size:1.15rem;word-break:break-all}.filter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.filter-grid label{display:flex;flex-direction:column;gap:5px;font-weight:750}.button-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}/* The filter bar used to be position:sticky at top:0 while table headers were
+   also position:sticky at top:0, so the bar sat permanently on top of the
+   column headers (header top 69px vs bar bottom 338px). The table scrolls
+   inside .table-scroll, so its headers stick to that container and stay
+   visible on their own; the bar does not need to float as well. */
+.sticky-admin-bar{z-index:4}.compact-metrics .metric{cursor:pointer}.table-scroll{max-height:780px;overflow:auto;border:1px solid #eadfce;border-radius:14px}.small{font-size:.86rem}th{position:sticky;top:0;z-index:2;background:#fffaf1}.overdue{color:#a3271c}.metric.fail strong{color:#a3271c}#overdue-banner h2{margin:0;font-size:1.15rem;line-height:1.45}</style>
 </head>
 <body><main class="shell">${body}</main></body>
 </html>`;
@@ -131,26 +136,71 @@ function summarizeStatusCounts(items) {
     return acc;
   }, {});
 }
+// Notes on why this surface looks the way it does are in the PR. Three rules:
+//  1. Nothing on this page may claim a check passed unless that check really ran.
+//  2. Nothing may present a terminal command as an action a reviewer can take.
+//  3. Every count shown to the reviewer is computed, never carried forward.
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+// The self-heal note is an internal record that the generator rewrote a draft to
+// keep it distinct. It is not a defect in the content and must not be counted as
+// one: surfacing it inflated the reviewer's warning count from 5 to 193.
+const INTERNAL_REVIEW_NOTE = /automatically differentiated in \d+ bounded repair attempt/i;
+function reviewerWarnings(item) {
+  return (item.warnings || []).filter((warning) => !INTERNAL_REVIEW_NOTE.test(String(warning)));
+}
+function formatDueDate(iso) {
+  const parts = String(iso || '').split('-');
+  if (parts.length !== 3) return String(iso || '');
+  const month = MONTHS[Number(parts[1]) - 1] || '';
+  return `${Number(parts[2])} ${month}`.trim();
+}
+function statusWord(status) {
+  return { pending: 'Waiting for you', approved: 'Approved', needs_revision: 'Needs changes', rejected: 'Not this one' }[status] || String(status || 'Waiting for you');
+}
+function typeWord(type) {
+  return {
+    insight: 'Short article',
+    article: 'Article',
+    whitepaper: 'White paper',
+    deep_authority: 'In-depth guide',
+    authority: 'In-depth guide',
+    template: 'Template'
+  }[type] || String(type || 'Article');
+}
 function writeAdminIndex() {
   const config = readJson('data/system/config.json', {});
   const manifest = readJson('data/admin/editorial_manifest.json', { items: [] });
-  const signal = readJson('data/admin/signal_ingestion_status.json', {});
-  const workflow = readJson('data/admin/workflow_health.json', {});
-  const seo = readJson('data/admin/seo_dashboard.json', { health: {}, issues: [] });
   const items = Array.isArray(manifest.items) ? manifest.items : [];
   const counts = summarizeStatusCounts(items);
-  const eligible = items.filter((item) => item.approval_eligible).length;
-  const warnings = items.filter((item) => (item.warnings || []).length).length;
-  const hardFails = items.filter((item) => (item.hard_fails || []).length).length;
-  const missingAtom = items.filter((item) => !item.data_atom_present).length;
-  const missingRouting = items.filter((item) => !item.wise_covington_routing_present).length;
+  // Warning count the reviewer sees excludes the internal self-heal note.
+  const warnings = items.filter((item) => reviewerWarnings(item).length).length;
   const clusters = [...new Set(items.map((item) => item.source_cluster).filter(Boolean))].sort();
   const types = [...new Set(items.map((item) => item.content_type).filter(Boolean))].sort();
+
+  // Publication truth. `public_url` is only populated once a draft has actually
+  // been rendered to a live page, so it is the only field that can answer
+  // "has this system ever published anything".
+  const publishedItems = items.filter((item) => item.public_url);
+  const publishedCount = publishedItems.length;
+  const lastPublish = publishedItems.map((item) => item.publish_date || item.date).filter(Boolean).sort().pop() || '';
+
+  // Build-time overdue figures are a no-JavaScript fallback only. The build
+  // clock is frozen to the last commit, so the browser recomputes both numbers
+  // against the real current date on load.
+  const buildToday = new Date().toISOString().slice(0, 10);
+  const overdueAtBuild = items.filter((item) => item.date && item.date < buildToday);
+  const earliestOverdue = overdueAtBuild.map((item) => item.date).sort()[0] || '';
+  const overdueSentence = overdueAtBuild.length
+    ? `${overdueAtBuild.length} draft${overdueAtBuild.length === 1 ? ' is' : 's are'} past ${overdueAtBuild.length === 1 ? 'its' : 'their'} publish date. The earliest was due ${formatDueDate(earliestOverdue)}. Nothing has gone live yet.`
+    : 'No draft is past its publish date.';
+
   const safeItems = items.map((item) => ({
     entry_id: item.entry_id || '',
     title: item.title || item.entry_id || '',
     content_type: item.content_type || 'draft',
+    type_label: typeWord(item.content_type),
     status: item.status || 'pending',
+    status_label: statusWord(item.status || 'pending'),
     review_status: item.review_status || item.status || 'pending',
     date: item.date || '',
     publish_date: item.publish_date || '',
@@ -158,27 +208,24 @@ function writeAdminIndex() {
     source_query_title: item.source_query_title || '',
     excerpt: item.excerpt || '',
     word_count: item.word_count || 0,
-    approval_eligible: Boolean(item.approval_eligible),
-    data_atom_present: Boolean(item.data_atom_present),
-    wise_covington_routing_present: Boolean(item.wise_covington_routing_present),
-    warnings: Array.isArray(item.warnings) ? item.warnings : [],
-    hard_fails: Array.isArray(item.hard_fails) ? item.hard_fails : [],
-    scores: item.scores || {},
-    github_edit_url: item.github_edit_url || item.github_draft_url || '',
-    github_metadata_url: item.github_metadata_url || buildGithubUrl(config, 'data/system/editorial_backlog.json'),
+    // "Ready" means nothing is blocking it and nothing needs a human look.
+    // It deliberately does not encode scores: a 97/100 SEO number told the
+    // reviewer nothing she could act on.
+    ready: !(item.hard_fails || []).length && !reviewerWarnings(item).length,
+    review_notes: [...(item.hard_fails || []), ...reviewerWarnings(item)],
     preview_url: item.preview_url || '',
-    public_url: item.public_url || '',
-    github_workflow_url: item.github_workflow_url || `${normalizeRepoUrl(config)}/actions/workflows/admin-bulk-content-actions.yml`,
-    commands: item.commands || {}
+    public_url: item.public_url || ''
   }));
+
   const clusterOptions = clusters.map((cluster) => `<option value="${escapeHtml(cluster)}">${escapeHtml(cluster.replace(/-/g, ' '))}</option>`).join('');
-  const typeOptions = types.map((type) => `<option value="${escapeHtml(type)}">${escapeHtml(type.replace(/_/g, ' '))}</option>`).join('');
+  const typeOptions = types.map((type) => `<option value="${escapeHtml(type)}">${escapeHtml(typeWord(type))}</option>`).join('');
+  const reviewEmail = String(config.owner_review_email || '').trim();
   const body = `
 <header class="card">
-  <p class="eyebrow">Owner cockpit · manual publishing only</p>
+  <p class="eyebrow">Your content — nothing goes live without your say-so</p>
   <h1>Horse Legal Guide Admin</h1>
-  <p class="muted">Review, filter, approve, reject, revise, and monitor content built to improve LLM citation opportunities and route legal matters back to Wise Covington.</p>
-  <p><a href="/admin/drafts/">Read the queued drafts</a> · <a href="/admin/seo/">Open /admin/seo/ AEO / SEO / GEO dashboard</a> · <a href="/agency/">Open private /agency/ search intelligence</a> · <a href="${escapeHtml(normalizeRepoUrl(config))}/actions">Open GitHub Actions</a></p>
+  <p class="muted">Read the articles written for Wise Covington and choose which ones go on your website.</p>
+  <p><a href="/admin/drafts/">Read the queued drafts</a> · <a href="/admin/seo/">Search performance dashboard</a></p>
 </header>
 <section id="login-landing" class="login-grid">
   <div class="card login-card">
@@ -198,109 +245,104 @@ function writeAdminIndex() {
     <p class="password-display"><code id="password-reminder-value">Unlocked after password entry.</code></p>
     <p class="muted">Convenience gate only. Do not enter privileged client facts, confidential matter details, or private legal instructions into this static site.</p>
   </section>
+  <section class="card fail" id="overdue-banner"${overdueAtBuild.length ? '' : ' hidden'}>
+    <p class="eyebrow">Nothing has been published</p>
+    <h2 data-overdue-text>${escapeHtml(overdueSentence)}</h2>
+  </section>
   <section class="grid compact-metrics">
     <button class="metric filter-tile" type="button" data-filter-status="all"><span class="eyebrow">All drafts</span><strong>${items.length}</strong><span>show all</span></button>
-    <button class="metric filter-tile" type="button" data-filter-status="pending"><span class="eyebrow">Pending</span><strong>${counts.pending || 0}</strong><span>needs decision</span></button>
-    <button class="metric filter-tile" type="button" data-filter-quality="eligible"><span class="eyebrow">Approval eligible</span><strong>${eligible}</strong><span>passed local gates</span></button>
-    <button class="metric filter-tile" type="button" data-filter-status="approved"><span class="eyebrow">Approved</span><strong>${counts.approved || 0}</strong><span>ready for publishing lane</span></button>
-    <button class="metric filter-tile" type="button" data-filter-status="needs_revision"><span class="eyebrow">Needs revision</span><strong>${counts.needs_revision || 0}</strong><span>send back</span></button>
-    <button class="metric filter-tile" type="button" data-filter-status="rejected"><span class="eyebrow">Rejected</span><strong>${counts.rejected || 0}</strong><span>do not publish</span></button>
-    <button class="metric filter-tile" type="button" data-filter-quality="warnings"><span class="eyebrow">Warnings</span><strong>${warnings}</strong><span>review notes</span></button>
-    <button class="metric filter-tile" type="button" data-filter-quality="hardfail"><span class="eyebrow">Hard fails</span><strong>${hardFails}</strong><span>blocked</span></button>
+    <button class="metric filter-tile" type="button" data-filter-status="pending"><span class="eyebrow">Waiting for you</span><strong>${counts.pending || 0}</strong><span>needs your decision</span></button>
+    <button class="metric filter-tile fail" type="button" data-filter-quality="overdue"><span class="eyebrow">Overdue</span><strong id="overdue-count">${overdueAtBuild.length}</strong><span>past its publish date</span></button>
+    <button class="metric filter-tile" type="button" data-filter-status="approved"><span class="eyebrow">Approved</span><strong>${counts.approved || 0}</strong><span>you said yes</span></button>
+    <button class="metric filter-tile" type="button" data-filter-status="needs_revision"><span class="eyebrow">Needs changes</span><strong>${counts.needs_revision || 0}</strong><span>send back</span></button>
+    <button class="metric filter-tile" type="button" data-filter-status="rejected"><span class="eyebrow">Not this one</span><strong>${counts.rejected || 0}</strong><span>do not publish</span></button>
+    <button class="metric filter-tile" type="button" data-filter-quality="needs_look"><span class="eyebrow">Warnings</span><strong>${warnings}</strong><span>worth a look</span></button>
   </section>
   <section class="card sticky-admin-bar">
     <h2>Filter queue</h2>
     <div class="filter-grid">
-      <label>Status<select id="status-filter"><option value="all">All statuses</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="needs_revision">Needs revision</option><option value="rejected">Rejected</option></select></label>
-      <label>Quality<select id="quality-filter"><option value="all">All quality states</option><option value="eligible">Approval eligible</option><option value="warnings">Warnings</option><option value="hardfail">Hard fails</option><option value="missing_atom">Missing data atom</option><option value="missing_routing">Missing Wise Covington routing</option></select></label>
+      <label>Status<select id="status-filter"><option value="all">All statuses</option><option value="pending">Waiting for you</option><option value="approved">Approved</option><option value="needs_revision">Needs changes</option><option value="rejected">Not this one</option></select></label>
+      <label>Ready<select id="quality-filter"><option value="all">Everything</option><option value="ready">Ready</option><option value="needs_look">Needs a look</option><option value="overdue">Past its publish date</option></select></label>
       <label>Content type<select id="type-filter"><option value="all">All content types</option>${typeOptions}</select></label>
-      <label>Cluster<select id="cluster-filter"><option value="all">All clusters</option>${clusterOptions}</select></label>
-      <label>Sort<select id="sort-filter"><option value="date-asc">Date ↑</option><option value="date-desc">Date ↓</option><option value="status-asc">Status A-Z</option><option value="type-asc">Type A-Z</option><option value="cluster-asc">Cluster A-Z</option><option value="score-desc">LLM score ↓</option></select></label>
+      <label>Topic<select id="cluster-filter"><option value="all">All topics</option>${clusterOptions}</select></label>
+      <label>Sort<select id="sort-filter"><option value="date-asc">Oldest first</option><option value="date-desc">Newest first</option><option value="title-asc">Title A-Z</option><option value="type-asc">Type A-Z</option><option value="cluster-asc">Topic A-Z</option></select></label>
       <label>Rows per page<select id="page-size"><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label>
     </div>
     <p id="filter-summary" class="muted">Filters loading.</p>
     <div class="button-row"><button type="button" id="prev-page">Previous</button><button type="button" id="next-page">Next</button><button type="button" id="clear-filters">Clear filters</button></div>
   </section>
-  <section class="card">
-    <h2>Bulk actions</h2>
-    <p class="muted">Select rows below, then generate a command. The browser does not secretly mutate the repo; commands and GitHub workflows do the real change.</p>
-    <div class="button-row"><button type="button" data-select="visible">Select visible page</button><button type="button" data-select="eligible">Select eligible on page</button><button type="button" data-select="pending">Select pending on page</button><button type="button" data-select="clear">Clear selected</button></div>
-    <div class="button-row"><button type="button" data-action="approve">Approve selected</button><button type="button" data-action="reject">Reject selected</button><button type="button" data-action="needs_revision">Needs revision selected</button><button type="button" data-action="publish_date">Set publish date selected</button><button type="button" data-action="approve_all_eligible">Approve all eligible</button><a class="button-link" href="${escapeHtml(normalizeRepoUrl(config))}/actions/workflows/admin-bulk-content-actions.yml">Open bulk GitHub workflow</a></div>
-    <textarea id="bulk-command" rows="3" readonly placeholder="Generated command appears here"></textarea>
-  </section>
-  <section class="card" id="github-admin-card">
-    <p class="eyebrow">Additive method · existing commands remain</p>
-    <h2>GitHub-authenticated actions</h2>
-    <p class="muted">This does not replace the command box or GitHub workflow page. Sign in with an allowlisted GitHub account to dispatch the same guarded workflows from here. Every mutation requires confirmation, server-side authentication, validation, and a receipt.</p>
-    <div class="button-row"><button type="button" id="github-admin-login">Sign in with GitHub</button><button type="button" id="github-admin-logout" hidden>Sign out</button><a class="button-link" href="/agency/">Open private agency dashboard</a></div>
-    <p id="github-admin-status" class="muted">Checking GitHub admin session…</p>
-    <div id="github-admin-actions" hidden>
-      <div class="button-row"><button type="button" data-github-action="content_dry_run">Dry-run selected</button><button type="button" data-github-action="approve_selected">Approve selected</button><button type="button" data-github-action="reject_selected">Reject selected</button><button type="button" data-github-action="needs_revision_selected">Needs revision selected</button><button type="button" data-github-action="set_publish_date_selected">Set publish date</button><button type="button" data-github-action="clear_publish_date_selected">Clear publish date</button></div>
-      <div class="button-row"><button type="button" data-github-action="self_heal_prevalidate">Run self-heal + prevalidation</button><button type="button" data-github-action="validate_repo">Validate repo</button><button type="button" data-github-action="refresh_search">Refresh GSC + Bing</button><button type="button" data-github-action="rebuild_query_intelligence">Rebuild query intelligence</button><button type="button" data-github-action="refresh_remediation_queue">Refresh remediation queue</button></div>
-    </div>
-    <pre id="github-admin-receipt">No authenticated action dispatched in this browser session.</pre>
-  </section>
-  <section class="card status-guide">
-    <h2>Exactly what to change in metadata</h2>
-    <p>Open <code>data/system/editorial_backlog.json</code> through an article’s <strong>Edit Metadata</strong> link and find the matching <code>entry_id</code>.</p>
-    <table><thead><tr><th>Decision</th><th>Change <code>status</code> to</th><th>Change <code>review_status</code> to</th><th>Optional fields</th></tr></thead><tbody>
-      <tr><td>Approve</td><td><code>approved</code></td><td><code>approved</code></td><td><code>approved_at</code> can be added by script automatically.</td></tr>
-      <tr><td>Reject</td><td><code>rejected</code></td><td><code>rejected</code></td><td>Add <code>rejection_reason</code> if helpful.</td></tr>
-      <tr><td>Needs revision</td><td><code>needs_revision</code></td><td><code>needs_revision</code></td><td>Add <code>revision_reason</code> if helpful.</td></tr>
-      <tr><td>Schedule</td><td><code>approved</code></td><td><code>approved</code></td><td>Set <code>publish_date</code> to <code>YYYY-MM-DD</code>.</td></tr>
-    </tbody></table>
-    <p class="muted">Preferred path: use the generated commands so <code>data/system/editorial_backlog.json</code> and <code>data/system/content_calendar.json</code> stay synchronized.</p>
+  <section class="card" id="send-decisions">
+    <h2>Send your decisions</h2>
+    <p>Approving is not yet available from this page. Tick the drafts you approve, click &ldquo;Send approvals&rdquo;, and they will go live within one business day.</p>
+    <div class="button-row"><button type="button" data-select="visible">Select visible page</button><button type="button" data-select="pending">Select everything waiting on this page</button><button type="button" data-select="clear">Clear selected</button></div>
+    <div class="button-row"><button type="button" data-decision="approve">Send approvals</button><button type="button" data-decision="needs_revision">Send &ldquo;needs changes&rdquo;</button><button type="button" data-decision="rejected">Send &ldquo;not this one&rdquo;</button></div>
+    <p id="send-status" class="muted">Nothing sent yet.</p>
   </section>
   <section class="card">
-    <h2>Operations health</h2>
+    <h2>Publishing status</h2>
     <ul>
-      <li><strong>AEO / SEO / GEO dashboard:</strong> <a href="/admin/seo/">/admin/seo/</a></li>
-      <li><strong>Signal ingestion:</strong> ${escapeHtml(signal.status || signal.overall_status || 'recorded')}</li>
-      <li><strong>Workflow trace:</strong> <a href="${escapeHtml(buildGithubUrl(config, 'reports/workflow-trace/validate.json'))}">validate workflow trace</a></li>
-      <li><strong>GitHub Actions simulation:</strong> <a href="${escapeHtml(buildGithubUrl(config, 'reports/github-actions-simulation/summary.json'))}">simulation summary</a></li>
-      <li><strong>Missing data atom:</strong> ${missingAtom} · <strong>Missing routing:</strong> ${missingRouting}</li>
+      <li><strong>Pages published by this system:</strong> ${publishedCount}. <strong>Last publish:</strong> ${publishedCount ? escapeHtml(lastPublish || 'unknown') : 'never'}.</li>
+      <li id="publishing-overdue" class="muted">${escapeHtml(overdueSentence)}</li>
+      <li><strong>Search performance:</strong> <a href="/admin/seo/">/admin/seo/</a></li>
     </ul>
   </section>
   <section class="card queue-card">
     <h2>Draft queue</h2>
     <p class="muted">Use the filters above instead of title search. The queue is paginated to reduce scrolling.</p>
-    <div id="draft-summary" class="muted">Types: insight · article · whitepaper · deep_authority · draft-list</div><div id="draft-list" class="table-scroll"><table id="draft-table"><thead><tr><th>Select</th><th>Draft</th><th>Status</th><th>Type</th><th>Cluster</th><th>Quality</th><th>Scores</th><th>Actions</th></tr></thead><tbody id="draft-tbody"></tbody></table></div>
+    <div id="draft-summary" class="muted">Short articles, articles, white papers, in-depth guides and templates.</div><div id="draft-list" class="table-scroll"><table id="draft-table"><thead><tr><th>Select</th><th>Date</th><th>Draft</th><th>Status</th><th>Type</th><th>Topic</th><th>Ready</th><th>Actions</th></tr></thead><tbody id="draft-tbody"></tbody></table></div>
   </section>
 </section>
 <script id="admin-items" type="application/json">${safeJsonForScript(safeItems)}</script>
 <script>
 const expectedHash = ${JSON.stringify(config.admin_password_sha256 || '')};
+const REVIEW_EMAIL = ${JSON.stringify(reviewEmail)};
 const ADMIN_ITEMS = JSON.parse(document.getElementById('admin-items').textContent || '[]');
+const MONTH_NAMES = ${JSON.stringify(MONTHS)};
 let state = { page: 1, filtered: [] };
 async function sha256(value){const data=new TextEncoder().encode(value);const hash=await crypto.subtle.digest('SHA-256',data);return Array.from(new Uint8Array(hash)).map((b)=>b.toString(16).padStart(2,'0')).join('');}
 function escText(value){return String(value ?? '').replace(/[&<>"']/g,(ch)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
 function revealPasswordReminder(value){const el=document.getElementById('password-reminder-value');if(el)el.textContent=value||'Re-enter the password to show the reminder.';}
-async function unlockAdmin(){const input=document.getElementById('admin-password');const attempt=(input?.value||'').trim();const hash=await sha256(attempt);if(expectedHash&&hash!==expectedHash){document.getElementById('login-message').textContent='Password did not match.';return;}sessionStorage.setItem('hlg-admin-open','true');sessionStorage.setItem('hlg-admin-password-reminder',attempt);document.getElementById('login-message').textContent='';document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(attempt);renderQueue();}
+async function unlockAdmin(){const input=document.getElementById('admin-password');const attempt=(input?.value||'').trim();const hash=await sha256(attempt);if(expectedHash&&hash!==expectedHash){document.getElementById('login-message').textContent='Password did not match.';return;}sessionStorage.setItem('hlg-admin-open','true');sessionStorage.setItem('hlg-admin-password-reminder',attempt);document.getElementById('login-message').textContent='';document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(attempt);renderOverdue();renderQueue();}
+function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function isOverdue(item){return Boolean(item.date)&&item.date<todayISO();}
+function daysLate(date){const ms=Date.parse(todayISO()+'T00:00:00Z')-Date.parse(date+'T00:00:00Z');return Math.max(0,Math.round(ms/86400000));}
+function formatDue(date){const p=String(date||'').split('-');if(p.length!==3)return String(date||'');return Number(p[2])+' '+(MONTH_NAMES[Number(p[1])-1]||'');}
+/* Overdue is recomputed in the browser against the real current date. The
+   build clock is frozen to the last commit, so a build-time number goes stale
+   the day after it is written. */
+function renderOverdue(){const od=ADMIN_ITEMS.filter(isOverdue);const tile=document.getElementById('overdue-count');if(tile)tile.textContent=String(od.length);const sentence=od.length?(od.length+' draft'+(od.length===1?' is':'s are')+' past '+(od.length===1?'its':'their')+' publish date. The earliest was due '+formatDue(od.map((i)=>i.date).sort()[0])+'. Nothing has gone live yet.'):'No draft is past its publish date.';const banner=document.getElementById('overdue-banner');if(banner){banner.hidden=!od.length;const text=banner.querySelector('[data-overdue-text]');if(text)text.textContent=sentence;}const line=document.getElementById('publishing-overdue');if(line)line.textContent=sentence;}
 function getFilters(){return {status:document.getElementById('status-filter')?.value||'all',quality:document.getElementById('quality-filter')?.value||'all',type:document.getElementById('type-filter')?.value||'all',cluster:document.getElementById('cluster-filter')?.value||'all',sort:document.getElementById('sort-filter')?.value||'date-asc',pageSize:Number(document.getElementById('page-size')?.value||25)}}
-function filterItems(){const f=getFilters();let out=ADMIN_ITEMS.slice();if(f.status!=='all')out=out.filter((item)=>item.status===f.status);if(f.type!=='all')out=out.filter((item)=>item.content_type===f.type);if(f.cluster!=='all')out=out.filter((item)=>item.source_cluster===f.cluster);if(f.quality==='eligible')out=out.filter((item)=>item.approval_eligible);if(f.quality==='warnings')out=out.filter((item)=>(item.warnings||[]).length);if(f.quality==='hardfail')out=out.filter((item)=>(item.hard_fails||[]).length);if(f.quality==='missing_atom')out=out.filter((item)=>!item.data_atom_present);if(f.quality==='missing_routing')out=out.filter((item)=>!item.wise_covington_routing_present);const [field,direction]=f.sort.split('-');out.sort((a,b)=>{let av='',bv='';if(field==='date'){av=a.date||'9999-12-31';bv=b.date||'9999-12-31';}else if(field==='score'){av=Number(a.scores?.llm_citation||0);bv=Number(b.scores?.llm_citation||0);return direction==='desc'?bv-av:av-bv;}else if(field==='type'){av=a.content_type||'';bv=b.content_type||'';}else if(field==='cluster'){av=a.source_cluster||'';bv=b.source_cluster||'';}else{av=a.status||'';bv=b.status||'';}return direction==='desc'?String(bv).localeCompare(String(av)):String(av).localeCompare(String(bv));});return out;}
-function qualityLabel(item){const parts=[];if(item.approval_eligible)parts.push('eligible');if((item.warnings||[]).length)parts.push('warnings');if((item.hard_fails||[]).length)parts.push('hard fail');if(!item.data_atom_present)parts.push('missing atom');if(!item.wise_covington_routing_present)parts.push('missing routing');return parts.length?parts.join(', '):'clean';}
-function scoreText(item){return 'LLM '+(item.scores?.llm_citation||0)+' / SEO '+(item.scores?.seo||0)+' / AEO '+(item.scores?.aeo||0)+' / GEO '+(item.scores?.geo||0);}
-function renderRows(items){const tbody=document.getElementById('draft-tbody');if(!tbody)return;if(!items.length){tbody.innerHTML='<tr><td colspan="8" class="muted">No drafts match the current filters.</td></tr>';return;}tbody.innerHTML=items.map((item)=>{const issues=[...(item.hard_fails||[]),...(item.warnings||[])].slice(0,3).join('; ')||'No active warnings.';const publicLink=item.public_url||item.preview_url||'';let actions='<a href="'+escText(item.github_edit_url)+'" target="_blank" rel="noopener">Edit content</a><br><a href="'+escText(item.github_metadata_url)+'" target="_blank" rel="noopener">Edit metadata</a>';if(publicLink)actions+='<br><a href="'+escText(publicLink)+'" target="_blank" rel="noopener">Preview/live</a>';return '<tr data-entry-id="'+escText(item.entry_id)+'" data-status="'+escText(item.status)+'" data-eligible="'+(item.approval_eligible?'yes':'no')+'"><td><input class="row-check" type="checkbox" value="'+escText(item.entry_id)+'"></td><td><strong>'+escText(item.title)+'</strong><div class="muted small">'+escText(item.entry_id)+'</div><details><summary>Excerpt / notes</summary><p>'+escText(item.excerpt)+'</p><p>'+escText(issues)+'</p></details></td><td><span class="pill">'+escText(item.status)+'</span></td><td>'+escText(item.content_type)+'</td><td>'+escText((item.source_cluster||'').replaceAll('-',' '))+'</td><td>'+escText(qualityLabel(item))+'</td><td>'+escText(scoreText(item))+'</td><td>'+actions+'</td></tr>';}).join('');}
+function filterItems(){const f=getFilters();let out=ADMIN_ITEMS.slice();if(f.status!=='all')out=out.filter((item)=>item.status===f.status);if(f.type!=='all')out=out.filter((item)=>item.content_type===f.type);if(f.cluster!=='all')out=out.filter((item)=>item.source_cluster===f.cluster);if(f.quality==='ready')out=out.filter((item)=>item.ready);if(f.quality==='needs_look')out=out.filter((item)=>!item.ready);if(f.quality==='overdue')out=out.filter(isOverdue);const [field,direction]=f.sort.split('-');out.sort((a,b)=>{let av='',bv='';if(field==='date'){av=a.date||'9999-12-31';bv=b.date||'9999-12-31';}else if(field==='title'){av=a.title||'';bv=b.title||'';}else if(field==='type'){av=a.type_label||'';bv=b.type_label||'';}else if(field==='cluster'){av=a.source_cluster||'';bv=b.source_cluster||'';}else{av=a.status_label||'';bv=b.status_label||'';}return direction==='desc'?String(bv).localeCompare(String(av)):String(av).localeCompare(String(bv));});return out;}
+function readyLabel(item){return item.ready?'Ready':'Needs a look';}
+function dateCell(item){if(!item.date)return '<span class="muted">no date</span>';if(!isOverdue(item))return escText(item.date);return '<span class="overdue"><strong>'+escText(item.date)+'</strong><br><span class="small">'+daysLate(item.date)+' days overdue</span></span>';}
+function renderRows(items){const tbody=document.getElementById('draft-tbody');if(!tbody)return;if(!items.length){tbody.innerHTML='<tr><td colspan="8" class="muted">No drafts match the current filters.</td></tr>';return;}tbody.innerHTML=items.map((item)=>{const notes=(item.review_notes||[]).slice(0,3).join('; ')||'Nothing flagged on this draft.';const readLink=item.preview_url||item.public_url||'';const actions=readLink?'<a href="'+escText(readLink)+'">Read this draft</a>':'<span class="muted">No preview</span>';return '<tr data-entry-id="'+escText(item.entry_id)+'" data-status="'+escText(item.status)+'"><td><input class="row-check" type="checkbox" value="'+escText(item.entry_id)+'"></td><td>'+dateCell(item)+'</td><td><strong>'+escText(item.title)+'</strong><div class="muted small">'+escText(item.entry_id)+'</div><details><summary>Excerpt / notes</summary><p>'+escText(item.excerpt)+'</p><p>'+escText(notes)+'</p></details></td><td><span class="pill">'+escText(item.status_label)+'</span></td><td>'+escText(item.type_label)+'</td><td>'+escText((item.source_cluster||'').replaceAll('-',' '))+'</td><td>'+escText(readyLabel(item))+'</td><td>'+actions+'</td></tr>';}).join('');}
 function renderQueue(resetPage=false){if(resetPage)state.page=1;const f=getFilters();const filtered=filterItems();state.filtered=filtered;const maxPage=Math.max(1,Math.ceil(filtered.length/f.pageSize));if(state.page>maxPage)state.page=maxPage;const start=(state.page-1)*f.pageSize;const visible=filtered.slice(start,start+f.pageSize);renderRows(visible);const summary=document.getElementById('filter-summary');if(summary)summary.textContent='Showing '+visible.length+' rows on page '+state.page+' of '+maxPage+'; '+filtered.length+' match filters out of '+ADMIN_ITEMS.length+' total drafts.';}
 function selectedIds(){return Array.from(document.querySelectorAll('.row-check:checked')).map((el)=>el.value);}
-function selectRows(kind){for(const row of document.querySelectorAll('#draft-tbody tr[data-entry-id]')){const cb=row.querySelector('.row-check');if(!cb)continue;if(kind==='clear')cb.checked=false;if(kind==='visible')cb.checked=true;if(kind==='eligible')cb.checked=row.dataset.eligible==='yes';if(kind==='pending')cb.checked=row.dataset.status==='pending';}}
-function commandFor(action){const ids=selectedIds();if(action==='approve_all_eligible')return 'node scripts/admin/approve_all_eligible.js && npm run build && npm run validate:all';if(!ids.length)return 'Select at least one visible row first.';if(action==='approve')return 'node scripts/admin/approve_many.js '+ids.join(' ')+' && npm run build && npm run validate:all';if(action==='reject')return 'node scripts/admin/reject_many.js '+ids.join(' ')+' && npm run build && npm run validate:all';if(action==='needs_revision')return 'node scripts/admin/mark_many_needs_revision.js '+ids.join(' ')+' && npm run build && npm run validate:all';if(action==='publish_date'){const d=window.prompt('Publish date YYYY-MM-DD');return d?'node scripts/admin/set_publish_date_many.js '+d+' '+ids.join(' ')+' && npm run build && npm run validate:all':'Publish date cancelled.';}return '';}
-let githubAdminSession={authenticated:false,csrf:null,user:null};
-async function loadGithubAdminSession(){const status=document.getElementById('github-admin-status');try{const response=await fetch('/api/admin/github/session',{cache:'no-store'});const data=await response.json();githubAdminSession=data;const authenticated=Boolean(data.authenticated);document.getElementById('github-admin-login').hidden=authenticated;document.getElementById('github-admin-logout').hidden=!authenticated;document.getElementById('github-admin-actions').hidden=!authenticated;status.textContent=authenticated?'Signed in as @'+data.user.login+'. Actions dispatch through GitHub and retain manual approval.':(data.provider_configured?'Not signed in. Use GitHub to unlock server-side actions.':'GitHub admin provider is not configured yet. Existing commands and workflow links still work.');}catch(error){status.textContent='GitHub admin session unavailable: '+error.message;}}
-function githubActionPayload(action){const payload={action,ids:selectedIds(),reason:'Horse Legal Guide owner admin action'};if(action==='set_publish_date_selected'){const value=window.prompt('Publish date YYYY-MM-DD');if(!value)return null;payload.publish_date=value;}return payload;}
-async function dispatchGithubAction(action){const payload=githubActionPayload(action);if(!payload)return;const selectedRequired=['approve_selected','reject_selected','needs_revision_selected','set_publish_date_selected','clear_publish_date_selected'].includes(action);if(selectedRequired&&!payload.ids.length){window.alert('Select at least one row first.');return;}const warning=action==='approve_selected'?'Approve the selected final self-healed drafts?':action==='reject_selected'?'Reject the selected drafts?':action==='needs_revision_selected'?'Mark the selected drafts as needing revision?':action==='set_publish_date_selected'?'Set the selected publish dates?':action==='clear_publish_date_selected'?'Clear the selected publish dates?':'Dispatch '+action.replaceAll('_',' ')+'?';if(!window.confirm(warning))return;const receipt=document.getElementById('github-admin-receipt');receipt.textContent='Dispatching…';try{const response=await fetch('/api/admin/action',{method:'POST',headers:{'content-type':'application/json','x-hlg-admin-csrf':githubAdminSession.csrf||''},body:JSON.stringify(payload)});const data=await response.json();if(!response.ok)throw new Error(data.error||'Action failed');receipt.textContent=JSON.stringify(data.receipt,null,2);}catch(error){receipt.textContent='Action failed: '+error.message;}}
-async function githubLogout(){await fetch('/api/admin/github/logout',{method:'POST'});githubAdminSession={authenticated:false,csrf:null,user:null};await loadGithubAdminSession();}
-function bindAdmin(){document.getElementById('unlock-admin')?.addEventListener('click',unlockAdmin);document.getElementById('admin-password')?.addEventListener('keydown',(event)=>{if(event.key==='Enter')unlockAdmin();});document.getElementById('github-admin-login')?.addEventListener('click',()=>{window.location.href='/api/admin/github/login?return_to=%2Fadmin%2F';});document.getElementById('github-admin-logout')?.addEventListener('click',githubLogout);document.querySelectorAll('[data-github-action]').forEach(button=>button.addEventListener('click',()=>dispatchGithubAction(button.dataset.githubAction)));loadGithubAdminSession();['status-filter','quality-filter','type-filter','cluster-filter','sort-filter','page-size'].forEach((id)=>document.getElementById(id)?.addEventListener('change',()=>renderQueue(true)));document.getElementById('prev-page')?.addEventListener('click',()=>{state.page=Math.max(1,state.page-1);renderQueue();});document.getElementById('next-page')?.addEventListener('click',()=>{state.page+=1;renderQueue();});document.getElementById('clear-filters')?.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value='all';document.getElementById('type-filter').value='all';document.getElementById('cluster-filter').value='all';document.getElementById('sort-filter').value='date-asc';renderQueue(true);});document.querySelectorAll('[data-filter-status]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value=button.dataset.filterStatus||'all';document.getElementById('quality-filter').value='all';renderQueue(true);}));document.querySelectorAll('[data-filter-quality]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value=button.dataset.filterQuality||'all';renderQueue(true);}));document.querySelectorAll('[data-select]').forEach((button)=>button.addEventListener('click',()=>selectRows(button.dataset.select)));document.querySelectorAll('[data-action]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('bulk-command').value=commandFor(button.dataset.action);}));if(sessionStorage.getItem('hlg-admin-open')==='true'){document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(sessionStorage.getItem('hlg-admin-password-reminder')||'');renderQueue();}}
+function selectRows(kind){for(const row of document.querySelectorAll('#draft-tbody tr[data-entry-id]')){const cb=row.querySelector('.row-check');if(!cb)continue;if(kind==='clear')cb.checked=false;if(kind==='visible')cb.checked=true;if(kind==='pending')cb.checked=row.dataset.status==='pending';}}
+/* Decisions leave this page as an email to the person who publishes. There is
+   no server-side approve yet, and a textarea holding a shell command was not a
+   path a reviewer could ever use. */
+function sendDecision(kind){const ids=selectedIds();const status=document.getElementById('send-status');const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;if(!ids.length){status.textContent='Tick at least one draft first.';return;}if(!window.confirm('Send '+ids.length+' draft'+(ids.length===1?'':'s')+' as "'+label+'"? Nothing is published by this step.'))return;const byId=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i]));const lines=ids.map((id)=>{const item=byId[id]||{};return '- '+(item.title||id)+' ('+id+')';});const subject='Horse Legal Guide: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';const intro=kind==='approve'?'I approve these drafts for publishing:':kind==='needs_revision'?'These drafts need changes before publishing:':'Please do not publish these drafts:';const bodyText=intro+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Sent from /admin/ on '+todayISO()+'.';window.location.href='mailto:'+encodeURIComponent(REVIEW_EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyText);status.textContent=ids.length+' draft'+(ids.length===1?'':'s')+' added to an email marked "'+label+'". Send that email and they will go live within one business day.'+(REVIEW_EMAIL?'':' Add the recipient address before sending: it is not configured yet.');}
+function bindAdmin(){document.getElementById('unlock-admin')?.addEventListener('click',unlockAdmin);document.getElementById('admin-password')?.addEventListener('keydown',(event)=>{if(event.key==='Enter')unlockAdmin();});['status-filter','quality-filter','type-filter','cluster-filter','sort-filter','page-size'].forEach((id)=>document.getElementById(id)?.addEventListener('change',()=>renderQueue(true)));document.getElementById('prev-page')?.addEventListener('click',()=>{state.page=Math.max(1,state.page-1);renderQueue();});document.getElementById('next-page')?.addEventListener('click',()=>{state.page+=1;renderQueue();});document.getElementById('clear-filters')?.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value='all';document.getElementById('type-filter').value='all';document.getElementById('cluster-filter').value='all';document.getElementById('sort-filter').value='date-asc';renderQueue(true);});document.querySelectorAll('[data-filter-status]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value=button.dataset.filterStatus||'all';document.getElementById('quality-filter').value='all';renderQueue(true);}));document.querySelectorAll('[data-filter-quality]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value=button.dataset.filterQuality||'all';renderQueue(true);}));document.querySelectorAll('[data-select]').forEach((button)=>button.addEventListener('click',()=>selectRows(button.dataset.select)));document.querySelectorAll('[data-decision]').forEach((button)=>button.addEventListener('click',()=>sendDecision(button.dataset.decision)));if(sessionStorage.getItem('hlg-admin-open')==='true'){document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(sessionStorage.getItem('hlg-admin-password-reminder')||'');}renderOverdue();renderQueue();}
 document.addEventListener('DOMContentLoaded',bindAdmin);</script>`;
   ensureDir(root('dist/admin'));
   fs.writeFileSync(root('dist/admin/index.html'), htmlShell('Horse Legal Guide Admin', body));
 }
-
 function writeAdminSeo() {
   const config = readJson('data/system/config.json', {});
   const dashboard = readJson('data/admin/seo_dashboard.json', { health: {}, metrics: {}, source_files: [], issues: [], truth_boundary: 'Live GitHub Actions and deployed search/indexing behavior must be verified after apply.' });
   const healthRows = Object.entries(dashboard.health || {}).map(([key, value]) => `<tr><th>${escapeHtml(key)}</th><td>${escapeHtml(value)}</td></tr>`).join('');
-  const metricRows = Object.entries(dashboard.metrics || {}).map(([key, value]) => `<tr><th>${escapeHtml(key)}</th><td>${escapeHtml(value)}</td></tr>`).join('');
+  // The GitHub Actions trace self-describes as
+  // "not_executed_in_chatgpt_container" and its own truth boundary says it
+  // "does not prove live GitHub Actions". Printing its status verbatim rendered
+  // the word "passed" for a check that never ran. A check that did not run says
+  // "not run".
+  const metricValue = (key, value) => (
+    key === 'github_actions_simulation_status'
+      ? 'not run (local simulation only; live GitHub Actions not executed)'
+      : String(value)
+  );
+  const metricRows = Object.entries(dashboard.metrics || {}).map(([key, value]) => `<tr><th>${escapeHtml(key)}</th><td>${escapeHtml(metricValue(key, value))}</td></tr>`).join('');
   const sourceRows = (dashboard.source_files || []).map((file) => `<li><code>${escapeHtml(file)}</code>${fs.existsSync(root(file)) ? ' · present' : ' · missing'}</li>`).join('');
   const issues = dashboard.issues || [];
   const issueRows = issues.length ? issues.map((issue) => `<article class="card fail"><h3>${escapeHtml(issue.category)}: ${escapeHtml(issue.issue)}</h3><p><strong>Why it matters:</strong> ${escapeHtml(issue.why_it_matters)}</p><p><strong>Recommended fix:</strong> ${escapeHtml(issue.recommended_fix)}</p><p><strong>Source metric:</strong> ${escapeHtml(issue.source_metric)}</p><p><strong>Affected pages:</strong> ${escapeHtml((issue.affected_pages || []).slice(0, 12).join(', '))}</p></article>`).join('') : '<p class="ok card">No local issue groups. Live GitHub Actions and deployed indexing still need post-apply proof.</p>';

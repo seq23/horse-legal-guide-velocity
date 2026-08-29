@@ -26,9 +26,22 @@ th{position:sticky;top:0;background:#fffaf1;font-size:.78rem;letter-spacing:.06e
 input,select{font:inherit;padding:8px 10px;border:1px solid #d9c9b1;border-radius:9px;background:#fff}
 .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:0 0 14px}
 .dead-link{border-bottom:1px dotted #b4553a;color:#8a3f2a}
-.table-scroll{overflow-x:auto}</style>
+.table-scroll{overflow-x:auto}
+button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:9px 15px;background:#2c2118;color:#fff;cursor:pointer}
+button.secondary{background:#efe3d1;color:#2c2118}
+.overdue{color:#a3271c}
+.banner-late{background:#fdecea;border-color:#e6b3aa}
+.decision-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}</style>
 <script data-clarity-loader>(function(w,d,m){var h=(w.location.hostname||"").toLowerCase().replace(/^www\./,"");var id=m[h];if(!id)return;w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};var s=d.createElement("script");s.async=1;s.src="https://www.clarity.ms/tag/"+id;var f=d.getElementsByTagName("script")[0];f.parentNode.insertBefore(s,f)})(window,document,{"horselegalguide.com":"y7l45bndb4"})</script></head>
-<body><main class="shell">
+<body><main class="shell"><section id="draft-login" class="card">
+  <p class="eyebrow">Enter admin</p>
+  <h2>Unlock review panel</h2>
+  <p class="muted">Enter the admin password to open the content review panel.</p>
+  <p><label class="small muted" for="admin-password">Password</label><br><input id="admin-password" type="password" autocomplete="current-password" placeholder="Enter password" style="min-width:260px"></p>
+  <p><button id="unlock-admin" type="button">Open admin panel</button></p>
+  <p id="login-message" class="muted"></p>
+</section>
+<div id="gated-content" hidden>
 <p class="small"><a href="/admin/drafts/">&larr; All queued drafts</a> · <a href="/admin/">Admin</a></p>
 <div class="banner">
   <p class="eyebrow">Unapproved draft · preview only</p>
@@ -36,14 +49,42 @@ input,select{font:inherit;padding:8px 10px;border:1px solid #d9c9b1;border-radiu
 </div>
 <header>
   <h1>What Equestrians Often Miss About If Someone Gets Hurt Riding My Horse, Am I Liable</h1>
-  <p><span class="pill">2026-06-05</span><span class="pill">Insight</span><span class="pill">liability waivers insurance</span><span class="pill">status: pending</span><span class="pill">1057 words</span></p>
+  <p><span class="pill">2026-06-05</span><span class="pill">Short article</span><span class="pill">liability waivers insurance</span><span class="pill">Waiting for you</span><span class="pill">1057 words</span></p>
   <p class="muted">Answers the question: If Someone Gets Hurt Riding My Horse, Am I Liable?</p>
 </header>
-<div class="card">
-  <p class="eyebrow">Review actions</p>
-  <p class="small" style="margin:0 0 8px"><a href="https://github.com/seq23/horse-legal-guide-velocity/blob/main/content/drafts/generated/2026-06-05__what-equestrians-often-miss-about-if-someone-gets-hurt-riding-my-horse-am-i-liable.md" rel="noopener">Read the source markdown</a> · <a href="https://github.com/seq23/horse-legal-guide-velocity/edit/main/content/drafts/generated/2026-06-05__what-equestrians-often-miss-about-if-someone-gets-hurt-riding-my-horse-am-i-liable.md" rel="noopener">Edit this draft on GitHub</a></p>
-  <p class="small muted" style="margin:0">If approved, this would publish at <code>/insights/2026-06-05/what-equestrians-often-miss-about-if-someone-gets-hurt-riding-my-horse-am-i-liable/</code>. Approval is a separate, deliberate step run by the owner: <code>node scripts/admin/approve_one.js draft-insight-2026-06-05-if-someone-gets-hurt-riding-my-horse-am-i-liable</code></p>
+<div class="card" id="decide">
+  <p class="eyebrow">Your decision</p>
+  <h2 style="margin:0 0 6px;font-size:1.1rem">What do you want to do with this one?</h2>
+  <p class="small muted" style="margin:0">Approving is not yet available from this page. Choose below and your decision is emailed to the person who publishes; approved drafts go live within one business day. Nothing is published by this step.</p>
+  <div class="decision-row">
+    <button type="button" data-decision="approve">Approve</button>
+    <button type="button" class="secondary" data-decision="needs_revision">Needs changes</button>
+    <button type="button" class="secondary" data-decision="rejected">Not this one</button>
+  </div>
+  <p class="small muted" id="decision-status" style="margin:10px 0 0">No decision sent yet.</p>
+  <p class="small muted" style="margin:8px 0 0">If approved, this would publish at <code>/insights/2026-06-05/what-equestrians-often-miss-about-if-someone-gets-hurt-riding-my-horse-am-i-liable/</code>.</p>
+  <p class="small" style="margin:8px 0 0"><a href="https://github.com/seq23/horse-legal-guide-velocity/blob/main/content/drafts/generated/2026-06-05__what-equestrians-often-miss-about-if-someone-gets-hurt-riding-my-horse-am-i-liable.md" rel="noopener">Read the source markdown</a> · <a href="https://github.com/seq23/horse-legal-guide-velocity/edit/main/content/drafts/generated/2026-06-05__what-equestrians-often-miss-about-if-someone-gets-hurt-riding-my-horse-am-i-liable.md" rel="noopener">Edit this draft on GitHub</a></p>
 </div>
+<script>
+(function(){
+  var EMAIL="";
+  var TITLE="What Equestrians Often Miss About If Someone Gets Hurt Riding My Horse, Am I Liable";
+  var ID="draft-insight-2026-06-05-if-someone-gets-hurt-riding-my-horse-am-i-liable";
+  var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'not this one'};
+  var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please do not publish this draft:'};
+  function send(kind){
+    if(!window.confirm('Send this draft as "'+WORDS[kind]+'"? Nothing is published by this step.'))return;
+    var nl=String.fromCharCode(10);
+    var subject='Horse Legal Guide: "'+TITLE+'" marked "'+WORDS[kind]+'"';
+    var body=INTRO[kind]+nl+nl+'- '+TITLE+' ('+ID+')'+nl+nl+'Sent from '+window.location.pathname+'.';
+    window.location.href='mailto:'+encodeURIComponent(EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    var status=document.getElementById('decision-status');
+    if(status)status.textContent='Marked "'+WORDS[kind]+'" in an email. Send that email to record the decision.'+(EMAIL?'':' Add the recipient address before sending: it is not configured yet.');
+  }
+  var buttons=document.querySelectorAll('#decide [data-decision]');
+  for(var i=0;i<buttons.length;i++){(function(button){button.addEventListener('click',function(){send(button.getAttribute('data-decision'));});})(buttons[i]);}
+})();
+</script>
 
 <article><h2>What Equestrians Often Miss About If Someone Gets Hurt Riding My Horse, Am I Liable</h2>
 <h2>Draft summary</h2>
@@ -94,5 +135,19 @@ input,select{font:inherit;padding:8px 10px;border:1px solid #d9c9b1;border-radiu
 <p>This is especially true in equine matters because the culture of trust, speed, and personal relationships can make a problem feel smaller than it is until money, injuries, expectations, or state rules force a harder look.</p>
 <p>That is why If Someone Gets Hurt Riding My Horse, Am I Liable should be evaluated as part of the full relationship, not as a detached paperwork question.</p></article>
 <p class="small"><a href="/admin/drafts/">&larr; All queued drafts</a></p>
-<p class="muted small">General educational information for the horse world. This is draft material under review and is not legal advice.</p></main></body>
+<p class="muted small">General educational information for the horse world. This is draft material under review and is not legal advice.</p></div></main><script>
+(function(){
+  var expectedHash="ba74376e032bf75bde1e51e2418d0b2499c43b0907123a93d5bf47d7af6fb9aa";
+  function open(){var l=document.getElementById('draft-login'),c=document.getElementById('gated-content');if(l)l.hidden=true;if(c)c.hidden=false;}
+  async function sha256(value){var data=new TextEncoder().encode(value);var hash=await crypto.subtle.digest('SHA-256',data);return Array.from(new Uint8Array(hash)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');}
+  async function unlock(){var input=document.getElementById('admin-password');var attempt=(input&&input.value||'').trim();var hash=await sha256(attempt);if(expectedHash&&hash!==expectedHash){document.getElementById('login-message').textContent='Password did not match.';return;}try{sessionStorage.setItem('hlg-admin-open','true');sessionStorage.setItem('hlg-admin-password-reminder',attempt);}catch(e){}document.getElementById('login-message').textContent='';open();}
+  function boot(){
+    var button=document.getElementById('unlock-admin');if(button)button.addEventListener('click',unlock);
+    var input=document.getElementById('admin-password');if(input)input.addEventListener('keydown',function(event){if(event.key==='Enter')unlock();});
+    var already=false;try{already=sessionStorage.getItem('hlg-admin-open')==='true';}catch(e){}
+    if(already)open();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+</script></body>
 </html>

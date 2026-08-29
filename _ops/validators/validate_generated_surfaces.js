@@ -81,9 +81,21 @@ for (const rel of [...referencedDistPaths].sort()) assertFile(rel, 'referenced b
 // Route-level smoke checks for the admin surfaces most likely to regress silently.
 if (exists('dist/admin/index.html')) {
   const html = read('dist/admin/index.html');
-  for (const phrase of ['Horse Legal Guide Admin', '/admin/seo/', 'Password reminder', 'Unlock review panel', 'Filter queue', 'data-filter-status', 'data-filter-quality', 'Rows per page', 'Exactly what to change in metadata', 'pending', 'approved', 'needs_revision', 'rejected']) {
+  for (const phrase of ['Horse Legal Guide Admin', '/admin/seo/', 'Password reminder', 'Unlock review panel', 'Filter queue', 'data-filter-status', 'data-filter-quality', 'Rows per page', 'pending', 'approved', 'needs_revision', 'rejected']) {
     if (!html.includes(phrase)) fail(`dist/admin/index.html missing phrase: ${phrase}`);
   }
+  // Honesty contract for the reviewer-facing cockpit. These replace the former
+  // 'Exactly what to change in metadata' presence check: that card told a
+  // non-technical reviewer to hand-edit editorial_backlog.json on GitHub, and
+  // pinning it here made the misdirection a requirement.
+  for (const phrase of ['id="overdue-banner"', 'id="overdue-count"', 'Pages published by this system:', 'Last publish:']) {
+    if (!html.includes(phrase)) fail(`dist/admin/index.html missing publication-truth marker: ${phrase}`);
+  }
+  if (html.includes('Exactly what to change in metadata')) fail('dist/admin/index.html tells the reviewer to hand-edit editorial_backlog.json');
+  if (/node scripts\/admin\//.test(html)) fail('dist/admin/index.html presents a shell command as a reviewer action');
+  if (html.includes('Signal ingestion:')) fail('dist/admin/index.html reports pipeline health where it must report whether anything was published');
+  // A trace that self-describes as not executed must never be surfaced as passed.
+  if (/GitHub Actions simulation:\s*passed/.test(html)) fail('dist/admin/index.html reports a non-executed check as passed');
   const loginIndex = html.indexOf('id="login-landing"');
   const panelIndex = html.indexOf('id="admin-panel"');
   if (loginIndex === -1 || panelIndex === -1 || panelIndex <= loginIndex) fail('dist/admin/index.html login/admin panel sections are malformed');

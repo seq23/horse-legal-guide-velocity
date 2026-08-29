@@ -47,7 +47,19 @@ function wordCount(text) {
   return String(text || '').replace(/^---[\s\S]*?---/, '').trim().split(/\s+/).filter(Boolean).length;
 }
 function excerpt(text, max = 360) {
-  const body = String(text || '').replace(/^---[\s\S]*?---/, '').replace(/[#*_`>\[\]()]/g, '').replace(/\s+/g, ' ').trim();
+  // HTML comments must be removed BEFORE markdown punctuation is stripped.
+  // Stripping `_` and `>` first turns the self-heal delimiter
+  // `<!-- UNIQUE_SELF_HEAL_START -->` into the literal text
+  // `<!-- UNIQUESELFHEALSTART --`, which then rendered as visible junk in every
+  // admin excerpt for a self-healed draft (193 of 306 rows). Handles unterminated
+  // comments too, since an excerpt can cut a comment in half.
+  const body = String(text || '')
+    .replace(/^---[\s\S]*?---/, '')
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<!--[\s\S]*$/, ' ')
+    .replace(/[#*_`>\[\]()]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
   return body.length > max ? `${body.slice(0, max - 1).trim()}…` : body;
 }
 function githubBlobUrl(config, relPath) {
