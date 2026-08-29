@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coverage Map | Horse Legal Guide</title>
+  <meta name="description" content="Query universe and public coverage map for Horse Legal Guide.">
+  <link rel="canonical" href="https://horselegalguide.com/coverage/">
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --panel: #fbf8f3;
+      --panel-strong: #f8f3ec;
+      --text: #2f2a26;
+      --muted: #665f57;
+      --line: #d8cec0;
+      --accent: #5d4634;
+      --accent-soft: #8a735f;
+      --shadow: 0 10px 24px rgba(41, 32, 24, 0.06);
+      --radius: 16px;
+      --content-width: 860px;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #efe8de 0%, var(--bg) 16%, #f7f3ed 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      letter-spacing: 0.005em;
+    }
+    .page-shell {
+      max-width: calc(var(--content-width) + 48px);
+      margin: 0 auto;
+      padding: 36px 24px 56px;
+    }
+    .page-card {
+      background: rgba(251, 248, 243, 0.88);
+      border: 1px solid rgba(216, 206, 192, 0.85);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 32px 28px;
+      backdrop-filter: blur(3px);
+    }
+    header, footer, section, nav { margin-bottom: 22px; }
+    section, nav, footer.site-footer {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 18px 16px;
+    }
+    header.content-header {
+      background: transparent;
+      border: 0;
+      padding: 0 0 8px;
+      margin-bottom: 20px;
+    }
+    .site-brand-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      background: rgba(255,255,255,0.38);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-bottom: 20px;
+    }
+    .brand-kicker, .brand-firm, .brand-tagline { margin: 0; }
+    .brand-kicker { color: var(--muted); font-size: 0.94rem; }
+    .brand-side { text-align: right; }
+    .brand-firm a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .brand-tagline { color: var(--accent-soft); font-size: 0.94rem; font-family: Georgia, "Times New Roman", serif; }
+    h1, h2, h3 {
+      color: #31261d;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1.18;
+      margin: 0 0 12px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+    }
+    p, li {
+      font-size: 1rem;
+      margin: 0 0 12px;
+    }
+    ul { margin: 0; padding-left: 20px; }
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.14em;
+    }
+    a:hover {
+      color: #463426;
+    }
+    .muted {
+      color: var(--muted);
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.5);
+      color: var(--accent-soft);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .routing-block {
+      border-top: 0;
+      background: var(--panel-strong);
+    }
+    .site-footer {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+    .site-footer p:last-child { margin-bottom: 0; }
+    input, select {
+      font: inherit;
+      color: var(--text);
+      background: #fffdfa;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+    article.review-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      margin: 16px 0;
+      background: #fffdfa;
+    }
+
+    .signal-block {
+      background: #fffdfa;
+      border-color: #cbbba7;
+    }
+    details {
+      background: #fffdfa;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin: 10px 0;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 650;
+      color: var(--accent);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      background: #fffdfa;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 12px;
+    }
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      background: rgba(93, 70, 52, 0.08);
+      border-radius: 6px;
+      padding: 2px 6px;
+    }
+    @media (max-width: 640px) {
+      .page-shell { padding: 22px 14px 40px; }
+      .page-card { padding: 22px 16px; border-radius: 18px; }
+      section, nav, footer.site-footer { padding: 16px 14px 14px; }
+      .site-brand-header { display: block; }
+      .brand-side { text-align: left; margin-top: 8px; }
+    }
+  </style>
+<script data-clarity-loader>(function(w,d,m){var h=(w.location.hostname||"").toLowerCase().replace(/^www\./,"");var id=m[h];if(!id)return;w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};var s=d.createElement("script");s.async=1;s.src="https://www.clarity.ms/tag/"+id;var f=d.getElementsByTagName("script")[0];f.parentNode.insertBefore(s,f)})(window,document,{"horselegalguide.com":"y7l45bndb4"})</script></head>
+<body>
+  <main class="page-shell">
+    <div class="page-card">
+<header class="site-brand-header">
+  <div>
+    <span class="eyebrow">Horse Legal Guide</span>
+    <p class="brand-kicker">Built for the horse world</p>
+  </div>
+  <div class="brand-side">
+    <p class="brand-firm"><a href="https://wisecovington.com">Wise Covington</a></p>
+    <p class="brand-tagline">Legally sound. Financially stable.</p>
+  </div>
+</header>
+<header class="content-header"><span class="eyebrow">Query coverage map</span><h1>Coverage Map</h1><p class="muted">Public resource map showing the query universe, cluster routing, approved public page targets, and intentional reference/fan-out surfaces. Raw user posts are not published here.</p></header><nav><p><a href="/">Home</a> · <a href="/faq/">FAQ</a> · <a href="/scenario/">Scenarios</a> · <a href="/compare/">Comparisons</a> · <a href="/reference/">Reference</a></p></nav><section><h2>Query universe</h2><p>Approved public page targets are now ingestion-governed. Public pages expose clean questions and original educational answers, while source traceability stays in JSON artifacts.</p></section><section><h2>Signal source mix</h2><ul><li>forum_chronicle_of_the_horse: 30</li>
+<li>forum_horse_and_hound: 50</li>
+<li>forum_the_horse_forum: 29</li>
+<li>google_paa_manual_or_provider: 29</li>
+<li>instagram_public_social_framing: 29</li>
+<li>quora_question_patterns: 29</li>
+<li>reddit_equestrian: 1198</li>
+<li>reddit_farming_ranching: 95</li>
+<li>reddit_horses: 648</li>
+<li>reddit_legaladvice: 140</li>
+<li>reddit_smallbusiness: 171</li>
+<li>serp_competitor_research: 30</li>
+<li>youtube_search_comments: 160</li></ul></section><section><h2>Cluster signal mix</h2><ul><li>Boarding Training And Barn Operations: 137</li>
+<li>Demand Letters And Disputes: 13</li>
+<li>Equine Business Formation: 30</li>
+<li>Horse Lease And Trial: 133</li>
+<li>Horse Sale And Purchase: 136</li>
+<li>Intellectual Property And Brand: 8</li>
+<li>Liability Waivers Insurance: 46</li>
+<li>Real Property And Leases: 9</li>
+<li>State Specific: 574</li>
+<li>Therapeutic Riding And Hipaa: 2</li></ul></section><section><h2>Cluster map</h2><ul><li><a href="/hubs/horse-sale-and-purchase/">Horse Sale &amp; Purchase</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/horse-sale-and-purchase.json</code></span></li>
+<li><a href="/hubs/horse-lease-and-trial/">Horse Lease &amp; Trial</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/horse-lease-and-trial.json</code></span></li>
+<li><a href="/hubs/boarding-training-and-barn-operations/">Boarding, Training &amp; Barn Operations</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/boarding-training-and-barn-operations.json</code></span></li>
+<li><a href="/hubs/liability-waivers-insurance/">Liability, Waivers &amp; Insurance</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/liability-waivers-insurance.json</code></span></li>
+<li><a href="/hubs/equine-business-formation/">Equine Business Formation</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/equine-business-formation.json</code></span></li>
+<li><a href="/hubs/intellectual-property-and-brand/">Intellectual Property &amp; Brand</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/intellectual-property-and-brand.json</code></span></li>
+<li><a href="/hubs/demand-letters-and-disputes/">Demand Letters &amp; Disputes</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/demand-letters-and-disputes.json</code></span></li>
+<li><a href="/hubs/therapeutic-riding-and-hipaa/">Therapeutic Riding &amp; HIPAA</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/therapeutic-riding-and-hipaa.json</code></span></li>
+<li><a href="/hubs/real-property-and-leases/">Real Property &amp; Leases</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/real-property-and-leases.json</code></span></li>
+<li><a href="/hubs/state-specific/">State-Specific Questions</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/state-specific.json</code></span></li>
+<li><a href="/hubs/emotional-am-i-screwed/">High-Stress / “Am I Screwed?”</a> <span class="muted">— mapped coverage area · fan-out JSON: <code>/reference/fanout/emotional-am-i-screwed.json</code></span></li></ul></section><section><h2>All approved public page targets</h2><ul><li><a href="/compare/boarder-default-notice-vs-demand-letter/">Boarder default notice vs demand letter</a> <span class="muted">— comparison · Boarding Training And Barn Operations</span></li>
+<li><a href="/compare/boarding-agreement-vs-training-agreement/">Boarding agreement vs training agreement</a> <span class="muted">— comparison · Boarding Training And Barn Operations</span></li>
+<li><a href="/compare/boarding-lien-rights-vs-collections-lawsuit/">Boarding lien rights vs collections lawsuit</a> <span class="muted">— comparison · Boarding Training And Barn Operations</span></li>
+<li><a href="/compare/private-horse-sale-vs-trainer-assisted-sale/">Private horse sale vs trainer-assisted sale</a> <span class="muted">— comparison · Boarding Training And Barn Operations</span></li>
+<li><a href="/compare/stable-rules-document-vs-boarding-contract/">Stable rules document vs boarding contract</a> <span class="muted">— comparison · Boarding Training And Barn Operations</span></li>
+<li><a href="/compare/therapy-program-waiver-vs-general-barn-waiver/">Therapy program waiver vs general barn waiver</a> <span class="muted">— comparison · Boarding Training And Barn Operations</span></li>
+<li><a href="/compare/trainer-agreement-vs-boarding-agreement/">Trainer agreement vs boarding agreement</a> <span class="muted">— comparison · Boarding Training And Barn Operations</span></li>
+<li><a href="/compare/trainer-liability-vs-owner-liability/">Trainer liability vs owner liability</a> <span class="muted">— comparison · Boarding Training And Barn Operations</span></li>
+<li><a href="/compare/training-fee-agreement-vs-commission-agreement/">Training fee agreement vs commission agreement</a> <span class="muted">— comparison · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/">Can a Boarding Barn Sell a Horse for Unpaid Bills?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/what-happens-if-a-boarder-damages-property/">What Happens If a Boarder Damages Property?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/what-happens-if-a-boarder-does-not-pay/">What Happens If a Boarder Doesn’t Pay?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/what-happens-if-a-contract-does-not-address-responsibility/">What Happens If a Contract Does Not Address Responsibility?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/what-happens-if-a-horse-dies-while-boarded/">What Happens If a Horse Dies While Boarded?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/">What Legal Documents Do I Need to Run a Boarding Barn?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/what-liability-does-a-trainer-have/">What Liability Does a Trainer Have?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/faq/what-records-should-a-boarding-barn-keep-when-board-is-overdue/">What records should a boarding barn keep when board is overdue</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/what-should-be-included-in-a-horse-boarding-agreement/">What Should Be Included in a Horse Boarding Agreement?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/what-should-be-included-in-a-training-agreement/">What Should Be Included in a Training Agreement?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/">Who Is Liable If a Horse Is Injured While Boarded?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/boarding/who-pays-vet-bills-while-a-horse-is-boarded/">Who Pays Vet Bills While a Horse Is Boarded?</a> <span class="muted">— faq · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/">A barn is relying only on insurance. What else should be reviewed?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/">A barn uses volunteers. What legal issues can come up?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-barn-wants-to-remove-a-difficult-boarder-what-should-be-checked/">A barn wants to remove a difficult boarder. What should be checked?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-boarder-stopped-paying-what-can-a-barn-do-next/">A boarder stopped paying. What can a barn do next?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-boarding-agreement-does-not-mention-emergency-care-what-now/">A boarding agreement does not mention emergency care. What now?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-boarding-barn-changed-facility-rules-mid-relationship-what-should-be-checked/">A boarding barn changed facility rules mid-relationship. What should be checked?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-boarding-barn-changed-ownership-what-happens-to-agreements/">A boarding barn changed ownership. What happens to agreements?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/">A boarding barn has unpaid invoices and unclear records. What should be organized?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/">A boarding barn wants to sell a horse for unpaid bills. What matters?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-client-wants-to-cancel-a-training-agreement-what-terms-matter/">A client wants to cancel a training agreement. What terms matter?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-clinic-host-and-trainer-disagree-about-responsibility-what-documents-matter/">A clinic host and trainer disagree about responsibility. What documents matter?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-horse-died-while-boarded-or-in-training-what-should-be-documented/">A horse died while boarded or in training. What should be documented?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-horse-was-hurt-while-boarded-who-is-responsible/">A horse was hurt while boarded. Who is responsible?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-lessee-stopped-paying-board-or-vet-bills-what-happens-next/">A lessee stopped paying board or vet bills. What happens next?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-trainer-changed-fees-without-a-signed-update-what-should-be-checked/">A trainer changed fees without a signed update. What should be checked?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/">A trainer sold a horse without clear authority. What should be reviewed?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-trainer-wants-commission-after-a-sale-what-should-be-checked/">A trainer wants commission after a sale. What should be checked?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/a-warning-sign-was-not-posted-at-the-barn-what-risk-does-that-create/">A warning sign was not posted at the barn. What risk does that create?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/">I started a barn without paperwork. What risks did I create?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/someone-copied-my-barn-name-online-what-should-i-gather/">Someone copied my barn name online. What should I gather?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/">State warning sign rules are confusing. What should a barn review?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/">There is a barn name or brand dispute. What should be reviewed?</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/scenario/what-should-a-barn-document-before-claiming-a-lien-or-sale-right/">What should a barn document before claiming a lien or sale right</a> <span class="muted">— scenario · Boarding Training And Barn Operations</span></li>
+<li><a href="/compare/demand-letter-vs-informal-text-dispute/">Demand letter vs informal text dispute</a> <span class="muted">— comparison · Demand Letters And Disputes</span></li>
+<li><a href="/compare/demand-letter-vs-lawsuit/">Demand Letter vs Lawsuit</a> <span class="muted">— comparison · Demand Letters And Disputes</span></li>
+<li><a href="/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/">Demand Letter vs Lawsuit in a Horse Dispute</a> <span class="muted">— comparison · Demand Letters And Disputes</span></li>
+<li><a href="/compare/mediation-vs-litigation-in-a-horse-dispute/">Mediation vs Litigation in a Horse Dispute</a> <span class="muted">— comparison · Demand Letters And Disputes</span></li>
+<li><a href="/compare/mediation-vs-litigation-in-horse-disputes/">Mediation vs litigation in horse disputes</a> <span class="muted">— comparison · Demand Letters And Disputes</span></li>
+<li><a href="/compare/mediation-vs-litigation-horse-disputes/">Mediation vs Litigation in Horse Disputes</a> <span class="muted">— comparison · Demand Letters And Disputes</span></li>
+<li><a href="/disputes/can-a-contract-dispute-be-resolved-without-court/">Can a Contract Dispute Be Resolved Without Court?</a> <span class="muted">— faq · Demand Letters And Disputes</span></li>
+<li><a href="/disputes/can-i-ignore-a-demand-letter/">Can I Ignore a Demand Letter?</a> <span class="muted">— faq · Demand Letters And Disputes</span></li>
+<li><a href="/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/">Do I Need a Lawyer to Respond to a Demand Letter?</a> <span class="muted">— faq · Demand Letters And Disputes</span></li>
+<li><a href="/disputes/how-serious-is-a-legal-demand-letter/">How Serious Is a Legal Demand Letter?</a> <span class="muted">— faq · Demand Letters And Disputes</span></li>
+<li><a href="/faq/what-documents-should-i-review-before-answering-a-demand-letter/">What documents should I review before answering a demand letter</a> <span class="muted">— faq · Demand Letters And Disputes</span></li>
+<li><a href="/disputes/what-happens-if-i-do-not-respond-to-a-legal-letter/">What Happens If I Don’t Respond to a Legal Letter?</a> <span class="muted">— faq · Demand Letters And Disputes</span></li>
+<li><a href="/disputes/what-should-i-do-if-i-receive-a-demand-letter/">What Should I Do If I Receive a Demand Letter?</a> <span class="muted">— faq · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/">A demand letter has a deadline. What should be prioritized?</a> <span class="muted">— scenario · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/">A farrier or vet dispute affects a horse sale. What documents matter?</a> <span class="muted">— scenario · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/">A seller is being threatened with a lawsuit. What should they do first?</a> <span class="muted">— scenario · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/i-am-worried-i-am-overreacting-to-a-horse-dispute-how-should-i-think-about-it/">I am worried I am overreacting to a horse dispute. How should I think about it?</a> <span class="muted">— scenario · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/">I received a demand letter about a horse dispute. What should I do first?</a> <span class="muted">— scenario · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/">Someone wants to mediate a horse dispute. What should be prepared?</a> <span class="muted">— scenario · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/">The buyer moved the horse before the dispute started. Why does that matter?</a> <span class="muted">— scenario · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/">Vet bills are disputed after a horse sale. What should be reviewed?</a> <span class="muted">— scenario · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/what-should-i-gather-before-responding-to-a-demand-letter/">What should I gather before responding to a demand letter</a> <span class="muted">— scenario · Demand Letters And Disputes</span></li>
+<li><a href="/scenario/am-i-overreacting-or-is-this-risky/">Am I Overreacting or Is This Risky?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/">Can I Back Out of a Horse Deal Without Getting Sued?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/did-i-mess-up-by-trusting-a-handshake-deal/">Did I Mess Up by Trusting a Handshake Deal?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/do-people-actually-get-sued-over-horse-deals-like-this/">Do People Actually Get Sued Over Horse Deals Like This?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/do-people-actually-get-sued-over-horse-deals/">Do People Actually Get Sued Over Horse Deals?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/i-bought-a-horse-and-something-is-wrong-what-now/">I Bought a Horse and Something Is Wrong — What Now?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/">I Sold a Horse Without a Contract — Am I Screwed?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/is-it-too-late-to-fix-a-bad-horse-sale/">Is It Too Late to Fix a Bad Horse Sale?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/">What Happens If I Ignore a Problem and Hope It Goes Away?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/what-if-i-already-signed-something-i-did-not-understand/">What If I Already Signed Something I Did Not Understand?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/">What Is the Worst-Case Scenario If I Do Nothing?</a> <span class="muted">— scenario · Emotional Am I Screwed</span></li>
+<li><a href="/compare/business-name-registration-vs-trademark-filing/">Business name registration vs trademark filing</a> <span class="muted">— comparison · Equine Business Formation</span></li>
+<li><a href="/compare/equine-business-contract-vs-general-business-contract/">Equine business contract vs general business contract</a> <span class="muted">— comparison · Equine Business Formation</span></li>
+<li><a href="/compare/horse-co-ownership-agreement-vs-syndicate-structure/">Horse co-ownership agreement vs syndicate structure</a> <span class="muted">— comparison · Equine Business Formation</span></li>
+<li><a href="/compare/horse-syndicate-agreement-vs-partnership-agreement/">Horse syndicate agreement vs partnership agreement</a> <span class="muted">— comparison · Equine Business Formation</span></li>
+<li><a href="/compare/llc-vs-sole-proprietor-horse-business/">LLC vs Sole Proprietor Horse Business</a> <span class="muted">— comparison · Equine Business Formation</span></li>
+<li><a href="/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/">Operating agreement vs partnership agreement for horse businesses</a> <span class="muted">— comparison · Equine Business Formation</span></li>
+<li><a href="/compare/sole-proprietor-vs-llc-for-a-horse-business/">Sole proprietor vs LLC for a horse business</a> <span class="muted">— comparison · Equine Business Formation</span></li>
+<li><a href="/compare/trademark-vs-llc-name-for-an-equestrian-business/">Trademark vs LLC name for an equestrian business</a> <span class="muted">— comparison · Equine Business Formation</span></li>
+<li><a href="/business/can-i-run-a-horse-business-under-another-company/">Can I Run a Horse Business Under Another Company?</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/do-i-need-an-llc-to-start-a-horse-business/">Do I Need an LLC to Start a Horse Business?</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/horse-syndicate-legal-structure/">Horse Syndicate Legal Structure</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/how-do-i-legally-start-a-horse-business/">How Do I Legally Start a Horse Business?</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/how-do-i-separate-my-horse-business-from-personal-assets/">How Do I Separate My Horse Business from Personal Assets?</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/how-to-start-a-boarding-barn-legally/">How to Start a Boarding Barn Legally</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/how-to-start-a-horse-retail-business/">How to Start a Horse Retail Business</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/how-to-start-a-training-barn-legally/">How to Start a Training Barn Legally</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/how-to-start-an-equine-apparel-business/">How to Start an Equine Apparel Business</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/how-to-start-an-equine-assisted-therapy-business/">How to Start an Equine-Assisted Therapy Business</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/joint-venture-agreement-equine-business/">Joint Venture Agreement for an Equine Business</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/partnership-agreement-for-horse-business/">Partnership Agreement for a Horse Business</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/business/what-legal-documents-do-i-need-for-a-horse-business/">What Legal Documents Do I Need for a Horse Business?</a> <span class="muted">— faq · Equine Business Formation</span></li>
+<li><a href="/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/">A horse business mixes personal and business money. Why does that matter?</a> <span class="muted">— scenario · Equine Business Formation</span></li>
+<li><a href="/scenario/a-horse-business-wants-to-use-client-photos-in-marketing-what-permission-matters/">A horse business wants to use client photos in marketing. What permission matters?</a> <span class="muted">— scenario · Equine Business Formation</span></li>
+<li><a href="/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/">A horse syndicate member wants out. What documents matter?</a> <span class="muted">— scenario · Equine Business Formation</span></li>
+<li><a href="/scenario/horse-business-partners-are-disagreeing-what-documents-matter/">Horse business partners are disagreeing. What documents matter?</a> <span class="muted">— scenario · Equine Business Formation</span></li>
+<li><a href="/compare/barn-lease-vs-boarding-agreement/">Barn lease vs boarding agreement</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/boarding-contract-vs-barn-lease/">Boarding contract vs barn lease</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/facility-lease-vs-pasture-lease/">Facility lease vs pasture lease</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/horse-lease-vs-horse-purchase/">Horse lease vs horse purchase</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/horse-lease-vs-horse-trial-agreement/">Horse lease vs horse trial agreement</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/lease-termination-clause-vs-informal-cancellation/">Lease termination clause vs informal cancellation</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/lease-to-own-vs-buying-outright/">Lease to Own vs Buying Outright</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/lease-vs-purchase-horse/">Lease vs Purchase Horse</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/photo-release-vs-sponsorship-rights-agreement/">Photo release vs sponsorship rights agreement</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/purchase-deposit-agreement-vs-refundable-trial-payment/">Purchase deposit agreement vs refundable trial payment</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/release-form-vs-liability-waiver/">Release form vs liability waiver</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/release-of-claims-vs-settlement-agreement/">Release of claims vs settlement agreement</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/trial-agreement-vs-lease-agreement/">Trial Agreement vs Lease Agreement</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/compare/trial-period-vs-lease-to-own-horse-arrangement/">Trial period vs lease-to-own horse arrangement</a> <span class="muted">— comparison · Horse Lease And Trial</span></li>
+<li><a href="/leases/can-you-end-a-horse-lease-early/">Can You End a Horse Lease Early?</a> <span class="muted">— faq · Horse Lease And Trial</span></li>
+<li><a href="/leases/what-happens-if-a-leased-horse-becomes-unsound/">What Happens If a Leased Horse Becomes Unsound?</a> <span class="muted">— faq · Horse Lease And Trial</span></li>
+<li><a href="/leases/what-happens-if-a-leased-horse-is-injured/">What Happens If a Leased Horse Is Injured?</a> <span class="muted">— faq · Horse Lease And Trial</span></li>
+<li><a href="/leases/what-is-a-horse-trial-agreement/">What Is a Horse Trial Agreement?</a> <span class="muted">— faq · Horse Lease And Trial</span></li>
+<li><a href="/leases/what-should-be-included-in-a-horse-lease-agreement/">What Should Be Included in a Horse Lease Agreement?</a> <span class="muted">— faq · Horse Lease And Trial</span></li>
+<li><a href="/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/">What terms decide who pays after a lease horse dispute</a> <span class="muted">— faq · Horse Lease And Trial</span></li>
+<li><a href="/leases/who-is-liable-during-a-horse-lease/">Who Is Liable During a Horse Lease?</a> <span class="muted">— faq · Horse Lease And Trial</span></li>
+<li><a href="/leases/who-pays-vet-bills-in-a-horse-lease/">Who Pays Vet Bills in a Horse Lease?</a> <span class="muted">— faq · Horse Lease And Trial</span></li>
+<li><a href="/scenario/a-barn-lease-does-not-say-who-handles-repairs-what-now/">A barn lease does not say who handles repairs. What now?</a> <span class="muted">— scenario · Horse Lease And Trial</span></li>
+<li><a href="/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/">A horse lease allows use but not showing. What happens if the horse was shown?</a> <span class="muted">— scenario · Horse Lease And Trial</span></li>
+<li><a href="/scenario/a-horse-lease-ended-early-what-issues-usually-come-up/">A horse lease ended early. What issues usually come up?</a> <span class="muted">— scenario · Horse Lease And Trial</span></li>
+<li><a href="/scenario/a-lease-to-own-arrangement-is-unclear-what-problems-can-appear/">A lease-to-own arrangement is unclear. What problems can appear?</a> <span class="muted">— scenario · Horse Lease And Trial</span></li>
+<li><a href="/scenario/a-leased-horse-became-unsound-who-pays/">A leased horse became unsound. Who pays?</a> <span class="muted">— scenario · Horse Lease And Trial</span></li>
+<li><a href="/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/">A trial horse got hurt before purchase. What should be reviewed?</a> <span class="muted">— scenario · Horse Lease And Trial</span></li>
+<li><a href="/scenario/repairs-are-disputed-in-a-barn-lease-what-matters/">Repairs are disputed in a barn lease. What matters?</a> <span class="muted">— scenario · Horse Lease And Trial</span></li>
+<li><a href="/scenario/what-should-be-documented-when-a-lease-horse-is-injured/">What should be documented when a lease horse is injured</a> <span class="muted">— scenario · Horse Lease And Trial</span></li>
+<li><a href="/compare/as-is-clause-vs-disclosure-clause-in-a-horse-sale/">As-is clause vs disclosure clause in a horse sale</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/bill-of-sale-vs-transfer-of-ownership-clause/">Bill of sale vs transfer-of-ownership clause</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/choice-of-law-clause-vs-venue-clause/">Choice of law clause vs venue clause</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/contract-review-vs-diy-horse-agreement/">Contract Review vs DIY Horse Agreement</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/contract-vs-handshake-deal-horse-sale/">Contract vs Handshake Deal in a Horse Sale</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/custom-contract-review-vs-online-legal-template/">Custom contract review vs online legal template</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/emergency-vet-authorization-vs-owner-consent-clause/">Emergency vet authorization vs owner consent clause</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/hold-harmless-clause-vs-indemnity-clause/">Hold harmless clause vs indemnity clause</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/horse-purchase-agreement-vs-bill-of-sale/">Horse purchase agreement vs bill of sale</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/horse-purchase-deposit-vs-full-payment/">Horse purchase deposit vs full payment</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/horse-sale-addendum-vs-new-contract/">Horse sale addendum vs new contract</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/horse-sale-contract-vs-bill-of-sale/">Horse Sale Contract vs Bill of Sale</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/lease-to-purchase-vs-outright-purchase/">Lease to Purchase vs Outright Purchase</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/pre-purchase-exam-vs-as-is-horse-sale/">Pre-purchase exam vs as-is horse sale</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/pre-purchase-exam-vs-no-exam-legal-risk/">Pre-Purchase Exam vs No Exam: Legal Risk</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/retainer-agreement-vs-consultation-call/">Retainer agreement vs consultation call</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/risk-of-loss-clause-vs-possession-transfer/">Risk of loss clause vs possession transfer</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/sale-disclosure-form-vs-veterinary-records/">Sale disclosure form vs veterinary records</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/template-contract-vs-custom-horse-contract/">Template Contract vs Custom Horse Contract</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/template-horse-contract-vs-custom-horse-contract/">Template horse contract vs custom horse contract</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/text-message-agreement-vs-signed-contract/">Text-message agreement vs signed contract</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/verbal-horse-agreement-vs-written-horse-agreement/">Verbal horse agreement vs written horse agreement</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/compare/written-horse-contract-vs-handshake-deal/">Written horse contract vs handshake deal</a> <span class="muted">— comparison · Horse Sale And Purchase</span></li>
+<li><a href="/faq/can-a-buyer-return-a-horse-after-purchase/">Can a Buyer Return a Horse After Purchase?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/can-a-buyer-sue-after-an-as-is-horse-sale/">Can a Buyer Sue After an “As-Is” Horse Sale?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/can-a-seller-refuse-to-take-a-horse-back/">Can a Seller Refuse to Take a Horse Back?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/">Can I Use a Template I Found Online for a Horse Contract?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/do-i-need-a-contract-to-buy-a-horse/">Do I Need a Contract to Buy a Horse?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/do-i-need-a-contract-to-sell-a-horse/">Do I Need a Contract to Sell a Horse?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/">Is a Verbal Agreement Legally Binding in a Horse Sale?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/what-documents-matter-most-in-a-horse-sale-dispute/">What documents matter most in a horse sale dispute</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/what-happens-if-a-horse-becomes-lame-after-sale/">What Happens If a Horse Becomes Lame After Sale?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/">What Happens If a Horse Is Misrepresented in a Sale?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/what-happens-if-a-horse-sale-goes-wrong/">What Happens If a Horse Sale Goes Wrong?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/">What Happens If There Is No Written Agreement in a Horse Sale?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/what-should-be-included-in-a-horse-bill-of-sale/">What Should Be Included in a Horse Bill of Sale?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/what-should-be-included-in-a-horse-sale-contract/">What Should Be Included in a Horse Sale Contract?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/when-does-ownership-legally-transfer-in-a-horse-sale/">When Does Ownership Legally Transfer in a Horse Sale?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/faq/who-is-responsible-after-a-horse-sale-is-completed/">Who Is Responsible After a Horse Sale Is Completed?</a> <span class="muted">— faq · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/">A buyer and seller remember the deal differently. What should be preserved?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/">A buyer skipped the pre-purchase exam and now regrets it. What matters?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-buyer-wants-a-refund-after-changing-their-mind-what-matters/">A buyer wants a refund after changing their mind. What matters?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-buyer-wants-to-return-the-horse-what-matters/">A buyer wants to return the horse. What matters?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-contract-names-the-wrong-party-why-does-that-matter/">A contract names the wrong party. Why does that matter?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-horse-sale-involved-a-minor-what-extra-issues-can-arise/">A horse sale involved a minor. What extra issues can arise?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/">A horse was advertised differently than described in the contract. What matters?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/">A horse was misrepresented in texts before sale. What should be preserved?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-horse-was-sold-through-a-friend-or-agent-who-had-authority/">A horse was sold through a friend or agent. Who had authority?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/">A horse was transported before paperwork was complete. What risk does that create?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-payment-plan-horse-sale-has-gone-sideways-what-should-be-reviewed/">A payment plan horse sale has gone sideways. What should be reviewed?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-seller-disclosed-an-issue-verbally-but-not-in-writing-what-should-be-reviewed/">A seller disclosed an issue verbally but not in writing. What should be reviewed?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/a-social-media-collaboration-went-wrong-what-rights-matter/">A social media collaboration went wrong. What rights matter?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/i-ignored-a-horse-legal-issue-and-it-got-worse-what-now/">I ignored a horse legal issue and it got worse. What now?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/i-signed-something-i-did-not-understand-what-should-i-do/">I signed something I did not understand. What should I do?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/i-sold-a-horse-without-a-contract-what-now/">I sold a horse without a contract. What now?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/i-trusted-a-handshake-deal-in-a-horse-sale-am-i-exposed/">I trusted a handshake deal in a horse sale. Am I exposed?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/i-used-a-template-horse-contract-is-that-enough/">I used a template horse contract. Is that enough?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/">The bill of sale says one thing but texts say another. What matters?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/">The horse failed the pre-purchase exam after a deposit. What now?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/">The seller kept possession after payment. What should be clarified?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/the-seller-refuses-to-take-the-horse-back-what-matters/">The seller refuses to take the horse back. What matters?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/">The seller says the horse was sold as-is. What does that usually affect?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/what-if-i-bought-a-horse-without-a-contract/">What If I Bought a Horse Without a Contract?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/what-if-i-sold-a-horse-without-a-contract/">What If I Sold a Horse Without a Contract?</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/scenario/what-should-i-gather-before-asking-for-a-refund-after-a-horse-sale/">What should I gather before asking for a refund after a horse sale</a> <span class="muted">— scenario · Horse Sale And Purchase</span></li>
+<li><a href="/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/">Equestrian sponsor agreement vs informal email agreement</a> <span class="muted">— comparison · Intellectual Property And Brand</span></li>
+<li><a href="/compare/sponsor-deliverables-schedule-vs-general-sponsorship-promise/">Sponsor deliverables schedule vs general sponsorship promise</a> <span class="muted">— comparison · Intellectual Property And Brand</span></li>
+<li><a href="/compare/sponsorship-agreement-vs-brand-ambassador-agreement/">Sponsorship agreement vs brand ambassador agreement</a> <span class="muted">— comparison · Intellectual Property And Brand</span></li>
+<li><a href="/compare/sponsorship-agreement-vs-simple-email-agreement/">Sponsorship Agreement vs Simple Email Agreement</a> <span class="muted">— comparison · Intellectual Property And Brand</span></li>
+<li><a href="/compare/trademark-vs-llc-name-horse-business/">Trademark vs LLC Name for a Horse Business</a> <span class="muted">— comparison · Intellectual Property And Brand</span></li>
+<li><a href="/compare/use-of-image-rights-vs-copyright-ownership/">Use of image rights vs copyright ownership</a> <span class="muted">— comparison · Intellectual Property And Brand</span></li>
+<li><a href="/ip/can-a-sponsor-use-my-image-without-permission/">Can a Sponsor Use My Image Without Permission?</a> <span class="muted">— faq · Intellectual Property And Brand</span></li>
+<li><a href="/ip/do-i-need-a-contract-for-a-sponsorship/">Do I Need a Contract for a Sponsorship?</a> <span class="muted">— faq · Intellectual Property And Brand</span></li>
+<li><a href="/ip/do-i-need-a-trademark-for-an-equestrian-brand/">Do I Need a Trademark for an Equestrian Brand?</a> <span class="muted">— faq · Intellectual Property And Brand</span></li>
+<li><a href="/ip/how-do-i-get-a-sponsorship-for-horse-riding/">How Do I Get a Sponsorship for Horse Riding?</a> <span class="muted">— faq · Intellectual Property And Brand</span></li>
+<li><a href="/ip/how-do-i-protect-my-horse-business-brand/">How Do I Protect My Horse Business Brand?</a> <span class="muted">— faq · Intellectual Property And Brand</span></li>
+<li><a href="/ip/should-i-trademark-my-barn-name/">Should I Trademark My Barn Name?</a> <span class="muted">— faq · Intellectual Property And Brand</span></li>
+<li><a href="/ip/what-should-be-in-an-equestrian-sponsorship-agreement/">What Should Be in an Equestrian Sponsorship Agreement?</a> <span class="muted">— faq · Intellectual Property And Brand</span></li>
+<li><a href="/scenario/a-sponsor-did-not-deliver-promised-payment-what-should-be-checked/">A sponsor did not deliver promised payment. What should be checked?</a> <span class="muted">— scenario · Intellectual Property And Brand</span></li>
+<li><a href="/scenario/a-sponsor-used-my-image-without-permission-what-are-the-issues/">A sponsor used my image without permission. What are the issues?</a> <span class="muted">— scenario · Intellectual Property And Brand</span></li>
+<li><a href="/scenario/a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/">A sponsor wants exclusivity after the fact. What should be reviewed?</a> <span class="muted">— scenario · Intellectual Property And Brand</span></li>
+<li><a href="/scenario/an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/">An equestrian apparel idea may copy another brand. What should be reviewed?</a> <span class="muted">— scenario · Intellectual Property And Brand</span></li>
+<li><a href="/scenario/an-equestrian-sponsorship-agreement-went-sideways-what-should-be-checked/">An equestrian sponsorship agreement went sideways. What should be checked?</a> <span class="muted">— scenario · Intellectual Property And Brand</span></li>
+<li><a href="/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/">Do I Need Both a Waiver and Insurance for a Horse Business?</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/equine-activity-statute-vs-negligence-claim/">Equine activity statute vs negligence claim</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/equine-therapy-consent-form-vs-liability-waiver/">Equine therapy consent form vs liability waiver</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/horse-owner-liability-vs-trainer-liability/">Horse Owner Liability vs Trainer Liability</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/insurance-certificate-vs-actual-policy-coverage/">Insurance certificate vs actual policy coverage</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/liability-waiver-vs-insurance-for-horse-activities/">Liability waiver vs insurance for horse activities</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/llc-vs-insurance-for-horse-business-liability/">LLC vs Insurance for Horse Business Liability</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/llc-vs-insurance-for-liability-protection/">LLC vs Insurance for Liability Protection</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/state-equine-liability-act-vs-private-contract/">State equine liability act vs private contract</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/statutory-warning-signs-vs-liability-waivers/">Statutory warning signs vs liability waivers</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/waiver-vs-insurance-horse-liability/">Waiver vs Insurance for Horse Liability</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/compare/warning-sign-compliance-vs-signed-waiver/">Warning sign compliance vs signed waiver</a> <span class="muted">— comparison · Liability Waivers Insurance</span></li>
+<li><a href="/liability/can-i-still-be-sued-if-i-have-a-waiver/">Can I Still Be Sued If I Have a Waiver?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/do-i-need-a-liability-waiver-for-my-horse-business/">Do I Need a Liability Waiver for My Horse Business?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/do-i-need-a-warning-sign-at-my-barn/">Do I Need a Warning Sign at My Barn?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/do-i-need-insurance-for-my-horse-business/">Do I Need Insurance for My Horse Business?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/does-my-contract-need-statutory-warning-language/">Does My Contract Need Statutory Warning Language?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/">If Someone Gets Hurt Riding My Horse, Am I Liable?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/faq/what-documents-matter-most-when-a-waiver-is-tested-after-an-injury/">What documents matter most when a waiver is tested after an injury</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/what-does-equine-liability-law-actually-protect-me-from/">What Does Equine Liability Law Actually Protect Me From?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/what-happens-if-i-do-not-post-the-required-sign/">What Happens If I Don’t Post the Required Sign?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/what-is-the-equine-activity-liability-act/">What Is the Equine Activity Liability Act?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/what-type-of-insurance-do-horse-owners-need/">What Type of Insurance Do Horse Owners Need?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/liability/what-type-of-insurance-do-trainers-need/">What Type of Insurance Do Trainers Need?</a> <span class="muted">— faq · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/">A buyer claims misrepresentation after a horse sale. What matters?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/">A buyer found an old injury after purchase. What should be gathered?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/">A client posted damaging claims about a horse business. What should be preserved?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/">A horse business is using an old waiver. What should be updated?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/">A horse business owner is worried about personal liability. What should be checked?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-horse-was-injured-during-a-paid-lesson-what-should-be-reviewed/">A horse was injured during a paid lesson. What should be reviewed?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-parent-signed-a-waiver-for-a-minor-rider-what-should-be-checked/">A parent signed a waiver for a minor rider. What should be checked?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-rider-used-a-facility-without-signing-a-waiver-what-risk-does-that-create/">A rider used a facility without signing a waiver. What risk does that create?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-rider-was-injured-at-a-clinic-what-should-organizers-review/">A rider was injured at a clinic. What should organizers review?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/a-therapeutic-riding-waiver-is-unclear-what-should-be-checked/">A therapeutic riding waiver is unclear. What should be checked?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/an-equine-therapy-client-was-injured-what-should-be-documented/">An equine therapy client was injured. What should be documented?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/insurance-denied-a-horse-related-claim-what-should-be-gathered/">Insurance denied a horse-related claim. What should be gathered?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/">Someone was hurt riding my horse. What should I think about?</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/scenario/what-should-i-document-after-a-rider-injury-at-the-barn/">What should I document after a rider injury at the barn</a> <span class="muted">— scenario · Liability Waivers Insurance</span></li>
+<li><a href="/leases/can-i-run-a-horse-business-under-my-lease/">Can I Run a Horse Business Under My Lease?</a> <span class="muted">— faq · Real Property And Leases</span></li>
+<li><a href="/leases/what-liability-applies-in-a-horse-property-lease/">What Liability Applies in a Horse Property Lease?</a> <span class="muted">— faq · Real Property And Leases</span></li>
+<li><a href="/leases/what-should-be-included-in-a-barn-lease/">What Should Be Included in a Barn Lease?</a> <span class="muted">— faq · Real Property And Leases</span></li>
+<li><a href="/leases/who-is-responsible-for-repairs-in-a-barn-lease/">Who Is Responsible for Repairs in a Barn Lease?</a> <span class="muted">— faq · Real Property And Leases</span></li>
+<li><a href="/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/">A contract has no state law clause. Why can that matter?</a> <span class="muted">— scenario · State Specific</span></li>
+<li><a href="/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/">A horse sale crossed state lines. What should be reviewed?</a> <span class="muted">— scenario · State Specific</span></li>
+<li><a href="/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/">A seller relied on a verbal as-is statement. What should be reviewed?</a> <span class="muted">— scenario · State Specific</span></li>
+<li><a href="/state/south-carolina/can-i-be-sued-if-i-have-a-waiver/">Can I Be Sued in South Carolina If I Have a Waiver?</a> <span class="muted">— state · State Specific</span></li>
+<li><a href="/state/north-carolina/do-i-need-a-horse-sale-contract/">Do I Need a Horse Sale Contract in North Carolina?</a> <span class="muted">— state · State Specific</span></li>
+<li><a href="/state/south-carolina/do-i-need-a-liability-waiver/">Do I Need a Liability Waiver in South Carolina?</a> <span class="muted">— state · State Specific</span></li>
+<li><a href="/state/north-carolina/do-i-need-warning-signs/">Do I Need Warning Signs in North Carolina?</a> <span class="muted">— state · State Specific</span></li>
+<li><a href="/state/illinois/what-does-illinois-equine-liability-law-cover/">What Does Illinois Equine Liability Law Cover?</a> <span class="muted">— state · State Specific</span></li>
+<li><a href="/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/">What Does North Carolina Equine Liability Law Cover?</a> <span class="muted">— state · State Specific</span></li>
+<li><a href="/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/">Am I Subject to HIPAA in Equine Therapy?</a> <span class="muted">— faq · Therapeutic Riding And Hipaa</span></li>
+<li><a href="/therapeutic/do-i-need-insurance-for-therapeutic-riding/">Do I Need Insurance for Therapeutic Riding?</a> <span class="muted">— faq · Therapeutic Riding And Hipaa</span></li>
+<li><a href="/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/">How Do I Start an Equine-Assisted Therapy Program Legally?</a> <span class="muted">— faq · Therapeutic Riding And Hipaa</span></li>
+<li><a href="/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/">What Legal Requirements Apply to Therapeutic Riding Programs?</a> <span class="muted">— faq · Therapeutic Riding And Hipaa</span></li>
+<li><a href="/therapeutic/what-waivers-are-required-for-equine-therapy-programs/">What Waivers Are Required for Equine Therapy Programs?</a> <span class="muted">— faq · Therapeutic Riding And Hipaa</span></li>
+<li><a href="/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/">A therapeutic riding program collects health information. What should be reviewed?</a> <span class="muted">— scenario · Therapeutic Riding And Hipaa</span></li>
+<li><a href="/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/">A therapeutic riding program uses volunteers and minors. What should be checked?</a> <span class="muted">— scenario · Therapeutic Riding And Hipaa</span></li></ul></section><section><h2>Comparison</h2><ul><li><a href="/compare/as-is-clause-vs-disclosure-clause-in-a-horse-sale/">As-is clause vs disclosure clause in a horse sale</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/barn-lease-vs-boarding-agreement/">Barn lease vs boarding agreement</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/bill-of-sale-vs-transfer-of-ownership-clause/">Bill of sale vs transfer-of-ownership clause</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/boarder-default-notice-vs-demand-letter/">Boarder default notice vs demand letter</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/compare/boarding-agreement-vs-training-agreement/">Boarding agreement vs training agreement</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/compare/boarding-contract-vs-barn-lease/">Boarding contract vs barn lease</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/boarding-lien-rights-vs-collections-lawsuit/">Boarding lien rights vs collections lawsuit</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/compare/business-name-registration-vs-trademark-filing/">Business name registration vs trademark filing</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/compare/choice-of-law-clause-vs-venue-clause/">Choice of law clause vs venue clause</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/contract-review-vs-diy-horse-agreement/">Contract Review vs DIY Horse Agreement</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/contract-vs-handshake-deal-horse-sale/">Contract vs Handshake Deal in a Horse Sale</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/custom-contract-review-vs-online-legal-template/">Custom contract review vs online legal template</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/demand-letter-vs-informal-text-dispute/">Demand letter vs informal text dispute</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/compare/demand-letter-vs-lawsuit/">Demand Letter vs Lawsuit</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/">Demand Letter vs Lawsuit in a Horse Dispute</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/">Do I Need Both a Waiver and Insurance for a Horse Business?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/emergency-vet-authorization-vs-owner-consent-clause/">Emergency vet authorization vs owner consent clause</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/">Equestrian sponsor agreement vs informal email agreement</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/compare/equine-activity-statute-vs-negligence-claim/">Equine activity statute vs negligence claim</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/equine-business-contract-vs-general-business-contract/">Equine business contract vs general business contract</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/compare/equine-therapy-consent-form-vs-liability-waiver/">Equine therapy consent form vs liability waiver</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/facility-lease-vs-pasture-lease/">Facility lease vs pasture lease</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/hold-harmless-clause-vs-indemnity-clause/">Hold harmless clause vs indemnity clause</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/horse-co-ownership-agreement-vs-syndicate-structure/">Horse co-ownership agreement vs syndicate structure</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/compare/horse-lease-vs-horse-purchase/">Horse lease vs horse purchase</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/horse-lease-vs-horse-trial-agreement/">Horse lease vs horse trial agreement</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/horse-owner-liability-vs-trainer-liability/">Horse Owner Liability vs Trainer Liability</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/horse-purchase-agreement-vs-bill-of-sale/">Horse purchase agreement vs bill of sale</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/horse-purchase-deposit-vs-full-payment/">Horse purchase deposit vs full payment</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/horse-sale-addendum-vs-new-contract/">Horse sale addendum vs new contract</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/horse-sale-contract-vs-bill-of-sale/">Horse Sale Contract vs Bill of Sale</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/horse-syndicate-agreement-vs-partnership-agreement/">Horse syndicate agreement vs partnership agreement</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/compare/insurance-certificate-vs-actual-policy-coverage/">Insurance certificate vs actual policy coverage</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/lease-termination-clause-vs-informal-cancellation/">Lease termination clause vs informal cancellation</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/lease-to-own-vs-buying-outright/">Lease to Own vs Buying Outright</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/lease-to-purchase-vs-outright-purchase/">Lease to Purchase vs Outright Purchase</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/lease-vs-purchase-horse/">Lease vs Purchase Horse</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/liability-waiver-vs-insurance-for-horse-activities/">Liability waiver vs insurance for horse activities</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/llc-vs-insurance-for-horse-business-liability/">LLC vs Insurance for Horse Business Liability</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/llc-vs-insurance-for-liability-protection/">LLC vs Insurance for Liability Protection</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/llc-vs-sole-proprietor-horse-business/">LLC vs Sole Proprietor Horse Business</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/compare/mediation-vs-litigation-in-a-horse-dispute/">Mediation vs Litigation in a Horse Dispute</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/compare/mediation-vs-litigation-in-horse-disputes/">Mediation vs litigation in horse disputes</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/compare/mediation-vs-litigation-horse-disputes/">Mediation vs Litigation in Horse Disputes</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/">Operating agreement vs partnership agreement for horse businesses</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/compare/photo-release-vs-sponsorship-rights-agreement/">Photo release vs sponsorship rights agreement</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/pre-purchase-exam-vs-as-is-horse-sale/">Pre-purchase exam vs as-is horse sale</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/pre-purchase-exam-vs-no-exam-legal-risk/">Pre-Purchase Exam vs No Exam: Legal Risk</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/private-horse-sale-vs-trainer-assisted-sale/">Private horse sale vs trainer-assisted sale</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/compare/purchase-deposit-agreement-vs-refundable-trial-payment/">Purchase deposit agreement vs refundable trial payment</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/release-form-vs-liability-waiver/">Release form vs liability waiver</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/release-of-claims-vs-settlement-agreement/">Release of claims vs settlement agreement</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/retainer-agreement-vs-consultation-call/">Retainer agreement vs consultation call</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/risk-of-loss-clause-vs-possession-transfer/">Risk of loss clause vs possession transfer</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/sale-disclosure-form-vs-veterinary-records/">Sale disclosure form vs veterinary records</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/sole-proprietor-vs-llc-for-a-horse-business/">Sole proprietor vs LLC for a horse business</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/compare/sponsor-deliverables-schedule-vs-general-sponsorship-promise/">Sponsor deliverables schedule vs general sponsorship promise</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/compare/sponsorship-agreement-vs-brand-ambassador-agreement/">Sponsorship agreement vs brand ambassador agreement</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/compare/sponsorship-agreement-vs-simple-email-agreement/">Sponsorship Agreement vs Simple Email Agreement</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/compare/stable-rules-document-vs-boarding-contract/">Stable rules document vs boarding contract</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/compare/state-equine-liability-act-vs-private-contract/">State equine liability act vs private contract</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/statutory-warning-signs-vs-liability-waivers/">Statutory warning signs vs liability waivers</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/template-contract-vs-custom-horse-contract/">Template Contract vs Custom Horse Contract</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/template-horse-contract-vs-custom-horse-contract/">Template horse contract vs custom horse contract</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/text-message-agreement-vs-signed-contract/">Text-message agreement vs signed contract</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/therapy-program-waiver-vs-general-barn-waiver/">Therapy program waiver vs general barn waiver</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/compare/trademark-vs-llc-name-horse-business/">Trademark vs LLC Name for a Horse Business</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/compare/trademark-vs-llc-name-for-an-equestrian-business/">Trademark vs LLC name for an equestrian business</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/compare/trainer-agreement-vs-boarding-agreement/">Trainer agreement vs boarding agreement</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/compare/trainer-liability-vs-owner-liability/">Trainer liability vs owner liability</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/compare/training-fee-agreement-vs-commission-agreement/">Training fee agreement vs commission agreement</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/compare/trial-agreement-vs-lease-agreement/">Trial Agreement vs Lease Agreement</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/trial-period-vs-lease-to-own-horse-arrangement/">Trial period vs lease-to-own horse arrangement</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/compare/use-of-image-rights-vs-copyright-ownership/">Use of image rights vs copyright ownership</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/compare/verbal-horse-agreement-vs-written-horse-agreement/">Verbal horse agreement vs written horse agreement</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/compare/waiver-vs-insurance-horse-liability/">Waiver vs Insurance for Horse Liability</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/warning-sign-compliance-vs-signed-waiver/">Warning sign compliance vs signed waiver</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/compare/written-horse-contract-vs-handshake-deal/">Written horse contract vs handshake deal</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li></ul></section>
+<section><h2>Faq</h2><ul><li><a href="/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/">Am I Subject to HIPAA in Equine Therapy?</a> <span class="muted">— Therapeutic Riding And Hipaa · source_backed</span></li>
+<li><a href="/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/">Can a Boarding Barn Sell a Horse for Unpaid Bills?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/faq/can-a-buyer-return-a-horse-after-purchase/">Can a Buyer Return a Horse After Purchase?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/faq/can-a-buyer-sue-after-an-as-is-horse-sale/">Can a Buyer Sue After an “As-Is” Horse Sale?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/disputes/can-a-contract-dispute-be-resolved-without-court/">Can a Contract Dispute Be Resolved Without Court?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/faq/can-a-seller-refuse-to-take-a-horse-back/">Can a Seller Refuse to Take a Horse Back?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/ip/can-a-sponsor-use-my-image-without-permission/">Can a Sponsor Use My Image Without Permission?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/disputes/can-i-ignore-a-demand-letter/">Can I Ignore a Demand Letter?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/business/can-i-run-a-horse-business-under-another-company/">Can I Run a Horse Business Under Another Company?</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/leases/can-i-run-a-horse-business-under-my-lease/">Can I Run a Horse Business Under My Lease?</a> <span class="muted">— Real Property And Leases · source_backed</span></li>
+<li><a href="/liability/can-i-still-be-sued-if-i-have-a-waiver/">Can I Still Be Sued If I Have a Waiver?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/">Can I Use a Template I Found Online for a Horse Contract?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/leases/can-you-end-a-horse-lease-early/">Can You End a Horse Lease Early?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/ip/do-i-need-a-contract-for-a-sponsorship/">Do I Need a Contract for a Sponsorship?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/faq/do-i-need-a-contract-to-buy-a-horse/">Do I Need a Contract to Buy a Horse?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/faq/do-i-need-a-contract-to-sell-a-horse/">Do I Need a Contract to Sell a Horse?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/">Do I Need a Lawyer to Respond to a Demand Letter?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/liability/do-i-need-a-liability-waiver-for-my-horse-business/">Do I Need a Liability Waiver for My Horse Business?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/ip/do-i-need-a-trademark-for-an-equestrian-brand/">Do I Need a Trademark for an Equestrian Brand?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/liability/do-i-need-a-warning-sign-at-my-barn/">Do I Need a Warning Sign at My Barn?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/business/do-i-need-an-llc-to-start-a-horse-business/">Do I Need an LLC to Start a Horse Business?</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/liability/do-i-need-insurance-for-my-horse-business/">Do I Need Insurance for My Horse Business?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/therapeutic/do-i-need-insurance-for-therapeutic-riding/">Do I Need Insurance for Therapeutic Riding?</a> <span class="muted">— Therapeutic Riding And Hipaa · source_backed</span></li>
+<li><a href="/liability/does-my-contract-need-statutory-warning-language/">Does My Contract Need Statutory Warning Language?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/business/horse-syndicate-legal-structure/">Horse Syndicate Legal Structure</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/ip/how-do-i-get-a-sponsorship-for-horse-riding/">How Do I Get a Sponsorship for Horse Riding?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/business/how-do-i-legally-start-a-horse-business/">How Do I Legally Start a Horse Business?</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/ip/how-do-i-protect-my-horse-business-brand/">How Do I Protect My Horse Business Brand?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/business/how-do-i-separate-my-horse-business-from-personal-assets/">How Do I Separate My Horse Business from Personal Assets?</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/">How Do I Start an Equine-Assisted Therapy Program Legally?</a> <span class="muted">— Therapeutic Riding And Hipaa · source_backed</span></li>
+<li><a href="/disputes/how-serious-is-a-legal-demand-letter/">How Serious Is a Legal Demand Letter?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/business/how-to-start-a-boarding-barn-legally/">How to Start a Boarding Barn Legally</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/business/how-to-start-a-horse-retail-business/">How to Start a Horse Retail Business</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/business/how-to-start-a-training-barn-legally/">How to Start a Training Barn Legally</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/business/how-to-start-an-equine-apparel-business/">How to Start an Equine Apparel Business</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/business/how-to-start-an-equine-assisted-therapy-business/">How to Start an Equine-Assisted Therapy Business</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/">If Someone Gets Hurt Riding My Horse, Am I Liable?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/">Is a Verbal Agreement Legally Binding in a Horse Sale?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/business/joint-venture-agreement-equine-business/">Joint Venture Agreement for an Equine Business</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/business/partnership-agreement-for-horse-business/">Partnership Agreement for a Horse Business</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/ip/should-i-trademark-my-barn-name/">Should I Trademark My Barn Name?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/faq/what-documents-matter-most-in-a-horse-sale-dispute/">What documents matter most in a horse sale dispute</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/faq/what-documents-matter-most-when-a-waiver-is-tested-after-an-injury/">What documents matter most when a waiver is tested after an injury</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/faq/what-documents-should-i-review-before-answering-a-demand-letter/">What documents should I review before answering a demand letter</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/liability/what-does-equine-liability-law-actually-protect-me-from/">What Does Equine Liability Law Actually Protect Me From?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/boarding/what-happens-if-a-boarder-damages-property/">What Happens If a Boarder Damages Property?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/boarding/what-happens-if-a-boarder-does-not-pay/">What Happens If a Boarder Doesn’t Pay?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/boarding/what-happens-if-a-contract-does-not-address-responsibility/">What Happens If a Contract Does Not Address Responsibility?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/faq/what-happens-if-a-horse-becomes-lame-after-sale/">What Happens If a Horse Becomes Lame After Sale?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/boarding/what-happens-if-a-horse-dies-while-boarded/">What Happens If a Horse Dies While Boarded?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/">What Happens If a Horse Is Misrepresented in a Sale?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/faq/what-happens-if-a-horse-sale-goes-wrong/">What Happens If a Horse Sale Goes Wrong?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/leases/what-happens-if-a-leased-horse-becomes-unsound/">What Happens If a Leased Horse Becomes Unsound?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/leases/what-happens-if-a-leased-horse-is-injured/">What Happens If a Leased Horse Is Injured?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/liability/what-happens-if-i-do-not-post-the-required-sign/">What Happens If I Don’t Post the Required Sign?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/disputes/what-happens-if-i-do-not-respond-to-a-legal-letter/">What Happens If I Don’t Respond to a Legal Letter?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/">What Happens If There Is No Written Agreement in a Horse Sale?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/leases/what-is-a-horse-trial-agreement/">What Is a Horse Trial Agreement?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/liability/what-is-the-equine-activity-liability-act/">What Is the Equine Activity Liability Act?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/business/what-legal-documents-do-i-need-for-a-horse-business/">What Legal Documents Do I Need for a Horse Business?</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/">What Legal Documents Do I Need to Run a Boarding Barn?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/">What Legal Requirements Apply to Therapeutic Riding Programs?</a> <span class="muted">— Therapeutic Riding And Hipaa · source_backed</span></li>
+<li><a href="/leases/what-liability-applies-in-a-horse-property-lease/">What Liability Applies in a Horse Property Lease?</a> <span class="muted">— Real Property And Leases · source_backed</span></li>
+<li><a href="/boarding/what-liability-does-a-trainer-have/">What Liability Does a Trainer Have?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/faq/what-records-should-a-boarding-barn-keep-when-board-is-overdue/">What records should a boarding barn keep when board is overdue</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/ip/what-should-be-in-an-equestrian-sponsorship-agreement/">What Should Be in an Equestrian Sponsorship Agreement?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/leases/what-should-be-included-in-a-barn-lease/">What Should Be Included in a Barn Lease?</a> <span class="muted">— Real Property And Leases · source_backed</span></li>
+<li><a href="/faq/what-should-be-included-in-a-horse-bill-of-sale/">What Should Be Included in a Horse Bill of Sale?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/boarding/what-should-be-included-in-a-horse-boarding-agreement/">What Should Be Included in a Horse Boarding Agreement?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/leases/what-should-be-included-in-a-horse-lease-agreement/">What Should Be Included in a Horse Lease Agreement?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/faq/what-should-be-included-in-a-horse-sale-contract/">What Should Be Included in a Horse Sale Contract?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/boarding/what-should-be-included-in-a-training-agreement/">What Should Be Included in a Training Agreement?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/disputes/what-should-i-do-if-i-receive-a-demand-letter/">What Should I Do If I Receive a Demand Letter?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/">What terms decide who pays after a lease horse dispute</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/liability/what-type-of-insurance-do-horse-owners-need/">What Type of Insurance Do Horse Owners Need?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/liability/what-type-of-insurance-do-trainers-need/">What Type of Insurance Do Trainers Need?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/therapeutic/what-waivers-are-required-for-equine-therapy-programs/">What Waivers Are Required for Equine Therapy Programs?</a> <span class="muted">— Therapeutic Riding And Hipaa · source_backed</span></li>
+<li><a href="/faq/when-does-ownership-legally-transfer-in-a-horse-sale/">When Does Ownership Legally Transfer in a Horse Sale?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/leases/who-is-liable-during-a-horse-lease/">Who Is Liable During a Horse Lease?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/">Who Is Liable If a Horse Is Injured While Boarded?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/faq/who-is-responsible-after-a-horse-sale-is-completed/">Who Is Responsible After a Horse Sale Is Completed?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/leases/who-is-responsible-for-repairs-in-a-barn-lease/">Who Is Responsible for Repairs in a Barn Lease?</a> <span class="muted">— Real Property And Leases · source_backed</span></li>
+<li><a href="/leases/who-pays-vet-bills-in-a-horse-lease/">Who Pays Vet Bills in a Horse Lease?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/boarding/who-pays-vet-bills-while-a-horse-is-boarded/">Who Pays Vet Bills While a Horse Is Boarded?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li></ul></section>
+<section><h2>Scenario</h2><ul><li><a href="/scenario/a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/">A barn is relying only on insurance. What else should be reviewed?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-barn-lease-does-not-say-who-handles-repairs-what-now/">A barn lease does not say who handles repairs. What now?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/">A barn uses volunteers. What legal issues can come up?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-barn-wants-to-remove-a-difficult-boarder-what-should-be-checked/">A barn wants to remove a difficult boarder. What should be checked?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-boarder-stopped-paying-what-can-a-barn-do-next/">A boarder stopped paying. What can a barn do next?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-boarding-agreement-does-not-mention-emergency-care-what-now/">A boarding agreement does not mention emergency care. What now?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-boarding-barn-changed-facility-rules-mid-relationship-what-should-be-checked/">A boarding barn changed facility rules mid-relationship. What should be checked?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-boarding-barn-changed-ownership-what-happens-to-agreements/">A boarding barn changed ownership. What happens to agreements?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/">A boarding barn has unpaid invoices and unclear records. What should be organized?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/">A boarding barn wants to sell a horse for unpaid bills. What matters?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/">A buyer and seller remember the deal differently. What should be preserved?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/">A buyer claims misrepresentation after a horse sale. What matters?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/">A buyer found an old injury after purchase. What should be gathered?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/">A buyer skipped the pre-purchase exam and now regrets it. What matters?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-buyer-wants-a-refund-after-changing-their-mind-what-matters/">A buyer wants a refund after changing their mind. What matters?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-buyer-wants-to-return-the-horse-what-matters/">A buyer wants to return the horse. What matters?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/">A client posted damaging claims about a horse business. What should be preserved?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-client-wants-to-cancel-a-training-agreement-what-terms-matter/">A client wants to cancel a training agreement. What terms matter?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-clinic-host-and-trainer-disagree-about-responsibility-what-documents-matter/">A clinic host and trainer disagree about responsibility. What documents matter?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/">A contract has no state law clause. Why can that matter?</a> <span class="muted">— State Specific · source_backed</span></li>
+<li><a href="/scenario/a-contract-names-the-wrong-party-why-does-that-matter/">A contract names the wrong party. Why does that matter?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/">A demand letter has a deadline. What should be prioritized?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/">A farrier or vet dispute affects a horse sale. What documents matter?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/">A horse business is using an old waiver. What should be updated?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/">A horse business mixes personal and business money. Why does that matter?</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/scenario/a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/">A horse business owner is worried about personal liability. What should be checked?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-horse-business-wants-to-use-client-photos-in-marketing-what-permission-matters/">A horse business wants to use client photos in marketing. What permission matters?</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/scenario/a-horse-died-while-boarded-or-in-training-what-should-be-documented/">A horse died while boarded or in training. What should be documented?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/">A horse lease allows use but not showing. What happens if the horse was shown?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/scenario/a-horse-lease-ended-early-what-issues-usually-come-up/">A horse lease ended early. What issues usually come up?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/">A horse sale crossed state lines. What should be reviewed?</a> <span class="muted">— State Specific · source_backed</span></li>
+<li><a href="/scenario/a-horse-sale-involved-a-minor-what-extra-issues-can-arise/">A horse sale involved a minor. What extra issues can arise?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/">A horse syndicate member wants out. What documents matter?</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/scenario/a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/">A horse was advertised differently than described in the contract. What matters?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-horse-was-hurt-while-boarded-who-is-responsible/">A horse was hurt while boarded. Who is responsible?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-horse-was-injured-during-a-paid-lesson-what-should-be-reviewed/">A horse was injured during a paid lesson. What should be reviewed?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/">A horse was misrepresented in texts before sale. What should be preserved?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-horse-was-sold-through-a-friend-or-agent-who-had-authority/">A horse was sold through a friend or agent. Who had authority?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/">A horse was transported before paperwork was complete. What risk does that create?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-lease-to-own-arrangement-is-unclear-what-problems-can-appear/">A lease-to-own arrangement is unclear. What problems can appear?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/scenario/a-leased-horse-became-unsound-who-pays/">A leased horse became unsound. Who pays?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/scenario/a-lessee-stopped-paying-board-or-vet-bills-what-happens-next/">A lessee stopped paying board or vet bills. What happens next?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-parent-signed-a-waiver-for-a-minor-rider-what-should-be-checked/">A parent signed a waiver for a minor rider. What should be checked?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-payment-plan-horse-sale-has-gone-sideways-what-should-be-reviewed/">A payment plan horse sale has gone sideways. What should be reviewed?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-rider-used-a-facility-without-signing-a-waiver-what-risk-does-that-create/">A rider used a facility without signing a waiver. What risk does that create?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-rider-was-injured-at-a-clinic-what-should-organizers-review/">A rider was injured at a clinic. What should organizers review?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-seller-disclosed-an-issue-verbally-but-not-in-writing-what-should-be-reviewed/">A seller disclosed an issue verbally but not in writing. What should be reviewed?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/">A seller is being threatened with a lawsuit. What should they do first?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/">A seller relied on a verbal as-is statement. What should be reviewed?</a> <span class="muted">— State Specific · source_backed</span></li>
+<li><a href="/scenario/a-social-media-collaboration-went-wrong-what-rights-matter/">A social media collaboration went wrong. What rights matter?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/a-sponsor-did-not-deliver-promised-payment-what-should-be-checked/">A sponsor did not deliver promised payment. What should be checked?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/scenario/a-sponsor-used-my-image-without-permission-what-are-the-issues/">A sponsor used my image without permission. What are the issues?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/scenario/a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/">A sponsor wants exclusivity after the fact. What should be reviewed?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/">A therapeutic riding program collects health information. What should be reviewed?</a> <span class="muted">— Therapeutic Riding And Hipaa · source_backed</span></li>
+<li><a href="/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/">A therapeutic riding program uses volunteers and minors. What should be checked?</a> <span class="muted">— Therapeutic Riding And Hipaa · source_backed</span></li>
+<li><a href="/scenario/a-therapeutic-riding-waiver-is-unclear-what-should-be-checked/">A therapeutic riding waiver is unclear. What should be checked?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/a-trainer-changed-fees-without-a-signed-update-what-should-be-checked/">A trainer changed fees without a signed update. What should be checked?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/">A trainer sold a horse without clear authority. What should be reviewed?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-trainer-wants-commission-after-a-sale-what-should-be-checked/">A trainer wants commission after a sale. What should be checked?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/">A trial horse got hurt before purchase. What should be reviewed?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/scenario/a-warning-sign-was-not-posted-at-the-barn-what-risk-does-that-create/">A warning sign was not posted at the barn. What risk does that create?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/am-i-overreacting-or-is-this-risky/">Am I Overreacting or Is This Risky?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/">An equestrian apparel idea may copy another brand. What should be reviewed?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/scenario/an-equestrian-sponsorship-agreement-went-sideways-what-should-be-checked/">An equestrian sponsorship agreement went sideways. What should be checked?</a> <span class="muted">— Intellectual Property And Brand · source_backed</span></li>
+<li><a href="/scenario/an-equine-therapy-client-was-injured-what-should-be-documented/">An equine therapy client was injured. What should be documented?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/">Can I Back Out of a Horse Deal Without Getting Sued?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/did-i-mess-up-by-trusting-a-handshake-deal/">Did I Mess Up by Trusting a Handshake Deal?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/do-people-actually-get-sued-over-horse-deals-like-this/">Do People Actually Get Sued Over Horse Deals Like This?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/do-people-actually-get-sued-over-horse-deals/">Do People Actually Get Sued Over Horse Deals?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/horse-business-partners-are-disagreeing-what-documents-matter/">Horse business partners are disagreeing. What documents matter?</a> <span class="muted">— Equine Business Formation · source_backed</span></li>
+<li><a href="/scenario/i-am-worried-i-am-overreacting-to-a-horse-dispute-how-should-i-think-about-it/">I am worried I am overreacting to a horse dispute. How should I think about it?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/scenario/i-bought-a-horse-and-something-is-wrong-what-now/">I Bought a Horse and Something Is Wrong — What Now?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/i-ignored-a-horse-legal-issue-and-it-got-worse-what-now/">I ignored a horse legal issue and it got worse. What now?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/">I received a demand letter about a horse dispute. What should I do first?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/scenario/i-signed-something-i-did-not-understand-what-should-i-do/">I signed something I did not understand. What should I do?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/">I Sold a Horse Without a Contract — Am I Screwed?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/i-sold-a-horse-without-a-contract-what-now/">I sold a horse without a contract. What now?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/">I started a barn without paperwork. What risks did I create?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/i-trusted-a-handshake-deal-in-a-horse-sale-am-i-exposed/">I trusted a handshake deal in a horse sale. Am I exposed?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/i-used-a-template-horse-contract-is-that-enough/">I used a template horse contract. Is that enough?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/insurance-denied-a-horse-related-claim-what-should-be-gathered/">Insurance denied a horse-related claim. What should be gathered?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/is-it-too-late-to-fix-a-bad-horse-sale/">Is It Too Late to Fix a Bad Horse Sale?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/repairs-are-disputed-in-a-barn-lease-what-matters/">Repairs are disputed in a barn lease. What matters?</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/scenario/someone-copied-my-barn-name-online-what-should-i-gather/">Someone copied my barn name online. What should I gather?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/">Someone wants to mediate a horse dispute. What should be prepared?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/">Someone was hurt riding my horse. What should I think about?</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/">State warning sign rules are confusing. What should a barn review?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/">The bill of sale says one thing but texts say another. What matters?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/">The buyer moved the horse before the dispute started. Why does that matter?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/">The horse failed the pre-purchase exam after a deposit. What now?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/">The seller kept possession after payment. What should be clarified?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/the-seller-refuses-to-take-the-horse-back-what-matters/">The seller refuses to take the horse back. What matters?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/">The seller says the horse was sold as-is. What does that usually affect?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/">There is a barn name or brand dispute. What should be reviewed?</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/">Vet bills are disputed after a horse sale. What should be reviewed?</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li>
+<li><a href="/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/">What Happens If I Ignore a Problem and Hope It Goes Away?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/what-if-i-already-signed-something-i-did-not-understand/">What If I Already Signed Something I Did Not Understand?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/what-if-i-bought-a-horse-without-a-contract/">What If I Bought a Horse Without a Contract?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/what-if-i-sold-a-horse-without-a-contract/">What If I Sold a Horse Without a Contract?</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/">What Is the Worst-Case Scenario If I Do Nothing?</a> <span class="muted">— Emotional Am I Screwed · source_backed</span></li>
+<li><a href="/scenario/what-should-a-barn-document-before-claiming-a-lien-or-sale-right/">What should a barn document before claiming a lien or sale right</a> <span class="muted">— Boarding Training And Barn Operations · source_backed</span></li>
+<li><a href="/scenario/what-should-be-documented-when-a-lease-horse-is-injured/">What should be documented when a lease horse is injured</a> <span class="muted">— Horse Lease And Trial · source_backed</span></li>
+<li><a href="/scenario/what-should-i-document-after-a-rider-injury-at-the-barn/">What should I document after a rider injury at the barn</a> <span class="muted">— Liability Waivers Insurance · source_backed</span></li>
+<li><a href="/scenario/what-should-i-gather-before-asking-for-a-refund-after-a-horse-sale/">What should I gather before asking for a refund after a horse sale</a> <span class="muted">— Horse Sale And Purchase · source_backed</span></li>
+<li><a href="/scenario/what-should-i-gather-before-responding-to-a-demand-letter/">What should I gather before responding to a demand letter</a> <span class="muted">— Demand Letters And Disputes · source_backed</span></li></ul></section>
+<section><h2>State</h2><ul><li><a href="/state/south-carolina/can-i-be-sued-if-i-have-a-waiver/">Can I Be Sued in South Carolina If I Have a Waiver?</a> <span class="muted">— State Specific · source_backed</span></li>
+<li><a href="/state/north-carolina/do-i-need-a-horse-sale-contract/">Do I Need a Horse Sale Contract in North Carolina?</a> <span class="muted">— State Specific · source_backed</span></li>
+<li><a href="/state/south-carolina/do-i-need-a-liability-waiver/">Do I Need a Liability Waiver in South Carolina?</a> <span class="muted">— State Specific · source_backed</span></li>
+<li><a href="/state/north-carolina/do-i-need-warning-signs/">Do I Need Warning Signs in North Carolina?</a> <span class="muted">— State Specific · source_backed</span></li>
+<li><a href="/state/illinois/what-does-illinois-equine-liability-law-cover/">What Does Illinois Equine Liability Law Cover?</a> <span class="muted">— State Specific · source_backed</span></li>
+<li><a href="/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/">What Does North Carolina Equine Liability Law Cover?</a> <span class="muted">— State Specific · source_backed</span></li></ul></section><section><h2>Reference / fan-out surfaces</h2><p>The reference layer now exists to route clean question patterns to canonical public pages and cluster fan-out files.</p><ul><li><a href="/reference/how-should-someone-compare-boarder-default-notice-vs-demand-letter-in-an-equine-legal-situation/">How should someone compare boarder default notice vs demand letter in an equine legal situation?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/how-should-someone-compare-boarding-agreement-vs-training-agreement-in-an-equine-legal-situation/">How should someone compare boarding agreement vs training agreement in an equine legal situation?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/how-should-someone-compare-boarding-lien-rights-vs-collections-lawsuit-in-an-equine-legal-situation/">How should someone compare boarding lien rights vs collections lawsuit in an equine legal situation?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/how-should-someone-compare-private-horse-sale-vs-trainer-assisted-sale-in-an-equine-legal-situation/">How should someone compare private horse sale vs trainer-assisted sale in an equine legal situation?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/how-should-someone-compare-stable-rules-document-vs-boarding-contract-in-an-equine-legal-situation/">How should someone compare stable rules document vs boarding contract in an equine legal situation?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/how-should-someone-compare-therapy-program-waiver-vs-general-barn-waiver-in-an-equine-legal-situation/">How should someone compare therapy program waiver vs general barn waiver in an equine legal situation?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/how-should-someone-compare-trainer-agreement-vs-boarding-agreement-in-an-equine-legal-situation/">How should someone compare trainer agreement vs boarding agreement in an equine legal situation?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/how-should-someone-compare-trainer-liability-vs-owner-liability-in-an-equine-legal-situation/">How should someone compare trainer liability vs owner liability in an equine legal situation?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/how-should-someone-compare-training-fee-agreement-vs-commission-agreement-in-an-equine-legal-situation/">How should someone compare training fee agreement vs commission agreement in an equine legal situation?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/how-should-someone-compare-demand-letter-vs-informal-text-dispute-in-an-equine-legal-situation/">How should someone compare demand letter vs informal text dispute in an equine legal situation?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/how-should-someone-compare-demand-letter-vs-lawsuit-in-an-equine-legal-situation/">How should someone compare demand letter vs lawsuit in an equine legal situation?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/how-should-someone-compare-demand-letter-vs-lawsuit-in-a-horse-dispute-in-an-equine-legal-situation/">How should someone compare demand letter vs lawsuit in a horse dispute in an equine legal situation?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/how-should-someone-compare-mediation-vs-litigation-in-a-horse-dispute-in-an-equine-legal-situation/">How should someone compare mediation vs litigation in a horse dispute in an equine legal situation?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/how-should-someone-compare-mediation-vs-litigation-in-horse-disputes-in-an-equine-legal-situation/">How should someone compare mediation vs litigation in horse disputes in an equine legal situation?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/how-should-someone-compare-mediation-vs-litigation-in-horse-disputes-in-an-equine-legal-situation/">How should someone compare mediation vs litigation in horse disputes in an equine legal situation?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/how-should-someone-compare-business-name-registration-vs-trademark-filing-in-an-equine-legal-situation/">How should someone compare business name registration vs trademark filing in an equine legal situation?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-should-someone-compare-equine-business-contract-vs-general-business-contract-in-an-equine-legal-situation/">How should someone compare equine business contract vs general business contract in an equine legal situation?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-should-someone-compare-horse-co-ownership-agreement-vs-syndicate-structure-in-an-equine-legal-situation/">How should someone compare horse co-ownership agreement vs syndicate structure in an equine legal situation?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-should-someone-compare-horse-syndicate-agreement-vs-partnership-agreement-in-an-equine-legal-situation/">How should someone compare horse syndicate agreement vs partnership agreement in an equine legal situation?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-should-someone-compare-llc-vs-sole-proprietor-horse-business-in-an-equine-legal-situation/">How should someone compare llc vs sole proprietor horse business in an equine legal situation?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-should-someone-compare-operating-agreement-vs-partnership-agreement-for-horse-businesses-in-an-equine-legal-situation/">How should someone compare operating agreement vs partnership agreement for horse businesses in an equine legal situation?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-should-someone-compare-sole-proprietor-vs-llc-for-a-horse-business-in-an-equine-legal-situation/">How should someone compare sole proprietor vs llc for a horse business in an equine legal situation?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-should-someone-compare-trademark-vs-llc-name-for-an-equestrian-business-in-an-equine-legal-situation/">How should someone compare trademark vs llc name for an equestrian business in an equine legal situation?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-should-someone-compare-barn-lease-vs-boarding-agreement-in-an-equine-legal-situation/">How should someone compare barn lease vs boarding agreement in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-boarding-contract-vs-barn-lease-in-an-equine-legal-situation/">How should someone compare boarding contract vs barn lease in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-facility-lease-vs-pasture-lease-in-an-equine-legal-situation/">How should someone compare facility lease vs pasture lease in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-horse-lease-vs-horse-purchase-in-an-equine-legal-situation/">How should someone compare horse lease vs horse purchase in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-horse-lease-vs-horse-trial-agreement-in-an-equine-legal-situation/">How should someone compare horse lease vs horse trial agreement in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-lease-termination-clause-vs-informal-cancellation-in-an-equine-legal-situation/">How should someone compare lease termination clause vs informal cancellation in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-lease-to-own-vs-buying-outright-in-an-equine-legal-situation/">How should someone compare lease to own vs buying outright in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-lease-vs-purchase-horse-in-an-equine-legal-situation/">How should someone compare lease vs purchase horse in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-photo-release-vs-sponsorship-rights-agreement-in-an-equine-legal-situation/">How should someone compare photo release vs sponsorship rights agreement in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-purchase-deposit-agreement-vs-refundable-trial-payment-in-an-equine-legal-situation/">How should someone compare purchase deposit agreement vs refundable trial payment in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-release-form-vs-liability-waiver-in-an-equine-legal-situation/">How should someone compare release form vs liability waiver in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-release-of-claims-vs-settlement-agreement-in-an-equine-legal-situation/">How should someone compare release of claims vs settlement agreement in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-trial-agreement-vs-lease-agreement-in-an-equine-legal-situation/">How should someone compare trial agreement vs lease agreement in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-trial-period-vs-lease-to-own-horse-arrangement-in-an-equine-legal-situation/">How should someone compare trial period vs lease-to-own horse arrangement in an equine legal situation?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/how-should-someone-compare-as-is-clause-vs-disclosure-clause-in-a-horse-sale-in-an-equine-legal-situation/">How should someone compare as-is clause vs disclosure clause in a horse sale in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-bill-of-sale-vs-transfer-of-ownership-clause-in-an-equine-legal-situation/">How should someone compare bill of sale vs transfer-of-ownership clause in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-choice-of-law-clause-vs-venue-clause-in-an-equine-legal-situation/">How should someone compare choice of law clause vs venue clause in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-contract-review-vs-diy-horse-agreement-in-an-equine-legal-situation/">How should someone compare contract review vs diy horse agreement in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-contract-vs-handshake-deal-in-a-horse-sale-in-an-equine-legal-situation/">How should someone compare contract vs handshake deal in a horse sale in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-custom-contract-review-vs-online-legal-template-in-an-equine-legal-situation/">How should someone compare custom contract review vs online legal template in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-emergency-vet-authorization-vs-owner-consent-clause-in-an-equine-legal-situation/">How should someone compare emergency vet authorization vs owner consent clause in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-hold-harmless-clause-vs-indemnity-clause-in-an-equine-legal-situation/">How should someone compare hold harmless clause vs indemnity clause in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-horse-purchase-agreement-vs-bill-of-sale-in-an-equine-legal-situation/">How should someone compare horse purchase agreement vs bill of sale in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-horse-purchase-deposit-vs-full-payment-in-an-equine-legal-situation/">How should someone compare horse purchase deposit vs full payment in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-horse-sale-addendum-vs-new-contract-in-an-equine-legal-situation/">How should someone compare horse sale addendum vs new contract in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-horse-sale-contract-vs-bill-of-sale-in-an-equine-legal-situation/">How should someone compare horse sale contract vs bill of sale in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-lease-to-purchase-vs-outright-purchase-in-an-equine-legal-situation/">How should someone compare lease to purchase vs outright purchase in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-pre-purchase-exam-vs-as-is-horse-sale-in-an-equine-legal-situation/">How should someone compare pre-purchase exam vs as-is horse sale in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-pre-purchase-exam-vs-no-exam-legal-risk-in-an-equine-legal-situation/">How should someone compare pre-purchase exam vs no exam: legal risk in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-retainer-agreement-vs-consultation-call-in-an-equine-legal-situation/">How should someone compare retainer agreement vs consultation call in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-risk-of-loss-clause-vs-possession-transfer-in-an-equine-legal-situation/">How should someone compare risk of loss clause vs possession transfer in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-sale-disclosure-form-vs-veterinary-records-in-an-equine-legal-situation/">How should someone compare sale disclosure form vs veterinary records in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-template-contract-vs-custom-horse-contract-in-an-equine-legal-situation/">How should someone compare template contract vs custom horse contract in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-template-horse-contract-vs-custom-horse-contract-in-an-equine-legal-situation/">How should someone compare template horse contract vs custom horse contract in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-text-message-agreement-vs-signed-contract-in-an-equine-legal-situation/">How should someone compare text-message agreement vs signed contract in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-verbal-horse-agreement-vs-written-horse-agreement-in-an-equine-legal-situation/">How should someone compare verbal horse agreement vs written horse agreement in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-written-horse-contract-vs-handshake-deal-in-an-equine-legal-situation/">How should someone compare written horse contract vs handshake deal in an equine legal situation?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/how-should-someone-compare-equestrian-sponsor-agreement-vs-informal-email-agreement-in-an-equine-legal-situation/">How should someone compare equestrian sponsor agreement vs informal email agreement in an equine legal situation?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/how-should-someone-compare-sponsor-deliverables-schedule-vs-general-sponsorship-promise-in-an-equine-legal-situation/">How should someone compare sponsor deliverables schedule vs general sponsorship promise in an equine legal situation?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/how-should-someone-compare-sponsorship-agreement-vs-brand-ambassador-agreement-in-an-equine-legal-situation/">How should someone compare sponsorship agreement vs brand ambassador agreement in an equine legal situation?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/how-should-someone-compare-sponsorship-agreement-vs-simple-email-agreement-in-an-equine-legal-situation/">How should someone compare sponsorship agreement vs simple email agreement in an equine legal situation?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/how-should-someone-compare-trademark-vs-llc-name-for-a-horse-business-in-an-equine-legal-situation/">How should someone compare trademark vs llc name for a horse business in an equine legal situation?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/how-should-someone-compare-use-of-image-rights-vs-copyright-ownership-in-an-equine-legal-situation/">How should someone compare use of image rights vs copyright ownership in an equine legal situation?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/how-should-someone-compare-do-i-need-both-a-waiver-and-insurance-for-a-horse-business-in-an-equine-legal-situation/">How should someone compare do i need both a waiver and insurance for a horse business in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-equine-activity-statute-vs-negligence-claim-in-an-equine-legal-situation/">How should someone compare equine activity statute vs negligence claim in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-equine-therapy-consent-form-vs-liability-waiver-in-an-equine-legal-situation/">How should someone compare equine therapy consent form vs liability waiver in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-horse-owner-liability-vs-trainer-liability-in-an-equine-legal-situation/">How should someone compare horse owner liability vs trainer liability in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-insurance-certificate-vs-actual-policy-coverage-in-an-equine-legal-situation/">How should someone compare insurance certificate vs actual policy coverage in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-liability-waiver-vs-insurance-for-horse-activities-in-an-equine-legal-situation/">How should someone compare liability waiver vs insurance for horse activities in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-llc-vs-insurance-for-horse-business-liability-in-an-equine-legal-situation/">How should someone compare llc vs insurance for horse business liability in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-llc-vs-insurance-for-liability-protection-in-an-equine-legal-situation/">How should someone compare llc vs insurance for liability protection in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-state-equine-liability-act-vs-private-contract-in-an-equine-legal-situation/">How should someone compare state equine liability act vs private contract in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-statutory-warning-signs-vs-liability-waivers-in-an-equine-legal-situation/">How should someone compare statutory warning signs vs liability waivers in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-waiver-vs-insurance-for-horse-liability-in-an-equine-legal-situation/">How should someone compare waiver vs insurance for horse liability in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/how-should-someone-compare-warning-sign-compliance-vs-signed-waiver-in-an-equine-legal-situation/">How should someone compare warning sign compliance vs signed waiver in an equine legal situation?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/">Can a Boarding Barn Sell a Horse for Unpaid Bills?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-happens-if-a-boarder-damages-property/">What Happens If a Boarder Damages Property?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-happens-if-a-boarder-doesn-t-pay/">What Happens If a Boarder Doesn’t Pay?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-happens-if-a-contract-does-not-address-responsibility/">What Happens If a Contract Does Not Address Responsibility?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-happens-if-a-horse-dies-while-boarded/">What Happens If a Horse Dies While Boarded?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-legal-documents-do-i-need-to-run-a-boarding-barn/">What Legal Documents Do I Need to Run a Boarding Barn?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-liability-does-a-trainer-have/">What Liability Does a Trainer Have?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-be-included-in-a-horse-boarding-agreement/">What Should Be Included in a Horse Boarding Agreement?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-be-included-in-a-training-agreement/">What Should Be Included in a Training Agreement?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/who-is-liable-if-a-horse-is-injured-while-boarded/">Who Is Liable If a Horse Is Injured While Boarded?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/who-pays-vet-bills-while-a-horse-is-boarded/">Who Pays Vet Bills While a Horse Is Boarded?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/can-a-contract-dispute-be-resolved-without-court/">Can a Contract Dispute Be Resolved Without Court?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/can-i-ignore-a-demand-letter/">Can I Ignore a Demand Letter?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/do-i-need-a-lawyer-to-respond-to-a-demand-letter/">Do I Need a Lawyer to Respond to a Demand Letter?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/how-serious-is-a-legal-demand-letter/">How Serious Is a Legal Demand Letter?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-happens-if-i-don-t-respond-to-a-legal-letter/">What Happens If I Don’t Respond to a Legal Letter?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-should-i-do-if-i-receive-a-demand-letter/">What Should I Do If I Receive a Demand Letter?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/can-i-run-a-horse-business-under-another-company/">Can I Run a Horse Business Under Another Company?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/do-i-need-an-llc-to-start-a-horse-business/">Do I Need an LLC to Start a Horse Business?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/what-should-someone-know-about-horse-syndicate-legal-structure/">What should someone know about horse syndicate legal structure?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-do-i-legally-start-a-horse-business/">How Do I Legally Start a Horse Business?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-do-i-separate-my-horse-business-from-personal-assets/">How Do I Separate My Horse Business from Personal Assets?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-to-start-a-boarding-barn-legally/">How to Start a Boarding Barn Legally?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-to-start-a-horse-retail-business/">How to Start a Horse Retail Business?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-to-start-a-training-barn-legally/">How to Start a Training Barn Legally?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-to-start-an-equine-apparel-business/">How to Start an Equine Apparel Business?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/how-to-start-an-equine-assisted-therapy-business/">How to Start an Equine-Assisted Therapy Business?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/what-should-someone-know-about-joint-venture-agreement-for-an-equine-business/">What should someone know about joint venture agreement for an equine business?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/what-should-someone-know-about-partnership-agreement-for-a-horse-business/">What should someone know about partnership agreement for a horse business?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/what-legal-documents-do-i-need-for-a-horse-business/">What Legal Documents Do I Need for a Horse Business?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/can-you-end-a-horse-lease-early/">Can You End a Horse Lease Early?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-happens-if-a-leased-horse-becomes-unsound/">What Happens If a Leased Horse Becomes Unsound?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-happens-if-a-leased-horse-is-injured/">What Happens If a Leased Horse Is Injured?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-is-a-horse-trial-agreement/">What Is a Horse Trial Agreement?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-should-be-included-in-a-horse-lease-agreement/">What Should Be Included in a Horse Lease Agreement?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/who-is-liable-during-a-horse-lease/">Who Is Liable During a Horse Lease?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/who-pays-vet-bills-in-a-horse-lease/">Who Pays Vet Bills in a Horse Lease?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/can-a-buyer-return-a-horse-after-purchase/">Can a Buyer Return a Horse After Purchase?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/can-a-buyer-sue-after-an-as-is-horse-sale/">Can a Buyer Sue After an “As-Is” Horse Sale?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/can-a-seller-refuse-to-take-a-horse-back/">Can a Seller Refuse to Take a Horse Back?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/can-i-use-a-template-i-found-online-for-a-horse-contract/">Can I Use a Template I Found Online for a Horse Contract?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/do-i-need-a-contract-to-buy-a-horse/">Do I Need a Contract to Buy a Horse?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/do-i-need-a-contract-to-sell-a-horse/">Do I Need a Contract to Sell a Horse?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/is-a-verbal-agreement-legally-binding-in-a-horse-sale/">Is a Verbal Agreement Legally Binding in a Horse Sale?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-happens-if-a-horse-becomes-lame-after-sale/">What Happens If a Horse Becomes Lame After Sale?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-happens-if-a-horse-is-misrepresented-in-a-sale/">What Happens If a Horse Is Misrepresented in a Sale?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-happens-if-a-horse-sale-goes-wrong/">What Happens If a Horse Sale Goes Wrong?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/">What Happens If There Is No Written Agreement in a Horse Sale?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-be-included-in-a-horse-bill-of-sale/">What Should Be Included in a Horse Bill of Sale?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-be-included-in-a-horse-sale-contract/">What Should Be Included in a Horse Sale Contract?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/when-does-ownership-legally-transfer-in-a-horse-sale/">When Does Ownership Legally Transfer in a Horse Sale?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/who-is-responsible-after-a-horse-sale-is-completed/">Who Is Responsible After a Horse Sale Is Completed?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/can-a-sponsor-use-my-image-without-permission/">Can a Sponsor Use My Image Without Permission?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/do-i-need-a-contract-for-a-sponsorship/">Do I Need a Contract for a Sponsorship?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/do-i-need-a-trademark-for-an-equestrian-brand/">Do I Need a Trademark for an Equestrian Brand?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/how-do-i-get-a-sponsorship-for-horse-riding/">How Do I Get a Sponsorship for Horse Riding?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/how-do-i-protect-my-horse-business-brand/">How Do I Protect My Horse Business Brand?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/should-i-trademark-my-barn-name/">Should I Trademark My Barn Name?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/what-should-be-in-an-equestrian-sponsorship-agreement/">What Should Be in an Equestrian Sponsorship Agreement?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/can-i-still-be-sued-if-i-have-a-waiver/">Can I Still Be Sued If I Have a Waiver?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/do-i-need-a-liability-waiver-for-my-horse-business/">Do I Need a Liability Waiver for My Horse Business?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/do-i-need-a-warning-sign-at-my-barn/">Do I Need a Warning Sign at My Barn?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/do-i-need-insurance-for-my-horse-business/">Do I Need Insurance for My Horse Business?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/does-my-contract-need-statutory-warning-language/">Does My Contract Need Statutory Warning Language?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-if-someone-gets-hurt-riding-my-horse-am-i-liable/">What should someone know about if someone gets hurt riding my horse, am i liable?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-does-equine-liability-law-actually-protect-me-from/">What Does Equine Liability Law Actually Protect Me From?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-happens-if-i-don-t-post-the-required-sign/">What Happens If I Don’t Post the Required Sign?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-is-the-equine-activity-liability-act/">What Is the Equine Activity Liability Act?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-type-of-insurance-do-horse-owners-need/">What Type of Insurance Do Horse Owners Need?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-type-of-insurance-do-trainers-need/">What Type of Insurance Do Trainers Need?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/can-i-run-a-horse-business-under-my-lease/">Can I Run a Horse Business Under My Lease?</a> <span class="muted">— Real Property And Leases</span></li>
+<li><a href="/reference/what-liability-applies-in-a-horse-property-lease/">What Liability Applies in a Horse Property Lease?</a> <span class="muted">— Real Property And Leases</span></li>
+<li><a href="/reference/what-should-be-included-in-a-barn-lease/">What Should Be Included in a Barn Lease?</a> <span class="muted">— Real Property And Leases</span></li>
+<li><a href="/reference/who-is-responsible-for-repairs-in-a-barn-lease/">Who Is Responsible for Repairs in a Barn Lease?</a> <span class="muted">— Real Property And Leases</span></li>
+<li><a href="/reference/what-should-someone-know-about-am-i-subject-to-hipaa-in-equine-therapy/">What should someone know about am i subject to hipaa in equine therapy?</a> <span class="muted">— Therapeutic Riding And Hipaa</span></li>
+<li><a href="/reference/do-i-need-insurance-for-therapeutic-riding/">Do I Need Insurance for Therapeutic Riding?</a> <span class="muted">— Therapeutic Riding And Hipaa</span></li>
+<li><a href="/reference/how-do-i-start-an-equine-assisted-therapy-program-legally/">How Do I Start an Equine-Assisted Therapy Program Legally?</a> <span class="muted">— Therapeutic Riding And Hipaa</span></li>
+<li><a href="/reference/what-legal-requirements-apply-to-therapeutic-riding-programs/">What Legal Requirements Apply to Therapeutic Riding Programs?</a> <span class="muted">— Therapeutic Riding And Hipaa</span></li>
+<li><a href="/reference/what-waivers-are-required-for-equine-therapy-programs/">What Waivers Are Required for Equine Therapy Programs?</a> <span class="muted">— Therapeutic Riding And Hipaa</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/">What should someone know about a barn is relying only on insurance. what else should be reviewed?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-barn-uses-volunteers-what-legal-issues-can-come-up/">What should someone know about a barn uses volunteers. what legal issues can come up?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-barn-wants-to-remove-a-difficult-boarder-what-should-be-checked/">What should someone know about a barn wants to remove a difficult boarder. what should be checked?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-boarder-stopped-paying-what-can-a-barn-do-next/">What should someone know about a boarder stopped paying. what can a barn do next?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-boarding-agreement-does-not-mention-emergency-care-what-now/">What should someone know about a boarding agreement does not mention emergency care. what now?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-boarding-barn-changed-facility-rules-mid-relationship-what-should-be-checked/">What should someone know about a boarding barn changed facility rules mid-relationship. what should be checked?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-boarding-barn-changed-ownership-what-happens-to-agreements/">What should someone know about a boarding barn changed ownership. what happens to agreements?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/">What should someone know about a boarding barn has unpaid invoices and unclear records. what should be organized?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/">What should someone know about a boarding barn wants to sell a horse for unpaid bills. what matters?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-client-wants-to-cancel-a-training-agreement-what-terms-matter/">What should someone know about a client wants to cancel a training agreement. what terms matter?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-clinic-host-and-trainer-disagree-about-responsibility-what-documents-matter/">What should someone know about a clinic host and trainer disagree about responsibility. what documents matter?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-died-while-boarded-or-in-training-what-should-be-documented/">What should someone know about a horse died while boarded or in training. what should be documented?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-was-hurt-while-boarded-who-is-responsible/">What should someone know about a horse was hurt while boarded. who is responsible?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-lessee-stopped-paying-board-or-vet-bills-what-happens-next/">What should someone know about a lessee stopped paying board or vet bills. what happens next?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-trainer-changed-fees-without-a-signed-update-what-should-be-checked/">What should someone know about a trainer changed fees without a signed update. what should be checked?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/">What should someone know about a trainer sold a horse without clear authority. what should be reviewed?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-trainer-wants-commission-after-a-sale-what-should-be-checked/">What should someone know about a trainer wants commission after a sale. what should be checked?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-warning-sign-was-not-posted-at-the-barn-what-risk-does-that-create/">What should someone know about a warning sign was not posted at the barn. what risk does that create?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-started-a-barn-without-paperwork-what-risks-did-i-create/">What should someone know about i started a barn without paperwork. what risks did i create?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-someone-copied-my-barn-name-online-what-should-i-gather/">What should someone know about someone copied my barn name online. what should i gather?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-state-warning-sign-rules-are-confusing-what-should-a-barn-review/">What should someone know about state warning sign rules are confusing. what should a barn review?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/">What should someone know about there is a barn name or brand dispute. what should be reviewed?</a> <span class="muted">— Boarding Training And Barn Operations</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-demand-letter-has-a-deadline-what-should-be-prioritized/">What should someone know about a demand letter has a deadline. what should be prioritized?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/">What should someone know about a farrier or vet dispute affects a horse sale. what documents matter?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/">What should someone know about a seller is being threatened with a lawsuit. what should they do first?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-am-worried-i-am-overreacting-to-a-horse-dispute-how-should-i-think-about-it/">What should someone know about i am worried i am overreacting to a horse dispute. how should i think about it?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/">What should someone know about i received a demand letter about a horse dispute. what should i do first?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-should-someone-know-about-someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/">What should someone know about someone wants to mediate a horse dispute. what should be prepared?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-should-someone-know-about-the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/">What should someone know about the buyer moved the horse before the dispute started. why does that matter?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-should-someone-know-about-vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/">What should someone know about vet bills are disputed after a horse sale. what should be reviewed?</a> <span class="muted">— Demand Letters And Disputes</span></li>
+<li><a href="/reference/what-should-someone-know-about-am-i-overreacting-or-is-this-risky/">What should someone know about am i overreacting or is this risky?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/can-i-back-out-of-a-horse-deal-without-getting-sued/">Can I Back Out of a Horse Deal Without Getting Sued?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/what-should-someone-know-about-did-i-mess-up-by-trusting-a-handshake-deal/">What should someone know about did i mess up by trusting a handshake deal?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/do-people-actually-get-sued-over-horse-deals-like-this/">Do People Actually Get Sued Over Horse Deals Like This?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/do-people-actually-get-sued-over-horse-deals/">Do People Actually Get Sued Over Horse Deals?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-bought-a-horse-and-something-is-wrong-what-now/">What should someone know about i bought a horse and something is wrong — what now?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-sold-a-horse-without-a-contract-am-i-screwed/">What should someone know about i sold a horse without a contract — am i screwed?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/is-it-too-late-to-fix-a-bad-horse-sale/">Is It Too Late to Fix a Bad Horse Sale?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/">What Happens If I Ignore a Problem and Hope It Goes Away?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/what-if-i-already-signed-something-i-did-not-understand/">What If I Already Signed Something I Did Not Understand?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/what-is-the-worst-case-scenario-if-i-do-nothing/">What Is the Worst-Case Scenario If I Do Nothing?</a> <span class="muted">— Emotional Am I Screwed</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-business-mixes-personal-and-business-money-why-does-that-matter/">What should someone know about a horse business mixes personal and business money. why does that matter?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-business-wants-to-use-client-photos-in-marketing-what-permission-matters/">What should someone know about a horse business wants to use client photos in marketing. what permission matters?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-syndicate-member-wants-out-what-documents-matter/">What should someone know about a horse syndicate member wants out. what documents matter?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/what-should-someone-know-about-horse-business-partners-are-disagreeing-what-documents-matter/">What should someone know about horse business partners are disagreeing. what documents matter?</a> <span class="muted">— Equine Business Formation</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-barn-lease-does-not-say-who-handles-repairs-what-now/">What should someone know about a barn lease does not say who handles repairs. what now?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/">What should someone know about a horse lease allows use but not showing. what happens if the horse was shown?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-lease-ended-early-what-issues-usually-come-up/">What should someone know about a horse lease ended early. what issues usually come up?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-lease-to-own-arrangement-is-unclear-what-problems-can-appear/">What should someone know about a lease-to-own arrangement is unclear. what problems can appear?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-leased-horse-became-unsound-who-pays/">What should someone know about a leased horse became unsound. who pays?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/">What should someone know about a trial horse got hurt before purchase. what should be reviewed?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-should-someone-know-about-repairs-are-disputed-in-a-barn-lease-what-matters/">What should someone know about repairs are disputed in a barn lease. what matters?</a> <span class="muted">— Horse Lease And Trial</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/">What should someone know about a buyer and seller remember the deal differently. what should be preserved?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/">What should someone know about a buyer skipped the pre-purchase exam and now regrets it. what matters?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-buyer-wants-a-refund-after-changing-their-mind-what-matters/">What should someone know about a buyer wants a refund after changing their mind. what matters?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-buyer-wants-to-return-the-horse-what-matters/">What should someone know about a buyer wants to return the horse. what matters?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-contract-names-the-wrong-party-why-does-that-matter/">What should someone know about a contract names the wrong party. why does that matter?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-sale-involved-a-minor-what-extra-issues-can-arise/">What should someone know about a horse sale involved a minor. what extra issues can arise?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/">What should someone know about a horse was advertised differently than described in the contract. what matters?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/">What should someone know about a horse was misrepresented in texts before sale. what should be preserved?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-was-sold-through-a-friend-or-agent-who-had-authority/">What should someone know about a horse was sold through a friend or agent. who had authority?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/">What should someone know about a horse was transported before paperwork was complete. what risk does that create?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-payment-plan-horse-sale-has-gone-sideways-what-should-be-reviewed/">What should someone know about a payment plan horse sale has gone sideways. what should be reviewed?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-seller-disclosed-an-issue-verbally-but-not-in-writing-what-should-be-reviewed/">What should someone know about a seller disclosed an issue verbally but not in writing. what should be reviewed?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-social-media-collaboration-went-wrong-what-rights-matter/">What should someone know about a social media collaboration went wrong. what rights matter?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-ignored-a-horse-legal-issue-and-it-got-worse-what-now/">What should someone know about i ignored a horse legal issue and it got worse. what now?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-signed-something-i-did-not-understand-what-should-i-do/">What should someone know about i signed something i did not understand. what should i do?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-sold-a-horse-without-a-contract-what-now/">What should someone know about i sold a horse without a contract. what now?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-trusted-a-handshake-deal-in-a-horse-sale-am-i-exposed/">What should someone know about i trusted a handshake deal in a horse sale. am i exposed?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-i-used-a-template-horse-contract-is-that-enough/">What should someone know about i used a template horse contract. is that enough?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/">What should someone know about the bill of sale says one thing but texts say another. what matters?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/">What should someone know about the horse failed the pre-purchase exam after a deposit. what now?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-the-seller-kept-possession-after-payment-what-should-be-clarified/">What should someone know about the seller kept possession after payment. what should be clarified?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-the-seller-refuses-to-take-the-horse-back-what-matters/">What should someone know about the seller refuses to take the horse back. what matters?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/">What should someone know about the seller says the horse was sold as-is. what does that usually affect?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-if-i-bought-a-horse-without-a-contract/">What If I Bought a Horse Without a Contract?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-if-i-sold-a-horse-without-a-contract/">What If I Sold a Horse Without a Contract?</a> <span class="muted">— Horse Sale And Purchase</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-sponsor-did-not-deliver-promised-payment-what-should-be-checked/">What should someone know about a sponsor did not deliver promised payment. what should be checked?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-sponsor-used-my-image-without-permission-what-are-the-issues/">What should someone know about a sponsor used my image without permission. what are the issues?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/">What should someone know about a sponsor wants exclusivity after the fact. what should be reviewed?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/what-should-someone-know-about-an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/">What should someone know about an equestrian apparel idea may copy another brand. what should be reviewed?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/what-should-someone-know-about-an-equestrian-sponsorship-agreement-went-sideways-what-should-be-checked/">What should someone know about an equestrian sponsorship agreement went sideways. what should be checked?</a> <span class="muted">— Intellectual Property And Brand</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/">What should someone know about a buyer claims misrepresentation after a horse sale. what matters?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/">What should someone know about a buyer found an old injury after purchase. what should be gathered?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/">What should someone know about a client posted damaging claims about a horse business. what should be preserved?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-business-is-using-an-old-waiver-what-should-be-updated/">What should someone know about a horse business is using an old waiver. what should be updated?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/">What should someone know about a horse business owner is worried about personal liability. what should be checked?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-was-injured-during-a-paid-lesson-what-should-be-reviewed/">What should someone know about a horse was injured during a paid lesson. what should be reviewed?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-parent-signed-a-waiver-for-a-minor-rider-what-should-be-checked/">What should someone know about a parent signed a waiver for a minor rider. what should be checked?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-rider-used-a-facility-without-signing-a-waiver-what-risk-does-that-create/">What should someone know about a rider used a facility without signing a waiver. what risk does that create?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-rider-was-injured-at-a-clinic-what-should-organizers-review/">What should someone know about a rider was injured at a clinic. what should organizers review?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-therapeutic-riding-waiver-is-unclear-what-should-be-checked/">What should someone know about a therapeutic riding waiver is unclear. what should be checked?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-an-equine-therapy-client-was-injured-what-should-be-documented/">What should someone know about an equine therapy client was injured. what should be documented?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-insurance-denied-a-horse-related-claim-what-should-be-gathered/">What should someone know about insurance denied a horse-related claim. what should be gathered?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-someone-was-hurt-riding-my-horse-what-should-i-think-about/">What should someone know about someone was hurt riding my horse. what should i think about?</a> <span class="muted">— Liability Waivers Insurance</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-contract-has-no-state-law-clause-why-can-that-matter/">What should someone know about a contract has no state law clause. why can that matter?</a> <span class="muted">— State Specific</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-horse-sale-crossed-state-lines-what-should-be-reviewed/">What should someone know about a horse sale crossed state lines. what should be reviewed?</a> <span class="muted">— State Specific</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/">What should someone know about a seller relied on a verbal as-is statement. what should be reviewed?</a> <span class="muted">— State Specific</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/">What should someone know about a therapeutic riding program collects health information. what should be reviewed?</a> <span class="muted">— Therapeutic Riding And Hipaa</span></li>
+<li><a href="/reference/what-should-someone-know-about-a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/">What should someone know about a therapeutic riding program uses volunteers and minors. what should be checked?</a> <span class="muted">— Therapeutic Riding And Hipaa</span></li>
+<li><a href="/reference/what-equine-legal-issues-should-someone-consider-in-can-i-be-sued-in-south-carolina-if-i-have-a-waiver/">What equine legal issues should someone consider in Can I Be Sued in South Carolina If I Have a Waiver?</a> <span class="muted">— State Specific</span></li>
+<li><a href="/reference/what-equine-legal-issues-should-someone-consider-in-do-i-need-a-horse-sale-contract-in-north-carolina/">What equine legal issues should someone consider in Do I Need a Horse Sale Contract in North Carolina?</a> <span class="muted">— State Specific</span></li>
+<li><a href="/reference/what-equine-legal-issues-should-someone-consider-in-do-i-need-a-liability-waiver-in-south-carolina/">What equine legal issues should someone consider in Do I Need a Liability Waiver in South Carolina?</a> <span class="muted">— State Specific</span></li>
+<li><a href="/reference/what-equine-legal-issues-should-someone-consider-in-do-i-need-warning-signs-in-north-carolina/">What equine legal issues should someone consider in Do I Need Warning Signs in North Carolina?</a> <span class="muted">— State Specific</span></li>
+<li><a href="/reference/what-equine-legal-issues-should-someone-consider-in-what-does-illinois-equine-liability-law-cover/">What equine legal issues should someone consider in What Does Illinois Equine Liability Law Cover?</a> <span class="muted">— State Specific</span></li>
+<li><a href="/reference/what-equine-legal-issues-should-someone-consider-in-what-does-north-carolina-equine-liability-law-cover/">What equine legal issues should someone consider in What Does North Carolina Equine Liability Law Cover?</a> <span class="muted">— State Specific</span></li></ul></section><section><h2>Ingestion queue summary</h2><p>Approved for content: 1088. Pages strengthened: 1088.</p></section>
+<footer class="site-footer">
+  <p>Horse Legal Guide is an educational resource for the equestrian community.</p>
+  <p>For situation-specific legal guidance, <a href="https://wisecovington.com">Wise Covington PLLC</a> is a law firm built by equestrians for the equestrian community.</p>
+  <p>The team behind Wise Covington has more than 30 years of equestrian and legal experience.</p>
+  <p>Legally sound. Financially stable.</p>
+  <p>This content does not constitute legal advice or create an attorney-client relationship.</p>
+  <p><a href="/disclaimer/">Disclaimer</a> · <a href="/privacy-policy/">Privacy Policy</a></p>
+</footer>
+
+    </div>
+  </main>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://wisecovington.com#organization","name":"Wise Covington PLLC","url":"https://wisecovington.com","sameAs":["https://wisecovington.com"],"employee":[{"@type":"Person","name":"Andrea Benavides Wise"},{"@type":"Person","name":"Claire Covington"}]},{"@type":"WebSite","@id":"https://horselegalguide.com/#website","name":"Horse Legal Guide","url":"https://horselegalguide.com","publisher":{"@id":"https://wisecovington.com#organization"},"about":["equine law","horse sale contracts","boarding agreements","liability waivers","equine business formation"]},{"@type":"Article","@id":"https://horselegalguide.com/coverage/#article","headline":"Coverage Map | Horse Legal Guide","description":"Query universe and public coverage map for Horse Legal Guide.","url":"https://horselegalguide.com/coverage/","mainEntityOfPage":"https://horselegalguide.com/coverage/","author":{"@id":"https://wisecovington.com#organization"},"publisher":{"@id":"https://wisecovington.com#organization"},"isPartOf":{"@id":"https://horselegalguide.com/#website"},"about":["equine law","horse legal education"],"mentions":["Wise Covington PLLC","horse contracts","equine business","horse transactions"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Horse Legal Guide","item":"https://horselegalguide.com/"},{"@type":"ListItem","position":2,"name":"coverage","item":"https://horselegalguide.com/coverage/"}]}]}</script>
+</body>
+</html>
