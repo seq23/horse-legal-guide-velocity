@@ -18,8 +18,14 @@
  * scripts/quality/content_ops_common.js#draftPreviewUrl builds the matching
  * absolute URL, and both admin manifest generators read it from there.
  *
- * These pages are NOT publishing. Status is shown, never changed. The approval
- * commands are printed as copyable text, never wired to a control.
+ * These pages are NOT publishing. Status is shown, never changed. The decision
+ * controls compose an email to the person who publishes; no control on this
+ * page mutates the backlog, and none can publish. They replaced a printed
+ * `node scripts/admin/approve_one.js ...` command, which was not a path the
+ * non-technical reviewer these pages exist for could ever take.
+ *
+ * The pages sit behind the same client-side password gate as /admin/, sharing
+ * its sessionStorage key so one unlock covers the whole review surface.
  *
  * Degradation is a failure, not an empty page. The known repo hazard is a job
  * that reads a manifest, silently produces nothing, and commits the nothing
@@ -62,7 +68,12 @@ th{position:sticky;top:0;background:#fffaf1;font-size:.78rem;letter-spacing:.06e
 input,select{font:inherit;padding:8px 10px;border:1px solid #d9c9b1;border-radius:9px;background:#fff}
 .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:0 0 14px}
 .dead-link{border-bottom:1px dotted #b4553a;color:#8a3f2a}
-.table-scroll{overflow-x:auto}`;
+.table-scroll{overflow-x:auto}
+button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:9px 15px;background:#2c2118;color:#fff;cursor:pointer}
+button.secondary{background:#efe3d1;color:#2c2118}
+.overdue{color:#a3271c}
+.banner-late{background:#fdecea;border-color:#e6b3aa}
+.decision-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}`;
 
 /**
  * The preview is on a public host, so the noindex directive is the thing keeping
@@ -71,7 +82,7 @@ input,select{font:inherit;padding:8px 10px;border:1px solid #d9c9b1;border-radiu
  * No rel=canonical: an unpublished draft has no canonical URL to name, and the
  * public-page canonical contract deliberately does not apply to /admin/.
  */
-function shell(title, body, { wide = false, description = '' } = {}) {
+function shell(title, body, { wide = false, description = '', gateHash = '' } = {}) {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -84,8 +95,44 @@ function shell(title, body, { wide = false, description = '' } = {}) {
 <meta name="referrer" content="no-referrer">
 <style>${STYLE}</style>
 </head>
-<body><main class="shell${wide ? ' wide' : ''}">${body}</main></body>
+<body><main class="shell${wide ? ' wide' : ''}">${gateHash ? gate(body) : body}</main>${gateHash ? gateScript(gateHash) : ''}</body>
 </html>`;
+}
+
+/**
+ * The same unlock the admin root uses, on the same sessionStorage key, so a
+ * reviewer who has opened /admin/ is not asked again when she follows a link
+ * into a draft. Every draft preview is reachable by direct URL, so the gate is
+ * emitted on each page, not only on the index.
+ */
+function gate(body) {
+  return `<section id="draft-login" class="card">
+  <p class="eyebrow">Enter admin</p>
+  <h2>Unlock review panel</h2>
+  <p class="muted">Enter the admin password to open the content review panel.</p>
+  <p><label class="small muted" for="admin-password">Password</label><br><input id="admin-password" type="password" autocomplete="current-password" placeholder="Enter password" style="min-width:260px"></p>
+  <p><button id="unlock-admin" type="button">Open admin panel</button></p>
+  <p id="login-message" class="muted"></p>
+</section>
+<div id="gated-content" hidden>${body}</div>`;
+}
+
+function gateScript(gateHash) {
+  return `<script>
+(function(){
+  var expectedHash=${JSON.stringify(gateHash)};
+  function open(){var l=document.getElementById('draft-login'),c=document.getElementById('gated-content');if(l)l.hidden=true;if(c)c.hidden=false;}
+  async function sha256(value){var data=new TextEncoder().encode(value);var hash=await crypto.subtle.digest('SHA-256',data);return Array.from(new Uint8Array(hash)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');}
+  async function unlock(){var input=document.getElementById('admin-password');var attempt=(input&&input.value||'').trim();var hash=await sha256(attempt);if(expectedHash&&hash!==expectedHash){document.getElementById('login-message').textContent='Password did not match.';return;}try{sessionStorage.setItem('hlg-admin-open','true');sessionStorage.setItem('hlg-admin-password-reminder',attempt);}catch(e){}document.getElementById('login-message').textContent='';open();}
+  function boot(){
+    var button=document.getElementById('unlock-admin');if(button)button.addEventListener('click',unlock);
+    var input=document.getElementById('admin-password');if(input)input.addEventListener('keydown',function(event){if(event.key==='Enter')unlock();});
+    var already=false;try{already=sessionStorage.getItem('hlg-admin-open')==='true';}catch(e){}
+    if(already)open();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+</script>`;
 }
 
 /**
@@ -108,18 +155,32 @@ function resolveDraftLinks(html, distDir) {
   return { html: out, missing };
 }
 
+// Reviewer-facing words for values that are otherwise printed raw. "insight"
+// and "deep_authority" are internal type keys; "pending" describes the system's
+// state, not hers.
+const TYPE_WORDS = { insight: 'Short article', article: 'Article', whitepaper: 'White paper', deep_authority: 'In-depth guide', authority: 'In-depth guide', template: 'Template' };
+const STATUS_WORDS = { pending: 'Waiting for you', approved: 'Approved', needs_revision: 'Needs changes', rejected: 'Not this one' };
+function typeWord(type) { return TYPE_WORDS[type] || label(type); }
+function statusWord(status) { return STATUS_WORDS[status] || String(status || 'Waiting for you'); }
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+function formatDue(iso) {
+  const parts = String(iso || '').split('-');
+  if (parts.length !== 3) return String(iso || '');
+  return `${Number(parts[2])} ${MONTHS[Number(parts[1]) - 1] || ''}`.trim();
+}
+
 function metaLine(entry) {
   const bits = [
     entry.date,
-    label(entry.content_type),
+    typeWord(entry.content_type),
     String(entry.source_cluster || 'general').replace(/-/g, ' '),
-    `status: ${entry.status || entry.review_status || 'pending'}`,
+    statusWord(entry.status || entry.review_status || 'pending'),
     entry.generation_validation && entry.generation_validation.word_count ? `${entry.generation_validation.word_count} words` : null
   ].filter(Boolean);
   return bits.map((b) => `<span class="pill">${esc(b)}</span>`).join('');
 }
 
-function previewPage(entry, bodyHtml, missing, previewPath, repoUrl) {
+function previewPage(entry, bodyHtml, missing, previewPath, repoUrl, gateHash, reviewEmail) {
   const editUrl = entry.github_path && repoUrl ? `${repoUrl}/edit/main/${entry.github_path}` : '';
   const readUrl = entry.github_path && repoUrl ? `${repoUrl}/blob/main/${entry.github_path}` : '';
   const missingNote = missing.length
@@ -137,11 +198,39 @@ function previewPage(entry, bodyHtml, missing, previewPath, repoUrl) {
   <p>${metaLine(entry)}</p>
   ${entry.source_query_title ? `<p class="muted">Answers the question: ${esc(entry.source_query_title)}</p>` : ''}
 </header>
-<div class="card">
-  <p class="eyebrow">Review actions</p>
-  <p class="small" style="margin:0 0 8px">${readUrl ? `<a href="${esc(readUrl)}" rel="noopener">Read the source markdown</a> · ` : ''}${editUrl ? `<a href="${esc(editUrl)}" rel="noopener">Edit this draft on GitHub</a>` : ''}</p>
-  <p class="small muted" style="margin:0">If approved, this would publish at <code>${willPublishAt}${esc(String(entry.slug || '').replace(/^\/drafts\/\d{4}-\d{2}-\d{2}\//, ''))}</code>. Approval is a separate, deliberate step run by the owner: <code>node scripts/admin/approve_one.js ${esc(entry.entry_id)}</code></p>
+<div class="card" id="decide">
+  <p class="eyebrow">Your decision</p>
+  <h2 style="margin:0 0 6px;font-size:1.1rem">What do you want to do with this one?</h2>
+  <p class="small muted" style="margin:0">Approving is not yet available from this page. Choose below and your decision is emailed to the person who publishes; approved drafts go live within one business day. Nothing is published by this step.</p>
+  <div class="decision-row">
+    <button type="button" data-decision="approve">Approve</button>
+    <button type="button" class="secondary" data-decision="needs_revision">Needs changes</button>
+    <button type="button" class="secondary" data-decision="rejected">Not this one</button>
+  </div>
+  <p class="small muted" id="decision-status" style="margin:10px 0 0">No decision sent yet.</p>
+  <p class="small muted" style="margin:8px 0 0">If approved, this would publish at <code>${willPublishAt}${esc(String(entry.slug || '').replace(/^\/drafts\/\d{4}-\d{2}-\d{2}\//, ''))}</code>.</p>
+  <p class="small" style="margin:8px 0 0">${readUrl ? `<a href="${esc(readUrl)}" rel="noopener">Read the source markdown</a>${editUrl ? ' · ' : ''}` : ''}${editUrl ? `<a href="${esc(editUrl)}" rel="noopener">Edit this draft on GitHub</a>` : ''}</p>
 </div>
+<script>
+(function(){
+  var EMAIL=${JSON.stringify(String(reviewEmail || ''))};
+  var TITLE=${JSON.stringify(String(entry.title || ''))};
+  var ID=${JSON.stringify(String(entry.entry_id || ''))};
+  var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'not this one'};
+  var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please do not publish this draft:'};
+  function send(kind){
+    if(!window.confirm('Send this draft as "'+WORDS[kind]+'"? Nothing is published by this step.'))return;
+    var nl=String.fromCharCode(10);
+    var subject='Horse Legal Guide: "'+TITLE+'" marked "'+WORDS[kind]+'"';
+    var body=INTRO[kind]+nl+nl+'- '+TITLE+' ('+ID+')'+nl+nl+'Sent from '+window.location.pathname+'.';
+    window.location.href='mailto:'+encodeURIComponent(EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    var status=document.getElementById('decision-status');
+    if(status)status.textContent='Marked "'+WORDS[kind]+'" in an email. Send that email to record the decision.'+(EMAIL?'':' Add the recipient address before sending: it is not configured yet.');
+  }
+  var buttons=document.querySelectorAll('#decide [data-decision]');
+  for(var i=0;i<buttons.length;i++){(function(button){button.addEventListener('click',function(){send(button.getAttribute('data-decision'));});})(buttons[i]);}
+})();
+</script>
 ${missingNote}
 <article>${bodyHtml}</article>
 <p class="small"><a href="/admin/drafts/">&larr; All queued drafts</a></p>
@@ -150,38 +239,70 @@ ${missingNote}
   // including operator surfaces. It states what the page is and nothing more:
   // no claim is made about the draft's content that the draft has not made.
   const description = `Unpublished draft under owner review: ${entry.title}${entry.source_query_title ? ` - written against the question "${entry.source_query_title}"` : ''}. Preview only; not on the live site.`;
-  return { html: shell(`${entry.title} · draft preview`, body, { description }), previewPath };
+  return { html: shell(`${entry.title} · draft preview`, body, { description, gateHash }), previewPath };
 }
 
-function indexPage(rows, counts) {
+function indexPage(rows, counts, gateHash) {
   const clusters = [...new Set(rows.map((r) => r.cluster).filter(Boolean))].sort();
   const statuses = [...new Set(rows.map((r) => r.status).filter(Boolean))].sort();
+  // Build-time figure only; the script below recomputes against the real
+  // current date, because the build clock is frozen to the last commit.
+  const buildToday = new Date().toISOString().slice(0, 10);
+  const overdueAtBuild = rows.filter((r) => r.date && r.date < buildToday);
+  const earliest = overdueAtBuild.map((r) => r.date).sort()[0] || '';
+  const overdueSentence = overdueAtBuild.length
+    ? `${overdueAtBuild.length} draft${overdueAtBuild.length === 1 ? ' is' : 's are'} past ${overdueAtBuild.length === 1 ? 'its' : 'their'} publish date. The earliest was due ${formatDue(earliest)}. Nothing has gone live yet.`
+    : 'No draft is past its publish date.';
   const body = `
 <p class="small"><a href="/admin/">&larr; Admin</a></p>
 <header>
-  <p class="eyebrow">Owner review · manual publishing only</p>
+  <p class="eyebrow">Your content — nothing goes live without your say-so</p>
   <h1>Queued drafts</h1>
-  <p class="muted">Every draft waiting for review, rendered as a readable page. Opening or reading a draft changes nothing: none of these are published, and nothing here approves or publishes anything.</p>
-  <p><strong>${counts.total}</strong> draft${counts.total === 1 ? '' : 's'} in the queue${Object.entries(counts.byStatus).map(([k, v]) => ` · ${esc(k)}: ${v}`).join('')}</p>
+  <p class="muted">Read the articles written for Wise Covington and choose which ones go on your website. Opening or reading a draft changes nothing: none of these are published, and nothing here approves or publishes anything.</p>
+  <p><strong>${counts.total}</strong> draft${counts.total === 1 ? '' : 's'} in the queue${Object.entries(counts.byStatus).map(([k, v]) => ` · ${esc(statusWord(k))}: ${v}`).join('')}</p>
 </header>
+<div class="banner banner-late" id="overdue-banner"${overdueAtBuild.length ? '' : ' hidden'}>
+  <p class="eyebrow">Nothing has been published</p>
+  <p style="margin:0"><strong data-overdue-text>${esc(overdueSentence)}</strong></p>
+</div>
 <div class="card">
   <div class="controls">
     <div><label class="small muted" for="q">Search title or question</label><br><input id="q" type="search" placeholder="e.g. bill of sale" style="min-width:260px"></div>
-    <div><label class="small muted" for="cluster">Cluster</label><br><select id="cluster"><option value="">All clusters</option>${clusters.map((c) => `<option value="${esc(c)}">${esc(c.replace(/-/g, ' '))}</option>`).join('')}</select></div>
-    <div><label class="small muted" for="status">Status</label><br><select id="status"><option value="">All statuses</option>${statuses.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join('')}</select></div>
+    <div><label class="small muted" for="cluster">Topic</label><br><select id="cluster"><option value="">All topics</option>${clusters.map((c) => `<option value="${esc(c)}">${esc(c.replace(/-/g, ' '))}</option>`).join('')}</select></div>
+    <div><label class="small muted" for="status">Status</label><br><select id="status"><option value="">All statuses</option>${statuses.map((s) => `<option value="${esc(s)}">${esc(statusWord(s))}</option>`).join('')}</select></div>
     <div class="small muted" id="shown"></div>
   </div>
   <div class="table-scroll">
   <table id="drafts">
-    <thead><tr><th>Title</th><th>Cluster</th><th>Type</th><th>Date</th><th>Status</th><th>Read</th></tr></thead>
+    <thead><tr><th>Title</th><th>Topic</th><th>Type</th><th>Date</th><th>Status</th><th>Read</th></tr></thead>
     <tbody>
-${rows.map((r) => `      <tr data-hay="${esc(`${r.title} ${r.question} ${r.cluster}`.toLowerCase())}" data-cluster="${esc(r.cluster)}" data-status="${esc(r.status)}"><td><strong>${esc(r.title)}</strong>${r.question ? `<div class="muted small">${esc(r.question)}</div>` : ''}</td><td>${esc(r.cluster.replace(/-/g, ' '))}</td><td>${esc(r.type)}</td><td>${esc(r.date)}</td><td><span class="pill">${esc(r.status)}</span></td><td><a href="${esc(r.href)}">Read draft</a></td></tr>`).join('\n')}
+${rows.map((r) => `      <tr data-hay="${esc(`${r.title} ${r.question} ${r.cluster}`.toLowerCase())}" data-cluster="${esc(r.cluster)}" data-status="${esc(r.status)}"><td><strong>${esc(r.title)}</strong>${r.question ? `<div class="muted small">${esc(r.question)}</div>` : ''}</td><td>${esc(r.cluster.replace(/-/g, ' '))}</td><td>${esc(r.type)}</td><td class="date-cell" data-date="${esc(r.date)}">${esc(r.date)}</td><td><span class="pill">${esc(statusWord(r.status))}</span></td><td><a href="${esc(r.href)}">Read this draft</a></td></tr>`).join('\n')}
     </tbody>
   </table>
   </div>
 </div>
 <script>
 (function(){
+  /* Overdue is computed here rather than baked in at build time: the build
+     clock is frozen to the last commit, so a number written into the HTML is
+     wrong the next day. */
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function todayISO(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function formatDue(date){var p=String(date||'').split('-');if(p.length!==3)return String(date||'');return Number(p[2])+' '+(MONTHS[Number(p[1])-1]||'');}
+  function daysLate(date){var ms=Date.parse(todayISO()+'T00:00:00Z')-Date.parse(date+'T00:00:00Z');return Math.max(0,Math.round(ms/86400000));}
+  var today=todayISO(),late=[];
+  [].slice.call(document.querySelectorAll('.date-cell')).forEach(function(cell){
+    var date=cell.getAttribute('data-date')||'';
+    if(!date||date>=today)return;
+    late.push(date);
+    cell.innerHTML='<span class="overdue"><strong>'+date+'</strong><br><span class="small">'+daysLate(date)+' days overdue</span></span>';
+  });
+  var banner=document.getElementById('overdue-banner');
+  if(banner){
+    var text=banner.querySelector('[data-overdue-text]');
+    banner.hidden=!late.length;
+    if(text&&late.length){late.sort();text.textContent=late.length+' draft'+(late.length===1?' is':'s are')+' past '+(late.length===1?'its':'their')+' publish date. The earliest was due '+formatDue(late[0])+'. Nothing has gone live yet.';}
+  }
   var rows=[].slice.call(document.querySelectorAll('#drafts tbody tr'));
   var q=document.getElementById('q'),c=document.getElementById('cluster'),s=document.getElementById('status'),shown=document.getElementById('shown');
   function apply(){
@@ -195,7 +316,7 @@ ${rows.map((r) => `      <tr data-hay="${esc(`${r.title} ${r.question} ${r.clust
   q.addEventListener('input',apply);c.addEventListener('change',apply);s.addEventListener('change',apply);apply();
 })();
 </script>`;
-  return shell('Queued drafts · owner review', body, { wide: true, description: `Owner review index for ${counts.total} unpublished draft(s) awaiting manual approval. Nothing listed here is on the live site.` });
+  return shell('Queued drafts · owner review', body, { wide: true, gateHash, description: `Owner review index for ${counts.total} unpublished draft(s) awaiting manual approval. Nothing listed here is on the live site.` });
 }
 
 function writeDraftPreviews(distDir) {
@@ -205,6 +326,10 @@ function writeDraftPreviews(distDir) {
   }
   const config = readJson('data/system/config.json', {});
   const repoUrl = String(config.github_repo_url || '').replace(/\/$/, '');
+  // Same gate, same password, same sessionStorage key as /admin/, so unlocking
+  // once covers the admin root, this index, and every draft preview.
+  const gateHash = String(config.admin_password_sha256 || '');
+  const reviewEmail = String(config.owner_review_email || '').trim();
 
   const rows = [];
   const skipped = [];
@@ -217,7 +342,7 @@ function writeDraftPreviews(distDir) {
     }
     const raw = fs.readFileSync(sourcePath, 'utf8');
     const rendered = resolveDraftLinks(md(parse(raw)), distDir);
-    const page = previewPage(entry, rendered.html, rendered.missing, previewPath, repoUrl);
+    const page = previewPage(entry, rendered.html, rendered.missing, previewPath, repoUrl, gateHash, reviewEmail);
     const outDir = path.join(distDir, previewPath.replace(/^\//, '').replace(/\/$/, ''));
     ensureDir(outDir);
     fs.writeFileSync(path.join(outDir, 'index.html'), page.html);
@@ -225,7 +350,7 @@ function writeDraftPreviews(distDir) {
       title: entry.title || entry.entry_id || '',
       question: entry.source_query_title || '',
       cluster: entry.source_cluster || 'general',
-      type: label(entry.content_type),
+      type: typeWord(entry.content_type),
       date: entry.date || '',
       status: entry.status || entry.review_status || 'pending',
       href: previewPath
@@ -242,7 +367,7 @@ function writeDraftPreviews(distDir) {
   };
   rows.sort((a, b) => String(a.date).localeCompare(String(b.date)) || a.title.localeCompare(b.title));
   ensureDir(path.join(distDir, PREVIEW_ROOT));
-  fs.writeFileSync(path.join(distDir, PREVIEW_ROOT, 'index.html'), indexPage(rows, counts));
+  fs.writeFileSync(path.join(distDir, PREVIEW_ROOT, 'index.html'), indexPage(rows, counts, gateHash));
 
   console.log(`Draft previews written: ${rows.length} readable draft page(s) at /admin/drafts/${skipped.length ? `; ${skipped.length} entry/entries skipped (${[...new Set(skipped.map((s) => s.reason))].join(', ')})` : ''}.`);
   return { rendered: rows.length, skipped };

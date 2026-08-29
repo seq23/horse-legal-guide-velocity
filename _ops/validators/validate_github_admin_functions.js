@@ -87,16 +87,24 @@ if (automation.auto_publish_approved_due !== false) fail('auto_publish_approved_
 if (automation.legal_review_required !== true) fail('legal_review_required must remain true.');
 
 const admin = read('dist/admin/index.html');
+// The server-side admin capability above is unchanged and still fully asserted.
+// What changed is that it is no longer advertised on the client reviewer's page:
+// /api/admin/github/login returns Cloudflare Error 1101 and
+// /api/admin/github/session reports provider_configured:false, so those six
+// buttons and the two /agency/ links were dead controls in front of a lawyer.
+// The former presence checks are inverted rather than dropped, so the dead
+// controls cannot quietly return while the route is still unconfigured.
 for (const phrase of [
-  'Exactly what to change in metadata',
   'GitHub-authenticated actions',
   'Sign in with GitHub',
   'Generated command appears here',
   '/api/admin/action',
   'x-hlg-admin-csrf',
   '/agency/'
-]) if (!admin.includes(phrase)) fail(`Admin page missing preserved/additive control marker: ${phrase}`);
-if (!admin.includes('window.confirm')) fail('Authenticated admin actions must require an explicit browser confirmation.');
+]) if (admin.includes(phrase)) fail(`Admin page advertises an unconfigured server-side control: ${phrase}`);
+// Whatever the reviewer's decision controls are, an action she takes must still
+// require an explicit confirmation before it does anything.
+if (!admin.includes('window.confirm')) fail('Reviewer decision actions must require an explicit browser confirmation.');
 for (const secretName of ['GITHUB_ADMIN_TOKEN','GITHUB_OAUTH_CLIENT_SECRET','ADMIN_SESSION_SECRET']) {
   if (admin.includes(secretName)) fail(`Admin HTML exposes server secret name ${secretName}`);
 }
