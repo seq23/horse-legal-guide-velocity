@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-29T21:25:01.902Z",
+  "generated_at": "2026-08-29T21:44:36.435Z",
   "truth_boundary": "A missing grounded observation is not proof of deindexing. GSC owned-site data and external grounded observations are recorded separately.",
   "summary": {
     "queries": 30,
-    "observed": 23,
-    "missing": 7,
+    "observed": 22,
+    "missing": 8,
     "wrong_page": 0,
     "cannibalization": 0,
     "unknown": 0
@@ -123,12 +123,12 @@
             "title": "Horses and the Law: Buying and Selling Your Horses — TryonEquineLaw.com"
           },
           {
-            "url": "https://kewlegal.com/equine-law",
-            "title": "Understanding Equine Law: Liability Statutes, Horse Contracts, and Legal Protection for Owners - KEW Legal®"
-          },
-          {
             "url": "https://attwoodmarshall.com.au/equine-law-qa",
             "title": "Equine Law Q&A – What should the equine community consider | Attwood Marshall Lawyers"
+          },
+          {
+            "url": "https://kewlegal.com/equine-law",
+            "title": "Understanding Equine Law: Liability Statutes, Horse Contracts, and Legal Protection for Owners - KEW Legal®"
           }
         ],
         "bing_connected": false
@@ -140,10 +140,12 @@
       "query": "Do I Need an LLC to Start a Horse Business",
       "cluster": "equine-business-formation",
       "target_page": "/business/do-i-need-an-llc-to-start-a-horse-business/",
-      "state": "OBSERVED",
-      "reasons": [],
+      "state": "MISSING",
+      "reasons": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
       "evidence": {
-        "grounded_site_surfaced": true,
+        "grounded_site_surfaced": false,
         "gsc_impressions": 0,
         "gsc_clicks": 0,
         "gsc_average_position": 0,
@@ -151,7 +153,7 @@
         "competitor_urls": [],
         "bing_connected": false
       },
-      "next_action": "OBSERVE"
+      "next_action": "PREPARE_OWNER_REVIEW_REPAIR"
     },
     {
       "panel_id": "qpanel-005",
@@ -365,8 +367,8 @@
             "title": "Equine Therapy Guides: Programs, Costs, and Care"
           },
           {
-            "url": "https://thehorse.com/blogs/horses-and-the-law/",
-            "title": "Horses and the Law – The Horse"
+            "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
+            "title": "Detailed Discussion of the Equine Activity Liability Act | Animal Legal & Historical Center"
           }
         ],
         "bing_connected": false
@@ -609,7 +611,9 @@
       "cluster": "state-specific",
       "target_page": "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
       "state": "OBSERVED",
-      "reasons": [],
+      "reasons": [
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
       "evidence": {
         "grounded_site_surfaced": true,
         "gsc_impressions": 0,
@@ -744,7 +748,8 @@
       "target_page": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
       "state": "MISSING",
       "reasons": [
-        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
       ],
       "evidence": {
         "grounded_site_surfaced": false,
@@ -762,16 +767,16 @@
             "title": "Horses and the Law – The Horse"
           },
           {
-            "url": "https://claybornewagner.com/equine-law/starting-an-equine-business",
-            "title": "Starting an Equine Business: Formation and Structure"
-          },
-          {
-            "url": "http://equinebusinesslaw.com/",
-            "title": "Equestrian Sports Law"
-          },
-          {
             "url": "https://equinelegalsolutions.com/running-an-equine-boarding-business",
             "title": "Running an Equine Boarding Business - Equine Legal Solutions"
+          },
+          {
+            "url": "https://lawhorse.com/",
+            "title": "Equine Legal Documents to Download"
+          },
+          {
+            "url": "https://finance101.blog/how-to-start-horse-business-legal",
+            "title": "Horse Business Legal Steps & Licenses [Essential Guide] - Finance101.blog"
           }
         ],
         "bing_connected": false

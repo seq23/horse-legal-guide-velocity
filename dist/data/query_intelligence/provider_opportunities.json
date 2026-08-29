@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-08-29T21:21:05.000Z",
+  "generated_at": "2026-08-29T21:37:46.000Z",
   "provider_status": {
     "gsc": "ok",
     "bing": "not_connected",
@@ -9,10 +9,10 @@
   "summary": {
     "opportunities": 93,
     "new_candidates": 46,
-    "improve_existing": 11,
-    "differentiate_existing": 23,
+    "improve_existing": 12,
+    "differentiate_existing": 22,
     "cannibalization_review": 13,
-    "active_query_failures": 7
+    "active_query_failures": 8
   },
   "policy": "Provider and grounded-search data may create recommendations, pending candidates, and finished owner-review repairs only. They may not approve, publish, or mutate live legal pages.",
   "truth_boundary": "Grounded web surfacing is evidence of live cited sources, not literal organic rank. GSC is the source for owned-site Google clicks, impressions, CTR, and average position.",
@@ -2325,7 +2325,7 @@
     {
       "opportunity_id": "provider-opportunity-0067",
       "query": "Do I Need an LLC to Start a Horse Business",
-      "type": "differentiate_existing",
+      "type": "improve_existing",
       "target_page": "/business/do-i-need-an-llc-to-start-a-horse-business/",
       "provider_pages": [],
       "providers": [
@@ -2338,8 +2338,8 @@
       },
       "active_query_evidence": {
         "panel_id": "qpanel-004",
-        "state": "OBSERVED",
-        "grounded_site_surfaced": true,
+        "state": "MISSING",
+        "grounded_site_surfaced": false,
         "competitor_urls": [],
         "rank_verified": false
       },
@@ -2347,8 +2347,8 @@
       "coverage_match_score": 1,
       "confidence": 0.82,
       "reasons": [
-        "query_matches_existing_coverage",
-        "target_is_in_live_similarity_cluster"
+        "active_query_missing",
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
       ],
       "status": "pending_owner_review",
       "automatic_actions_completed": [
@@ -2472,8 +2472,8 @@
             "title": "Equine Therapy Guides: Programs, Costs, and Care"
           },
           {
-            "url": "https://thehorse.com/blogs/horses-and-the-law/",
-            "title": "Horses and the Law – The Horse"
+            "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
+            "title": "Detailed Discussion of the Equine Activity Liability Act | Animal Legal & Historical Center"
           }
         ],
         "rank_verified": false
@@ -2722,7 +2722,7 @@
             "Chapter 62. Equine Activity Liability.",
             "Sign In"
           ],
-          "text_chars": 8171
+          "text_chars": 7836
         },
         {
           "url": "https://mca.legmt.gov/bills/2016/mca/title_0270/chapter_0010/part_0070/section_0270/0270-0010-0070-0270.html",
@@ -2820,16 +2820,16 @@
             "title": "Horses and the Law – The Horse"
           },
           {
-            "url": "https://claybornewagner.com/equine-law/starting-an-equine-business",
-            "title": "Starting an Equine Business: Formation and Structure"
-          },
-          {
-            "url": "http://equinebusinesslaw.com/",
-            "title": "Equestrian Sports Law"
-          },
-          {
             "url": "https://equinelegalsolutions.com/running-an-equine-boarding-business",
             "title": "Running an Equine Boarding Business - Equine Legal Solutions"
+          },
+          {
+            "url": "https://lawhorse.com/",
+            "title": "Equine Legal Documents to Download"
+          },
+          {
+            "url": "https://finance101.blog/how-to-start-horse-business-legal",
+            "title": "Horse Business Legal Steps & Licenses [Essential Guide] - Finance101.blog"
           }
         ],
         "rank_verified": false
@@ -2837,8 +2837,29 @@
       "grounded_competitors": [
         {
           "url": "https://extension.umn.edu/horse-ownership/understanding-equine-law",
-          "status": "http_error",
-          "http_status": 403
+          "resolved_url": "https://extension.umn.edu/agriculture/animals-and-livestock/horse/understanding-equine-law",
+          "status": "ok",
+          "http_status": 200,
+          "title": "Understanding equine law",
+          "h1": "<span> <span>Understanding equine law</span> </span>",
+          "headings": [
+            "Building a stronger Minnesota together",
+            "Llama-Alpaca Costume Contest | Sept 2",
+            "Institute for Ag Professionals",
+            "COMET Training",
+            "Take a class: Preserving food at home",
+            "Join Master Gardener volunteers",
+            "Minnesota Woodland Stewards",
+            "Help us transform the 4‑H Building",
+            "Quick facts",
+            "Contracts",
+            "Working with a lawyer",
+            "About equine law",
+            "Horse apps",
+            "Connect with Extension",
+            "Accessibility"
+          ],
+          "text_chars": 12041
         },
         {
           "url": "https://thehorse.com/blogs/horses-and-the-law/",
@@ -2846,21 +2867,30 @@
           "http_status": 403
         },
         {
-          "url": "https://claybornewagner.com/equine-law/starting-an-equine-business",
-          "resolved_url": "https://claybornewagner.com/equine-law/starting-an-equine-business",
+          "url": "https://equinelegalsolutions.com/running-an-equine-boarding-business",
+          "resolved_url": "https://equinelegalsolutions.com/running-an-equine-boarding-business/",
           "status": "ok",
-          "http_status": 202,
-          "title": "",
-          "h1": "",
-          "headings": [],
-          "text_chars": 0
+          "http_status": 200,
+          "title": "Running an Equine Boarding Business - Equine Legal Solutions",
+          "h1": "Running an Equine Boarding Business",
+          "headings": [
+            "Liability Releases",
+            "Insurance",
+            "Horse Boarding Contracts",
+            "Screening Potential Boarders",
+            "Evicting Undesirable Boarders",
+            "Nonpaying Boarders",
+            "Incorporating Your Horse Boarding Business"
+          ],
+          "text_chars": 11418
         }
       ],
       "coverage_match_score": 1,
       "confidence": 0.82,
       "reasons": [
         "active_query_missing",
-        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
       ],
       "status": "pending_owner_review",
       "automatic_actions_completed": [
@@ -3125,7 +3155,7 @@
             "Welcome back",
             "Create your free account."
           ],
-          "text_chars": 14428
+          "text_chars": 14400
         },
         {
           "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
@@ -3536,12 +3566,12 @@
             "title": "Horses and the Law: Buying and Selling Your Horses — TryonEquineLaw.com"
           },
           {
-            "url": "https://kewlegal.com/equine-law",
-            "title": "Understanding Equine Law: Liability Statutes, Horse Contracts, and Legal Protection for Owners - KEW Legal®"
-          },
-          {
             "url": "https://attwoodmarshall.com.au/equine-law-qa",
             "title": "Equine Law Q&A – What should the equine community consider | Attwood Marshall Lawyers"
+          },
+          {
+            "url": "https://kewlegal.com/equine-law",
+            "title": "Understanding Equine Law: Liability Statutes, Horse Contracts, and Legal Protection for Owners - KEW Legal®"
           }
         ],
         "rank_verified": false
@@ -3707,11 +3737,11 @@
           "url": "https://www.litchfieldcavo.com/wp-content/uploads/2019/07/Litchfield-Alert-Equine-Activity-Liability-Act-Protections-2019-J.-Willette.pdf",
           "resolved_url": "https://www.litchfieldcavo.com/wp-content/uploads/2019/07/Litchfield-Alert-Equine-Activity-Liability-Act-Protections-2019-J.-Willette.pdf",
           "status": "ok",
-          "http_status": 202,
+          "http_status": 200,
           "title": "",
           "h1": "",
           "headings": [],
-          "text_chars": 0
+          "text_chars": 62924
         },
         {
           "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
@@ -3980,8 +4010,13 @@
       "grounded_competitors": [
         {
           "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/ByArticle/Chapter_99E/Article_1.pdf",
-          "status": "http_error",
-          "http_status": 403
+          "resolved_url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/ByArticle/Chapter_99E/Article_1.pdf",
+          "status": "ok",
+          "http_status": 200,
+          "title": "",
+          "h1": "",
+          "headings": [],
+          "text_chars": 71317
         },
         {
           "url": "https://law.justia.com/codes/north-carolina/chapter-99e/article-1/",
