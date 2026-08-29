@@ -43,7 +43,11 @@
  *
  * Usage
  * -----
- *   node scripts/queries/score_discovery_gap.mjs
+ *   npm run queries:discovery-gap
+ *
+ * Wired into .github/workflows/agency-search-monitor.yml, immediately after the
+ * grounded citation probe that produces the observations it reads. Guarded by
+ * _ops/validators/validate_discovery_gap.js (npm run validate:discovery-gap).
  *
  * Run it, run the grounded probe, run it again: the first pass is a no-op on an
  * unprobed row, the second attaches what the probe observed. A row the probe has
@@ -120,13 +124,28 @@ const OPENNESS_METHOD = {
   not_measured: 'search volume, keyword difficulty, organic rank. None are inferable from a citation observation and none are written.',
 };
 
-function occupancyFor(query, observationsByQuery) {
+function occupancyFor(query, observationsByQuery, prior) {
   const obs = observationsByQuery.get(norm(query));
-  if (!obs) return { verdict: 'UNMEASURED', reason: 'NO_GROUNDED_OBSERVATION', openness_score: null, cited_hosts: [], observed_at: null, engine: null };
-  if (obs.status !== 'observed') return { verdict: 'UNMEASURED', reason: 'PROVIDER_ERROR', openness_score: null, cited_hosts: [], observed_at: obs.observed_at || null, engine: obs.engine || null };
+  // `data/signals/llm_citation_observations.json` is a ROLLING record: the probe
+  // caps itself at 25 queries per run (`--limit 25` in
+  // .github/workflows/agency-search-monitor.yml, LIMIT default 25 in
+  // scripts/llm_citation_probe.mjs) and this script reads only the newest
+  // grounded run. So a query measured last week is simply not in this week's
+  // run. Overwriting a real measurement with UNMEASURED because the window
+  // rolled past it destroys the only openness reading this repo has - replaying
+  // one real 25-observation run over the 62 scored rows wiped 37 of them.
+  // A measurement that has aged is carried forward and marked stale, never
+  // downgraded to "we never looked".
+  const carry = (reason) => (prior && prior.reason === 'GROUNDED_CITATION_OBSERVATION')
+    ? { ...prior, stale: true, stale_reason: reason }
+    : { verdict: 'UNMEASURED', reason, openness_score: null, cited_hosts: [], observed_at: (obs && obs.observed_at) || null, engine: (obs && obs.engine) || null };
+  if (!obs) return carry('NO_GROUNDED_OBSERVATION_IN_CURRENT_WINDOW');
+  // A FAILED observation is not evidence that the earlier successful one was
+  // wrong. Keep the reading, mark it stale.
+  if (obs.status !== 'observed') return carry('PROVIDER_ERROR');
   const hosts = [...new Set(obs.cited_domains || [])];
   const ours = obs.cited_ours || [];
-  if (!hosts.length) return { verdict: 'UNMEASURED', reason: 'PROVIDER_ANSWERED_WITHOUT_RETRIEVING', openness_score: null, cited_hosts: [], observed_at: obs.observed_at, engine: obs.engine };
+  if (!hosts.length) return carry('PROVIDER_ANSWERED_WITHOUT_RETRIEVING');
   const platform = hosts.filter(isPlatform).length / hosts.length;
   const institutional = hosts.filter(isInstitutional).length / hosts.length;
   const score = Math.max(0, Math.min(1, 0.5 + 0.5 * platform - 0.5 * institutional));
@@ -139,10 +158,45 @@ function occupancyFor(query, observationsByQuery) {
     distinct_cited_hosts: hosts.length,
     cited_hosts: hosts, cited_ours: ours,
     observed_at: obs.observed_at, engine: obs.engine,
+    stale: false,
   };
 }
 
+// -------------------------------------------------------- blue-ocean gate
+//
+// "Not cited" is NOT the same as "open ground". An openness_score is a statement
+// about WHO the engine cited, not about whether those citations were about this
+// query in this vertical. Queries carrying no equine anchor give the engine
+// nothing to anchor retrieval to and it answers from whatever is nearest:
+// "standard training agreement" came back as Australian horse-racing registry
+// and Ontario government forms and the UK institute of chartered accountants;
+// "guides and instructors insurance" came back as British Cycling and a UK
+// mountain-training body. Scoring that noise as openness and calling the query
+// OPEN is a false blue-ocean signal.
+//
+// This gate is ADDITIVE. It rewrites no verdict already in the evidence file; it
+// records, per row, whether the openness reading describes ground this property
+// can actually contest.
+const EQUINE_ANCHOR = /\b(horses?|equine|equestrian|stables?|barns?|boarding|riding|riders?|farriers?|vet|veterinary|usef|ushja|fei|pony|ponies|foals?|mares?|stallions?|geldings?|breeding|dressage|eventing|jumper|showing|racing)\b/;
+const LOCATION_ANCHOR = /\b(near me|wellington|ocala|aiken|lexington|florida|fl|kentucky|ky|north carolina|nc|south carolina|sc|virginia|va|texas|tx|california|ca|local|in my state|by state)\b/;
+const BRAND_TOKEN = /\bhorse ?legal ?guide\b/;
+
+function blueOceanEligibility(row) {
+  const q = norm(row && row.query);
+  if (!q) return { eligible: false, reason: 'EMPTY_QUERY' };
+  if (BRAND_TOKEN.test(q)) {
+    return { eligible: false, reason: 'BRAND_OR_PERSON_NAME_NAVIGATIONAL', note: 'Navigational query for this property\'s own name. Whoever the engine cites for it is not competitive ground.' };
+  }
+  if (!EQUINE_ANCHOR.test(q) && !LOCATION_ANCHOR.test(q)) {
+    return { eligible: false, reason: 'NO_SERVICE_OR_LOCATION_ANCHOR', note: 'No equine or location term, so the engine has nothing to anchor retrieval to and its citation set does not describe this property\'s competitive ground.' };
+  }
+  const verdict = row && row.occupancy && row.occupancy.verdict;
+  if (verdict === 'HELD_BY_US') return { eligible: false, reason: 'ALREADY_HELD_BY_US' };
+  return { eligible: true, reason: verdict === 'OPEN' ? 'OPEN_WITH_ANCHORED_OBSERVATION' : (verdict || 'UNMEASURED') };
+}
+
 // ------------------------------------------------------------------ the merge
+const before = JSON.stringify(read(EVIDENCE, null));
 const doc = read(EVIDENCE, null);
 if (!doc) { console.error(`score_discovery_gap: missing ${EVIDENCE}`); process.exit(1); }
 const byQuery = new Map((doc.queries || []).map((q) => [norm(q.query), q]));
@@ -211,8 +265,9 @@ let scored = 0;
 for (const row of byQuery.values()) {
   row.lead_intent_tier = leadIntentTier(row.query);
   row.lead_intent_method = 'regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs';
-  row.occupancy = occupancyFor(row.query, observationsByQuery);
+  row.occupancy = occupancyFor(row.query, observationsByQuery, row.occupancy);
   if (row.occupancy.openness_score !== null) scored++;
+  row.blue_ocean_eligible = blueOceanEligibility(row);
 }
 
 // Sort within unit, never across it - the same rule ingest_gsc_evidence.py applies.
@@ -240,9 +295,40 @@ doc.discovery_gap_pass = {
     note: 'Word-boundary anchored. `\\bfees?\\b` deliberately does not match "feel".',
   },
   openness_method: OPENNESS_METHOD,
-  counts: { total_queries: doc.queries.length, added_this_pass: added, with_openness_reading: scored },
+  rolling_window_policy: {
+    source: OBSERVATIONS,
+    why: 'The probe caps itself at 25 queries per run and only the newest grounded run is read, so most scored rows have no observation in any given window. A row whose observation has rolled out keeps its last reading with stale:true and a stale_reason; it is never downgraded to UNMEASURED, which would read as "we never looked".',
+    stale_reasons: {
+      NO_GROUNDED_OBSERVATION_IN_CURRENT_WINDOW: 'measured before, not in the newest grounded run',
+      PROVIDER_ERROR: 'the newest run reached the provider and failed; the earlier reading stands',
+      PROVIDER_ANSWERED_WITHOUT_RETRIEVING: 'the newest run answered from model memory with no citations; the earlier reading stands',
+    },
+  },
+  blue_ocean_gate: {
+    by: 'blueOceanEligibility in this script, written to queries[].blue_ocean_eligible',
+    why: 'An openness reading is a statement about WHO the engine cited, not about whether those citations were about this query in this vertical. Queries with no equine or location anchor return whatever is nearest - Australian racing registries, UK cycling bodies, contractor insurance SaaS - and treating that as open ground is a false blue-ocean signal. The gate is additive: it rewrites no occupancy verdict.',
+    refusal_reasons: ['BRAND_OR_PERSON_NAME_NAVIGATIONAL', 'NO_SERVICE_OR_LOCATION_ANCHOR', 'ALREADY_HELD_BY_US', 'EMPTY_QUERY'],
+  },
+  counts: {
+    total_queries: doc.queries.length,
+    added_this_pass: added,
+    with_openness_reading: scored,
+    carried_forward_stale: doc.queries.filter((q) => q.occupancy && q.occupancy.stale).length,
+    blue_ocean_eligible: doc.queries.filter((q) => q.blue_ocean_eligible && q.blue_ocean_eligible.eligible).length,
+    blue_ocean_refused: doc.queries.filter((q) => q.blue_ocean_eligible && !q.blue_ocean_eligible.eligible).length,
+  },
 };
 
+// Build determinism: the pass timestamp is the only field that moves on a no-op
+// run. Bumping it on every run would make a scheduled job commit a diff that
+// says nothing changed. Keep the previous timestamp when nothing else moved.
+const priorAt = (() => { try { return JSON.parse(before).discovery_gap_pass?.at || null; } catch { return null; } })();
+if (priorAt) {
+  const a = JSON.parse(before); const b = JSON.parse(JSON.stringify(doc));
+  if (a.discovery_gap_pass) a.discovery_gap_pass.at = null;
+  if (b.discovery_gap_pass) b.discovery_gap_pass.at = null;
+  if (JSON.stringify(a) === JSON.stringify(b)) doc.discovery_gap_pass.at = priorAt;
+}
 write(EVIDENCE, doc);
 
 const tiers = {}; const verdicts = {};
@@ -253,3 +339,7 @@ for (const q of doc.queries) {
 console.log(`[discovery-gap] ${doc.queries.length} evidence queries (+${added} this pass), ${scored} with an openness reading.`);
 console.log(`  lead intent: ${Object.entries(tiers).sort().map(([k, v]) => `${k}=${v}`).join(' ')}`);
 console.log(`  occupancy:   ${Object.entries(verdicts).sort().map(([k, v]) => `${k}=${v}`).join(' ')}`);
+const stale = doc.queries.filter((q) => q.occupancy && q.occupancy.stale).length;
+const refused = doc.queries.filter((q) => q.blue_ocean_eligible && !q.blue_ocean_eligible.eligible).length;
+console.log(`  carried forward stale: ${stale} (readings kept, not overwritten with UNMEASURED)`);
+console.log(`  blue-ocean refused:    ${refused} (openness read from citations that do not describe this property's ground)`);
