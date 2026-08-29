@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "note": "How many files each page gate actually examined. Zero is a failure, not a pass; see collectRequired in _ops/validators/helpers.js.",
+  "gates": {
+    "validate:above-fold": {
+      "dir": "dist",
+      "count": 273
+    },
+    "validate:compare-contract": {
+      "dir": "dist",
+      "count": 78
+    },
+    "validate:content": {
+      "dir": "dist",
+      "count": 870
+    },
+    "validate:content-pattern": {
+      "dir": "dist",
+      "count": 557
+    },
+    "validate:extractability": {
+      "dir": "dist",
+      "count": 273
+    },
+    "validate:family-scaffold": {
+      "dir": "dist",
+      "count": 267
+    },
+    "validate:faq-opening": {
+      "dir": "dist",
+      "count": 84
+    },
+    "validate:footer": {
+      "dir": "dist",
+      "count": 870
+    },
+    "validate:links": {
+      "dir": "dist",
+      "count": 870
+    },
+    "validate:links (all dist files)": {
+      "dir": "dist",
+      "count": 920
+    },
+    "validate:manual": {
+      "dir": "dist",
+      "count": 870
+    },
+    "validate:public-page-phrase-contract": {
+      "dir": "dist",
+      "count": 870
+    },
+    "validate:review": {
+      "dir": "dist",
+      "count": 870
+    },
+    "validate:scenario-contract": {
+      "dir": "dist",
+      "count": 105
+    }
+  }
+}

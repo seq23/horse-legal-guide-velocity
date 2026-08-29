@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const { collectFiles, readJson, fail, ok } = require('./helpers');
+const { collectRequired, readJson, fail, ok } = require('./helpers');
 const { auditText } = require('../../scripts/lib/audit_content');
-const files = collectFiles('content/drafts/generated', (file) => file.endsWith('.md'));
+const files = collectRequired('content/drafts/generated', (file) => file.endsWith('.md'), 'validate:drafts');
 const backlog = readJson('data/system/editorial_backlog.json');
 const byPath = new Map(backlog.map((entry) => [path.resolve(process.cwd(), entry.github_path), entry]));
 let failCount = 0;

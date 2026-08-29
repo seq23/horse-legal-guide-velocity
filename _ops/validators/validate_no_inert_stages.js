@@ -196,8 +196,69 @@ if (!fs.existsSync(path.join(ROOT, sitemapRel))) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// 4. No page gate may pass having examined nothing.
+//
+// The gates that walk dist/ were all written so that an absent or empty dist/
+// produced an empty file list, an unexecuted loop body, and exit 0 - "passed"
+// and "found nothing to check" were the same observable outcome, and none of
+// them printed a count. Reproduced by moving dist/ aside: nineteen gates
+// reported success against zero pages, publish-safety among them.
+//
+// collectRequired / assertExamined in _ops/validators/helpers.js now fail on
+// zero and record what they saw to _ops/reports/gate-coverage.json. Both halves
+// are asserted here: the static half stops a new gate reaching for the unguarded
+// walker, and the live half reads the counts this very run produced. Every gate
+// below runs earlier in the validate:all chain than this validator does.
+// ---------------------------------------------------------------------------
+const VALIDATOR_DIR = path.join(ROOT, '_ops/validators');
+let gatesScanned = 0;
+for (const name of fs.readdirSync(VALIDATOR_DIR)) {
+  // helpers.js defines the unguarded walker; this file names it in its own
+  // guard and message. Neither is a gate.
+  if (!name.endsWith('.js') || name === 'helpers.js' || name === 'validate_no_inert_stages.js') continue;
+  gatesScanned += 1;
+  const src = fs.readFileSync(path.join(VALIDATOR_DIR, name), 'utf8');
+  for (const call of src.matchAll(/collectFiles\(\s*['"]([^'"]+)['"]/g)) {
+    fail(`_ops/validators/${name} calls collectFiles('${call[1]}', ...), which returns [] for a missing or empty directory and lets the gate pass having examined nothing. Use collectRequired(dir, matcher, label) instead.`);
+  }
+}
+if (gatesScanned === 0) fail('examined 0 validator files - the collectFiles sweep matched nothing, which is a broken sweep');
+
+const COVERAGE = '_ops/reports/gate-coverage.json';
+// Every gate that must have been exercised by the time this validator runs.
+const REQUIRED_COVERAGE = [
+  'validate:content', 'validate:footer', 'validate:links', 'validate:manual',
+  'validate:review', 'validate:above-fold', 'validate:extractability',
+  'validate:public-page-phrase-contract', 'validate:content-pattern',
+  'validate:family-scaffold', 'validate:compare-contract',
+  'validate:scenario-contract', 'validate:faq-opening',
+  // validate:drafts is guarded by collectRequired too, but it is not part of
+  // validate:all, so it cannot be required to have recorded coverage here.
+];
+if (!fs.existsSync(path.join(ROOT, COVERAGE))) {
+  fail(`${COVERAGE} missing. No page gate recorded what it examined, so none of them can be shown to have run. Run npm run validate:all.`);
+} else {
+  let coverage = {};
+  try {
+    coverage = (JSON.parse(read(COVERAGE)) || {}).gates || {};
+  } catch (error) {
+    fail(`${COVERAGE} is not valid JSON: ${error.message}`);
+  }
+  const recorded = Object.keys(coverage);
+  if (!recorded.length) fail(`${COVERAGE} records 0 gates - nothing proved it examined anything`);
+  for (const gate of REQUIRED_COVERAGE) {
+    const row = coverage[gate];
+    if (!row) {
+      fail(`${COVERAGE} has no entry for ${gate}. Either the gate no longer records coverage, or it did not run in this validate:all.`);
+    } else if (!(Number(row.count) > 0)) {
+      fail(`${gate} recorded ${row.count} item(s) examined. A gate that examined nothing has not passed.`);
+    }
+  }
+}
+
 if (failures) {
   console.error(`No-inert-stages contract FAILED with ${failures} problem(s).`);
   process.exit(1);
 }
-console.log(`No inert stages: ${aliasesChecked} npm script target(s) resolve, ${entryPointsChecked} script entry point(s) carry real work, sitemap lastmod served by the ledger.`);
+console.log(`No inert stages: ${aliasesChecked} npm script target(s) resolve, ${entryPointsChecked} script entry point(s) carry real work, ${gatesScanned} validator(s) use the guarded file walker, ${REQUIRED_COVERAGE.length} page gate(s) recorded a non-zero examined count, sitemap lastmod served by the ledger.`);

@@ -1,13 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-const { createReport, readJson } = require('./helpers');
+const { createReport, readJson, assertExamined } = require('./helpers');
 
 const report = createReport('validate_faq_opening_contract', 'page');
 const targets = readJson('data/queries/page_targets.json').filter((t) => String(t.review_status) === 'approved' && String(t.page_type) === 'faq');
 const badStarts = [/^generally\b/i, /^usually\b/i, /^it depends\b/i, /^depends\b/i, /^often\b/i];
+let examined = 0;
 for (const page of targets) {
   const file = path.resolve(process.cwd(), 'dist', page.slug.replace(/^\//, ''), 'index.html');
   if (!fs.existsSync(file)) continue;
+  examined += 1;
   const html = fs.readFileSync(file, 'utf8');
   const sectionMatch = html.match(/<section class="quick-answer-block"[\s\S]*?<\/section>/i);
   if (!sectionMatch) {
@@ -36,4 +38,5 @@ for (const page of targets) {
     });
   }
 }
+assertExamined('validate:faq-opening', examined, targets.length);
 report.finalize('FAQ quick-answer openings are direct enough for stabilized answer extraction.');

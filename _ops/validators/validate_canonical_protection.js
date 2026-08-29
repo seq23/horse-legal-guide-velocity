@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const { collectFiles, fail, ok } = require('./helpers');
+const { collectRequired, fail, ok } = require('./helpers');
 const forbidden = ['best equine lawyer', 'top horse lawyer', 'hire now', 'book now'];
-const files = collectFiles('dist', (file) => file.endsWith('index.html'));
+const files = collectRequired('dist', (file) => file.endsWith('index.html'), 'validate:canonical');
 function stripTags(html) {
   return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
