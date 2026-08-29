@@ -1,16 +1,1219 @@
 {
   "schema_version": "2.2.0",
-  "generated_at": "2026-08-29T14:57:24.920Z",
+  "generated_at": "2026-08-29T15:04:25.413Z",
   "bounded_repair_revisions": 2,
   "policy": "The system performs query testing, diagnosis, competitor comparison, finished patch preparation, and post-deployment retesting. Client approval remains required before each live legal-page mutation. Bounded on-page repair stops after two revisions.",
   "summary": {
-    "tracked": 0,
-    "patch_ready": 0,
+    "tracked": 21,
+    "patch_ready": 21,
     "owner_approved": 0,
     "applied_pending_retest": 0,
     "observed_after_repair": 0,
     "still_missing_after_repair": 0,
     "bounded_repair_exhausted": 0
   },
-  "repairs": []
+  "repairs": [
+    {
+      "repair_id": "query-repair-qpanel-002",
+      "panel_id": "qpanel-002",
+      "revision": 1,
+      "query": "What Should I Do If I Receive a Demand Letter",
+      "target_page": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://www.equinelegalconsultancy.com/",
+            "title": "Equine Legal Consultancy | Your Legal Guide in the Equine World"
+          },
+          {
+            "url": "https://thehorse.com/blogs/horses-and-the-law/",
+            "title": "Horses and the Law – The Horse"
+          },
+          {
+            "url": "https://equine.uslegal.com/",
+            "title": "Equine – An USLegal Topic Area"
+          },
+          {
+            "url": "https://www.fosterswift.com/services/General-Litigation-Trial-Practice/Equine-Law-Attorneys-Horse-Lawyers",
+            "title": "Equine Law | Horse Attorneys, Lawyers | Equine Legal Advice | Litigation | Foster Swift"
+          },
+          {
+            "url": "https://mylawcle.com/products/equine-law-essentials-liability-business-protection-and-growth-strategies-2026-edition/",
+            "title": "Equine Law Essentials: Liability, Business Protection, and Growth Strategies (2026 Edition) | myLawCLE"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://www.equinelegalconsultancy.com/",
+          "title": "Equine Legal Consultancy | Your Legal Guide in the Equine World"
+        },
+        {
+          "url": "https://thehorse.com/blogs/horses-and-the-law/",
+          "title": "Horses and the Law – The Horse"
+        },
+        {
+          "url": "https://equine.uslegal.com/",
+          "title": "Equine – An USLegal Topic Area"
+        },
+        {
+          "url": "https://www.fosterswift.com/services/General-Litigation-Trial-Practice/Equine-Law-Attorneys-Horse-Lawyers",
+          "title": "Equine Law | Horse Attorneys, Lawyers | Equine Legal Advice | Litigation | Foster Swift"
+        },
+        {
+          "url": "https://mylawcle.com/products/equine-law-essentials-liability-business-protection-and-growth-strategies-2026-edition/",
+          "title": "Equine Law Essentials: Liability, Business Protection, and Growth Strategies (2026 Edition) | myLawCLE"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-002\" data-revision=\"1\"><p><strong>Search question:</strong> What Should I Do If I Receive a Demand Letter</p><h2>Quick answer</h2><p><strong>Short answer:</strong> If you receive a demand letter, do <strong>not</strong> ignore it, do <strong>not</strong> fire back emotionally, and do <strong>not</strong> assume the strongest-looking letter is automatically right. First preserve the letter, deadline, attachments, contract documents, and your internal timeline.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-003",
+      "panel_id": "qpanel-003",
+      "revision": 1,
+      "query": "I Sold a Horse Without a Contract — Am I Screwed",
+      "target_page": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+            "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+          },
+          {
+            "url": "https://www.hcrlaw.com/news-and-insights/thinking-buying-selling-horse-a-sale-agreement-may-protect-you-if-things-go-wrong/",
+            "title": "Thinking about buying or selling a horse? A sale agreement may protect you if things go wrong - HCR Law"
+          },
+          {
+            "url": "https://www.tryonequinelaw.com/news-and-events/2020/8/18/horses-and-the-law-buying-and-selling-your-horses",
+            "title": "Horses and the Law: Buying and Selling Your Horses — TryonEquineLaw.com"
+          },
+          {
+            "url": "https://attwoodmarshall.com.au/equine-law-qa",
+            "title": "Equine Law Q&A – What should the equine community consider | Attwood Marshall Lawyers"
+          },
+          {
+            "url": "https://kewlegal.com/equine-law",
+            "title": "Understanding Equine Law: Liability Statutes, Horse Contracts, and Legal Protection for Owners - KEW Legal®"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+          "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+        },
+        {
+          "url": "https://www.hcrlaw.com/news-and-insights/thinking-buying-selling-horse-a-sale-agreement-may-protect-you-if-things-go-wrong/",
+          "title": "Thinking about buying or selling a horse? A sale agreement may protect you if things go wrong - HCR Law"
+        },
+        {
+          "url": "https://www.tryonequinelaw.com/news-and-events/2020/8/18/horses-and-the-law-buying-and-selling-your-horses",
+          "title": "Horses and the Law: Buying and Selling Your Horses — TryonEquineLaw.com"
+        },
+        {
+          "url": "https://attwoodmarshall.com.au/equine-law-qa",
+          "title": "Equine Law Q&A – What should the equine community consider | Attwood Marshall Lawyers"
+        },
+        {
+          "url": "https://kewlegal.com/equine-law",
+          "title": "Understanding Equine Law: Liability Statutes, Horse Contracts, and Legal Protection for Owners - KEW Legal®"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-003\" data-revision=\"1\"><p><strong>Search question:</strong> I Sold a Horse Without a Contract — Am I Screwed</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Do not guess and do not escalate blindly. First pin down the exact problem, preserve the written record, and sort the issue into the right lane — sale, boarding, lease, liability, payment, care, business authority, or state-specific rule. What you do next should follow that triage, not panic.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-004",
+      "panel_id": "qpanel-004",
+      "revision": 1,
+      "query": "Do I Need an LLC to Start a Horse Business",
+      "target_page": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-004\" data-revision=\"1\"><p><strong>Search question:</strong> Do I Need an LLC to Start a Horse Business</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Do I Need an LLC to Start a Horse Business? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-005",
+      "panel_id": "qpanel-005",
+      "revision": 1,
+      "query": "What Should Be Included in a Horse Lease Agreement",
+      "target_page": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://www.cataneselaw.com/equine-articles/common-issues-when-leasing-a-horse",
+            "title": "Common Issues When Leasing A Horse - Los Angeles Lawyer and Law Firm | Catanese & Wells"
+          },
+          {
+            "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+            "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+          },
+          {
+            "url": "https://equinelegalsolutions.com/horse-leasing-contract",
+            "title": "Horse Leasing Contract | Equine Legal Agreement Template PDF - Equine Legal Solutions"
+          },
+          {
+            "url": "https://equinelegalsolutions.com/whats-in-our-forms-lease",
+            "title": "What Our Horse Lease Forms Include - Equine Legal Solutions"
+          },
+          {
+            "url": "https://www.gueronnierelaw.com/equine-leasing-contracts-ensuring-fairness-and-clarity-for-all-parties",
+            "title": "Equine Leasing Contracts: Ensuring Fairness and Clarity for All Parties"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://www.cataneselaw.com/equine-articles/common-issues-when-leasing-a-horse",
+          "title": "Common Issues When Leasing A Horse - Los Angeles Lawyer and Law Firm | Catanese & Wells"
+        },
+        {
+          "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+          "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+        },
+        {
+          "url": "https://equinelegalsolutions.com/horse-leasing-contract",
+          "title": "Horse Leasing Contract | Equine Legal Agreement Template PDF - Equine Legal Solutions"
+        },
+        {
+          "url": "https://equinelegalsolutions.com/whats-in-our-forms-lease",
+          "title": "What Our Horse Lease Forms Include - Equine Legal Solutions"
+        },
+        {
+          "url": "https://www.gueronnierelaw.com/equine-leasing-contracts-ensuring-fairness-and-clarity-for-all-parties",
+          "title": "Equine Leasing Contracts: Ensuring Fairness and Clarity for All Parties"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-005\" data-revision=\"1\"><p><strong>Search question:</strong> What Should Be Included in a Horse Lease Agreement</p><h2>Quick answer</h2><p><strong>Short answer:</strong> A good horse lease agreement should make it painfully clear <strong>who can do what with the horse, who pays for what, who makes emergency decisions, what happens if the horse becomes unsound, and how the lease ends</strong>. Most lease fights come from a document that names the horse and price but leaves the actual relationship fuzzy.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-007",
+      "panel_id": "qpanel-007",
+      "revision": 1,
+      "query": "Should I Trademark My Barn Name",
+      "target_page": "/ip/should-i-trademark-my-barn-name/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/ip/should-i-trademark-my-barn-name/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-007\" data-revision=\"1\"><p><strong>Search question:</strong> Should I Trademark My Barn Name</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Should I Trademark My Barn Name? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-010",
+      "panel_id": "qpanel-010",
+      "revision": 1,
+      "query": "Do I Need a Horse Sale Contract in North Carolina",
+      "target_page": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://equinelegalsolutions.com/legal-landscape-of-horse-sales",
+            "title": "Legal Landscape of Horse Sales - Equine Legal Solutions"
+          },
+          {
+            "url": "https://answers.uslegal.com/animals/equine",
+            "title": "Equine Animals Legal Questions and Answers | US Legal, Inc."
+          },
+          {
+            "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+            "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+          },
+          {
+            "url": "https://www.hcrlaw.com/news-and-insights/thinking-buying-selling-horse-a-sale-agreement-may-protect-you-if-things-go-wrong/",
+            "title": "Thinking about buying or selling a horse? A sale agreement may protect you if things go wrong - HCR Law"
+          },
+          {
+            "url": "https://teeslaw.com/articles/equine-law-why-every-co-owner-needs-an-agreement/",
+            "title": "Equine Law: Why every co-owner needs an agreement - Tees Law"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://equinelegalsolutions.com/legal-landscape-of-horse-sales",
+          "title": "Legal Landscape of Horse Sales - Equine Legal Solutions"
+        },
+        {
+          "url": "https://answers.uslegal.com/animals/equine",
+          "title": "Equine Animals Legal Questions and Answers | US Legal, Inc."
+        },
+        {
+          "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+          "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+        },
+        {
+          "url": "https://www.hcrlaw.com/news-and-insights/thinking-buying-selling-horse-a-sale-agreement-may-protect-you-if-things-go-wrong/",
+          "title": "Thinking about buying or selling a horse? A sale agreement may protect you if things go wrong - HCR Law"
+        },
+        {
+          "url": "https://teeslaw.com/articles/equine-law-why-every-co-owner-needs-an-agreement/",
+          "title": "Equine Law: Why every co-owner needs an agreement - Tees Law"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-010\" data-revision=\"1\"><p><strong>Search question:</strong> Do I Need a Horse Sale Contract in North Carolina</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What equine legal issues should someone consider in Do I Need a Horse Sale Contract in North Carolina? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-012",
+      "panel_id": "qpanel-012",
+      "revision": 1,
+      "query": "What Should Be Included in a Training Agreement",
+      "target_page": "/boarding/what-should-be-included-in-a-training-agreement/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://equinelegalsolutions.com/whats-in-our-forms-training",
+            "title": "What Our Training Forms Include - Equine Legal Solutions"
+          },
+          {
+            "url": "https://www.horsenation.com/2015/05/14/equine-law-boarding-contracts/",
+            "title": "Equine Law: Boarding Contracts | HORSE NATION"
+          },
+          {
+            "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+            "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+          },
+          {
+            "url": "https://equinelegalsolutions.com/horse-training-agreement-contract",
+            "title": "Horse Training Agreement Contract | Equine Legal Template - Equine Legal Solutions"
+          },
+          {
+            "url": "https://equinelegalsolutions.com/horse-boarding-rights-and-responsibilities",
+            "title": "Horse Boarding Rights and Responsibilities - Equine Legal Solutions"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://equinelegalsolutions.com/whats-in-our-forms-training",
+          "title": "What Our Training Forms Include - Equine Legal Solutions"
+        },
+        {
+          "url": "https://www.horsenation.com/2015/05/14/equine-law-boarding-contracts/",
+          "title": "Equine Law: Boarding Contracts | HORSE NATION"
+        },
+        {
+          "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+          "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+        },
+        {
+          "url": "https://equinelegalsolutions.com/horse-training-agreement-contract",
+          "title": "Horse Training Agreement Contract | Equine Legal Template - Equine Legal Solutions"
+        },
+        {
+          "url": "https://equinelegalsolutions.com/horse-boarding-rights-and-responsibilities",
+          "title": "Horse Boarding Rights and Responsibilities - Equine Legal Solutions"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/boarding/what-should-be-included-in-a-training-agreement/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-012\" data-revision=\"1\"><p><strong>Search question:</strong> What Should Be Included in a Training Agreement</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What Should Be Included in a Training Agreement? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-013",
+      "panel_id": "qpanel-013",
+      "revision": 1,
+      "query": "How Serious Is a Legal Demand Letter",
+      "target_page": "/disputes/how-serious-is-a-legal-demand-letter/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/disputes/how-serious-is-a-legal-demand-letter/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-013\" data-revision=\"1\"><p><strong>Search question:</strong> How Serious Is a Legal Demand Letter</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: How Serious Is a Legal Demand Letter? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-014",
+      "panel_id": "qpanel-014",
+      "revision": 1,
+      "query": "I Bought a Horse and Something Is Wrong — What Now",
+      "target_page": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://thehorse.com/135876/i-bought-a-lame-horse-now-what/",
+            "title": "I Bought a Lame Horse: Now What? – The Horse"
+          },
+          {
+            "url": "https://thehorse.com/topics/blogs/horses-and-the-law",
+            "title": "Horses and the Law Archives - TheHorse.com"
+          },
+          {
+            "url": "https://thehorse.com/blogs/horses-and-the-law/",
+            "title": "Horses and the Law – The Horse"
+          },
+          {
+            "url": "https://www.browardpalmbeach.com/news/horse-traitor-noted-florida-equestrian-sued-for-fraud-in-wellington-horse-deal-6439037/",
+            "title": "Horse Traitor? Noted Florida Equestrian Sued for Fraud in Wellington Horse Deal | Broward Palm Beach New Times"
+          },
+          {
+            "url": "https://equinelegalsolutions.com/do-i-have-a-case/",
+            "title": "Do I Have a Horse-Related Legal Case? - Equine Legal Solutions"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://thehorse.com/135876/i-bought-a-lame-horse-now-what/",
+          "title": "I Bought a Lame Horse: Now What? – The Horse"
+        },
+        {
+          "url": "https://thehorse.com/topics/blogs/horses-and-the-law",
+          "title": "Horses and the Law Archives - TheHorse.com"
+        },
+        {
+          "url": "https://thehorse.com/blogs/horses-and-the-law/",
+          "title": "Horses and the Law – The Horse"
+        },
+        {
+          "url": "https://www.browardpalmbeach.com/news/horse-traitor-noted-florida-equestrian-sued-for-fraud-in-wellington-horse-deal-6439037/",
+          "title": "Horse Traitor? Noted Florida Equestrian Sued for Fraud in Wellington Horse Deal | Broward Palm Beach New Times"
+        },
+        {
+          "url": "https://equinelegalsolutions.com/do-i-have-a-case/",
+          "title": "Do I Have a Horse-Related Legal Case? - Equine Legal Solutions"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-014\" data-revision=\"1\"><p><strong>Search question:</strong> I Bought a Horse and Something Is Wrong — What Now</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Do not guess and do not escalate blindly. First pin down the exact problem, preserve the written record, and sort the issue into the right lane — sale, boarding, lease, liability, payment, care, business authority, or state-specific rule. What you do next should follow that triage, not panic.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-015",
+      "panel_id": "qpanel-015",
+      "revision": 1,
+      "query": "How Do I Legally Start a Horse Business",
+      "target_page": "/business/how-do-i-legally-start-a-horse-business/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/business/how-do-i-legally-start-a-horse-business/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-015\" data-revision=\"1\"><p><strong>Search question:</strong> How Do I Legally Start a Horse Business</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: How Do I Legally Start a Horse Business? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-016",
+      "panel_id": "qpanel-016",
+      "revision": 1,
+      "query": "What Is a Horse Trial Agreement",
+      "target_page": "/leases/what-is-a-horse-trial-agreement/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/leases/what-is-a-horse-trial-agreement/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-016\" data-revision=\"1\"><p><strong>Search question:</strong> What Is a Horse Trial Agreement</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What Is a Horse Trial Agreement? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-017",
+      "panel_id": "qpanel-017",
+      "revision": 1,
+      "query": "Do I Need a Contract to Buy a Horse",
+      "target_page": "/faq/do-i-need-a-contract-to-buy-a-horse/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/faq/do-i-need-a-contract-to-buy-a-horse/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-017\" data-revision=\"1\"><p><strong>Search question:</strong> Do I Need a Contract to Buy a Horse</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Do I Need a Contract to Buy a Horse? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-018",
+      "panel_id": "qpanel-018",
+      "revision": 1,
+      "query": "How Do I Protect My Horse Business Brand",
+      "target_page": "/ip/how-do-i-protect-my-horse-business-brand/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/ip/how-do-i-protect-my-horse-business-brand/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-018\" data-revision=\"1\"><p><strong>Search question:</strong> How Do I Protect My Horse Business Brand</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: How Do I Protect My Horse Business Brand? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-020",
+      "panel_id": "qpanel-020",
+      "revision": 1,
+      "query": "Can I Run a Horse Business Under My Lease",
+      "target_page": "/leases/can-i-run-a-horse-business-under-my-lease/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/leases/can-i-run-a-horse-business-under-my-lease/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-020\" data-revision=\"1\"><p><strong>Search question:</strong> Can I Run a Horse Business Under My Lease</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Can I Run a Horse Business Under My Lease? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-022",
+      "panel_id": "qpanel-022",
+      "revision": 1,
+      "query": "Am I Subject to HIPAA in Equine Therapy",
+      "target_page": "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-022\" data-revision=\"1\"><p><strong>Search question:</strong> Am I Subject to HIPAA in Equine Therapy</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What should someone know about am i subject to hipaa in equine therapy? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-024",
+      "panel_id": "qpanel-024",
+      "revision": 1,
+      "query": "Can I Ignore a Demand Letter",
+      "target_page": "/disputes/can-i-ignore-a-demand-letter/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/disputes/can-i-ignore-a-demand-letter/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-024\" data-revision=\"1\"><p><strong>Search question:</strong> Can I Ignore a Demand Letter</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Can I Ignore a Demand Letter? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-025",
+      "panel_id": "qpanel-025",
+      "revision": 1,
+      "query": "Did I Mess Up by Trusting a Handshake Deal",
+      "target_page": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-025\" data-revision=\"1\"><p><strong>Search question:</strong> Did I Mess Up by Trusting a Handshake Deal</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Do not guess and do not escalate blindly. First pin down the exact problem, preserve the written record, and sort the issue into the right lane — sale, boarding, lease, liability, payment, care, business authority, or state-specific rule. What you do next should follow that triage, not panic.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-026",
+      "panel_id": "qpanel-026",
+      "revision": 1,
+      "query": "What Legal Documents Do I Need for a Horse Business",
+      "target_page": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://extension.umn.edu/horse-ownership/understanding-equine-law",
+            "title": "Understanding equine law - University of Minnesota Extension"
+          },
+          {
+            "url": "https://thehorse.com/blogs/horses-and-the-law/",
+            "title": "Horses and the Law – The Horse"
+          },
+          {
+            "url": "https://equinelegalsolutions.com/running-an-equine-boarding-business",
+            "title": "Running an Equine Boarding Business - Equine Legal Solutions"
+          },
+          {
+            "url": "https://finance101.blog/how-to-start-horse-business-legal",
+            "title": "Horse Business Legal Steps & Licenses [Essential Guide] - Finance101.blog"
+          },
+          {
+            "url": "https://lawhorse.com/",
+            "title": "Equine Legal Documents to Download"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://extension.umn.edu/horse-ownership/understanding-equine-law",
+          "title": "Understanding equine law - University of Minnesota Extension"
+        },
+        {
+          "url": "https://thehorse.com/blogs/horses-and-the-law/",
+          "title": "Horses and the Law – The Horse"
+        },
+        {
+          "url": "https://equinelegalsolutions.com/running-an-equine-boarding-business",
+          "title": "Running an Equine Boarding Business - Equine Legal Solutions"
+        },
+        {
+          "url": "https://finance101.blog/how-to-start-horse-business-legal",
+          "title": "Horse Business Legal Steps & Licenses [Essential Guide] - Finance101.blog"
+        },
+        {
+          "url": "https://lawhorse.com/",
+          "title": "Equine Legal Documents to Download"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-026\" data-revision=\"1\"><p><strong>Search question:</strong> What Legal Documents Do I Need for a Horse Business</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What Legal Documents Do I Need for a Horse Business? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-027",
+      "panel_id": "qpanel-027",
+      "revision": 1,
+      "query": "Who Is Liable During a Horse Lease",
+      "target_page": "/leases/who-is-liable-during-a-horse-lease/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/leases/who-is-liable-during-a-horse-lease/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-027\" data-revision=\"1\"><p><strong>Search question:</strong> Who Is Liable During a Horse Lease</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Who Is Liable During a Horse Lease? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-029",
+      "panel_id": "qpanel-029",
+      "revision": 1,
+      "query": "Trademark vs LLC Name for a Horse Business",
+      "target_page": "/compare/trademark-vs-llc-name-horse-business/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/compare/trademark-vs-llc-name-horse-business/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-029\" data-revision=\"1\"><p><strong>Search question:</strong> Trademark vs LLC Name for a Horse Business</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: How should someone compare trademark and llc name for a horse business in an equine legal situation? are not interchangeable. Use the version that matches who controls the relationship, who carries the risk, what happens when the arrangement changes, and what you can actually prove in writing if the horse-world deal goes sideways.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-030",
+      "panel_id": "qpanel-030",
+      "revision": 1,
+      "query": "Can I Still Be Sued If I Have a Waiver",
+      "target_page": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-030\" data-revision=\"1\"><p><strong>Search question:</strong> Can I Still Be Sued If I Have a Waiver</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Can I Still Be Sued If I Have a Waiver? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    }
+  ]
 }

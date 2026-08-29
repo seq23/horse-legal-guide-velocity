@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-29T14:57:25.066Z",
+  "generated_at": "2026-08-29T15:04:25.533Z",
   "providers": {
     "openrouter_web_search": {
-      "state": "DEGRADED",
+      "state": "CONNECTED",
       "configured": true,
       "role": "primary_citation_observer",
       "capabilities": {
@@ -13,7 +13,7 @@
       }
     },
     "gemini_grounded_search": {
-      "state": "DEGRADED",
+      "state": "DISCONNECTED",
       "configured": true,
       "role": "fallback_citation_observer",
       "note": "Grounded google_search tool use returns 429 RESOURCE_EXHAUSTED on this project; plain generateContent returns 200.",
@@ -24,30 +24,8 @@
       }
     },
     "live_query_observer": {
-      "state": "DEGRADED",
-      "stop": {
-        "reason": "SEARCH_PROVIDER_BILLING_OR_QUOTA_BLOCKED",
-        "detail": "30 panel queries attempted against openrouter_web_search, gemini_google_search_grounding; every attempt was refused by the provider account, not by the integration: openrouter_web_search HTTP 402; gemini_google_search_grounding HTTP 429.",
-        "owner_held": true,
-        "owner_action": "openrouter_web_search HTTP 402: the account is out of credits - add credits (OpenRouter: https://openrouter.ai/settings/credits) | gemini_google_search_grounding HTTP 429: the account quota or rate limit is exhausted - raise the quota or wait for the window to reset",
-        "provider_statuses": [
-          {
-            "provider": "openrouter_web_search",
-            "http_status": 402,
-            "owner_held": true,
-            "attempts": 30,
-            "sample_error": "402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.\"}}}"
-          },
-          {
-            "provider": "gemini_google_search_grounding",
-            "http_status": 429,
-            "owner_held": true,
-            "attempts": 30,
-            "sample_error": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    "
-          }
-        ],
-        "first_error": "openrouter_web_search: 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.\"}}} | gemini_google_search_grounding: 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quota"
-      },
+      "state": "CONNECTED",
+      "stop": null,
       "primary_provider": "openrouter_web_search",
       "capabilities": {
         "live_web": true,
