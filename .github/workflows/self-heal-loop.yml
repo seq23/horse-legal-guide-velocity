@@ -1,0 +1,86 @@
+name: Self-Heal Loop
+
+# heal_until_clean.js runs every step of validate:all in collect-all mode, runs
+# only the repairs declared for the steps that actually failed, and re-validates.
+# It was correct and it repaired real breakage when tested - but nothing invoked
+# it, so the repairs never happened anywhere but on a developer's laptop. This is
+# the lane that reaches it.
+#
+# Publishing safety: --allow-content is deliberately NOT passed. Only the
+# non-content repairs run here (build, normalize:signals, query:rebuild,
+# search:prepare-repairs) - all deterministic regeneration of data artifacts.
+# Drafts stay with the approval lane in Admin Bulk Content Actions, and no
+# published page is touched.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_attempts:
+        description: "Repair attempts before giving up (default 3)"
+        required: false
+        default: "3"
+  schedule:
+    - cron: "41 12 * * *"
+
+permissions:
+  contents: write
+
+# Shared with every other workflow that writes to main, so a self-heal commit can
+# never race a draft-refresh or admin commit. Never cancel in progress: a
+# half-applied repair is worse than a late one.
+concurrency:
+  group: horse-legal-guide-main-writer
+  cancel-in-progress: false
+
+jobs:
+  self-heal:
+    runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      CANONICAL_DOMAIN: https://wisecovington.com
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
+      GSC_SITE_URL: sc-domain:horselegalguide.com
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - name: Install
+        run: npm ci
+
+      # Detect, repair, re-validate. Exits non-zero when anything is still
+      # failing after the attempt budget, so an unrepairable break stays visible
+      # instead of being absorbed by a green run.
+      - name: Run self-heal loop
+        id: heal
+        run: npm run selfheal -- --max=${{ github.event.inputs.max_attempts || '3' }}
+
+      # Runs even when the loop exits non-zero: an UNRESOLVED report is the most
+      # useful artifact this workflow produces.
+      - name: Upload self-heal report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: self-heal-loop-report
+          path: _ops/reports/self-heal-loop.json
+          if-no-files-found: error
+
+      - name: Guard the loop contract
+        if: always()
+        run: npm run validate:self-heal-loop
+
+      # Without this the repairs die with the runner and the next scheduled run
+      # repairs exactly the same breakage again.
+      - name: Commit repaired artifacts
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data dist .build _ops/reports reports
+          if git diff --cached --quiet; then
+            echo "Self-heal loop: nothing to repair - no artifact changed."
+          else
+            git commit -m "Self-heal loop: regenerate artifacts that failed validation"
+            git push
+          fi

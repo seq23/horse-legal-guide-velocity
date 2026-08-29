@@ -1,0 +1,24 @@
+{
+  "workflow": "self-heal-loop.yml",
+  "path": ".github/workflows/self-heal-loop.yml",
+  "workflow_key": "self_heal_loop",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/self-heal-loop.yml",
+  "purpose": "scheduled detect-repair-revalidate loop; regenerates failing data artifacts, never touches drafts or published pages",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run selfheal",
+    "npm run validate:self-heal-loop"
+  ],
+  "artifacts_checked": [
+    "_ops/selfheal/heal_until_clean.js",
+    "_ops/validators/validate_self_heal_loop.js",
+    "_ops/reports/self-heal-loop.json"
+  ],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-08-29T15:12:12.000Z",
+  "finished_at": "2026-08-29T15:12:12.000Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}

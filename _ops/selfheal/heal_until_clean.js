@@ -55,12 +55,37 @@ const REPAIRS = {
 // editorial, faq-opening, compare/scenario contracts) need words written, and
 // this repo's published content is frozen by agreement.
 
-const steps = (() => {
-  const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8'));
-  return pkg.scripts['validate:all'].split('&&')
-    .map((s) => s.trim().replace(/^npm run /, ''))
-    .filter(Boolean);
-})();
+const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8'));
+
+// validate:all contains aggregate scripts - validate:content-ops is itself a
+// chain of six checks. Without expanding them, a failure inside an aggregate is
+// only ever attributed to the aggregate, and a repair declared for the inner
+// check can never fire: the loop looks up 'validate:content-ops', finds no
+// declared repair, and stops. That made the content:self-heal pairing inert by
+// construction. Expanding one aggregate into its parts restores attribution to
+// the step whose artifact the repair actually writes.
+const expand = (script, seen = new Set()) => {
+  const body = pkg.scripts[script];
+  if (!body || seen.has(script)) return [script];
+  const parts = body.split('&&').map((s) => s.trim()).filter(Boolean);
+  // Only expand a pure chain of npm scripts; anything else is a real command
+  // and stays a single step.
+  if (parts.length < 2 || !parts.every((p) => /^npm (run [\w:@._-]+|test)$/.test(p))) return [script];
+  const next = new Set(seen).add(script);
+  return parts.flatMap((p) => expand(p === 'npm test' ? 'npm test' : p.replace(/^npm run /, ''), next));
+};
+
+const steps = [...new Set(
+  pkg.scripts['validate:all'].split('&&')
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .flatMap((s) => (s === 'npm test' ? ['npm test'] : expand(s.replace(/^npm run /, ''))))
+)];
+
+if (!steps.length) {
+  console.error('self-heal: validate:all resolved to zero steps - refusing to report a clean tree it never checked.');
+  process.exit(1);
+}
 
 const args = new Set(process.argv.slice(2));
 const DRY = args.has('--dry-run');
