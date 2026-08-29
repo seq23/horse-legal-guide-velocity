@@ -6,7 +6,8 @@ function exists(rel) { return fs.existsSync(path.resolve(process.cwd(), rel)); }
 const workflow = '.github/workflows/approved-content-email.yml';
 const script = 'scripts/social/send_approved_content_email.py';
 const state = 'data/social/approved_content_email_state.json';
-for (const rel of [workflow, script, state]) if (!exists(rel)) fail(`${rel} missing`);
+const gate = 'scripts/social/email_credential_gate.mjs';
+for (const rel of [workflow, script, state, gate]) if (!exists(rel)) fail(`${rel} missing`);
 if (exists(workflow)) {
   const yaml = read(workflow);
   for (const phrase of [
@@ -21,9 +22,22 @@ if (exists(workflow)) {
     'secrets.SMTP_USERNAME',
     'secrets.SMTP_PASSWORD',
     'secrets.SMTP_FROM',
-    'approved-content-email-preview'
+    'approved-content-email-preview',
+    // The lane must gate delivery on the owner-held credential and say so by
+    // name, never fail red for a secret nobody but the owner can supply, and
+    // never quietly skip: the preview is still generated on the gated branch.
+    'scripts/social/email_credential_gate.mjs',
+    'EMAIL_DELIVERY_DISABLED_MISSING_CREDENTIAL',
+    "steps.email_gate.outputs.can_send == 'true'",
+    "steps.email_gate.outputs.can_send != 'true'"
   ]) {
     if (!yaml.includes(phrase)) fail(`${workflow} missing phrase: ${phrase}`);
+  }
+}
+if (exists(gate)) {
+  const src = read(gate);
+  for (const phrase of ['SMTP_PASSWORD', 'can_send', 'EMAIL_DELIVERY_DISABLED_MISSING_CREDENTIAL', 'process.exit(0)']) {
+    if (!src.includes(phrase)) fail(`${gate} missing phrase: ${phrase}`);
   }
 }
 if (exists(script)) {
