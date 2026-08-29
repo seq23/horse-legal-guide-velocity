@@ -54,14 +54,14 @@
         "institutional_share": 0.2,
         "distinct_cited_hosts": 5,
         "cited_hosts": [
-          "legaltemplates.net",
           "cms.agr.wa.gov",
-          "madbarn.com",
+          "legaltemplates.net",
           "esign.com",
-          "usef.org"
+          "usef.org",
+          "madbarn.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -114,12 +114,12 @@
         "distinct_cited_hosts": 4,
         "cited_hosts": [
           "legaltemplates.net",
-          "madbarn.com",
           "document.com",
+          "madbarn.com",
           "esign.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -178,12 +178,12 @@
         "cited_hosts": [
           "buffalo.extension.wisc.edu",
           "extension.umd.edu",
-          "barstowcontracts.com",
           "jotform.com",
+          "barstowcontracts.com",
           "speedytemplate.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -231,7 +231,7 @@
           "amuletteequestriancenter.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -280,7 +280,7 @@
           "amuletteequestriancenter.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -332,13 +332,13 @@
         "distinct_cited_hosts": 5,
         "cited_hosts": [
           "equineworld.co.uk",
-          "madbarn.com",
           "img1.wsimg.com",
-          "ehorses.com",
-          "equinelegalsolutions.com"
+          "madbarn.com",
+          "equinelegalsolutions.com",
+          "ehorses.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -381,7 +381,7 @@
           "wardandsmith.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -418,13 +418,13 @@
         "distinct_cited_hosts": 5,
         "cited_hosts": [
           "equinelawyer.com",
-          "americanbar.org",
+          "equinelawblog.com",
           "equilawllc.com",
-          "stites.com",
-          "fosterswift.com"
+          "equinelawuk.co.uk",
+          "americanbar.org"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -460,14 +460,14 @@
         "institutional_share": 0,
         "distinct_cited_hosts": 5,
         "cited_hosts": [
-          "upcounsel.com",
           "legalclarity.org",
           "pandadoc.com",
           "foroes.net",
+          "targetcapitalaccount.com",
           "legalshield.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -505,13 +505,13 @@
         "distinct_cited_hosts": 5,
         "cited_hosts": [
           "useventing.com",
-          "kewlegal.com",
+          "ncleg.net",
           "texasbarsections.com",
           "aglaw.psu.edu",
           "law.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -540,27 +540,26 @@
       "lead_intent_tier": "T4_INFORMATIONAL",
       "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
       "occupancy": {
-        "verdict": "CONTESTED",
+        "verdict": "OPEN",
         "reason": "GROUNDED_CITATION_OBSERVATION",
-        "openness_score": 0.5,
-        "platform_share": 0,
+        "openness_score": 0.625,
+        "platform_share": 0.25,
         "institutional_share": 0,
-        "distinct_cited_hosts": 5,
+        "distinct_cited_hosts": 4,
         "cited_hosts": [
           "equinelawyer.com",
           "equilawllc.com",
-          "stites.com",
-          "equinelawuk.co.uk",
-          "equuslaw.com"
+          "linkedin.com",
+          "stites.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
       "blue_ocean_eligible": {
         "eligible": true,
-        "reason": "CONTESTED"
+        "reason": "OPEN_WITH_ANCHORED_OBSERVATION"
       }
     },
     {
@@ -596,7 +595,7 @@
           "teperlegal.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -630,15 +629,16 @@
         "openness_score": 0.5,
         "platform_share": 0,
         "institutional_share": 0,
-        "distinct_cited_hosts": 4,
+        "distinct_cited_hosts": 5,
         "cited_hosts": [
+          "equineworld.co.uk",
           "ehorses.com",
-          "equinelegalsolutions.com",
           "madbarn.com",
-          "img1.wsimg.com"
+          "img1.wsimg.com",
+          "equinelegalsolutions.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -672,16 +672,15 @@
         "openness_score": 0.5,
         "platform_share": 0,
         "institutional_share": 0,
-        "distinct_cited_hosts": 5,
+        "distinct_cited_hosts": 4,
         "cited_hosts": [
-          "madbarn.com",
           "ehorses.com",
+          "madbarn.com",
           "equineworld.co.uk",
-          "netlawman.com.au",
-          "rotherabray.co.uk"
+          "netlawman.com.au"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -719,11 +718,11 @@
         "cited_hosts": [
           "legalclarity.org",
           "equestriantherapy.com",
-          "amerihealthcaritasla.com",
-          "damorementalhealth.com"
+          "damorementalhealth.com",
+          "amerihealthcaritasla.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -759,14 +758,14 @@
         "institutional_share": 0,
         "distinct_cited_hosts": 5,
         "cited_hosts": [
-          "upcounsel.com",
           "legalclarity.org",
+          "upcounsel.com",
           "waiversign.com",
           "lexisnexis.co.uk",
-          "consumershield.com"
+          "oeblawtn.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -801,15 +800,16 @@
         "openness_score": 0.5,
         "platform_share": 0,
         "institutional_share": 0,
-        "distinct_cited_hosts": 4,
+        "distinct_cited_hosts": 5,
         "cited_hosts": [
-          "equilawllc.com",
-          "fosterswift.com",
-          "equinelegalsolutions.com",
-          "rotherabray.co.uk"
+          "equinelawuk.co.uk",
+          "bhs.org.uk",
+          "birketts.co.uk",
+          "teeslaw.com",
+          "jacksons.law"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -843,14 +843,13 @@
         "openness_score": 0.5,
         "platform_share": 0,
         "institutional_share": 0,
-        "distinct_cited_hosts": 3,
+        "distinct_cited_hosts": 2,
         "cited_hosts": [
           "gueronnierelaw.com",
-          "zwpfirm.com",
-          "equinelawyer.com"
+          "zwpfirm.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -888,12 +887,12 @@
         "cited_hosts": [
           "lacykimballlaw.com",
           "madbarn.com",
-          "aria-grace.com",
           "miequinelaw.com",
-          "theselectonline.com"
+          "equusfoundation.org",
+          "equinelegalsolutions.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -931,12 +930,12 @@
         "cited_hosts": [
           "yeovilhistory.info",
           "streetlist.co.uk",
-          "oed.com",
+          "cqc.org.uk",
           "tfl.gov.uk",
           "wehd.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -965,27 +964,27 @@
       "lead_intent_tier": "T4_INFORMATIONAL",
       "lead_intent_method": "regex_classifier_on_query_string, scripts/queries/score_discovery_gap.mjs",
       "occupancy": {
-        "verdict": "HELD",
+        "verdict": "CONTESTED",
         "reason": "GROUNDED_CITATION_OBSERVATION",
-        "openness_score": 0.3,
+        "openness_score": 0.4,
         "platform_share": 0,
-        "institutional_share": 0.4,
+        "institutional_share": 0.2,
         "distinct_cited_hosts": 5,
         "cited_hosts": [
-          "jacksons.law",
+          "lexology.com",
           "ecf.ksd.uscourts.gov",
+          "franklinlaw.co.nz",
           "equilegal.com.au",
-          "pureequine.com.au",
-          "wicourts.gov"
+          "hrjforemanlaws.co.uk"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
       "blue_ocean_eligible": {
         "eligible": true,
-        "reason": "HELD"
+        "reason": "CONTESTED"
       }
     },
     {
@@ -1013,15 +1012,16 @@
         "openness_score": 0.5,
         "platform_share": 0,
         "institutional_share": 0,
-        "distinct_cited_hosts": 4,
+        "distinct_cited_hosts": 5,
         "cited_hosts": [
-          "madbarn.com",
           "ehorses.com",
-          "miequinelaw.com",
-          "aria-grace.com"
+          "madbarn.com",
+          "equineworld.co.uk",
+          "netlawman.com.au",
+          "miequinelaw.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -1058,13 +1058,13 @@
         "distinct_cited_hosts": 5,
         "cited_hosts": [
           "usef.org",
-          "equestriancounsel.com",
           "equinelaw.alisonrowelaw.com",
+          "equestriancounsel.com",
           "equinelegalsolutions.com",
-          "equusfoundation.org"
+          "horsesport.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -1100,14 +1100,14 @@
         "institutional_share": 0,
         "distinct_cited_hosts": 5,
         "cited_hosts": [
-          "scottbailey.co.uk",
+          "rcvs.org.uk",
           "hrjforemanlaws.co.uk",
-          "ruthgodfrey.co.uk",
-          "vetmediation.co.uk",
-          "cvbc.ca"
+          "jacksons.law",
+          "scottbailey.co.uk",
+          "rwkgoodman.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -1145,12 +1145,12 @@
         "cited_hosts": [
           "hrjforemanlaws.co.uk",
           "jacksons.law",
-          "blackstonesolicitorsltd.co.uk",
-          "ashfords.co.uk",
-          "scottbailey.co.uk"
+          "gueronnierelaw.com",
+          "scottbailey.co.uk",
+          "case-law.vlex.com"
         ],
         "cited_ours": [],
-        "observed_at": "2026-08-29T15:18:34.636Z",
+        "observed_at": "2026-08-29T21:25:12.439Z",
         "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
         "stale": false
       },
@@ -2920,7 +2920,7 @@
     "precedent": "Follows portfolio_demand.json (portfolio-demand-v1), which separated volume_mo from demand_signal/demand_signal_unit for this same defect."
   },
   "discovery_gap_pass": {
-    "at": "2026-08-29T15:23:48.057Z",
+    "at": "2026-08-29T21:30:22.818Z",
     "by": "scripts/queries/score_discovery_gap.mjs",
     "why": "62 measured queries carried demand and nothing else. Demand says how many people ask; it does not say whether the answer is winnable or whether the asker is near a form. Both of those are now recorded.",
     "expansion_sources": [
@@ -2973,7 +2973,7 @@
     },
     "counts": {
       "total_queries": 65,
-      "added_this_pass": 3,
+      "added_this_pass": 0,
       "with_openness_reading": 62,
       "carried_forward_stale": 37,
       "blue_ocean_eligible": 48,
