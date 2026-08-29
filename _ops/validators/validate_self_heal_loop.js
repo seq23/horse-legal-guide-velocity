@@ -52,6 +52,24 @@ if (workflow) {
   if (!/workflow_dispatch:/.test(workflow)) fail(`${WORKFLOW} cannot be dispatched by hand`);
   // The loop only earns its keep if its repairs survive the run.
   if (!/git (commit|push)/.test(workflow)) fail(`${WORKFLOW} never commits, so any repair it makes is discarded with the runner`);
+
+  // ...but it must not commit when it repaired nothing. Every run rebuilds, and
+  // the build stamps generated_at into ~537 manifests, so the tree is always
+  // dirty. Gating the commit on `git diff --cached` alone made two production
+  // runs commit pure timestamp churn under a message claiming repairs. The
+  // report - which names the repairs that actually ran - has to be the gate.
+  if (!/self-heal-loop\.json/.test(workflow)) {
+    fail(`${WORKFLOW} does not read the loop's report before committing; gating on the working tree alone commits build timestamp churn as though it were a repair`);
+  }
+  if (!/a\.ran|\.ran\b/.test(workflow)) {
+    fail(`${WORKFLOW} does not gate its commit on whether a repair actually ran`);
+  }
+  if (/git commit -m ["'][^"']*regenerate artifacts that failed validation/.test(workflow)) {
+    fail(`${WORKFLOW} uses a fixed commit message that claims a repair regardless of what happened - name the repaired steps instead`);
+  }
+  if (!/nothing to repair/.test(workflow)) {
+    fail(`${WORKFLOW} has no named "nothing to repair" outcome - a run that repaired nothing must say so rather than going quiet`);
+  }
   if (!/--allow-content/.test(workflow) && !/content-affecting/.test(workflow)) {
     // Not a failure: running without --allow-content is the safe default for a
     // client repo whose drafts need human approval. Recorded so the omission is

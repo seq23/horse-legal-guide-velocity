@@ -72,15 +72,37 @@ jobs:
 
       # Without this the repairs die with the runner and the next scheduled run
       # repairs exactly the same breakage again.
+      # The commit is gated on the loop's own report, NOT on `git diff --cached`.
+      # Every run re-runs the build, and the build stamps generated_at into ~537
+      # manifests, so the working tree is ALWAYS dirty - gating on the diff made
+      # the lane commit timestamp churn under a message claiming repairs it had
+      # not made. Two runs did exactly that (32c9561, 42859a9: 537 files, every
+      # hunk a generated_at bump, on runs whose report said "0 failing steps").
+      # A commit message that lies about a repair is the same defect class this
+      # whole lane exists to remove, so the report decides.
       - name: Commit repaired artifacts
         if: always()
         run: |
+          REPAIRED=$(node -e '
+            try {
+              const r = require("./_ops/reports/self-heal-loop.json");
+              const ran = (r.attempts || []).flatMap((a) => a.actions || []).filter((a) => a.ran);
+              console.log(ran.length ? ran.map((a) => a.step).join(", ") : "");
+            } catch { console.log(""); }
+          ')
+          if [ -z "$REPAIRED" ]; then
+            # Named stop. Discard the build's timestamp churn so a run that
+            # repaired nothing leaves no trace claiming otherwise.
+            echo "Self-heal loop: nothing to repair - no repair ran, so nothing is committed."
+            git checkout -- . || true
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A data dist .build _ops/reports reports
           if git diff --cached --quiet; then
-            echo "Self-heal loop: nothing to repair - no artifact changed."
-          else
-            git commit -m "Self-heal loop: regenerate artifacts that failed validation"
-            git push
+            echo "Self-heal loop: repairs ran for [$REPAIRED] but changed no tracked artifact."
+            exit 0
           fi
+          git commit -m "Self-heal loop: repaired ${REPAIRED}"
+          git push
