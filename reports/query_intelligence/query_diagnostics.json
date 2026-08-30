@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-29T21:44:36.435Z",
+  "generated_at": "2026-08-30T14:27:35.388Z",
   "truth_boundary": "A missing grounded observation is not proof of deindexing. GSC owned-site data and external grounded observations are recorded separately.",
   "summary": {
     "queries": 30,
-    "observed": 22,
-    "missing": 8,
+    "observed": 23,
+    "missing": 7,
     "wrong_page": 0,
     "cannibalization": 0,
     "unknown": 0
@@ -140,12 +140,10 @@
       "query": "Do I Need an LLC to Start a Horse Business",
       "cluster": "equine-business-formation",
       "target_page": "/business/do-i-need-an-llc-to-start-a-horse-business/",
-      "state": "MISSING",
-      "reasons": [
-        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
-      ],
+      "state": "OBSERVED",
+      "reasons": [],
       "evidence": {
-        "grounded_site_surfaced": false,
+        "grounded_site_surfaced": true,
         "gsc_impressions": 0,
         "gsc_clicks": 0,
         "gsc_average_position": 0,
@@ -153,7 +151,7 @@
         "competitor_urls": [],
         "bing_connected": false
       },
-      "next_action": "PREPARE_OWNER_REVIEW_REPAIR"
+      "next_action": "OBSERVE"
     },
     {
       "panel_id": "qpanel-005",
@@ -189,8 +187,8 @@
             "title": "What Our Horse Lease Forms Include - Equine Legal Solutions"
           },
           {
-            "url": "https://www.gueronnierelaw.com/equine-leasing-contracts-ensuring-fairness-and-clarity-for-all-parties",
-            "title": "Equine Leasing Contracts: Ensuring Fairness and Clarity for All Parties"
+            "url": "https://ctllawyers.com/blog/equine-lease-agreements-what-you-need-to-know",
+            "title": "Equine Lease Agreements: What You Need to Know"
           }
         ],
         "bing_connected": false
@@ -266,8 +264,8 @@
             "title": "Liability Laws for Equine Professionals and Horse Activity Businesses"
           },
           {
-            "url": "https://equine.uslegal.com/",
-            "title": "Equine – An USLegal Topic Area"
+            "url": "https://nationalaglawcenter.org/state-compilations/equineactivity/",
+            "title": "Equine Activity Statutes"
           }
         ],
         "bing_connected": false
@@ -299,8 +297,7 @@
       "target_page": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
       "state": "MISSING",
       "reasons": [
-        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
-        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
       ],
       "evidence": {
         "grounded_site_surfaced": false,
@@ -309,10 +306,6 @@
         "gsc_average_position": 0,
         "gsc_pages": [],
         "competitor_urls": [
-          {
-            "url": "https://equinelegalsolutions.com/legal-landscape-of-horse-sales",
-            "title": "Legal Landscape of Horse Sales - Equine Legal Solutions"
-          },
           {
             "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
             "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
@@ -328,6 +321,10 @@
           {
             "url": "https://teeslaw.com/articles/equine-law-why-every-co-owner-needs-an-agreement/",
             "title": "Equine Law: Why every co-owner needs an agreement - Tees Law"
+          },
+          {
+            "url": "https://thehorse.com/blogs/horses-and-the-law/",
+            "title": "Horses and the Law – The Horse"
           }
         ],
         "bing_connected": false
@@ -359,16 +356,16 @@
             "title": "Equine – An USLegal Topic Area"
           },
           {
+            "url": "https://equineguidance.com/eagala-certification-how-to-start-equine-therapy-training/",
+            "title": "EAGALA Certification: How to Start Equine Therapy Training"
+          },
+          {
+            "url": "https://nationalaglawcenter.org/state-compilations/equineactivity/",
+            "title": "Equine Activity Statutes"
+          },
+          {
             "url": "https://answers.uslegal.com/animals/equine",
             "title": "Equine Animals Legal Questions and Answers | US Legal, Inc."
-          },
-          {
-            "url": "https://www.equestriantherapy.com/guides/",
-            "title": "Equine Therapy Guides: Programs, Costs, and Care"
-          },
-          {
-            "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
-            "title": "Detailed Discussion of the Equine Activity Liability Act | Animal Legal & Historical Center"
           }
         ],
         "bing_connected": false
@@ -563,7 +560,7 @@
         "gsc_pages": [],
         "competitor_urls": [
           {
-            "url": "https://mca.legmt.gov/bills/2001/mca/27/1/27-1-727.htm",
+            "url": "https://mca.legmt.gov/bills/1995/mca/27/1/27-1-727.htm",
             "title": "27-1-727. Equine activity liability limitations."
           },
           {
@@ -626,20 +623,20 @@
             "title": "NC General Statutes - Chapter 99E Article 1"
           },
           {
+            "url": "https://www.ncleg.net/enactedlegislation/statutes/pdf/bychapter/chapter_99e.pdf",
+            "title": "N.C. General Statutes Chapter 99E"
+          },
+          {
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_99E/GS_99E-8.pdf",
+            "title": "G.S. 99E-8 - North Carolina General Assembly"
+          },
+          {
             "url": "https://law.justia.com/codes/north-carolina/chapter-99e/article-1/",
             "title": "North Carolina Equine and Farm Animal Activity Liability. :: Article 1 - Equine and Farm Animal Activity Liability. :: 2025 North Carolina General Statutes :: U.S. Codes and Statutes :: U.S. Law :: Justia"
           },
           {
             "url": "https://law.justia.com/codes/north-carolina/2005/chapter_99e/article_1.html",
             "title": "North Carolina General Statutes Article 1 - Equine Activity Liability. :: Chapter 99E — Special Liability Provisions. :: 2005 North Carolina Code :: North Carolina Code :: U.S. Codes and Statutes :: U.S. Law :: Justia"
-          },
-          {
-            "url": "https://www.animallaw.info/content/map-equine-activity-liability-statutes",
-            "title": "Map of Equine Activity Liability Statutes | Animal Legal & Historical Center"
-          },
-          {
-            "url": "https://nationalaglawcenter.org/state-compilations/equineactivity",
-            "title": "Equine Activity Statutes"
           }
         ],
         "bing_connected": false
@@ -697,8 +694,8 @@
             "title": "Understanding equine law - University of Minnesota Extension"
           },
           {
-            "url": "https://equinelegalsolutions.com/horse-boarding-rights-and-responsibilities",
-            "title": "Horse Boarding Rights and Responsibilities - Equine Legal Solutions"
+            "url": "https://www.horseillustrated.com/common-legal-issues-in-the-horse-world/",
+            "title": "Common Legal Issues in the Horse World - Horse Illustrated"
           }
         ],
         "bing_connected": false
@@ -767,16 +764,16 @@
             "title": "Horses and the Law – The Horse"
           },
           {
+            "url": "https://claybornewagner.com/equine-law/starting-an-equine-business",
+            "title": "Starting an Equine Business: Formation and Structure"
+          },
+          {
+            "url": "http://equinebusinesslaw.com/",
+            "title": "Equestrian Sports Law"
+          },
+          {
             "url": "https://equinelegalsolutions.com/running-an-equine-boarding-business",
             "title": "Running an Equine Boarding Business - Equine Legal Solutions"
-          },
-          {
-            "url": "https://lawhorse.com/",
-            "title": "Equine Legal Documents to Download"
-          },
-          {
-            "url": "https://finance101.blog/how-to-start-horse-business-legal",
-            "title": "Horse Business Legal Steps & Licenses [Essential Guide] - Finance101.blog"
           }
         ],
         "bing_connected": false
