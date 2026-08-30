@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-29T15:18:22.713Z",
+  "generated_at": "2026-08-29T21:44:36.435Z",
   "truth_boundary": "A missing grounded observation is not proof of deindexing. GSC owned-site data and external grounded observations are recorded separately.",
   "summary": {
     "queries": 30,
-    "observed": 20,
-    "missing": 10,
+    "observed": 22,
+    "missing": 8,
     "wrong_page": 0,
     "cannibalization": 0,
     "unknown": 0
@@ -59,8 +59,7 @@
       "target_page": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
       "state": "MISSING",
       "reasons": [
-        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
-        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
       ],
       "evidence": {
         "grounded_site_surfaced": false,
@@ -69,10 +68,6 @@
         "gsc_average_position": 0,
         "gsc_pages": [],
         "competitor_urls": [
-          {
-            "url": "https://www.horseillustrated.com/common-legal-issues-in-the-horse-world/",
-            "title": "Common Legal Issues in the Horse World - Horse Illustrated"
-          },
           {
             "url": "https://www.equinelegalconsultancy.com/",
             "title": "Equine Legal Consultancy | Your Legal Guide in the Equine World"
@@ -88,6 +83,10 @@
           {
             "url": "https://www.fosterswift.com/services/General-Litigation-Trial-Practice/Equine-Law-Attorneys-Horse-Lawyers",
             "title": "Equine Law | Horse Attorneys, Lawyers | Equine Legal Advice | Litigation | Foster Swift"
+          },
+          {
+            "url": "https://mylawcle.com/products/equine-law-essentials-liability-business-protection-and-growth-strategies-2026-edition/",
+            "title": "Equine Law Essentials: Liability, Business Protection, and Growth Strategies (2026 Edition) | myLawCLE"
           }
         ],
         "bing_connected": false
@@ -124,12 +123,12 @@
             "title": "Horses and the Law: Buying and Selling Your Horses — TryonEquineLaw.com"
           },
           {
-            "url": "https://kewlegal.com/equine-law",
-            "title": "Understanding Equine Law: Liability Statutes, Horse Contracts, and Legal Protection for Owners - KEW Legal®"
-          },
-          {
             "url": "https://attwoodmarshall.com.au/equine-law-qa",
             "title": "Equine Law Q&A – What should the equine community consider | Attwood Marshall Lawyers"
+          },
+          {
+            "url": "https://kewlegal.com/equine-law",
+            "title": "Understanding Equine Law: Liability Statutes, Horse Contracts, and Legal Protection for Owners - KEW Legal®"
           }
         ],
         "bing_connected": false
@@ -141,10 +140,12 @@
       "query": "Do I Need an LLC to Start a Horse Business",
       "cluster": "equine-business-formation",
       "target_page": "/business/do-i-need-an-llc-to-start-a-horse-business/",
-      "state": "OBSERVED",
-      "reasons": [],
+      "state": "MISSING",
+      "reasons": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
       "evidence": {
-        "grounded_site_surfaced": true,
+        "grounded_site_surfaced": false,
         "gsc_impressions": 0,
         "gsc_clicks": 0,
         "gsc_average_position": 0,
@@ -152,7 +153,7 @@
         "competitor_urls": [],
         "bing_connected": false
       },
-      "next_action": "OBSERVE"
+      "next_action": "PREPARE_OWNER_REVIEW_REPAIR"
     },
     {
       "panel_id": "qpanel-005",
@@ -362,12 +363,12 @@
             "title": "Equine Animals Legal Questions and Answers | US Legal, Inc."
           },
           {
-            "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
-            "title": "Detailed Discussion of the Equine Activity Liability Act | Animal Legal & Historical Center"
+            "url": "https://www.equestriantherapy.com/guides/",
+            "title": "Equine Therapy Guides: Programs, Costs, and Care"
           },
           {
-            "url": "https://thehorse.com/blogs/horses-and-the-law/",
-            "title": "Horses and the Law – The Horse"
+            "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
+            "title": "Detailed Discussion of the Equine Activity Liability Act | Animal Legal & Historical Center"
           }
         ],
         "bing_connected": false
@@ -421,12 +422,10 @@
       "query": "How Serious Is a Legal Demand Letter",
       "cluster": "demand-letters-and-disputes",
       "target_page": "/disputes/how-serious-is-a-legal-demand-letter/",
-      "state": "MISSING",
-      "reasons": [
-        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
-      ],
+      "state": "OBSERVED",
+      "reasons": [],
       "evidence": {
-        "grounded_site_surfaced": false,
+        "grounded_site_surfaced": true,
         "gsc_impressions": 0,
         "gsc_clicks": 0,
         "gsc_average_position": 0,
@@ -434,7 +433,7 @@
         "competitor_urls": [],
         "bing_connected": false
       },
-      "next_action": "PREPARE_OWNER_REVIEW_REPAIR"
+      "next_action": "OBSERVE"
     },
     {
       "panel_id": "qpanel-014",
@@ -627,20 +626,20 @@
             "title": "NC General Statutes - Chapter 99E Article 1"
           },
           {
-            "url": "https://www.ncleg.net/enactedlegislation/statutes/pdf/bychapter/chapter_99e.pdf",
-            "title": "N.C. General Statutes Chapter 99E"
-          },
-          {
-            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_99E/GS_99E-8.pdf",
-            "title": "G.S. 99E-8 - North Carolina General Assembly"
-          },
-          {
             "url": "https://law.justia.com/codes/north-carolina/chapter-99e/article-1/",
             "title": "North Carolina Equine and Farm Animal Activity Liability. :: Article 1 - Equine and Farm Animal Activity Liability. :: 2025 North Carolina General Statutes :: U.S. Codes and Statutes :: U.S. Law :: Justia"
           },
           {
             "url": "https://law.justia.com/codes/north-carolina/2005/chapter_99e/article_1.html",
             "title": "North Carolina General Statutes Article 1 - Equine Activity Liability. :: Chapter 99E — Special Liability Provisions. :: 2005 North Carolina Code :: North Carolina Code :: U.S. Codes and Statutes :: U.S. Law :: Justia"
+          },
+          {
+            "url": "https://www.animallaw.info/content/map-equine-activity-liability-statutes",
+            "title": "Map of Equine Activity Liability Statutes | Animal Legal & Historical Center"
+          },
+          {
+            "url": "https://nationalaglawcenter.org/state-compilations/equineactivity",
+            "title": "Equine Activity Statutes"
           }
         ],
         "bing_connected": false
@@ -699,7 +698,7 @@
           },
           {
             "url": "https://equinelegalsolutions.com/horse-boarding-rights-and-responsibilities",
-            "title": "Horse Boarding Rights and Responsibilities"
+            "title": "Horse Boarding Rights and Responsibilities - Equine Legal Solutions"
           }
         ],
         "bing_connected": false
@@ -711,12 +710,10 @@
       "query": "Can I Ignore a Demand Letter",
       "cluster": "demand-letters-and-disputes",
       "target_page": "/disputes/can-i-ignore-a-demand-letter/",
-      "state": "MISSING",
-      "reasons": [
-        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
-      ],
+      "state": "OBSERVED",
+      "reasons": [],
       "evidence": {
-        "grounded_site_surfaced": false,
+        "grounded_site_surfaced": true,
         "gsc_impressions": 0,
         "gsc_clicks": 0,
         "gsc_average_position": 0,
@@ -724,7 +721,7 @@
         "competitor_urls": [],
         "bing_connected": false
       },
-      "next_action": "PREPARE_OWNER_REVIEW_REPAIR"
+      "next_action": "OBSERVE"
     },
     {
       "panel_id": "qpanel-025",
@@ -770,16 +767,16 @@
             "title": "Horses and the Law – The Horse"
           },
           {
-            "url": "https://claybornewagner.com/equine-law/starting-an-equine-business",
-            "title": "Starting an Equine Business: Formation and Structure"
-          },
-          {
-            "url": "http://equinebusinesslaw.com/",
-            "title": "Equestrian Sports Law"
-          },
-          {
             "url": "https://equinelegalsolutions.com/running-an-equine-boarding-business",
             "title": "Running an Equine Boarding Business - Equine Legal Solutions"
+          },
+          {
+            "url": "https://lawhorse.com/",
+            "title": "Equine Legal Documents to Download"
+          },
+          {
+            "url": "https://finance101.blog/how-to-start-horse-business-legal",
+            "title": "Horse Business Legal Steps & Licenses [Essential Guide] - Finance101.blog"
           }
         ],
         "bing_connected": false
@@ -845,12 +842,10 @@
       "query": "Can I Still Be Sued If I Have a Waiver",
       "cluster": "liability-waivers-insurance",
       "target_page": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
-      "state": "MISSING",
-      "reasons": [
-        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
-      ],
+      "state": "OBSERVED",
+      "reasons": [],
       "evidence": {
-        "grounded_site_surfaced": false,
+        "grounded_site_surfaced": true,
         "gsc_impressions": 0,
         "gsc_clicks": 0,
         "gsc_average_position": 0,
@@ -858,7 +853,7 @@
         "competitor_urls": [],
         "bing_connected": false
       },
-      "next_action": "PREPARE_OWNER_REVIEW_REPAIR"
+      "next_action": "OBSERVE"
     }
   ]
 }
