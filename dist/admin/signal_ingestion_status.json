@@ -1,24 +1,43 @@
 {
-  "generated_at": "2026-08-31T10:22:36.000Z",
-  "status": "healthy",
+  "generated_at": "2026-08-31T11:24:55.000Z",
+  "status": "healthy_with_live_followup",
   "preserved_pipeline": [
     "collect:signals",
     "normalize:signals",
     "map:signals",
     "report:ingestion"
   ],
-  "raw_signal_count": 2638,
-  "normalized_signal_count": 1088,
-  "fresh_collected_count": 72,
+  "raw_signal_count": 2719,
+  "normalized_signal_count": 1132,
+  "fresh_collected_count": 150,
   "failed_source_count": 0,
-  "blocked_source_count": 0,
-  "blocked_sources": [],
-  "collection_health": null,
+  "blocked_source_count": 3,
+  "blocked_sources": [
+    {
+      "source_key": "reddit_horses",
+      "platform": "reddit",
+      "status": "blocked_source",
+      "reason": "Reddit refused 8 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+    },
+    {
+      "source_key": "reddit_legaladvice",
+      "platform": "reddit",
+      "status": "blocked_source",
+      "reason": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+    },
+    {
+      "source_key": "reddit_farming_ranching",
+      "platform": "reddit",
+      "status": "blocked_source",
+      "reason": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+    }
+  ],
+  "collection_health": "degraded_blocked_sources",
   "zero_reddit_warning": false,
-  "live_followup_required": false,
+  "live_followup_required": true,
   "failed_sources": [],
   "signal_trace_present": true,
   "ingestion_report_present": true,
   "workflow": "public-signal-processing.yml",
-  "next_step": "No action needed before local handoff. Live workflow must still run in GitHub after apply."
+  "next_step": "Local source corpus and ingestion artifacts are healthy. Run Public Signal Processing after apply to prove fresh live collection and Reddit access."
 }
