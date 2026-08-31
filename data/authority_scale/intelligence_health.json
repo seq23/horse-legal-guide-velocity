@@ -2,16 +2,21 @@
   "schema_version": "2.0",
   "validation_status": "PASS",
   "duplicate_status": "CLEAN",
-  "distribution_observation_status": "UNKNOWN",
-  "observed_yield_trend": "UNKNOWN",
-  "minimum_observed_yield_events_met": false,
-  "observed_yield_events": 0,
-  "evidence_sources": [],
+  "distribution_observation_status": "HEALTHY",
+  "observed_yield_trend": "IMPROVING",
+  "minimum_observed_yield_events_met": true,
+  "observed_yield_events": 150,
+  "evidence_sources": [
+    "grounded_search",
+    "gsc"
+  ],
   "provider_states": {
-    "gemini_grounded_search": "NOT_CONFIGURED",
-    "gsc": "NOT_CONFIGURED",
+    "openrouter_web_search": "CONNECTED",
+    "gemini_grounded_search": "DISCONNECTED",
+    "live_query_observer": "CONNECTED",
+    "gsc": "CONNECTED",
     "bing": "NOT_CONFIGURED",
     "indexnow": "DRY_RUN_ONLY"
   },
-  "truth_note": "External yield evidence remains unknown or provider-gated; analysis throughput must HOLD."
+  "truth_note": "External evidence is present and explicitly source-labeled. Analysis throughput may react; editorial release cadence remains immutable."
 }
