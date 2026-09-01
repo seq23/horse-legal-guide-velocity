@@ -4943,10 +4943,461 @@
           "answer_mentions_brand": false
         }
       ]
+    },
+    {
+      "run_at": "2026-09-01T14:33:36.810Z",
+      "provider": "openrouter",
+      "engines": [
+        "ibm-granite/granite-4.0-h-micro"
+      ],
+      "mode": "grounded",
+      "queries": 25,
+      "observations": [
+        {
+          "query": "equine bill of sale",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "cms.agr.wa.gov",
+            "legaltemplates.net",
+            "eforms.com",
+            "madbarn.com",
+            "usef.org"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse bill of sale",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "legaltemplates.net",
+            "document.com",
+            "madbarn.com",
+            "esign.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse lease agreement",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "buffalo.extension.wisc.edu",
+            "extension.umd.edu",
+            "loio.com",
+            "speedytemplate.com",
+            "bigskyhorseleasing.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse boarding contract",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "stablewise.com",
+            "butterscotch.io",
+            "spperformancehorses.com",
+            "utecreekequine.com",
+            "cedarridgeequine.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse boarding agreement",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "stablewise.com",
+            "butterscotch.io",
+            "cocosign.com",
+            "campus.equestrian.ca",
+            "utecreekequine.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse purchase agreement",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "madbarn.com",
+            "img1.wsimg.com",
+            "equineworld.co.uk",
+            "equinelegalsolutions.com",
+            "rotherabray.co.uk"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "do i need liability insurance for my horse in nc?",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "nchorsecouncil.com",
+            "ncleg.net",
+            "petindustryins.com",
+            "equineinsurancecenter.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "equine law",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "equinelawyer.com",
+            "equilawllc.com",
+            "americanbar.org",
+            "stites.com",
+            "fosterswift.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "partnership agreement vs operating agreement",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "legalclarity.org",
+            "foroes.net",
+            "legalshield.com",
+            "pandadoc.com",
+            "targetcapitalaccount.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "equine law suit protection",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "useventing.com",
+            "texasbarsections.com",
+            "law.com",
+            "ncleg.net"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "equine legal",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "equinelawyer.com",
+            "equinelegalsolutions.com",
+            "equilawllc.com",
+            "equinelawuk.co.uk",
+            "stites.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "equine legal advice",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "equilawllc.com",
+            "equinelawyer.com",
+            "teeslaw.com",
+            "teperlegal.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse purchase contract",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "madbarn.com",
+            "ehorses.com",
+            "equinelegalsolutions.com",
+            "img1.wsimg.com",
+            "eauqena97rj.exactdn.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse sales agreement",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "madbarn.com",
+            "equineworld.co.uk",
+            "ehorses.com",
+            "netlawman.com.au",
+            "aria-grace.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "is equine therapy covered by insurance",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "legalclarity.org",
+            "equestriantherapy.com",
+            "damorementalhealth.com",
+            "amerihealthcaritasla.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "waiver vs release",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "waiversign.com",
+            "legalclarity.org",
+            "upcounsel.com",
+            "lexisnexis.co.uk",
+            "ericejohnson.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "equine law advice",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "equinelawuk.co.uk",
+            "equilawllc.com",
+            "rotherabray.co.uk",
+            "equinelegalsolutions.com",
+            "teeslaw.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "equine lease agreement law firm wellington",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "gueronnierelaw.com",
+            "zwpfirm.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "equine sales agreement",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "lacykimballlaw.com",
+            "madbarn.com",
+            "miequinelaw.com",
+            "equusfoundation.org",
+            "theselectonline.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse leaze",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "yeovilhistory.info",
+            "tfl.gov.uk",
+            "streetlist.co.uk",
+            "carehome.co.uk"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse sale disputes",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "franklinlaw.co.nz",
+            "teeslaw.com",
+            "ecf.ksd.uscourts.gov",
+            "equilegal.com.au",
+            "lexology.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse sales contract",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "ehorses.com",
+            "madbarn.com",
+            "miequinelaw.com",
+            "aria-grace.com"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse trial agreement",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "usef.org",
+            "equinelaw.alisonrowelaw.com",
+            "equestriancounsel.com",
+            "equinelegalsolutions.com",
+            "equusfoundation.org"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse vet dispute resolution",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "rcvs.org.uk",
+            "hrjforemanlaws.co.uk",
+            "blackstonesolicitorsltd.co.uk",
+            "jacksons.law",
+            "scottbailey.co.uk"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        },
+        {
+          "query": "horse vet disputes",
+          "engine": "openrouter:ibm-granite/granite-4.0-h-micro",
+          "mode": "grounded",
+          "observed_at": "2026-09-01T14:33:36.810Z",
+          "status": "observed",
+          "cited_domains": [
+            "hrjforemanlaws.co.uk",
+            "blackstonesolicitorsltd.co.uk",
+            "jacksons.law",
+            "ashfords.co.uk",
+            "scottbailey.co.uk"
+          ],
+          "cited_ours": [],
+          "self_cited": false,
+          "named_in_answer": [],
+          "answer_mentions_brand": false
+        }
+      ]
     }
   ],
   "latest_summary": {
-    "run_at": "2026-08-31T14:34:13.699Z",
+    "run_at": "2026-09-01T14:33:36.810Z",
     "provider": "openrouter",
     "engines": [
       "ibm-granite/granite-4.0-h-micro"

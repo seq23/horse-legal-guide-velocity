@@ -1,11 +1,11 @@
 {
   "schema_version": "2.2.0",
-  "generated_at": "2026-08-31T14:34:00.374Z",
+  "generated_at": "2026-09-01T14:33:29.105Z",
   "bounded_repair_revisions": 2,
   "policy": "The system performs query testing, diagnosis, competitor comparison, finished patch preparation, and post-deployment retesting. Client approval remains required before each live legal-page mutation. Bounded on-page repair stops after two revisions.",
   "summary": {
-    "tracked": 21,
-    "patch_ready": 21,
+    "tracked": 23,
+    "patch_ready": 23,
     "owner_approved": 0,
     "applied_pending_retest": 0,
     "observed_after_repair": 0,
@@ -343,6 +343,92 @@
             "zone": "faq_block",
             "action": "append_html",
             "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-007\" data-revision=\"1\"><p><strong>Search question:</strong> Should I Trademark My Barn Name</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Should I Trademark My Barn Name? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-008",
+      "panel_id": "qpanel-008",
+      "revision": 1,
+      "query": "If Someone Gets Hurt Riding My Horse, Am I Liable",
+      "target_page": "/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://www.litchfieldcavo.com/wp-content/uploads/2019/07/Litchfield-Alert-Equine-Activity-Liability-Act-Protections-2019-J.-Willette.pdf",
+            "title": "Equine Activity Liability Act Protections"
+          },
+          {
+            "url": "https://www.animallaw.info/intro/equine-activity-liability",
+            "title": "Equine Activity Liability | Animal Legal & Historical Center"
+          },
+          {
+            "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
+            "title": "Detailed Discussion of the Equine Activity Liability Act | Animal Legal & Historical Center"
+          },
+          {
+            "url": "https://www.animallaw.info/statute/tn-equine-activity-liability-chapter-20-equine-activities-liability",
+            "title": "TN - Equine Activity Liability - Chapter 20. Equine Activities--Liability | Animal Legal & Historical Center"
+          },
+          {
+            "url": "https://www.animallaw.info/topics/equine-issues?order=title&page=21&sort=desc",
+            "title": "Equine Issues | Animal Legal & Historical Center"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://www.litchfieldcavo.com/wp-content/uploads/2019/07/Litchfield-Alert-Equine-Activity-Liability-Act-Protections-2019-J.-Willette.pdf",
+          "title": "Equine Activity Liability Act Protections"
+        },
+        {
+          "url": "https://www.animallaw.info/intro/equine-activity-liability",
+          "title": "Equine Activity Liability | Animal Legal & Historical Center"
+        },
+        {
+          "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
+          "title": "Detailed Discussion of the Equine Activity Liability Act | Animal Legal & Historical Center"
+        },
+        {
+          "url": "https://www.animallaw.info/statute/tn-equine-activity-liability-chapter-20-equine-activities-liability",
+          "title": "TN - Equine Activity Liability - Chapter 20. Equine Activities--Liability | Animal Legal & Historical Center"
+        },
+        {
+          "url": "https://www.animallaw.info/topics/equine-issues?order=title&page=21&sort=desc",
+          "title": "Equine Issues | Animal Legal & Historical Center"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-008\" data-revision=\"1\"><p><strong>Search question:</strong> If Someone Gets Hurt Riding My Horse, Am I Liable</p><h2>Quick answer</h2><p><strong>Short answer:</strong> Sometimes yes. A waiver, warning sign, or equine-activity-law framework may help, but liability usually turns on <strong>who controlled the situation, what risk was known, what was disclosed, what safety steps were skipped, and what state law applies</strong>. The existence of a horse alone does not answer the question.</p></div>"
           }
         ]
       },
@@ -901,6 +987,92 @@
             "zone": "faq_block",
             "action": "append_html",
             "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-022\" data-revision=\"1\"><p><strong>Search question:</strong> Am I Subject to HIPAA in Equine Therapy</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What should someone know about am i subject to hipaa in equine therapy? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-023",
+      "panel_id": "qpanel-023",
+      "revision": 1,
+      "query": "What Legal Documents Do I Need to Run a Boarding Barn",
+      "target_page": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://horses.extension.org/equine-boarding-stable-contracts",
+            "title": "Equine Boarding Stable Contracts | Extension Horses"
+          },
+          {
+            "url": "https://www.horsenation.com/2015/05/14/equine-law-boarding-contracts",
+            "title": "Equine Law: Boarding Contracts | HORSE NATION"
+          },
+          {
+            "url": "https://extension.umn.edu/horse-ownership/understanding-equine-law",
+            "title": "Understanding equine law - University of Minnesota Extension"
+          },
+          {
+            "url": "https://equinelegalsolutions.com/running-an-equine-boarding-business",
+            "title": "Running an Equine Boarding Business - Equine Legal Solutions"
+          },
+          {
+            "url": "https://equinelegaldocs.com/",
+            "title": "EquineLegalDocs — Horse Lease, Boarding & Liability Documents in Minutes"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://horses.extension.org/equine-boarding-stable-contracts",
+          "title": "Equine Boarding Stable Contracts | Extension Horses"
+        },
+        {
+          "url": "https://www.horsenation.com/2015/05/14/equine-law-boarding-contracts",
+          "title": "Equine Law: Boarding Contracts | HORSE NATION"
+        },
+        {
+          "url": "https://extension.umn.edu/horse-ownership/understanding-equine-law",
+          "title": "Understanding equine law - University of Minnesota Extension"
+        },
+        {
+          "url": "https://equinelegalsolutions.com/running-an-equine-boarding-business",
+          "title": "Running an Equine Boarding Business - Equine Legal Solutions"
+        },
+        {
+          "url": "https://equinelegaldocs.com/",
+          "title": "EquineLegalDocs — Horse Lease, Boarding & Liability Documents in Minutes"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-023\" data-revision=\"1\"><p><strong>Search question:</strong> What Legal Documents Do I Need to Run a Boarding Barn</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What Legal Documents Do I Need to Run a Boarding Barn? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
           }
         ]
       },
