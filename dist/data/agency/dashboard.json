@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-09-01T14:38:53.000Z",
+  "generated_at": "2026-09-02T11:25:31.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-09-01T14:29:05.649Z",
-      "age_hours": 0.2,
+      "age_hours": 20.9,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-09-01T14:29:05.649Z",
-      "age_hours": 0.2,
+      "age_hours": 20.9,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-09-01T14:29:05.649Z",
-      "age_hours": 0.2,
+      "age_hours": 20.9,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -2024,9 +2024,9 @@
       "canonical_present": 560,
       "duplicate_title_groups": 78,
       "duplicate_description_groups": 4,
-      "high_similarity_pairs": 346,
+      "high_similarity_pairs": 344,
       "intent_overlap_pairs": 198,
-      "uniqueness_review_clusters": 80,
+      "uniqueness_review_clusters": 81,
       "drafts_automatically_differentiated": 193,
       "draft_uniqueness_failures": 0,
       "jsonld_present": 560,
@@ -2046,8 +2046,8 @@
       "workflow_count": 16,
       "workflow_passed": 16,
       "workflow_warning_count": 0,
-      "signal_raw_store_count": 2746,
-      "signal_fresh_collected_count": 122,
+      "signal_raw_store_count": 2783,
+      "signal_fresh_collected_count": 98,
       "signal_failed_sources": 0,
       "signal_zero_reddit_warning": false,
       "github_actions_simulation_status": "passed",
@@ -2060,7 +2060,7 @@
       "indexable_pages_measured": 560,
       "duplicate_title_groups": 79,
       "duplicate_description_groups": 4,
-      "high_similarity_pairs": 346,
+      "high_similarity_pairs": 344,
       "intent_overlap_pairs": 198
     },
     "family_metrics": {
@@ -2109,7 +2109,7 @@
       "disputes": {
         "pages": 6,
         "duplicate_title_memberships": 6,
-        "high_similarity_pair_memberships": 6,
+        "high_similarity_pair_memberships": 2,
         "intent_overlap_pair_memberships": 6
       },
       "faq": {
@@ -11453,8 +11453,8 @@
   },
   "remediation": {
     "summary": {
-      "total": 80,
-      "pending_owner_approval": 80,
+      "total": 81,
+      "pending_owner_approval": 81,
       "approved": 0,
       "applied": 0,
       "rejected": 0
@@ -12278,45 +12278,6 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
-        "members": [
-          "/disputes/can-a-contract-dispute-be-resolved-without-court/",
-          "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
-          "/disputes/how-serious-is-a-legal-demand-letter/",
-          "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
-          "/reference/can-a-contract-dispute-be-resolved-without-court/",
-          "/reference/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
-          "/reference/how-serious-is-a-legal-demand-letter/",
-          "/reference/what-should-i-do-if-i-receive-a-demand-letter/"
-        ],
-        "families": [
-          "disputes",
-          "reference"
-        ],
-        "reasons": [
-          "duplicate_title",
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.8989,
-        "suggested_actions": [
-          "noindex_keep_llm",
-          "canonical_to_primary",
-          "differentiate_patch"
-        ],
-        "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0025",
-        "ledger_id": "uniqueness-0025",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
         "candidate_primary": "/reference/how-should-someone-compare-llc-vs-insurance-for-horse-business-liability-in-an-equine-legal-situation/",
         "members": [
           "/reference/how-should-someone-compare-liability-waiver-vs-insurance-for-horse-activities-in-an-equine-legal-situation/",
@@ -12339,8 +12300,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0026",
-        "ledger_id": "uniqueness-0026",
+        "proposal_id": "remediation-uniqueness-0025",
+        "ledger_id": "uniqueness-0025",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12370,8 +12331,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0027",
-        "ledger_id": "uniqueness-0027",
+        "proposal_id": "remediation-uniqueness-0026",
+        "ledger_id": "uniqueness-0026",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12399,8 +12360,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0028",
-        "ledger_id": "uniqueness-0028",
+        "proposal_id": "remediation-uniqueness-0027",
+        "ledger_id": "uniqueness-0027",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12444,8 +12405,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0029",
-        "ledger_id": "uniqueness-0029",
+        "proposal_id": "remediation-uniqueness-0028",
+        "ledger_id": "uniqueness-0028",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12480,8 +12441,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0030",
-        "ledger_id": "uniqueness-0030",
+        "proposal_id": "remediation-uniqueness-0029",
+        "ledger_id": "uniqueness-0029",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12509,8 +12470,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0031",
-        "ledger_id": "uniqueness-0031",
+        "proposal_id": "remediation-uniqueness-0030",
+        "ledger_id": "uniqueness-0030",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12556,8 +12517,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0032",
-        "ledger_id": "uniqueness-0032",
+        "proposal_id": "remediation-uniqueness-0031",
+        "ledger_id": "uniqueness-0031",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12586,8 +12547,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0033",
-        "ledger_id": "uniqueness-0033",
+        "proposal_id": "remediation-uniqueness-0032",
+        "ledger_id": "uniqueness-0032",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12615,8 +12576,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0034",
-        "ledger_id": "uniqueness-0034",
+        "proposal_id": "remediation-uniqueness-0033",
+        "ledger_id": "uniqueness-0033",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12641,6 +12602,43 @@
           "differentiate_patch"
         ],
         "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0034",
+        "ledger_id": "uniqueness-0034",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
+        "candidate_primary": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
+        "members": [
+          "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+          "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
+          "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
+          "/reference/can-a-contract-dispute-be-resolved-without-court/",
+          "/reference/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
+          "/reference/what-should-i-do-if-i-receive-a-demand-letter/"
+        ],
+        "families": [
+          "disputes",
+          "reference"
+        ],
+        "reasons": [
+          "duplicate_title",
+          "high_body_similarity"
+        ],
+        "maximum_body_similarity": 0.8826,
+        "suggested_actions": [
+          "noindex_keep_llm",
+          "canonical_to_primary",
+          "differentiate_patch"
+        ],
+        "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
         "approval_required_for_live_change": true,
         "automatic_live_change": false,
         "patch_plan": null
@@ -13573,6 +13571,38 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
+        "candidate_primary": "/disputes/how-serious-is-a-legal-demand-letter/",
+        "members": [
+          "/disputes/how-serious-is-a-legal-demand-letter/",
+          "/reference/how-serious-is-a-legal-demand-letter/"
+        ],
+        "families": [
+          "disputes",
+          "reference"
+        ],
+        "reasons": [
+          "duplicate_title"
+        ],
+        "maximum_body_similarity": null,
+        "suggested_actions": [
+          "noindex_keep_llm",
+          "canonical_to_primary",
+          "differentiate_patch"
+        ],
+        "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0066",
+        "ledger_id": "uniqueness-0066",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
         "candidate_primary": "/boarding/what-happens-if-a-boarder-damages-property/",
         "members": [
           "/boarding/what-happens-if-a-boarder-damages-property/",
@@ -13597,8 +13627,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0066",
-        "ledger_id": "uniqueness-0066",
+        "proposal_id": "remediation-uniqueness-0067",
+        "ledger_id": "uniqueness-0067",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13629,8 +13659,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0067",
-        "ledger_id": "uniqueness-0067",
+        "proposal_id": "remediation-uniqueness-0068",
+        "ledger_id": "uniqueness-0068",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13661,8 +13691,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0068",
-        "ledger_id": "uniqueness-0068",
+        "proposal_id": "remediation-uniqueness-0069",
+        "ledger_id": "uniqueness-0069",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13693,8 +13723,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0069",
-        "ledger_id": "uniqueness-0069",
+        "proposal_id": "remediation-uniqueness-0070",
+        "ledger_id": "uniqueness-0070",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13725,8 +13755,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0070",
-        "ledger_id": "uniqueness-0070",
+        "proposal_id": "remediation-uniqueness-0071",
+        "ledger_id": "uniqueness-0071",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13757,8 +13787,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0071",
-        "ledger_id": "uniqueness-0071",
+        "proposal_id": "remediation-uniqueness-0072",
+        "ledger_id": "uniqueness-0072",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13789,8 +13819,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0072",
-        "ledger_id": "uniqueness-0072",
+        "proposal_id": "remediation-uniqueness-0073",
+        "ledger_id": "uniqueness-0073",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13821,8 +13851,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0073",
-        "ledger_id": "uniqueness-0073",
+        "proposal_id": "remediation-uniqueness-0074",
+        "ledger_id": "uniqueness-0074",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13853,8 +13883,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0074",
-        "ledger_id": "uniqueness-0074",
+        "proposal_id": "remediation-uniqueness-0075",
+        "ledger_id": "uniqueness-0075",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13885,8 +13915,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0075",
-        "ledger_id": "uniqueness-0075",
+        "proposal_id": "remediation-uniqueness-0076",
+        "ledger_id": "uniqueness-0076",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13917,8 +13947,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0076",
-        "ledger_id": "uniqueness-0076",
+        "proposal_id": "remediation-uniqueness-0077",
+        "ledger_id": "uniqueness-0077",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13949,8 +13979,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0077",
-        "ledger_id": "uniqueness-0077",
+        "proposal_id": "remediation-uniqueness-0078",
+        "ledger_id": "uniqueness-0078",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -13981,8 +14011,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0078",
-        "ledger_id": "uniqueness-0078",
+        "proposal_id": "remediation-uniqueness-0079",
+        "ledger_id": "uniqueness-0079",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -14013,8 +14043,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0079",
-        "ledger_id": "uniqueness-0079",
+        "proposal_id": "remediation-uniqueness-0080",
+        "ledger_id": "uniqueness-0080",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -14045,8 +14075,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0080",
-        "ledger_id": "uniqueness-0080",
+        "proposal_id": "remediation-uniqueness-0081",
+        "ledger_id": "uniqueness-0081",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -14435,8 +14465,8 @@
         "/disputes/can-a-contract-dispute-be-resolved-without-court/",
         "/scenario/do-people-actually-get-sued-over-horse-deals/",
         "/reference/do-people-actually-get-sued-over-horse-deals/",
-        "/reference/how-serious-is-a-legal-demand-letter/",
-        "/disputes/how-serious-is-a-legal-demand-letter/"
+        "/reference/how-to-start-a-horse-retail-business/",
+        "/business/how-to-start-a-horse-retail-business/"
       ],
       "recommended_action": "Review intent-overlap clusters before approving new routes. Draft self-healing automatically differentiates new drafts; existing live pages remain owner-reviewed."
     },

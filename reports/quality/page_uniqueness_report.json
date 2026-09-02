@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-01T11:24:28.000Z",
+  "generated_at": "2026-09-02T11:25:31.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "ab8a8f3d45a3b95d1bce8d9b53c9502c6d2beefb3dbc2180029a326642179c07",
+  "source_fingerprint": "a6d8678d1c97a098ae2965daec4620a17bb0236df870324eb7d4332c3cbe1394",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
@@ -12,7 +12,7 @@
     "indexable_pages_measured": 560,
     "duplicate_title_groups": 79,
     "duplicate_description_groups": 4,
-    "high_similarity_pairs": 346,
+    "high_similarity_pairs": 344,
     "intent_overlap_pairs": 198
   },
   "family_metrics": {
@@ -61,7 +61,7 @@
     "disputes": {
       "pages": 6,
       "duplicate_title_memberships": 6,
-      "high_similarity_pair_memberships": 6,
+      "high_similarity_pair_memberships": 2,
       "intent_overlap_pair_memberships": 6
     },
     "faq": {
@@ -1993,18 +1993,6 @@
       "intent_similarity": 0,
       "title_a": "Did I Mess Up by Trusting a Handshake Deal?",
       "title_b": "Am I Overreacting or Is This Risky?"
-    },
-    {
-      "a": "/disputes/how-serious-is-a-legal-demand-letter/",
-      "b": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
-      "family_a": "disputes",
-      "family_b": "disputes",
-      "body_similarity": 0.8989,
-      "cosine_similarity": 0.9703,
-      "shingle_similarity": 0.7663,
-      "intent_similarity": 0.2857,
-      "title_a": "How Serious Is a Legal Demand Letter?",
-      "title_b": "Do I Need a Lawyer to Respond to a Demand Letter?"
     },
     {
       "a": "/reference/how-should-someone-compare-llc-vs-insurance-for-horse-business-liability-in-an-equine-legal-situation/",
@@ -5053,18 +5041,6 @@
       "intent_similarity": 0.6,
       "title_a": "How should someone compare horse lease vs horse purchase in an equine legal situation?",
       "title_b": "How should someone compare facility lease vs pasture lease in an equine legal situation?"
-    },
-    {
-      "a": "/disputes/how-serious-is-a-legal-demand-letter/",
-      "b": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
-      "family_a": "disputes",
-      "family_b": "disputes",
-      "body_similarity": 0.85,
-      "cosine_similarity": 0.9338,
-      "shingle_similarity": 0.6945,
-      "intent_similarity": 0,
-      "title_a": "How Serious Is a Legal Demand Letter?",
-      "title_b": "Can a Contract Dispute Be Resolved Without Court?"
     }
   ],
   "intent_overlap_pairs": [
@@ -5309,16 +5285,6 @@
       "title_b": "Do People Actually Get Sued Over Horse Deals?"
     },
     {
-      "a": "/reference/how-serious-is-a-legal-demand-letter/",
-      "b": "/disputes/how-serious-is-a-legal-demand-letter/",
-      "family_a": "reference",
-      "family_b": "disputes",
-      "body_similarity": 0.5394,
-      "intent_similarity": 1,
-      "title_a": "How Serious Is a Legal Demand Letter?",
-      "title_b": "How Serious Is a Legal Demand Letter?"
-    },
-    {
       "a": "/reference/how-to-start-a-horse-retail-business/",
       "b": "/business/how-to-start-a-horse-retail-business/",
       "family_a": "reference",
@@ -5397,6 +5363,16 @@
       "intent_similarity": 1,
       "title_a": "Can I Ignore a Demand Letter?",
       "title_b": "Can I Ignore a Demand Letter?"
+    },
+    {
+      "a": "/reference/how-serious-is-a-legal-demand-letter/",
+      "b": "/disputes/how-serious-is-a-legal-demand-letter/",
+      "family_a": "reference",
+      "family_b": "disputes",
+      "body_similarity": 0.521,
+      "intent_similarity": 1,
+      "title_a": "How Serious Is a Legal Demand Letter?",
+      "title_b": "How Serious Is a Legal Demand Letter?"
     },
     {
       "a": "/reference/what-legal-documents-do-i-need-for-a-horse-business/",

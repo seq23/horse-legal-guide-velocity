@@ -1,44 +1,44 @@
 {
-  "generated_at": "2026-09-01T13:39:53.460Z",
-  "total_signals": 2746,
+  "generated_at": "2026-09-02T13:40:59.815Z",
+  "total_signals": 2783,
   "signals_by_source": {
-    "reddit_equestrian": 1238,
+    "reddit_equestrian": 1258,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
-    "serp_competitor_research": 89,
+    "serp_competitor_research": 105,
     "youtube_search_comments": 160,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 140,
     "reddit_smallbusiness": 177,
     "reddit_farming_ranching": 95,
-    "forum_horse_and_hound": 53
+    "forum_horse_and_hound": 54
   },
   "signals_by_platform": {
-    "reddit": 2298,
-    "equestrian_forums": 112,
+    "reddit": 2318,
+    "equestrian_forums": 113,
     "google_paa": 29,
-    "serp_competitors": 89,
+    "serp_competitors": 105,
     "youtube": 160,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1141,
-  "duplicates_collapsed": 1605,
+  "normalized_count": 1151,
+  "duplicates_collapsed": 1632,
   "pages_created": 0,
-  "pages_strengthened": 1141,
+  "pages_strengthened": 1151,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 583
+      "count": 588
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 177
+      "count": 182
     },
     {
       "name": "horse-sale-and-purchase",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1238
+      "count": 1258
     },
     {
       "name": "reddit_horses",
@@ -95,16 +95,16 @@
       "count": 140
     },
     {
+      "name": "serp_competitor_research",
+      "count": 105
+    },
+    {
       "name": "reddit_farming_ranching",
       "count": 95
     },
     {
-      "name": "serp_competitor_research",
-      "count": 89
-    },
-    {
       "name": "forum_horse_and_hound",
-      "count": 53
+      "count": 54
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -146,13 +146,14 @@
       "platform": "reddit",
       "status": "blocked_source",
       "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "error": "Reddit refused 7 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -189,7 +190,7 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 30,
+      "count": 26,
       "error": "2 of 8 cited page(s) failed to fetch."
     },
     {
@@ -4190,7 +4191,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 4.454,
-      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "mapped_slug": "/boarding/what-liability-does-a-trainer-have/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -7479,7 +7480,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 1,
-      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "mapped_slug": "/faq/what-records-should-a-boarding-barn-keep-when-board-is-overdue/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -9612,7 +9613,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 0.95,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/faq/what-records-should-a-boarding-barn-keep-when-board-is-overdue/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -11693,7 +11694,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 1,
-      "mapped_slug": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "mapped_slug": "/boarding/what-liability-does-a-trainer-have/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -13521,7 +13522,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 0.95,
-      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "mapped_slug": "/boarding/what-liability-does-a-trainer-have/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -18871,15 +18872,16 @@
       "normalized_id": "norm_2660_72c6c2b791",
       "action": "strengthen_existing_page",
       "source_signal_ids": [
-        "serp_competitor_research_equine-law-boarding-contracts-https-www-horsenation-_6351a916"
+        "serp_competitor_research_equine-law-boarding-contracts-https-www-horsenation-_6351a916",
+        "serp_competitor_research_equine-law-boarding-contracts-https-www-horsenation-_34761401"
       ],
       "preserved_query": "Equine Law: Boarding Contracts — what should I know?",
       "normalized_query": "Equine Law: Boarding Contracts — what should I know?",
       "llm_bait_phrase": "Equine Law: Boarding Contracts",
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
-      "signal_score": 0.8,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "signal_score": 2.1,
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -18948,7 +18950,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 0.8,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -19152,7 +19154,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 0.8,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/boarding/what-liability-does-a-trainer-have/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -19305,7 +19307,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 0.8,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -19407,7 +19409,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 0.8,
-      "mapped_slug": "/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -19492,7 +19494,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 0.8,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/boarding/what-liability-does-a-trainer-have/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -19646,6 +19648,176 @@
       "intent_type": "faq",
       "signal_score": 0.9,
       "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1141_which-horse-a-talented-serious-horse-or-a-fun-horse",
+      "normalized_id": "norm_2746_ea895bcfd5",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_which-horse-a-talented-serious-horse-or-a-fun-horse-_d34cdff9"
+      ],
+      "preserved_query": "Which horse- a talented serious horse, or a fun horse — what should I know?",
+      "normalized_query": "Which horse- a talented serious horse, or a fun horse — what should I know?",
+      "llm_bait_phrase": "Which horse- a talented serious horse, or a fun horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/disputes/how-serious-is-a-legal-demand-letter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1142_one-step-closer-to-horse-independence",
+      "normalized_id": "norm_2747_186beb45e4",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_one-step-closer-to-horse-independence-https-www-redd_f2867a29"
+      ],
+      "preserved_query": "One step closer to horse independence! — what should I know?",
+      "normalized_query": "One step closer to horse independence! — what should I know?",
+      "llm_bait_phrase": "One step closer to horse independence!",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1143_statement-from-the-owner-of-the-emaciated-horse-at-the-hampt",
+      "normalized_id": "norm_2757_e7917de2b4",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_statement-from-the-owner-of-the-emaciated-horse-at-t_9bede85b"
+      ],
+      "preserved_query": "Statement from the Owner of the Emaciated Horse at the Hampton Classics — what should I know?",
+      "normalized_query": "Statement from the Owner of the Emaciated Horse at the Hampton Classics — what should I know?",
+      "llm_bait_phrase": "Statement from the Owner of the Emaciated Horse at the Hampton Classics",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1144_colorado-front-range-boarders-is-880-becoming-normal-for-bas",
+      "normalized_id": "norm_2758_6f0086258f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_colorado-front-range-boarders-is-880-becoming-normal_b9d980eb"
+      ],
+      "preserved_query": "Colorado Front Range boarders: Is $880 becoming normal for basic outside board — what should I know?",
+      "normalized_query": "Colorado Front Range boarders: Is $880 becoming normal for basic outside board — what should I know?",
+      "llm_bait_phrase": "Colorado Front Range boarders: Is $880 becoming normal for basic outside board",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/what-liability-does-a-trainer-have/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1145_another-day-another-emaciated-horse-found-at-a-show",
+      "normalized_id": "norm_2760_760b995475",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_another-day-another-emaciated-horse-found-at-a-show-_8df9cae8"
+      ],
+      "preserved_query": "Another day, another emaciated horse found at a show. — what should I know?",
+      "normalized_query": "Another day, another emaciated horse found at a show. — what should I know?",
+      "llm_bait_phrase": "Another day, another emaciated horse found at a show.",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1146_horse-transporters-are-3-5-tonne-illegal",
+      "normalized_id": "norm_2766_9ab4d69a21",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_horse-transporters-are-3-5-tonne-illegal-https-forum_6a6d21c1"
+      ],
+      "preserved_query": "Horse transporters - are 3.5 tonne illegal — what should I know?",
+      "normalized_query": "Horse transporters - are 3.5 tonne illegal — what should I know?",
+      "llm_bait_phrase": "Horse transporters - are 3.5 tonne illegal",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1147_equine-boarding-stable-contracts",
+      "normalized_id": "norm_2770_4e4c62fc65",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_equine-boarding-stable-contracts-https-horses-extens_b5b4de85"
+      ],
+      "preserved_query": "Equine Boarding Stable Contracts — what should I know?",
+      "normalized_query": "Equine Boarding Stable Contracts — what should I know?",
+      "llm_bait_phrase": "Equine Boarding Stable Contracts",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1148_are-boarding-contracts-important",
+      "normalized_id": "norm_2771_7860a4fb05",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_why-are-boarding-contracts-important-https-horses-ex_193ab80c"
+      ],
+      "preserved_query": "Why Are Boarding Contracts Important?",
+      "normalized_query": "Why Are Boarding Contracts Important?",
+      "llm_bait_phrase": "Are Boarding Contracts Important",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1149_legal-risks-in-horse-boarding-contracts-under-north-carolina",
+      "normalized_id": "norm_2773_8c5847a08d",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_legal-risks-in-horse-boarding-contracts-under-north-_dbfa5c5b"
+      ],
+      "preserved_query": "Legal Risks in Horse Boarding Contracts Under North Carolina Law and How to Avoid Them — what should I know?",
+      "normalized_query": "Legal Risks in Horse Boarding Contracts Under North Carolina Law and How to Avoid Them — what should I know?",
+      "llm_bait_phrase": "Legal Risks in Horse Boarding Contracts Under North Carolina Law and How to Avoid Them",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1150_operating-a-large-boarding-facility-in-north-carolina-is-rew",
+      "normalized_id": "norm_2778_a8ef6138fd",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_operating-a-large-boarding-facility-in-north-carolin_06fc8af5"
+      ],
+      "preserved_query": "Operating a large boarding facility in North Carolina is rewarding and complex. — what should I know?",
+      "normalized_query": "Operating a large boarding facility in North Carolina is rewarding and complex. — what should I know?",
+      "llm_bait_phrase": "Operating a large boarding facility in North Carolina is rewarding and complex.",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
