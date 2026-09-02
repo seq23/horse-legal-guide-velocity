@@ -1,11 +1,11 @@
 {
   "schema_version": "2.2.0",
-  "generated_at": "2026-09-01T14:33:29.105Z",
+  "generated_at": "2026-09-02T14:33:00.470Z",
   "bounded_repair_revisions": 2,
   "policy": "The system performs query testing, diagnosis, competitor comparison, finished patch preparation, and post-deployment retesting. Client approval remains required before each live legal-page mutation. Bounded on-page repair stops after two revisions.",
   "summary": {
-    "tracked": 23,
-    "patch_ready": 23,
+    "tracked": 27,
+    "patch_ready": 27,
     "owner_approved": 0,
     "applied_pending_retest": 0,
     "observed_after_repair": 0,
@@ -13,6 +13,92 @@
     "bounded_repair_exhausted": 0
   },
   "repairs": [
+    {
+      "repair_id": "query-repair-qpanel-001",
+      "panel_id": "qpanel-001",
+      "revision": 1,
+      "query": "What Should Be Included in a Horse Boarding Agreement",
+      "target_page": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://www.horsenation.com/2015/05/14/equine-law-boarding-contracts",
+            "title": "Equine Law: Boarding Contracts | HORSE NATION"
+          },
+          {
+            "url": "https://equinelegaldocs.com/documents/boarding-agreements/horse-boarding-agreement",
+            "title": "Horse Boarding Agreement Template — Personalize & Download PDF | EquineLegalDocs"
+          },
+          {
+            "url": "https://pphfarms.com/wp-content/uploads/2019/07/Boarding-Agreement.pdf",
+            "title": "Equine Boarding Agreement"
+          },
+          {
+            "url": "https://horses.extension.org/equine-boarding-stable-contracts",
+            "title": "Equine Boarding Stable Contracts | Extension Horses"
+          },
+          {
+            "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+            "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://www.horsenation.com/2015/05/14/equine-law-boarding-contracts",
+          "title": "Equine Law: Boarding Contracts | HORSE NATION"
+        },
+        {
+          "url": "https://equinelegaldocs.com/documents/boarding-agreements/horse-boarding-agreement",
+          "title": "Horse Boarding Agreement Template — Personalize & Download PDF | EquineLegalDocs"
+        },
+        {
+          "url": "https://pphfarms.com/wp-content/uploads/2019/07/Boarding-Agreement.pdf",
+          "title": "Equine Boarding Agreement"
+        },
+        {
+          "url": "https://horses.extension.org/equine-boarding-stable-contracts",
+          "title": "Equine Boarding Stable Contracts | Extension Horses"
+        },
+        {
+          "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+          "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-001\" data-revision=\"1\"><p><strong>Search question:</strong> What Should Be Included in a Horse Boarding Agreement</p><h2>Quick answer</h2><p><strong>Short answer:</strong> A strong boarding agreement should do more than list the monthly rate. It should spell out <strong>care standards, payment/default handling, emergency vet authority, release rules, training add-ons, risk allocation, and what happens when the relationship breaks down</strong>.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
     {
       "repair_id": "query-repair-qpanel-002",
       "panel_id": "qpanel-002",
@@ -529,6 +615,91 @@
       "retest_status": "not_deployed"
     },
     {
+      "repair_id": "query-repair-qpanel-011",
+      "panel_id": "qpanel-011",
+      "revision": 1,
+      "query": "How Do I Start an Equine-Assisted Therapy Program Legally",
+      "target_page": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://answers.uslegal.com/animals/equine",
+            "title": "Equine Animals Legal Questions and Answers | US Legal, Inc."
+          },
+          {
+            "url": "https://blog.christopherreeve.org/en/equine-assisted-horse-therapy-for-children-and-teens",
+            "title": "Equine-assisted (Horse) Therapy for Children and Teens"
+          },
+          {
+            "url": "https://thehorse.com/blogs/horses-and-the-law/",
+            "title": "Horses and the Law – The Horse"
+          },
+          {
+            "url": "https://pathintl.org/wp-content/uploads/2023/07/PATH-Intl-Definitions-Guide-for-Researchers.pdf",
+            "title": "[PDF] EQUINE-ASSISTED SERVICES DEFINITIONS GUIDE ... - PATH Intl"
+          },
+          {
+            "url": "https://equusfoundation.org/safe/eas.php",
+            "title": "What Are Equine Assisted Services?"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://answers.uslegal.com/animals/equine",
+          "title": "Equine Animals Legal Questions and Answers | US Legal, Inc."
+        },
+        {
+          "url": "https://blog.christopherreeve.org/en/equine-assisted-horse-therapy-for-children-and-teens",
+          "title": "Equine-assisted (Horse) Therapy for Children and Teens"
+        },
+        {
+          "url": "https://thehorse.com/blogs/horses-and-the-law/",
+          "title": "Horses and the Law – The Horse"
+        },
+        {
+          "url": "https://pathintl.org/wp-content/uploads/2023/07/PATH-Intl-Definitions-Guide-for-Researchers.pdf",
+          "title": "[PDF] EQUINE-ASSISTED SERVICES DEFINITIONS GUIDE ... - PATH Intl"
+        },
+        {
+          "url": "https://equusfoundation.org/safe/eas.php",
+          "title": "What Are Equine Assisted Services?"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-011\" data-revision=\"1\"><p><strong>Search question:</strong> How Do I Start an Equine-Assisted Therapy Program Legally</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: How Do I Start an Equine-Assisted Therapy Program Legally? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
       "repair_id": "query-repair-qpanel-012",
       "panel_id": "qpanel-012",
       "revision": 1,
@@ -915,6 +1086,92 @@
       "retest_status": "not_deployed"
     },
     {
+      "repair_id": "query-repair-qpanel-019",
+      "panel_id": "qpanel-019",
+      "revision": 1,
+      "query": "What Does Equine Liability Law Actually Protect Me From",
+      "target_page": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION",
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://mca.legmt.gov/bills/mca/title_0270/chapter_0010/part_0070/section_0270/0270-0010-0070-0270.html",
+            "title": "27-1-727. Equine activity liability limitations -- waivers, MCA"
+          },
+          {
+            "url": "https://www.animallaw.info/statute/sc-equine-activity-liability-article-7-equine-liability-immunity",
+            "title": "SC - Equine Activity Liability - Article 7. Equine Liability Immunity. | Animal Legal & Historical Center"
+          },
+          {
+            "url": "https://law.lis.virginia.gov/vacodefull/title3.2/chapter62/",
+            "title": "Code of Virginia Code - Chapter 62. Equine Activity Liability"
+          },
+          {
+            "url": "https://www.nysenate.gov/legislation/bills/2017/S3831",
+            "title": "NY State Senate Bill 2017-S3831A"
+          },
+          {
+            "url": "https://www.cga.ct.gov/PS98/rpt/olr/htm/98-R-1029.htm",
+            "title": "Equine Liability"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://mca.legmt.gov/bills/mca/title_0270/chapter_0010/part_0070/section_0270/0270-0010-0070-0270.html",
+          "title": "27-1-727. Equine activity liability limitations -- waivers, MCA"
+        },
+        {
+          "url": "https://www.animallaw.info/statute/sc-equine-activity-liability-article-7-equine-liability-immunity",
+          "title": "SC - Equine Activity Liability - Article 7. Equine Liability Immunity. | Animal Legal & Historical Center"
+        },
+        {
+          "url": "https://law.lis.virginia.gov/vacodefull/title3.2/chapter62/",
+          "title": "Code of Virginia Code - Chapter 62. Equine Activity Liability"
+        },
+        {
+          "url": "https://www.nysenate.gov/legislation/bills/2017/S3831",
+          "title": "NY State Senate Bill 2017-S3831A"
+        },
+        {
+          "url": "https://www.cga.ct.gov/PS98/rpt/olr/htm/98-R-1029.htm",
+          "title": "Equine Liability"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-019\" data-revision=\"1\"><p><strong>Search question:</strong> What Does Equine Liability Law Actually Protect Me From</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What Does Equine Liability Law Actually Protect Me From? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
       "repair_id": "query-repair-qpanel-020",
       "panel_id": "qpanel-020",
       "revision": 1,
@@ -944,6 +1201,91 @@
             "zone": "faq_block",
             "action": "append_html",
             "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-020\" data-revision=\"1\"><p><strong>Search question:</strong> Can I Run a Horse Business Under My Lease</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Can I Run a Horse Business Under My Lease? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-021",
+      "panel_id": "qpanel-021",
+      "revision": 1,
+      "query": "What Does North Carolina Equine Liability Law Cover",
+      "target_page": "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [
+          {
+            "url": "https://law.justia.com/codes/north-carolina/chapter-99e/article-1/",
+            "title": "North Carolina Equine and Farm Animal Activity Liability. :: Article 1 - Equine and Farm Animal Activity Liability. :: 2025 North Carolina General Statutes :: U.S. Codes and Statutes :: U.S. Law :: Justia"
+          },
+          {
+            "url": "https://law.justia.com/codes/north-carolina/2005/chapter_99e/article_1.html",
+            "title": "North Carolina General Statutes Article 1 - Equine Activity Liability. :: Chapter 99E — Special Liability Provisions. :: 2005 North Carolina Code :: North Carolina Code :: U.S. Codes and Statutes :: U.S. Law :: Justia"
+          },
+          {
+            "url": "https://www.wardandsmith.com/article/understanding-liability-waivers-for-equine-activities-in-north-carolina",
+            "title": "Understanding Liability Waivers for Equine Activities in North Carolina - Ward and Smith, P.A."
+          },
+          {
+            "url": "https://www.animallaw.info/statute/nc-equine-activity-liability-article-1-equine-activity-liability",
+            "title": "NC - Equine Activity Liability - Article 1. Equine Activity Liability | Animal Legal & Historical Center"
+          },
+          {
+            "url": "https://www.jdsupra.com/legalnews/understanding-liability-waivers-for-5803642",
+            "title": "Understanding Liability Waivers for Equine Activities in North Carolina | Ward and Smith, P.A. - JDSupra"
+          }
+        ],
+        "bing_connected": false
+      },
+      "competitor_urls": [
+        {
+          "url": "https://law.justia.com/codes/north-carolina/chapter-99e/article-1/",
+          "title": "North Carolina Equine and Farm Animal Activity Liability. :: Article 1 - Equine and Farm Animal Activity Liability. :: 2025 North Carolina General Statutes :: U.S. Codes and Statutes :: U.S. Law :: Justia"
+        },
+        {
+          "url": "https://law.justia.com/codes/north-carolina/2005/chapter_99e/article_1.html",
+          "title": "North Carolina General Statutes Article 1 - Equine Activity Liability. :: Chapter 99E — Special Liability Provisions. :: 2005 North Carolina Code :: North Carolina Code :: U.S. Codes and Statutes :: U.S. Law :: Justia"
+        },
+        {
+          "url": "https://www.wardandsmith.com/article/understanding-liability-waivers-for-equine-activities-in-north-carolina",
+          "title": "Understanding Liability Waivers for Equine Activities in North Carolina - Ward and Smith, P.A."
+        },
+        {
+          "url": "https://www.animallaw.info/statute/nc-equine-activity-liability-article-1-equine-activity-liability",
+          "title": "NC - Equine Activity Liability - Article 1. Equine Activity Liability | Animal Legal & Historical Center"
+        },
+        {
+          "url": "https://www.jdsupra.com/legalnews/understanding-liability-waivers-for-5803642",
+          "title": "Understanding Liability Waivers for Equine Activities in North Carolina | Ward and Smith, P.A. - JDSupra"
+        }
+      ],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-021\" data-revision=\"1\"><p><strong>Search question:</strong> What Does North Carolina Equine Liability Law Cover</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What equine legal issues should someone consider in What Does North Carolina Equine Liability Law Cover? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
           }
         ]
       },
