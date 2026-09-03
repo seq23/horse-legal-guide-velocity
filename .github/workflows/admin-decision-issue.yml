@@ -1,0 +1,229 @@
+name: Admin Decision Issue
+
+# /admin/'s decision buttons (scripts/release/build_site_release.js,
+# buildDecisionIssueUrl/sendDecision) open a pre-filled GitHub issue instead
+# of calling the Cloudflare Worker's OAuth-gated /api/admin/action endpoint,
+# because that endpoint's Cloudflare Pages secrets are confirmed unconfigured
+# (see docs/runbooks/GITHUB_ADMIN_AUTH_SETUP.md and
+# _ops/validators/validate_github_admin_functions.js, which fails the build
+# if /admin/ advertises that path again while it stays unconfigured).
+# This workflow is the other end of that issue: it reads the fixed
+# "Action: <kind>\nIDs: <ids>" header a decision issue always carries
+# (scripts/admin/parse_decision_issue.js), verifies the issue's author
+# actually holds write-or-higher permission on this repo through GitHub's own
+# API (never trusting anything the page itself claimed), and only then runs
+# the same approve_many.js / reject_many.js / mark_many_needs_revision.js
+# scripts admin-bulk-content-actions.yml already uses, rebuilds, and pushes.
+# An unauthorized or malformed issue gets a same-issue reply explaining why,
+# never a silent apply - this repo is public, so anyone can open an issue
+# with the "admin-decision" label, and that must never be enough on its own.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: horse-legal-guide-main-writer
+  cancel-in-progress: false
+
+jobs:
+  apply-decision:
+    if: contains(github.event.issue.labels.*.name, 'admin-decision')
+    runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      CANONICAL_DOMAIN: https://wisecovington.com
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
+      GSC_SITE_URL: sc-domain:horselegalguide.com
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: true
+
+      # Never let the issue body or title reach a shell. actions/github-script
+      # runs in a sandboxed Node context, so the author's text is only ever
+      # written to a file here - every later step treats it as a file path,
+      # not as text interpolated into `run:`.
+      - name: Save issue context to files
+        id: issue_context
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            fs.writeFileSync('issue_body.txt', context.payload.issue.body || '');
+            core.setOutput('author', context.payload.issue.user.login);
+            core.setOutput('number', String(context.payload.issue.number));
+
+      - name: Check the issue author actually holds repo write access
+        id: authz
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const author = context.payload.issue.user.login;
+            try {
+              const { data } = await github.rest.repos.getCollaboratorPermissionLevel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                username: author,
+              });
+              const allowed = ['admin', 'maintain', 'write'].includes(data.permission);
+              core.setOutput('allowed', String(allowed));
+              core.setOutput('permission', data.permission);
+            } catch (error) {
+              core.setOutput('allowed', 'false');
+              core.setOutput('permission', 'none');
+            }
+
+      - name: Reply and close when the author is not authorized
+        if: steps.authz.outputs.allowed != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: 'This GitHub account does not currently have write access to this repository, so this content decision was not applied automatically. Ask the repo owner to add you as a collaborator, or forward this issue link to them so they can apply it. Nothing was changed.',
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              state: 'closed',
+              labels: ['admin-decision', 'invalid'],
+            });
+
+      - uses: actions/setup-node@v7
+        if: steps.authz.outputs.allowed == 'true'
+        with:
+          node-version: 20
+      - name: Install
+        if: steps.authz.outputs.allowed == 'true'
+        run: npm ci
+
+      - name: Parse the decision
+        id: parse
+        if: steps.authz.outputs.allowed == 'true'
+        continue-on-error: true
+        env:
+          ISSUE_BODY_FILE: issue_body.txt
+        run: |
+          set -euo pipefail
+          OUT="$(node scripts/admin/parse_decision_issue.js)"
+          echo "action=$(node -e "console.log(JSON.parse(process.argv[1]).action)" "$OUT")" >> "$GITHUB_OUTPUT"
+          echo "script=$(node -e "console.log(JSON.parse(process.argv[1]).script)" "$OUT")" >> "$GITHUB_OUTPUT"
+          IDS_JSON="$(node -e "console.log(JSON.stringify(JSON.parse(process.argv[1]).ids.join(' ')))" "$OUT")"
+          echo "ids=$IDS_JSON" >> "$GITHUB_OUTPUT"
+
+      - name: Reply and close on an unparsable decision
+        if: steps.authz.outputs.allowed == 'true' && steps.parse.outcome != 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: 'This request could not be read automatically. It must contain an "Action: approve|reject|needs_revision" line and an "IDs: <space-separated entry IDs>" line, exactly as /admin/ writes them - editing those two lines by hand can break the automatic reading. Please reopen this from /admin/ instead of editing it directly. Nothing was changed.',
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              state: 'closed',
+              labels: ['admin-decision', 'invalid'],
+            });
+
+      - name: Refresh self-heal and prevalidation before action
+        id: preflight
+        if: steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success'
+        continue-on-error: true
+        run: |
+          npm run content:self-heal
+          npm run content:prevalidate
+          npm run build
+          npm run ops:trace-workflows
+
+      - name: Execute the decision
+        id: operation
+        if: steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success' && steps.preflight.outcome == 'success'
+        continue-on-error: true
+        run: node ${{ steps.parse.outputs.script }} ${{ fromJSON(steps.parse.outputs.ids) }}
+
+      - name: Rebuild and validate after action
+        if: steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success' && steps.preflight.outcome == 'success'
+        continue-on-error: true
+        id: rebuild
+        run: |
+          npm run build
+          npm run validate:all
+
+      - name: Commit applied decision
+        if: steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success' && steps.preflight.outcome == 'success' && steps.operation.outcome == 'success' && steps.rebuild.outcome == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/system/editorial_backlog.json data/system/content_calendar.json data/admin data/content_atoms reports/workflow-trace dist .build
+          if git diff --cached --quiet; then
+            echo "No admin decision changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: apply admin decision from issue #${{ steps.issue_context.outputs.number }}"
+          git push
+
+      - name: Write action receipt
+        if: always() && steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success'
+        env:
+          RECEIPT_ID: issue-${{ steps.issue_context.outputs.number }}-${{ github.run_id }}
+          REQUESTED_BY: ${{ steps.issue_context.outputs.author }}
+          REQUEST_REASON: GitHub issue #${{ steps.issue_context.outputs.number }}
+          ACTION_STATUS: ${{ (steps.preflight.outcome == 'success' && steps.operation.outcome == 'success' && steps.rebuild.outcome == 'success') && 'success' || 'failure' }}
+          OPERATION: ${{ steps.parse.outputs.action }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+        run: node scripts/admin/write_action_receipt.js
+      - name: Commit action receipt
+        if: always() && steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success'
+        run: |
+          git config user.name "horse-legal-guide-admin"
+          git config user.email "actions@github.com"
+          git add data/admin/action_receipts
+          if git diff --cached --quiet; then
+            echo "No receipt change to commit."
+          else
+            git commit -m "chore: record admin decision issue receipt"
+            git push origin main
+          fi
+
+      - name: Reply with the outcome and close
+        if: always() && steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const ok = '${{ steps.preflight.outcome }}' === 'success'
+              && '${{ steps.operation.outcome }}' === 'success'
+              && '${{ steps.rebuild.outcome }}' === 'success';
+            const body = ok
+              ? 'Applied: "${{ steps.parse.outputs.action }}" for ${{ steps.parse.outputs.ids }}. It rebuilt, validated, and pushed to main - it will be live at https://horselegalguide.com/ once the site finishes deploying.'
+              : 'This decision could not be applied cleanly (self-heal, prevalidation, the action itself, or the rebuild/validate step failed). See the workflow run for this repository for the exact failure: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. Nothing was published. Please retry from /admin/ after the underlying issue is fixed.';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body,
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              state: 'closed',
+              labels: ['admin-decision', ok ? 'applied' : 'invalid'],
+            });
+
+      - name: Preserve operation failure
+        if: steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success' && (steps.preflight.outcome != 'success' || steps.operation.outcome != 'success' || steps.rebuild.outcome != 'success')
+        run: exit 1

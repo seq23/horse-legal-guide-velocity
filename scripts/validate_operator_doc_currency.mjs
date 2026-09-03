@@ -34,6 +34,12 @@ function docFiles() {
   for (const d of dirs) {
     const full = path.join(ROOT, d);
     if (!fs.existsSync(full)) continue;
+    // An explicitly named .md file (e.g. the repo's single root RUNBOOK.md)
+    // is checked directly rather than treated as a directory to walk.
+    if (fs.statSync(full).isFile()) {
+      if (full.endsWith('.md')) out.push(full);
+      continue;
+    }
     const walk = (dir) => {
       for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
         const f = path.join(dir, e.name);

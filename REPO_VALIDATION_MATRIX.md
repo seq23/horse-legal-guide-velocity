@@ -15,10 +15,10 @@ That caveat applies more widely than it reads:
 
 | Class | Count | Share | Behaviour in audit mode |
 |---|---:|---:|---|
-| `SOFTENABLE` — uses `createReport()` | 18 | 25% | Downgraded to a report; does not block |
-| `ALWAYS_BLOCKING` — legacy `fail()` / `exit(1)` | 54 | 75% | Blocks in audit **and** enforce |
+| `SOFTENABLE` — uses `createReport()` | 18 | 23% | Downgraded to a report; does not block |
+| `ALWAYS_BLOCKING` — legacy `fail()` / `exit(1)` | 61 | 77% | Blocks in audit **and** enforce |
 
-**54 of 72 single-command validators ignore audit mode.**
+**61 of 79 single-command validators ignore audit mode.**
 Treat audit mode as "softens a quarter of the suite", not as a dry run.
 
 Migrating a legacy validator to `createReport()` is what moves it from the
@@ -47,15 +47,19 @@ second table to the first. Nothing here changes behaviour; it records it.
 | `npm run validate:scenario-contract` | `_ops/validators/validate_scenario_family_contract.js` |
 | `npm run validate:sitemap-parity` | `_ops/validators/validate_sitemap_page_parity.js` |
 
-## Always blocking (54)
+## Always blocking (61)
 
 | Validator | Source |
 |---|---|
+| `npm run validate:admin-approval-live` | `_ops/validators/validate_admin_approval_reaches_live.js` |
 | `npm run validate:admin-manifest` | `_ops/validators/validate_admin_manifest.js` |
 | `npm run validate:admin-seo-dashboard` | `_ops/validators/validate_admin_seo_dashboard.js` |
+| `npm run validate:admin-ui-dispatches-approvals` | `_ops/validators/validate_admin_ui_dispatches_approvals.js` |
 | `npm run validate:agency-monitoring` | `_ops/validators/validate_agency_monitoring.js` |
 | `npm run validate:approved-content-email` | `_ops/validators/validate_approved_content_email_workflow.js` |
 | `npm run validate:assisted-operations-e2e` | `scripts/tests/validate_assisted_operations_e2e.mjs` |
+| `npm run validate:atlas-coverage` | `scripts/atlas/validate_publishable_coverage.mjs` |
+| `npm run validate:atlas-units` | `scripts/atlas/validate_atlas_units.mjs` |
 | `npm run validate:authority-distribution` | `scripts/authority_scale/validate_distribution_manifest.mjs` |
 | `npm run validate:authority-fanout` | `scripts/authority_scale/validate_max_fanout.mjs` |
 | `npm run validate:automation-mode` | `_ops/validators/validate_automation_mode.js` |
@@ -66,6 +70,7 @@ second table to the first. Nothing here changes behaviour; it records it.
 | `npm run validate:content-system` | `_ops/validators/validate_content_system.js` |
 | `npm run validate:continuity` | `scripts/continuity/validate_editorial_continuity.mjs` |
 | `npm run validate:disclaimers` | `_ops/validators/validate_disclaimer_presence.js` |
+| `npm run validate:discovery-gap` | `_ops/validators/validate_discovery_gap.js` |
 | `npm run validate:draft-uniqueness` | `_ops/validators/validate_draft_uniqueness.js` |
 | `npm run validate:drafts` | `_ops/validators/validate_draft_quality.js` |
 | `npm run validate:editorial` | `_ops/validators/validate_editorial_system.js` |
@@ -85,6 +90,7 @@ second table to the first. Nothing here changes behaviour; it records it.
 | `npm run validate:manual` | `_ops/validators/validate_manual_mode.js` |
 | `npm run validate:meta-uniqueness` | `_ops/validators/validate_meta_uniqueness.js` |
 | `npm run validate:mode` | `_ops/validators/validate_mode.js` |
+| `npm run validate:no-inert-stages` | `_ops/validators/validate_no_inert_stages.js` |
 | `npm run validate:page-manifests` | `_ops/validators/validate_page_manifests.js` |
 | `npm run validate:page-uniqueness` | `_ops/validators/validate_page_uniqueness.js` |
 | `npm run validate:policy` | `_ops/validators/validate_policy_compliance.js` |
@@ -102,11 +108,12 @@ second table to the first. Nothing here changes behaviour; it records it.
 | `npm run validate:remediation-workflow` | `_ops/validators/validate_remediation_workflow.js` |
 | `npm run validate:review` | `_ops/validators/validate_review_flow.js` |
 | `npm run validate:schema-completeness` | `_ops/validators/validate_schema_completeness.js` |
+| `npm run validate:self-heal-loop` | `_ops/validators/validate_self_heal_loop.js` |
 | `npm run validate:self-heal-report` | `_ops/validators/validate_self_heal_report.js` |
 | `npm run validate:wise-covington-contact` | `_ops/validators/validate_wise_covington_contact.js` |
 | `npm run validate:workflow-trace` | `scripts/ops/validate_workflow_trace.js` |
 
-## Composite gates (7)
+## Composite gates (8)
 
 These chain other validators with `&&`, so they inherit the severity of
 whichever member fails first and stop there.
@@ -118,3 +125,4 @@ whichever member fails first and stop there.
 - `npm run validate:seo-aeo-geo`
 - `npm run validate:llm-velocity`
 - `npm run validate:authority-modernization`
+- `npm run validate:operator-doc-currency`

@@ -167,6 +167,26 @@ function typeWord(type) {
     template: 'Template'
   }[type] || String(type || 'Article');
 }
+// A decision on /admin/ has to reach something that can actually change
+// data/system/editorial_backlog.json and rebuild+push, and the only thing on
+// this repo that can do that without new infrastructure is GitHub Actions
+// itself. GitHub's own OAuth bridge (the /api/admin/action endpoint /agency/
+// uses) needs Cloudflare Pages secrets (GITHUB_OAUTH_CLIENT_ID etc.) that a
+// live check of that session endpoint on 2026-09-03 confirmed are NOT
+// configured (provider_configured:false, the login route returned HTTP 500).
+// A prior PR already removed that path from this page for exactly that
+// reason (see docs/runbooks/GITHUB_ADMIN_AUTH_SETUP.md), guarded by
+// _ops/validators/validate_github_admin_functions.js, which fails the build
+// if this page advertises that endpoint again while it stays unconfigured.
+// So a decision here (buildDecisionIssueUrl/sendDecision below) opens a
+// pre-filled GitHub issue instead: creating an issue needs nothing but a
+// free, already-existing GitHub account, not a repo role or any new secret.
+// .github/workflows/admin-decision-issue.yml picks it up, checks the issue
+// author's actual repo permission through GitHub's own API (never trusting
+// this page - a public visitor cannot forge that), and only then runs the
+// identical approve_many.js / reject_many.js / mark_many_needs_revision.js
+// admin-bulk-content-actions.yml already uses. Guarded by
+// _ops/validators/validate_admin_ui_dispatches_approvals.js.
 function writeAdminIndex() {
   const config = readJson('data/system/config.json', {});
   const manifest = readJson('data/admin/editorial_manifest.json', { items: [] });
@@ -273,10 +293,11 @@ function writeAdminIndex() {
   </section>
   <section class="card" id="send-decisions">
     <h2>Send your decisions</h2>
-    <p>Approving is not yet available from this page. Tick the drafts you approve, click &ldquo;Send approvals&rdquo;, and they will go live within one business day.</p>
+    <p>Tick the drafts you decide on, then click a decision below. It opens a pre-filled request on GitHub (github.com) with the drafts and your decision already in it - you only click &ldquo;Submit new issue&rdquo; there. A repo maintainer's decision is picked up and applied automatically within a few minutes; anyone else's is answered with what to do next, never applied silently. You do not need to know Git or the command line, just a free GitHub account.</p>
     <div class="button-row"><button type="button" data-select="visible">Select visible page</button><button type="button" data-select="pending">Select everything waiting on this page</button><button type="button" data-select="clear">Clear selected</button></div>
-    <div class="button-row"><button type="button" data-decision="approve">Send approvals</button><button type="button" data-decision="needs_revision">Send &ldquo;needs changes&rdquo;</button><button type="button" data-decision="rejected">Send &ldquo;not this one&rdquo;</button></div>
+    <div class="button-row"><button type="button" data-decision="approve">Approve selected</button><button type="button" data-decision="needs_revision">Send &ldquo;needs changes&rdquo;</button><button type="button" data-decision="rejected">Send &ldquo;not this one&rdquo;</button></div>
     <p id="send-status" class="muted">Nothing sent yet.</p>
+    <p class="muted">No GitHub account, or would rather this go to a person instead of GitHub? Use the matching link instead of the buttons above - it only drafts an email and does not publish anything by itself: <button type="button" data-email-decision="approve" class="button-link">Email an approval</button> · <button type="button" data-email-decision="needs_revision" class="button-link">Email &ldquo;needs changes&rdquo;</button> · <button type="button" data-email-decision="rejected" class="button-link">Email &ldquo;not this one&rdquo;</button></p>
   </section>
   <section class="card">
     <h2>Publishing status</h2>
@@ -296,6 +317,7 @@ function writeAdminIndex() {
 <script>
 const expectedHash = ${JSON.stringify(config.admin_password_sha256 || '')};
 const REVIEW_EMAIL = ${JSON.stringify(reviewEmail)};
+const ADMIN_REPO_URL = ${JSON.stringify(normalizeRepoUrl(config))};
 const ADMIN_ITEMS = JSON.parse(document.getElementById('admin-items').textContent || '[]');
 const MONTH_NAMES = ${JSON.stringify(MONTHS)};
 let state = { page: 1, filtered: [] };
@@ -319,11 +341,41 @@ function renderRows(items){const tbody=document.getElementById('draft-tbody');if
 function renderQueue(resetPage=false){if(resetPage)state.page=1;const f=getFilters();const filtered=filterItems();state.filtered=filtered;const maxPage=Math.max(1,Math.ceil(filtered.length/f.pageSize));if(state.page>maxPage)state.page=maxPage;const start=(state.page-1)*f.pageSize;const visible=filtered.slice(start,start+f.pageSize);renderRows(visible);const summary=document.getElementById('filter-summary');if(summary)summary.textContent='Showing '+visible.length+' rows on page '+state.page+' of '+maxPage+'; '+filtered.length+' match filters out of '+ADMIN_ITEMS.length+' total drafts.';}
 function selectedIds(){return Array.from(document.querySelectorAll('.row-check:checked')).map((el)=>el.value);}
 function selectRows(kind){for(const row of document.querySelectorAll('#draft-tbody tr[data-entry-id]')){const cb=row.querySelector('.row-check');if(!cb)continue;if(kind==='clear')cb.checked=false;if(kind==='visible')cb.checked=true;if(kind==='pending')cb.checked=row.dataset.status==='pending';}}
-/* Decisions leave this page as an email to the person who publishes. There is
-   no server-side approve yet, and a textarea holding a shell command was not a
-   path a reviewer could ever use. */
-function sendDecision(kind){const ids=selectedIds();const status=document.getElementById('send-status');const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;if(!ids.length){status.textContent='Tick at least one draft first.';return;}if(!window.confirm('Send '+ids.length+' draft'+(ids.length===1?'':'s')+' as "'+label+'"? Nothing is published by this step.'))return;const byId=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i]));const lines=ids.map((id)=>{const item=byId[id]||{};return '- '+(item.title||id)+' ('+id+')';});const subject='Horse Legal Guide: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';const intro=kind==='approve'?'I approve these drafts for publishing:':kind==='needs_revision'?'These drafts need changes before publishing:':'Please do not publish these drafts:';const bodyText=intro+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Sent from /admin/ on '+todayISO()+'.';window.location.href='mailto:'+encodeURIComponent(REVIEW_EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyText);status.textContent=ids.length+' draft'+(ids.length===1?'':'s')+' added to an email marked "'+label+'". Send that email and they will go live within one business day.'+(REVIEW_EMAIL?'':' Add the recipient address before sending: it is not configured yet.');}
-function bindAdmin(){document.getElementById('unlock-admin')?.addEventListener('click',unlockAdmin);document.getElementById('admin-password')?.addEventListener('keydown',(event)=>{if(event.key==='Enter')unlockAdmin();});['status-filter','quality-filter','type-filter','cluster-filter','sort-filter','page-size'].forEach((id)=>document.getElementById(id)?.addEventListener('change',()=>renderQueue(true)));document.getElementById('prev-page')?.addEventListener('click',()=>{state.page=Math.max(1,state.page-1);renderQueue();});document.getElementById('next-page')?.addEventListener('click',()=>{state.page+=1;renderQueue();});document.getElementById('clear-filters')?.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value='all';document.getElementById('type-filter').value='all';document.getElementById('cluster-filter').value='all';document.getElementById('sort-filter').value='date-asc';renderQueue(true);});document.querySelectorAll('[data-filter-status]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value=button.dataset.filterStatus||'all';document.getElementById('quality-filter').value='all';renderQueue(true);}));document.querySelectorAll('[data-filter-quality]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value=button.dataset.filterQuality||'all';renderQueue(true);}));document.querySelectorAll('[data-select]').forEach((button)=>button.addEventListener('click',()=>selectRows(button.dataset.select)));document.querySelectorAll('[data-decision]').forEach((button)=>button.addEventListener('click',()=>sendDecision(button.dataset.decision)));if(sessionStorage.getItem('hlg-admin-open')==='true'){document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(sessionStorage.getItem('hlg-admin-password-reminder')||'');}renderOverdue();renderQueue();}
+/* Opens a labelled GitHub issue that admin-decision-issue.yml reads and
+   applies after checking the author's real repo permission. See the comment
+   above writeAdminIndex() in this file for why decisions route through an
+   issue rather than a direct server call. */
+function buildDecisionIssueUrl(kind,ids){
+  const action={approve:'approve',needs_revision:'needs_revision',rejected:'reject'}[kind]||kind;
+  const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;
+  const byId=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i]));
+  const lines=ids.map((id)=>{const item=byId[id]||{};return '- '+(item.title||id)+' ('+id+')';});
+  const title='Admin decision: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';
+  const body='Action: '+action+String.fromCharCode(10)+'IDs: '+ids.join(' ')+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Submitted from /admin/ on '+todayISO()+'. Do not edit the Action/IDs lines above - they are read automatically.';
+  const base=ADMIN_REPO_URL.endsWith('/')?ADMIN_REPO_URL.slice(0,-1):ADMIN_REPO_URL;
+  const url=new URL(base+'/issues/new');
+  url.searchParams.set('title',title);
+  url.searchParams.set('body',body);
+  url.searchParams.set('labels','admin-decision');
+  return url.toString();
+}
+function sendDecision(kind){
+  const ids=selectedIds();
+  const status=document.getElementById('send-status');
+  const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;
+  if(!ids.length){status.textContent='Tick at least one draft first.';return;}
+  if(!window.confirm('Open a GitHub request for '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.'))return;
+  window.open(buildDecisionIssueUrl(kind,ids),'_blank','noopener');
+  status.textContent=ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'" - a pre-filled GitHub request just opened in a new tab. Click "Submit new issue" there to send it; it is applied automatically within a few minutes once submitted.';
+}
+function emailDecision(kind){
+  const ids=selectedIds();
+  const status=document.getElementById('send-status');
+  const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;
+  if(!ids.length){status.textContent='Tick at least one draft first.';return;}
+  if(!window.confirm('Email '+ids.length+' draft'+(ids.length===1?'':'s')+' as "'+label+'"? This only drafts an email; nothing is published by this step.'))return;
+  const byId=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i]));const lines=ids.map((id)=>{const item=byId[id]||{};return '- '+(item.title||id)+' ('+id+')';});const subject='Horse Legal Guide: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';const intro=kind==='approve'?'I approve these drafts for publishing:':kind==='needs_revision'?'These drafts need changes before publishing:':'Please do not publish these drafts:';const bodyText=intro+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Sent from /admin/ on '+todayISO()+'.';window.location.href='mailto:'+encodeURIComponent(REVIEW_EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyText);status.textContent=ids.length+' draft'+(ids.length===1?'':'s')+' added to an email marked "'+label+'". This only drafted an email; nothing is published until whoever receives it takes the GitHub-request action above.'+(REVIEW_EMAIL?'':' Add the recipient address before sending: it is not configured yet.');}
+function bindAdmin(){document.getElementById('unlock-admin')?.addEventListener('click',unlockAdmin);document.getElementById('admin-password')?.addEventListener('keydown',(event)=>{if(event.key==='Enter')unlockAdmin();});['status-filter','quality-filter','type-filter','cluster-filter','sort-filter','page-size'].forEach((id)=>document.getElementById(id)?.addEventListener('change',()=>renderQueue(true)));document.getElementById('prev-page')?.addEventListener('click',()=>{state.page=Math.max(1,state.page-1);renderQueue();});document.getElementById('next-page')?.addEventListener('click',()=>{state.page+=1;renderQueue();});document.getElementById('clear-filters')?.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value='all';document.getElementById('type-filter').value='all';document.getElementById('cluster-filter').value='all';document.getElementById('sort-filter').value='date-asc';renderQueue(true);});document.querySelectorAll('[data-filter-status]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value=button.dataset.filterStatus||'all';document.getElementById('quality-filter').value='all';renderQueue(true);}));document.querySelectorAll('[data-filter-quality]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value=button.dataset.filterQuality||'all';renderQueue(true);}));document.querySelectorAll('[data-select]').forEach((button)=>button.addEventListener('click',()=>selectRows(button.dataset.select)));document.querySelectorAll('[data-decision]').forEach((button)=>button.addEventListener('click',()=>sendDecision(button.dataset.decision)));document.querySelectorAll('[data-email-decision]').forEach((button)=>button.addEventListener('click',()=>emailDecision(button.dataset.emailDecision)));if(sessionStorage.getItem('hlg-admin-open')==='true'){document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(sessionStorage.getItem('hlg-admin-password-reminder')||'');}renderOverdue();renderQueue();}
 document.addEventListener('DOMContentLoaded',bindAdmin);</script>`;
   ensureDir(root('dist/admin'));
   fs.writeFileSync(root('dist/admin/index.html'), htmlShell('Horse Legal Guide Admin', body));
