@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-09-03T13:40:56.000Z",
+  "generated_at": "2026-09-03T15:05:30.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-09-03T14:29:51.136Z",
-      "age_hours": -0.8,
+      "age_hours": 0.6,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-09-03T14:29:51.136Z",
-      "age_hours": -0.8,
+      "age_hours": 0.6,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-09-03T14:29:51.136Z",
-      "age_hours": -0.8,
+      "age_hours": 0.6,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -2016,23 +2016,23 @@
       "metadata_completeness": 100
     },
     "seo_metrics": {
-      "rendered_public_pages": 560,
-      "total_html_pages": 560,
-      "sitemap_url_count": 561,
-      "title_present": 560,
-      "description_present": 560,
-      "canonical_present": 560,
+      "rendered_public_pages": 562,
+      "total_html_pages": 562,
+      "sitemap_url_count": 563,
+      "title_present": 562,
+      "description_present": 562,
+      "canonical_present": 562,
       "duplicate_title_groups": 78,
       "duplicate_description_groups": 4,
-      "high_similarity_pairs": 344,
+      "high_similarity_pairs": 341,
       "intent_overlap_pairs": 198,
       "uniqueness_review_clusters": 81,
       "drafts_automatically_differentiated": 193,
       "draft_uniqueness_failures": 0,
-      "jsonld_present": 560,
-      "article_schema_pages": 560,
-      "breadcrumb_schema_pages": 560,
-      "internal_link_healthy_pages": 560,
+      "jsonld_present": 562,
+      "article_schema_pages": 562,
+      "breadcrumb_schema_pages": 562,
+      "internal_link_healthy_pages": 562,
       "zero_internal_link_pages": 0,
       "weak_internal_link_pages": 0,
       "draft_items": 306,
@@ -2057,23 +2057,23 @@
       "github_actions_simulation_failures": 0
     },
     "page_uniqueness": {
-      "indexable_pages_measured": 560,
+      "indexable_pages_measured": 562,
       "duplicate_title_groups": 79,
       "duplicate_description_groups": 4,
-      "high_similarity_pairs": 344,
+      "high_similarity_pairs": 341,
       "intent_overlap_pairs": 198
     },
     "family_metrics": {
       "articles": {
-        "pages": 1,
+        "pages": 3,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 3,
+        "high_similarity_pair_memberships": 0,
         "intent_overlap_pair_memberships": 0
       },
       "authority": {
         "pages": 1,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 3,
+        "high_similarity_pair_memberships": 2,
         "intent_overlap_pair_memberships": 0
       },
       "boarding": {
@@ -2127,7 +2127,7 @@
       "insights": {
         "pages": 1,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 3,
+        "high_similarity_pair_memberships": 2,
         "intent_overlap_pair_memberships": 0
       },
       "ip": {
@@ -2187,7 +2187,7 @@
       "whitepapers": {
         "pages": 1,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 3,
+        "high_similarity_pair_memberships": 2,
         "intent_overlap_pair_memberships": 0
       }
     }
@@ -12041,40 +12041,6 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/authority/",
-        "members": [
-          "/articles/",
-          "/authority/",
-          "/insights/",
-          "/whitepapers/"
-        ],
-        "families": [
-          "articles",
-          "authority",
-          "insights",
-          "whitepapers"
-        ],
-        "reasons": [
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.9423,
-        "suggested_actions": [
-          "differentiate_patch"
-        ],
-        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0007",
-        "ledger_id": "uniqueness-0007",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
         "candidate_primary": "/reference/what-should-someone-know-about-a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/",
         "members": [
           "/reference/what-should-someone-know-about-a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
@@ -12101,8 +12067,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0008",
-        "ledger_id": "uniqueness-0008",
+        "proposal_id": "remediation-uniqueness-0007",
+        "ledger_id": "uniqueness-0007",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12153,8 +12119,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0009",
-        "ledger_id": "uniqueness-0009",
+        "proposal_id": "remediation-uniqueness-0008",
+        "ledger_id": "uniqueness-0008",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12197,8 +12163,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0010",
-        "ledger_id": "uniqueness-0010",
+        "proposal_id": "remediation-uniqueness-0009",
+        "ledger_id": "uniqueness-0009",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12232,8 +12198,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0011",
-        "ledger_id": "uniqueness-0011",
+        "proposal_id": "remediation-uniqueness-0010",
+        "ledger_id": "uniqueness-0010",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12272,8 +12238,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0012",
-        "ledger_id": "uniqueness-0012",
+        "proposal_id": "remediation-uniqueness-0011",
+        "ledger_id": "uniqueness-0011",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12308,8 +12274,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0013",
-        "ledger_id": "uniqueness-0013",
+        "proposal_id": "remediation-uniqueness-0012",
+        "ledger_id": "uniqueness-0012",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12339,8 +12305,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0014",
-        "ledger_id": "uniqueness-0014",
+        "proposal_id": "remediation-uniqueness-0013",
+        "ledger_id": "uniqueness-0013",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12371,8 +12337,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0015",
-        "ledger_id": "uniqueness-0015",
+        "proposal_id": "remediation-uniqueness-0014",
+        "ledger_id": "uniqueness-0014",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12408,8 +12374,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0016",
-        "ledger_id": "uniqueness-0016",
+        "proposal_id": "remediation-uniqueness-0015",
+        "ledger_id": "uniqueness-0015",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12437,8 +12403,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0017",
-        "ledger_id": "uniqueness-0017",
+        "proposal_id": "remediation-uniqueness-0016",
+        "ledger_id": "uniqueness-0016",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12466,6 +12432,38 @@
           "differentiate_patch"
         ],
         "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0017",
+        "ledger_id": "uniqueness-0017",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
+        "candidate_primary": "/authority/",
+        "members": [
+          "/authority/",
+          "/insights/",
+          "/whitepapers/"
+        ],
+        "families": [
+          "authority",
+          "insights",
+          "whitepapers"
+        ],
+        "reasons": [
+          "high_body_similarity"
+        ],
+        "maximum_body_similarity": 0.9195,
+        "suggested_actions": [
+          "differentiate_patch"
+        ],
+        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
         "approval_required_for_live_change": true,
         "automatic_live_change": false,
         "patch_plan": null
@@ -14762,8 +14760,6 @@
         "/reference/what-equine-legal-issues-should-someone-consider-in-what-does-illinois-equine-liability-law-cover/",
         "/reference/what-should-someone-know-about-insurance-denied-a-horse-related-claim-what-should-be-gathered/",
         "/reference/what-should-someone-know-about-a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
-        "/insights/",
-        "/articles/",
         "/reference/what-should-someone-know-about-someone-was-hurt-riding-my-horse-what-should-i-think-about/",
         "/reference/what-should-someone-know-about-a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
         "/reference/how-to-start-a-horse-retail-business/",
@@ -14799,7 +14795,9 @@
         "/reference/what-if-i-already-signed-something-i-did-not-understand/",
         "/reference/do-people-actually-get-sued-over-horse-deals/",
         "/reference/what-should-someone-know-about-am-i-overreacting-or-is-this-risky/",
-        "/reference/can-i-back-out-of-a-horse-deal-without-getting-sued/"
+        "/reference/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+        "/reference/who-is-liable-during-a-horse-lease/",
+        "/reference/what-should-be-included-in-a-horse-lease-agreement/"
       ],
       "recommended_action": "Use the owner-review consolidation ledger to decide which existing pages should be differentiated or, in a separately approved phase, consolidated. This build does not mutate live pages."
     },
