@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-03T16:41:13.000Z",
-  "measurement_fingerprint": "a4575dc06b782bc69f4c1505490ef82bf66a0b072cecacfdf2d7af99bc51f689",
+  "generated_at": "2026-09-03T17:07:55.000Z",
+  "measurement_fingerprint": "6e8b408446c6d7713ce51c125133bde2089bbc295ebde15cbb59b15d8e1adf0b",
   "title": "LLM Citation Velocity Dashboard",
   "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, page uniqueness, and workflow trace next steps.",
   "truth_boundary": "Scores are regenerated from the current repo files and freshly rendered dist HTML on every release build. Existing-page similarity findings are advisory and require owner approval before any live change. Draft similarity is automatically repaired before approval eligibility. These local measurements do not prove live GitHub Actions, live GSC, Bing, or IndexNow until those provider workflows run after apply.",
@@ -35,23 +35,23 @@
     "metadata_completeness": 100
   },
   "metrics": {
-    "rendered_public_pages": 562,
-    "total_html_pages": 562,
-    "sitemap_url_count": 563,
-    "title_present": 562,
-    "description_present": 562,
-    "canonical_present": 562,
+    "rendered_public_pages": 560,
+    "total_html_pages": 560,
+    "sitemap_url_count": 561,
+    "title_present": 560,
+    "description_present": 560,
+    "canonical_present": 560,
     "duplicate_title_groups": 78,
     "duplicate_description_groups": 4,
-    "high_similarity_pairs": 341,
+    "high_similarity_pairs": 344,
     "intent_overlap_pairs": 198,
     "uniqueness_review_clusters": 81,
     "drafts_automatically_differentiated": 194,
     "draft_uniqueness_failures": 0,
-    "jsonld_present": 562,
-    "article_schema_pages": 562,
-    "breadcrumb_schema_pages": 562,
-    "internal_link_healthy_pages": 562,
+    "jsonld_present": 560,
+    "article_schema_pages": 560,
+    "breadcrumb_schema_pages": 560,
+    "internal_link_healthy_pages": 560,
     "zero_internal_link_pages": 0,
     "weak_internal_link_pages": 0,
     "draft_items": 306,
@@ -78,8 +78,8 @@
   "summary": {
     "total": 306,
     "pending": 304,
-    "approved": 2,
-    "rejected": 0,
+    "approved": 0,
+    "rejected": 2,
     "needs_revision": 0,
     "approval_eligible": 306,
     "missing_data_atom": 0,
@@ -235,6 +235,8 @@
         "/reference/what-equine-legal-issues-should-someone-consider-in-what-does-illinois-equine-liability-law-cover/",
         "/reference/what-should-someone-know-about-insurance-denied-a-horse-related-claim-what-should-be-gathered/",
         "/reference/what-should-someone-know-about-a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
+        "/insights/",
+        "/articles/",
         "/reference/what-should-someone-know-about-someone-was-hurt-riding-my-horse-what-should-i-think-about/",
         "/reference/what-should-someone-know-about-a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
         "/reference/how-to-start-a-horse-retail-business/",
@@ -270,9 +272,7 @@
         "/reference/what-if-i-already-signed-something-i-did-not-understand/",
         "/reference/do-people-actually-get-sued-over-horse-deals/",
         "/reference/what-should-someone-know-about-am-i-overreacting-or-is-this-risky/",
-        "/reference/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-        "/reference/who-is-liable-during-a-horse-lease/",
-        "/reference/what-should-be-included-in-a-horse-lease-agreement/"
+        "/reference/can-i-back-out-of-a-horse-deal-without-getting-sued/"
       ],
       "bulk_fix_available": false,
       "action_label": "",
@@ -280,7 +280,7 @@
       "github_edit_urls": [
         "https://github.com/seq23/horse-legal-guide-velocity/blob/main/data/admin/consolidation_review_ledger.json"
       ],
-      "source_metric": "341 pairs at or above 0.85 body similarity",
+      "source_metric": "344 pairs at or above 0.85 body similarity",
       "measurement": ""
     },
     {

@@ -44,12 +44,12 @@ button.secondary{background:#efe3d1;color:#2c2118}
 <div id="gated-content" hidden>
 <p class="small"><a href="/admin/drafts/">&larr; All queued drafts</a> · <a href="/admin/">Admin</a></p>
 <div class="banner">
-  <p class="eyebrow">Currently live</p>
-  <p style="margin:0">This piece <strong>is live now</strong> at <a href="/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/">/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/</a>. &ldquo;Not this one&rdquo; below would take it down (unpublish, not delete); approving it again later restores it with nothing lost.</p>
+  <p class="eyebrow">Unapproved draft · preview only</p>
+  <p style="margin:0">This draft is <strong>not published</strong> and is not on the live site. Nothing on this page approves or publishes anything. Publishing stays manual and owner-authorised.</p>
 </div>
 <header>
   <h1>A Practical Framework for Demand Letters &amp; Disputes</h1>
-  <p><span class="pill">2026-05-05</span><span class="pill">Article</span><span class="pill">demand letters and disputes</span><span class="pill">Approved</span><span class="pill">1707 words</span></p>
+  <p><span class="pill">2026-05-05</span><span class="pill">Article</span><span class="pill">demand letters and disputes</span><span class="pill">Not this one</span><span class="pill">1707 words</span></p>
   
 </header>
 <div class="card" id="decide">
@@ -73,7 +73,7 @@ function buildDecisionIssueUrl(repoUrl,kind,ids,titleById){const action={approve
   var EMAIL="claire@wisecovington.com";
   var TITLE="A Practical Framework for Demand Letters & Disputes";
   var ID="draft-article-2026-05-05-demand-letters-and-disputes";
-  var IS_LIVE=true;
+  var IS_LIVE=false;
   var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'not this one'};
   function emailFallback(kind){
     if(!EMAIL){var s=document.getElementById('decision-status');if(s)s.textContent='Cannot draft this email: no recipient is configured (data/system/config.json owner_review_email). Ask the repo owner to set it.';return;}
