@@ -113,7 +113,24 @@ function htmlShell(title, body) {
 th.sortable{cursor:pointer;user-select:none}
 th.sortable:focus-visible{outline:2px solid #2c2118;outline-offset:2px}
 .sort-indicator{display:inline-block;margin-left:4px;opacity:.35;font-size:.8em}
-.sort-indicator.active{opacity:1}</style>
+.sort-indicator.active{opacity:1}
+/* The page's own "button,.button-link{...display:inline-block}" rule above
+   is an author-tier rule, so it unconditionally beats the browser's UA-tier
+   "[hidden]{display:none}" default (author normal always wins over UA normal
+   in the cascade, regardless of specificity) - confirmed live on
+   #clear-selected-btn, which stayed visible reading "Clear 0 selected" with
+   the hidden attribute correctly set. [hidden] as an attribute selector
+   (specificity 0,1,0) beats a type/class selector's display, so this one
+   rule is enough to make every hidden control on this page actually hide. */
+[hidden]{display:none!important}
+/* The page's shared "button,.button-link{...background:#2c2118...}" rule
+   (used above) makes .button-link look IDENTICAL to a primary decision
+   button - confirmed live: "Email an approval" etc. rendered as the same
+   strong black pill as "Approve selected". That directly contradicts this
+   block's own requirement to read as visually subordinate, not as a second
+   row of decisions. Scoped to the assistant block only - .button-link is not
+   used anywhere else in this file. */
+.assistant-block .button-link{background:transparent;color:#7a4b18;border:1px solid #d8c8b4;font-weight:700;padding:7px 12px}</style>
 </head>
 <body><main class="shell">${body}</main></body>
 </html>`;

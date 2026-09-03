@@ -2,16 +2,16 @@
   "schema_version": "1.0",
   "validator": "validate_content_pattern_contract",
   "spec": ".clarity/content-pattern-spec.json",
-  "generated_at": "2026-09-03T17:02:02.076Z",
+  "generated_at": "2026-09-03T17:26:06.089Z",
   "issue_severity": "report_only",
-  "pages_checked": 559,
-  "blocking_backlog_count": 24,
+  "pages_checked": 557,
+  "blocking_backlog_count": 22,
   "summary": [
     {
       "id": "direct_answer",
       "blocking_check": true,
-      "pages_missing": 24,
-      "coverage_pct": 95.7,
+      "pages_missing": 22,
+      "coverage_pct": 96.1,
       "message": "No quick-answer block; nothing on this page is quotable without surrounding context."
     },
     {
@@ -46,7 +46,7 @@
       "id": "comparison_table",
       "blocking_check": false,
       "pages_missing": 159,
-      "coverage_pct": 71.6,
+      "coverage_pct": 71.5,
       "message": "No comparison or cost table (agent request #2, 529 occurrences)."
     },
     {
@@ -59,15 +59,15 @@
     {
       "id": "named_sources",
       "blocking_check": false,
-      "pages_missing": 559,
+      "pages_missing": 557,
       "coverage_pct": 0,
       "message": "No named primary source (agent request #6, 288 occurrences)."
     },
     {
       "id": "faq",
       "blocking_check": false,
-      "pages_missing": 24,
-      "coverage_pct": 95.7,
+      "pages_missing": 22,
+      "coverage_pct": 96.1,
       "message": "No FAQ block or FAQPage schema (agent request #9)."
     },
     {
@@ -80,19 +80,19 @@
     {
       "id": "recommendation_summary",
       "blocking_check": false,
-      "pages_missing": 469,
-      "coverage_pct": 16.1
+      "pages_missing": 467,
+      "coverage_pct": 16.2
     },
     {
       "id": "definition_callout",
       "blocking_check": false,
-      "pages_missing": 23,
-      "coverage_pct": 95.9
+      "pages_missing": 21,
+      "coverage_pct": 96.2
     },
     {
       "id": "trust_block",
       "blocking_check": false,
-      "pages_missing": 559,
+      "pages_missing": 557,
       "coverage_pct": 0
     }
   ],
@@ -127,8 +127,6 @@
     ],
     "concrete_numbers": [],
     "named_sources": [
-      "dist/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/index.html",
-      "dist/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/index.html",
       "dist/articles/index.html",
       "dist/authority/index.html",
       "dist/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/index.html",
@@ -151,11 +149,11 @@
       "dist/business/how-to-start-a-horse-retail-business/index.html",
       "dist/business/how-to-start-a-training-barn-legally/index.html",
       "dist/business/how-to-start-an-equine-apparel-business/index.html",
-      "dist/business/how-to-start-an-equine-assisted-therapy-business/index.html"
+      "dist/business/how-to-start-an-equine-assisted-therapy-business/index.html",
+      "dist/business/joint-venture-agreement-equine-business/index.html",
+      "dist/business/partnership-agreement-for-horse-business/index.html"
     ],
     "faq": [
-      "dist/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/index.html",
-      "dist/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/index.html",
       "dist/articles/index.html",
       "dist/authority/index.html",
       "dist/compare/index.html",
@@ -181,8 +179,6 @@
     ],
     "structured_data": [],
     "recommendation_summary": [
-      "dist/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/index.html",
-      "dist/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/index.html",
       "dist/articles/index.html",
       "dist/authority/index.html",
       "dist/compare/as-is-clause-vs-disclosure-clause-in-a-horse-sale/index.html",
@@ -205,11 +201,11 @@
       "dist/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/index.html",
       "dist/compare/equine-activity-statute-vs-negligence-claim/index.html",
       "dist/compare/equine-business-contract-vs-general-business-contract/index.html",
-      "dist/compare/equine-therapy-consent-form-vs-liability-waiver/index.html"
+      "dist/compare/equine-therapy-consent-form-vs-liability-waiver/index.html",
+      "dist/compare/facility-lease-vs-pasture-lease/index.html",
+      "dist/compare/hold-harmless-clause-vs-indemnity-clause/index.html"
     ],
     "definition_callout": [
-      "dist/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/index.html",
-      "dist/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/index.html",
       "dist/articles/index.html",
       "dist/authority/index.html",
       "dist/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/index.html",
@@ -233,8 +229,6 @@
       "dist/whitepapers/index.html"
     ],
     "trust_block": [
-      "dist/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/index.html",
-      "dist/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/index.html",
       "dist/articles/index.html",
       "dist/authority/index.html",
       "dist/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/index.html",
@@ -257,18 +251,12 @@
       "dist/business/how-to-start-a-horse-retail-business/index.html",
       "dist/business/how-to-start-a-training-barn-legally/index.html",
       "dist/business/how-to-start-an-equine-apparel-business/index.html",
-      "dist/business/how-to-start-an-equine-assisted-therapy-business/index.html"
+      "dist/business/how-to-start-an-equine-assisted-therapy-business/index.html",
+      "dist/business/joint-venture-agreement-equine-business/index.html",
+      "dist/business/partnership-agreement-for-horse-business/index.html"
     ]
   },
   "blocking_backlog": [
-    {
-      "path": "dist/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/index.html",
-      "check": "direct_answer"
-    },
-    {
-      "path": "dist/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/index.html",
-      "check": "direct_answer"
-    },
     {
       "path": "dist/articles/index.html",
       "check": "direct_answer"

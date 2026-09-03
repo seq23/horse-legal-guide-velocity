@@ -2,30 +2,8 @@
   "validator": "validate_content_pattern_contract",
   "scope": "page",
   "mode": "enforce",
-  "issue_count": 30,
+  "issue_count": 28,
   "issues": [
-    {
-      "validator": "validate_content_pattern_contract",
-      "scope": "page",
-      "file": "dist/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/index.html",
-      "severity": "error",
-      "code": "missing_direct_answer",
-      "message": "No quick-answer block; nothing on this page is quotable without surrounding context.",
-      "fixHint": "Render a data-answer-summary=\"true\" block before the main body.",
-      "autofix": false,
-      "blocking": false
-    },
-    {
-      "validator": "validate_content_pattern_contract",
-      "scope": "page",
-      "file": "dist/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/index.html",
-      "severity": "error",
-      "code": "missing_direct_answer",
-      "message": "No quick-answer block; nothing on this page is quotable without surrounding context.",
-      "fixHint": "Render a data-answer-summary=\"true\" block before the main body.",
-      "autofix": false,
-      "blocking": false
-    },
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
@@ -271,7 +249,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "159 page(s), coverage 71.6%",
+      "file": "159 page(s), coverage 71.5%",
       "severity": "warning",
       "code": "coverage_comparison_table",
       "message": "No comparison or cost table (agent request #2, 529 occurrences).",
@@ -282,7 +260,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "559 page(s), coverage 0%",
+      "file": "557 page(s), coverage 0%",
       "severity": "warning",
       "code": "coverage_named_sources",
       "message": "No named primary source (agent request #6, 288 occurrences).",
@@ -293,7 +271,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "24 page(s), coverage 95.7%",
+      "file": "22 page(s), coverage 96.1%",
       "severity": "warning",
       "code": "coverage_faq",
       "message": "No FAQ block or FAQPage schema (agent request #9).",
@@ -304,7 +282,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "469 page(s), coverage 16.1%",
+      "file": "467 page(s), coverage 16.2%",
       "severity": "warning",
       "code": "coverage_recommendation_summary",
       "fixHint": "undefined Full list: reports/content-pattern-contract.json",
@@ -314,7 +292,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "23 page(s), coverage 95.9%",
+      "file": "21 page(s), coverage 96.2%",
       "severity": "warning",
       "code": "coverage_definition_callout",
       "fixHint": "undefined Full list: reports/content-pattern-contract.json",
@@ -324,7 +302,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "559 page(s), coverage 0%",
+      "file": "557 page(s), coverage 0%",
       "severity": "warning",
       "code": "coverage_trust_block",
       "fixHint": "undefined Full list: reports/content-pattern-contract.json",
