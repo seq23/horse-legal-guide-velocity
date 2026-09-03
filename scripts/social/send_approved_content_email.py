@@ -130,16 +130,16 @@ def resolve_live_public_url(site_domain: str, entry: Dict[str, Any], draft_meta:
         # live_slug is the one field scripts/build/write_editorial_pages.js
         # actually persists to data/system/editorial_backlog.json once an
         # entry is genuinely rendered live (see its own comment on why it is
-        # persisted there at all). None of the fields below it ever appear on
-        # a real backlog entry - this function returned None for every entry,
-        # always, until live_slug was added here, which is why "packages" (the
-        # go-live email) never fired even for content that had been live for
-        # weeks.
+        # persisted there at all). This function used to read public_url,
+        # live_url, url, and preview_url instead/as well - none of which any
+        # writer in this repo has ever assigned onto a backlog entry - so it
+        # returned None for every entry, always, until live_slug replaced
+        # them; that is why "packages" (the go-live email) never fired even
+        # for content that had been live for weeks. Removed rather than kept
+        # as dead fallbacks: _ops/validators/validate_backlog_field_accessors.js
+        # now fails the build if a read here ever again names a field nothing
+        # writes.
         entry.get("live_slug"),
-        entry.get("public_url"),
-        entry.get("live_url"),
-        entry.get("url"),
-        entry.get("preview_url"),
         draft_meta.get("slug"),
     ]
     title = draft_meta.get("title") or entry.get("title") or entry.get("entry_id") or "approved-content"
@@ -229,10 +229,10 @@ def select_new_approvals(
 def select_new_revokes(
     backlog: List[Dict[str, Any]], sent: Dict[str, Any], ids: Optional[List[str]], force_resend: bool
 ) -> List[Dict[str, Any]]:
-    """Entries most recently marked "not this one" (scripts/admin/_common.js
+    """Entries most recently marked "revoke this one" (scripts/admin/_common.js
     rejectEntry) that have not already been notified for THIS revoke.
 
-    Keyed by entry_id + rejected_at rather than entry_id alone: "not this one"
+    Keyed by entry_id + rejected_at rather than entry_id alone: "revoke this one"
     is a revoke, not a one-time terminal state (see rejectEntry's docstring) -
     an entry can be approved, revoked, re-approved, and revoked again, and each
     distinct revoke deserves its own notice.
@@ -293,7 +293,7 @@ def render_markdown(
                 copy["instagram"],
             ])
     if new_revokes:
-        lines.extend(["", "## Revoked (\"not this one\")", "", "Each of these was just marked \"not this one\". Nothing was deleted - approving again restores it with nothing lost."])
+        lines.extend(["", "## Revoked", "", "Each of these was just revoked. Nothing was deleted - approving again restores it with nothing lost."])
         for item in new_revokes:
             was_live = "it WAS live and has now been taken down" if item.get("revoked_from_live") else "it was not live, so nothing changed on the site"
             lines.append(f"- **{item['title']}** (`{item['entry_id']}`) - {was_live}")
