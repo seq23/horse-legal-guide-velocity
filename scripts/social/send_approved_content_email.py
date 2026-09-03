@@ -127,6 +127,15 @@ def dist_path_exists(site_domain: str, url: str) -> bool:
 
 def resolve_live_public_url(site_domain: str, entry: Dict[str, Any], draft_meta: Dict[str, str]) -> Optional[str]:
     candidates = [
+        # live_slug is the one field scripts/build/write_editorial_pages.js
+        # actually persists to data/system/editorial_backlog.json once an
+        # entry is genuinely rendered live (see its own comment on why it is
+        # persisted there at all). None of the fields below it ever appear on
+        # a real backlog entry - this function returned None for every entry,
+        # always, until live_slug was added here, which is why "packages" (the
+        # go-live email) never fired even for content that had been live for
+        # weeks.
+        entry.get("live_slug"),
         entry.get("public_url"),
         entry.get("live_url"),
         entry.get("url"),
