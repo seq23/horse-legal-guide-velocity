@@ -49,6 +49,7 @@ function main() {
     { marker: 'Action: ', why: 'the issue body must carry the fixed "Action: <kind>" header parse_decision_issue.js reads' },
     { marker: 'IDs: ', why: 'the issue body must carry the fixed "IDs: <ids>" header parse_decision_issue.js reads' },
     { marker: 'buildDecisionIssueUrl', why: 'the page must build the issue URL itself rather than relying on an unconfigured server endpoint' },
+    { marker: 'This will take down', why: '"not this one" is a revoke - taking a live article down must be confirmed and named to the reviewer before the request opens, never a silent side effect' },
   ];
   const missing = required.filter((r) => !html.includes(r.marker));
   if (missing.length) {
@@ -102,8 +103,11 @@ function main() {
   const previewFailures = [];
   for (const file of previewFiles) {
     const previewHtml = fs.readFileSync(file, 'utf8');
-    if (!previewHtml.includes('buildDecisionIssueUrl') || !previewHtml.includes('admin-decision')) {
+    if (!previewHtml.includes('buildDecisionIssueUrl') || !previewHtml.includes('admin-decision') || !previewHtml.includes('This will take down')) {
       previewFailures.push(path.relative(process.cwd(), file));
+    }
+    if (previewHtml.includes('/api/admin/action') || previewHtml.includes('x-hlg-admin-csrf')) {
+      previewFailures.push(`${path.relative(process.cwd(), file)} (references the unconfigured OAuth action endpoint)`);
     }
   }
   if (previewFailures.length) {
@@ -112,7 +116,32 @@ function main() {
     process.exit(1);
   }
 
-  ok(`dist/admin/index.html and all ${previewFiles.length} per-draft preview page(s) open a real GitHub-issue decision request, and .github/workflows/admin-decision-issue.yml exists to apply it with an author-permission check.`);
+  // General property, stated once rather than one marker at a time: no
+  // decision control anywhere on this admin surface may exist that this gate
+  // never actually counted. A page that swapped every real data-decision
+  // button for something else while still passing every marker check above
+  // (each marker only needs to appear ONCE, anywhere in the file) would slip
+  // through the checks above undetected. Count the controls themselves, on
+  // every examined page, and hard-fail if the count is zero anywhere - a gate
+  // that examines zero decision controls has proven nothing about them.
+  const allFiles = [{ label: 'dist/admin/index.html', src: html }, ...previewFiles.map((f) => ({ label: path.relative(process.cwd(), f), src: fs.readFileSync(f, 'utf8') }))];
+  const zeroControlPages = [];
+  let totalControls = 0;
+  for (const { label, src } of allFiles) {
+    const count = (src.match(/data-decision="/g) || []).length;
+    totalControls += count;
+    if (count === 0) zeroControlPages.push(label);
+  }
+  if (zeroControlPages.length) {
+    console.error(`ADMIN_UI_APPROVAL_WIRING_FAIL: GATE_EXAMINED_ZERO_CONTROLS - ${zeroControlPages.length} page(s) carry no data-decision control at all, so this gate proved nothing about them:`);
+    for (const f of zeroControlPages.slice(0, 10)) console.error(`- ${f}`);
+    process.exit(1);
+  }
+  if (totalControls === 0) {
+    fail('ADMIN_UI_APPROVAL_WIRING_FAIL: GATE_EXAMINED_ZERO_CONTROLS - 0 decision controls found across every examined page.');
+  }
+
+  ok(`dist/admin/index.html and all ${previewFiles.length} per-draft preview page(s) open a real GitHub-issue decision request (${totalControls} decision control(s) examined, all routing through buildDecisionIssueUrl with a named take-down confirmation), and .github/workflows/admin-decision-issue.yml exists to apply it with an author-permission check.`);
 }
 
 if (require.main === module) main();

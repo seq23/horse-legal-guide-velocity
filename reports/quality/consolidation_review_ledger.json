@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-03T11:23:25.000Z",
-  "source_fingerprint": "6e8b408446c6d7713ce51c125133bde2089bbc295ebde15cbb59b15d8e1adf0b",
+  "generated_at": "2026-09-03T16:41:13.000Z",
+  "source_fingerprint": "a4575dc06b782bc69f4c1505490ef82bf66a0b072cecacfdf2d7af99bc51f689",
   "policy": "Owner review only. This ledger never mutates live pages, routes, canonicals, robots directives, or redirects.",
   "automatic_live_changes_allowed": false,
   "entry_count": 81,
@@ -136,30 +136,6 @@
       "ledger_id": "uniqueness-0006",
       "status": "owner_review_required",
       "action_applied": "none",
-      "candidate_primary": "/authority/",
-      "members": [
-        "/articles/",
-        "/authority/",
-        "/insights/",
-        "/whitepapers/"
-      ],
-      "families": [
-        "articles",
-        "authority",
-        "insights",
-        "whitepapers"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.9423,
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true
-    },
-    {
-      "ledger_id": "uniqueness-0007",
-      "status": "owner_review_required",
-      "action_applied": "none",
       "candidate_primary": "/reference/what-should-someone-know-about-a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/",
       "members": [
         "/reference/what-should-someone-know-about-a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
@@ -181,7 +157,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0008",
+      "ledger_id": "uniqueness-0007",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/business/horse-syndicate-legal-structure/",
@@ -221,7 +197,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0009",
+      "ledger_id": "uniqueness-0008",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/scenario/what-if-i-bought-a-horse-without-a-contract/",
@@ -253,7 +229,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0010",
+      "ledger_id": "uniqueness-0009",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/reference/what-should-someone-know-about-a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/",
@@ -278,7 +254,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0011",
+      "ledger_id": "uniqueness-0010",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
@@ -306,7 +282,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0012",
+      "ledger_id": "uniqueness-0011",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/reference/what-should-someone-know-about-a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/",
@@ -332,7 +308,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0013",
+      "ledger_id": "uniqueness-0012",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/reference/what-should-someone-know-about-a-barn-uses-volunteers-what-legal-issues-can-come-up/",
@@ -353,7 +329,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0014",
+      "ledger_id": "uniqueness-0013",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/reference/what-should-someone-know-about-an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/",
@@ -375,7 +351,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0015",
+      "ledger_id": "uniqueness-0014",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/who-is-liable-during-a-horse-lease/",
@@ -400,7 +376,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0016",
+      "ledger_id": "uniqueness-0015",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/reference/what-should-someone-know-about-a-contract-has-no-state-law-clause-why-can-that-matter/",
@@ -419,7 +395,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0017",
+      "ledger_id": "uniqueness-0016",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/reference/what-should-someone-know-about-i-started-a-barn-without-paperwork-what-risks-did-i-create/",
@@ -440,6 +416,28 @@
       ],
       "maximum_body_similarity": 0.9198,
       "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true
+    },
+    {
+      "ledger_id": "uniqueness-0017",
+      "status": "owner_review_required",
+      "action_applied": "none",
+      "candidate_primary": "/authority/",
+      "members": [
+        "/authority/",
+        "/insights/",
+        "/whitepapers/"
+      ],
+      "families": [
+        "authority",
+        "insights",
+        "whitepapers"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9195,
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
     {

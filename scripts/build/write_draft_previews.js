@@ -188,12 +188,23 @@ function previewPage(entry, bodyHtml, missing, previewPath, repoUrl, gateHash, r
     ? `<p class="muted small">${missing.length} internal reference${missing.length === 1 ? '' : 's'} in this draft point${missing.length === 1 ? 's' : ''} at a page that is not published yet. They are marked inline.</p>`
     : '';
   const willPublishAt = `/${section(entry.content_type)}/${esc(entry.date || '')}/`;
-  const body = `
-<p class="small"><a href="/admin/drafts/">&larr; All queued drafts</a> · <a href="/admin/">Admin</a></p>
-<div class="banner">
+  // The banner must say what is actually true right now, not a fixed claim
+  // that was only ever true for a never-yet-approved draft: this page also
+  // renders for entries that ARE currently live, and telling a reviewer a
+  // live article "is not on the live site" is the exact class of mismatch
+  // between what /admin/ said and what was really true that caused this.
+  const statusBanner = entry.live_slug
+    ? `<div class="banner">
+  <p class="eyebrow">Currently live</p>
+  <p style="margin:0">This piece <strong>is live now</strong> at <a href="${esc(entry.live_slug)}">${esc(entry.live_slug)}</a>. &ldquo;Not this one&rdquo; below would take it down (unpublish, not delete); approving it again later restores it with nothing lost.</p>
+</div>`
+    : `<div class="banner">
   <p class="eyebrow">Unapproved draft · preview only</p>
   <p style="margin:0">This draft is <strong>not published</strong> and is not on the live site. Nothing on this page approves or publishes anything. Publishing stays manual and owner-authorised.</p>
-</div>
+</div>`;
+  const body = `
+<p class="small"><a href="/admin/drafts/">&larr; All queued drafts</a> · <a href="/admin/">Admin</a></p>
+${statusBanner}
 <header>
   <h1>${esc(entry.title)}</h1>
   <p>${metaLine(entry)}</p>
@@ -220,19 +231,27 @@ ${decisionIssueClientScript()}
   var EMAIL=${JSON.stringify(String(reviewEmail || ''))};
   var TITLE=${JSON.stringify(String(entry.title || ''))};
   var ID=${JSON.stringify(String(entry.entry_id || ''))};
+  var IS_LIVE=${JSON.stringify(Boolean(entry.live_slug))};
   var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'not this one'};
   function emailFallback(kind){
+    if(!EMAIL){var s=document.getElementById('decision-status');if(s)s.textContent='Cannot draft this email: no recipient is configured (data/system/config.json owner_review_email). Ask the repo owner to set it.';return;}
     var nl=String.fromCharCode(10);
     var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please do not publish this draft:'};
     var subject='Horse Legal Guide: "'+TITLE+'" marked "'+WORDS[kind]+'"';
     var body=INTRO[kind]+nl+nl+'- '+TITLE+' ('+ID+')'+nl+nl+'Sent from '+window.location.pathname+'.';
     window.location.href='mailto:'+encodeURIComponent(EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     var status=document.getElementById('decision-status');
-    if(status)status.textContent='Added to an email marked "'+WORDS[kind]+'". This only drafted an email; nothing is published until whoever receives it takes the GitHub-request action above.'+(EMAIL?'':' Add the recipient address before sending: it is not configured yet.');
+    if(status)status.textContent='Added to an email marked "'+WORDS[kind]+'". This only drafted an email; nothing is published until whoever receives it takes the GitHub-request action above.';
   }
   function send(kind){
     if(!REPO_URL){emailFallback(kind);return;}
-    if(!window.confirm('Open a GitHub request for this draft marked "'+WORDS[kind]+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.'))return;
+    // "Not this one" on a draft that is currently live takes it down - name
+    // that plainly before the request even opens, never as a silent side effect.
+    var confirmMsg='Open a GitHub request for this draft marked "'+WORDS[kind]+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.';
+    if(kind==='rejected'&&IS_LIVE){
+      confirmMsg='This will take down "'+TITLE+'", which is currently live. It will be unpublished, not deleted - approving it again later restores it with nothing lost. '+confirmMsg;
+    }
+    if(!window.confirm(confirmMsg))return;
     var titleById={};titleById[ID]=TITLE;
     window.open(buildDecisionIssueUrl(REPO_URL,kind,[ID],titleById),'_blank','noopener');
     var status=document.getElementById('decision-status');

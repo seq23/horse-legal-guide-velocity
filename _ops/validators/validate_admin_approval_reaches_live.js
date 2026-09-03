@@ -100,14 +100,49 @@ function main() {
     gaps.push(`${overclaims.length} backlog entr${overclaims.length === 1 ? 'y claims' : 'ies claim'} live_slug without being genuinely live/approved/due: ${overclaims.slice(0, 10).join(', ')}`);
   }
 
-  if (gaps.length) {
-    console.error('ADMIN_APPROVAL_NOT_LIVE_FAIL: approved, due editorial entries did not reach the live site:');
-    for (const g of gaps) console.error(`- ${g}`);
+  // The other direction this validator's name promises: "not this one"
+  // (scripts/admin/_common.js rejectEntry, the third /admin/ decision) is a
+  // revoke - it must take an entry down, and take-down must actually reach
+  // the same dist/editorial-publishing-state.json truth this validator
+  // already checks approval against. A revoked entry (status/review_status
+  // "rejected") that still shows up in live_entries, or that still has a
+  // rendered dist/ page at its former live_slug, is exactly as broken as an
+  // approved entry that never went live - it is just the opposite direction
+  // of the identical defect class.
+  const revoked = backlog.filter((entry) => entry.status === 'rejected' || entry.review_status === 'rejected');
+  const revokeGaps = [];
+  for (const entry of revoked) {
+    if (liveIds.has(entry.entry_id)) {
+      revokeGaps.push(`${entry.entry_id}: revoked ("not this one") but still present in dist/editorial-publishing-state.json live_entries`);
+      continue;
+    }
+    if (entry.live_slug) {
+      revokeGaps.push(`${entry.entry_id}: revoked but backlog entry still carries a live_slug (${entry.live_slug}) - write_editorial_pages.js should have cleared it`);
+    }
+    const previousSlug = entry.previously_live_slug;
+    if (previousSlug) {
+      const stillRendered = fs.existsSync(path.resolve(ROOT, 'dist', String(previousSlug).replace(/^\/+/, ''), 'index.html'));
+      if (stillRendered) {
+        revokeGaps.push(`${entry.entry_id}: revoked from live but dist/${String(previousSlug).replace(/^\/+/, '')}index.html still exists - the page did not actually come down`);
+      }
+    }
+  }
+
+  if (gaps.length || revokeGaps.length) {
+    if (gaps.length) {
+      console.error('ADMIN_APPROVAL_NOT_LIVE_FAIL: approved, due editorial entries did not reach the live site:');
+      for (const g of gaps) console.error(`- ${g}`);
+    }
+    if (revokeGaps.length) {
+      console.error('ADMIN_REVOKE_STILL_LIVE_FAIL: revoked ("not this one") editorial entries did not actually come down:');
+      for (const g of revokeGaps) console.error(`- ${g}`);
+    }
     process.exit(1);
   }
 
   console.log(`ADMIN_APPROVAL_LIVE_COVERAGE: ${approvedDue.length} approved-and-due editorial entr${approvedDue.length === 1 ? 'y is' : 'ies are'} live, checked against ${backlog.length} total backlog entries.`);
-  ok(`Every approved, due editorial entry is live (${approvedDue.length} checked).`);
+  console.log(`ADMIN_REVOKE_TAKEDOWN_COVERAGE: ${revoked.length} revoked entr${revoked.length === 1 ? 'y is' : 'ies are'} confirmed not live, checked against ${backlog.length} total backlog entries.`);
+  ok(`Every approved, due editorial entry is live (${approvedDue.length} checked), and every revoked entry is confirmed down (${revoked.length} checked).`);
 }
 
 if (require.main === module) main();

@@ -1,31 +1,31 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-03T11:23:25.000Z",
+  "generated_at": "2026-09-03T16:41:13.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "6e8b408446c6d7713ce51c125133bde2089bbc295ebde15cbb59b15d8e1adf0b",
+  "source_fingerprint": "a4575dc06b782bc69f4c1505490ef82bf66a0b072cecacfdf2d7af99bc51f689",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
   },
   "metrics": {
-    "indexable_pages_measured": 560,
+    "indexable_pages_measured": 562,
     "duplicate_title_groups": 79,
     "duplicate_description_groups": 4,
-    "high_similarity_pairs": 344,
+    "high_similarity_pairs": 341,
     "intent_overlap_pairs": 198
   },
   "family_metrics": {
     "articles": {
-      "pages": 1,
+      "pages": 3,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 3,
+      "high_similarity_pair_memberships": 0,
       "intent_overlap_pair_memberships": 0
     },
     "authority": {
       "pages": 1,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 3,
+      "high_similarity_pair_memberships": 2,
       "intent_overlap_pair_memberships": 0
     },
     "boarding": {
@@ -79,7 +79,7 @@
     "insights": {
       "pages": 1,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 3,
+      "high_similarity_pair_memberships": 2,
       "intent_overlap_pair_memberships": 0
     },
     "ip": {
@@ -139,7 +139,7 @@
     "whitepapers": {
       "pages": 1,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 3,
+      "high_similarity_pair_memberships": 2,
       "intent_overlap_pair_memberships": 0
     }
   },
@@ -987,18 +987,6 @@
       "title_b": "What should someone know about a buyer claims misrepresentation after a horse sale. what matters?"
     },
     {
-      "a": "/insights/",
-      "b": "/articles/",
-      "family_a": "insights",
-      "family_b": "articles",
-      "body_similarity": 0.9423,
-      "cosine_similarity": 0.956,
-      "shingle_similarity": 0.9167,
-      "intent_similarity": 0,
-      "title_a": "Insights |",
-      "title_b": "Articles |"
-    },
-    {
       "a": "/reference/what-should-someone-know-about-someone-was-hurt-riding-my-horse-what-should-i-think-about/",
       "b": "/reference/what-should-someone-know-about-a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
       "family_a": "reference",
@@ -1285,30 +1273,6 @@
       "intent_similarity": 0.1818,
       "title_a": "Do People Actually Get Sued Over Horse Deals Like This?",
       "title_b": "Can I Back Out of a Horse Deal Without Getting Sued?"
-    },
-    {
-      "a": "/authority/",
-      "b": "/articles/",
-      "family_a": "authority",
-      "family_b": "articles",
-      "body_similarity": 0.9195,
-      "cosine_similarity": 0.9343,
-      "shingle_similarity": 0.8919,
-      "intent_similarity": 0,
-      "title_a": "Authority Briefs |",
-      "title_b": "Articles |"
-    },
-    {
-      "a": "/whitepapers/",
-      "b": "/articles/",
-      "family_a": "whitepapers",
-      "family_b": "articles",
-      "body_similarity": 0.9195,
-      "cosine_similarity": 0.9343,
-      "shingle_similarity": 0.8919,
-      "intent_similarity": 0,
-      "title_a": "White Papers |",
-      "title_b": "Articles |"
     },
     {
       "a": "/insights/",

@@ -127,6 +127,15 @@ def dist_path_exists(site_domain: str, url: str) -> bool:
 
 def resolve_live_public_url(site_domain: str, entry: Dict[str, Any], draft_meta: Dict[str, str]) -> Optional[str]:
     candidates = [
+        # live_slug is the one field scripts/build/write_editorial_pages.js
+        # actually persists to data/system/editorial_backlog.json once an
+        # entry is genuinely rendered live (see its own comment on why it is
+        # persisted there at all). None of the fields below it ever appear on
+        # a real backlog entry - this function returned None for every entry,
+        # always, until live_slug was added here, which is why "packages" (the
+        # go-live email) never fired even for content that had been live for
+        # weeks.
+        entry.get("live_slug"),
         entry.get("public_url"),
         entry.get("live_url"),
         entry.get("url"),
@@ -190,37 +199,110 @@ def select_entries(backlog: List[Dict[str, Any]], sent: Dict[str, Any], ids: Opt
     return out
 
 
-def render_markdown(packages: List[Dict[str, Any]], recipient: str, skipped_not_live: Optional[List[Dict[str, str]]] = None) -> str:
+def select_new_approvals(
+    backlog: List[Dict[str, Any]], sent: Dict[str, Any], ids: Optional[List[str]], force_resend: bool
+) -> List[Dict[str, Any]]:
+    """Entries that just became approved, regardless of whether they are live yet.
+
+    This is a distinct event from "went live" below: an entry can be approved
+    today and not be due (and so not render) until a future scheduled date.
+    Notifying only at go-live would mean an approval that has not reached its
+    date yet never produces any notice at all until days or weeks later - the
+    approval itself, the thing Claire actually decided, would be invisible.
+    """
+    wanted = set(ids or [])
+    notified = set(sent.get("approval_notified_entry_ids", []))
+    out: List[Dict[str, Any]] = []
+    for entry in backlog:
+        entry_id = str(entry.get("entry_id") or "")
+        if ids and entry_id not in wanted:
+            continue
+        approved = entry.get("status") == "approved" or entry.get("review_status") == "approved"
+        if not approved:
+            continue
+        if not force_resend and entry_id in notified:
+            continue
+        out.append(entry)
+    return out
+
+
+def select_new_revokes(
+    backlog: List[Dict[str, Any]], sent: Dict[str, Any], ids: Optional[List[str]], force_resend: bool
+) -> List[Dict[str, Any]]:
+    """Entries most recently marked "not this one" (scripts/admin/_common.js
+    rejectEntry) that have not already been notified for THIS revoke.
+
+    Keyed by entry_id + rejected_at rather than entry_id alone: "not this one"
+    is a revoke, not a one-time terminal state (see rejectEntry's docstring) -
+    an entry can be approved, revoked, re-approved, and revoked again, and each
+    distinct revoke deserves its own notice.
+    """
+    wanted = set(ids or [])
+    notified = set(sent.get("revoke_notified_keys", []))
+    out: List[Dict[str, Any]] = []
+    for entry in backlog:
+        entry_id = str(entry.get("entry_id") or "")
+        if ids and entry_id not in wanted:
+            continue
+        rejected = entry.get("status") == "rejected" or entry.get("review_status") == "rejected"
+        rejected_at = entry.get("rejected_at")
+        if not rejected or not rejected_at:
+            continue
+        key = f"{entry_id}:{rejected_at}"
+        if not force_resend and key in notified:
+            continue
+        out.append(entry)
+    return out
+
+
+def render_markdown(
+    packages: List[Dict[str, Any]],
+    recipient: str,
+    skipped_not_live: Optional[List[Dict[str, str]]] = None,
+    new_approvals: Optional[List[Dict[str, Any]]] = None,
+    new_revokes: Optional[List[Dict[str, Any]]] = None,
+) -> str:
     lines = [
-        "# Approved Horse Legal Guide Content Ready to Share",
+        "# Horse Legal Guide: content decisions",
         "",
         f"Recipient: {recipient}",
         f"Generated: {datetime.now(timezone.utc).isoformat()}",
-        "",
-        "Each approved piece below includes a link and ready-to-post copy for LinkedIn, Twitter/X, and Instagram.",
     ]
-    for idx, item in enumerate(packages, 1):
-        copy = item["copy"]
-        lines.extend([
-            "",
-            f"## {idx}. {item['title']}",
-            "",
-            f"Link: {item['url']}",
-            f"Entry ID: `{item['entry_id']}`",
-            "",
-            "### LinkedIn",
-            copy["linkedin"],
-            "",
-            "### Twitter / X",
-            copy["twitter"],
-            "",
-            "### Instagram",
-            copy["instagram"],
-        ])
+    if new_approvals:
+        lines.extend(["", "## Newly approved", "", "Each of these was just approved. It goes live automatically once its scheduled date arrives - no further action needed."])
+        for item in new_approvals:
+            lines.append(f"- **{item['title']}** (`{item['entry_id']}`) - scheduled {item.get('publish_date') or 'unscheduled'}")
+    if packages:
+        lines.extend(["", "## Newly live - ready to share", "", "Each piece below is now live, with a link and ready-to-post copy for LinkedIn, Twitter/X, and Instagram."])
+        for idx, item in enumerate(packages, 1):
+            copy = item["copy"]
+            lines.extend([
+                "",
+                f"### {idx}. {item['title']}",
+                "",
+                f"Link: {item['url']}",
+                f"Entry ID: `{item['entry_id']}`",
+                "",
+                "#### LinkedIn",
+                copy["linkedin"],
+                "",
+                "#### Twitter / X",
+                copy["twitter"],
+                "",
+                "#### Instagram",
+                copy["instagram"],
+            ])
+    if new_revokes:
+        lines.extend(["", "## Revoked (\"not this one\")", "", "Each of these was just marked \"not this one\". Nothing was deleted - approving again restores it with nothing lost."])
+        for item in new_revokes:
+            was_live = "it WAS live and has now been taken down" if item.get("revoked_from_live") else "it was not live, so nothing changed on the site"
+            lines.append(f"- **{item['title']}** (`{item['entry_id']}`) - {was_live}")
     if skipped_not_live:
         lines.extend(["", "## Approved but not emailed yet", "", "These approved entries were skipped because no matching live `dist/.../index.html` page exists yet:"])
         for item in skipped_not_live:
             lines.append(f"- `{item['entry_id']}` — {item['title']}")
+    if not packages and not new_approvals and not new_revokes:
+        lines.extend(["", "No new approval, go-live, or revoke to report."])
     return "\n".join(lines).strip() + "\n"
 
 
@@ -280,8 +362,20 @@ def main() -> int:
     backlog = read_json(BACKLOG_PATH, [])
     if not isinstance(backlog, list):
         raise SystemExit("data/system/editorial_backlog.json must be a list")
-    state = read_json(STATE_PATH, {"sent_entry_ids": [], "sent_log": []})
+    state = read_json(
+        STATE_PATH,
+        {"sent_entry_ids": [], "sent_log": [], "approval_notified_entry_ids": [], "revoke_notified_keys": []},
+    )
     draft_index = load_draft_index()
+
+    # Three distinct real events, each fires its own notice in the same run
+    # regardless of which route produced it (a bulk-action workflow dispatch,
+    # a manual publish, or - the route this was missing - a decision applied
+    # automatically by .github/workflows/admin-decision-issue.yml consuming a
+    # GitHub issue). This script has no idea which of those triggered it and
+    # does not need to: it only diffs current backlog state against what was
+    # already notified, so an approval or revoke applied by any route produces
+    # the same email as one applied by a button on /admin/.
     selected = select_entries(backlog, state, args.ids, args.force_resend)
     packages: List[Dict[str, Any]] = []
     skipped_not_live: List[Dict[str, str]] = []
@@ -301,24 +395,43 @@ def main() -> int:
             "copy": social_copy(title, url, context),
         })
 
-    missing = missing_smtp_vars()
+    new_approvals_raw = select_new_approvals(backlog, state, args.ids, args.force_resend)
+    new_approvals = [
+        {
+            "entry_id": str(entry.get("entry_id") or ""),
+            "title": str(entry.get("title") or draft_index.get(str(entry.get("entry_id") or ""), {}).get("title") or entry.get("entry_id")),
+            "publish_date": entry.get("publish_date") or entry.get("date"),
+        }
+        for entry in new_approvals_raw
+    ]
 
-    if not packages:
+    new_revokes_raw = select_new_revokes(backlog, state, args.ids, args.force_resend)
+    new_revokes = [
+        {
+            "entry_id": str(entry.get("entry_id") or ""),
+            "title": str(entry.get("title") or draft_index.get(str(entry.get("entry_id") or ""), {}).get("title") or entry.get("entry_id")),
+            "revoked_from_live": bool(entry.get("revoked_from_live")),
+            "rejected_at": entry.get("rejected_at"),
+        }
+        for entry in new_revokes_raw
+    ]
+
+    missing = missing_smtp_vars()
+    nothing_to_report = not packages and not new_approvals and not new_revokes
+
+    if nothing_to_report:
+        markdown_body = render_markdown([], args.recipient, skipped_not_live, [], [])
         PREVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
-        lines = ["# Approved Horse Legal Guide Content Ready to Share", "", "No approved content pieces with live public URLs needed an email."]
-        if skipped_not_live:
-            lines.extend(["", "## Approved but not emailed yet", "", "These approved entries were skipped because no matching live `dist/.../index.html` page exists yet:"])
-            for item in skipped_not_live:
-                lines.append(f"- `{item['entry_id']}` — {item['title']}")
-        PREVIEW_PATH.write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
-        print("No approved content pieces with live public URLs needed an email.")
+        PREVIEW_PATH.write_text(markdown_body, encoding="utf-8")
+        print("No new approval, go-live, or revoke needed an email.")
         if skipped_not_live:
             print(f"Skipped {len(skipped_not_live)} approved item(s) without live public URLs.")
-        # An empty approval queue is a legitimate stop and gets a name. A missing
-        # credential is not, and is reported even when there was nothing to send -
-        # otherwise the fault stays invisible until the day it matters.
-        print("NAMED_STOP: APPROVAL_QUEUE_EMPTY - no approved content piece with a live public URL is waiting to be "
-              "emailed. Nothing to send is a correct resting state for a client repo where approval is manual.")
+        # An empty queue of new decisions is a legitimate stop and gets a name.
+        # A missing credential is not, and is reported even when there was
+        # nothing to send - otherwise the fault stays invisible until the day
+        # it matters.
+        print("NAMED_STOP: NOTHING_TO_NOTIFY - no new approval, go-live, or revoke is waiting to be emailed. "
+              "Nothing to send is a correct resting state for a client repo where approval is manual.")
         if missing and not args.dry_run:
             print(f"NAMED_FAILURE: EMAIL_DELIVERY_DISABLED_MISSING_CREDENTIAL - missing {', '.join(missing)}. "
                   "This job cannot deliver mail at all, so its green runs have proved nothing. "
@@ -326,28 +439,48 @@ def main() -> int:
             return 2
         return 0
 
-    markdown_body = render_markdown(packages, args.recipient, skipped_not_live)
+    markdown_body = render_markdown(packages, args.recipient, skipped_not_live, new_approvals, new_revokes)
     PREVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
     PREVIEW_PATH.write_text(markdown_body, encoding="utf-8")
 
-    subject = f"Approved Horse Legal Guide content ready to share ({len(packages)})"
+    subject_parts = []
+    if new_approvals:
+        subject_parts.append(f"{len(new_approvals)} approved")
+    if packages:
+        subject_parts.append(f"{len(packages)} live")
+    if new_revokes:
+        subject_parts.append(f"{len(new_revokes)} revoked")
+    subject = "Horse Legal Guide: " + ", ".join(subject_parts)
+
     if missing and not args.dry_run:
-        print(f"NAMED_FAILURE: EMAIL_DELIVERY_DISABLED_MISSING_CREDENTIAL - {len(packages)} approved item(s) are ready "
+        print(f"NAMED_FAILURE: EMAIL_DELIVERY_DISABLED_MISSING_CREDENTIAL - {len(packages) + len(new_approvals) + len(new_revokes)} item(s) are ready "
               f"to send and cannot be delivered because {', '.join(missing)} is not set. Preview written to "
               f"{PREVIEW_PATH}. Add the missing secret(s) in repository settings; do not invent a value.", file=sys.stderr)
         return 2
     sent = False if args.dry_run else send_email(subject, markdown_body, args.recipient)
     if sent:
         sent_ids = list(dict.fromkeys([*(state.get("sent_entry_ids") or []), *[item["entry_id"] for item in packages]]))
+        approval_notified = list(dict.fromkeys([*(state.get("approval_notified_entry_ids") or []), *[item["entry_id"] for item in new_approvals]]))
+        revoke_notified = list(dict.fromkeys([
+            *(state.get("revoke_notified_keys") or []),
+            *[f"{item['entry_id']}:{item['rejected_at']}" for item in new_revokes if item.get("rejected_at")],
+        ]))
         sent_log = list(state.get("sent_log") or [])
         sent_log.append({
             "sent_at": datetime.now(timezone.utc).isoformat(),
             "recipient": args.recipient,
             "entry_ids": [item["entry_id"] for item in packages],
-            "count": len(packages),
+            "newly_approved_entry_ids": [item["entry_id"] for item in new_approvals],
+            "revoked_entry_ids": [item["entry_id"] for item in new_revokes],
+            "count": len(packages) + len(new_approvals) + len(new_revokes),
         })
-        write_json(STATE_PATH, {"sent_entry_ids": sent_ids, "sent_log": sent_log[-100:]})
-        print(f"Sent approved content email to {args.recipient} for {len(packages)} item(s).")
+        write_json(STATE_PATH, {
+            "sent_entry_ids": sent_ids,
+            "approval_notified_entry_ids": approval_notified,
+            "revoke_notified_keys": revoke_notified,
+            "sent_log": sent_log[-100:],
+        })
+        print(f"Sent decision-notification email to {args.recipient}: {subject}.")
     else:
         print(f"Preview generated at {PREVIEW_PATH}. Email was not sent.")
         if args.dry_run:
