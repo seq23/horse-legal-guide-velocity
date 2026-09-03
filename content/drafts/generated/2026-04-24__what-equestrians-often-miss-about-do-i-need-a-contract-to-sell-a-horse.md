@@ -8,7 +8,7 @@ scheduled_date: 2026-04-24
 source_cluster: horse-sale-and-purchase
 source_page_id: do-i-need-a-contract-to-sell-a-horse
 slug: /drafts/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-04-24__what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse.md
 ---
 # What Equestrians Often Miss About Do I Need a Contract to Sell a Horse
