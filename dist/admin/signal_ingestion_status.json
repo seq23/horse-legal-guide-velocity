@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T16:16:59.000Z",
+  "generated_at": "2026-09-03T11:23:25.000Z",
   "status": "healthy_with_live_followup",
   "preserved_pipeline": [
     "collect:signals",
@@ -7,9 +7,9 @@
     "map:signals",
     "report:ingestion"
   ],
-  "raw_signal_count": 2783,
-  "normalized_signal_count": 1151,
-  "fresh_collected_count": 98,
+  "raw_signal_count": 2804,
+  "normalized_signal_count": 1161,
+  "fresh_collected_count": 97,
   "failed_source_count": 0,
   "blocked_source_count": 4,
   "blocked_sources": [
@@ -23,7 +23,7 @@
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
       "status": "blocked_source",
-      "reason": "Reddit refused 7 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "reason": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
