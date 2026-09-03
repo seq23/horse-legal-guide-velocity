@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T11:22:52.731Z",
+  "generated_at": "2026-09-03T16:18:32.699Z",
   "policy": "prevalidation gates approval eligibility after automatic draft uniqueness self-healing; word count is warning-only; client approval and publication remain manual",
   "total": 306,
   "passed": 306,
@@ -136,21 +136,23 @@
       "entry_id": "draft-article-2026-04-28-boarding-training-and-barn-operations",
       "title": "Boarding, Training & Barn Operations: The Clauses, Risks, and Assumptions People Usually Overlook",
       "content_type": "article",
-      "word_count": 1848,
+      "word_count": 1065,
       "advisory_word_band": {
         "soft_floor": 750,
         "soft_ceiling": 3500
       },
       "hard_fails": [],
-      "warnings": [],
+      "warnings": [
+        "draft automatically differentiated in 1 bounded repair attempt(s)"
+      ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "already_distinct",
-        "repair_attempts": 0,
-        "nearest_page": "/business/how-to-start-a-training-barn-legally/",
-        "maximum_similarity": 0.2217,
+        "strategy": "business-governance",
+        "repair_attempts": 1,
+        "nearest_page": "/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
+        "maximum_similarity": 0.2305,
         "threshold": 0.85
       },
       "scores": {
@@ -341,8 +343,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
-        "maximum_similarity": 0.651,
+        "nearest_page": "/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
+        "maximum_similarity": 0.6298,
         "threshold": 0.85
       },
       "scores": {
@@ -465,8 +467,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/hubs/demand-letters-and-disputes/",
-        "maximum_similarity": 0.2131,
+        "nearest_page": "/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
+        "maximum_similarity": 0.8288,
         "threshold": 0.85
       },
       "scores": {
@@ -1227,8 +1229,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
-        "maximum_similarity": 0.8309,
+        "nearest_page": "/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
+        "maximum_similarity": 0.7784,
         "threshold": 0.85
       },
       "scores": {
@@ -3357,8 +3359,8 @@
         "status": "passed",
         "strategy": "notice-communication",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-06-23/real-property-leases-the-clauses-risks-and-assumptions-people-usually-overlook/",
-        "maximum_similarity": 0.1717,
+        "nearest_page": "/drafts/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
+        "maximum_similarity": 0.6466,
         "threshold": 0.85
       },
       "scores": {
@@ -9058,8 +9060,8 @@
         "status": "passed",
         "strategy": "business-governance",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-10-08/where-how-to-start-a-boarding-barn-legally-usually-goes-sideways/",
-        "maximum_similarity": 0.7838,
+        "nearest_page": "/drafts/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
+        "maximum_similarity": 0.8189,
         "threshold": 0.85
       },
       "scores": {
