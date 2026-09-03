@@ -80,6 +80,26 @@ function main() {
     }
   }
 
+  // The other direction of the same defect class, found while fixing this:
+  // scripts/build/write_editorial_pages.js used to compute live_slug/section
+  // for every backlog entry in memory (needed for its own rendering pass) but
+  // never persisted it to data/system/editorial_backlog.json - so
+  // scripts/admin/generate_admin_manifest.js, which re-reads that file fresh,
+  // always saw public_url:null for every entry, live or not, and /admin/'s
+  // "Pages published by this system" card said "0...never" beside a genuinely
+  // correct "Approved: 2". Persisting it (scoped to only the entries that
+  // actually pass the approved+due+rendered gate) fixed the undercount; this
+  // asserts the fix cannot regress into an OVERcount either - an entry must
+  // not claim live_slug unless it is genuinely in the live set.
+  const approvedDueIds = new Set(approvedDue.map((e) => e.entry_id));
+  const overclaims = backlog
+    .filter((e) => e.live_slug)
+    .filter((e) => !liveIds.has(e.entry_id) || !approvedDueIds.has(e.entry_id))
+    .map((e) => e.entry_id);
+  if (overclaims.length) {
+    gaps.push(`${overclaims.length} backlog entr${overclaims.length === 1 ? 'y claims' : 'ies claim'} live_slug without being genuinely live/approved/due: ${overclaims.slice(0, 10).join(', ')}`);
+  }
+
   if (gaps.length) {
     console.error('ADMIN_APPROVAL_NOT_LIVE_FAIL: approved, due editorial entries did not reach the live site:');
     for (const g of gaps) console.error(`- ${g}`);

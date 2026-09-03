@@ -37,6 +37,7 @@ const fs = require('fs');
 const path = require('path');
 const { md, parse, label, section } = require('./write_editorial_pages');
 const { draftPreviewPath } = require('../quality/content_ops_common');
+const { decisionIssueClientScript } = require('../lib/decision_issue_client');
 
 const PREVIEW_ROOT = 'admin/drafts';
 
@@ -201,7 +202,7 @@ function previewPage(entry, bodyHtml, missing, previewPath, repoUrl, gateHash, r
 <div class="card" id="decide">
   <p class="eyebrow">Your decision</p>
   <h2 style="margin:0 0 6px;font-size:1.1rem">What do you want to do with this one?</h2>
-  <p class="small muted" style="margin:0">Approving is not yet available from this page. Choose below and your decision is emailed to the person who publishes; approved drafts go live within one business day. Nothing is published by this step.</p>
+  <p class="small muted" style="margin:0">Choose below. It opens a pre-filled request on GitHub (github.com) with this draft and your decision already in it - you only click &ldquo;Submit new issue&rdquo; there. A repo maintainer's decision is picked up and applied automatically within a few minutes; anyone else's is answered with what to do next, never applied silently. You do not need to know Git or the command line, just a free GitHub account.</p>
   <div class="decision-row">
     <button type="button" data-decision="approve">Approve</button>
     <button type="button" class="secondary" data-decision="needs_revision">Needs changes</button>
@@ -209,24 +210,36 @@ function previewPage(entry, bodyHtml, missing, previewPath, repoUrl, gateHash, r
   </div>
   <p class="small muted" id="decision-status" style="margin:10px 0 0">No decision sent yet.</p>
   <p class="small muted" style="margin:8px 0 0">If approved, this would publish at <code>${willPublishAt}${esc(String(entry.slug || '').replace(/^\/drafts\/\d{4}-\d{2}-\d{2}\//, ''))}</code>.</p>
+  <p class="small muted" style="margin:8px 0 0">No GitHub account? <a href="${esc(readUrl)}#decide-email" data-email-fallback rel="noopener">Email a copy of this decision instead</a> (this does not publish anything by itself).</p>
   <p class="small" style="margin:8px 0 0">${readUrl ? `<a href="${esc(readUrl)}" rel="noopener">Read the source markdown</a>${editUrl ? ' · ' : ''}` : ''}${editUrl ? `<a href="${esc(editUrl)}" rel="noopener">Edit this draft on GitHub</a>` : ''}</p>
 </div>
 <script>
+${decisionIssueClientScript()}
 (function(){
+  var REPO_URL=${JSON.stringify(String(repoUrl || ''))};
   var EMAIL=${JSON.stringify(String(reviewEmail || ''))};
   var TITLE=${JSON.stringify(String(entry.title || ''))};
   var ID=${JSON.stringify(String(entry.entry_id || ''))};
   var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'not this one'};
-  var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please do not publish this draft:'};
-  function send(kind){
-    if(!window.confirm('Send this draft as "'+WORDS[kind]+'"? Nothing is published by this step.'))return;
+  function emailFallback(kind){
     var nl=String.fromCharCode(10);
+    var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please do not publish this draft:'};
     var subject='Horse Legal Guide: "'+TITLE+'" marked "'+WORDS[kind]+'"';
     var body=INTRO[kind]+nl+nl+'- '+TITLE+' ('+ID+')'+nl+nl+'Sent from '+window.location.pathname+'.';
     window.location.href='mailto:'+encodeURIComponent(EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     var status=document.getElementById('decision-status');
-    if(status)status.textContent='Marked "'+WORDS[kind]+'" in an email. Send that email to record the decision.'+(EMAIL?'':' Add the recipient address before sending: it is not configured yet.');
+    if(status)status.textContent='Added to an email marked "'+WORDS[kind]+'". This only drafted an email; nothing is published until whoever receives it takes the GitHub-request action above.'+(EMAIL?'':' Add the recipient address before sending: it is not configured yet.');
   }
+  function send(kind){
+    if(!REPO_URL){emailFallback(kind);return;}
+    if(!window.confirm('Open a GitHub request for this draft marked "'+WORDS[kind]+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.'))return;
+    var titleById={};titleById[ID]=TITLE;
+    window.open(buildDecisionIssueUrl(REPO_URL,kind,[ID],titleById),'_blank','noopener');
+    var status=document.getElementById('decision-status');
+    if(status)status.textContent='Marked "'+WORDS[kind]+'" - a pre-filled GitHub request just opened in a new tab. Click "Submit new issue" there to send it; it is applied automatically within a few minutes once submitted.';
+  }
+  var emailLink=document.querySelector('[data-email-fallback]');
+  if(emailLink)emailLink.addEventListener('click',function(event){event.preventDefault();emailFallback('approve');});
   var buttons=document.querySelectorAll('#decide [data-decision]');
   for(var i=0;i<buttons.length;i++){(function(button){button.addEventListener('click',function(){send(button.getAttribute('data-decision'));});})(buttons[i]);}
 })();
