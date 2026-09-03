@@ -26,6 +26,8 @@ function main() {
       source_trace_id: entry.source_trace_id || null,
       slug: entry.slug || null,
       live_slug: entry.live_slug || null,
+      revoked_from_live: Boolean(entry.revoked_from_live),
+      previously_live_slug: entry.previously_live_slug || null,
       github_path: entry.github_path || null,
       github_draft_url: githubBlobUrl(config, entry.github_path),
       github_raw_url: githubBlobUrl(config, entry.github_path),

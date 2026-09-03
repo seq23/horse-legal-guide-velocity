@@ -45,6 +45,6 @@
   "admin_password_plaintext": "ChangeThisAdminPassword123!",
   "admin_password_security_note": "Convenience reminder only. This static admin gate is not real authentication; the password is intentionally visible per owner instruction.",
   "admin_password_last_verified": "2026-06-23",
-  "owner_review_email": "",
-  "owner_review_email_note": "Where /admin/ sends the reviewer's approve / needs-changes / not-this-one decisions. Set this to the mailbox that publishes; until it is set the decision email opens with an empty To: field."
+  "owner_review_email": "claire@wisecovington.com",
+  "owner_review_email_note": "Where /admin/'s Executive Assistant links (Email an approval / needs changes / not this one) pre-fill their To: field, and the one recipient decision-notification email (see scripts/social/send_approved_content_email.py) is addressed to. Single recipient by design - do not add a second address, CC, or BCC. If this is ever unset, that is a NAMED STOP (see scripts/social/email_credential_gate.mjs and _ops/validators/validate_approved_content_email_workflow.js), not a silent empty To: field."
 }

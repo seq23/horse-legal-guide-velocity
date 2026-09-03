@@ -70,22 +70,30 @@ button.secondary{background:#efe3d1;color:#2c2118}
 function buildDecisionIssueUrl(repoUrl,kind,ids,titleById){const action={approve:'approve',needs_revision:'needs_revision',rejected:'reject'}[kind]||kind;const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;const lines=ids.map((id)=>'- '+((titleById&&titleById[id])||id)+' ('+id+')');const title='Admin decision: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';const todayISO=(new Date()).toISOString().slice(0,10);const body='Action: '+action+String.fromCharCode(10)+'IDs: '+ids.join(' ')+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Submitted on '+todayISO+'. Do not edit the Action/IDs lines above - they are read automatically.';const base=repoUrl.endsWith('/')?repoUrl.slice(0,-1):repoUrl;const url=new URL(base+'/issues/new');url.searchParams.set('title',title);url.searchParams.set('body',body);url.searchParams.set('labels','admin-decision');return url.toString();}
 (function(){
   var REPO_URL="https://github.com/seq23/horse-legal-guide-velocity";
-  var EMAIL="";
+  var EMAIL="claire@wisecovington.com";
   var TITLE="Remedies, exit paths, and damage control for Does My Contract Need Statutory Warning Language";
   var ID="draft-insight-2026-09-30-does-my-contract-need-statutory-warning-language";
+  var IS_LIVE=false;
   var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'not this one'};
   function emailFallback(kind){
+    if(!EMAIL){var s=document.getElementById('decision-status');if(s)s.textContent='Cannot draft this email: no recipient is configured (data/system/config.json owner_review_email). Ask the repo owner to set it.';return;}
     var nl=String.fromCharCode(10);
     var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please do not publish this draft:'};
     var subject='Horse Legal Guide: "'+TITLE+'" marked "'+WORDS[kind]+'"';
     var body=INTRO[kind]+nl+nl+'- '+TITLE+' ('+ID+')'+nl+nl+'Sent from '+window.location.pathname+'.';
     window.location.href='mailto:'+encodeURIComponent(EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     var status=document.getElementById('decision-status');
-    if(status)status.textContent='Added to an email marked "'+WORDS[kind]+'". This only drafted an email; nothing is published until whoever receives it takes the GitHub-request action above.'+(EMAIL?'':' Add the recipient address before sending: it is not configured yet.');
+    if(status)status.textContent='Added to an email marked "'+WORDS[kind]+'". This only drafted an email; nothing is published until whoever receives it takes the GitHub-request action above.';
   }
   function send(kind){
     if(!REPO_URL){emailFallback(kind);return;}
-    if(!window.confirm('Open a GitHub request for this draft marked "'+WORDS[kind]+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.'))return;
+    // "Not this one" on a draft that is currently live takes it down - name
+    // that plainly before the request even opens, never as a silent side effect.
+    var confirmMsg='Open a GitHub request for this draft marked "'+WORDS[kind]+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.';
+    if(kind==='rejected'&&IS_LIVE){
+      confirmMsg='This will take down "'+TITLE+'", which is currently live. It will be unpublished, not deleted - approving it again later restores it with nothing lost. '+confirmMsg;
+    }
+    if(!window.confirm(confirmMsg))return;
     var titleById={};titleById[ID]=TITLE;
     window.open(buildDecisionIssueUrl(REPO_URL,kind,[ID],titleById),'_blank','noopener');
     var status=document.getElementById('decision-status');

@@ -12,7 +12,30 @@
    column headers (header top 69px vs bar bottom 338px). The table scrolls
    inside .table-scroll, so its headers stick to that container and stay
    visible on their own; the bar does not need to float as well. */
-.sticky-admin-bar{z-index:4}.compact-metrics .metric{cursor:pointer}.table-scroll{max-height:780px;overflow:auto;border:1px solid #eadfce;border-radius:14px}.small{font-size:.86rem}th{position:sticky;top:0;z-index:2;background:#fffaf1}.overdue{color:#a3271c}.metric.fail strong{color:#a3271c}#overdue-banner h2{margin:0;font-size:1.15rem;line-height:1.45}</style>
+.sticky-admin-bar{z-index:4}.compact-metrics .metric{cursor:pointer}.table-scroll{max-height:780px;overflow:auto;border:1px solid #eadfce;border-radius:14px}.small{font-size:.86rem}th{position:sticky;top:0;z-index:2;background:#fffaf1}.overdue{color:#a3271c}.metric.fail strong{color:#a3271c}#overdue-banner h2{margin:0;font-size:1.15rem;line-height:1.45}
+/* Four distinct visual weights for the four decision-adjacent controls (see
+   RUNBOOK.md / the PR that introduced this): decisions are the strongest
+   thing on the page; semantic (state) selection is distinct and inviting;
+   positional (viewport) selection is quiet and always states its scope;
+   clearing is quiet, set apart, and only ever appears once something is
+   selected. None of the four may look like one of a row of similar buttons. */
+.decision-steps{list-style:none;counter-reset:step;margin:14px 0 0;padding:0}
+.decision-steps>li{margin:0 0 22px;padding:0 0 0 0}
+.decision-steps>li:last-child{margin-bottom:0}
+.step-label{font-weight:800;font-size:1.02rem;margin:0 0 8px}
+.select-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:2px 0 8px}
+.select-semantic{background:#e9dfc9;color:#2c2118;border:1px solid #cdb98d;border-radius:999px;padding:11px 18px;font-weight:800;font-size:1rem;cursor:pointer}
+.select-positional{background:#fffaf1;color:#6d5f4c;border:1px solid #d8c8b4;border-radius:999px;padding:7px 13px;font-weight:600;font-size:.84rem;cursor:pointer}
+.clear-selected{background:transparent;color:#8a5a3a;border:1px dashed #d8ab8a;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.8rem;cursor:pointer}
+.selection-count{margin:2px 0 0;font-size:.86rem}
+.unmissable{background:#fff3cd;border:2px solid #e6cf82;border-radius:12px;padding:12px 16px;margin:6px 0 0;font-weight:700}
+.assistant-block{margin-top:8px;border-top:1px solid #eadfce;padding-top:16px}
+.assistant-block .eyebrow{margin-bottom:4px}
+.assistant-block h2{font-size:1.05rem;margin:0 0 6px}
+th.sortable{cursor:pointer;user-select:none}
+th.sortable:focus-visible{outline:2px solid #2c2118;outline-offset:2px}
+.sort-indicator{display:inline-block;margin-left:4px;opacity:.35;font-size:.8em}
+.sort-indicator.active{opacity:1}</style>
 <script data-clarity-loader>(function(w,d,m){var h=(w.location.hostname||"").toLowerCase().replace(/^www\./,"");var id=m[h];if(!id)return;w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};var s=d.createElement("script");s.async=1;s.src="https://www.clarity.ms/tag/"+id;var f=d.getElementsByTagName("script")[0];f.parentNode.insertBefore(s,f)})(window,document,{"horselegalguide.com":"y7l45bndb4"})</script></head>
 <body><main class="shell">
 <header class="card">

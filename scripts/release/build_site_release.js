@@ -90,7 +90,30 @@ function htmlShell(title, body) {
    column headers (header top 69px vs bar bottom 338px). The table scrolls
    inside .table-scroll, so its headers stick to that container and stay
    visible on their own; the bar does not need to float as well. */
-.sticky-admin-bar{z-index:4}.compact-metrics .metric{cursor:pointer}.table-scroll{max-height:780px;overflow:auto;border:1px solid #eadfce;border-radius:14px}.small{font-size:.86rem}th{position:sticky;top:0;z-index:2;background:#fffaf1}.overdue{color:#a3271c}.metric.fail strong{color:#a3271c}#overdue-banner h2{margin:0;font-size:1.15rem;line-height:1.45}</style>
+.sticky-admin-bar{z-index:4}.compact-metrics .metric{cursor:pointer}.table-scroll{max-height:780px;overflow:auto;border:1px solid #eadfce;border-radius:14px}.small{font-size:.86rem}th{position:sticky;top:0;z-index:2;background:#fffaf1}.overdue{color:#a3271c}.metric.fail strong{color:#a3271c}#overdue-banner h2{margin:0;font-size:1.15rem;line-height:1.45}
+/* Four distinct visual weights for the four decision-adjacent controls (see
+   RUNBOOK.md / the PR that introduced this): decisions are the strongest
+   thing on the page; semantic (state) selection is distinct and inviting;
+   positional (viewport) selection is quiet and always states its scope;
+   clearing is quiet, set apart, and only ever appears once something is
+   selected. None of the four may look like one of a row of similar buttons. */
+.decision-steps{list-style:none;counter-reset:step;margin:14px 0 0;padding:0}
+.decision-steps>li{margin:0 0 22px;padding:0 0 0 0}
+.decision-steps>li:last-child{margin-bottom:0}
+.step-label{font-weight:800;font-size:1.02rem;margin:0 0 8px}
+.select-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:2px 0 8px}
+.select-semantic{background:#e9dfc9;color:#2c2118;border:1px solid #cdb98d;border-radius:999px;padding:11px 18px;font-weight:800;font-size:1rem;cursor:pointer}
+.select-positional{background:#fffaf1;color:#6d5f4c;border:1px solid #d8c8b4;border-radius:999px;padding:7px 13px;font-weight:600;font-size:.84rem;cursor:pointer}
+.clear-selected{background:transparent;color:#8a5a3a;border:1px dashed #d8ab8a;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.8rem;cursor:pointer}
+.selection-count{margin:2px 0 0;font-size:.86rem}
+.unmissable{background:#fff3cd;border:2px solid #e6cf82;border-radius:12px;padding:12px 16px;margin:6px 0 0;font-weight:700}
+.assistant-block{margin-top:8px;border-top:1px solid #eadfce;padding-top:16px}
+.assistant-block .eyebrow{margin-bottom:4px}
+.assistant-block h2{font-size:1.05rem;margin:0 0 6px}
+th.sortable{cursor:pointer;user-select:none}
+th.sortable:focus-visible{outline:2px solid #2c2118;outline-offset:2px}
+.sort-indicator{display:inline-block;margin-left:4px;opacity:.35;font-size:.8em}
+.sort-indicator.active{opacity:1}</style>
 </head>
 <body><main class="shell">${body}</main></body>
 </html>`;
@@ -235,7 +258,8 @@ function writeAdminIndex() {
     ready: !(item.hard_fails || []).length && !reviewerWarnings(item).length,
     review_notes: [...(item.hard_fails || []), ...reviewerWarnings(item)],
     preview_url: item.preview_url || '',
-    public_url: item.public_url || ''
+    public_url: item.public_url || '',
+    revoked_from_live: Boolean(item.revoked_from_live)
   }));
 
   const clusterOptions = clusters.map((cluster) => `<option value="${escapeHtml(cluster)}">${escapeHtml(cluster.replace(/-/g, ' '))}</option>`).join('');
@@ -286,7 +310,6 @@ function writeAdminIndex() {
       <label>Ready<select id="quality-filter"><option value="all">Everything</option><option value="ready">Ready</option><option value="needs_look">Needs a look</option><option value="overdue">Past its publish date</option></select></label>
       <label>Content type<select id="type-filter"><option value="all">All content types</option>${typeOptions}</select></label>
       <label>Topic<select id="cluster-filter"><option value="all">All topics</option>${clusterOptions}</select></label>
-      <label>Sort<select id="sort-filter"><option value="date-asc">Oldest first</option><option value="date-desc">Newest first</option><option value="title-asc">Title A-Z</option><option value="type-asc">Type A-Z</option><option value="cluster-asc">Topic A-Z</option></select></label>
       <label>Rows per page<select id="page-size"><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label>
     </div>
     <p id="filter-summary" class="muted">Filters loading.</p>
@@ -294,11 +317,45 @@ function writeAdminIndex() {
   </section>
   <section class="card" id="send-decisions">
     <h2>Send your decisions</h2>
-    <p>Tick the drafts you decide on, then click a decision below. It opens a pre-filled request on GitHub (github.com) with the drafts and your decision already in it - you only click &ldquo;Submit new issue&rdquo; there. A repo maintainer's decision is picked up and applied automatically within a few minutes; anyone else's is answered with what to do next, never applied silently. You do not need to know Git or the command line, just a free GitHub account.</p>
-    <div class="button-row"><button type="button" data-select="visible">Select visible page</button><button type="button" data-select="pending">Select everything waiting on this page</button><button type="button" data-select="clear">Clear selected</button></div>
-    <div class="button-row"><button type="button" data-decision="approve">Approve selected</button><button type="button" data-decision="needs_revision">Send &ldquo;needs changes&rdquo;</button><button type="button" data-decision="rejected">Send &ldquo;not this one&rdquo;</button></div>
-    <p id="send-status" class="muted">Nothing sent yet.</p>
-    <p class="muted">No GitHub account, or would rather this go to a person instead of GitHub? Use the matching link instead of the buttons above - it only drafts an email and does not publish anything by itself: <button type="button" data-email-decision="approve" class="button-link">Email an approval</button> · <button type="button" data-email-decision="needs_revision" class="button-link">Email &ldquo;needs changes&rdquo;</button> · <button type="button" data-email-decision="rejected" class="button-link">Email &ldquo;not this one&rdquo;</button></p>
+    <p class="muted">A repo maintainer's decision is applied automatically within a few minutes; anyone else's is answered on the request itself with what to do next - never applied silently. You do not need to know Git or the command line, just a free GitHub account.</p>
+    <ol class="decision-steps">
+      <li>
+        <p class="step-label">1. Pick the drafts you are deciding on</p>
+        <div class="select-row">
+          <button type="button" class="select-semantic" data-select="pending">Select everything waiting on this page (${counts.pending || 0})</button>
+          <button type="button" class="select-positional" id="select-visible-btn" data-select="visible">Select visible page</button>
+          <button type="button" class="clear-selected" id="clear-selected-btn" data-select="clear" hidden>Clear selected</button>
+        </div>
+        <p class="selection-count muted" id="selection-count">No drafts selected yet.</p>
+      </li>
+      <li>
+        <p class="step-label">2. Choose your decision</p>
+        <div class="button-row decision-row">
+          <button type="button" data-decision="approve">Approve selected</button>
+          <button type="button" data-decision="needs_revision">Send &ldquo;needs changes&rdquo;</button>
+          <button type="button" data-decision="rejected">Send &ldquo;not this one&rdquo;</button>
+        </div>
+        <p id="send-status" class="muted">Nothing sent yet.</p>
+      </li>
+      <li>
+        <p class="step-label">3. A pre-filled request opens on GitHub in a new tab</p>
+        <p class="muted">Nothing has been sent yet at this point. The new tab only shows a draft request with the drafts and your decision already filled in - closing it without the next step sends nothing.</p>
+      </li>
+      <li>
+        <p class="step-label">4. Click &ldquo;Submit new issue&rdquo; there</p>
+        <p class="unmissable">This is the step people miss. Nothing happens until you click the green &ldquo;Submit new issue&rdquo; button on that GitHub page - not before.</p>
+      </li>
+      <li>
+        <p class="step-label">5. It is applied automatically within a few minutes</p>
+        <p class="muted">No further action from you. To confirm it worked, check the live URL itself (<a href="/articles/">/articles/</a>, <a href="/insights/">/insights/</a>, etc.) or the &ldquo;Publishing status&rdquo; card below - the GitHub issue you submitted also closes itself with a comment saying what happened.</p>
+      </li>
+    </ol>
+  </section>
+  <section class="card assistant-block" id="executive-assistant">
+    <p class="eyebrow">For someone helping with publishing who is not an owner</p>
+    <h2>Executive assistant</h2>
+    <p class="muted">Drafts an email to the person who publishes. It publishes nothing by itself.</p>
+    <p class="button-row"><button type="button" data-email-decision="approve" class="button-link">Email an approval</button> · <button type="button" data-email-decision="needs_revision" class="button-link">Email &ldquo;needs changes&rdquo;</button> · <button type="button" data-email-decision="rejected" class="button-link">Email &ldquo;not this one&rdquo;</button></p>
   </section>
   <section class="card">
     <h2>Publishing status</h2>
@@ -311,7 +368,7 @@ function writeAdminIndex() {
   <section class="card queue-card">
     <h2>Draft queue</h2>
     <p class="muted">Use the filters above instead of title search. The queue is paginated to reduce scrolling.</p>
-    <div id="draft-summary" class="muted">Short articles, articles, white papers, in-depth guides and templates.</div><div id="draft-list" class="table-scroll"><table id="draft-table"><thead><tr><th>Select</th><th>Date</th><th>Draft</th><th>Status</th><th>Type</th><th>Topic</th><th>Ready</th><th>Actions</th></tr></thead><tbody id="draft-tbody"></tbody></table></div>
+    <div id="draft-summary" class="muted">Short articles, articles, white papers, in-depth guides and templates.</div><div id="draft-list" class="table-scroll"><table id="draft-table"><thead><tr><th>Select</th><th class="sortable" data-sort-field="date" tabindex="0" role="button" aria-label="Sort by date">Date<span class="sort-indicator" data-sort-indicator="date"></span></th><th class="sortable" data-sort-field="title" tabindex="0" role="button" aria-label="Sort by draft title">Draft<span class="sort-indicator" data-sort-indicator="title"></span></th><th class="sortable" data-sort-field="status" tabindex="0" role="button" aria-label="Sort by status">Status<span class="sort-indicator" data-sort-indicator="status"></span></th><th>Type</th><th>Topic</th><th>Ready</th><th>Actions</th></tr></thead><tbody id="draft-tbody"></tbody></table></div>
   </section>
 </section>
 <script id="admin-items" type="application/json">${safeJsonForScript(safeItems)}</script>
@@ -321,7 +378,16 @@ const REVIEW_EMAIL = ${JSON.stringify(reviewEmail)};
 const ADMIN_REPO_URL = ${JSON.stringify(normalizeRepoUrl(config))};
 const ADMIN_ITEMS = JSON.parse(document.getElementById('admin-items').textContent || '[]');
 const MONTH_NAMES = ${JSON.stringify(MONTHS)};
-let state = { page: 1, filtered: [] };
+// Selection lives in a Set of entry_id, independent of which rows are
+// currently rendered. Pagination and filters only control what is ON SCREEN;
+// they must never silently drop or hide an existing selection, and the
+// "everything waiting" control below must be able to select items that are
+// not on the current page at all.
+let state = { page: 1, filtered: [], selected: new Set(), sortField: 'date', sortDir: 'asc' };
+// Status has a real workflow order, not an alphabetical one: nothing decided
+// yet, sent back for changes, said yes, said no.
+const STATUS_ORDER = { pending: 0, needs_revision: 1, approved: 2, rejected: 3 };
+function dateVal(d){return d ? Date.parse(d+'T00:00:00Z') : Infinity;}
 async function sha256(value){const data=new TextEncoder().encode(value);const hash=await crypto.subtle.digest('SHA-256',data);return Array.from(new Uint8Array(hash)).map((b)=>b.toString(16).padStart(2,'0')).join('');}
 function escText(value){return String(value ?? '').replace(/[&<>"']/g,(ch)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
 function revealPasswordReminder(value){const el=document.getElementById('password-reminder-value');if(el)el.textContent=value||'Re-enter the password to show the reminder.';}
@@ -334,14 +400,18 @@ function formatDue(date){const p=String(date||'').split('-');if(p.length!==3)ret
    build clock is frozen to the last commit, so a build-time number goes stale
    the day after it is written. */
 function renderOverdue(){const od=ADMIN_ITEMS.filter(isOverdue);const tile=document.getElementById('overdue-count');if(tile)tile.textContent=String(od.length);const sentence=od.length?(od.length+' draft'+(od.length===1?' is':'s are')+' past '+(od.length===1?'its':'their')+' publish date. The earliest was due '+formatDue(od.map((i)=>i.date).sort()[0])+'. Nothing has gone live yet.'):'No draft is past its publish date.';const banner=document.getElementById('overdue-banner');if(banner){banner.hidden=!od.length;const text=banner.querySelector('[data-overdue-text]');if(text)text.textContent=sentence;}const line=document.getElementById('publishing-overdue');if(line)line.textContent=sentence;}
-function getFilters(){return {status:document.getElementById('status-filter')?.value||'all',quality:document.getElementById('quality-filter')?.value||'all',type:document.getElementById('type-filter')?.value||'all',cluster:document.getElementById('cluster-filter')?.value||'all',sort:document.getElementById('sort-filter')?.value||'date-asc',pageSize:Number(document.getElementById('page-size')?.value||25)}}
-function filterItems(){const f=getFilters();let out=ADMIN_ITEMS.slice();if(f.status!=='all')out=out.filter((item)=>item.status===f.status);if(f.type!=='all')out=out.filter((item)=>item.content_type===f.type);if(f.cluster!=='all')out=out.filter((item)=>item.source_cluster===f.cluster);if(f.quality==='ready')out=out.filter((item)=>item.ready);if(f.quality==='needs_look')out=out.filter((item)=>!item.ready);if(f.quality==='overdue')out=out.filter(isOverdue);const [field,direction]=f.sort.split('-');out.sort((a,b)=>{let av='',bv='';if(field==='date'){av=a.date||'9999-12-31';bv=b.date||'9999-12-31';}else if(field==='title'){av=a.title||'';bv=b.title||'';}else if(field==='type'){av=a.type_label||'';bv=b.type_label||'';}else if(field==='cluster'){av=a.source_cluster||'';bv=b.source_cluster||'';}else{av=a.status_label||'';bv=b.status_label||'';}return direction==='desc'?String(bv).localeCompare(String(av)):String(av).localeCompare(String(bv));});return out;}
+function getFilters(){return {status:document.getElementById('status-filter')?.value||'all',quality:document.getElementById('quality-filter')?.value||'all',type:document.getElementById('type-filter')?.value||'all',cluster:document.getElementById('cluster-filter')?.value||'all',pageSize:Number(document.getElementById('page-size')?.value||25)}}
+function filterItems(){const f=getFilters();let out=ADMIN_ITEMS.slice();if(f.status!=='all')out=out.filter((item)=>item.status===f.status);if(f.type!=='all')out=out.filter((item)=>item.content_type===f.type);if(f.cluster!=='all')out=out.filter((item)=>item.source_cluster===f.cluster);if(f.quality==='ready')out=out.filter((item)=>item.ready);if(f.quality==='needs_look')out=out.filter((item)=>!item.ready);if(f.quality==='overdue')out=out.filter(isOverdue);const field=state.sortField||'date',direction=state.sortDir||'asc';out.sort((a,b)=>{let cmp=0;if(field==='date'){cmp=dateVal(a.date)-dateVal(b.date);}else if(field==='title'){cmp=String(a.title||'').localeCompare(String(b.title||''));}else if(field==='status'){cmp=(STATUS_ORDER[a.status]??99)-(STATUS_ORDER[b.status]??99);}return direction==='desc'?-cmp:cmp;});return out;}
 function readyLabel(item){return item.ready?'Ready':'Needs a look';}
 function dateCell(item){if(!item.date)return '<span class="muted">no date</span>';if(!isOverdue(item))return escText(item.date);return '<span class="overdue"><strong>'+escText(item.date)+'</strong><br><span class="small">'+daysLate(item.date)+' days overdue</span></span>';}
-function renderRows(items){const tbody=document.getElementById('draft-tbody');if(!tbody)return;if(!items.length){tbody.innerHTML='<tr><td colspan="8" class="muted">No drafts match the current filters.</td></tr>';return;}tbody.innerHTML=items.map((item)=>{const notes=(item.review_notes||[]).slice(0,3).join('; ')||'Nothing flagged on this draft.';const readLink=item.preview_url||item.public_url||'';const actions=readLink?'<a href="'+escText(readLink)+'">Read this draft</a>':'<span class="muted">No preview</span>';return '<tr data-entry-id="'+escText(item.entry_id)+'" data-status="'+escText(item.status)+'"><td><input class="row-check" type="checkbox" value="'+escText(item.entry_id)+'"></td><td>'+dateCell(item)+'</td><td><strong>'+escText(item.title)+'</strong><div class="muted small">'+escText(item.entry_id)+'</div><details><summary>Excerpt / notes</summary><p>'+escText(item.excerpt)+'</p><p>'+escText(notes)+'</p></details></td><td><span class="pill">'+escText(item.status_label)+'</span></td><td>'+escText(item.type_label)+'</td><td>'+escText((item.source_cluster||'').replaceAll('-',' '))+'</td><td>'+escText(readyLabel(item))+'</td><td>'+actions+'</td></tr>';}).join('');}
-function renderQueue(resetPage=false){if(resetPage)state.page=1;const f=getFilters();const filtered=filterItems();state.filtered=filtered;const maxPage=Math.max(1,Math.ceil(filtered.length/f.pageSize));if(state.page>maxPage)state.page=maxPage;const start=(state.page-1)*f.pageSize;const visible=filtered.slice(start,start+f.pageSize);renderRows(visible);const summary=document.getElementById('filter-summary');if(summary)summary.textContent='Showing '+visible.length+' rows on page '+state.page+' of '+maxPage+'; '+filtered.length+' match filters out of '+ADMIN_ITEMS.length+' total drafts.';}
-function selectedIds(){return Array.from(document.querySelectorAll('.row-check:checked')).map((el)=>el.value);}
-function selectRows(kind){for(const row of document.querySelectorAll('#draft-tbody tr[data-entry-id]')){const cb=row.querySelector('.row-check');if(!cb)continue;if(kind==='clear')cb.checked=false;if(kind==='visible')cb.checked=true;if(kind==='pending')cb.checked=row.dataset.status==='pending';}}
+function renderRows(items){const tbody=document.getElementById('draft-tbody');if(!tbody)return;if(!items.length){tbody.innerHTML='<tr><td colspan="8" class="muted">No drafts match the current filters.</td></tr>';return;}tbody.innerHTML=items.map((item)=>{const notes=(item.review_notes||[]).slice(0,3).join('; ')||'Nothing flagged on this draft.';const readLink=item.preview_url||item.public_url||'';const actions=readLink?'<a href="'+escText(readLink)+'">Read this draft</a>':'<span class="muted">No preview</span>';const checked=state.selected.has(item.entry_id)?' checked':'';return '<tr data-entry-id="'+escText(item.entry_id)+'" data-status="'+escText(item.status)+'"><td><input class="row-check" type="checkbox" value="'+escText(item.entry_id)+'"'+checked+'></td><td>'+dateCell(item)+'</td><td><strong>'+escText(item.title)+'</strong><div class="muted small">'+escText(item.entry_id)+'</div><details><summary>Excerpt / notes</summary><p>'+escText(item.excerpt)+'</p><p>'+escText(notes)+'</p></details></td><td><span class="pill">'+escText(item.status_label)+'</span></td><td>'+escText(item.type_label)+'</td><td>'+escText((item.source_cluster||'').replaceAll('-',' '))+'</td><td>'+escText(readyLabel(item))+'</td><td>'+actions+'</td></tr>';}).join('');}
+function currentPageItems(){const f=getFilters();const start=(state.page-1)*f.pageSize;return state.filtered.slice(start,start+f.pageSize);}
+function updateSelectionUI(){const n=state.selected.size;const countEl=document.getElementById('selection-count');if(countEl)countEl.textContent=n?(n+' draft'+(n===1?'':'s')+' currently selected.'):'No drafts selected yet.';const clearBtn=document.getElementById('clear-selected-btn');if(clearBtn){clearBtn.hidden=n===0;clearBtn.textContent='Clear '+n+' selected';}const visibleBtn=document.getElementById('select-visible-btn');if(visibleBtn){const vis=currentPageItems().length;visibleBtn.textContent='Select visible page ('+vis+')';}}
+function updateSortIndicators(){document.querySelectorAll('[data-sort-indicator]').forEach((el)=>{const field=el.getAttribute('data-sort-indicator');if(field===state.sortField){el.textContent=state.sortDir==='asc'?' ▲':' ▼';el.classList.add('active');}else{el.textContent='';el.classList.remove('active');}});}
+function setSort(field){if(state.sortField===field){state.sortDir=state.sortDir==='asc'?'desc':'asc';}else{state.sortField=field;state.sortDir='asc';}renderQueue(true);updateSortIndicators();}
+function renderQueue(resetPage=false){if(resetPage)state.page=1;const f=getFilters();const filtered=filterItems();state.filtered=filtered;const maxPage=Math.max(1,Math.ceil(filtered.length/f.pageSize));if(state.page>maxPage)state.page=maxPage;const start=(state.page-1)*f.pageSize;const visible=filtered.slice(start,start+f.pageSize);renderRows(visible);const summary=document.getElementById('filter-summary');if(summary)summary.textContent='Showing '+visible.length+' rows on page '+state.page+' of '+maxPage+'; '+filtered.length+' match filters out of '+ADMIN_ITEMS.length+' total drafts.';updateSelectionUI();}
+function selectedIds(){return Array.from(state.selected);}
+function selectRows(kind){if(kind==='clear'){state.selected.clear();}else if(kind==='visible'){for(const item of currentPageItems())state.selected.add(item.entry_id);}else if(kind==='pending'){for(const item of ADMIN_ITEMS)if(item.status==='pending')state.selected.add(item.entry_id);}renderRows(currentPageItems());updateSelectionUI();}
 /* buildDecisionIssueUrl is injected below from scripts/lib/decision_issue_client.js
    so this page and each per-draft preview page (scripts/build/write_draft_previews.js)
    share the exact same generator and cannot diverge into two different
@@ -355,7 +425,17 @@ function sendDecision(kind){
   const status=document.getElementById('send-status');
   const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;
   if(!ids.length){status.textContent='Tick at least one draft first.';return;}
-  if(!window.confirm('Open a GitHub request for '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.'))return;
+  const byId=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i]));
+  let confirmMsg='Open a GitHub request for '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.';
+  // "Not this one" on a currently-live article takes it down. Name it before
+  // the request even opens - a takedown must never be a surprise.
+  if(kind==='rejected'){
+    const liveNow=ids.filter((id)=>byId[id]&&byId[id].public_url).map((id)=>byId[id].title||id);
+    if(liveNow.length){
+      confirmMsg='This will take down '+liveNow.length+' article'+(liveNow.length===1?'':'s')+' that '+(liveNow.length===1?'is':'are')+' currently live: '+liveNow.join(', ')+'. It will be unpublished, not deleted - approving it again later restores it with nothing lost. '+confirmMsg;
+    }
+  }
+  if(!window.confirm(confirmMsg))return;
   const titleById=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i.title]));
   window.open(buildDecisionIssueUrl(ADMIN_REPO_URL,kind,ids,titleById),'_blank','noopener');
   status.textContent=ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'" - a pre-filled GitHub request just opened in a new tab. Click "Submit new issue" there to send it; it is applied automatically within a few minutes once submitted.';
@@ -365,9 +445,10 @@ function emailDecision(kind){
   const status=document.getElementById('send-status');
   const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;
   if(!ids.length){status.textContent='Tick at least one draft first.';return;}
+  if(!REVIEW_EMAIL){status.textContent='Cannot draft this email: no recipient is configured (data/system/config.json owner_review_email). Ask the repo owner to set it.';return;}
   if(!window.confirm('Email '+ids.length+' draft'+(ids.length===1?'':'s')+' as "'+label+'"? This only drafts an email; nothing is published by this step.'))return;
-  const byId=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i]));const lines=ids.map((id)=>{const item=byId[id]||{};return '- '+(item.title||id)+' ('+id+')';});const subject='Horse Legal Guide: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';const intro=kind==='approve'?'I approve these drafts for publishing:':kind==='needs_revision'?'These drafts need changes before publishing:':'Please do not publish these drafts:';const bodyText=intro+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Sent from /admin/ on '+todayISO()+'.';window.location.href='mailto:'+encodeURIComponent(REVIEW_EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyText);status.textContent=ids.length+' draft'+(ids.length===1?'':'s')+' added to an email marked "'+label+'". This only drafted an email; nothing is published until whoever receives it takes the GitHub-request action above.'+(REVIEW_EMAIL?'':' Add the recipient address before sending: it is not configured yet.');}
-function bindAdmin(){document.getElementById('unlock-admin')?.addEventListener('click',unlockAdmin);document.getElementById('admin-password')?.addEventListener('keydown',(event)=>{if(event.key==='Enter')unlockAdmin();});['status-filter','quality-filter','type-filter','cluster-filter','sort-filter','page-size'].forEach((id)=>document.getElementById(id)?.addEventListener('change',()=>renderQueue(true)));document.getElementById('prev-page')?.addEventListener('click',()=>{state.page=Math.max(1,state.page-1);renderQueue();});document.getElementById('next-page')?.addEventListener('click',()=>{state.page+=1;renderQueue();});document.getElementById('clear-filters')?.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value='all';document.getElementById('type-filter').value='all';document.getElementById('cluster-filter').value='all';document.getElementById('sort-filter').value='date-asc';renderQueue(true);});document.querySelectorAll('[data-filter-status]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value=button.dataset.filterStatus||'all';document.getElementById('quality-filter').value='all';renderQueue(true);}));document.querySelectorAll('[data-filter-quality]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value=button.dataset.filterQuality||'all';renderQueue(true);}));document.querySelectorAll('[data-select]').forEach((button)=>button.addEventListener('click',()=>selectRows(button.dataset.select)));document.querySelectorAll('[data-decision]').forEach((button)=>button.addEventListener('click',()=>sendDecision(button.dataset.decision)));document.querySelectorAll('[data-email-decision]').forEach((button)=>button.addEventListener('click',()=>emailDecision(button.dataset.emailDecision)));if(sessionStorage.getItem('hlg-admin-open')==='true'){document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(sessionStorage.getItem('hlg-admin-password-reminder')||'');}renderOverdue();renderQueue();}
+  const byId=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i]));const lines=ids.map((id)=>{const item=byId[id]||{};return '- '+(item.title||id)+' ('+id+')';});const subject='Horse Legal Guide: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';const intro=kind==='approve'?'I approve these drafts for publishing:':kind==='needs_revision'?'These drafts need changes before publishing:':'Please do not publish these drafts:';const bodyText=intro+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Sent from /admin/ on '+todayISO()+'.';window.location.href='mailto:'+encodeURIComponent(REVIEW_EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyText);status.textContent=ids.length+' draft'+(ids.length===1?'':'s')+' added to an email marked "'+label+'". This only drafted an email; nothing is published until whoever receives it takes the GitHub-request action above.';}
+function bindAdmin(){document.getElementById('unlock-admin')?.addEventListener('click',unlockAdmin);document.getElementById('admin-password')?.addEventListener('keydown',(event)=>{if(event.key==='Enter')unlockAdmin();});['status-filter','quality-filter','type-filter','cluster-filter','page-size'].forEach((id)=>document.getElementById(id)?.addEventListener('change',()=>renderQueue(true)));document.getElementById('prev-page')?.addEventListener('click',()=>{state.page=Math.max(1,state.page-1);renderQueue();});document.getElementById('next-page')?.addEventListener('click',()=>{state.page+=1;renderQueue();});document.getElementById('clear-filters')?.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value='all';document.getElementById('type-filter').value='all';document.getElementById('cluster-filter').value='all';state.sortField='date';state.sortDir='asc';updateSortIndicators();renderQueue(true);});document.querySelectorAll('[data-filter-status]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value=button.dataset.filterStatus||'all';document.getElementById('quality-filter').value='all';renderQueue(true);}));document.querySelectorAll('[data-filter-quality]').forEach((button)=>button.addEventListener('click',()=>{document.getElementById('status-filter').value='all';document.getElementById('quality-filter').value=button.dataset.filterQuality||'all';renderQueue(true);}));document.querySelectorAll('[data-select]').forEach((button)=>button.addEventListener('click',()=>selectRows(button.dataset.select)));document.querySelectorAll('[data-decision]').forEach((button)=>button.addEventListener('click',()=>sendDecision(button.dataset.decision)));document.querySelectorAll('[data-email-decision]').forEach((button)=>button.addEventListener('click',()=>emailDecision(button.dataset.emailDecision)));document.getElementById('draft-tbody')?.addEventListener('change',(event)=>{const cb=event.target;if(cb&&cb.classList&&cb.classList.contains('row-check')){if(cb.checked)state.selected.add(cb.value);else state.selected.delete(cb.value);updateSelectionUI();}});document.querySelectorAll('th.sortable').forEach((th)=>{th.addEventListener('click',()=>setSort(th.dataset.sortField));th.addEventListener('keydown',(event)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();setSort(th.dataset.sortField);}});});updateSortIndicators();if(sessionStorage.getItem('hlg-admin-open')==='true'){document.getElementById('login-landing').hidden=true;document.getElementById('admin-panel').hidden=false;revealPasswordReminder(sessionStorage.getItem('hlg-admin-password-reminder')||'');}renderOverdue();renderQueue();}
 document.addEventListener('DOMContentLoaded',bindAdmin);</script>`;
   ensureDir(root('dist/admin'));
   fs.writeFileSync(root('dist/admin/index.html'), htmlShell('Horse Legal Guide Admin', body));
