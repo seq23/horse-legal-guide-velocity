@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const { decisionIssueClientScript } = require('../lib/decision_issue_client');
 
 function resolveDeterministicBuildTimestamp() {
   if (process.env.BUILD_TIMESTAMP) return process.env.BUILD_TIMESTAMP;
@@ -341,31 +342,22 @@ function renderRows(items){const tbody=document.getElementById('draft-tbody');if
 function renderQueue(resetPage=false){if(resetPage)state.page=1;const f=getFilters();const filtered=filterItems();state.filtered=filtered;const maxPage=Math.max(1,Math.ceil(filtered.length/f.pageSize));if(state.page>maxPage)state.page=maxPage;const start=(state.page-1)*f.pageSize;const visible=filtered.slice(start,start+f.pageSize);renderRows(visible);const summary=document.getElementById('filter-summary');if(summary)summary.textContent='Showing '+visible.length+' rows on page '+state.page+' of '+maxPage+'; '+filtered.length+' match filters out of '+ADMIN_ITEMS.length+' total drafts.';}
 function selectedIds(){return Array.from(document.querySelectorAll('.row-check:checked')).map((el)=>el.value);}
 function selectRows(kind){for(const row of document.querySelectorAll('#draft-tbody tr[data-entry-id]')){const cb=row.querySelector('.row-check');if(!cb)continue;if(kind==='clear')cb.checked=false;if(kind==='visible')cb.checked=true;if(kind==='pending')cb.checked=row.dataset.status==='pending';}}
-/* Opens a labelled GitHub issue that admin-decision-issue.yml reads and
-   applies after checking the author's real repo permission. See the comment
-   above writeAdminIndex() in this file for why decisions route through an
-   issue rather than a direct server call. */
-function buildDecisionIssueUrl(kind,ids){
-  const action={approve:'approve',needs_revision:'needs_revision',rejected:'reject'}[kind]||kind;
-  const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;
-  const byId=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i]));
-  const lines=ids.map((id)=>{const item=byId[id]||{};return '- '+(item.title||id)+' ('+id+')';});
-  const title='Admin decision: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';
-  const body='Action: '+action+String.fromCharCode(10)+'IDs: '+ids.join(' ')+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Submitted from /admin/ on '+todayISO()+'. Do not edit the Action/IDs lines above - they are read automatically.';
-  const base=ADMIN_REPO_URL.endsWith('/')?ADMIN_REPO_URL.slice(0,-1):ADMIN_REPO_URL;
-  const url=new URL(base+'/issues/new');
-  url.searchParams.set('title',title);
-  url.searchParams.set('body',body);
-  url.searchParams.set('labels','admin-decision');
-  return url.toString();
-}
+/* buildDecisionIssueUrl is injected below from scripts/lib/decision_issue_client.js
+   so this page and each per-draft preview page (scripts/build/write_draft_previews.js)
+   share the exact same generator and cannot diverge into two different
+   decision mechanisms again. It opens a labelled GitHub issue that
+   admin-decision-issue.yml reads and applies after checking the author's real
+   repo permission. See the comment above writeAdminIndex() in this file for
+   why decisions route through an issue rather than a direct server call. */
+${decisionIssueClientScript()}
 function sendDecision(kind){
   const ids=selectedIds();
   const status=document.getElementById('send-status');
   const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;
   if(!ids.length){status.textContent='Tick at least one draft first.';return;}
   if(!window.confirm('Open a GitHub request for '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.'))return;
-  window.open(buildDecisionIssueUrl(kind,ids),'_blank','noopener');
+  const titleById=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i.title]));
+  window.open(buildDecisionIssueUrl(ADMIN_REPO_URL,kind,ids,titleById),'_blank','noopener');
   status.textContent=ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'" - a pre-filled GitHub request just opened in a new tab. Click "Submit new issue" there to send it; it is applied automatically within a few minutes once submitted.';
 }
 function emailDecision(kind){

@@ -84,7 +84,35 @@ function main() {
     fail('ADMIN_UI_APPROVAL_WIRING_FAIL: scripts/admin/parse_decision_issue.js is missing; the issue-consuming workflow has nothing to parse the decision with.');
   }
 
-  ok('dist/admin/index.html opens a real GitHub-issue decision request, and .github/workflows/admin-decision-issue.yml exists to apply it with an author-permission check.');
+  // Second surface, same defect class: scripts/build/write_draft_previews.js
+  // renders one page per queued draft under dist/admin/drafts/, and each used
+  // to carry its OWN independent "Your decision" card - a second, unnoticed
+  // instance of the exact mailto-only stub /admin/'s queue page had. Checking
+  // only the queue page (dist/admin/index.html, above) would have let that
+  // second inert control ship silently forever. Examining zero preview pages
+  // here (an empty dist/admin/drafts/) is itself a failure, not a pass.
+  const previewFiles = fs.existsSync(path.resolve(process.cwd(), 'dist/admin/drafts'))
+    ? fs.readdirSync(path.resolve(process.cwd(), 'dist/admin/drafts'), { recursive: true })
+        .filter((f) => String(f).endsWith('index.html') && String(f) !== 'index.html')
+        .map((f) => path.resolve(process.cwd(), 'dist/admin/drafts', f))
+    : [];
+  if (!previewFiles.length) {
+    fail('ADMIN_UI_APPROVAL_WIRING_FAIL: GATE_EXAMINED_NOTHING - 0 per-draft preview pages found under dist/admin/drafts/. Run `npm run build` first; a gate that examines no preview pages has proven nothing about them.');
+  }
+  const previewFailures = [];
+  for (const file of previewFiles) {
+    const previewHtml = fs.readFileSync(file, 'utf8');
+    if (!previewHtml.includes('buildDecisionIssueUrl') || !previewHtml.includes('admin-decision')) {
+      previewFailures.push(path.relative(process.cwd(), file));
+    }
+  }
+  if (previewFailures.length) {
+    console.error(`ADMIN_UI_APPROVAL_WIRING_FAIL: ${previewFailures.length} of ${previewFiles.length} per-draft preview page(s) do not route their decision controls through the real GitHub-issue mechanism:`);
+    for (const f of previewFailures.slice(0, 10)) console.error(`- ${f}`);
+    process.exit(1);
+  }
+
+  ok(`dist/admin/index.html and all ${previewFiles.length} per-draft preview page(s) open a real GitHub-issue decision request, and .github/workflows/admin-decision-issue.yml exists to apply it with an author-permission check.`);
 }
 
 if (require.main === module) main();
