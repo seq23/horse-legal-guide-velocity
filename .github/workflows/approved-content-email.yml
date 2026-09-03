@@ -16,7 +16,7 @@ on:
         required: false
         default: "false"
   workflow_run:
-    workflows: ["Admin Bulk Content Actions", "Manual Publish"]
+    workflows: ["Admin Bulk Content Actions", "Manual Publish", "Admin Decision Issue"]
     types: [completed]
   schedule:
     - cron: "17 14 * * *"

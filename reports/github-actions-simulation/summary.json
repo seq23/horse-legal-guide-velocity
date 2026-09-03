@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-03T11:23:25.000Z",
+  "generated_at": "2026-09-03T15:47:55.000Z",
   "inventory_errors": [],
   "truth_boundary": "This is a local simulated GitHub Actions data trace. It combines workflow YAML presence, local command validation already executed in this workspace, artifact presence, dry-run distribution checks, and source-specific warning inspection. It does not prove live GitHub Actions, live GitHub secrets, live GSC, live IndexNow, or deployed runtime behavior.",
   "status": "passed",
-  "workflow_count": 16,
-  "passed": 16,
+  "workflow_count": 17,
+  "passed": 17,
   "passed_with_warnings": 0,
   "failed": 0,
   "hostile_review_repairs": [
@@ -152,6 +152,14 @@
       "live_followups": [],
       "hard_fails": [],
       "report": "reports/github-actions-simulation/query-page-repair.json"
+    },
+    {
+      "workflow": "admin-decision-issue.yml",
+      "status": "passed",
+      "warnings": [],
+      "live_followups": [],
+      "hard_fails": [],
+      "report": "reports/github-actions-simulation/admin-decision-issue.json"
     }
   ]
 }

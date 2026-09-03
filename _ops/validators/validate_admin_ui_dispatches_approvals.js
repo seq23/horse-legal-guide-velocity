@@ -8,14 +8,26 @@
  * it never called the server, so an owner approval taken there could never
  * change data/system/editorial_backlog.json or reach the live site - matching
  * both reported symptoms (status never changed in /admin, nothing went live).
- * The GitHub-authenticated dispatch endpoint the fix now calls
- * (/api/admin/action -> admin-bulk-content-actions.yml -> approve_many.js)
- * already existed and was already documented as available from /admin/ in
- * docs/runbooks/GITHUB_ADMIN_AUTH_SETUP.md's own verification checklist - it
- * was simply never wired to a button. This is a structural regression guard
- * for that wiring, checked directly against the built dist/admin/index.html
- * output rather than the source, so it fails if a future build stops emitting
- * it for any reason.
+ *
+ * The first fix attempt wired decisions to the GitHub-OAuth-gated
+ * /api/admin/action endpoint /agency/ already uses - but a live check of
+ * https://horselegalguide.com/api/admin/github/session on 2026-09-03 returned
+ * provider_configured:false and /api/admin/github/login returned HTTP 500,
+ * confirming that path's Cloudflare Pages secrets are not configured. A prior
+ * PR (see docs/runbooks/GITHUB_ADMIN_AUTH_SETUP.md) had already removed that
+ * exact control from /admin/ for that reason, guarded by
+ * validate_github_admin_functions.js, which fails the build if /admin/
+ * advertises it again while unconfigured. Reintroducing it would have
+ * reproduced the same "advertises a capability that doesn't work" defect this
+ * repo already fixed once.
+ *
+ * The real fix routes decisions through .github/workflows/admin-decision-issue.yml
+ * instead: a decision opens a pre-filled GitHub issue (needs only a free
+ * GitHub account, no unconfigured secret), which that workflow reads,
+ * authorizes against the issue author's actual repo permission, and applies
+ * with the same approve_many.js / reject_many.js / mark_many_needs_revision.js
+ * admin-bulk-content-actions.yml already uses. This validator checks that
+ * wiring is present in the built page and that the consuming workflow exists.
  *
  * Usage: node _ops/validators/validate_admin_ui_dispatches_approvals.js
  */
@@ -25,34 +37,54 @@ const path = require('path');
 const { fail, ok } = require('./helpers');
 
 function main() {
-  const file = path.resolve(process.cwd(), 'dist/admin/index.html');
-  if (!fs.existsSync(file)) {
+  const adminFile = path.resolve(process.cwd(), 'dist/admin/index.html');
+  if (!fs.existsSync(adminFile)) {
     fail('ADMIN_UI_APPROVAL_WIRING_FAIL: dist/admin/index.html does not exist. Run `npm run build` first; a gate that cannot read the built admin page has examined nothing.');
   }
-  const html = fs.readFileSync(file, 'utf8');
+  const html = fs.readFileSync(adminFile, 'utf8');
 
   const required = [
-    { marker: '/api/admin/action', why: 'a decision must be able to POST to the real GitHub-authenticated dispatch endpoint' },
-    { marker: '/api/admin/github/session', why: 'the page must check GitHub sign-in before deciding whether a decision can actually publish' },
-    { marker: 'approve_selected', why: 'the approve decision must map to the real admin-bulk-content-actions.yml action, not only an email draft' },
-    { marker: 'adminSession', why: 'the send-decision handler must branch on a real session rather than always falling back to mailto' },
+    { marker: '/issues/new', why: 'a decision must open a real GitHub issue-creation request, not only draft an email' },
+    { marker: 'admin-decision', why: 'the opened issue must carry the label admin-decision-issue.yml filters on' },
+    { marker: 'Action: ', why: 'the issue body must carry the fixed "Action: <kind>" header parse_decision_issue.js reads' },
+    { marker: 'IDs: ', why: 'the issue body must carry the fixed "IDs: <ids>" header parse_decision_issue.js reads' },
+    { marker: 'buildDecisionIssueUrl', why: 'the page must build the issue URL itself rather than relying on an unconfigured server endpoint' },
   ];
-
   const missing = required.filter((r) => !html.includes(r.marker));
   if (missing.length) {
-    console.error('ADMIN_UI_APPROVAL_WIRING_FAIL: dist/admin/index.html no longer dispatches real approvals:');
+    console.error('ADMIN_UI_APPROVAL_WIRING_FAIL: dist/admin/index.html no longer opens a real decision request:');
     for (const m of missing) console.error(`- missing "${m.marker}": ${m.why}`);
     process.exit(1);
   }
 
-  // The mailto fallback is allowed to remain (useful when no GitHub session is
-  // present), but it must not be the ONLY path a signed-in reviewer can take -
-  // i.e. the page must not unconditionally redirect to mailto: for a decision.
-  if (!/if\s*\(\s*adminSession\s*&&\s*adminSession\.authenticated\s*\)/.test(html)) {
-    fail('ADMIN_UI_APPROVAL_WIRING_FAIL: dist/admin/index.html has no conditional branch on an authenticated GitHub session; a decision cannot be told apart from an unauthenticated mailto-only request.');
+  // The two known-broken paths must not quietly return: mailto as the ONLY
+  // control (the original bug), or the OAuth-gated action endpoint while it
+  // stays unconfigured (the first fix attempt, caught by
+  // validate_github_admin_functions.js's own inverted checks).
+  if (!/window\.open\(buildDecisionIssueUrl/.test(html)) {
+    fail('ADMIN_UI_APPROVAL_WIRING_FAIL: sendDecision() no longer opens the GitHub issue URL as the primary decision path.');
+  }
+  if (html.includes('/api/admin/action') || html.includes('x-hlg-admin-csrf')) {
+    fail('ADMIN_UI_APPROVAL_WIRING_FAIL: dist/admin/index.html references the unconfigured OAuth action endpoint again; validate_github_admin_functions.js will also fail this for the same reason.');
   }
 
-  ok('dist/admin/index.html wires decision buttons to the real GitHub-authenticated approval dispatch (checked 4 markers + 1 structural branch).');
+  const workflow = path.resolve(process.cwd(), '.github/workflows/admin-decision-issue.yml');
+  if (!fs.existsSync(workflow)) {
+    fail('ADMIN_UI_APPROVAL_WIRING_FAIL: .github/workflows/admin-decision-issue.yml is missing; the issue this page opens has nothing to consume it.');
+  }
+  const workflowSrc = fs.readFileSync(workflow, 'utf8');
+  for (const marker of ['admin-decision', 'getCollaboratorPermissionLevel', 'parse_decision_issue.js']) {
+    if (!workflowSrc.includes(marker)) {
+      fail(`ADMIN_UI_APPROVAL_WIRING_FAIL: .github/workflows/admin-decision-issue.yml is missing expected marker "${marker}".`);
+    }
+  }
+
+  const parser = path.resolve(process.cwd(), 'scripts/admin/parse_decision_issue.js');
+  if (!fs.existsSync(parser)) {
+    fail('ADMIN_UI_APPROVAL_WIRING_FAIL: scripts/admin/parse_decision_issue.js is missing; the issue-consuming workflow has nothing to parse the decision with.');
+  }
+
+  ok('dist/admin/index.html opens a real GitHub-issue decision request, and .github/workflows/admin-decision-issue.yml exists to apply it with an author-permission check.');
 }
 
 if (require.main === module) main();
