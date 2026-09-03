@@ -176,6 +176,22 @@ jobs:
           git commit -m "chore: apply admin decision from issue #${{ steps.issue_context.outputs.number }}"
           git push
 
+      # dist/ and the record are already correct by this point - this only
+      # asks Cloudflare's edge cache to catch up sooner than its own TTL
+      # would. Gated on CLOUDFLARE_API_TOKEN (an owner-held secret this repo
+      # never sets itself; see RUNBOOK.md "Cache purge on revoke") the same
+      # way the SMTP credential is gated: missing means a NAMED STOP, never a
+      # build failure, and continue-on-error means a purge failure can never
+      # block or reverse the decision that already ran above.
+      - name: Purge Cloudflare edge cache for affected URLs
+        if: steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success' && steps.preflight.outcome == 'success' && steps.operation.outcome == 'success' && steps.rebuild.outcome == 'success'
+        continue-on-error: true
+        env:
+          CLOUDFLARE_ZONE_ID: "376d976e8beceb16c2f1728b2be1f8cf"
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ENTRY_IDS: ${{ fromJSON(steps.parse.outputs.ids) }}
+        run: node scripts/ops/purge_cloudflare_cache.js
+
       - name: Write action receipt
         if: always() && steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success'
         env:

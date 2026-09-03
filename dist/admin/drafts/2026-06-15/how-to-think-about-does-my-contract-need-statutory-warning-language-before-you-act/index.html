@@ -31,7 +31,12 @@ button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:9px 15p
 button.secondary{background:#efe3d1;color:#2c2118}
 .overdue{color:#a3271c}
 .banner-late{background:#fdecea;border-color:#e6b3aa}
-.decision-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}</style>
+.decision-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.decision-explainer{padding-left:20px}
+.decision-explainer li{margin:0 0 4px}
+.button-link{background:transparent;color:#7a4b18;border:1px solid #d9c9b1;font-weight:700;padding:7px 12px}
+.assistant-block{margin-top:8px;border-top:1px solid #e4d7c5;padding-top:16px}
+[hidden]{display:none!important}</style>
 <script data-clarity-loader>(function(w,d,m){var h=(w.location.hostname||"").toLowerCase().replace(/^www\./,"");var id=m[h];if(!id)return;w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};var s=d.createElement("script");s.async=1;s.src="https://www.clarity.ms/tag/"+id;var f=d.getElementsByTagName("script")[0];f.parentNode.insertBefore(s,f)})(window,document,{"horselegalguide.com":"y7l45bndb4"})</script></head>
 <body><main class="shell"><section id="draft-login" class="card">
   <p class="eyebrow">Enter admin</p>
@@ -55,30 +60,39 @@ button.secondary{background:#efe3d1;color:#2c2118}
 <div class="card" id="decide">
   <p class="eyebrow">Your decision</p>
   <h2 style="margin:0 0 6px;font-size:1.1rem">What do you want to do with this one?</h2>
-  <p class="small muted" style="margin:0">Choose below. It opens a pre-filled request on GitHub (github.com) with this draft and your decision already in it - you only click &ldquo;Submit new issue&rdquo; there. A repo maintainer's decision is picked up and applied automatically within a few minutes; anyone else's is answered with what to do next, never applied silently. You do not need to know Git or the command line, just a free GitHub account.</p>
   <div class="decision-row">
     <button type="button" data-decision="approve">Approve</button>
     <button type="button" class="secondary" data-decision="needs_revision">Needs changes</button>
-    <button type="button" class="secondary" data-decision="rejected">Not this one</button>
+    <button type="button" class="secondary" data-decision="rejected">Revoke this one</button>
   </div>
+  <ul class="small muted decision-explainer" style="margin:8px 0 0">
+    <li><strong>Approve</strong> &mdash; opens a pre-filled GitHub request. Nothing is sent until you click &ldquo;Submit new issue&rdquo; there; a maintainer's request then applies automatically within a few minutes, and it publishes once its scheduled date arrives.</li>
+    <li><strong>Needs changes</strong> &mdash; same GitHub request, marked for revision. Nothing publishes.</li>
+    <li><strong>Revoke this one</strong> &mdash; same GitHub request, marked to revoke. Nothing publishes while in this state.</li>
+  </ul>
   <p class="small muted" id="decision-status" style="margin:10px 0 0">No decision sent yet.</p>
   <p class="small muted" style="margin:8px 0 0">If approved, this would publish at <code>/insights/2026-06-15/how-to-think-about-does-my-contract-need-statutory-warning-language-before-you-act/</code>.</p>
-  <p class="small muted" style="margin:8px 0 0">No GitHub account? <a href="https://github.com/seq23/horse-legal-guide-velocity/blob/main/content/drafts/generated/2026-06-15__how-to-think-about-does-my-contract-need-statutory-warning-language-before-you-act.md#decide-email" data-email-fallback rel="noopener">Email a copy of this decision instead</a> (this does not publish anything by itself).</p>
-  <p class="small" style="margin:8px 0 0"><a href="https://github.com/seq23/horse-legal-guide-velocity/blob/main/content/drafts/generated/2026-06-15__how-to-think-about-does-my-contract-need-statutory-warning-language-before-you-act.md" rel="noopener">Read the source markdown</a> · <a href="https://github.com/seq23/horse-legal-guide-velocity/edit/main/content/drafts/generated/2026-06-15__how-to-think-about-does-my-contract-need-statutory-warning-language-before-you-act.md" rel="noopener">Edit this draft on GitHub</a></p>
+  <p class="small" style="margin:8px 0 0"><a href="https://github.com/seq23/horse-legal-guide-velocity/edit/main/data/system/editorial_backlog.json#L3647" rel="noopener">Edit the content calendar in GitHub</a> &mdash; the schedule and status record, not the writing.</p>
+</div>
+<div class="card assistant-block" id="executive-assistant">
+  <p class="eyebrow">For someone helping with publishing who is not an owner</p>
+  <h2 style="margin:0 0 6px;font-size:1.05rem">Executive assistant</h2>
+  <p class="small muted" style="margin:0">Drafts an email to the person who publishes. It publishes nothing by itself.</p>
+  <p class="small" style="margin:8px 0 0"><button type="button" data-email-decision="approve" class="button-link">Email an approval</button> &middot; <button type="button" data-email-decision="needs_revision" class="button-link">Email &ldquo;needs changes&rdquo;</button> &middot; <button type="button" data-email-decision="rejected" class="button-link">Email &ldquo;revoke this one&rdquo;</button></p>
 </div>
 <script>
-function buildDecisionIssueUrl(repoUrl,kind,ids,titleById){const action={approve:'approve',needs_revision:'needs_revision',rejected:'reject'}[kind]||kind;const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;const lines=ids.map((id)=>'- '+((titleById&&titleById[id])||id)+' ('+id+')');const title='Admin decision: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';const todayISO=(new Date()).toISOString().slice(0,10);const body='Action: '+action+String.fromCharCode(10)+'IDs: '+ids.join(' ')+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Submitted on '+todayISO+'. Do not edit the Action/IDs lines above - they are read automatically.';const base=repoUrl.endsWith('/')?repoUrl.slice(0,-1):repoUrl;const url=new URL(base+'/issues/new');url.searchParams.set('title',title);url.searchParams.set('body',body);url.searchParams.set('labels','admin-decision');return url.toString();}
+function buildDecisionIssueUrl(repoUrl,kind,ids,titleById){const action={approve:'approve',needs_revision:'needs_revision',rejected:'reject'}[kind]||kind;const label={approve:'approve',needs_revision:'needs changes',rejected:'revoke this one'}[kind]||kind;const lines=ids.map((id)=>'- '+((titleById&&titleById[id])||id)+' ('+id+')');const title='Admin decision: '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"';const todayISO=(new Date()).toISOString().slice(0,10);const body='Action: '+action+String.fromCharCode(10)+'IDs: '+ids.join(' ')+String.fromCharCode(10,10)+lines.join(String.fromCharCode(10))+String.fromCharCode(10,10)+'Submitted on '+todayISO+'. Do not edit the Action/IDs lines above - they are read automatically.';const base=repoUrl.endsWith('/')?repoUrl.slice(0,-1):repoUrl;const url=new URL(base+'/issues/new');url.searchParams.set('title',title);url.searchParams.set('body',body);url.searchParams.set('labels','admin-decision');return url.toString();}
 (function(){
   var REPO_URL="https://github.com/seq23/horse-legal-guide-velocity";
   var EMAIL="claire@wisecovington.com";
   var TITLE="How to Think About Does My Contract Need Statutory Warning Language Before You Act";
   var ID="draft-insight-2026-06-15-does-my-contract-need-statutory-warning-language";
   var IS_LIVE=false;
-  var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'not this one'};
+  var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'revoke this one'};
   function emailFallback(kind){
     if(!EMAIL){var s=document.getElementById('decision-status');if(s)s.textContent='Cannot draft this email: no recipient is configured (data/system/config.json owner_review_email). Ask the repo owner to set it.';return;}
     var nl=String.fromCharCode(10);
-    var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please do not publish this draft:'};
+    var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please revoke this draft:'};
     var subject='Horse Legal Guide: "'+TITLE+'" marked "'+WORDS[kind]+'"';
     var body=INTRO[kind]+nl+nl+'- '+TITLE+' ('+ID+')'+nl+nl+'Sent from '+window.location.pathname+'.';
     window.location.href='mailto:'+encodeURIComponent(EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
@@ -87,8 +101,11 @@ function buildDecisionIssueUrl(repoUrl,kind,ids,titleById){const action={approve
   }
   function send(kind){
     if(!REPO_URL){emailFallback(kind);return;}
-    // "Not this one" on a draft that is currently live takes it down - name
-    // that plainly before the request even opens, never as a silent side effect.
+    // "Revoke this one" on a draft that is currently live takes it down -
+    // name that plainly before the request even opens, never as a silent
+    // side effect. The confirm text is deliberately not gated behind IS_LIVE
+    // alone for its base sentence - every decision gets the "nothing changes
+    // until Submit new issue" reminder, live or not.
     var confirmMsg='Open a GitHub request for this draft marked "'+WORDS[kind]+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.';
     if(kind==='rejected'&&IS_LIVE){
       confirmMsg='This will take down "'+TITLE+'", which is currently live. It will be unpublished, not deleted - approving it again later restores it with nothing lost. '+confirmMsg;
@@ -99,8 +116,8 @@ function buildDecisionIssueUrl(repoUrl,kind,ids,titleById){const action={approve
     var status=document.getElementById('decision-status');
     if(status)status.textContent='Marked "'+WORDS[kind]+'" - a pre-filled GitHub request just opened in a new tab. Click "Submit new issue" there to send it; it is applied automatically within a few minutes once submitted.';
   }
-  var emailLink=document.querySelector('[data-email-fallback]');
-  if(emailLink)emailLink.addEventListener('click',function(event){event.preventDefault();emailFallback('approve');});
+  var emailButtons=document.querySelectorAll('#executive-assistant [data-email-decision]');
+  for(var j=0;j<emailButtons.length;j++){(function(button){button.addEventListener('click',function(){emailFallback(button.getAttribute('data-email-decision'));});})(emailButtons[j]);}
   var buttons=document.querySelectorAll('#decide [data-decision]');
   for(var i=0;i<buttons.length;i++){(function(button){button.addEventListener('click',function(){send(button.getAttribute('data-decision'));});})(buttons[i]);}
 })();

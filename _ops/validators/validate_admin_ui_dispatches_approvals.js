@@ -49,13 +49,17 @@ function main() {
     { marker: 'Action: ', why: 'the issue body must carry the fixed "Action: <kind>" header parse_decision_issue.js reads' },
     { marker: 'IDs: ', why: 'the issue body must carry the fixed "IDs: <ids>" header parse_decision_issue.js reads' },
     { marker: 'buildDecisionIssueUrl', why: 'the page must build the issue URL itself rather than relying on an unconfigured server endpoint' },
-    { marker: 'This will take down', why: '"not this one" is a revoke - taking a live article down must be confirmed and named to the reviewer before the request opens, never a silent side effect' },
+    { marker: 'This will take down', why: '"revoke this one" must confirm and name a live article before taking it down, never as a silent side effect' },
+    { marker: 'Revoke this one', why: 'the third decision option must say what it does ("Revoke this one"), not the unclear "Not this one"' },
   ];
   const missing = required.filter((r) => !html.includes(r.marker));
   if (missing.length) {
     console.error('ADMIN_UI_APPROVAL_WIRING_FAIL: dist/admin/index.html no longer opens a real decision request:');
     for (const m of missing) console.error(`- missing "${m.marker}": ${m.why}`);
     process.exit(1);
+  }
+  if (html.includes('Not this one')) {
+    fail('ADMIN_UI_APPROVAL_WIRING_FAIL: dist/admin/index.html still contains "Not this one" - renamed to "Revoke this one" everywhere; the old, unclear phrase must not linger.');
   }
 
   // The two known-broken paths must not quietly return: mailto as the ONLY
@@ -101,18 +105,44 @@ function main() {
     fail('ADMIN_UI_APPROVAL_WIRING_FAIL: GATE_EXAMINED_NOTHING - 0 per-draft preview pages found under dist/admin/drafts/. Run `npm run build` first; a gate that examines no preview pages has proven nothing about them.');
   }
   const previewFailures = [];
+  // The owner reported this exact card wrong twice in production while the
+  // generator source looked correct - a gap between "the template says X"
+  // and "the deployed page renders X" that a build-time check on dist/ is
+  // exactly positioned to close (dist/ is what actually ships). Each pair
+  // names the property and why it must hold; a page missing any of them, or
+  // still carrying a property it must NOT have, fails by name.
+  const PREVIEW_REQUIRED = [
+    { marker: 'Edit the content calendar in GitHub', why: 'the calendar-record edit link must be labelled for what it actually opens (schedule/status), not left as "Edit this draft"' },
+    { marker: 'editorial_backlog.json', why: 'the calendar edit link must target the schedule/status record, not the draft markdown source' },
+    { marker: 'id="executive-assistant"', why: 'the email fallback must be its own labelled, subordinate area, not a "No GitHub account?" line inside the decision card' },
+    { marker: 'Executive assistant', why: 'the subordinate email-fallback area must be headed plainly, in the page\'s own heading style, not framed as a question' },
+    { marker: 'Revoke this one', why: 'the third decision option must say what it does ("Revoke this one"), not the unclear "Not this one"' },
+  ];
+  const PREVIEW_FORBIDDEN = [
+    { marker: 'Read the source markdown', why: 'this link was reported superfluous by the owner and must be deleted outright, not hidden or collapsed' },
+    { marker: 'Edit this draft on GitHub', why: 'superseded by "Edit the content calendar in GitHub" - the old label must not still be present' },
+    { marker: 'No GitHub account?', why: 'superseded by the labelled "Executive assistant" block - the old question-framed line must not still be present' },
+    { marker: 'Not this one', why: 'renamed to "Revoke this one" everywhere - the old, unclear phrase must not linger anywhere on this page' },
+  ];
   for (const file of previewFiles) {
     const previewHtml = fs.readFileSync(file, 'utf8');
+    const rel = path.relative(process.cwd(), file);
     if (!previewHtml.includes('buildDecisionIssueUrl') || !previewHtml.includes('admin-decision') || !previewHtml.includes('This will take down')) {
-      previewFailures.push(path.relative(process.cwd(), file));
+      previewFailures.push(rel);
     }
     if (previewHtml.includes('/api/admin/action') || previewHtml.includes('x-hlg-admin-csrf')) {
-      previewFailures.push(`${path.relative(process.cwd(), file)} (references the unconfigured OAuth action endpoint)`);
+      previewFailures.push(`${rel} (references the unconfigured OAuth action endpoint)`);
+    }
+    for (const { marker, why } of PREVIEW_REQUIRED) {
+      if (!previewHtml.includes(marker)) previewFailures.push(`${rel} (missing "${marker}": ${why})`);
+    }
+    for (const { marker, why } of PREVIEW_FORBIDDEN) {
+      if (previewHtml.includes(marker)) previewFailures.push(`${rel} (still contains "${marker}": ${why})`);
     }
   }
   if (previewFailures.length) {
-    console.error(`ADMIN_UI_APPROVAL_WIRING_FAIL: ${previewFailures.length} of ${previewFiles.length} per-draft preview page(s) do not route their decision controls through the real GitHub-issue mechanism:`);
-    for (const f of previewFailures.slice(0, 10)) console.error(`- ${f}`);
+    console.error(`ADMIN_UI_APPROVAL_WIRING_FAIL: ${previewFailures.length} issue(s) across ${previewFiles.length} per-draft preview page(s):`);
+    for (const f of previewFailures.slice(0, 20)) console.error(`- ${f}`);
     process.exit(1);
   }
 

@@ -47,7 +47,7 @@ function blockingReasons(entry) {
   if ((entry.routing_score || 0) < 100) reasons.push('Wise Covington routing not verified');
   if ((entry.legal_safety_score || 0) < 100) reasons.push('legal safety not verified');
   // "entry is rejected" was deliberately dropped as a block: rejectEntry()
-  // below ("Not this one" in /admin/) is a revoke, not a permanent verdict.
+  // below ("Revoke this one" in /admin/) is a revoke, not a permanent verdict.
   // A later approve_many.js call on a previously-rejected/revoked entry must
   // succeed - "a later approve restores it with no loss" - so the mere fact
   // that an entry currently carries status/review_status "rejected" cannot
@@ -72,10 +72,10 @@ function approveEntry(entry, publishDate = null) {
 }
 
 /**
- * "Not this one" in /admin/ - the third decision option. This is a revoke, not
- * a destructive delete: it never touches the draft markdown file, the backlog
- * entry, or any prior history field, and a later approve_many.js call on the
- * same entry succeeds cleanly (see blockingReasons() above).
+ * "Revoke this one" in /admin/ - the third decision option. This is a revoke, not
+ * a destructive delete: it never touches the draft markdown file, and a later
+ * approve_many.js call on the same entry succeeds cleanly (see
+ * blockingReasons() above).
  *
  *   - Not yet live: the entry simply stops being "approved", so
  *     write_editorial_pages.js's approved(e) gate excludes it from the next
@@ -86,20 +86,37 @@ function approveEntry(entry, publishDate = null) {
  *     the next deploy - unpublished, not destroyed. Its live_slug is cleared
  *     from data/system/editorial_backlog.json on that same rebuild.
  *
- * wasLive/previousLiveSlug are captured HERE, before that rebuild runs, from
- * the live_slug write_editorial_pages.js persisted on the entry's last
+ * Owner instruction (2026-09-03): a revoked entry returns to status "pending"
+ * - the same "waiting for you" bucket as anything never yet decided - rather
+ * than a separate "rejected" status, so it surfaces wherever Claire already
+ * looks for undecided work ("Select everything waiting") without her needing
+ * to know to filter for it. The revoke is still a real, recorded decision:
+ * rejected_at/rejection_reason/revoked_from_live/previously_live_slug are
+ * preserved so the row carries visible proof of what happened rather than
+ * silently reappearing in the queue with no trace - see the "revoked_from_live"
+ * marker rendered on the row in scripts/release/build_site_release.js and the
+ * banner in scripts/build/write_draft_previews.js.
+ *
+ * wasLive/previousLiveSlug are captured HERE, before write_editorial_pages.js's
+ * rebuild runs, from the live_slug that build persisted on the entry's last
  * publish - that field is about to be deleted by the gate above, so this is
  * the only point in the pipeline that can still answer "was this live at the
  * moment it was revoked?" for the notification email and the /admin/
  * confirmation prompt.
+ *
+ * revoked_from_live is sticky (OR'd with its previous value, never simply
+ * overwritten): re-running "revoke this one" on an entry that is already down
+ * (wasLive false this time) must not erase that it WAS live at an earlier
+ * revoke. previously_live_slug is already sticky the same way - it is only
+ * ever written when wasLive is true, never cleared otherwise.
  */
 function rejectEntry(entry, reason = 'owner bulk rejection') {
   const wasLive = Boolean(entry.live_slug);
-  entry.status = 'rejected';
-  entry.review_status = 'rejected';
+  entry.status = 'pending';
+  entry.review_status = 'pending';
   entry.rejected_at = new Date().toISOString();
   entry.rejection_reason = reason;
-  entry.revoked_from_live = wasLive;
+  entry.revoked_from_live = wasLive || Boolean(entry.revoked_from_live);
   if (wasLive) entry.previously_live_slug = entry.live_slug;
 }
 

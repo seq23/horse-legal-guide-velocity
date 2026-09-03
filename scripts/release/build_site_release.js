@@ -196,7 +196,7 @@ function formatDueDate(iso) {
   return `${Number(parts[2])} ${month}`.trim();
 }
 function statusWord(status) {
-  return { pending: 'Waiting for you', approved: 'Approved', needs_revision: 'Needs changes', rejected: 'Not this one' }[status] || String(status || 'Waiting for you');
+  return { pending: 'Waiting for you', approved: 'Approved', needs_revision: 'Needs changes', rejected: 'Revoked' }[status] || String(status || 'Waiting for you');
 }
 function typeWord(type) {
   return {
@@ -235,6 +235,11 @@ function writeAdminIndex() {
   const counts = summarizeStatusCounts(items);
   // Warning count the reviewer sees excludes the internal self-heal note.
   const warnings = items.filter((item) => reviewerWarnings(item).length).length;
+  // "Revoke this one" returns an entry to status "pending" (see
+  // scripts/admin/_common.js rejectEntry) rather than a separate "rejected"
+  // status, so counts.rejected is never populated by it - this counts
+  // revoked_from_live instead, which IS how a revoke's history is recorded.
+  const revokedCount = items.filter((item) => item.revoked_from_live).length;
   const clusters = [...new Set(items.map((item) => item.source_cluster).filter(Boolean))].sort();
   const types = [...new Set(items.map((item) => item.content_type).filter(Boolean))].sort();
 
@@ -317,14 +322,14 @@ function writeAdminIndex() {
     <button class="metric filter-tile fail" type="button" data-filter-quality="overdue"><span class="eyebrow">Overdue</span><strong id="overdue-count">${overdueAtBuild.length}</strong><span>past its publish date</span></button>
     <button class="metric filter-tile" type="button" data-filter-status="approved"><span class="eyebrow">Approved</span><strong>${counts.approved || 0}</strong><span>you said yes</span></button>
     <button class="metric filter-tile" type="button" data-filter-status="needs_revision"><span class="eyebrow">Needs changes</span><strong>${counts.needs_revision || 0}</strong><span>send back</span></button>
-    <button class="metric filter-tile" type="button" data-filter-status="rejected"><span class="eyebrow">Not this one</span><strong>${counts.rejected || 0}</strong><span>do not publish</span></button>
+    <button class="metric filter-tile" type="button" data-filter-quality="revoked"><span class="eyebrow">Revoked</span><strong>${revokedCount}</strong><span>previously live, taken down</span></button>
     <button class="metric filter-tile" type="button" data-filter-quality="needs_look"><span class="eyebrow">Warnings</span><strong>${warnings}</strong><span>worth a look</span></button>
   </section>
   <section class="card sticky-admin-bar">
     <h2>Filter queue</h2>
     <div class="filter-grid">
-      <label>Status<select id="status-filter"><option value="all">All statuses</option><option value="pending">Waiting for you</option><option value="approved">Approved</option><option value="needs_revision">Needs changes</option><option value="rejected">Not this one</option></select></label>
-      <label>Ready<select id="quality-filter"><option value="all">Everything</option><option value="ready">Ready</option><option value="needs_look">Needs a look</option><option value="overdue">Past its publish date</option></select></label>
+      <label>Status<select id="status-filter"><option value="all">All statuses</option><option value="pending">Waiting for you</option><option value="approved">Approved</option><option value="needs_revision">Needs changes</option></select></label>
+      <label>Ready<select id="quality-filter"><option value="all">Everything</option><option value="ready">Ready</option><option value="needs_look">Needs a look</option><option value="overdue">Past its publish date</option><option value="revoked">Revoked</option></select></label>
       <label>Content type<select id="type-filter"><option value="all">All content types</option>${typeOptions}</select></label>
       <label>Topic<select id="cluster-filter"><option value="all">All topics</option>${clusterOptions}</select></label>
       <label>Rows per page<select id="page-size"><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label>
@@ -350,7 +355,7 @@ function writeAdminIndex() {
         <div class="button-row decision-row">
           <button type="button" data-decision="approve">Approve selected</button>
           <button type="button" data-decision="needs_revision">Send &ldquo;needs changes&rdquo;</button>
-          <button type="button" data-decision="rejected">Send &ldquo;not this one&rdquo;</button>
+          <button type="button" data-decision="rejected">Send &ldquo;revoke this one&rdquo;</button>
         </div>
         <p id="send-status" class="muted">Nothing sent yet.</p>
       </li>
@@ -372,7 +377,7 @@ function writeAdminIndex() {
     <p class="eyebrow">For someone helping with publishing who is not an owner</p>
     <h2>Executive assistant</h2>
     <p class="muted">Drafts an email to the person who publishes. It publishes nothing by itself.</p>
-    <p class="button-row"><button type="button" data-email-decision="approve" class="button-link">Email an approval</button> · <button type="button" data-email-decision="needs_revision" class="button-link">Email &ldquo;needs changes&rdquo;</button> · <button type="button" data-email-decision="rejected" class="button-link">Email &ldquo;not this one&rdquo;</button></p>
+    <p class="button-row"><button type="button" data-email-decision="approve" class="button-link">Email an approval</button> · <button type="button" data-email-decision="needs_revision" class="button-link">Email &ldquo;needs changes&rdquo;</button> · <button type="button" data-email-decision="rejected" class="button-link">Email &ldquo;revoke this one&rdquo;</button></p>
   </section>
   <section class="card">
     <h2>Publishing status</h2>
@@ -418,10 +423,17 @@ function formatDue(date){const p=String(date||'').split('-');if(p.length!==3)ret
    the day after it is written. */
 function renderOverdue(){const od=ADMIN_ITEMS.filter(isOverdue);const tile=document.getElementById('overdue-count');if(tile)tile.textContent=String(od.length);const sentence=od.length?(od.length+' draft'+(od.length===1?' is':'s are')+' past '+(od.length===1?'its':'their')+' publish date. The earliest was due '+formatDue(od.map((i)=>i.date).sort()[0])+'. Nothing has gone live yet.'):'No draft is past its publish date.';const banner=document.getElementById('overdue-banner');if(banner){banner.hidden=!od.length;const text=banner.querySelector('[data-overdue-text]');if(text)text.textContent=sentence;}const line=document.getElementById('publishing-overdue');if(line)line.textContent=sentence;}
 function getFilters(){return {status:document.getElementById('status-filter')?.value||'all',quality:document.getElementById('quality-filter')?.value||'all',type:document.getElementById('type-filter')?.value||'all',cluster:document.getElementById('cluster-filter')?.value||'all',pageSize:Number(document.getElementById('page-size')?.value||25)}}
-function filterItems(){const f=getFilters();let out=ADMIN_ITEMS.slice();if(f.status!=='all')out=out.filter((item)=>item.status===f.status);if(f.type!=='all')out=out.filter((item)=>item.content_type===f.type);if(f.cluster!=='all')out=out.filter((item)=>item.source_cluster===f.cluster);if(f.quality==='ready')out=out.filter((item)=>item.ready);if(f.quality==='needs_look')out=out.filter((item)=>!item.ready);if(f.quality==='overdue')out=out.filter(isOverdue);const field=state.sortField||'date',direction=state.sortDir||'asc';out.sort((a,b)=>{let cmp=0;if(field==='date'){cmp=dateVal(a.date)-dateVal(b.date);}else if(field==='title'){cmp=String(a.title||'').localeCompare(String(b.title||''));}else if(field==='status'){cmp=(STATUS_ORDER[a.status]??99)-(STATUS_ORDER[b.status]??99);}return direction==='desc'?-cmp:cmp;});return out;}
+function filterItems(){const f=getFilters();let out=ADMIN_ITEMS.slice();if(f.status!=='all')out=out.filter((item)=>item.status===f.status);if(f.type!=='all')out=out.filter((item)=>item.content_type===f.type);if(f.cluster!=='all')out=out.filter((item)=>item.source_cluster===f.cluster);if(f.quality==='ready')out=out.filter((item)=>item.ready);if(f.quality==='needs_look')out=out.filter((item)=>!item.ready);if(f.quality==='overdue')out=out.filter(isOverdue);if(f.quality==='revoked')out=out.filter((item)=>item.revoked_from_live);const field=state.sortField||'date',direction=state.sortDir||'asc';out.sort((a,b)=>{let cmp=0;if(field==='date'){cmp=dateVal(a.date)-dateVal(b.date);}else if(field==='title'){cmp=String(a.title||'').localeCompare(String(b.title||''));}else if(field==='status'){cmp=(STATUS_ORDER[a.status]??99)-(STATUS_ORDER[b.status]??99);}return direction==='desc'?-cmp:cmp;});return out;}
 function readyLabel(item){return item.ready?'Ready':'Needs a look';}
 function dateCell(item){if(!item.date)return '<span class="muted">no date</span>';if(!isOverdue(item))return escText(item.date);return '<span class="overdue"><strong>'+escText(item.date)+'</strong><br><span class="small">'+daysLate(item.date)+' days overdue</span></span>';}
-function renderRows(items){const tbody=document.getElementById('draft-tbody');if(!tbody)return;if(!items.length){tbody.innerHTML='<tr><td colspan="8" class="muted">No drafts match the current filters.</td></tr>';return;}tbody.innerHTML=items.map((item)=>{const notes=(item.review_notes||[]).slice(0,3).join('; ')||'Nothing flagged on this draft.';const readLink=item.preview_url||item.public_url||'';const actions=readLink?'<a href="'+escText(readLink)+'">Read this draft</a>':'<span class="muted">No preview</span>';const checked=state.selected.has(item.entry_id)?' checked':'';return '<tr data-entry-id="'+escText(item.entry_id)+'" data-status="'+escText(item.status)+'"><td><input class="row-check" type="checkbox" value="'+escText(item.entry_id)+'"'+checked+'></td><td>'+dateCell(item)+'</td><td><strong>'+escText(item.title)+'</strong><div class="muted small">'+escText(item.entry_id)+'</div><details><summary>Excerpt / notes</summary><p>'+escText(item.excerpt)+'</p><p>'+escText(notes)+'</p></details></td><td><span class="pill">'+escText(item.status_label)+'</span></td><td>'+escText(item.type_label)+'</td><td>'+escText((item.source_cluster||'').replaceAll('-',' '))+'</td><td>'+escText(readyLabel(item))+'</td><td>'+actions+'</td></tr>';}).join('');}
+function renderRows(items){const tbody=document.getElementById('draft-tbody');if(!tbody)return;if(!items.length){tbody.innerHTML='<tr><td colspan="8" class="muted">No drafts match the current filters.</td></tr>';return;}tbody.innerHTML=items.map((item)=>{const notes=(item.review_notes||[]).slice(0,3).join('; ')||'Nothing flagged on this draft.';const readLink=item.preview_url||item.public_url||'';const actions=readLink?'<a href="'+escText(readLink)+'">Read this draft</a>':'<span class="muted">No preview</span>';const checked=state.selected.has(item.entry_id)?' checked':'';
+  /* "Revoke this one" returns an entry to status "pending" so it surfaces in the
+     ordinary waiting queue - but a row that silently goes back to "waiting"
+     with no trace of having been live and taken down is a small version of
+     the exact defect class this whole page exists to fix: state changing
+     with nothing showing it. This quiet marker is that trace. */
+  const historyNote=item.revoked_from_live?'<div class="muted small history-note">Previously live, revoked - approve again to restore</div>':'';
+  return '<tr data-entry-id="'+escText(item.entry_id)+'" data-status="'+escText(item.status)+'"><td><input class="row-check" type="checkbox" value="'+escText(item.entry_id)+'"'+checked+'></td><td>'+dateCell(item)+'</td><td><strong>'+escText(item.title)+'</strong><div class="muted small">'+escText(item.entry_id)+'</div>'+historyNote+'<details><summary>Excerpt / notes</summary><p>'+escText(item.excerpt)+'</p><p>'+escText(notes)+'</p></details></td><td><span class="pill">'+escText(item.status_label)+'</span></td><td>'+escText(item.type_label)+'</td><td>'+escText((item.source_cluster||'').replaceAll('-',' '))+'</td><td>'+escText(readyLabel(item))+'</td><td>'+actions+'</td></tr>';}).join('');}
 function currentPageItems(){const f=getFilters();const start=(state.page-1)*f.pageSize;return state.filtered.slice(start,start+f.pageSize);}
 function updateSelectionUI(){const n=state.selected.size;const countEl=document.getElementById('selection-count');if(countEl)countEl.textContent=n?(n+' draft'+(n===1?'':'s')+' currently selected.'):'No drafts selected yet.';const clearBtn=document.getElementById('clear-selected-btn');if(clearBtn){clearBtn.hidden=n===0;clearBtn.textContent='Clear '+n+' selected';}const visibleBtn=document.getElementById('select-visible-btn');if(visibleBtn){const vis=currentPageItems().length;visibleBtn.textContent='Select visible page ('+vis+')';}}
 function updateSortIndicators(){document.querySelectorAll('[data-sort-indicator]').forEach((el)=>{const field=el.getAttribute('data-sort-indicator');if(field===state.sortField){el.textContent=state.sortDir==='asc'?' ▲':' ▼';el.classList.add('active');}else{el.textContent='';el.classList.remove('active');}});}
@@ -440,11 +452,11 @@ ${decisionIssueClientScript()}
 function sendDecision(kind){
   const ids=selectedIds();
   const status=document.getElementById('send-status');
-  const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;
+  const label={approve:'approve',needs_revision:'needs changes',rejected:'revoke this one'}[kind]||kind;
   if(!ids.length){status.textContent='Tick at least one draft first.';return;}
   const byId=Object.fromEntries(ADMIN_ITEMS.map((i)=>[i.entry_id,i]));
   let confirmMsg='Open a GitHub request for '+ids.length+' draft'+(ids.length===1?'':'s')+' marked "'+label+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.';
-  // "Not this one" on a currently-live article takes it down. Name it before
+  // "Revoke this one" on a currently-live article takes it down. Name it before
   // the request even opens - a takedown must never be a surprise.
   if(kind==='rejected'){
     const liveNow=ids.filter((id)=>byId[id]&&byId[id].public_url).map((id)=>byId[id].title||id);
@@ -460,7 +472,7 @@ function sendDecision(kind){
 function emailDecision(kind){
   const ids=selectedIds();
   const status=document.getElementById('send-status');
-  const label={approve:'approve',needs_revision:'needs changes',rejected:'not this one'}[kind]||kind;
+  const label={approve:'approve',needs_revision:'needs changes',rejected:'revoke this one'}[kind]||kind;
   if(!ids.length){status.textContent='Tick at least one draft first.';return;}
   if(!REVIEW_EMAIL){status.textContent='Cannot draft this email: no recipient is configured (data/system/config.json owner_review_email). Ask the repo owner to set it.';return;}
   if(!window.confirm('Email '+ids.length+' draft'+(ids.length===1?'':'s')+' as "'+label+'"? This only drafts an email; nothing is published by this step.'))return;

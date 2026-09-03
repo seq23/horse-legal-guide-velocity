@@ -74,7 +74,12 @@ button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:9px 15p
 button.secondary{background:#efe3d1;color:#2c2118}
 .overdue{color:#a3271c}
 .banner-late{background:#fdecea;border-color:#e6b3aa}
-.decision-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}`;
+.decision-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.decision-explainer{padding-left:20px}
+.decision-explainer li{margin:0 0 4px}
+.button-link{background:transparent;color:#7a4b18;border:1px solid #d9c9b1;font-weight:700;padding:7px 12px}
+.assistant-block{margin-top:8px;border-top:1px solid #e4d7c5;padding-top:16px}
+[hidden]{display:none!important}`;
 
 /**
  * The preview is on a public host, so the noindex directive is the thing keeping
@@ -160,7 +165,7 @@ function resolveDraftLinks(html, distDir) {
 // and "deep_authority" are internal type keys; "pending" describes the system's
 // state, not hers.
 const TYPE_WORDS = { insight: 'Short article', article: 'Article', whitepaper: 'White paper', deep_authority: 'In-depth guide', authority: 'In-depth guide', template: 'Template' };
-const STATUS_WORDS = { pending: 'Waiting for you', approved: 'Approved', needs_revision: 'Needs changes', rejected: 'Not this one' };
+const STATUS_WORDS = { pending: 'Waiting for you', approved: 'Approved', needs_revision: 'Needs changes', rejected: 'Revoked' };
 function typeWord(type) { return TYPE_WORDS[type] || label(type); }
 function statusWord(status) { return STATUS_WORDS[status] || String(status || 'Waiting for you'); }
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -181,9 +186,16 @@ function metaLine(entry) {
   return bits.map((b) => `<span class="pill">${esc(b)}</span>`).join('');
 }
 
-function previewPage(entry, bodyHtml, missing, previewPath, repoUrl, gateHash, reviewEmail) {
-  const editUrl = entry.github_path && repoUrl ? `${repoUrl}/edit/main/${entry.github_path}` : '';
-  const readUrl = entry.github_path && repoUrl ? `${repoUrl}/blob/main/${entry.github_path}` : '';
+function previewPage(entry, bodyHtml, missing, previewPath, repoUrl, gateHash, reviewEmail, calendarLine) {
+  // "Edit this draft on GitHub" pointed at the raw markdown source - the
+  // owner found that, plus a separate "Read the source markdown" link,
+  // superfluous: the rendered article is already the whole page body below.
+  // What she actually wanted from an edit link is the schedule/status record
+  // (data/system/editorial_backlog.json), deep-linked to this entry's own
+  // line where GitHub's line-anchor syntax supports it - not the prose.
+  const calendarUrl = repoUrl
+    ? `${repoUrl}/edit/main/data/system/editorial_backlog.json${calendarLine ? `#L${calendarLine}` : ''}`
+    : '';
   const missingNote = missing.length
     ? `<p class="muted small">${missing.length} internal reference${missing.length === 1 ? '' : 's'} in this draft point${missing.length === 1 ? 's' : ''} at a page that is not published yet. They are marked inline.</p>`
     : '';
@@ -196,9 +208,14 @@ function previewPage(entry, bodyHtml, missing, previewPath, repoUrl, gateHash, r
   const statusBanner = entry.live_slug
     ? `<div class="banner">
   <p class="eyebrow">Currently live</p>
-  <p style="margin:0">This piece <strong>is live now</strong> at <a href="${esc(entry.live_slug)}">${esc(entry.live_slug)}</a>. &ldquo;Not this one&rdquo; below would take it down (unpublish, not delete); approving it again later restores it with nothing lost.</p>
+  <p style="margin:0">This piece <strong>is live now</strong> at <a href="${esc(entry.live_slug)}">${esc(entry.live_slug)}</a>. &ldquo;Revoke this one&rdquo; below would take it down (unpublish, not delete); approving it again later restores it with nothing lost.</p>
 </div>`
-    : `<div class="banner">
+    : entry.revoked_from_live
+      ? `<div class="banner">
+  <p class="eyebrow">Previously live, revoked</p>
+  <p style="margin:0">This piece <strong>is not published</strong> right now. It was live at <code>${esc(entry.previously_live_slug || '')}</code> and was revoked. Approving it again restores it with nothing lost. Nothing on this page approves or publishes anything by itself.</p>
+</div>`
+      : `<div class="banner">
   <p class="eyebrow">Unapproved draft · preview only</p>
   <p style="margin:0">This draft is <strong>not published</strong> and is not on the live site. Nothing on this page approves or publishes anything. Publishing stays manual and owner-authorised.</p>
 </div>`;
@@ -213,16 +230,25 @@ ${statusBanner}
 <div class="card" id="decide">
   <p class="eyebrow">Your decision</p>
   <h2 style="margin:0 0 6px;font-size:1.1rem">What do you want to do with this one?</h2>
-  <p class="small muted" style="margin:0">Choose below. It opens a pre-filled request on GitHub (github.com) with this draft and your decision already in it - you only click &ldquo;Submit new issue&rdquo; there. A repo maintainer's decision is picked up and applied automatically within a few minutes; anyone else's is answered with what to do next, never applied silently. You do not need to know Git or the command line, just a free GitHub account.</p>
   <div class="decision-row">
     <button type="button" data-decision="approve">Approve</button>
     <button type="button" class="secondary" data-decision="needs_revision">Needs changes</button>
-    <button type="button" class="secondary" data-decision="rejected">Not this one</button>
+    <button type="button" class="secondary" data-decision="rejected">Revoke this one</button>
   </div>
+  <ul class="small muted decision-explainer" style="margin:8px 0 0">
+    <li><strong>Approve</strong> &mdash; opens a pre-filled GitHub request. Nothing is sent until you click &ldquo;Submit new issue&rdquo; there; a maintainer's request then applies automatically within a few minutes, and it publishes once its scheduled date arrives.</li>
+    <li><strong>Needs changes</strong> &mdash; same GitHub request, marked for revision. Nothing publishes.</li>
+    <li><strong>Revoke this one</strong> &mdash; same GitHub request, marked to revoke.${entry.live_slug ? ' It is currently live; this takes it down (unpublished, not deleted) - approving it again later restores it with nothing lost.' : ' Nothing publishes while in this state.'}</li>
+  </ul>
   <p class="small muted" id="decision-status" style="margin:10px 0 0">No decision sent yet.</p>
   <p class="small muted" style="margin:8px 0 0">If approved, this would publish at <code>${willPublishAt}${esc(String(entry.slug || '').replace(/^\/drafts\/\d{4}-\d{2}-\d{2}\//, ''))}</code>.</p>
-  <p class="small muted" style="margin:8px 0 0">No GitHub account? <a href="${esc(readUrl)}#decide-email" data-email-fallback rel="noopener">Email a copy of this decision instead</a> (this does not publish anything by itself).</p>
-  <p class="small" style="margin:8px 0 0">${readUrl ? `<a href="${esc(readUrl)}" rel="noopener">Read the source markdown</a>${editUrl ? ' · ' : ''}` : ''}${editUrl ? `<a href="${esc(editUrl)}" rel="noopener">Edit this draft on GitHub</a>` : ''}</p>
+  ${calendarUrl ? `<p class="small" style="margin:8px 0 0"><a href="${esc(calendarUrl)}" rel="noopener">Edit the content calendar in GitHub</a> &mdash; the schedule and status record, not the writing.</p>` : ''}
+</div>
+<div class="card assistant-block" id="executive-assistant">
+  <p class="eyebrow">For someone helping with publishing who is not an owner</p>
+  <h2 style="margin:0 0 6px;font-size:1.05rem">Executive assistant</h2>
+  <p class="small muted" style="margin:0">Drafts an email to the person who publishes. It publishes nothing by itself.</p>
+  <p class="small" style="margin:8px 0 0"><button type="button" data-email-decision="approve" class="button-link">Email an approval</button> &middot; <button type="button" data-email-decision="needs_revision" class="button-link">Email &ldquo;needs changes&rdquo;</button> &middot; <button type="button" data-email-decision="rejected" class="button-link">Email &ldquo;revoke this one&rdquo;</button></p>
 </div>
 <script>
 ${decisionIssueClientScript()}
@@ -232,11 +258,11 @@ ${decisionIssueClientScript()}
   var TITLE=${JSON.stringify(String(entry.title || ''))};
   var ID=${JSON.stringify(String(entry.entry_id || ''))};
   var IS_LIVE=${JSON.stringify(Boolean(entry.live_slug))};
-  var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'not this one'};
+  var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'revoke this one'};
   function emailFallback(kind){
     if(!EMAIL){var s=document.getElementById('decision-status');if(s)s.textContent='Cannot draft this email: no recipient is configured (data/system/config.json owner_review_email). Ask the repo owner to set it.';return;}
     var nl=String.fromCharCode(10);
-    var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please do not publish this draft:'};
+    var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please revoke this draft:'};
     var subject='Horse Legal Guide: "'+TITLE+'" marked "'+WORDS[kind]+'"';
     var body=INTRO[kind]+nl+nl+'- '+TITLE+' ('+ID+')'+nl+nl+'Sent from '+window.location.pathname+'.';
     window.location.href='mailto:'+encodeURIComponent(EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
@@ -245,8 +271,11 @@ ${decisionIssueClientScript()}
   }
   function send(kind){
     if(!REPO_URL){emailFallback(kind);return;}
-    // "Not this one" on a draft that is currently live takes it down - name
-    // that plainly before the request even opens, never as a silent side effect.
+    // "Revoke this one" on a draft that is currently live takes it down -
+    // name that plainly before the request even opens, never as a silent
+    // side effect. The confirm text is deliberately not gated behind IS_LIVE
+    // alone for its base sentence - every decision gets the "nothing changes
+    // until Submit new issue" reminder, live or not.
     var confirmMsg='Open a GitHub request for this draft marked "'+WORDS[kind]+'"? Nothing changes until you click "Submit new issue" on the GitHub page that opens.';
     if(kind==='rejected'&&IS_LIVE){
       confirmMsg='This will take down "'+TITLE+'", which is currently live. It will be unpublished, not deleted - approving it again later restores it with nothing lost. '+confirmMsg;
@@ -257,8 +286,8 @@ ${decisionIssueClientScript()}
     var status=document.getElementById('decision-status');
     if(status)status.textContent='Marked "'+WORDS[kind]+'" - a pre-filled GitHub request just opened in a new tab. Click "Submit new issue" there to send it; it is applied automatically within a few minutes once submitted.';
   }
-  var emailLink=document.querySelector('[data-email-fallback]');
-  if(emailLink)emailLink.addEventListener('click',function(event){event.preventDefault();emailFallback('approve');});
+  var emailButtons=document.querySelectorAll('#executive-assistant [data-email-decision]');
+  for(var j=0;j<emailButtons.length;j++){(function(button){button.addEventListener('click',function(){emailFallback(button.getAttribute('data-email-decision'));});})(emailButtons[j]);}
   var buttons=document.querySelectorAll('#decide [data-decision]');
   for(var i=0;i<buttons.length;i++){(function(button){button.addEventListener('click',function(){send(button.getAttribute('data-decision'));});})(buttons[i]);}
 })();
@@ -351,6 +380,29 @@ ${rows.map((r) => `      <tr data-hay="${esc(`${r.title} ${r.question} ${r.clust
   return shell('Queued drafts · owner review', body, { wide: true, gateHash, description: `Owner review index for ${counts.total} unpublished draft(s) awaiting manual approval. Nothing listed here is on the live site.` });
 }
 
+/**
+ * Line number, within the actual committed data/system/editorial_backlog.json
+ * text, where each entry's own "entry_id" key appears - so the "Edit the
+ * content calendar in GitHub" link can deep-link to that entry (GitHub's
+ * edit/blob views both honour a #L<n> fragment) rather than dropping the
+ * reviewer at the top of a ~300-entry file with no way to find her own
+ * article. Built from the raw file text, not the parsed JSON: entry_id order
+ * and formatting must match what GitHub actually renders for the link to
+ * land on the right line.
+ */
+function backlogEntryLineMap() {
+  const map = new Map();
+  const backlogPath = path.resolve(process.cwd(), 'data/system/editorial_backlog.json');
+  if (!fs.existsSync(backlogPath)) return map;
+  const lines = fs.readFileSync(backlogPath, 'utf8').split(/\r?\n/);
+  const entryIdLine = /^\s*"entry_id"\s*:\s*"([^"]+)"/;
+  lines.forEach((line, index) => {
+    const m = line.match(entryIdLine);
+    if (m) map.set(m[1], index + 1); // 1-based for GitHub's #L<n>
+  });
+  return map;
+}
+
 function writeDraftPreviews(distDir) {
   const backlog = readJson('data/system/editorial_backlog.json', null);
   if (!Array.isArray(backlog)) {
@@ -362,6 +414,7 @@ function writeDraftPreviews(distDir) {
   // once covers the admin root, this index, and every draft preview.
   const gateHash = String(config.admin_password_sha256 || '');
   const reviewEmail = String(config.owner_review_email || '').trim();
+  const lineMap = backlogEntryLineMap();
 
   const rows = [];
   const skipped = [];
@@ -374,7 +427,7 @@ function writeDraftPreviews(distDir) {
     }
     const raw = fs.readFileSync(sourcePath, 'utf8');
     const rendered = resolveDraftLinks(md(parse(raw)), distDir);
-    const page = previewPage(entry, rendered.html, rendered.missing, previewPath, repoUrl, gateHash, reviewEmail);
+    const page = previewPage(entry, rendered.html, rendered.missing, previewPath, repoUrl, gateHash, reviewEmail, lineMap.get(entry.entry_id));
     const outDir = path.join(distDir, previewPath.replace(/^\//, '').replace(/\/$/, ''));
     ensureDir(outDir);
     fs.writeFileSync(path.join(outDir, 'index.html'), page.html);
