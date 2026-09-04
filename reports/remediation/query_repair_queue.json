@@ -1,11 +1,11 @@
 {
   "schema_version": "2.2.0",
-  "generated_at": "2026-09-03T14:34:29.627Z",
+  "generated_at": "2026-09-04T14:31:31.727Z",
   "bounded_repair_revisions": 2,
   "policy": "The system performs query testing, diagnosis, competitor comparison, finished patch preparation, and post-deployment retesting. Client approval remains required before each live legal-page mutation. Bounded on-page repair stops after two revisions.",
   "summary": {
-    "tracked": 27,
-    "patch_ready": 27,
+    "tracked": 28,
+    "patch_ready": 28,
     "owner_approved": 0,
     "applied_pending_retest": 0,
     "observed_after_repair": 0,
@@ -515,6 +515,49 @@
             "zone": "faq_block",
             "action": "append_html",
             "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-008\" data-revision=\"1\"><p><strong>Search question:</strong> If Someone Gets Hurt Riding My Horse, Am I Liable</p><h2>Quick answer</h2><p><strong>Short answer:</strong> Sometimes yes. A waiver, warning sign, or equine-activity-law framework may help, but liability usually turns on <strong>who controlled the situation, what risk was known, what was disclosed, what safety steps were skipped, and what state law applies</strong>. The existence of a horse alone does not answer the question.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-009",
+      "panel_id": "qpanel-009",
+      "revision": 1,
+      "query": "What Should Be Included in a Barn Lease",
+      "target_page": "/leases/what-should-be-included-in-a-barn-lease/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/leases/what-should-be-included-in-a-barn-lease/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-009\" data-revision=\"1\"><p><strong>Search question:</strong> What Should Be Included in a Barn Lease</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What Should Be Included in a Barn Lease? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
           }
         ]
       },
