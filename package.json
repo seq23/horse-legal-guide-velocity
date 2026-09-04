@@ -159,6 +159,7 @@
     "validate:self-heal-loop": "node _ops/validators/validate_self_heal_loop.js",
     "validate:no-inert-stages": "node _ops/validators/validate_no_inert_stages.js",
     "validate:admin-approval-live": "node _ops/validators/validate_admin_approval_reaches_live.js",
+    "validate:revoke-not-live-on-domain": "node _ops/validators/validate_admin_approval_reaches_live.js --verify-live-domain",
     "validate:admin-ui-dispatches-approvals": "node _ops/validators/validate_admin_ui_dispatches_approvals.js",
     "validate:backlog-field-accessors": "node _ops/validators/validate_backlog_field_accessors.js"
   }
