@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-03T13:40:20.138Z",
-  "total_signals": 2804,
+  "generated_at": "2026-09-04T13:39:39.692Z",
+  "total_signals": 2824,
   "signals_by_source": {
-    "reddit_equestrian": 1278,
+    "reddit_equestrian": 1298,
     "reddit_horses": 648,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
@@ -17,7 +17,7 @@
     "forum_horse_and_hound": 54
   },
   "signals_by_platform": {
-    "reddit": 2338,
+    "reddit": 2358,
     "equestrian_forums": 113,
     "google_paa": 29,
     "serp_competitors": 105,
@@ -25,20 +25,20 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1161,
-  "duplicates_collapsed": 1643,
+  "normalized_count": 1167,
+  "duplicates_collapsed": 1657,
   "pages_created": 0,
-  "pages_strengthened": 1161,
+  "pages_strengthened": 1167,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 596
+      "count": 600
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 183
+      "count": 185
     },
     {
       "name": "horse-sale-and-purchase",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1278
+      "count": 1298
     },
     {
       "name": "reddit_horses",
@@ -178,7 +178,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 10
+      "count": 9
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -19988,6 +19988,108 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1161_turnout-rules-and-visiting-during-quiet-barn-hours",
+      "normalized_id": "norm_2804_bb074d5bba",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_turnout-rules-and-visiting-during-quiet-barn-hours-h_be63b6a4"
+      ],
+      "preserved_query": "Turnout rules and visiting during quiet barn hours — what should I know?",
+      "normalized_query": "Turnout rules and visiting during quiet barn hours — what should I know?",
+      "llm_bait_phrase": "Turnout rules and visiting during quiet barn hours",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1162_best-way-to-improve-horse-flexibility-and-comfort-doing-circ",
+      "normalized_id": "norm_2809_a07c7e427b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_best-way-to-improve-horse-flexibility-and-comfort-do_52c828f0"
+      ],
+      "preserved_query": "Best way to improve horse flexibility and comfort doing circles. — what should I know?",
+      "normalized_query": "Best way to improve horse flexibility and comfort doing circles. — what should I know?",
+      "llm_bait_phrase": "Best way to improve horse flexibility and comfort doing circles.",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1163_horses-like-anxious-dogs",
+      "normalized_id": "norm_2812_9a0b4b143a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_are-horses-like-anxious-dogs-https-www-reddit-com-r-_ba26781c"
+      ],
+      "preserved_query": "Are Horses Like Anxious Dogs?",
+      "normalized_query": "Are Horses Like Anxious Dogs?",
+      "llm_bait_phrase": "Horses Like Anxious Dogs",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1164_older-gelding-head-down-in-canter",
+      "normalized_id": "norm_2818_54ab5fca76",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_older-gelding-head-down-in-canter-https-www-reddit-c_d971b313"
+      ],
+      "preserved_query": "Older gelding head down in canter — what should I know?",
+      "normalized_query": "Older gelding head down in canter — what should I know?",
+      "llm_bait_phrase": "Older gelding head down in canter",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1165_trying-to-figure-out-my-gelding-s-breed",
+      "normalized_id": "norm_2819_6308521fbb",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_trying-to-figure-out-my-gelding-s-breed-https-www-re_cb0555e4"
+      ],
+      "preserved_query": "Trying to figure out my gelding’s breed 🐴 — what should I know?",
+      "normalized_query": "Trying to figure out my gelding’s breed 🐴 — what should I know?",
+      "llm_bait_phrase": "Trying to figure out my gelding’s breed 🐴",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1166_which-barn-would-you-pick-i-m-having-a-hard-time-but-i-don-t",
+      "normalized_id": "norm_2821_56079b0d9e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_which-barn-would-you-pick-i-m-having-a-hard-time-but_bde9f00e"
+      ],
+      "preserved_query": "Which barn would you pick? I'm having a hard time, but I don't think I'm okay with no hay in the summers and no pasture management. Advice or thoughts — what should I know?",
+      "normalized_query": "Which barn would you pick? I'm having a hard time, but I don't think I'm okay with no hay in the summers and no pasture management. Advice or thoughts — what should I know?",
+      "llm_bait_phrase": "Which barn would you pick? I'm having a hard time, but I don't think I'm okay with no hay in the summers and no pasture management. Advice or thoughts",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
