@@ -140,6 +140,20 @@ function writeEditorialPages(dist){const cfg=readJson('data/system/config.json')
    an empty public index - and an approved one can never publish under a
    section whose landing page does not exist, which would leave its own
    'Back to' link pointing at a 404. */const sections=[...new Set([...BASE_SECTIONS,...live.map(e=>e.section)])];for(const s of sections){dir(path.join(dist,s));fs.writeFileSync(path.join(dist,s,'index.html'),landing(s,live,cfg))}fs.writeFileSync(path.join(dist,'editorial-publishing-state.json'),JSON.stringify({today:t,live_count:live.length,live_entries:live.map(e=>({entry_id:e.entry_id,content_type:e.content_type,publish_date:e.publish_date,live_slug:e.live_slug}))},null,2));
+  // Confirmed 2026-09-03: a revoke correctly clears e.live_slug above and
+  // removes the rendered dist/ page, but horselegalguide.com kept serving a
+  // stale cached 200 for the revoked path anyway - a Cloudflare Pages edge
+  // cache behaviour that survives both a per-URL purge and "Purge
+  // Everything" (see functions/_shared/live_gate.js and RUNBOOK.md's "Cache
+  // purge on revoke"). This file is the denylist that gate reads at request
+  // time: every path that was ever live and is not live right now, keyed off
+  // the same revoked_from_live/previously_live_slug fields
+  // validate_admin_approval_reaches_live.js already trusts. An entry revoked
+  // and never re-approved is denied; an entry revoked and later re-approved
+  // back to the SAME slug is correctly excluded (e.live_slug was just reset
+  // above to equal previously_live_slug again).
+  const revokedPaths=[...new Set(backlog.filter(e=>e.revoked_from_live&&e.previously_live_slug&&e.live_slug!==e.previously_live_slug).map(e=>e.previously_live_slug))];
+  fs.writeFileSync(path.join(dist,'editorial-revoked-paths.json'),JSON.stringify({today:t,revoked_paths:revokedPaths},null,2));
   // live_slug/section/publish_date above were only ever mutated on the
   // in-memory backlog array, never written back to
   // data/system/editorial_backlog.json - so scripts/admin/generate_admin_manifest.js,

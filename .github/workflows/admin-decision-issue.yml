@@ -192,6 +192,24 @@ jobs:
           ENTRY_IDS: ${{ fromJSON(steps.parse.outputs.ids) }}
         run: node scripts/ops/purge_cloudflare_cache.js
 
+      # The Rule 0 guard for this whole class of failure: does the real live
+      # custom domain actually agree that revoked pages are down, not just
+      # dist/ and the backlog record (those are already checked above by
+      # `npm run validate:all`'s validate:admin-approval-live, entirely from
+      # the local filesystem). Confirmed 2026-09-03 this can diverge - see
+      # RUNBOOK.md's "Cache purge on revoke" and functions/_shared/live_gate.js.
+      # continue-on-error so a still-propagating deploy or a genuine platform
+      # cache issue can never block or reverse the decision that already
+      # applied above - but a failure here is real and visible in this run,
+      # not a silent pass, per Rule 0.
+      - name: Verify revoked pages are unreachable on the live custom domain
+        if: steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success' && steps.preflight.outcome == 'success' && steps.operation.outcome == 'success' && steps.rebuild.outcome == 'success'
+        continue-on-error: true
+        env:
+          LIVE_DOMAIN_CHECK_RETRIES: "15"
+          LIVE_DOMAIN_CHECK_DELAY_MS: "30000"
+        run: npm run validate:revoke-not-live-on-domain
+
       - name: Write action receipt
         if: always() && steps.authz.outputs.allowed == 'true' && steps.parse.outcome == 'success'
         env:
