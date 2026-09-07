@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-09-06T14:21:54.000Z",
+  "generated_at": "2026-09-06T14:32:43.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-09-06T14:23:45.645Z",
-      "age_hours": 0,
+      "age_hours": 0.1,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-09-06T14:23:45.645Z",
-      "age_hours": 0,
+      "age_hours": 0.1,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-09-06T14:23:45.645Z",
-      "age_hours": 0,
+      "age_hours": 0.1,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -2026,7 +2026,7 @@
       "high_similarity_pairs": 344,
       "intent_overlap_pairs": 198,
       "uniqueness_review_clusters": 81,
-      "drafts_automatically_differentiated": 193,
+      "drafts_automatically_differentiated": 200,
       "draft_uniqueness_failures": 0,
       "jsonld_present": 560,
       "article_schema_pages": 560,
@@ -2034,14 +2034,14 @@
       "internal_link_healthy_pages": 560,
       "zero_internal_link_pages": 0,
       "weak_internal_link_pages": 0,
-      "draft_items": 306,
-      "approval_eligible": 306,
-      "direct_answer_ok": 306,
-      "data_atom_ok": 306,
-      "routing_ok": 306,
+      "draft_items": 314,
+      "approval_eligible": 314,
+      "direct_answer_ok": 314,
+      "data_atom_ok": 314,
+      "routing_ok": 314,
       "hard_fail_items": 0,
-      "word_warning_items": 5,
-      "ai_risk_items": 193,
+      "word_warning_items": 6,
+      "ai_risk_items": 200,
       "workflow_count": 17,
       "workflow_passed": 17,
       "workflow_warning_count": 0,
@@ -14885,11 +14885,13 @@
         "draft-insight-2026-05-20-can-you-end-a-horse-lease-early",
         "draft-insight-2026-05-21-what-happens-if-a-leased-horse-becomes-unsound",
         "draft-insight-2026-05-31-can-a-boarding-barn-sell-a-horse-for-unpaid-bills",
+        "draft-article-2026-06-09-intellectual-property-and-brand",
         "draft-insight-2026-06-11-what-type-of-insurance-do-trainers-need",
         "draft-insight-2026-06-12-what-is-the-equine-activity-liability-act",
         "draft-insight-2026-06-16-waiver-vs-insurance-for-horse-liability",
         "draft-insight-2026-06-19-how-do-i-legally-start-a-horse-business",
         "draft-insight-2026-06-26-how-to-start-an-equine-apparel-business",
+        "draft-article-2026-07-07-therapeutic-riding-and-hipaa",
         "draft-insight-2026-07-11-how-serious-is-a-legal-demand-letter",
         "draft-insight-2026-07-12-can-i-ignore-a-demand-letter",
         "draft-insight-2026-07-13-do-i-need-a-lawyer-to-respond-to-a-demand-letter",
@@ -14918,9 +14920,7 @@
         "draft-insight-2026-08-20-what-happens-if-a-horse-becomes-lame-after-sale",
         "draft-insight-2026-08-22-what-happens-if-a-horse-sale-goes-wrong",
         "draft-insight-2026-08-23-what-if-i-sold-a-horse-without-a-contract",
-        "draft-insight-2026-08-24-what-if-i-bought-a-horse-without-a-contract",
-        "draft-article-2026-08-25-intellectual-property-and-brand",
-        "draft-insight-2026-08-25-horse-sale-contract-vs-bill-of-sale"
+        "draft-insight-2026-08-24-what-if-i-bought-a-horse-without-a-contract"
       ],
       "recommended_action": "Rewrite openings around the specific horse transaction, document, dispute, or business issue; vary sentence length and reduce generic framing."
     },
@@ -14934,7 +14934,8 @@
         "draft-whitepaper-2026-09-01-horse-lease-and-trial",
         "draft-whitepaper-2026-10-01-horse-sale-and-purchase",
         "draft-whitepaper-2026-11-02-intellectual-property-and-brand",
-        "draft-whitepaper-2026-12-01-liability-waivers-insurance"
+        "draft-whitepaper-2026-12-01-liability-waivers-insurance",
+        "continuity-deep_authority-2027-01-01-how-to-start-an-equine-apparel-business"
       ],
       "recommended_action": "Review only if the page also lacks an answer, atom, routing block, or useful links. Never block approval on word count alone."
     },

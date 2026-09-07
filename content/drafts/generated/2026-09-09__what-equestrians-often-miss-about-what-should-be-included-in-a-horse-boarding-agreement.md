@@ -1,5 +1,5 @@
 ---
-title: State-law, venue, and local-rule lens for What Should Be Included in a Horse Boarding Agreement
+title: Due diligence and verification for What Should Be Included in a Horse Boarding Agreement
 entry_id: draft-insight-2026-09-09-what-should-be-included-in-a-horse-boarding-agreement
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2026-09-09/what-equestrians-often-miss-about-what-should-be-includ
 review_status: pending
 github_path: content/drafts/generated/2026-09-09__what-equestrians-often-miss-about-what-should-be-included-in-a-horse-boarding-agreement.md
 uniqueness_status: passed
-uniqueness_strategy: state-venue
+uniqueness_strategy: due-diligence
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# State-law, venue, and local-rule lens for What Should Be Included in a Horse Boarding Agreement
+# Due diligence and verification for What Should Be Included in a Horse Boarding Agreement
 
 ## Citation-ready answer
 
-The practical question behind **What Should Be Included in a Horse Boarding Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **What Should Be Included in a Horse Boarding Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-09-05/why-what-happens-if-a-leased-horse-becomes-unsound-creates-confusion/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-05-25/a-plain-english-note-on-what-should-be-included-in-a-horse-boarding-agreement/, while remaining educational and approval-gated.
 
-## Distinctive focus: State-law, venue, and local-rule lens
+## Distinctive focus: Due diligence and verification
 
-For this version, the useful lens is **state-law, venue, and local-rule lens**. That means the reader should identify the jurisdiction, venue, choice of law, statute, and warning language facts that actually belong to **What Should Be Included in a Horse Boarding Agreement**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **due diligence and verification**. That means the reader should identify the inspection, verification, records, representation, and disclosure facts that actually belong to **What Should Be Included in a Horse Boarding Agreement**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| included | Identify the jurisdiction facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| horse | Identify the venue facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| boarding | Identify the choice of law facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| agreement | Identify the statute facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| state | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| included | Identify the inspection facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the verification facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| boarding | Identify the records facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| agreement | Identify the representation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| state | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **What Should Be Included in a Horse Boarding Agreement** before anyone acts?
-2. Collect the jurisdiction, venue, and choice of law evidence instead of relying on memory.
+2. Collect the inspection, verification, and records evidence instead of relying on memory.
 3. Separate the roles connected to included, horse, boarding so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Should Be Included in a Horse Boarding Agreement**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The state-law, venue, and local-rule lens lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Should Be Included in a Horse Boarding Agreement**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The due diligence and verification lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 

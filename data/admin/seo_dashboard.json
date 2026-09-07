@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-06T04:21:17.000Z",
-  "measurement_fingerprint": "3b926b5d62fc768919c614ac9bf62e0ca30df7f482192042436749b8806b3bf2",
+  "generated_at": "2026-09-06T14:32:43.000Z",
+  "measurement_fingerprint": "fbdad0425c26e6e96a82cbf01f0b52f9a7709ded06eff11cf6307e9a91069c4f",
   "title": "LLM Citation Velocity Dashboard",
   "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, page uniqueness, and workflow trace next steps.",
   "truth_boundary": "Scores are regenerated from the current repo files and freshly rendered dist HTML on every release build. Existing-page similarity findings are advisory and require owner approval before any live change. Draft similarity is automatically repaired before approval eligibility. These local measurements do not prove live GitHub Actions, live GSC, Bing, or IndexNow until those provider workflows run after apply.",
@@ -46,7 +46,7 @@
     "high_similarity_pairs": 344,
     "intent_overlap_pairs": 198,
     "uniqueness_review_clusters": 81,
-    "drafts_automatically_differentiated": 193,
+    "drafts_automatically_differentiated": 200,
     "draft_uniqueness_failures": 0,
     "jsonld_present": 560,
     "article_schema_pages": 560,
@@ -54,14 +54,14 @@
     "internal_link_healthy_pages": 560,
     "zero_internal_link_pages": 0,
     "weak_internal_link_pages": 0,
-    "draft_items": 306,
-    "approval_eligible": 306,
-    "direct_answer_ok": 306,
-    "data_atom_ok": 306,
-    "routing_ok": 306,
+    "draft_items": 314,
+    "approval_eligible": 314,
+    "direct_answer_ok": 314,
+    "data_atom_ok": 314,
+    "routing_ok": 314,
     "hard_fail_items": 0,
-    "word_warning_items": 5,
-    "ai_risk_items": 193,
+    "word_warning_items": 6,
+    "ai_risk_items": 200,
     "workflow_count": 17,
     "workflow_passed": 17,
     "workflow_warning_count": 0,
@@ -76,16 +76,16 @@
     "github_actions_simulation_failures": 0
   },
   "summary": {
-    "total": 306,
-    "pending": 306,
+    "total": 314,
+    "pending": 314,
     "approved": 0,
     "rejected": 0,
     "needs_revision": 0,
-    "approval_eligible": 306,
+    "approval_eligible": 314,
     "missing_data_atom": 0,
     "missing_routing": 0,
     "hard_fail_items": 0,
-    "warning_items": 193,
+    "warning_items": 200,
     "average_scores": {
       "humanization": 100,
       "seo": 100,
@@ -371,11 +371,13 @@
         "draft-insight-2026-05-20-can-you-end-a-horse-lease-early",
         "draft-insight-2026-05-21-what-happens-if-a-leased-horse-becomes-unsound",
         "draft-insight-2026-05-31-can-a-boarding-barn-sell-a-horse-for-unpaid-bills",
+        "draft-article-2026-06-09-intellectual-property-and-brand",
         "draft-insight-2026-06-11-what-type-of-insurance-do-trainers-need",
         "draft-insight-2026-06-12-what-is-the-equine-activity-liability-act",
         "draft-insight-2026-06-16-waiver-vs-insurance-for-horse-liability",
         "draft-insight-2026-06-19-how-do-i-legally-start-a-horse-business",
         "draft-insight-2026-06-26-how-to-start-an-equine-apparel-business",
+        "draft-article-2026-07-07-therapeutic-riding-and-hipaa",
         "draft-insight-2026-07-11-how-serious-is-a-legal-demand-letter",
         "draft-insight-2026-07-12-can-i-ignore-a-demand-letter",
         "draft-insight-2026-07-13-do-i-need-a-lawyer-to-respond-to-a-demand-letter",
@@ -404,9 +406,7 @@
         "draft-insight-2026-08-20-what-happens-if-a-horse-becomes-lame-after-sale",
         "draft-insight-2026-08-22-what-happens-if-a-horse-sale-goes-wrong",
         "draft-insight-2026-08-23-what-if-i-sold-a-horse-without-a-contract",
-        "draft-insight-2026-08-24-what-if-i-bought-a-horse-without-a-contract",
-        "draft-article-2026-08-25-intellectual-property-and-brand",
-        "draft-insight-2026-08-25-horse-sale-contract-vs-bill-of-sale"
+        "draft-insight-2026-08-24-what-if-i-bought-a-horse-without-a-contract"
       ],
       "bulk_fix_available": false,
       "action_label": "",
@@ -423,7 +423,7 @@
         "https://github.com/seq23/horse-legal-guide-velocity/edit/main/content/drafts/generated/2026-05-10__how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act.md",
         "https://github.com/seq23/horse-legal-guide-velocity/edit/main/content/drafts/generated/2026-05-11__where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways.md"
       ],
-      "source_metric": "193/306 drafts have cadence warnings",
+      "source_metric": "200/314 drafts have cadence warnings",
       "measurement": ""
     },
     {
@@ -437,15 +437,16 @@
         "draft-whitepaper-2026-09-01-horse-lease-and-trial",
         "draft-whitepaper-2026-10-01-horse-sale-and-purchase",
         "draft-whitepaper-2026-11-02-intellectual-property-and-brand",
-        "draft-whitepaper-2026-12-01-liability-waivers-insurance"
+        "draft-whitepaper-2026-12-01-liability-waivers-insurance",
+        "continuity-deep_authority-2027-01-01-how-to-start-an-equine-apparel-business"
       ],
       "bulk_fix_available": false,
       "action_label": "",
       "github_action_url": "",
       "github_edit_urls": [],
-      "source_metric": "5/306 drafts have word-count warnings",
+      "source_metric": "6/314 drafts have word-count warnings",
       "measurement": ""
     }
   ],
-  "affected_item_count": 179
+  "affected_item_count": 180
 }

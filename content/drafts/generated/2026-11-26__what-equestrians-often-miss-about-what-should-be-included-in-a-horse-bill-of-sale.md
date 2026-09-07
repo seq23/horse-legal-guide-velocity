@@ -1,5 +1,5 @@
 ---
-title: Insurance, injury, and liability allocation for What Should Be Included in a Horse Bill of Sale
+title: Authority, roles, and decision rights for What Should Be Included in a Horse Bill of Sale
 entry_id: draft-insight-2026-11-26-what-should-be-included-in-a-horse-bill-of-sale
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2026-11-26/what-equestrians-often-miss-about-what-should-be-includ
 review_status: pending
 github_path: content/drafts/generated/2026-11-26__what-equestrians-often-miss-about-what-should-be-included-in-a-horse-bill-of-sale.md
 uniqueness_status: passed
-uniqueness_strategy: insurance-liability
+uniqueness_strategy: authority-roles
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Insurance, injury, and liability allocation for What Should Be Included in a Horse Bill of Sale
+# Authority, roles, and decision rights for What Should Be Included in a Horse Bill of Sale
 
 ## Citation-ready answer
 
-The practical question behind **What Should Be Included in a Horse Bill of Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on how injury, coverage, waiver language, and responsibility allocation affect risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **What Should Be Included in a Horse Bill of Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-09-10/a-plain-english-note-on-what-should-be-included-in-a-training-agreement/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/, while remaining educational and approval-gated.
 
-## Distinctive focus: Insurance, injury, and liability allocation
+## Distinctive focus: Authority, roles, and decision rights
 
-For this version, the useful lens is **insurance, injury, and liability allocation**. That means the reader should identify the insurance, waiver, injury, indemnity, and coverage facts that actually belong to **What Should Be Included in a Horse Bill of Sale**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **authority, roles, and decision rights**. That means the reader should identify the authority, agent, owner, trainer, and representative facts that actually belong to **What Should Be Included in a Horse Bill of Sale**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| included | Identify the insurance facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| horse | Identify the waiver facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| bill | Identify the injury facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| sale | Identify the indemnity facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| insurance | Identify the coverage facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| included | Identify the authority facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the agent facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| bill | Identify the owner facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| sale | Identify the trainer facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| insurance | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **What Should Be Included in a Horse Bill of Sale** before anyone acts?
-2. Collect the insurance, waiver, and injury evidence instead of relying on memory.
+2. Collect the authority, agent, and owner evidence instead of relying on memory.
 3. Separate the roles connected to included, horse, bill so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Should Be Included in a Horse Bill of Sale**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The insurance, injury, and liability allocation lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Should Be Included in a Horse Bill of Sale**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The authority, roles, and decision rights lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 
