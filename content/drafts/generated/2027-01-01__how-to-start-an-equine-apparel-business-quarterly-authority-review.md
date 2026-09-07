@@ -20,7 +20,7 @@ uniqueness_strategy: authority-roles
 
 The practical question behind **How to Start an Equine Apparel Business** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-07-01/quarterly-authority-brief-equine-business-formation-what-changed-what-repeats-and-what-people-keep-missing/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-11-08/what-equestrians-often-miss-about-can-i-run-a-horse-business-under-my-lease/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Authority, roles, and decision rights
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**start · equine · apparel · business · quarterly · authority · review · formation**
+**start · equine · apparel · business · authority · roles · decision · rights**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | equine | Identify the agent facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | apparel | Identify the owner facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | business | Identify the trainer facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| quarterly | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| authority | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

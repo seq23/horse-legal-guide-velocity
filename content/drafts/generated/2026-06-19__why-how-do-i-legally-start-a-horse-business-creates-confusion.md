@@ -20,7 +20,7 @@ uniqueness_strategy: money-risk-transfer
 
 The practical question behind **How Do I Legally Start a Horse Business** is not answered safely by repeating a general horse-contract overview. This version focuses on when money, possession, care duties, and loss exposure move from one party to another. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-06-18/a-plain-english-note-on-do-i-need-an-llc-to-start-a-horse-business/, while remaining educational and approval-gated.
+This draft is intentionally scoped to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Money, possession, and risk transfer
 

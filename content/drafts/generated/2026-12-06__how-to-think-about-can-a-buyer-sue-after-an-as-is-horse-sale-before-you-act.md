@@ -1,5 +1,5 @@
 ---
-title: Authority, roles, and decision rights for Can a Buyer Sue After an “As-Is” Horse Sale
+title: Money, possession, and risk transfer for Can a Buyer Sue After an “As-Is” Horse Sale
 entry_id: draft-insight-2026-12-06-can-a-buyer-sue-after-an-as-is-horse-sale
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2026-12-06/how-to-think-about-can-a-buyer-sue-after-an-as-is-horse
 review_status: pending
 github_path: content/drafts/generated/2026-12-06__how-to-think-about-can-a-buyer-sue-after-an-as-is-horse-sale-before-you-act.md
 uniqueness_status: passed
-uniqueness_strategy: authority-roles
+uniqueness_strategy: money-risk-transfer
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Authority, roles, and decision rights for Can a Buyer Sue After an “As-Is” Horse Sale
+# Money, possession, and risk transfer for Can a Buyer Sue After an “As-Is” Horse Sale
 
 ## Citation-ready answer
 
-The practical question behind **Can a Buyer Sue After an “As-Is” Horse Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **Can a Buyer Sue After an “As-Is” Horse Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on when money, possession, care duties, and loss exposure move from one party to another. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-08-21/where-can-a-buyer-sue-after-an-as-is-horse-sale-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-11-26/what-equestrians-often-miss-about-what-should-be-included-in-a-horse-bill-of-sale/, while remaining educational and approval-gated.
 
-## Distinctive focus: Authority, roles, and decision rights
+## Distinctive focus: Money, possession, and risk transfer
 
-For this version, the useful lens is **authority, roles, and decision rights**. That means the reader should identify the authority, agent, owner, trainer, and representative facts that actually belong to **Can a Buyer Sue After an “As-Is” Horse Sale**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **money, possession, and risk transfer**. That means the reader should identify the deposit, payment, possession, delivery, and custody facts that actually belong to **Can a Buyer Sue After an “As-Is” Horse Sale**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| buyer | Identify the authority facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| sue | Identify the agent facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| horse | Identify the owner facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| sale | Identify the trainer facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| authority | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| buyer | Identify the deposit facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| sue | Identify the payment facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the possession facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| sale | Identify the delivery facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| authority | Identify the custody facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **Can a Buyer Sue After an “As-Is” Horse Sale** before anyone acts?
-2. Collect the authority, agent, and owner evidence instead of relying on memory.
+2. Collect the deposit, payment, and possession evidence instead of relying on memory.
 3. Separate the roles connected to buyer, sue, horse so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **Can a Buyer Sue After an “As-Is” Horse Sale**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The authority, roles, and decision rights lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **Can a Buyer Sue After an “As-Is” Horse Sale**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The money, possession, and risk transfer lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 

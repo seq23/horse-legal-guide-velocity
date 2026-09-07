@@ -20,7 +20,7 @@ uniqueness_strategy: evidence-timeline
 
 The practical question behind **Horse Sale Contract vs Bill of Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on how the chronology, records, and sequence of events change the practical risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Evidence and timeline audit
 

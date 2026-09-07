@@ -20,7 +20,7 @@ uniqueness_strategy: operations-handoff
 
 The practical question behind **How should someone compare stable rules document vs boarding contract in an equine legal situation** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-05-25/a-plain-english-note-on-what-should-be-included-in-a-horse-boarding-agreement/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2027-01-05/contract-vs-handshake-deal-in-a-horse-sale-a-practical-guide-to-the-questions-that-usually/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Operational handoff and responsibility map
 

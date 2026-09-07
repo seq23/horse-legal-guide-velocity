@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Pre-Purchase Exam vs No Exam: Legal Risk** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-10-26/where-how-serious-is-a-legal-demand-letter-usually-goes-sideways/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 

@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **What Should Be Included in a Horse Boarding Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-05-25/a-plain-english-note-on-what-should-be-included-in-a-horse-boarding-agreement/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-08-20/how-to-think-about-what-happens-if-a-horse-becomes-lame-after-sale-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**included · horse · boarding · agreement · state · law · venue · local**
+**included · horse · boarding · agreement · due · diligence · verification · training**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | horse | Identify the verification facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | boarding | Identify the records facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | agreement | Identify the representation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| state | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| due | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
