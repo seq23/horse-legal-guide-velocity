@@ -1,48 +1,48 @@
 {
-  "generated_at": "2026-09-07T13:41:04.852Z",
-  "total_signals": 2866,
+  "generated_at": "2026-09-08T13:40:53.698Z",
+  "total_signals": 2908,
   "signals_by_source": {
-    "reddit_equestrian": 1318,
+    "reddit_equestrian": 1338,
     "reddit_horses": 668,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
     "serp_competitor_research": 105,
-    "youtube_search_comments": 161,
+    "youtube_search_comments": 162,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
-    "reddit_legaladvice": 140,
+    "reddit_legaladvice": 160,
     "reddit_smallbusiness": 177,
     "reddit_farming_ranching": 95,
-    "forum_horse_and_hound": 56
+    "forum_horse_and_hound": 57
   },
   "signals_by_platform": {
-    "reddit": 2398,
-    "equestrian_forums": 115,
+    "reddit": 2438,
+    "equestrian_forums": 116,
     "google_paa": 29,
     "serp_competitors": 105,
-    "youtube": 161,
+    "youtube": 162,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1185,
-  "duplicates_collapsed": 1681,
+  "normalized_count": 1195,
+  "duplicates_collapsed": 1713,
   "pages_created": 0,
-  "pages_strengthened": 1185,
+  "pages_strengthened": 1195,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 614
+      "count": 618
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 186
+      "count": 190
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 139
+      "count": 141
     },
     {
       "name": "horse-lease-and-trial",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1318
+      "count": 1338
     },
     {
       "name": "reddit_horses",
@@ -88,11 +88,11 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 161
+      "count": 162
     },
     {
       "name": "reddit_legaladvice",
-      "count": 140
+      "count": 160
     },
     {
       "name": "serp_competitor_research",
@@ -104,7 +104,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 56
+      "count": 57
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -137,15 +137,15 @@
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -189,7 +189,7 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 6,
+      "count": 16,
       "error": "2 of 8 cited page(s) failed to fetch."
     },
     {
@@ -19213,14 +19213,15 @@
       "normalized_id": "norm_2699_395557f53b",
       "action": "strengthen_existing_page",
       "source_signal_ids": [
-        "serp_competitor_research_horse-boarding-https-equinelegalsolutions-com-boardi_4d4f9744"
+        "serp_competitor_research_horse-boarding-https-equinelegalsolutions-com-boardi_4d4f9744",
+        "reddit_equestrian_boarding-https-www-reddit-com-r-equestrian-comments-_e3cb61b8"
       ],
       "preserved_query": "Horse Boarding — what should I know?",
       "normalized_query": "Horse Boarding — what should I know?",
       "llm_bait_phrase": "Horse Boarding",
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
-      "signal_score": 0.8,
+      "signal_score": 2.3,
       "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
@@ -20395,6 +20396,176 @@
       "intent_type": "faq",
       "signal_score": 0.9,
       "mapped_slug": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1185_little-horse-drawing-i-made",
+      "normalized_id": "norm_2866_f097f5ddc2",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_little-horse-drawing-i-made-https-www-reddit-com-r-e_4bb3e592"
+      ],
+      "preserved_query": "Little horse drawing I made — what should I know?",
+      "normalized_query": "Little horse drawing I made — what should I know?",
+      "llm_bait_phrase": "Little horse drawing I made",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1186_i-the-asshole-for-standing-upto-mu-mum-for-neglecting-her-ho",
+      "normalized_id": "norm_2869_248486ec2e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_am-i-the-asshole-for-standing-upto-mu-mum-for-neglec_20646b81"
+      ],
+      "preserved_query": "Am I the asshole for standing upto mu mum for neglecting her horse. Did I go about this the wrong way?",
+      "normalized_query": "Am I the asshole for standing upto mu mum for neglecting her horse. Did I go about this the wrong way?",
+      "llm_bait_phrase": "I the asshole for standing upto mu mum for neglecting her horse. Did I go about this the wrong way",
+      "cluster": "state-specific",
+      "intent_type": "scenario",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1187_meet-united-touch-s-the-stallion-with-the-wow-factor-chasing",
+      "normalized_id": "norm_2871_ee0ed140a1",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_meet-united-touch-s-the-stallion-with-the-wow-factor_ac6f9b2e"
+      ],
+      "preserved_query": "Meet United Touch S , The stallion with the ‘ Wow ’ factor chasing show jumping immortality — what should I know?",
+      "normalized_query": "Meet United Touch S , The stallion with the ‘ Wow ’ factor chasing show jumping immortality — what should I know?",
+      "llm_bait_phrase": "Meet United Touch S , The stallion with the ‘ Wow ’ factor chasing show jumping immortality",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1188_skittish-lesson-horse",
+      "normalized_id": "norm_2872_36564810ed",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_skittish-lesson-horse-https-www-reddit-com-r-equestr_851f862f"
+      ],
+      "preserved_query": "skittish lesson horse — what should I know?",
+      "normalized_query": "skittish lesson horse — what should I know?",
+      "llm_bait_phrase": "skittish lesson horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1189_boarding-in-lexington-ky",
+      "normalized_id": "norm_2874_83f950d810",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_boarding-in-lexington-ky-https-www-reddit-com-r-eque_50a2cce9"
+      ],
+      "preserved_query": "Boarding in Lexington, KY — what should I know?",
+      "normalized_query": "Boarding in Lexington, KY — what should I know?",
+      "llm_bait_phrase": "Boarding in Lexington, KY",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1190_adult-re-rider-seeking-advice-on-which-lesson-barn-to-choose",
+      "normalized_id": "norm_2880_2fb0bc9f80",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_adult-re-rider-seeking-advice-on-which-lesson-barn-t_af3549c7"
+      ],
+      "preserved_query": "Adult re-rider seeking advice on which lesson barn to choose — what should I know?",
+      "normalized_query": "Adult re-rider seeking advice on which lesson barn to choose — what should I know?",
+      "llm_bait_phrase": "Adult re-rider seeking advice on which lesson barn to choose",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1191_are-these-little-worms-in-my-horse-s-grain",
+      "normalized_id": "norm_2881_766c1d96dc",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_what-are-these-little-worms-in-my-horse-s-grain-http_91dd2631"
+      ],
+      "preserved_query": "What are these little worms in my horse’s grain?",
+      "normalized_query": "What are these little worms in my horse’s grain?",
+      "llm_bait_phrase": "are these little worms in my horse’s grain",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1192_nice-way-to-let-new-barn-employee-go",
+      "normalized_id": "norm_2883_291a24ade4",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_nice-way-to-let-new-barn-employee-go-https-www-reddi_67bcacbb"
+      ],
+      "preserved_query": "Nice way to let new barn employee go😫 — what should I know?",
+      "normalized_query": "Nice way to let new barn employee go😫 — what should I know?",
+      "llm_bait_phrase": "Nice way to let new barn employee go😫",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1193_nice-buy-horseware-l-w-turnout",
+      "normalized_id": "norm_2906_37bf5bba0f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_nice-buy-horseware-l-w-turnout-https-forums-horseand_f1e6c366"
+      ],
+      "preserved_query": "Nice buy- Horseware L/W turnout — what should I know?",
+      "normalized_query": "Nice buy- Horseware L/W turnout — what should I know?",
+      "llm_bait_phrase": "Nice buy- Horseware L/W turnout",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1194_auction-day-6-september-sport-horse-performance-sale",
+      "normalized_id": "norm_2907_d693de88f3",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_auction-day-6-september-sport-horse-performance-sale_520583db"
+      ],
+      "preserved_query": "AUCTION DAY 6: September Sport Horse Performance Sale — what should I know?",
+      "normalized_query": "AUCTION DAY 6: September Sport Horse Performance Sale — what should I know?",
+      "llm_bait_phrase": "AUCTION DAY 6: September Sport Horse Performance Sale",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
