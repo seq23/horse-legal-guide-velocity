@@ -49,12 +49,12 @@ button.secondary{background:#efe3d1;color:#2c2118}
 <div id="gated-content" hidden>
 <p class="small"><a href="/admin/drafts/">&larr; All queued drafts</a> · <a href="/admin/">Admin</a></p>
 <div class="banner">
-  <p class="eyebrow">Unapproved draft · preview only</p>
-  <p style="margin:0">This draft is <strong>not published</strong> and is not on the live site. Nothing on this page approves or publishes anything. Publishing stays manual and owner-authorised.</p>
+  <p class="eyebrow">Currently live</p>
+  <p style="margin:0">This piece <strong>is live now</strong> at <a href="/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/">/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/</a>. &ldquo;Revoke this one&rdquo; below would take it down (unpublish, not delete); approving it again later restores it with nothing lost.</p>
 </div>
 <header>
   <h1>What Equestrians Often Miss About Do I Need a Contract to Sell a Horse</h1>
-  <p><span class="pill">2026-04-24</span><span class="pill">Short article</span><span class="pill">horse sale and purchase</span><span class="pill">Waiting for you</span><span class="pill">1079 words</span></p>
+  <p><span class="pill">2026-04-24</span><span class="pill">Short article</span><span class="pill">horse sale and purchase</span><span class="pill">Approved</span><span class="pill">1079 words</span></p>
   <p class="muted">Answers the question: Do I Need a Contract to Sell a Horse?</p>
 </header>
 <div class="card" id="decide">
@@ -68,7 +68,7 @@ button.secondary{background:#efe3d1;color:#2c2118}
   <ul class="small muted decision-explainer" style="margin:8px 0 0">
     <li><strong>Approve</strong> &mdash; opens a pre-filled GitHub request. Nothing is sent until you click &ldquo;Submit new issue&rdquo; there; a maintainer's request then applies automatically within a few minutes, and it publishes once its scheduled date arrives.</li>
     <li><strong>Needs changes</strong> &mdash; same GitHub request, marked for revision. Nothing publishes.</li>
-    <li><strong>Revoke this one</strong> &mdash; same GitHub request, marked to revoke. Nothing publishes while in this state.</li>
+    <li><strong>Revoke this one</strong> &mdash; same GitHub request, marked to revoke. It is currently live; this takes it down (unpublished, not deleted) - approving it again later restores it with nothing lost.</li>
   </ul>
   <p class="small muted" id="decision-status" style="margin:10px 0 0">No decision sent yet.</p>
   <p class="small muted" style="margin:8px 0 0">If approved, this would publish at <code>/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/</code>.</p>
@@ -87,7 +87,7 @@ function buildDecisionIssueUrl(repoUrl,kind,ids,titleById){const action={approve
   var EMAIL="claire@wisecovington.com";
   var TITLE="What Equestrians Often Miss About Do I Need a Contract to Sell a Horse";
   var ID="draft-insight-2026-04-24-do-i-need-a-contract-to-sell-a-horse";
-  var IS_LIVE=false;
+  var IS_LIVE=true;
   var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'revoke this one'};
   function emailFallback(kind){
     if(!EMAIL){var s=document.getElementById('decision-status');if(s)s.textContent='Cannot draft this email: no recipient is configured (data/system/config.json owner_review_email). Ask the repo owner to set it.';return;}
