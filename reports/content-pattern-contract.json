@@ -2,16 +2,16 @@
   "schema_version": "1.0",
   "validator": "validate_content_pattern_contract",
   "spec": ".clarity/content-pattern-spec.json",
-  "generated_at": "2026-09-09T13:41:03.889Z",
+  "generated_at": "2026-09-10T13:39:17.349Z",
   "issue_severity": "report_only",
-  "pages_checked": 557,
-  "blocking_backlog_count": 22,
+  "pages_checked": 558,
+  "blocking_backlog_count": 23,
   "summary": [
     {
       "id": "direct_answer",
       "blocking_check": true,
-      "pages_missing": 22,
-      "coverage_pct": 96.1,
+      "pages_missing": 23,
+      "coverage_pct": 95.9,
       "message": "No quick-answer block; nothing on this page is quotable without surrounding context."
     },
     {
@@ -59,15 +59,15 @@
     {
       "id": "named_sources",
       "blocking_check": false,
-      "pages_missing": 557,
+      "pages_missing": 558,
       "coverage_pct": 0,
       "message": "No named primary source (agent request #6, 288 occurrences)."
     },
     {
       "id": "faq",
       "blocking_check": false,
-      "pages_missing": 22,
-      "coverage_pct": 96.1,
+      "pages_missing": 23,
+      "coverage_pct": 95.9,
       "message": "No FAQ block or FAQPage schema (agent request #9)."
     },
     {
@@ -80,19 +80,19 @@
     {
       "id": "recommendation_summary",
       "blocking_check": false,
-      "pages_missing": 467,
-      "coverage_pct": 16.2
+      "pages_missing": 468,
+      "coverage_pct": 16.1
     },
     {
       "id": "definition_callout",
       "blocking_check": false,
-      "pages_missing": 21,
-      "coverage_pct": 96.2
+      "pages_missing": 22,
+      "coverage_pct": 96.1
     },
     {
       "id": "trust_block",
       "blocking_check": false,
-      "pages_missing": 557,
+      "pages_missing": 558,
       "coverage_pct": 0
     }
   ],
@@ -171,6 +171,7 @@
       "dist/hubs/state-specific/index.html",
       "dist/hubs/therapeutic-riding-and-hipaa/index.html",
       "dist/index.html",
+      "dist/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/index.html",
       "dist/insights/index.html",
       "dist/reference/index.html",
       "dist/scenario/index.html",
@@ -220,6 +221,7 @@
       "dist/faq/what-happens-if-a-horse-sale-goes-wrong/index.html",
       "dist/hubs/index.html",
       "dist/index.html",
+      "dist/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/index.html",
       "dist/insights/index.html",
       "dist/leases/what-should-be-included-in-a-horse-lease-agreement/index.html",
       "dist/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/index.html",
@@ -323,6 +325,10 @@
     },
     {
       "path": "dist/index.html",
+      "check": "direct_answer"
+    },
+    {
+      "path": "dist/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/index.html",
       "check": "direct_answer"
     },
     {
