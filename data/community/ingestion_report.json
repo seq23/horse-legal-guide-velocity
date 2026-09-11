@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-10T13:38:51.309Z",
-  "total_signals": 2975,
+  "generated_at": "2026-09-11T13:39:42.262Z",
+  "total_signals": 3022,
   "signals_by_source": {
-    "reddit_equestrian": 1378,
+    "reddit_equestrian": 1398,
     "reddit_horses": 668,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
-    "serp_competitor_research": 105,
+    "serp_competitor_research": 132,
     "youtube_search_comments": 166,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
@@ -17,28 +17,28 @@
     "forum_horse_and_hound": 59
   },
   "signals_by_platform": {
-    "reddit": 2499,
+    "reddit": 2519,
     "equestrian_forums": 118,
     "google_paa": 29,
-    "serp_competitors": 105,
+    "serp_competitors": 132,
     "youtube": 166,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1231,
-  "duplicates_collapsed": 1744,
+  "normalized_count": 1248,
+  "duplicates_collapsed": 1774,
   "pages_created": 0,
-  "pages_strengthened": 1231,
+  "pages_strengthened": 1248,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 637
+      "count": 651
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 191
+      "count": 193
     },
     {
       "name": "horse-lease-and-trial",
@@ -46,7 +46,7 @@
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 144
+      "count": 145
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1378
+      "count": 1398
     },
     {
       "name": "reddit_horses",
@@ -96,7 +96,7 @@
     },
     {
       "name": "serp_competitor_research",
-      "count": 105
+      "count": 132
     },
     {
       "name": "reddit_farming_ranching",
@@ -144,8 +144,9 @@
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -157,9 +158,8 @@
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 17
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -170,8 +170,8 @@
     {
       "source_key": "forum_chronicle_of_the_horse",
       "platform": "equestrian_forums",
-      "status": "success_with_data",
-      "count": 1
+      "status": "success_empty",
+      "count": 0
     },
     {
       "source_key": "forum_horse_and_hound",
@@ -189,8 +189,8 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 16,
-      "error": "3 of 8 cited page(s) failed to fetch."
+      "count": 43,
+      "error": "1 of 8 cited page(s) failed to fetch."
     },
     {
       "source_key": "youtube_search_comments",
@@ -21180,6 +21180,295 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1231_horse-losing-balance-during-massage",
+      "normalized_id": "norm_2976_d6c320f628",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-losing-balance-during-massage-https-www-reddit_ec9884cf"
+      ],
+      "preserved_query": "Horse losing balance during massage — what should I know?",
+      "normalized_query": "Horse losing balance during massage — what should I know?",
+      "llm_bait_phrase": "Horse losing balance during massage",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1232_looking-for-globally-recognised-horse-training-polo-certific",
+      "normalized_id": "norm_2978_59c3a0569d",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_looking-for-globally-recognised-horse-training-polo-_e0e9f6f2"
+      ],
+      "preserved_query": "Looking for globally recognised horse training / polo certifications — what should I pursue — what should I know?",
+      "normalized_query": "Looking for globally recognised horse training / polo certifications — what should I pursue — what should I know?",
+      "llm_bait_phrase": "Looking for globally recognised horse training / polo certifications — what should I pursue",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1233_advice-for-problem-horse",
+      "normalized_id": "norm_2980_344f710e02",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_advice-for-problem-horse-https-www-reddit-com-r-eque_14b2a6ab"
+      ],
+      "preserved_query": "Advice for problem horse — what should I know?",
+      "normalized_query": "Advice for problem horse — what should I know?",
+      "llm_bait_phrase": "Advice for problem horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1234_interested-in-horseback-riding-as-an-adult",
+      "normalized_id": "norm_2982_ebadd55d46",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_interested-in-horseback-riding-as-an-adult-https-www_859281f5"
+      ],
+      "preserved_query": "Interested in horseback riding as an adult — what should I know?",
+      "normalized_query": "Interested in horseback riding as an adult — what should I know?",
+      "llm_bait_phrase": "Interested in horseback riding as an adult",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1235_help-with-an-elderly-horse-and-my-marriage",
+      "normalized_id": "norm_2986_9b8deffb62",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_help-with-an-elderly-horse-and-my-marriage-https-www_916d61e3"
+      ],
+      "preserved_query": "Help with an elderly horse and my marriage — what should I know?",
+      "normalized_query": "Help with an elderly horse and my marriage — what should I know?",
+      "llm_bait_phrase": "Help with an elderly horse and my marriage",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1236_comet-training",
+      "normalized_id": "norm_2998_a3647266e0",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_comet-training-https-extension-umn-edu-horse-ownersh_58f972e4"
+      ],
+      "preserved_query": "COMET Training — what should I know?",
+      "normalized_query": "COMET Training — what should I know?",
+      "llm_bait_phrase": "COMET Training",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1237_understanding-equine-law",
+      "normalized_id": "norm_3003_a367db408f",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_understanding-equine-law-https-extension-umn-edu-hor_f992616c"
+      ],
+      "preserved_query": "Understanding equine law — what should I know?",
+      "normalized_query": "Understanding equine law — what should I know?",
+      "llm_bait_phrase": "Understanding equine law",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1238_access-the-most-comprehensive-collection-of-horse-forms-onli",
+      "normalized_id": "norm_3005_bc8c5664f3",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_access-the-most-comprehensive-collection-of-horse-fo_4637f0a9"
+      ],
+      "preserved_query": "Access the most comprehensive collection of horse forms online. — what should I know?",
+      "normalized_query": "Access the most comprehensive collection of horse forms online. — what should I know?",
+      "llm_bait_phrase": "Access the most comprehensive collection of horse forms online.",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1239_horse-forms-by-state",
+      "normalized_id": "norm_3006_f8013da86b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_horse-forms-by-state-https-www-uslegalforms-com-anim_24a56cc9"
+      ],
+      "preserved_query": "Horse Forms by State — what should I know?",
+      "normalized_query": "Horse Forms by State — what should I know?",
+      "llm_bait_phrase": "Horse Forms by State",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1240_use-horse-forms",
+      "normalized_id": "norm_3008_72d9e88478",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_why-use-horse-forms-https-www-uslegalforms-com-anima_a2b0d2d2"
+      ],
+      "preserved_query": "Why use horse forms?",
+      "normalized_query": "Why use horse forms?",
+      "llm_bait_phrase": "use horse forms",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1241_common-equine-forms-required-for-owning-a-horse",
+      "normalized_id": "norm_3009_8a55f237fd",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_common-equine-forms-required-for-owning-a-horse-http_08286d6d"
+      ],
+      "preserved_query": "Common equine forms required for owning a horse — what should I know?",
+      "normalized_query": "Common equine forms required for owning a horse — what should I know?",
+      "llm_bait_phrase": "Common equine forms required for owning a horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/what-liability-does-a-trainer-have/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1242_order-the-package-of-all-horse-forms-for-your-state",
+      "normalized_id": "norm_3010_082598f768",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_order-the-package-of-all-horse-forms-for-your-state-_bd6c5040"
+      ],
+      "preserved_query": "Order the Package of All Horse forms for your State! — what should I know?",
+      "normalized_query": "Order the Package of All Horse forms for your State! — what should I know?",
+      "llm_bait_phrase": "Order the Package of All Horse forms for your State!",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1243_things-to-consider-when-preparing-horse-forms",
+      "normalized_id": "norm_3011_948ead4bfc",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_things-to-consider-when-preparing-horse-forms-https-_bacfd32f"
+      ],
+      "preserved_query": "Things to consider when preparing horse forms — what should I know?",
+      "normalized_query": "Things to consider when preparing horse forms — what should I know?",
+      "llm_bait_phrase": "Things to consider when preparing horse forms",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1244_is-equine-law",
+      "normalized_id": "norm_3012_19b84164c3",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_what-is-equine-law-https-www-uslegalforms-com-animal_79d1727e"
+      ],
+      "preserved_query": "What is Equine Law?",
+      "normalized_query": "What is Equine Law?",
+      "llm_bait_phrase": "is Equine Law",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1245_are-horse-forms",
+      "normalized_id": "norm_3013_f0c62637a7",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_what-are-horse-forms-https-www-uslegalforms-com-anim_b60cbc3c"
+      ],
+      "preserved_query": "What are horse forms?",
+      "normalized_query": "What are horse forms?",
+      "llm_bait_phrase": "are horse forms",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1246_equine-forms-do-i-need-to-buy-a-horse",
+      "normalized_id": "norm_3014_892b1ce853",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_what-equine-forms-do-i-need-to-buy-a-horse-https-www_ba308edf"
+      ],
+      "preserved_query": "What equine forms do I need to buy a horse?",
+      "normalized_query": "What equine forms do I need to buy a horse?",
+      "llm_bait_phrase": "equine forms do I need to buy a horse",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/faq/do-i-need-a-contract-to-buy-a-horse/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1247_horses-and-the-law",
+      "normalized_id": "norm_3015_c0ebde0a3d",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_horses-and-the-law-https-corporate-findlaw-com-litig_f8b68f2a"
+      ],
+      "preserved_query": "Horses and The Law — what should I know?",
+      "normalized_query": "Horses and The Law — what should I know?",
+      "llm_bait_phrase": "Horses and The Law",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/scenario/a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
