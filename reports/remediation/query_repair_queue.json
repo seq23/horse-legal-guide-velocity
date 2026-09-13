@@ -1,11 +1,11 @@
 {
   "schema_version": "2.2.0",
-  "generated_at": "2026-09-12T14:29:40.512Z",
+  "generated_at": "2026-09-13T14:28:50.165Z",
   "bounded_repair_revisions": 2,
   "policy": "The system performs query testing, diagnosis, competitor comparison, finished patch preparation, and post-deployment retesting. Client approval remains required before each live legal-page mutation. Bounded on-page repair stops after two revisions.",
   "summary": {
-    "tracked": 28,
-    "patch_ready": 28,
+    "tracked": 30,
+    "patch_ready": 30,
     "owner_approved": 0,
     "applied_pending_retest": 0,
     "observed_after_repair": 0,
@@ -386,6 +386,49 @@
             "zone": "faq_block",
             "action": "append_html",
             "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-005\" data-revision=\"1\"><p><strong>Search question:</strong> What Should Be Included in a Horse Lease Agreement</p><h2>Quick answer</h2><p><strong>Short answer:</strong> A good horse lease agreement should make it painfully clear <strong>who can do what with the horse, who pays for what, who makes emergency decisions, what happens if the horse becomes unsound, and how the lease ends</strong>. Most lease fights come from a document that names the horse and price but leaves the actual relationship fuzzy.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-006",
+      "panel_id": "qpanel-006",
+      "revision": 1,
+      "query": "Do I Need a Contract to Sell a Horse",
+      "target_page": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-006\" data-revision=\"1\"><p><strong>Search question:</strong> Do I Need a Contract to Sell a Horse</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Do I Need a Contract to Sell a Horse? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
           }
         ]
       },
@@ -1673,6 +1716,49 @@
             "zone": "faq_block",
             "action": "append_html",
             "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-027\" data-revision=\"1\"><p><strong>Search question:</strong> Who Is Liable During a Horse Lease</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: Who Is Liable During a Horse Lease? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
+          }
+        ]
+      },
+      "patch_note": "Uses only already-rendered approved target-page answer content; competitor snippets are not copied or treated as legal authority.",
+      "approval_required": true,
+      "automatic_live_change": false,
+      "owner_approved": false,
+      "approved_by": null,
+      "approved_at": null,
+      "rejected_at": null,
+      "applied_at": null,
+      "retest_status": "not_deployed"
+    },
+    {
+      "repair_id": "query-repair-qpanel-028",
+      "panel_id": "qpanel-028",
+      "revision": 1,
+      "query": "What Should Be Included in a Horse Bill of Sale",
+      "target_page": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+      "diagnosis_state": "MISSING",
+      "diagnosis": [
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+      ],
+      "evidence": {
+        "grounded_site_surfaced": false,
+        "gsc_impressions": 0,
+        "gsc_clicks": 0,
+        "gsc_average_position": 0,
+        "gsc_pages": [],
+        "competitor_urls": [],
+        "bing_connected": false
+      },
+      "competitor_urls": [],
+      "state": "prepared_for_owner_review",
+      "prepared_patch_status": "prepared",
+      "patch_plan": {
+        "mode": "page",
+        "slug": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "operations": [
+          {
+            "zone": "faq_block",
+            "action": "append_html",
+            "html": "<div class=\"query-alignment-repair\" data-query-panel=\"qpanel-028\" data-revision=\"1\"><p><strong>Search question:</strong> What Should Be Included in a Horse Bill of Sale</p><h2>Quick answer</h2>\n  <p><strong>Short answer:</strong> Short answer: What Should Be Included in a Horse Bill of Sale? is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.</p></div>"
           }
         ]
       },
