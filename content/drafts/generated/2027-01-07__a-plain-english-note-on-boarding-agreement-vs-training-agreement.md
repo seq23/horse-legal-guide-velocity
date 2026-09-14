@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **How should someone compare boarding agreement vs training agreement in an equine legal situation** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-05-25/a-plain-english-note-on-what-should-be-included-in-a-horse-boarding-agreement/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-09-09/what-equestrians-often-miss-about-what-should-be-included-in-a-horse-boarding-agreement/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 

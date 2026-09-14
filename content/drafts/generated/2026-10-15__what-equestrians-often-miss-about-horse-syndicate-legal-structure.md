@@ -20,7 +20,7 @@ uniqueness_strategy: evidence-timeline
 
 The practical question behind **Horse Syndicate Legal Structure** is not answered safely by repeating a general horse-contract overview. This version focuses on how the chronology, records, and sequence of events change the practical risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-06-30/a-plain-english-note-on-horse-syndicate-legal-structure/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-08-18/why-can-a-buyer-return-a-horse-after-purchase-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Evidence and timeline audit
 

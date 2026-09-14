@@ -20,7 +20,7 @@ uniqueness_strategy: authority-roles
 
 The practical question behind **What Happens If a Leased Horse Becomes Unsound** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-05-19/a-plain-english-note-on-what-happens-if-a-leased-horse-is-injured/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-12-01/where-what-happens-if-there-is-no-written-agreement-in-a-horse-sale-usually-goes-sideways/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Authority, roles, and decision rights
 
