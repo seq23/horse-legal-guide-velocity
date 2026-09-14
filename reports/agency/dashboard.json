@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-09-13T14:22:38.000Z",
+  "generated_at": "2026-09-13T14:34:15.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-09-13T14:24:44.435Z",
-      "age_hours": 0,
+      "age_hours": 0.2,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-09-13T14:24:44.435Z",
-      "age_hours": 0,
+      "age_hours": 0.2,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-09-13T14:24:44.435Z",
-      "age_hours": 0,
+      "age_hours": 0.2,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -1819,7 +1819,7 @@
       "high_similarity_pairs": 341,
       "intent_overlap_pairs": 198,
       "uniqueness_review_clusters": 81,
-      "drafts_automatically_differentiated": 200,
+      "drafts_automatically_differentiated": 205,
       "draft_uniqueness_failures": 0,
       "jsonld_present": 561,
       "article_schema_pages": 561,
@@ -1827,14 +1827,14 @@
       "internal_link_healthy_pages": 561,
       "zero_internal_link_pages": 0,
       "weak_internal_link_pages": 0,
-      "draft_items": 314,
-      "approval_eligible": 314,
-      "direct_answer_ok": 314,
-      "data_atom_ok": 314,
-      "routing_ok": 314,
+      "draft_items": 322,
+      "approval_eligible": 322,
+      "direct_answer_ok": 322,
+      "data_atom_ok": 322,
+      "routing_ok": 322,
       "hard_fail_items": 0,
       "word_warning_items": 6,
-      "ai_risk_items": 200,
+      "ai_risk_items": 205,
       "workflow_count": 17,
       "workflow_passed": 17,
       "workflow_warning_count": 0,
