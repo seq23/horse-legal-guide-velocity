@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-09-11T13:39:42.262Z",
-  "total_signals": 3022,
+  "generated_at": "2026-09-14T13:41:54.765Z",
+  "total_signals": 3082,
   "signals_by_source": {
-    "reddit_equestrian": 1398,
+    "reddit_equestrian": 1418,
     "reddit_horses": 668,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
-    "serp_competitor_research": 132,
-    "youtube_search_comments": 166,
+    "serp_competitor_research": 149,
+    "youtube_search_comments": 167,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
-    "reddit_legaladvice": 180,
+    "reddit_legaladvice": 199,
     "reddit_smallbusiness": 178,
     "reddit_farming_ranching": 95,
-    "forum_horse_and_hound": 59
+    "forum_horse_and_hound": 62
   },
   "signals_by_platform": {
-    "reddit": 2519,
-    "equestrian_forums": 118,
+    "reddit": 2558,
+    "equestrian_forums": 121,
     "google_paa": 29,
-    "serp_competitors": 132,
-    "youtube": 166,
+    "serp_competitors": 149,
+    "youtube": 167,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1248,
-  "duplicates_collapsed": 1774,
+  "normalized_count": 1265,
+  "duplicates_collapsed": 1817,
   "pages_created": 0,
-  "pages_strengthened": 1248,
+  "pages_strengthened": 1265,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 651
+      "count": 660
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 193
+      "count": 194
+    },
+    {
+      "name": "horse-sale-and-purchase",
+      "count": 151
     },
     {
       "name": "horse-lease-and-trial",
       "count": 149
-    },
-    {
-      "name": "horse-sale-and-purchase",
-      "count": 145
     },
     {
       "name": "liability-waivers-insurance",
@@ -54,7 +54,7 @@
     },
     {
       "name": "equine-business-formation",
-      "count": 30
+      "count": 31
     },
     {
       "name": "demand-letters-and-disputes",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1398
+      "count": 1418
     },
     {
       "name": "reddit_horses",
@@ -84,7 +84,7 @@
     },
     {
       "name": "reddit_legaladvice",
-      "count": 180
+      "count": 199
     },
     {
       "name": "reddit_smallbusiness",
@@ -92,11 +92,11 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 166
+      "count": 167
     },
     {
       "name": "serp_competitor_research",
-      "count": 132
+      "count": 149
     },
     {
       "name": "reddit_farming_ranching",
@@ -104,7 +104,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 59
+      "count": 62
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -144,9 +144,8 @@
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -158,8 +157,9 @@
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 17
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -170,14 +170,14 @@
     {
       "source_key": "forum_chronicle_of_the_horse",
       "platform": "equestrian_forums",
-      "status": "success_empty",
-      "count": 0
+      "status": "success_with_data",
+      "count": 1
     },
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 9
+      "count": 12
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -189,7 +189,7 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 43,
+      "count": 40,
       "error": "1 of 8 cited page(s) failed to fetch."
     },
     {
@@ -21273,14 +21273,15 @@
       "normalized_id": "norm_2998_a3647266e0",
       "action": "strengthen_existing_page",
       "source_signal_ids": [
-        "serp_competitor_research_comet-training-https-extension-umn-edu-horse-ownersh_58f972e4"
+        "serp_competitor_research_comet-training-https-extension-umn-edu-horse-ownersh_58f972e4",
+        "serp_competitor_research_comet-training-https-extension-umn-edu-agriculture-a_82586046"
       ],
       "preserved_query": "COMET Training — what should I know?",
       "normalized_query": "COMET Training — what should I know?",
       "llm_bait_phrase": "COMET Training",
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
-      "signal_score": 0.8,
+      "signal_score": 2.1,
       "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
@@ -21290,14 +21291,15 @@
       "normalized_id": "norm_3003_a367db408f",
       "action": "strengthen_existing_page",
       "source_signal_ids": [
-        "serp_competitor_research_understanding-equine-law-https-extension-umn-edu-hor_f992616c"
+        "serp_competitor_research_understanding-equine-law-https-extension-umn-edu-hor_f992616c",
+        "serp_competitor_research_understanding-equine-law-https-extension-umn-edu-agr_fb70c38e"
       ],
       "preserved_query": "Understanding equine law — what should I know?",
       "normalized_query": "Understanding equine law — what should I know?",
       "llm_bait_phrase": "Understanding equine law",
       "cluster": "state-specific",
       "intent_type": "faq",
-      "signal_score": 0.8,
+      "signal_score": 2.1,
       "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
@@ -21469,6 +21471,296 @@
       "intent_type": "faq",
       "signal_score": 0.8,
       "mapped_slug": "/scenario/a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1248_horse-is-now-lame-after-being-ridden",
+      "normalized_id": "norm_3027_d0e12fb333",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-is-now-lame-after-being-ridden-https-www-reddi_fffe06f6"
+      ],
+      "preserved_query": "Horse is now lame after being ridden — what should I know?",
+      "normalized_query": "Horse is now lame after being ridden — what should I know?",
+      "llm_bait_phrase": "Horse is now lame after being ridden",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/what-happens-if-a-boarder-damages-property/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1249_my-horse-rolled-in-front-of-me-for-the-first-time-today",
+      "normalized_id": "norm_3032_6645f5efcb",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_my-horse-rolled-in-front-of-me-for-the-first-time-to_cb4d2c4d"
+      ],
+      "preserved_query": "My horse rolled in front of me for the first time today — what should I know?",
+      "normalized_query": "My horse rolled in front of me for the first time today — what should I know?",
+      "llm_bait_phrase": "My horse rolled in front of me for the first time today",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1250_help-me-help-my-wife-on-her-new-horse-ownership",
+      "normalized_id": "norm_3033_f867f9b6c0",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_help-me-help-my-wife-on-her-new-horse-ownership-http_963e010d"
+      ],
+      "preserved_query": "Help me help my wife on her new Horse ownership — what should I know?",
+      "normalized_query": "Help me help my wife on her new Horse ownership — what should I know?",
+      "llm_bait_phrase": "Help me help my wife on her new Horse ownership",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1251_healthy-as-a-horse",
+      "normalized_id": "norm_3035_cf71bd1cd3",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_healthy-as-a-horse-https-www-reddit-com-r-equestrian_6165a60e"
+      ],
+      "preserved_query": "“Healthy as a Horse” — what should I know?",
+      "normalized_query": "“Healthy as a Horse” — what should I know?",
+      "llm_bait_phrase": "“Healthy as a Horse”",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1252_has-anyone-had-experience-with-an-older-horse-that-can-no-lo",
+      "normalized_id": "norm_3036_f95141c2f9",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_has-anyone-had-experience-with-an-older-horse-that-c_7372659f"
+      ],
+      "preserved_query": "Has anyone had experience with an older horse that can no longer eat hay — what should I know?",
+      "normalized_query": "Has anyone had experience with an older horse that can no longer eat hay — what should I know?",
+      "llm_bait_phrase": "Has anyone had experience with an older horse that can no longer eat hay",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1253_horse-retreats",
+      "normalized_id": "norm_3040_4235479190",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-retreats-https-www-reddit-com-r-equestrian-com_725bde2f"
+      ],
+      "preserved_query": "Horse retreats — what should I know?",
+      "normalized_query": "Horse retreats — what should I know?",
+      "llm_bait_phrase": "Horse retreats",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1254_moldy-tack",
+      "normalized_id": "norm_3041_5a0905d8da",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_moldy-tack-https-www-reddit-com-r-equestrian-comment_4b0dddad"
+      ],
+      "preserved_query": "Moldy tack — what should I know?",
+      "normalized_query": "Moldy tack — what should I know?",
+      "llm_bait_phrase": "Moldy tack",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1255_utah-small-business-dispute-majority-owner-s-40k-equity-buyo",
+      "normalized_id": "norm_3042_8b2aba8154",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_legaladvice_utah-small-business-dispute-majority-owner-s-40k-equ_dd030b0e"
+      ],
+      "preserved_query": "Utah Small Business Dispute: Majority Owner’s $40K Equity Buyout Loan — Personal Debt or Business Liability — what should I know?",
+      "normalized_query": "Utah Small Business Dispute: Majority Owner’s $40K Equity Buyout Loan — Personal Debt or Business Liability — what should I know?",
+      "llm_bait_phrase": "Utah Small Business Dispute: Majority Owner’s $40K Equity Buyout Loan — Personal Debt or Business Liability",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/faq/can-a-seller-refuse-to-take-a-horse-back/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1256_return-of-security-deposit-who-do-we-go-after",
+      "normalized_id": "norm_3048_9219b5899c",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_legaladvice_return-of-security-deposit-who-do-we-go-after-https-_0559329a"
+      ],
+      "preserved_query": "Return of security deposit. Who do we go after — what should I know?",
+      "normalized_query": "Return of security deposit. Who do we go after — what should I know?",
+      "llm_bait_phrase": "Return of security deposit. Who do we go after",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1257_employment-labor-and-ip-social-media-live-sales-vendor-vs-em",
+      "normalized_id": "norm_3050_e88c123480",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_legaladvice_employment-labor-and-ip-social-media-live-sales-vend_814b1971",
+        "reddit_legaladvice_employment-labor-and-ip-social-media-live-sales-vend_511dcece"
+      ],
+      "preserved_query": "EMPLOYMENT/LABOR and IP: Social Media Live Sales. Vendor vs. Employee classification and Generative AI",
+      "normalized_query": "EMPLOYMENT/LABOR and IP: Social Media Live Sales. Vendor vs. Employee classification and Generative AI",
+      "llm_bait_phrase": "EMPLOYMENT/LABOR and IP: Social Media Live Sales. Vendor vs. Employee classification and Generative AI",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "comparison",
+      "signal_score": 2.3,
+      "mapped_slug": "/compare/contract-vs-handshake-deal-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1258_dismissing-sales-personnel-after-90-day-probationary-period-",
+      "normalized_id": "norm_3056_00d86ce4be",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_legaladvice_dismissing-sales-personnel-after-90-day-probationary_b9ec2f40"
+      ],
+      "preserved_query": "Dismissing sales personnel after 90 day probationary period ends. Company not paying bonuses / commissions for customer contracts signed during 90 days. — what should I know?",
+      "normalized_query": "Dismissing sales personnel after 90 day probationary period ends. Company not paying bonuses / commissions for customer contracts signed during 90 days. — what should I know?",
+      "llm_bait_phrase": "Dismissing sales personnel after 90 day probationary period ends. Company not paying bonuses / commissions for customer contracts signed during 90 days.",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1259_wa-contractor-s-equipment-has-sat-abandoned-on-my-rural-prop",
+      "normalized_id": "norm_3057_c5813389db",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_legaladvice_wa-contractor-s-equipment-has-sat-abandoned-on-my-ru_38bc1bf3"
+      ],
+      "preserved_query": "[WA] Contractor's equipment has sat abandoned on my rural property for ~9 months after catching fire mid-job. Sent a demand letter, planning to return it to his business. Sanity check on the plan — what should I know?",
+      "normalized_query": "What happens when [WA] Contractor's equipment has sat abandoned on my rural property for ~9 months after catching fire mid-job. Sent a demand letter, planning to return it to his business. Sanity check on the plan?",
+      "llm_bait_phrase": "[WA] Contractor's equipment has sat abandoned on my rural property for ~9 months after catching fire mid-job. Sent a demand letter, planning to return it to his business. Sanity check on the plan",
+      "cluster": "equine-business-formation",
+      "intent_type": "scenario",
+      "signal_score": 0.9,
+      "mapped_slug": "/scenario/what-should-i-gather-before-responding-to-a-demand-letter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1260_4-5t-ice-horse-box-or-bloomfields",
+      "normalized_id": "norm_3061_4f084f48e4",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_4-5t-ice-horse-box-or-bloomfields-https-forums-horse_f67870b8"
+      ],
+      "preserved_query": "4.5t ice horse box or bloomfields — what should I know?",
+      "normalized_query": "4.5t ice horse box or bloomfields — what should I know?",
+      "llm_bait_phrase": "4.5t ice horse box or bloomfields",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/boarding/what-happens-if-a-boarder-damages-property/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1261_does-your-horse-do-to-annoy-you",
+      "normalized_id": "norm_3062_b466d07d71",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_what-does-your-horse-do-to-annoy-you-https-forums-ho_6d88d64e"
+      ],
+      "preserved_query": "What does your horse do to annoy you?",
+      "normalized_query": "What does your horse do to annoy you?",
+      "llm_bait_phrase": "does your horse do to annoy you",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1262_mccartney-s-worcester-sale-purchase",
+      "normalized_id": "norm_3063_0b04b55d29",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "forum_horse_and_hound_mccartney-s-worcester-sale-purchase-https-forums-hor_e20503e3"
+      ],
+      "preserved_query": "McCartney’s Worcester sale purchase — what should I know?",
+      "normalized_query": "McCartney’s Worcester sale purchase — what should I know?",
+      "llm_bait_phrase": "McCartney’s Worcester sale purchase",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.9,
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1263_horse-boarding-agreement-oh",
+      "normalized_id": "norm_3065_0f105b0952",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_horse-boarding-agreement-oh-https-www-clclegalforms-_d0dcebc4"
+      ],
+      "preserved_query": "Horse Boarding Agreement (OH) — what should I know?",
+      "normalized_query": "Horse Boarding Agreement (OH) — what should I know?",
+      "llm_bait_phrase": "Horse Boarding Agreement (OH)",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1264_hoa-demanded-i-sell-my-horses-in-10-days-they-had-no-idea-wh",
+      "normalized_id": "norm_3081_4b1e3be14b",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_hoa-demanded-i-sell-my-horses-in-10-days-they-had-no_0850da94"
+      ],
+      "preserved_query": "HOA Demanded I Sell My Horses In 10 Days They Had No Idea What I Found — what should I know?",
+      "normalized_query": "HOA Demanded I Sell My Horses In 10 Days They Had No Idea What I Found — what should I know?",
+      "llm_bait_phrase": "HOA Demanded I Sell My Horses In 10 Days They Had No Idea What I Found",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
