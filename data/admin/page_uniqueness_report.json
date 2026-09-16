@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-15T14:39:11.000Z",
+  "generated_at": "2026-09-16T11:25:41.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "819b0bc67394666ec2cab67c5a4100c85ed5aa686087f4afd878278aa6e51663",
+  "source_fingerprint": "8d5ec28b253ee5e5259204a9984ea6fb943fc864da68cc2751b2832740b66611",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
@@ -12,7 +12,7 @@
     "indexable_pages_measured": 561,
     "duplicate_title_groups": 79,
     "duplicate_description_groups": 4,
-    "high_similarity_pairs": 341,
+    "high_similarity_pairs": 340,
     "intent_overlap_pairs": 198
   },
   "family_metrics": {
@@ -61,7 +61,7 @@
     "disputes": {
       "pages": 6,
       "duplicate_title_memberships": 6,
-      "high_similarity_pair_memberships": 2,
+      "high_similarity_pair_memberships": 0,
       "intent_overlap_pair_memberships": 6
     },
     "faq": {
@@ -4971,18 +4971,6 @@
       "title_b": "How should someone compare horse sale contract vs bill of sale in an equine legal situation?"
     },
     {
-      "a": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
-      "b": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
-      "family_a": "disputes",
-      "family_b": "disputes",
-      "body_similarity": 0.8513,
-      "cosine_similarity": 0.9253,
-      "shingle_similarity": 0.7137,
-      "intent_similarity": 0,
-      "title_a": "Do I Need a Lawyer to Respond to a Demand Letter?",
-      "title_b": "Can a Contract Dispute Be Resolved Without Court?"
-    },
-    {
       "a": "/reference/what-should-someone-know-about-a-boarding-barn-changed-ownership-what-happens-to-agreements/",
       "b": "/reference/what-should-someone-know-about-a-boarder-stopped-paying-what-can-a-barn-do-next/",
       "family_a": "reference",
@@ -5229,16 +5217,6 @@
       "title_b": "What Happens If I Ignore a Problem and Hope It Goes Away?"
     },
     {
-      "a": "/reference/can-a-contract-dispute-be-resolved-without-court/",
-      "b": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
-      "family_a": "reference",
-      "family_b": "disputes",
-      "body_similarity": 0.5406,
-      "intent_similarity": 1,
-      "title_a": "Can a Contract Dispute Be Resolved Without Court?",
-      "title_b": "Can a Contract Dispute Be Resolved Without Court?"
-    },
-    {
       "a": "/scenario/do-people-actually-get-sued-over-horse-deals/",
       "b": "/reference/do-people-actually-get-sued-over-horse-deals/",
       "family_a": "scenario",
@@ -5367,6 +5345,16 @@
       "intent_similarity": 1,
       "title_a": "Is a Verbal Agreement Legally Binding in a Horse Sale?",
       "title_b": "Is a Verbal Agreement Legally Binding in a Horse Sale?"
+    },
+    {
+      "a": "/reference/can-a-contract-dispute-be-resolved-without-court/",
+      "b": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+      "family_a": "reference",
+      "family_b": "disputes",
+      "body_similarity": 0.5052,
+      "intent_similarity": 1,
+      "title_a": "Can a Contract Dispute Be Resolved Without Court?",
+      "title_b": "Can a Contract Dispute Be Resolved Without Court?"
     },
     {
       "a": "/reference/how-serious-is-a-legal-demand-letter/",

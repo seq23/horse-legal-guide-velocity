@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-15T14:39:11.000Z",
-  "source_fingerprint": "819b0bc67394666ec2cab67c5a4100c85ed5aa686087f4afd878278aa6e51663",
+  "generated_at": "2026-09-16T11:25:41.000Z",
+  "source_fingerprint": "8d5ec28b253ee5e5259204a9984ea6fb943fc864da68cc2751b2832740b66611",
   "policy": "Owner review only. This ledger never mutates live pages, routes, canonicals, robots directives, or redirects.",
   "automatic_live_changes_allowed": false,
-  "entry_count": 81,
+  "entry_count": 82,
   "entries": [
     {
       "ledger_id": "uniqueness-0001",
@@ -808,10 +808,8 @@
       "action_applied": "none",
       "candidate_primary": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
       "members": [
-        "/disputes/can-a-contract-dispute-be-resolved-without-court/",
         "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
         "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
-        "/reference/can-a-contract-dispute-be-resolved-without-court/",
         "/reference/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
         "/reference/what-should-i-do-if-i-receive-a-demand-letter/"
       ],
@@ -1268,6 +1266,26 @@
       "ledger_id": "uniqueness-0057",
       "status": "owner_review_required",
       "action_applied": "none",
+      "candidate_primary": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+      "members": [
+        "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+        "/reference/can-a-contract-dispute-be-resolved-without-court/"
+      ],
+      "families": [
+        "disputes",
+        "reference"
+      ],
+      "reasons": [
+        "duplicate_title"
+      ],
+      "maximum_body_similarity": null,
+      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true
+    },
+    {
+      "ledger_id": "uniqueness-0058",
+      "status": "owner_review_required",
+      "action_applied": "none",
       "candidate_primary": "/faq/can-a-seller-refuse-to-take-a-horse-back/",
       "members": [
         "/faq/can-a-seller-refuse-to-take-a-horse-back/",
@@ -1285,7 +1303,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0058",
+      "ledger_id": "uniqueness-0059",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/disputes/can-i-ignore-a-demand-letter/",
@@ -1305,7 +1323,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0059",
+      "ledger_id": "uniqueness-0060",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/business/can-i-run-a-horse-business-under-another-company/",
@@ -1325,7 +1343,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0060",
+      "ledger_id": "uniqueness-0061",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/can-i-run-a-horse-business-under-my-lease/",
@@ -1345,7 +1363,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0061",
+      "ledger_id": "uniqueness-0062",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
@@ -1365,7 +1383,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0062",
+      "ledger_id": "uniqueness-0063",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
@@ -1385,7 +1403,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0063",
+      "ledger_id": "uniqueness-0064",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/can-you-end-a-horse-lease-early/",
@@ -1405,7 +1423,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0064",
+      "ledger_id": "uniqueness-0065",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/faq/do-i-need-a-contract-to-buy-a-horse/",
@@ -1425,7 +1443,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0065",
+      "ledger_id": "uniqueness-0066",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/disputes/how-serious-is-a-legal-demand-letter/",
@@ -1445,7 +1463,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0066",
+      "ledger_id": "uniqueness-0067",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-happens-if-a-boarder-damages-property/",
@@ -1465,7 +1483,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0067",
+      "ledger_id": "uniqueness-0068",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-happens-if-a-boarder-does-not-pay/",
@@ -1485,7 +1503,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0068",
+      "ledger_id": "uniqueness-0069",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
@@ -1505,7 +1523,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0069",
+      "ledger_id": "uniqueness-0070",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-happens-if-a-horse-dies-while-boarded/",
@@ -1525,7 +1543,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0070",
+      "ledger_id": "uniqueness-0071",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/",
@@ -1545,7 +1563,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0071",
+      "ledger_id": "uniqueness-0072",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/faq/what-happens-if-a-horse-sale-goes-wrong/",
@@ -1565,7 +1583,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0072",
+      "ledger_id": "uniqueness-0073",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
@@ -1585,7 +1603,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0073",
+      "ledger_id": "uniqueness-0074",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/what-happens-if-a-leased-horse-is-injured/",
@@ -1605,7 +1623,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0074",
+      "ledger_id": "uniqueness-0075",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/liability/what-happens-if-i-do-not-post-the-required-sign/",
@@ -1625,7 +1643,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0075",
+      "ledger_id": "uniqueness-0076",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/disputes/what-happens-if-i-do-not-respond-to-a-legal-letter/",
@@ -1645,7 +1663,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0076",
+      "ledger_id": "uniqueness-0077",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
@@ -1665,7 +1683,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0077",
+      "ledger_id": "uniqueness-0078",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/leases/what-is-a-horse-trial-agreement/",
@@ -1685,7 +1703,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0078",
+      "ledger_id": "uniqueness-0079",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
@@ -1705,7 +1723,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0079",
+      "ledger_id": "uniqueness-0080",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/what-liability-does-a-trainer-have/",
@@ -1725,7 +1743,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0080",
+      "ledger_id": "uniqueness-0081",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
@@ -1745,7 +1763,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0081",
+      "ledger_id": "uniqueness-0082",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",

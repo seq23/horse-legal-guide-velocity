@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-15T14:39:11.000Z",
-  "measurement_fingerprint": "819b0bc67394666ec2cab67c5a4100c85ed5aa686087f4afd878278aa6e51663",
+  "generated_at": "2026-09-16T11:25:41.000Z",
+  "measurement_fingerprint": "8d5ec28b253ee5e5259204a9984ea6fb943fc864da68cc2751b2832740b66611",
   "title": "LLM Citation Velocity Dashboard",
   "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, page uniqueness, and workflow trace next steps.",
   "truth_boundary": "Scores are regenerated from the current repo files and freshly rendered dist HTML on every release build. Existing-page similarity findings are advisory and require owner approval before any live change. Draft similarity is automatically repaired before approval eligibility. These local measurements do not prove live GitHub Actions, live GSC, Bing, or IndexNow until those provider workflows run after apply.",
@@ -43,9 +43,9 @@
     "canonical_present": 561,
     "duplicate_title_groups": 78,
     "duplicate_description_groups": 4,
-    "high_similarity_pairs": 341,
+    "high_similarity_pairs": 340,
     "intent_overlap_pairs": 198,
-    "uniqueness_review_clusters": 81,
+    "uniqueness_review_clusters": 82,
     "drafts_automatically_differentiated": 205,
     "draft_uniqueness_failures": 0,
     "jsonld_present": 561,
@@ -65,8 +65,8 @@
     "workflow_count": 17,
     "workflow_passed": 17,
     "workflow_warning_count": 0,
-    "signal_raw_store_count": 3125,
-    "signal_fresh_collected_count": 130,
+    "signal_raw_store_count": 3154,
+    "signal_fresh_collected_count": 129,
     "signal_failed_sources": 0,
     "signal_zero_reddit_warning": false,
     "github_actions_simulation_status": "passed",
@@ -280,7 +280,7 @@
       "github_edit_urls": [
         "https://github.com/seq23/horse-legal-guide-velocity/blob/main/data/admin/consolidation_review_ledger.json"
       ],
-      "source_metric": "341 pairs at or above 0.85 body similarity",
+      "source_metric": "340 pairs at or above 0.85 body similarity",
       "measurement": ""
     },
     {
@@ -334,12 +334,12 @@
         "/business/how-to-start-a-training-barn-legally/",
         "/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
         "/reference/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
-        "/reference/can-a-contract-dispute-be-resolved-without-court/",
-        "/disputes/can-a-contract-dispute-be-resolved-without-court/",
         "/scenario/do-people-actually-get-sued-over-horse-deals/",
         "/reference/do-people-actually-get-sued-over-horse-deals/",
         "/reference/how-to-start-a-horse-retail-business/",
-        "/business/how-to-start-a-horse-retail-business/"
+        "/business/how-to-start-a-horse-retail-business/",
+        "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+        "/reference/do-people-actually-get-sued-over-horse-deals-like-this/"
       ],
       "bulk_fix_available": false,
       "action_label": "",
@@ -448,5 +448,5 @@
       "measurement": ""
     }
   ],
-  "affected_item_count": 180
+  "affected_item_count": 178
 }
