@@ -12904,7 +12904,7 @@
     "dedupe_group_id": "dedupe_faq_muscled-upside-down",
     "signal_score": 1,
     "status": "mapped",
-    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+    "mapped_slug": "/disputes/can-a-contract-dispute-be-resolved-without-court/"
   },
   {
     "normalized_id": "norm_1408_6e25630628",
@@ -13926,7 +13926,7 @@
     "dedupe_group_id": "dedupe_faq_trading-my-right-decision",
     "signal_score": 0.95,
     "status": "mapped",
-    "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/"
+    "mapped_slug": "/disputes/can-a-contract-dispute-be-resolved-without-court/"
   },
   {
     "normalized_id": "norm_1553_da5ef5a875",
@@ -18657,7 +18657,7 @@
     "dedupe_group_id": "dedupe_faq_shopping-getting-me-down-already",
     "signal_score": 0.9,
     "status": "mapped",
-    "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/"
+    "mapped_slug": "/disputes/can-a-contract-dispute-be-resolved-without-court/"
   },
   {
     "normalized_id": "norm_2258_2f699ef7f6",
@@ -22806,7 +22806,8 @@
   {
     "normalized_id": "norm_2736_f9a228bc3e",
     "source_signal_ids": [
-      "reddit_equestrian_best-insurance-for-boarding-https-www-reddit-com-r-e_75d2549c"
+      "reddit_equestrian_best-insurance-for-boarding-https-www-reddit-com-r-e_75d2549c",
+      "reddit_horses_best-insurance-for-boarding-https-www-reddit-com-r-h_2e8656c7"
     ],
     "raw_signal_phrase": "Best insurance for boarding",
     "preserved_query": "Best insurance for boarding — what should I know?",
@@ -22819,7 +22820,7 @@
     "legal_risk_level": "low",
     "recommended_action": "map_to_page_target",
     "dedupe_group_id": "dedupe_faq_best-insurance-for-boarding",
-    "signal_score": 1,
+    "signal_score": 2.45,
     "status": "mapped",
     "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/"
   },
@@ -25785,5 +25786,585 @@
     "signal_score": 0.9,
     "status": "mapped",
     "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/"
+  },
+  {
+    "normalized_id": "norm_3155_fce6c10286",
+    "source_signal_ids": [
+      "reddit_equestrian_refusing-to-train-a-horse-https-www-reddit-com-r-equ_674351ee"
+    ],
+    "raw_signal_phrase": "Refusing to train a horse",
+    "preserved_query": "Refusing to train a horse — what should I know?",
+    "normalized_query": "Refusing to train a horse — what should I know?",
+    "llm_bait_phrase": "Refusing to train a horse",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_refusing-to-train-a",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_3156_3d86026669",
+    "source_signal_ids": [
+      "reddit_equestrian_underweight-young-horse-https-www-reddit-com-r-eques_47f437ce"
+    ],
+    "raw_signal_phrase": "Underweight young horse",
+    "preserved_query": "Underweight young horse — what should I know?",
+    "normalized_query": "Underweight young horse — what should I know?",
+    "llm_bait_phrase": "Underweight young horse",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_underweight-young",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/leases/what-liability-applies-in-a-horse-property-lease/"
+  },
+  {
+    "normalized_id": "norm_3158_8c1309dde1",
+    "source_signal_ids": [
+      "reddit_equestrian_built-a-horse-farm-https-www-reddit-com-r-equestrian_bd9846d3"
+    ],
+    "raw_signal_phrase": "Built a horse farm",
+    "preserved_query": "Built a horse farm — what should I know?",
+    "normalized_query": "Built a horse farm — what should I know?",
+    "llm_bait_phrase": "Built a horse farm",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_built-a-farm",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/"
+  },
+  {
+    "normalized_id": "norm_3160_0be9be3a10",
+    "source_signal_ids": [
+      "reddit_equestrian_why-do-some-people-put-their-friends-on-a-horse-for-_10734200"
+    ],
+    "raw_signal_phrase": "Why do some people put their friends on a horse for the first time without helmet and then act like it’s the end of the world when they’re told it’s not okay",
+    "preserved_query": "Why do some people put their friends on a horse for the first time without helmet and then act like it’s the end of the world when they’re told it’s not okay?",
+    "normalized_query": "Why do some people put their friends on a horse for the first time without helmet and then act like it’s the end of the world when they’re told it’s not okay?",
+    "llm_bait_phrase": "do some people put their friends on a horse for the first time without helmet and then act like it’s the end of the world when they’re told it’s not okay",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_do-some-people-put-their-friends-on-a-for-the-first-time-without-helmet-and-then",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/"
+  },
+  {
+    "normalized_id": "norm_3161_036e10cce4",
+    "source_signal_ids": [
+      "reddit_equestrian_how-did-you-get-your-first-horse-https-www-reddit-co_e578e6e9"
+    ],
+    "raw_signal_phrase": "How did you get your first horse",
+    "preserved_query": "How did you get your first horse?",
+    "normalized_query": "How did you get your first horse?",
+    "llm_bait_phrase": "did you get your first horse",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_did-you-get-your-first",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/business/do-i-need-an-llc-to-start-a-horse-business/"
+  },
+  {
+    "normalized_id": "norm_3165_3533a7da67",
+    "source_signal_ids": [
+      "reddit_equestrian_opinions-on-neatsfoot-oil-for-cleaning-tack-https-ww_c5aea7bd"
+    ],
+    "raw_signal_phrase": "Opinions on neatsfoot oil for cleaning tack",
+    "preserved_query": "Opinions on neatsfoot oil for cleaning tack — what should I know?",
+    "normalized_query": "Opinions on neatsfoot oil for cleaning tack — what should I know?",
+    "llm_bait_phrase": "Opinions on neatsfoot oil for cleaning tack",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_opinions-on-neatsfoot-oil-for-cleaning-tack",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/"
+  },
+  {
+    "normalized_id": "norm_3168_0455e4f57e",
+    "source_signal_ids": [
+      "reddit_equestrian_for-the-your-horse-has-ulcers-crows-poor-training-an_6cd98e55"
+    ],
+    "raw_signal_phrase": "For the \"your horse has ulcers\" crows - poor training and \"pain\" frequently show up as the same symptoms - And more.",
+    "preserved_query": "For the \"your horse has ulcers\" crows - poor training and \"pain\" frequently show up as the same symptoms - And more. — what should I know?",
+    "normalized_query": "For the \"your horse has ulcers\" crows - poor training and \"pain\" frequently show up as the same symptoms - And more. — what should I know?",
+    "llm_bait_phrase": "For the \"your horse has ulcers\" crows - poor training and \"pain\" frequently show up as the same symptoms - And more.",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_for-the-your-has-ulcers-crows-poor-training-and-pain-frequently-show-up-as-the-s",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_3171_6eccdf764d",
+    "source_signal_ids": [
+      "reddit_equestrian_training-tips-for-my-new-baby-https-www-reddit-com-r_e02b9ed5"
+    ],
+    "raw_signal_phrase": "Training tips for my new baby!",
+    "preserved_query": "Training tips for my new baby! — what should I know?",
+    "normalized_query": "Training tips for my new baby! — what should I know?",
+    "llm_bait_phrase": "Training tips for my new baby!",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_training-tips-for-my-new-baby",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_3174_b343c04108",
+    "source_signal_ids": [
+      "reddit_horses_boarding-barn-charges-https-www-reddit-com-r-horses-_f8098823"
+    ],
+    "raw_signal_phrase": "Boarding Barn Charges",
+    "preserved_query": "Boarding Barn Charges — what should I know?",
+    "normalized_query": "Boarding Barn Charges — what should I know?",
+    "llm_bait_phrase": "Boarding Barn Charges",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_boarding-barn-charges",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_3175_2ed64663ce",
+    "source_signal_ids": [
+      "reddit_horses_another-horse-bit-mine-badly-we-think-https-www-redd_4c63d90b"
+    ],
+    "raw_signal_phrase": "Another horse bit mine badly (we think)",
+    "preserved_query": "Another horse bit mine badly (we think) — what should I know?",
+    "normalized_query": "Another horse bit mine badly (we think) — what should I know?",
+    "llm_bait_phrase": "Another horse bit mine badly (we think)",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_another-bit-mine-badly-we-think",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/"
+  },
+  {
+    "normalized_id": "norm_3176_a72b35d1d8",
+    "source_signal_ids": [
+      "reddit_horses_how-much-do-you-pay-for-a-quarter-lease-https-www-re_626da78a"
+    ],
+    "raw_signal_phrase": "How much do you pay for a quarter lease",
+    "preserved_query": "How much do you pay for a quarter lease?",
+    "normalized_query": "How much do you pay for a quarter lease?",
+    "llm_bait_phrase": "much do you pay for a quarter lease",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_much-do-you-pay-for-a-quarter-lease",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+  },
+  {
+    "normalized_id": "norm_3178_a1efa91aa0",
+    "source_signal_ids": [
+      "reddit_horses_looking-for-advice-how-do-i-talk-to-my-barn-owner-ht_67c57831"
+    ],
+    "raw_signal_phrase": "Looking for advice: How do I talk to my barn owner",
+    "preserved_query": "Looking for advice: How do I talk to my barn owner — what should I know?",
+    "normalized_query": "Looking for advice: How do I talk to my barn owner — what should I know?",
+    "llm_bait_phrase": "Looking for advice: How do I talk to my barn owner",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_looking-for-advice-do-i-talk-to-my-barn-owner",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/"
+  },
+  {
+    "normalized_id": "norm_3180_5ded0bc1f4",
+    "source_signal_ids": [
+      "reddit_horses_parents-with-horses-https-www-reddit-com-r-horses-co_3d19dff6"
+    ],
+    "raw_signal_phrase": "Parents with horses",
+    "preserved_query": "Parents with horses — what should I know?",
+    "normalized_query": "Parents with horses — what should I know?",
+    "llm_bait_phrase": "Parents with horses",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_parents-with-horses",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_3182_1162db4a23",
+    "source_signal_ids": [
+      "reddit_horses_my-horses-progress-since-march-https-www-reddit-com-_b323a4d7"
+    ],
+    "raw_signal_phrase": "my horses progress since march.",
+    "preserved_query": "my horses progress since march. — what should I know?",
+    "normalized_query": "my horses progress since march. — what should I know?",
+    "llm_bait_phrase": "my horses progress since march.",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_my-horses-progress-since-march",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/"
+  },
+  {
+    "normalized_id": "norm_3185_790d472ac7",
+    "source_signal_ids": [
+      "reddit_horses_please-tell-me-this-isnt-as-bad-as-it-looks-https-ww_59fce051"
+    ],
+    "raw_signal_phrase": "Please tell me this isnt as bad as it looks",
+    "preserved_query": "Please tell me this isnt as bad as it looks — what should I know?",
+    "normalized_query": "Please tell me this isnt as bad as it looks — what should I know?",
+    "llm_bait_phrase": "Please tell me this isnt as bad as it looks",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_please-tell-me-this-isnt-as-bad-as-it-looks",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/"
+  },
+  {
+    "normalized_id": "norm_3186_a9bec78ad9",
+    "source_signal_ids": [
+      "reddit_horses_an-unfortunate-update-to-the-craziest-barn-drama-eve_d9a542fb"
+    ],
+    "raw_signal_phrase": "An Unfortunate Update to the Craziest Barn Drama Ever",
+    "preserved_query": "An Unfortunate Update to the Craziest Barn Drama Ever — what should I know?",
+    "normalized_query": "An Unfortunate Update to the Craziest Barn Drama Ever — what should I know?",
+    "llm_bait_phrase": "An Unfortunate Update to the Craziest Barn Drama Ever",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_an-unfortunate-update-to-the-craziest-barn-drama-ever",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_3187_c336869e71",
+    "source_signal_ids": [
+      "reddit_horses_can-we-please-make-it-illegal-to-strap-a-child-to-a-_fa8836ca"
+    ],
+    "raw_signal_phrase": "Can we please make it illegal to strap a child to a freaking horse?!",
+    "preserved_query": "Can we please make it illegal to strap a child to a freaking horse?!?",
+    "normalized_query": "Can we please make it illegal to strap a child to a freaking horse?!?",
+    "llm_bait_phrase": "we please make it illegal to strap a child to a freaking horse?!",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_we-please-make-it-illegal-to-strap-a-child-to-a-freaking",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/faq/what-records-should-a-boarding-barn-keep-when-board-is-overdue/"
+  },
+  {
+    "normalized_id": "norm_3188_04e54d248c",
+    "source_signal_ids": [
+      "reddit_horses_time-to-move-barns-https-www-reddit-com-r-horses-com_fe334e71"
+    ],
+    "raw_signal_phrase": "Time to move barns",
+    "preserved_query": "Time to move barns — what should I know?",
+    "normalized_query": "Time to move barns — what should I know?",
+    "llm_bait_phrase": "Time to move barns",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_time-to-move-barns",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/"
+  },
+  {
+    "normalized_id": "norm_3189_316d702d78",
+    "source_signal_ids": [
+      "reddit_horses_gainesville-fl-boarding-barn-recommendations-https-w_a2528606"
+    ],
+    "raw_signal_phrase": "Gainesville, FL boarding barn recommendations",
+    "preserved_query": "Gainesville, FL boarding barn recommendations — what should I know?",
+    "normalized_query": "Gainesville, FL boarding barn recommendations — what should I know?",
+    "llm_bait_phrase": "Gainesville, FL boarding barn recommendations",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_gainesville-fl-boarding-barn-recommendations",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_3190_32f808ef49",
+    "source_signal_ids": [
+      "reddit_horses_barn-does-not-provide-access-to-overnight-forage-htt_bd36ceae"
+    ],
+    "raw_signal_phrase": "Barn does not provide access to overnight forage",
+    "preserved_query": "Barn does not provide access to overnight forage — what should I know?",
+    "normalized_query": "Barn does not provide access to overnight forage — what should I know?",
+    "llm_bait_phrase": "Barn does not provide access to overnight forage",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_barn-not-provide-access-to-overnight-forage",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-warning-sign-was-not-posted-at-the-barn-what-risk-does-that-create/"
+  },
+  {
+    "normalized_id": "norm_3191_b195fe0f58",
+    "source_signal_ids": [
+      "reddit_horses_boarding-responsibilities-https-www-reddit-com-r-hor_2ed6e840"
+    ],
+    "raw_signal_phrase": "Boarding Responsibilities",
+    "preserved_query": "Boarding Responsibilities — what should I know?",
+    "normalized_query": "Boarding Responsibilities — what should I know?",
+    "llm_bait_phrase": "Boarding Responsibilities",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_boarding-responsibilities",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/"
+  },
+  {
+    "normalized_id": "norm_3192_9bf9894c13",
+    "source_signal_ids": [
+      "reddit_horses_south-florida-boarding-https-www-reddit-com-r-horses_2810cb20"
+    ],
+    "raw_signal_phrase": "South Florida boarding",
+    "preserved_query": "South Florida boarding — what should I know?",
+    "normalized_query": "South Florida boarding — what should I know?",
+    "llm_bait_phrase": "South Florida boarding",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_south-florida-boarding",
+    "signal_score": 0.95,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_3193_ce03398a3a",
+    "source_signal_ids": [
+      "forum_horse_and_hound_any-recommended-horse-vets-https-forums-horseandhoun_f850a8b6"
+    ],
+    "raw_signal_phrase": "Any recommended horse vets",
+    "preserved_query": "Any recommended horse vets — what should I know?",
+    "normalized_query": "Any recommended horse vets — what should I know?",
+    "llm_bait_phrase": "Any recommended horse vets",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_any-recommended-vets",
+    "signal_score": 0.9,
+    "status": "mapped",
+    "mapped_slug": "/boarding/what-happens-if-a-contract-does-not-address-responsibility/"
+  },
+  {
+    "normalized_id": "norm_3194_e2dd859e30",
+    "source_signal_ids": [
+      "serp_competitor_research_have-you-received-a-demand-letter-here-s-what-to-do-_507ced9c"
+    ],
+    "raw_signal_phrase": "Have you received a demand letter? Here’s what to do with a lawyer",
+    "preserved_query": "Have you received a demand letter? Here’s what to do with a lawyer — what should I know?",
+    "normalized_query": "What happens when Have you received a demand letter? Here’s what to do with a lawyer?",
+    "llm_bait_phrase": "Have you received a demand letter? Here’s what to do with a lawyer",
+    "intent_type": "scenario",
+    "cluster": "demand-letters-and-disputes",
+    "emotional_frame": "conflict / escalation",
+    "urgency": "high",
+    "legal_risk_level": "medium",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_scenario_have-you-received-a-demand-letter-here-s-to-do-with-a-lawyer",
+    "signal_score": 0.8,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/"
+  },
+  {
+    "normalized_id": "norm_3195_1231df8541",
+    "source_signal_ids": [
+      "serp_competitor_research_what-is-a-demand-letter-and-what-does-it-mean-https-_f4682c22"
+    ],
+    "raw_signal_phrase": "What is a demand letter and what does it mean",
+    "preserved_query": "What is a demand letter and what does it mean?",
+    "normalized_query": "What is a demand letter and what does it mean?",
+    "llm_bait_phrase": "is a demand letter and what does it mean",
+    "intent_type": "scenario",
+    "cluster": "demand-letters-and-disputes",
+    "emotional_frame": "conflict / escalation",
+    "urgency": "high",
+    "legal_risk_level": "medium",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_scenario_is-a-demand-letter-and-it-mean",
+    "signal_score": 0.8,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/"
+  },
+  {
+    "normalized_id": "norm_3196_76acb2e738",
+    "source_signal_ids": [
+      "serp_competitor_research_how-to-respond-after-receiving-a-demand-letter-https_f00bc6da"
+    ],
+    "raw_signal_phrase": "How to respond after receiving a demand letter",
+    "preserved_query": "How to respond after receiving a demand letter?",
+    "normalized_query": "How to respond after receiving a demand letter?",
+    "llm_bait_phrase": "to respond after receiving a demand letter",
+    "intent_type": "scenario",
+    "cluster": "demand-letters-and-disputes",
+    "emotional_frame": "conflict / escalation",
+    "urgency": "high",
+    "legal_risk_level": "medium",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_scenario_to-respond-after-receiving-a-demand-letter",
+    "signal_score": 0.8,
+    "status": "mapped",
+    "mapped_slug": "/scenario/what-should-i-gather-before-responding-to-a-demand-letter/"
+  },
+  {
+    "normalized_id": "norm_3200_ef0232deac",
+    "source_signal_ids": [
+      "serp_competitor_research_everything-a-demand-letter-should-contain-in-quebec-_48e46165"
+    ],
+    "raw_signal_phrase": "EVERYTHING a demand letter should contain in Quebec",
+    "preserved_query": "EVERYTHING a demand letter should contain in Quebec — what should I know?",
+    "normalized_query": "What happens when EVERYTHING a demand letter should contain in Quebec?",
+    "llm_bait_phrase": "EVERYTHING a demand letter should contain in Quebec",
+    "intent_type": "scenario",
+    "cluster": "demand-letters-and-disputes",
+    "emotional_frame": "conflict / escalation",
+    "urgency": "high",
+    "legal_risk_level": "medium",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_scenario_everything-a-demand-letter-contain-in-quebec",
+    "signal_score": 0.8,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/"
+  },
+  {
+    "normalized_id": "norm_3205_d78386ef10",
+    "source_signal_ids": [
+      "serp_competitor_research_equine-liability-https-www-animallaw-info-topics-equ_612187ff"
+    ],
+    "raw_signal_phrase": "Equine Liability",
+    "preserved_query": "Equine Liability — what should I know?",
+    "normalized_query": "Equine Liability — what should I know?",
+    "llm_bait_phrase": "Equine Liability",
+    "intent_type": "faq",
+    "cluster": "liability-waivers-insurance",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_liability",
+    "signal_score": 0.8,
+    "status": "mapped",
+    "mapped_slug": "/liability/can-i-still-be-sued-if-i-have-a-waiver/"
+  },
+  {
+    "normalized_id": "norm_3207_650a174311",
+    "source_signal_ids": [
+      "youtube_search_comments_all-about-leasing-a-horse-chloe-https-www-youtube-co_12968218"
+    ],
+    "raw_signal_phrase": "All About Leasing a Horse! |CHLOE|",
+    "preserved_query": "All About Leasing a Horse! |CHLOE| — what should I know?",
+    "normalized_query": "All About Leasing a Horse! |CHLOE| — what should I know?",
+    "llm_bait_phrase": "All About Leasing a Horse! |CHLOE|",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_all-leasing-a-chloe",
+    "signal_score": 0.65,
+    "status": "mapped",
+    "mapped_slug": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/"
   }
 ]
