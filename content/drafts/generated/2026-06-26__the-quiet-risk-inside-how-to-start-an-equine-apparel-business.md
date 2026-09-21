@@ -20,7 +20,7 @@ uniqueness_strategy: state-venue
 
 The practical question behind **How to Start an Equine Apparel Business** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-06-25/why-how-to-start-an-equine-assisted-therapy-business-creates-confusion/, while remaining educational and approval-gated.
+This draft is intentionally scoped to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-06-19/why-how-do-i-legally-start-a-horse-business-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: State-law, venue, and local-rule lens
 

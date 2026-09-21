@@ -20,7 +20,7 @@ uniqueness_strategy: operations-handoff
 
 The practical question behind **White Paper: Horse Lease & Trial - Risk Allocation, Documentation, and Plain-English Guardrails** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-06-01/white-paper-demand-letters-disputes-risk-allocation-documentation-and-plain-english-guardrails/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-08-03/white-paper-equine-business-formation-a-decision-framework-for-the-horse-world/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Operational handoff and responsibility map
 
