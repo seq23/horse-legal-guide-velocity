@@ -20,7 +20,7 @@ uniqueness_strategy: business-governance
 
 The practical question behind **Who Is Responsible for Repairs in a Barn Lease** is not answered safely by repeating a general horse-contract overview. This version focuses on how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-05-20/why-can-you-end-a-horse-lease-early-creates-confusion/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-07-23/what-equestrians-often-miss-about-what-should-be-included-in-a-barn-lease/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Business governance and repeatable process
 
