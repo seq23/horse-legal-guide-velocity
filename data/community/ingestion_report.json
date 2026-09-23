@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-22T13:41:51.615Z",
-  "total_signals": 3333,
+  "generated_at": "2026-09-23T13:41:25.186Z",
+  "total_signals": 3363,
   "signals_by_source": {
-    "reddit_equestrian": 1538,
+    "reddit_equestrian": 1558,
     "reddit_horses": 687,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
-    "serp_competitor_research": 173,
-    "youtube_search_comments": 187,
+    "serp_competitor_research": 182,
+    "youtube_search_comments": 188,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 223,
@@ -17,32 +17,32 @@
     "forum_horse_and_hound": 65
   },
   "signals_by_platform": {
-    "reddit": 2762,
+    "reddit": 2782,
     "equestrian_forums": 124,
     "google_paa": 29,
-    "serp_competitors": 173,
-    "youtube": 187,
+    "serp_competitors": 182,
+    "youtube": 188,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1362,
-  "duplicates_collapsed": 1971,
+  "normalized_count": 1371,
+  "duplicates_collapsed": 1992,
   "pages_created": 0,
-  "pages_strengthened": 1362,
+  "pages_strengthened": 1371,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 697
+      "count": 703
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 214
+      "count": 215
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 171
+      "count": 173
     },
     {
       "name": "horse-sale-and-purchase",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1538
+      "count": 1558
     },
     {
       "name": "reddit_horses",
@@ -92,11 +92,11 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 187
+      "count": 188
     },
     {
       "name": "serp_competitor_research",
-      "count": 173
+      "count": 182
     },
     {
       "name": "reddit_farming_ranching",
@@ -144,8 +144,9 @@
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -189,7 +190,7 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 18,
+      "count": 26,
       "error": "1 of 8 cited page(s) failed to fetch."
     },
     {
@@ -5210,7 +5211,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 1.201,
-      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "mapped_slug": "/leases/can-i-run-a-horse-business-under-my-lease/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -9374,7 +9375,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 0.95,
-      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "mapped_slug": "/leases/can-i-run-a-horse-business-under-my-lease/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -18456,7 +18457,7 @@
       "cluster": "state-specific",
       "intent_type": "faq",
       "signal_score": 0.9,
-      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "mapped_slug": "/leases/can-i-run-a-horse-business-under-my-lease/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -18891,14 +18892,15 @@
       "normalized_id": "norm_2663_52be2d0758",
       "action": "strengthen_existing_page",
       "source_signal_ids": [
-        "serp_competitor_research_common-legal-issues-in-the-horse-world-https-www-hor_4edcb12e"
+        "serp_competitor_research_common-legal-issues-in-the-horse-world-https-www-hor_4edcb12e",
+        "serp_competitor_research_common-legal-issues-in-the-horse-world-https-www-hor_d806a1af"
       ],
       "preserved_query": "Common Legal Issues in the Horse World — what should I know?",
       "normalized_query": "Common Legal Issues in the Horse World — what should I know?",
       "llm_bait_phrase": "Common Legal Issues in the Horse World",
       "cluster": "state-specific",
       "intent_type": "faq",
-      "signal_score": 0.8,
+      "signal_score": 2.1,
       "mapped_slug": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
@@ -18908,14 +18910,15 @@
       "normalized_id": "norm_2666_1942da1a0c",
       "action": "strengthen_existing_page",
       "source_signal_ids": [
-        "serp_competitor_research_3-leasing-or-share-boarding-https-www-horseillustrat_1b6ed849"
+        "serp_competitor_research_3-leasing-or-share-boarding-https-www-horseillustrat_1b6ed849",
+        "serp_competitor_research_3-leasing-or-share-boarding-https-www-horseillustrat_4619eeee"
       ],
       "preserved_query": "3. Leasing or Share Boarding — what should I know?",
       "normalized_query": "3. Leasing or Share Boarding — what should I know?",
       "llm_bait_phrase": "3. Leasing or Share Boarding",
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
-      "signal_score": 0.8,
+      "signal_score": 2.1,
       "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
@@ -22543,7 +22546,7 @@
       "cluster": "demand-letters-and-disputes",
       "intent_type": "scenario",
       "signal_score": 0.8,
-      "mapped_slug": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
+      "mapped_slug": "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -23411,6 +23414,159 @@
       "intent_type": "faq",
       "signal_score": 0.65,
       "mapped_slug": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1362_trans-nonbinary-equestrians-does-your-barn-trainer-know-you-",
+      "normalized_id": "norm_3335_43ca563ded",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_trans-nonbinary-equestrians-does-your-barn-trainer-k_66205747"
+      ],
+      "preserved_query": "Trans/nonbinary equestrians, does your barn/trainer know you're trans — what should I know?",
+      "normalized_query": "Trans/nonbinary equestrians, does your barn/trainer know you're trans — what should I know?",
+      "llm_bait_phrase": "Trans/nonbinary equestrians, does your barn/trainer know you're trans",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1363_racehorses-have-not-gotten-faster-in-70-years-oc",
+      "normalized_id": "norm_3336_eda0573f24",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_racehorses-have-not-gotten-faster-in-70-years-oc-htt_1015b84e"
+      ],
+      "preserved_query": "Racehorses have not gotten faster in 70 years [OC] — what should I know?",
+      "normalized_query": "Racehorses have not gotten faster in 70 years [OC] — what should I know?",
+      "llm_bait_phrase": "Racehorses have not gotten faster in 70 years [OC]",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/what-liability-does-a-trainer-have/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1364_make-canter-boring-for-a-young-horse",
+      "normalized_id": "norm_3339_b56e2b1e5d",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_make-canter-boring-for-a-young-horse-https-www-reddi_1bbcaf66"
+      ],
+      "preserved_query": "Make canter \"boring\" for a young horse — what should I know?",
+      "normalized_query": "Make canter \"boring\" for a young horse — what should I know?",
+      "llm_bait_phrase": "Make canter \"boring\" for a young horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/what-liability-applies-in-a-horse-property-lease/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1365_horse-s-first-1-horse-trials",
+      "normalized_id": "norm_3340_e4c6f74ebe",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-s-first-1-horse-trials-https-www-reddit-com-r-_dc483ec1"
+      ],
+      "preserved_query": "Horse’s first 1* horse trials! — what should I know?",
+      "normalized_query": "Horse’s first 1* horse trials! — what should I know?",
+      "llm_bait_phrase": "Horse’s first 1* horse trials!",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/leases/can-you-end-a-horse-lease-early/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1366_beginner-horse-riding-help",
+      "normalized_id": "norm_3343_bd2ecd61f3",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_beginner-horse-riding-help-https-www-reddit-com-r-eq_036dc5d6"
+      ],
+      "preserved_query": "Beginner horse riding help — what should I know?",
+      "normalized_query": "Beginner horse riding help — what should I know?",
+      "llm_bait_phrase": "Beginner horse riding help",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1367_horse-has-sparse-hair-in-section-of-mane",
+      "normalized_id": "norm_3345_093d4f1c04",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-has-sparse-hair-in-section-of-mane-https-www-r_9172380d"
+      ],
+      "preserved_query": "Horse has sparse hair in section of mane — what should I know?",
+      "normalized_query": "Horse has sparse hair in section of mane — what should I know?",
+      "llm_bait_phrase": "Horse has sparse hair in section of mane",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1368_shoes-for-equine-volunteer-work",
+      "normalized_id": "norm_3349_5617bb9e44",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_shoes-for-equine-volunteer-work-https-www-reddit-com_c55df960"
+      ],
+      "preserved_query": "Shoes for equine volunteer work — what should I know?",
+      "normalized_query": "Shoes for equine volunteer work — what should I know?",
+      "llm_bait_phrase": "Shoes for equine volunteer work",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1369_i-lost-my-horse-after-12-years-and-i-feel-completely-lost-ab",
+      "normalized_id": "norm_3351_7c9c8af315",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_i-lost-my-horse-after-12-years-and-i-feel-completely_d7c497b1"
+      ],
+      "preserved_query": "I lost my horse after 12 years and I feel completely lost about what comes next — what should I know?",
+      "normalized_query": "I lost my horse after 12 years and I feel completely lost about what comes next — what should I know?",
+      "llm_bait_phrase": "I lost my horse after 12 years and I feel completely lost about what comes next",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1370_to-find-u0026-lease-the",
+      "normalized_id": "norm_3362_d6ffee3062",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-find-u0026-lease-the-https-www-youtube-com-re_f7bea8ba"
+      ],
+      "preserved_query": "How to Find \\u0026 Lease the \\?",
+      "normalized_query": "How to Find \\u0026 Lease the \\?",
+      "llm_bait_phrase": "to Find \\u0026 Lease the \\",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T13:41:47.989Z",
+  "generated_at": "2026-09-23T13:41:21.338Z",
   "adapter_status": [
     {
       "source_key": "reddit_equestrian",
@@ -17,8 +17,9 @@
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -62,7 +63,7 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 18,
+      "count": 26,
       "error": "1 of 8 cited page(s) failed to fetch."
     },
     {
@@ -84,17 +85,23 @@
       "count": 0
     }
   ],
-  "collected_count": 106,
-  "reddit_collected_count": 40,
+  "collected_count": 94,
+  "reddit_collected_count": 20,
   "zero_reddit_warning": false,
   "collection_health": "degraded_blocked_sources",
-  "blocked_source_count": 3,
+  "blocked_source_count": 4,
   "blocked_sources": [
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
       "status": "blocked_source",
       "reason": "Reddit refused 8 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+    },
+    {
+      "source_key": "reddit_legaladvice",
+      "platform": "reddit",
+      "status": "blocked_source",
+      "reason": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -109,5 +116,5 @@
       "reason": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     }
   ],
-  "raw_store_count": 3333
+  "raw_store_count": 3363
 }

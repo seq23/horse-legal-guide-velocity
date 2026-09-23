@@ -5881,7 +5881,7 @@
     "dedupe_group_id": "dedupe_faq_dog-got-injured-during-dog-training-trainer-ghosted-me-and-dog-is-having-issues-",
     "signal_score": 1.201,
     "status": "mapped",
-    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+    "mapped_slug": "/leases/can-i-run-a-horse-business-under-my-lease/"
   },
   {
     "normalized_id": "norm_0431_b1342584cc",
@@ -10777,7 +10777,7 @@
     "dedupe_group_id": "dedupe_faq_whats-on-my-neighbor-s",
     "signal_score": 0.95,
     "status": "mapped",
-    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+    "mapped_slug": "/leases/can-i-run-a-horse-business-under-my-lease/"
   },
   {
     "normalized_id": "norm_1120_20e4303be7",
@@ -21458,7 +21458,7 @@
     "dedupe_group_id": "dedupe_faq_pts-dog-v",
     "signal_score": 0.9,
     "status": "mapped",
-    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+    "mapped_slug": "/leases/can-i-run-a-horse-business-under-my-lease/"
   },
   {
     "normalized_id": "norm_2581_fef95c86b8",
@@ -21964,7 +21964,8 @@
   {
     "normalized_id": "norm_2663_52be2d0758",
     "source_signal_ids": [
-      "serp_competitor_research_common-legal-issues-in-the-horse-world-https-www-hor_4edcb12e"
+      "serp_competitor_research_common-legal-issues-in-the-horse-world-https-www-hor_4edcb12e",
+      "serp_competitor_research_common-legal-issues-in-the-horse-world-https-www-hor_d806a1af"
     ],
     "raw_signal_phrase": "Common Legal Issues in the Horse World",
     "preserved_query": "Common Legal Issues in the Horse World — what should I know?",
@@ -21977,14 +21978,15 @@
     "legal_risk_level": "low",
     "recommended_action": "map_to_page_target",
     "dedupe_group_id": "dedupe_faq_common-issues-in-the-world",
-    "signal_score": 0.8,
+    "signal_score": 2.1,
     "status": "mapped",
     "mapped_slug": "/disputes/can-a-contract-dispute-be-resolved-without-court/"
   },
   {
     "normalized_id": "norm_2666_1942da1a0c",
     "source_signal_ids": [
-      "serp_competitor_research_3-leasing-or-share-boarding-https-www-horseillustrat_1b6ed849"
+      "serp_competitor_research_3-leasing-or-share-boarding-https-www-horseillustrat_1b6ed849",
+      "serp_competitor_research_3-leasing-or-share-boarding-https-www-horseillustrat_4619eeee"
     ],
     "raw_signal_phrase": "3. Leasing or Share Boarding",
     "preserved_query": "3. Leasing or Share Boarding — what should I know?",
@@ -21997,7 +21999,7 @@
     "legal_risk_level": "low",
     "recommended_action": "map_to_page_target",
     "dedupe_group_id": "dedupe_faq_3-leasing-or-share-boarding",
-    "signal_score": 0.8,
+    "signal_score": 2.1,
     "status": "mapped",
     "mapped_slug": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/"
   },
@@ -26265,7 +26267,7 @@
     "dedupe_group_id": "dedupe_scenario_have-you-received-a-demand-letter-here-s-to-do-with-a-lawyer",
     "signal_score": 0.8,
     "status": "mapped",
-    "mapped_slug": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/"
+    "mapped_slug": "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/"
   },
   {
     "normalized_id": "norm_3195_1231df8541",
@@ -27286,5 +27288,185 @@
     "signal_score": 0.65,
     "status": "mapped",
     "mapped_slug": "/disputes/can-a-contract-dispute-be-resolved-without-court/"
+  },
+  {
+    "normalized_id": "norm_3335_43ca563ded",
+    "source_signal_ids": [
+      "reddit_equestrian_trans-nonbinary-equestrians-does-your-barn-trainer-k_66205747"
+    ],
+    "raw_signal_phrase": "Trans/nonbinary equestrians, does your barn/trainer know you're trans",
+    "preserved_query": "Trans/nonbinary equestrians, does your barn/trainer know you're trans — what should I know?",
+    "normalized_query": "Trans/nonbinary equestrians, does your barn/trainer know you're trans — what should I know?",
+    "llm_bait_phrase": "Trans/nonbinary equestrians, does your barn/trainer know you're trans",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_trans-nonbinary-equestrians-your-barn-trainer-you-re-trans",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/"
+  },
+  {
+    "normalized_id": "norm_3336_eda0573f24",
+    "source_signal_ids": [
+      "reddit_equestrian_racehorses-have-not-gotten-faster-in-70-years-oc-htt_1015b84e"
+    ],
+    "raw_signal_phrase": "Racehorses have not gotten faster in 70 years [OC]",
+    "preserved_query": "Racehorses have not gotten faster in 70 years [OC] — what should I know?",
+    "normalized_query": "Racehorses have not gotten faster in 70 years [OC] — what should I know?",
+    "llm_bait_phrase": "Racehorses have not gotten faster in 70 years [OC]",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_racehorses-have-not-gotten-faster-in-70-years-oc",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/what-liability-does-a-trainer-have/"
+  },
+  {
+    "normalized_id": "norm_3339_b56e2b1e5d",
+    "source_signal_ids": [
+      "reddit_equestrian_make-canter-boring-for-a-young-horse-https-www-reddi_1bbcaf66"
+    ],
+    "raw_signal_phrase": "Make canter \"boring\" for a young horse",
+    "preserved_query": "Make canter \"boring\" for a young horse — what should I know?",
+    "normalized_query": "Make canter \"boring\" for a young horse — what should I know?",
+    "llm_bait_phrase": "Make canter \"boring\" for a young horse",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_make-canter-boring-for-a-young",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/leases/what-liability-applies-in-a-horse-property-lease/"
+  },
+  {
+    "normalized_id": "norm_3340_e4c6f74ebe",
+    "source_signal_ids": [
+      "reddit_equestrian_horse-s-first-1-horse-trials-https-www-reddit-com-r-_dc483ec1"
+    ],
+    "raw_signal_phrase": "Horse’s first 1* horse trials!",
+    "preserved_query": "Horse’s first 1* horse trials! — what should I know?",
+    "normalized_query": "Horse’s first 1* horse trials! — what should I know?",
+    "llm_bait_phrase": "Horse’s first 1* horse trials!",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_s-first-1-trials",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/leases/can-you-end-a-horse-lease-early/"
+  },
+  {
+    "normalized_id": "norm_3343_bd2ecd61f3",
+    "source_signal_ids": [
+      "reddit_equestrian_beginner-horse-riding-help-https-www-reddit-com-r-eq_036dc5d6"
+    ],
+    "raw_signal_phrase": "Beginner horse riding help",
+    "preserved_query": "Beginner horse riding help — what should I know?",
+    "normalized_query": "Beginner horse riding help — what should I know?",
+    "llm_bait_phrase": "Beginner horse riding help",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_beginner-riding-help",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/"
+  },
+  {
+    "normalized_id": "norm_3345_093d4f1c04",
+    "source_signal_ids": [
+      "reddit_equestrian_horse-has-sparse-hair-in-section-of-mane-https-www-r_9172380d"
+    ],
+    "raw_signal_phrase": "Horse has sparse hair in section of mane",
+    "preserved_query": "Horse has sparse hair in section of mane — what should I know?",
+    "normalized_query": "Horse has sparse hair in section of mane — what should I know?",
+    "llm_bait_phrase": "Horse has sparse hair in section of mane",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_has-sparse-hair-in-section-of-mane",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/"
+  },
+  {
+    "normalized_id": "norm_3349_5617bb9e44",
+    "source_signal_ids": [
+      "reddit_equestrian_shoes-for-equine-volunteer-work-https-www-reddit-com_c55df960"
+    ],
+    "raw_signal_phrase": "Shoes for equine volunteer work",
+    "preserved_query": "Shoes for equine volunteer work — what should I know?",
+    "normalized_query": "Shoes for equine volunteer work — what should I know?",
+    "llm_bait_phrase": "Shoes for equine volunteer work",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_shoes-for-volunteer-work",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/"
+  },
+  {
+    "normalized_id": "norm_3351_7c9c8af315",
+    "source_signal_ids": [
+      "reddit_equestrian_i-lost-my-horse-after-12-years-and-i-feel-completely_d7c497b1"
+    ],
+    "raw_signal_phrase": "I lost my horse after 12 years and I feel completely lost about what comes next",
+    "preserved_query": "I lost my horse after 12 years and I feel completely lost about what comes next — what should I know?",
+    "normalized_query": "I lost my horse after 12 years and I feel completely lost about what comes next — what should I know?",
+    "llm_bait_phrase": "I lost my horse after 12 years and I feel completely lost about what comes next",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_i-lost-my-after-12-years-and-i-feel-completely-lost-comes-next",
+    "signal_score": 1,
+    "status": "mapped",
+    "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/"
+  },
+  {
+    "normalized_id": "norm_3362_d6ffee3062",
+    "source_signal_ids": [
+      "youtube_search_comments_how-to-find-u0026-lease-the-https-www-youtube-com-re_f7bea8ba"
+    ],
+    "raw_signal_phrase": "How to Find \\u0026 Lease the \\",
+    "preserved_query": "How to Find \\u0026 Lease the \\?",
+    "normalized_query": "How to Find \\u0026 Lease the \\?",
+    "llm_bait_phrase": "to Find \\u0026 Lease the \\",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_to-find-u0026-lease-the",
+    "signal_score": 0.65,
+    "status": "mapped",
+    "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/"
   }
 ]
