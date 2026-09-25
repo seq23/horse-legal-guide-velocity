@@ -104,6 +104,7 @@ second table to the first. Nothing here changes behaviour; it records it.
 | `npm run validate:publish_quality` | `_ops/validators/validate_publish_quality.js` |
 | `npm run validate:publish-safety` | `_ops/validators/validate_publish_safety_gate.js` |
 | `npm run validate:query-atlas` | `scripts/atlas/validate_query_atlas.mjs` |
+| `npm run validate:question-queue` | `_ops/validators/validate_question_queue.js` |
 | `npm run validate:query-intelligence` | `_ops/validators/validate_query_intelligence.js` |
 | `npm run validate:remediation-workflow` | `_ops/validators/validate_remediation_workflow.js` |
 | `npm run validate:review` | `_ops/validators/validate_review_flow.js` |
