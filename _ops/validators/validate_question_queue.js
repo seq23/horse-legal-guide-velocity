@@ -8,10 +8,16 @@
 //   1. there are no questions at all (Rule 0: a matcher over nothing proves nothing);
 //   2. questions exist that no page answers, but the new-page queue is empty;
 //   3. a committed "approved_for_content" attachment points at a page that does not
-//      answer the question (the original defect, re-introduced by code or by hand).
+//      answer the question (the original defect, re-introduced by code or by hand);
+//   4. a live page's question list (page_targets.json supporting_queries, rendered on
+//      the page) holds an entry the page does not answer, unless it is an editorial
+//      paraphrase listed for that page in data/queries/editorial_page_questions.json;
+//   5. a question removed from a page (data/community/requeued_page_questions.json)
+//      reaches neither the new-page queue nor a hold against a page: it was lost.
 const fs = require('fs');
 const path = require('path');
 const { mapSignals, buildIndex, matchQuestion } = require('../../scripts/community/map_signals_to_targets');
+const { findUnansweredEntries } = require('../../scripts/community/clean_page_question_lists');
 
 function load(root, rel, fallback) {
   const file = path.join(root, rel);
@@ -25,6 +31,8 @@ function findQuestionQueueProblems(root = process.cwd()) {
   const targets = load(root, 'data/queries/page_targets.json', []);
   const approvalQueue = load(root, 'data/community/approval_queue.json', []);
   const publishQueue = load(root, 'data/community/publish_queue.json', []);
+  const editorial = load(root, 'data/queries/editorial_page_questions.json', { entries: [] });
+  const requeued = load(root, 'data/community/requeued_page_questions.json', []);
 
   if (!normalized.length) {
     problems.push('No normalized questions in data/community/normalized_signals.json; the matcher has nothing to prove.');
@@ -32,7 +40,7 @@ function findQuestionQueueProblems(root = process.cwd()) {
   }
 
   const clone = (v) => JSON.parse(JSON.stringify(v));
-  const { approvalQueue: expectedNew } = mapSignals(clone(normalized), clone(targets));
+  const { approvalQueue: expectedNew } = mapSignals(clone(normalized), clone(targets), { requeued });
   const unmatched = expectedNew.length;
   if (unmatched > 0 && approvalQueue.length === 0) {
     problems.push(`${unmatched} question(s) are answered by no existing page, but the new-page queue (data/community/approval_queue.json) is empty. Run npm run map:signals.`);
@@ -51,6 +59,15 @@ function findQuestionQueueProblems(root = process.cwd()) {
     if (!verdict || !verdict.answers) {
       problems.push(`"${item.preserved_query || item.normalized_query}" is attached to ${item.mapped_slug}, which does not answer it.`);
     }
+  }
+
+  for (const e of findUnansweredEntries(targets, editorial)) {
+    problems.push(`Live page ${e.slug} lists "${e.query}", which it does not answer. Run npm run clean:page-questions.`);
+  }
+
+  const routed = new Set([...approvalQueue, ...publishQueue].map((q) => q.requeued_id).filter(Boolean));
+  for (const r of requeued) {
+    if (!routed.has(r.requeued_id)) problems.push(`Requeued question "${r.question}" (removed from ${r.removed_from}) is in neither queue. Run npm run map:signals.`);
   }
   return { problems, unmatched };
 }
