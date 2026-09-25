@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-24T13:42:36.076Z",
-  "total_signals": 3398,
+  "generated_at": "2026-09-25T13:41:29.061Z",
+  "total_signals": 3437,
   "signals_by_source": {
-    "reddit_equestrian": 1578,
+    "reddit_equestrian": 1598,
     "reddit_horses": 687,
     "forum_the_horse_forum": 29,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 29,
-    "serp_competitor_research": 188,
+    "serp_competitor_research": 207,
     "youtube_search_comments": 189,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
@@ -17,28 +17,28 @@
     "forum_horse_and_hound": 65
   },
   "signals_by_platform": {
-    "reddit": 2810,
+    "reddit": 2830,
     "equestrian_forums": 124,
     "google_paa": 29,
-    "serp_competitors": 188,
+    "serp_competitors": 207,
     "youtube": 189,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1385,
-  "duplicates_collapsed": 2013,
+  "normalized_count": 1399,
+  "duplicates_collapsed": 2038,
   "pages_created": 0,
-  "pages_strengthened": 1385,
+  "pages_strengthened": 1399,
   "rejected_signals": 0,
   "pending_owner_review": 0,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 709
+      "count": 717
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 219
+      "count": 224
     },
     {
       "name": "horse-lease-and-trial",
@@ -50,7 +50,7 @@
     },
     {
       "name": "liability-waivers-insurance",
-      "count": 50
+      "count": 51
     },
     {
       "name": "equine-business-formation",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1578
+      "count": 1598
     },
     {
       "name": "reddit_horses",
@@ -91,12 +91,12 @@
       "count": 219
     },
     {
-      "name": "youtube_search_comments",
-      "count": 189
+      "name": "serp_competitor_research",
+      "count": 207
     },
     {
-      "name": "serp_competitor_research",
-      "count": 188
+      "name": "youtube_search_comments",
+      "count": 189
     },
     {
       "name": "reddit_farming_ranching",
@@ -158,8 +158,9 @@
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 19
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -176,8 +177,8 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_empty",
-      "count": 0
+      "status": "success_with_data",
+      "count": 7
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -189,7 +190,7 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 13,
+      "count": 25,
       "error": "2 of 8 cited page(s) failed to fetch."
     },
     {
@@ -19533,7 +19534,7 @@
       "cluster": "boarding-training-and-barn-operations",
       "intent_type": "faq",
       "signal_score": 1,
-      "mapped_slug": "/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/",
+      "mapped_slug": "/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     },
@@ -23805,6 +23806,244 @@
       "intent_type": "faq",
       "signal_score": 0.8,
       "mapped_slug": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1385_a-friesian-a-good-idea-as-a-first-horse",
+      "normalized_id": "norm_3398_5c1570ea50",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_is-a-friesian-a-good-idea-as-a-first-horse-https-www_97b020c9"
+      ],
+      "preserved_query": "Is a friesian a good idea as a first horse?",
+      "normalized_query": "Is a friesian a good idea as a first horse?",
+      "llm_bait_phrase": "a friesian a good idea as a first horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1386_which-are-the-sweet-nothings-you-whisper-around-your-horse",
+      "normalized_id": "norm_3401_fa49dab561",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_which-are-the-sweet-nothings-you-whisper-around-your_7a298c2a"
+      ],
+      "preserved_query": "Which are the sweet nothings you whisper around your horse — what should I know?",
+      "normalized_query": "Which are the sweet nothings you whisper around your horse — what should I know?",
+      "llm_bait_phrase": "Which are the sweet nothings you whisper around your horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1387_pregnancy-care-for-horse",
+      "normalized_id": "norm_3402_c514d18111",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_pregnancy-care-for-horse-https-www-reddit-com-r-eque_8eb363cc"
+      ],
+      "preserved_query": "Pregnancy care for horse — what should I know?",
+      "normalized_query": "Pregnancy care for horse — what should I know?",
+      "llm_bait_phrase": "Pregnancy care for horse",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/business/can-i-run-a-horse-business-under-another-company/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1388_being-a-horse-girl-trendy-know",
+      "normalized_id": "norm_3404_242b762b03",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_is-being-a-horse-girl-trendy-know-https-www-reddit-c_620fb932"
+      ],
+      "preserved_query": "Is being a horse girl trendy know?",
+      "normalized_query": "Is being a horse girl trendy know?",
+      "llm_bait_phrase": "being a horse girl trendy know",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/what-happens-if-a-boarder-damages-property/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1389_seriously-considering-rehoming-my-horse-but-fear-his-outcome",
+      "normalized_id": "norm_3405_1ec7b58a89",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_seriously-considering-rehoming-my-horse-but-fear-his_eb18cf2f"
+      ],
+      "preserved_query": "Seriously considering rehoming my horse but fear his outcome. — what should I know?",
+      "normalized_query": "Seriously considering rehoming my horse but fear his outcome. — what should I know?",
+      "llm_bait_phrase": "Seriously considering rehoming my horse but fear his outcome.",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1390_twisting-adjustable-gullet",
+      "normalized_id": "norm_3406_616a00a62c",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_twisting-adjustable-gullet-https-www-reddit-com-r-eq_6ee5b330"
+      ],
+      "preserved_query": "Twisting adjustable gullet — what should I know?",
+      "normalized_query": "Twisting adjustable gullet — what should I know?",
+      "llm_bait_phrase": "Twisting adjustable gullet",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1391_hunter-jumper-barns-for-adults-in-denver",
+      "normalized_id": "norm_3408_7ff9f31998",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_hunter-jumper-barns-for-adults-in-denver-https-www-r_5e283b77"
+      ],
+      "preserved_query": "Hunter-jumper barns for adults in Denver — what should I know?",
+      "normalized_query": "Hunter-jumper barns for adults in Denver — what should I know?",
+      "llm_bait_phrase": "Hunter-jumper barns for adults in Denver",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1392_foal-concerns-is-she-parrot-mouthed-will-she-grow-out-of-it",
+      "normalized_id": "norm_3409_a6562c9b8a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_foal-concerns-is-she-parrot-mouthed-will-she-grow-ou_be28dda3"
+      ],
+      "preserved_query": "Foal Concerns - Is she parrot mouthed? Will she grow out of it — what should I know?",
+      "normalized_query": "Foal Concerns - Is she parrot mouthed? Will she grow out of it — what should I know?",
+      "llm_bait_phrase": "Foal Concerns - Is she parrot mouthed? Will she grow out of it",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1393_i-ve-started-to-dream-about-horses-walking-because-this-anim",
+      "normalized_id": "norm_3412_6b58ce878e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "reddit_equestrian_i-ve-started-to-dream-about-horses-walking-because-t_74797705"
+      ],
+      "preserved_query": "I've started to dream about horses walking because this animation has taken so long | V3 of \"Polished\" Walk Cycle (but if you have feedback LMK!) — what should I know?",
+      "normalized_query": "I've started to dream about horses walking because this animation has taken so long | V3 of \"Polished\" Walk Cycle (but if you have feedback LMK!) — what should I know?",
+      "llm_bait_phrase": "I've started to dream about horses walking because this animation has taken so long | V3 of \"Polished\" Walk Cycle (but if you have feedback LMK!)",
+      "cluster": "state-specific",
+      "intent_type": "faq",
+      "signal_score": 1,
+      "mapped_slug": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1394_horse-boarding-cost-2026-full-price-breakdown-by-state-and-a",
+      "normalized_id": "norm_3418_7e1a09cd1a",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_horse-boarding-cost-2026-full-price-breakdown-by-sta_50010c1f"
+      ],
+      "preserved_query": "Horse Boarding Cost 2026: Full Price Breakdown by State &amp; Board Type — what should I know?",
+      "normalized_query": "Horse Boarding Cost 2026: Full Price Breakdown by State &amp; Board Type — what should I know?",
+      "llm_bait_phrase": "Horse Boarding Cost 2026: Full Price Breakdown by State &amp; Board Type",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1395_2026-horse-boarding-costs-by-state-monthly-ranges",
+      "normalized_id": "norm_3421_7fa4547b83",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_2026-horse-boarding-costs-by-state-monthly-ranges-ht_7e2578f7"
+      ],
+      "preserved_query": "2026 Horse Boarding Costs by State (Monthly Ranges) — what should I know?",
+      "normalized_query": "2026 Horse Boarding Costs by State (Monthly Ranges) — what should I know?",
+      "llm_bait_phrase": "2026 Horse Boarding Costs by State (Monthly Ranges)",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/what-liability-does-a-trainer-have/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1396_how-to-save-money-on-boarding-in-2026",
+      "normalized_id": "norm_3423_85ae2e869c",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_how-to-save-money-on-boarding-in-2026-https-www-joyf_4e8d3cd5"
+      ],
+      "preserved_query": "📌 How to Save Money on Boarding in 2026 — what should I know?",
+      "normalized_query": "📌 How to Save Money on Boarding in 2026 — what should I know?",
+      "llm_bait_phrase": "📌 How to Save Money on Boarding in 2026",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1397_to-include-in-your-horse-farm-boarding-contract",
+      "normalized_id": "norm_3428_60c35bb91c",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_what-to-include-in-your-horse-farm-boarding-contract_2585dec8"
+      ],
+      "preserved_query": "What to Include in Your Horse Farm Boarding Contract?",
+      "normalized_query": "What to Include in Your Horse Farm Boarding Contract?",
+      "llm_bait_phrase": "to Include in Your Horse Farm Boarding Contract",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+      "status": "approved_for_content",
+      "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
+    },
+    {
+      "queue_id": "queue_1398_fill-out-the-waiver-by-scanning-your-driver-and-039-s-licens",
+      "normalized_id": "norm_3436_ad4d72bf22",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "serp_competitor_research_fill-out-the-waiver-by-scanning-your-driver-and-039-_b0b094f0"
+      ],
+      "preserved_query": "Fill out the waiver by scanning Your Driver&#039;s License — what should I know?",
+      "normalized_query": "Fill out the waiver by scanning Your Driver&#039;s License — what should I know?",
+      "llm_bait_phrase": "Fill out the waiver by scanning Your Driver&#039;s License",
+      "cluster": "liability-waivers-insurance",
+      "intent_type": "faq",
+      "signal_score": 0.8,
+      "mapped_slug": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
       "status": "approved_for_content",
       "reason": "Evergreen FAQ/scenario/comparison strengthening is auto-approved."
     }
