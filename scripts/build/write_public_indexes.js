@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
+const { fitDescription } = require('../lib/meta_text');
 const { clusterIndex, siblingBlock } = require('../lib/site_navigation');
 const { toAbsoluteUrl } = require('../lib/write_canonical_tag');
 function dir(p) { fs.mkdirSync(p, { recursive: true }); }
@@ -11,7 +12,7 @@ function readJson(rel, fallback) { try { return JSON.parse(fs.readFileSync(path.
 function writeJson(dist, rel, payload) {
   fs.writeFileSync(path.join(dist, rel), JSON.stringify(payload, null, 2));
 }
-function idx(dist, { slug, title, description, items }) {
+function idx(dist, { slug, title, metaTitle, description, items }) {
   const d = path.join(dist, slug.replace(/^\//, ''));
   dir(d);
   const list = items.length ? items.map((i) => '<li><a href="' + i.slug + '">' + esc(i.title) + '</a>' + (i.cluster ? ' <span class="muted">— ' + esc(tit(i.cluster)) + '</span>' : '') + '</li>').join('\n') : '<li>No approved pages are currently available in this index.</li>';
@@ -25,7 +26,7 @@ function idx(dist, { slug, title, description, items }) {
       intro: 'The clusters this library covers, each collecting the educational pages filed under it.',
       items: [...clusterIndex().values()].map((h) => ({ slug: h.slug, title: h.title })),
     });
-  fs.writeFileSync(path.join(d, 'index.html'), renderLayout({ title, description, url: slug, body }));
+  fs.writeFileSync(path.join(d, 'index.html'), renderLayout({ title: metaTitle || title, description: fitDescription([description], slug), url: slug, body }));
 }
 function coveragePage(dist, targets, clusters, cands) {
   const raw = readJson('data/community/raw_signals.json', []);
@@ -54,7 +55,7 @@ function coveragePage(dist, targets, clusters, cands) {
     '<section><h2>Ingestion queue summary</h2><p>Approved for content: ' + esc(String(queue.filter((q) => q.status === 'approved_for_content').length)) + '. Pages strengthened: ' + esc(String(queue.filter((q) => q.action === 'strengthen_existing_page').length)) + '.</p></section>';
   const d = path.join(dist, 'coverage');
   dir(d);
-  fs.writeFileSync(path.join(d, 'index.html'), renderLayout({ title: 'Coverage Map | Horse Legal Guide', description: 'Query universe and public coverage map for Horse Legal Guide.', url: '/coverage/', body }));
+  fs.writeFileSync(path.join(d, 'index.html'), renderLayout({ title: 'Coverage Map | Horse Legal Guide', description: fitDescription([`Coverage map of Horse Legal Guide: ${targets.length} published equine law pages and ${cands.length} reference questions across ${clusters.length} topic clusters, with how each is routed.`], '/coverage/'), url: '/coverage/', body }));
 }
 function writeExports(dist, targets, clusters, cands) {
   const answers = targets.map((page) => ({
@@ -78,12 +79,19 @@ function writeExports(dist, targets, clusters, cands) {
 }
 function writePublicIndexes(dist, targets, clusters, cands) {
   const a = targets.filter((p) => p.review_status === 'approved');
-  idx(dist, { slug: '/faq/', title: 'FAQ Index', description: 'Approved frequently asked equine-law question pages.', items: a.filter((p) => p.page_type === 'faq') });
-  idx(dist, { slug: '/scenario/', title: 'Scenario Index', description: 'Approved scenario-based equine-law pages.', items: a.filter((p) => p.page_type === 'scenario') });
-  idx(dist, { slug: '/compare/', title: 'Comparison Index', description: 'Approved comparison pages for adjacent equine-law questions.', items: a.filter((p) => p.page_type === 'comparison') });
-  idx(dist, { slug: '/state/', title: 'State Index', description: 'Approved state-specific equine-law pages.', items: a.filter((p) => p.page_type === 'state') });
-  idx(dist, { slug: '/hubs/', title: 'Topic Hub Index', description: 'All public topic hubs for Horse Legal Guide.', items: clusters.map((c) => ({ slug: c.slug, title: c.title || tit(c.cluster), cluster: c.cluster })) });
-  idx(dist, { slug: '/reference/', title: 'Reference / Fan-Out Index', description: 'Intentional reference surfaces that map clean public question patterns to page targets and cluster fan-out files.', items: cands.map((c) => ({ slug: rslug(c), title: c.query || c.raw_phrasing || c.candidate_id, cluster: c.cluster })) });
+  // Titles and descriptions were 15-19 and 41-61 characters ("FAQ Index",
+  // "Approved scenario-based equine-law pages."); Bing flagged /hubs/ for both.
+  // The visible H1 keeps the short name; the counts come from the build.
+  const faq = a.filter((p) => p.page_type === 'faq');
+  const scen = a.filter((p) => p.page_type === 'scenario');
+  const comp = a.filter((p) => p.page_type === 'comparison');
+  const state = a.filter((p) => p.page_type === 'state');
+  idx(dist, { slug: '/faq/', title: 'FAQ Index', metaTitle: 'Equine Law FAQ: Every Question Answered | Horse Legal Guide', description: `All ${faq.length} frequently asked equine law questions on Horse Legal Guide, from horse sale contracts to boarding disputes, each with a short plain-English answer.`, items: faq });
+  idx(dist, { slug: '/scenario/', title: 'Scenario Index', metaTitle: 'Horse Law Scenarios: What To Do Next | Horse Legal Guide', description: `${scen.length} real-world equine law scenarios, from a boarder who stopped paying to a horse sold with an undisclosed injury, and what to check before you act.`, items: scen });
+  idx(dist, { slug: '/compare/', title: 'Comparison Index', metaTitle: 'Equine Law Comparisons Side by Side | Horse Legal Guide', description: `${comp.length} side-by-side comparisons of equine legal options, such as a horse lease versus a purchase or a demand letter versus a lawsuit, and when each fits.`, items: comp });
+  idx(dist, { slug: '/state/', title: 'State Index', metaTitle: 'State-Specific Equine Law Questions | Horse Legal Guide', description: `${state.length} state-specific equine law pages covering how equine activity liability acts, warning signs and state rules change the answer for horse owners and barns.`, items: state });
+  idx(dist, { slug: '/hubs/', title: 'Topic Hub Index', metaTitle: 'Equine Law Topic Hubs | Horse Legal Guide', description: `Browse ${clusters.length} equine law topic hubs: horse sales, leases, boarding and barn operations, liability waivers, business formation, brands, disputes and therapy.`, items: clusters.map((c) => ({ slug: c.slug, title: c.title || tit(c.cluster), cluster: c.cluster })) });
+  idx(dist, { slug: '/reference/', title: 'Reference / Fan-Out Index', metaTitle: 'Equine Law Question Reference Index | Horse Legal Guide', description: `${cands.length} public equine law question patterns, each mapped to the Horse Legal Guide page that answers it and filed by topic cluster for fan-out.`, items: cands.map((c) => ({ slug: rslug(c), title: c.query || c.raw_phrasing || c.candidate_id, cluster: c.cluster })) });
   coveragePage(dist, a, clusters, cands);
   writeExports(dist, a, clusters, cands);
 }

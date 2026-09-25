@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
+const { fitDescription } = require('../lib/meta_text');
+function clean(v) { return String(v || '').replace(/\s+/g, ' ').trim(); }
 const { breadcrumbNav, pickSiblings, rotate, siblingBlock, wayfindingNav } = require('../lib/site_navigation');
 
 function ensureDir(dirPath) {
@@ -27,6 +29,17 @@ function referenceSurfacesByCluster() {
     out.get(key).push({ slug: `/reference/${slug}/`, title: c.query || c.raw_phrasing || slug });
   }
   return out;
+}
+
+function hubDescription(cluster, clusterPages) {
+  const name = cluster.title || titleize(cluster.cluster);
+  const count = clusterPages.length;
+  const examples = clusterPages.slice(0, 2).map((p) => clean(p.title).replace(/[?.!]$/, ''));
+  return fitDescription([
+    `${count} plain-English equine law ${count === 1 ? 'guide' : 'guides'} on ${name}, written for horse owners, buyers, sellers, barns and equine businesses.`,
+    examples.length ? `Includes ${examples.join(' and ')}.` : '',
+    `Start with the question closest to your situation, then read the related ${name.toLowerCase()} pages.`
+  ], cluster.slug);
 }
 
 function writeHubPages(distDir, clusters, approvedPages) {
@@ -82,8 +95,10 @@ ${breadcrumbNav(cluster.slug, cluster.title || titleize(cluster.cluster))}
       ? `${body.slice(0, routingIdx)}${wayfinding}\n${block}\n${body.slice(routingIdx)}`
       : `${body}${wayfinding}\n${block}`;
     const html = renderLayout({
-      title: cluster.title || titleize(cluster.cluster),
-      description: `Hub page for ${cluster.title || titleize(cluster.cluster)} questions.`,
+      title: `${cluster.title || titleize(cluster.cluster)}: Equine Legal Questions`,
+      // Was "Hub page for <title> questions." (41-60 characters). Built from
+      // this hub's own pages so each hub describes what it actually holds.
+      description: hubDescription(cluster, clusterPages),
       url: cluster.slug,
       body,
       schemaType: 'Article'

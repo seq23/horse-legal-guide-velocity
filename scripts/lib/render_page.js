@@ -3,6 +3,7 @@ const path = require('path');
 const { writeJsonLd } = require('./write_jsonld');
 const { writeCanonicalTag } = require('./write_canonical_tag');
 const { clusterIndex, siblingBlock } = require('./site_navigation');
+const { fitTitle, fitDescription } = require('./meta_text');
 
 function readText(relPath) {
   return fs.readFileSync(path.resolve(process.cwd(), relPath), 'utf8');
@@ -86,8 +87,11 @@ function extractVisibleFaq(body) {
   return pairs;
 }
 
-function renderLayout({ title, description, url, body, schemaType = 'Article', includeBrandChrome = true, schemaOptions = {} }) {
+// canonicalUrl defaults to the page's own url. A page that is a copy of another
+// (the /reference/ surfaces render their mapped page's answer) passes that page.
+function renderLayout({ title: rawTitle, description, url, canonicalUrl, body, schemaType = 'Article', includeBrandChrome = true, schemaOptions = {} }) {
   const config = readConfig();
+  const title = fitTitle(rawTitle);
   const footer = includeBrandChrome ? readText('templates/partial.footer.html') : '';
   const brandHeader = includeBrandChrome ? renderBrandHeader(config) : '';
   return `<!doctype html>
@@ -97,7 +101,7 @@ function renderLayout({ title, description, url, body, schemaType = 'Article', i
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${htmlEscape(title)}</title>
   <meta name="description" content="${htmlEscape(description)}">
-  ${writeCanonicalTag(url)}
+  ${writeCanonicalTag(canonicalUrl || url)}
   <style>
     :root {
       --bg: #f4efe7;
@@ -339,8 +343,10 @@ ${siblingBlock({
   <p><a href="${config.canonical_domain}">Learn more here</a>.</p>
 </section>`;
   return renderLayout({
-    title: 'Horse Legal Guide',
-    description: 'Neutral educational equine law answer surfaces that route appropriately to Wise Covington PLLC.',
+    title: 'Horse Legal Guide: Equine Law Questions Answered',
+    description: fitDescription([
+      'Plain-English answers to equine law questions on horse sales, leases, boarding, liability waivers, barn businesses and disputes. Education, not legal advice.'
+    ], 'home'),
     url: '/',
     body
   });
@@ -357,7 +363,7 @@ function renderPolicyPage({ title, text, url }) {
   <li><a href="/scenario/">Scenario index</a></li>
   <li><a href="/compare/">Comparison index</a></li>
 </ul></nav>`;
-  return renderLayout({ title: `${title} | Horse Legal Guide`, description: `${title} for Horse Legal Guide, including educational boundaries, privacy, routing, and public citation-surface context.`, url, body });
+  return renderLayout({ title: `${title} | Horse Legal Guide`, description: fitDescription([`${title} for Horse Legal Guide, including educational boundaries, privacy, routing, and public citation-surface context.`], url), url, body });
 }
 
 module.exports = { renderLayout, renderIndex, renderPolicyPage };

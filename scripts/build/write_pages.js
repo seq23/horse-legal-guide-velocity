@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
+const { fitDescription, withSubject } = require('../lib/meta_text');
 const { resolveCanonicalTarget } = require('../lib/resolve_canonical_targets');
 const { loadPageContent } = require('../lib/content_loader');
 const { renderModule, comparisonSides, quickAnswerForPage } = require('../lib/answer_shape');
@@ -203,7 +204,7 @@ ${breadcrumbNav(page.slug, page.title)}
 </header>
 <section class="quick-answer-block" data-answer-summary="true" data-editable-zone="quick_answer_block">
   <h2>Quick answer</h2>
-  <p><strong>Short answer:</strong> ${esc(quick)}</p>
+  <p><strong>Short answer:</strong> ${esc(quick.replace(/^short answer:\s*/i, ''))}</p>
 </section>
 ${answerShape.html.replace('<section class="answer-shape-module"', '<section class="answer-shape-module" data-editable-zone="top_answer_module"')}
 ${signalBlock(page, queries, signals)}
@@ -248,7 +249,13 @@ ${routingBlock(canonical)}`;
     }
     const html = renderLayout({
       title: page.title,
-      description: quick.slice(0, 155),
+      // The quick answer alone was the description, cut at 155. Scenario
+      // content shares one template quick answer, so 87 pages carried the same
+      // description; leading with the page's own title makes each one its own.
+      description: fitDescription([
+        withSubject(page.title, quick),
+        `A general guide to ${titleCase(page.cluster).toLowerCase()} questions for horse owners, barns and equine businesses.`
+      ], page.slug),
       url: page.slug,
       body,
       schemaType: page.page_type === 'faq' ? 'FAQPage' : 'Article'
