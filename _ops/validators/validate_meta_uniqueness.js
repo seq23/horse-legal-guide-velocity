@@ -7,7 +7,8 @@
 // 114 short descriptions, 23 short titles, one template sentence as the whole
 // description of 87 pages, and 78 title pairs between /reference/<q>/ and the
 // page it maps to, both self-canonical. Each of those now fails here:
-//   - title under 30 characters, description outside 110-160
+//   - title outside 30-70 characters (Bing Site Scan "Title too long" over
+//     70: 26 scenario titles of 71-83 after #33), description outside 110-160
 //   - two self-canonical indexable pages sharing a title or a description
 //   - a sitemap URL whose page names a different canonical
 //   - a /reference/ surface that is self-canonical (it copies its mapped page)
@@ -16,6 +17,7 @@ const fs = require('fs');
 const path = require('path');
 
 const TITLE_MIN = 30;
+const TITLE_MAX = 70;
 const DESC_MIN = 110;
 const DESC_MAX = 160;
 const SITE = 'https://horselegalguide.com';
@@ -34,6 +36,7 @@ const dist = path.resolve(process.cwd(), 'dist');
 let checked = 0;
 let missing = 0;
 const shortTitle = [];
+const longTitle = [];
 const badDesc = [];
 const byTitle = new Map();
 const byDesc = new Map();
@@ -57,6 +60,7 @@ if (fs.existsSync(dist)) {
     const own = SITE + (rel === '/' ? '' : rel);
     canonicalOf.set(norm(own), norm(canonical));
     if (title.length < TITLE_MIN) shortTitle.push(`${rel} (${title.length}) "${title}"`);
+    if (title.length > TITLE_MAX) longTitle.push(`${rel} (${title.length}) "${title}"`);
     if (desc.length < DESC_MIN || desc.length > DESC_MAX) badDesc.push(`${rel} (${desc.length}) "${desc}"`);
     const selfCanonical = !canonical || norm(canonical) === norm(own);
     if (rel.startsWith('/reference/') && rel !== '/reference/' && selfCanonical) selfCanonicalReference.push(rel);
@@ -74,6 +78,7 @@ if (checked === 0) {
   if (missing > 0) fail(`${missing} rendered pages missing title or meta description`);
   if (canonicalOf.size === 0) fail('GATE_EXAMINED_NOTHING: every rendered page was skipped as operator or noindex; no public page was checked.');
   if (shortTitle.length) fail(`${shortTitle.length} titles under ${TITLE_MIN} characters (Bing rule 114):\n  ${listed(shortTitle)}`);
+  if (longTitle.length) fail(`${longTitle.length} titles over ${TITLE_MAX} characters (Bing Site Scan: title too long):\n  ${listed(longTitle)}`);
   if (badDesc.length) fail(`${badDesc.length} meta descriptions outside ${DESC_MIN}-${DESC_MAX} characters (Bing rule 118):\n  ${listed(badDesc)}`);
   const dupTitles = [...byTitle.entries()].filter(([, v]) => v.length > 1).map(([k, v]) => `"${k}" x${v.length}: ${v.slice(0, 3).join(', ')}`);
   if (dupTitles.length) fail(`${dupTitles.length} titles shared by self-canonical pages:\n  ${listed(dupTitles)}`);
@@ -98,4 +103,4 @@ if (checked === 0) {
     fail(`/therapeutic redirects to ${therapeutic[1]}, which is not a built topic page.`);
   }
 }
-if (!process.exitCode) console.log(`Meta OK (${checked} rendered pages, ${canonicalOf.size} public pages: titles >= ${TITLE_MIN}, descriptions ${DESC_MIN}-${DESC_MAX}, unique among ${[...byTitle.values()].reduce((n, v) => n + v.length, 0)} self-canonical pages; sitemap self-canonical; /therapeutic redirected)`);
+if (!process.exitCode) console.log(`Meta OK (${checked} rendered pages, ${canonicalOf.size} public pages: titles ${TITLE_MIN}-${TITLE_MAX}, descriptions ${DESC_MIN}-${DESC_MAX}, unique among ${[...byTitle.values()].reduce((n, v) => n + v.length, 0)} self-canonical pages; sitemap self-canonical; /therapeutic redirected)`);

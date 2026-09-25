@@ -14,6 +14,7 @@
 // checks the rendered result.
 const SITE_NAME = 'Horse Legal Guide';
 const TITLE_MIN = 30;
+const TITLE_MAX = 70;
 const DESC_MIN = 110;
 const DESC_MAX = 160;
 
@@ -28,8 +29,22 @@ function stripShortAnswer(text) {
 // A title under the floor gets the site name, which is the one suffix that is
 // allowed to repeat. A title that is still short after that is a source defect
 // the writer has to fix, so it is left short for the validator to catch.
+//
+// Bing Site Scan flags titles over 70 characters. The long ones are scenario
+// questions shaped "<situation>. <follow-up question>?" ("A boarding barn has
+// unpaid invoices and unclear records. What should be organized?", 82). The
+// situation sentence is the whole phrase that names the page, so the title
+// keeps it and drops the follow-up; the H1 keeps the full question. A long
+// title with no such shape is a source defect and fails the build.
+function shortenTitle(t) {
+  if (t.length <= TITLE_MAX) return t;
+  const first = t.split(/(?<=[.!?])\s+/)[0].replace(/\.$/, '').trim();
+  if (first !== t && first.length <= TITLE_MAX && first.length >= TITLE_MIN) return first;
+  throw new Error(`title is ${t.length} characters (max ${TITLE_MAX}) and has no leading sentence of ${TITLE_MIN}-${TITLE_MAX} characters to stand for it: "${t}"`);
+}
+
 function fitTitle(title) {
-  const t = clean(title);
+  const t = shortenTitle(clean(title));
   if (t.length >= TITLE_MIN || t.includes(SITE_NAME)) return t;
   return `${t} | ${SITE_NAME}`;
 }
@@ -84,4 +99,4 @@ function fitDescription(parts, label = 'page') {
   return text;
 }
 
-module.exports = { SITE_NAME, TITLE_MIN, DESC_MIN, DESC_MAX, fitTitle, fitDescription, withSubject, stripShortAnswer };
+module.exports = { SITE_NAME, TITLE_MIN, TITLE_MAX, DESC_MIN, DESC_MAX, fitTitle, fitDescription, withSubject, stripShortAnswer };
