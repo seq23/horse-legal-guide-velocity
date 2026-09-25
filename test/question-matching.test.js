@@ -36,6 +36,7 @@ function fixture(normalized, targets = realTargets, extra = {}) {
   };
   write('data/community/normalized_signals.json', normalized);
   write('data/queries/page_targets.json', targets);
+  write('data/queries/editorial_page_questions.json', JSON.parse(fs.readFileSync(path.join(repo, 'data/queries/editorial_page_questions.json'), 'utf8')));
   for (const [rel, data] of Object.entries(extra)) write(rel, data);
   return root;
 }
@@ -115,4 +116,67 @@ test('validator fails on zero questions and passes on a correctly mapped queue',
   const root = fixture([question(KICKS, 'norm_kicks')]);
   mapIn(root);
   assert.deepEqual(findQuestionQueueProblems(root).problems, []);
+});
+
+// ---- live page question lists (clean_page_question_lists.js, 2026-09-25) ----
+const { clean, findUnansweredEntries } = require('../scripts/community/clean_page_question_lists');
+const editorial = JSON.parse(fs.readFileSync(path.join(repo, 'data/queries/editorial_page_questions.json'), 'utf8'));
+
+function pageWith(slug, supporting) {
+  const t = JSON.parse(JSON.stringify(realTargets));
+  const page = t.find((p) => p.slug === slug);
+  page.supporting_queries = supporting;
+  return t;
+}
+
+test('cleaner drops what the old matcher wrote and keeps what the page answers', () => {
+  const slug = '/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/';
+  const t = pageWith(slug, [KICKS, 'Equine Elixirs OM3GA vs KER EO3', 'a horse sale crossed state lines. what should be reviewed']);
+  const result = clean(t, [], editorial);
+  assert.deepEqual(t.find((p) => p.slug === slug).supporting_queries, ['a horse sale crossed state lines. what should be reviewed']);
+  assert.ok(result.removed >= 2);
+  // the horse-legal question is requeued, not lost
+  assert.ok(result.requeued.some((r) => r.question === KICKS && r.removed_from === slug));
+});
+
+test('word forms and curly apostrophes do not drop a page\'s own question', () => {
+  const slug = '/disputes/what-happens-if-i-do-not-respond-to-a-legal-letter/';
+  const t = pageWith(slug, ['What Happens If I Don’t Respond to a Legal Letter?']);
+  assert.deepEqual(findUnansweredEntries(t, { entries: [] }).filter((e) => e.slug === slug), []);
+  const lease = '/scenario/what-should-be-documented-when-a-lease-horse-is-injured/';
+  const t2 = pageWith(lease, ['documented lease horse injury']);
+  assert.deepEqual(findUnansweredEntries(t2, { entries: [] }).filter((e) => e.slug === lease), []);
+});
+
+test('an editorial paraphrase is kept only on the page it is listed for', () => {
+  const e = editorial.entries[0];
+  const onItsPage = pageWith(e.slug, [e.query]);
+  assert.deepEqual(findUnansweredEntries(onItsPage, editorial).filter((x) => x.slug === e.slug), []);
+  const other = realTargets.find((p) => p.slug !== e.slug && p.page_type === 'comparison' && p.review_status === 'approved').slug;
+  const elsewhere = pageWith(other, [e.query]);
+  assert.equal(findUnansweredEntries(elsewhere, editorial).filter((x) => x.slug === other).length, 1);
+});
+
+test('validator fails when a live page lists a question it does not answer', () => {
+  const slug = '/compare/boarder-default-notice-vs-demand-letter/';
+  const root = fixture([question(KICKS, 'norm_kicks')], pageWith(slug, ['Equine Elixirs OM3GA vs KER EO3']));
+  mapIn(root);
+  // mapIn rewrote page_targets from the fixture; put the junk entry back on the live list
+  const file = path.join(root, 'data/queries/page_targets.json');
+  const t = JSON.parse(fs.readFileSync(file, 'utf8'));
+  t.find((p) => p.slug === slug).supporting_queries = ['Equine Elixirs OM3GA vs KER EO3'];
+  fs.writeFileSync(file, JSON.stringify(t));
+  const { problems } = findQuestionQueueProblems(root);
+  assert.ok(problems.some((p) => p.includes(slug) && /which it does not answer/.test(p)), problems.join('\n'));
+});
+
+test('validator fails when a requeued question reaches neither queue', () => {
+  const root = fixture([question(KICKS, 'norm_kicks')], realTargets, {
+    'data/community/requeued_page_questions.json': [{ requeued_id: 'requeued_x', question: 'Who owns a foal born during a lease?', removed_from: '/x/' }]
+  });
+  mapIn(root);
+  assert.deepEqual(findQuestionQueueProblems(root).problems.filter((p) => /Requeued/.test(p)), []);
+  fs.writeFileSync(path.join(root, 'data/community/approval_queue.json'), JSON.stringify([{ approval_id: 'other' }]));
+  fs.writeFileSync(path.join(root, 'data/community/publish_queue.json'), '[]');
+  assert.ok(findQuestionQueueProblems(root).problems.some((p) => /Requeued question/.test(p)));
 });

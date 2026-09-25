@@ -39,13 +39,21 @@ const PLACE = new Set(('alabama alaska arizona arkansas california colorado conn
   'nevada hampshire jersey mexico york north south carolina dakota ohio oklahoma oregon pennsylvania rhode island tennessee texas ' +
   'utah vermont virginia washington west wisconsin wyoming state states').split(' '));
 
+// Word forms of one idea must compare equal ("leased"/"lease", "injured"/"injury",
+// "documented"/"documentation", "liable"/"liability"): strip the common suffix,
+// then truncate to a 5-letter root. A mismatch here would drop a question from the
+// page that answers it (pinned in test/question-matching.test.js).
+const ROOT_ALIASES = new Map([['liabl', 'liabi']]);
+
 function stem(w) {
-  if (w.length > 4 && w.endsWith('ies')) return `${w.slice(0, -3)}y`;
-  if (w.length > 4 && w.endsWith('ing')) return w.slice(0, -3);
-  if (w.length > 4 && w.endsWith('ed')) return w.slice(0, -2);
-  if (w.length > 3 && /(s|x|ch|sh)es$/.test(w)) return w.slice(0, -2);
-  if (w.length > 3 && w.endsWith('s') && !w.endsWith('ss')) return w.slice(0, -1);
-  return w;
+  let r = w;
+  if (r.length > 4 && r.endsWith('ies')) r = `${r.slice(0, -3)}y`;
+  else if (r.length > 4 && r.endsWith('ing')) r = r.slice(0, -3);
+  else if (r.length > 4 && r.endsWith('ed')) r = r.slice(0, -2);
+  else if (r.length > 3 && /(s|x|ch|sh)es$/.test(r)) r = r.slice(0, -2);
+  else if (r.length > 3 && r.endsWith('s') && !r.endsWith('ss')) r = r.slice(0, -1);
+  r = r.slice(0, 5);
+  return ROOT_ALIASES.get(r) || r;
 }
 
 function terms(value) {
@@ -60,8 +68,11 @@ function pageType(target) {
   return target.page_type || target.type || (target.slug || '').split('/').filter(Boolean)[0] || 'answer';
 }
 
+// The slug's first segment is the site section (/disputes/, /compare/...), a
+// category rather than something the page answers, so it is left out.
 function pageAnswerText(target) {
-  return `${target.title || ''} ${target.page_id || ''} ${target.slug || ''} ${target.primary_query || ''}`;
+  const slugPath = String(target.slug || '').split('/').filter(Boolean).slice(1).join(' ');
+  return `${target.title || ''} ${target.page_id || ''} ${slugPath} ${target.primary_query || ''}`;
 }
 
 function questionText(normalized) {
@@ -125,7 +136,7 @@ function cleanSupportingQueries(list) {
 
 // Pure: computes the mapping without touching disk. Mutates the passed-in
 // normalized/targets objects only when apply === true.
-function mapSignals(normalized, targets, { apply = false } = {}) {
+function mapSignals(normalized, targets, { apply = false, requeued = [] } = {}) {
   const targetBySlug = new Map(targets.map((t) => [t.slug, t]));
   const index = buildIndex(targets);
   const queue = [];
@@ -166,11 +177,14 @@ function mapSignals(normalized, targets, { apply = false } = {}) {
         n.status = 'mapped';
         target.source_signal_ids = Array.from(new Set([...(target.source_signal_ids || []), ...(n.source_signal_ids || [])]));
         target.primary_query ||= n.preserved_query || n.normalized_query;
+        // Each phrasing written onto the live page must itself pass the page rule
+        // (validate:question-queue fails a live list with an unanswered entry).
+        const onlyThisPage = { ...index, pages: index.pages.filter((p) => p.target.slug === target.slug) };
+        const variants = [n.preserved_query, n.normalized_query, n.llm_bait_phrase]
+          .filter((v) => v && (matchQuestion({ preserved_query: v }, onlyThisPage) || {}).answers);
         target.supporting_queries = cleanSupportingQueries([
           ...(target.supporting_queries || []),
-          n.preserved_query,
-          n.normalized_query,
-          n.llm_bait_phrase
+          ...variants
         ]);
         target.provenance_status = 'source_backed';
         target.signal_score = Math.max(Number(target.signal_score || 0), Number(n.signal_score || 0));
@@ -217,13 +231,44 @@ function mapSignals(normalized, targets, { apply = false } = {}) {
       });
     }
   }
+
+  // Questions removed from a page they did not answer (clean_page_question_lists.js)
+  // and with no signal of their own. Routed like a fresh question, except they are
+  // never auto-attached: with no source signal there is no provenance to attach.
+  for (const r of requeued) {
+    const best = matchQuestion({ preserved_query: r.question }, index);
+    const slugPart = slugify(r.question).slice(0, 90);
+    if (best && best.answers) {
+      queue.push({
+        queue_id: `queue_${r.requeued_id}`,
+        requeued_id: r.requeued_id,
+        action: 'hold_for_owner_review',
+        preserved_query: r.question,
+        normalized_query: r.question,
+        mapped_slug: best.target.slug,
+        status: 'answered_by_existing_page',
+        reason: `Removed from ${r.removed_from}; an existing page answers it (shares ${best.shared.join(', ')}). Held for owner review.`
+      });
+    } else {
+      approvalQueue.push({
+        approval_id: `approval_${r.requeued_id}`,
+        type: 'new_page_or_cluster',
+        status: 'pending',
+        requeued_id: r.requeued_id,
+        proposed_slug: `/faq/${slugPart}/`,
+        question: r.question,
+        removed_from: r.removed_from
+      });
+    }
+  }
   return { queue, approvalQueue };
 }
 
 function run({ dryRun = false } = {}) {
   const normalized = readJson('data/community/normalized_signals.json', []);
   const targets = readJson('data/queries/page_targets.json', []);
-  const { queue, approvalQueue } = mapSignals(normalized, targets, { apply: !dryRun });
+  const requeued = readJson('data/community/requeued_page_questions.json', []);
+  const { queue, approvalQueue } = mapSignals(normalized, targets, { apply: !dryRun, requeued });
   const attached = queue.filter((q) => q.status === 'approved_for_content');
 
   if (dryRun) {

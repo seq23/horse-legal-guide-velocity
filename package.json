@@ -45,6 +45,8 @@
     "ingest:manual": "npm run collect:signals && npm run normalize:signals && npm run map:signals && npm run report:ingestion",
     "map:signals": "node scripts/community/map_signals_to_targets.js",
     "map:signals:dry-run": "node scripts/community/map_signals_to_targets.js --dry-run",
+    "clean:page-questions": "node scripts/community/clean_page_question_lists.js",
+    "clean:page-questions:dry-run": "node scripts/community/clean_page_question_lists.js --dry-run",
     "monitor:answer-surface": "node scripts/monitoring/generate_answer_surface_reports.js",
     "normalize:signals": "node scripts/community/normalize_signals.js",
     "ops:simulate-github-actions": "node scripts/ops/simulate_github_actions.js",

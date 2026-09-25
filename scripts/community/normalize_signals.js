@@ -138,6 +138,7 @@ if (require.main === module) {
 
 module.exports = {
   run,
+  dedupeKeyFor,
   classifyIntent,
   clusterFromText,
   computeSignalScore,

@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-25T14:28:54.000Z",
-  "source_fingerprint": "c5de14d7ca08659ade5ad9959842842b1e3f0958e3540eaab347931296065aba",
+  "generated_at": "2026-09-25T20:50:09.000Z",
+  "source_fingerprint": "c47a7f66b0b4c2619fa062e3b17901d1f19935e53603c54646dff8c5f347db84",
   "policy": "Owner approval required before any live-page search control or page patch is applied.",
   "summary": {
-    "total": 82,
-    "pending_owner_approval": 82,
+    "total": 69,
+    "pending_owner_approval": 69,
     "approved": 0,
     "applied": 0,
     "rejected": 0
@@ -105,9 +105,11 @@
       "rejected_at": null,
       "candidate_primary": "/leases/what-liability-applies-in-a-horse-property-lease/",
       "members": [
+        "/leases/can-i-run-a-horse-business-under-my-lease/",
         "/leases/what-liability-applies-in-a-horse-property-lease/",
         "/leases/what-should-be-included-in-a-barn-lease/",
         "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
+        "/reference/can-i-run-a-horse-business-under-my-lease/",
         "/reference/what-liability-applies-in-a-horse-property-lease/",
         "/reference/what-should-be-included-in-a-barn-lease/",
         "/reference/who-is-responsible-for-repairs-in-a-barn-lease/"
@@ -171,6 +173,36 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
+      "candidate_primary": "/reference/what-should-someone-know-about-a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "members": [
+        "/reference/what-should-someone-know-about-a-contract-has-no-state-law-clause-why-can-that-matter/",
+        "/reference/what-should-someone-know-about-a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+        "/reference/what-should-someone-know-about-a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/"
+      ],
+      "families": [
+        "reference"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.943,
+      "suggested_actions": [
+        "differentiate_patch"
+      ],
+      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0006",
+      "ledger_id": "uniqueness-0006",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
       "candidate_primary": "/reference/what-should-someone-know-about-a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
       "members": [
         "/reference/what-should-someone-know-about-a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
@@ -192,8 +224,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0006",
-      "ledger_id": "uniqueness-0006",
+      "proposal_id": "remediation-uniqueness-0007",
+      "ledger_id": "uniqueness-0007",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -226,20 +258,21 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0007",
-      "ledger_id": "uniqueness-0007",
+      "proposal_id": "remediation-uniqueness-0008",
+      "ledger_id": "uniqueness-0008",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/business/horse-syndicate-legal-structure/",
+      "candidate_primary": "/business/partnership-agreement-for-horse-business/",
       "members": [
         "/business/do-i-need-an-llc-to-start-a-horse-business/",
         "/business/horse-syndicate-legal-structure/",
         "/business/how-do-i-legally-start-a-horse-business/",
         "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
+        "/business/how-to-start-a-boarding-barn-legally/",
         "/business/how-to-start-a-horse-retail-business/",
         "/business/how-to-start-a-training-barn-legally/",
         "/business/how-to-start-an-equine-apparel-business/",
@@ -278,8 +311,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0008",
-      "ledger_id": "uniqueness-0008",
+      "proposal_id": "remediation-uniqueness-0009",
+      "ledger_id": "uniqueness-0009",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -322,8 +355,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0009",
-      "ledger_id": "uniqueness-0009",
+      "proposal_id": "remediation-uniqueness-0010",
+      "ledger_id": "uniqueness-0010",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -333,6 +366,7 @@
       "candidate_primary": "/reference/what-should-someone-know-about-a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/",
       "members": [
         "/reference/what-should-someone-know-about-a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/",
+        "/reference/what-should-someone-know-about-a-barn-wants-to-remove-a-difficult-boarder-what-should-be-checked/",
         "/reference/what-should-someone-know-about-a-boarder-stopped-paying-what-can-a-barn-do-next/",
         "/reference/what-should-someone-know-about-a-boarding-barn-changed-ownership-what-happens-to-agreements/",
         "/reference/what-should-someone-know-about-a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/",
@@ -357,8 +391,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0010",
-      "ledger_id": "uniqueness-0010",
+      "proposal_id": "remediation-uniqueness-0011",
+      "ledger_id": "uniqueness-0011",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -397,8 +431,49 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0011",
-      "ledger_id": "uniqueness-0011",
+      "proposal_id": "remediation-uniqueness-0012",
+      "ledger_id": "uniqueness-0012",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
+      "candidate_primary": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+      "members": [
+        "/leases/can-you-end-a-horse-lease-early/",
+        "/leases/what-is-a-horse-trial-agreement/",
+        "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+        "/leases/who-is-liable-during-a-horse-lease/",
+        "/leases/who-pays-vet-bills-in-a-horse-lease/",
+        "/reference/can-you-end-a-horse-lease-early/",
+        "/reference/what-is-a-horse-trial-agreement/",
+        "/reference/what-should-be-included-in-a-horse-lease-agreement/",
+        "/reference/who-is-liable-during-a-horse-lease/",
+        "/reference/who-pays-vet-bills-in-a-horse-lease/"
+      ],
+      "families": [
+        "leases",
+        "reference"
+      ],
+      "reasons": [
+        "duplicate_title",
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9299,
+      "suggested_actions": [
+        "noindex_keep_llm",
+        "canonical_to_primary",
+        "differentiate_patch"
+      ],
+      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0013",
+      "ledger_id": "uniqueness-0013",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -408,6 +483,7 @@
       "candidate_primary": "/reference/what-should-someone-know-about-a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/",
       "members": [
         "/reference/what-should-someone-know-about-a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/",
+        "/reference/what-should-someone-know-about-a-horse-sale-involved-a-minor-what-extra-issues-can-arise/",
         "/reference/what-should-someone-know-about-a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/",
         "/reference/what-should-someone-know-about-a-horse-was-sold-through-a-friend-or-agent-who-had-authority/",
         "/reference/what-should-someone-know-about-a-social-media-collaboration-went-wrong-what-rights-matter/",
@@ -433,8 +509,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0012",
-      "ledger_id": "uniqueness-0012",
+      "proposal_id": "remediation-uniqueness-0014",
+      "ledger_id": "uniqueness-0014",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -464,8 +540,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0013",
-      "ledger_id": "uniqueness-0013",
+      "proposal_id": "remediation-uniqueness-0015",
+      "ledger_id": "uniqueness-0015",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -487,72 +563,6 @@
         "high_body_similarity"
       ],
       "maximum_body_similarity": 0.9238,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0014",
-      "ledger_id": "uniqueness-0014",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/leases/who-is-liable-during-a-horse-lease/",
-      "members": [
-        "/leases/what-should-be-included-in-a-horse-lease-agreement/",
-        "/leases/who-is-liable-during-a-horse-lease/",
-        "/leases/who-pays-vet-bills-in-a-horse-lease/",
-        "/reference/what-should-be-included-in-a-horse-lease-agreement/",
-        "/reference/who-is-liable-during-a-horse-lease/",
-        "/reference/who-pays-vet-bills-in-a-horse-lease/"
-      ],
-      "families": [
-        "leases",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title",
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.9215,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0015",
-      "ledger_id": "uniqueness-0015",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/reference/what-should-someone-know-about-a-contract-has-no-state-law-clause-why-can-that-matter/",
-      "members": [
-        "/reference/what-should-someone-know-about-a-contract-has-no-state-law-clause-why-can-that-matter/",
-        "/reference/what-should-someone-know-about-a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/"
-      ],
-      "families": [
-        "reference"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.9198,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -665,6 +675,54 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
+      "candidate_primary": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
+      "members": [
+        "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
+        "/liability/do-i-need-a-warning-sign-at-my-barn/",
+        "/liability/do-i-need-insurance-for-my-horse-business/",
+        "/liability/does-my-contract-need-statutory-warning-language/",
+        "/liability/what-does-equine-liability-law-actually-protect-me-from/",
+        "/liability/what-is-the-equine-activity-liability-act/",
+        "/liability/what-type-of-insurance-do-horse-owners-need/",
+        "/liability/what-type-of-insurance-do-trainers-need/",
+        "/reference/do-i-need-a-liability-waiver-for-my-horse-business/",
+        "/reference/do-i-need-a-warning-sign-at-my-barn/",
+        "/reference/do-i-need-insurance-for-my-horse-business/",
+        "/reference/does-my-contract-need-statutory-warning-language/",
+        "/reference/what-does-equine-liability-law-actually-protect-me-from/",
+        "/reference/what-is-the-equine-activity-liability-act/",
+        "/reference/what-should-someone-know-about-if-someone-gets-hurt-riding-my-horse-am-i-liable/",
+        "/reference/what-type-of-insurance-do-horse-owners-need/",
+        "/reference/what-type-of-insurance-do-trainers-need/"
+      ],
+      "families": [
+        "liability",
+        "reference"
+      ],
+      "reasons": [
+        "duplicate_title",
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9184,
+      "suggested_actions": [
+        "noindex_keep_llm",
+        "canonical_to_primary",
+        "differentiate_patch"
+      ],
+      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0020",
+      "ledger_id": "uniqueness-0020",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
       "candidate_primary": "/reference/how-should-someone-compare-pre-purchase-exam-vs-no-exam-legal-risk-in-an-equine-legal-situation/",
       "members": [
         "/reference/how-should-someone-compare-pre-purchase-exam-vs-as-is-horse-sale-in-an-equine-legal-situation/",
@@ -686,15 +744,15 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0020",
-      "ledger_id": "uniqueness-0020",
+      "proposal_id": "remediation-uniqueness-0021",
+      "ledger_id": "uniqueness-0021",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "candidate_primary": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
       "members": [
         "/ip/can-a-sponsor-use-my-image-without-permission/",
         "/ip/do-i-need-a-contract-for-a-sponsorship/",
@@ -731,8 +789,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0021",
-      "ledger_id": "uniqueness-0021",
+      "proposal_id": "remediation-uniqueness-0022",
+      "ledger_id": "uniqueness-0022",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -741,6 +799,7 @@
       "rejected_at": null,
       "candidate_primary": "/reference/what-should-someone-know-about-the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/",
       "members": [
+        "/reference/what-should-someone-know-about-a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/",
         "/reference/what-should-someone-know-about-a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/",
         "/reference/what-should-someone-know-about-the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/"
       ],
@@ -760,8 +819,74 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0022",
-      "ledger_id": "uniqueness-0022",
+      "proposal_id": "remediation-uniqueness-0023",
+      "ledger_id": "uniqueness-0023",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
+      "candidate_primary": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+      "members": [
+        "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+        "/leases/what-happens-if-a-leased-horse-is-injured/",
+        "/reference/what-happens-if-a-leased-horse-becomes-unsound/",
+        "/reference/what-happens-if-a-leased-horse-is-injured/"
+      ],
+      "families": [
+        "leases",
+        "reference"
+      ],
+      "reasons": [
+        "duplicate_title",
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9067,
+      "suggested_actions": [
+        "noindex_keep_llm",
+        "canonical_to_primary",
+        "differentiate_patch"
+      ],
+      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0024",
+      "ledger_id": "uniqueness-0024",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
+      "candidate_primary": "/compare/mediation-vs-litigation-in-a-horse-dispute/",
+      "members": [
+        "/compare/mediation-vs-litigation-horse-disputes/",
+        "/compare/mediation-vs-litigation-in-a-horse-dispute/",
+        "/compare/mediation-vs-litigation-in-horse-disputes/"
+      ],
+      "families": [
+        "compare"
+      ],
+      "reasons": [
+        "duplicate_title",
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9058,
+      "suggested_actions": [
+        "differentiate_patch"
+      ],
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0025",
+      "ledger_id": "uniqueness-0025",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -789,8 +914,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0023",
-      "ledger_id": "uniqueness-0023",
+      "proposal_id": "remediation-uniqueness-0026",
+      "ledger_id": "uniqueness-0026",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -819,8 +944,96 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0024",
-      "ledger_id": "uniqueness-0024",
+      "proposal_id": "remediation-uniqueness-0027",
+      "ledger_id": "uniqueness-0027",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
+      "candidate_primary": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+      "members": [
+        "/faq/can-a-buyer-return-a-horse-after-purchase/",
+        "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
+        "/faq/can-a-seller-refuse-to-take-a-horse-back/",
+        "/faq/do-i-need-a-contract-to-sell-a-horse/",
+        "/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+        "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+        "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
+        "/reference/can-a-buyer-return-a-horse-after-purchase/",
+        "/reference/can-a-buyer-sue-after-an-as-is-horse-sale/",
+        "/reference/can-a-seller-refuse-to-take-a-horse-back/",
+        "/reference/do-i-need-a-contract-to-sell-a-horse/",
+        "/reference/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+        "/reference/what-should-be-included-in-a-horse-bill-of-sale/",
+        "/reference/what-should-be-included-in-a-horse-sale-contract/",
+        "/reference/when-does-ownership-legally-transfer-in-a-horse-sale/",
+        "/reference/who-is-responsible-after-a-horse-sale-is-completed/"
+      ],
+      "families": [
+        "faq",
+        "reference"
+      ],
+      "reasons": [
+        "duplicate_title",
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9002,
+      "suggested_actions": [
+        "noindex_keep_llm",
+        "canonical_to_primary",
+        "differentiate_patch"
+      ],
+      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0028",
+      "ledger_id": "uniqueness-0028",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
+      "candidate_primary": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
+      "members": [
+        "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+        "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
+        "/disputes/how-serious-is-a-legal-demand-letter/",
+        "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
+        "/reference/can-a-contract-dispute-be-resolved-without-court/",
+        "/reference/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
+        "/reference/how-serious-is-a-legal-demand-letter/",
+        "/reference/what-should-i-do-if-i-receive-a-demand-letter/"
+      ],
+      "families": [
+        "disputes",
+        "reference"
+      ],
+      "reasons": [
+        "duplicate_title",
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.8988,
+      "suggested_actions": [
+        "noindex_keep_llm",
+        "canonical_to_primary",
+        "differentiate_patch"
+      ],
+      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0029",
+      "ledger_id": "uniqueness-0029",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -849,39 +1062,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0025",
-      "ledger_id": "uniqueness-0025",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/compare/mediation-vs-litigation-in-a-horse-dispute/",
-      "members": [
-        "/compare/mediation-vs-litigation-horse-disputes/",
-        "/compare/mediation-vs-litigation-in-a-horse-dispute/",
-        "/compare/mediation-vs-litigation-in-horse-disputes/"
-      ],
-      "families": [
-        "compare"
-      ],
-      "reasons": [
-        "duplicate_title",
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.8985,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0026",
-      "ledger_id": "uniqueness-0026",
+      "proposal_id": "remediation-uniqueness-0030",
+      "ledger_id": "uniqueness-0030",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -909,53 +1091,38 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0027",
-      "ledger_id": "uniqueness-0027",
+      "proposal_id": "remediation-uniqueness-0031",
+      "ledger_id": "uniqueness-0031",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "candidate_primary": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
       "members": [
-        "/faq/can-a-buyer-return-a-horse-after-purchase/",
-        "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
-        "/faq/do-i-need-a-contract-to-sell-a-horse/",
-        "/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
-        "/faq/what-should-be-included-in-a-horse-sale-contract/",
-        "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
-        "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
-        "/reference/can-a-buyer-return-a-horse-after-purchase/",
-        "/reference/can-a-buyer-sue-after-an-as-is-horse-sale/",
-        "/reference/do-i-need-a-contract-to-sell-a-horse/",
-        "/reference/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
-        "/reference/what-should-be-included-in-a-horse-sale-contract/",
-        "/reference/when-does-ownership-legally-transfer-in-a-horse-sale/",
-        "/reference/who-is-responsible-after-a-horse-sale-is-completed/"
+        "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+        "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+        "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/"
       ],
       "families": [
-        "faq",
-        "reference"
+        "scenario"
       ],
       "reasons": [
-        "duplicate_title",
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8948,
+      "maximum_body_similarity": 0.8924,
       "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
         "differentiate_patch"
       ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true,
       "automatic_live_change": false,
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0028",
-      "ledger_id": "uniqueness-0028",
+      "proposal_id": "remediation-uniqueness-0032",
+      "ledger_id": "uniqueness-0032",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -990,8 +1157,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0029",
-      "ledger_id": "uniqueness-0029",
+      "proposal_id": "remediation-uniqueness-0033",
+      "ledger_id": "uniqueness-0033",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1019,85 +1186,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0030",
-      "ledger_id": "uniqueness-0030",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
-      "members": [
-        "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
-        "/liability/do-i-need-a-warning-sign-at-my-barn/",
-        "/liability/do-i-need-insurance-for-my-horse-business/",
-        "/liability/does-my-contract-need-statutory-warning-language/",
-        "/liability/what-does-equine-liability-law-actually-protect-me-from/",
-        "/liability/what-is-the-equine-activity-liability-act/",
-        "/liability/what-type-of-insurance-do-horse-owners-need/",
-        "/liability/what-type-of-insurance-do-trainers-need/",
-        "/reference/do-i-need-a-liability-waiver-for-my-horse-business/",
-        "/reference/do-i-need-a-warning-sign-at-my-barn/",
-        "/reference/do-i-need-insurance-for-my-horse-business/",
-        "/reference/does-my-contract-need-statutory-warning-language/",
-        "/reference/what-does-equine-liability-law-actually-protect-me-from/",
-        "/reference/what-is-the-equine-activity-liability-act/",
-        "/reference/what-type-of-insurance-do-horse-owners-need/",
-        "/reference/what-type-of-insurance-do-trainers-need/"
-      ],
-      "families": [
-        "liability",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title",
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.888,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0031",
-      "ledger_id": "uniqueness-0031",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
-      "members": [
-        "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
-        "/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
-        "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/"
-      ],
-      "families": [
-        "scenario"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.888,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0032",
-      "ledger_id": "uniqueness-0032",
+      "proposal_id": "remediation-uniqueness-0034",
+      "ledger_id": "uniqueness-0034",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1125,61 +1215,30 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0033",
-      "ledger_id": "uniqueness-0033",
+      "proposal_id": "remediation-uniqueness-0035",
+      "ledger_id": "uniqueness-0035",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/",
+      "candidate_primary": "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
       "members": [
-        "/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
-        "/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/",
-        "/scenario/a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
-        "/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/"
+        "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
+        "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+        "/reference/what-happens-if-a-horse-becomes-lame-after-sale/",
+        "/reference/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/"
       ],
       "families": [
-        "scenario"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.8849,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0034",
-      "ledger_id": "uniqueness-0034",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
-      "members": [
-        "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
-        "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
-        "/reference/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
-        "/reference/what-should-i-do-if-i-receive-a-demand-letter/"
-      ],
-      "families": [
-        "disputes",
+        "faq",
         "reference"
       ],
       "reasons": [
         "duplicate_title",
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8826,
+      "maximum_body_similarity": 0.8816,
       "suggested_actions": [
         "noindex_keep_llm",
         "canonical_to_primary",
@@ -1191,38 +1250,47 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0035",
-      "ledger_id": "uniqueness-0035",
+      "proposal_id": "remediation-uniqueness-0036",
+      "ledger_id": "uniqueness-0036",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
+      "candidate_primary": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
       "members": [
-        "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
-        "/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/",
-        "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/"
+        "/boarding/what-liability-does-a-trainer-have/",
+        "/boarding/what-should-be-included-in-a-training-agreement/",
+        "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
+        "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
+        "/reference/what-liability-does-a-trainer-have/",
+        "/reference/what-should-be-included-in-a-training-agreement/",
+        "/reference/who-is-liable-if-a-horse-is-injured-while-boarded/",
+        "/reference/who-pays-vet-bills-while-a-horse-is-boarded/"
       ],
       "families": [
-        "scenario"
+        "boarding",
+        "reference"
       ],
       "reasons": [
+        "duplicate_title",
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8817,
+      "maximum_body_similarity": 0.875,
       "suggested_actions": [
+        "noindex_keep_llm",
+        "canonical_to_primary",
         "differentiate_patch"
       ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
       "approval_required_for_live_change": true,
       "automatic_live_change": false,
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0036",
-      "ledger_id": "uniqueness-0036",
+      "proposal_id": "remediation-uniqueness-0037",
+      "ledger_id": "uniqueness-0037",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1240,7 +1308,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8815,
+      "maximum_body_similarity": 0.8749,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -1250,8 +1318,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0037",
-      "ledger_id": "uniqueness-0037",
+      "proposal_id": "remediation-uniqueness-0038",
+      "ledger_id": "uniqueness-0038",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1282,8 +1350,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0038",
-      "ledger_id": "uniqueness-0038",
+      "proposal_id": "remediation-uniqueness-0039",
+      "ledger_id": "uniqueness-0039",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1311,8 +1379,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0039",
-      "ledger_id": "uniqueness-0039",
+      "proposal_id": "remediation-uniqueness-0040",
+      "ledger_id": "uniqueness-0040",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1340,35 +1408,6 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0040",
-      "ledger_id": "uniqueness-0040",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
-      "members": [
-        "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
-        "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/"
-      ],
-      "families": [
-        "scenario"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.8687,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
       "proposal_id": "remediation-uniqueness-0041",
       "ledger_id": "uniqueness-0041",
       "status": "pending_owner_approval",
@@ -1377,18 +1416,18 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/scenario/a-leased-horse-became-unsound-who-pays/",
+      "candidate_primary": "/compare/template-contract-vs-custom-horse-contract/",
       "members": [
-        "/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/",
-        "/scenario/a-leased-horse-became-unsound-who-pays/"
+        "/compare/template-contract-vs-custom-horse-contract/",
+        "/compare/template-horse-contract-vs-custom-horse-contract/"
       ],
       "families": [
-        "scenario"
+        "compare"
       ],
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8639,
+      "maximum_body_similarity": 0.8632,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -1436,18 +1475,19 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/compare/template-contract-vs-custom-horse-contract/",
+      "candidate_primary": "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
       "members": [
-        "/compare/template-contract-vs-custom-horse-contract/",
-        "/compare/template-horse-contract-vs-custom-horse-contract/"
+        "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
+        "/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
+        "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/"
       ],
       "families": [
-        "compare"
+        "scenario"
       ],
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8623,
+      "maximum_body_similarity": 0.8625,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -1459,35 +1499,6 @@
     {
       "proposal_id": "remediation-uniqueness-0044",
       "ledger_id": "uniqueness-0044",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
-      "members": [
-        "/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
-        "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/"
-      ],
-      "families": [
-        "scenario"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.8622,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0045",
-      "ledger_id": "uniqueness-0045",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1515,8 +1526,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0046",
-      "ledger_id": "uniqueness-0046",
+      "proposal_id": "remediation-uniqueness-0045",
+      "ledger_id": "uniqueness-0045",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1546,8 +1557,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0047",
-      "ledger_id": "uniqueness-0047",
+      "proposal_id": "remediation-uniqueness-0046",
+      "ledger_id": "uniqueness-0046",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1575,8 +1586,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0048",
-      "ledger_id": "uniqueness-0048",
+      "proposal_id": "remediation-uniqueness-0047",
+      "ledger_id": "uniqueness-0047",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1604,8 +1615,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0049",
-      "ledger_id": "uniqueness-0049",
+      "proposal_id": "remediation-uniqueness-0048",
+      "ledger_id": "uniqueness-0048",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1628,6 +1639,36 @@
         "differentiate_patch"
       ],
       "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0049",
+      "ledger_id": "uniqueness-0049",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
+      "candidate_primary": "/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
+      "members": [
+        "/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
+        "/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
+        "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/"
+      ],
+      "families": [
+        "scenario"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.8583,
+      "suggested_actions": [
+        "differentiate_patch"
+      ],
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true,
       "automatic_live_change": false,
       "patch_plan": null
@@ -1705,6 +1746,35 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
+      "candidate_primary": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
+      "members": [
+        "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
+        "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/"
+      ],
+      "families": [
+        "scenario"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.8558,
+      "suggested_actions": [
+        "differentiate_patch"
+      ],
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0053",
+      "ledger_id": "uniqueness-0053",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
       "candidate_primary": "/reference/how-should-someone-compare-insurance-certificate-vs-actual-policy-coverage-in-an-equine-legal-situation/",
       "members": [
         "/reference/how-should-someone-compare-insurance-certificate-vs-actual-policy-coverage-in-an-equine-legal-situation/",
@@ -1726,35 +1796,6 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0053",
-      "ledger_id": "uniqueness-0053",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/",
-      "members": [
-        "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
-        "/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/"
-      ],
-      "families": [
-        "scenario"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.855,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
       "proposal_id": "remediation-uniqueness-0054",
       "ledger_id": "uniqueness-0054",
       "status": "pending_owner_approval",
@@ -1763,15 +1804,15 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
+      "candidate_primary": "/boarding/what-happens-if-a-horse-dies-while-boarded/",
       "members": [
-        "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
-        "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
-        "/reference/what-happens-if-a-horse-becomes-lame-after-sale/",
-        "/reference/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/"
+        "/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
+        "/boarding/what-happens-if-a-horse-dies-while-boarded/",
+        "/reference/what-happens-if-a-contract-does-not-address-responsibility/",
+        "/reference/what-happens-if-a-horse-dies-while-boarded/"
       ],
       "families": [
-        "faq",
+        "boarding",
         "reference"
       ],
       "reasons": [
@@ -1798,28 +1839,22 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/boarding/what-should-be-included-in-a-training-agreement/",
+      "candidate_primary": "/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/",
       "members": [
-        "/boarding/what-should-be-included-in-a-training-agreement/",
-        "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
-        "/reference/what-should-be-included-in-a-training-agreement/",
-        "/reference/who-is-liable-if-a-horse-is-injured-while-boarded/"
+        "/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
+        "/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/"
       ],
       "families": [
-        "boarding",
-        "reference"
+        "scenario"
       ],
       "reasons": [
-        "duplicate_title",
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8529,
+      "maximum_body_similarity": 0.8534,
       "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
         "differentiate_patch"
       ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true,
       "automatic_live_change": false,
       "patch_plan": null
@@ -1833,10 +1868,10 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/scenario/i-sold-a-horse-without-a-contract-what-now/",
+      "candidate_primary": "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
       "members": [
-        "/scenario/i-ignored-a-horse-legal-issue-and-it-got-worse-what-now/",
-        "/scenario/i-sold-a-horse-without-a-contract-what-now/"
+        "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
+        "/scenario/i-signed-something-i-did-not-understand-what-should-i-do/"
       ],
       "families": [
         "scenario"
@@ -1844,7 +1879,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8519,
+      "maximum_body_similarity": 0.851,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -1856,70 +1891,6 @@
     {
       "proposal_id": "remediation-uniqueness-0057",
       "ledger_id": "uniqueness-0057",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
-      "members": [
-        "/disputes/can-a-contract-dispute-be-resolved-without-court/",
-        "/reference/can-a-contract-dispute-be-resolved-without-court/"
-      ],
-      "families": [
-        "disputes",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0058",
-      "ledger_id": "uniqueness-0058",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/faq/can-a-seller-refuse-to-take-a-horse-back/",
-      "members": [
-        "/faq/can-a-seller-refuse-to-take-a-horse-back/",
-        "/reference/can-a-seller-refuse-to-take-a-horse-back/"
-      ],
-      "families": [
-        "faq",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0059",
-      "ledger_id": "uniqueness-0059",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1950,8 +1921,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0060",
-      "ledger_id": "uniqueness-0060",
+      "proposal_id": "remediation-uniqueness-0058",
+      "ledger_id": "uniqueness-0058",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -1982,40 +1953,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0061",
-      "ledger_id": "uniqueness-0061",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/leases/can-i-run-a-horse-business-under-my-lease/",
-      "members": [
-        "/leases/can-i-run-a-horse-business-under-my-lease/",
-        "/reference/can-i-run-a-horse-business-under-my-lease/"
-      ],
-      "families": [
-        "leases",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0062",
-      "ledger_id": "uniqueness-0062",
+      "proposal_id": "remediation-uniqueness-0059",
+      "ledger_id": "uniqueness-0059",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2046,8 +1985,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0063",
-      "ledger_id": "uniqueness-0063",
+      "proposal_id": "remediation-uniqueness-0060",
+      "ledger_id": "uniqueness-0060",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2078,40 +2017,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0064",
-      "ledger_id": "uniqueness-0064",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/leases/can-you-end-a-horse-lease-early/",
-      "members": [
-        "/leases/can-you-end-a-horse-lease-early/",
-        "/reference/can-you-end-a-horse-lease-early/"
-      ],
-      "families": [
-        "leases",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0065",
-      "ledger_id": "uniqueness-0065",
+      "proposal_id": "remediation-uniqueness-0061",
+      "ledger_id": "uniqueness-0061",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2142,40 +2049,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0066",
-      "ledger_id": "uniqueness-0066",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/disputes/how-serious-is-a-legal-demand-letter/",
-      "members": [
-        "/disputes/how-serious-is-a-legal-demand-letter/",
-        "/reference/how-serious-is-a-legal-demand-letter/"
-      ],
-      "families": [
-        "disputes",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0067",
-      "ledger_id": "uniqueness-0067",
+      "proposal_id": "remediation-uniqueness-0062",
+      "ledger_id": "uniqueness-0062",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2206,8 +2081,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0068",
-      "ledger_id": "uniqueness-0068",
+      "proposal_id": "remediation-uniqueness-0063",
+      "ledger_id": "uniqueness-0063",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2238,72 +2113,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0069",
-      "ledger_id": "uniqueness-0069",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
-      "members": [
-        "/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
-        "/reference/what-happens-if-a-contract-does-not-address-responsibility/"
-      ],
-      "families": [
-        "boarding",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0070",
-      "ledger_id": "uniqueness-0070",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/boarding/what-happens-if-a-horse-dies-while-boarded/",
-      "members": [
-        "/boarding/what-happens-if-a-horse-dies-while-boarded/",
-        "/reference/what-happens-if-a-horse-dies-while-boarded/"
-      ],
-      "families": [
-        "boarding",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0071",
-      "ledger_id": "uniqueness-0071",
+      "proposal_id": "remediation-uniqueness-0064",
+      "ledger_id": "uniqueness-0064",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2334,8 +2145,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0072",
-      "ledger_id": "uniqueness-0072",
+      "proposal_id": "remediation-uniqueness-0065",
+      "ledger_id": "uniqueness-0065",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2366,72 +2177,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0073",
-      "ledger_id": "uniqueness-0073",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
-      "members": [
-        "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
-        "/reference/what-happens-if-a-leased-horse-becomes-unsound/"
-      ],
-      "families": [
-        "leases",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0074",
-      "ledger_id": "uniqueness-0074",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/leases/what-happens-if-a-leased-horse-is-injured/",
-      "members": [
-        "/leases/what-happens-if-a-leased-horse-is-injured/",
-        "/reference/what-happens-if-a-leased-horse-is-injured/"
-      ],
-      "families": [
-        "leases",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0075",
-      "ledger_id": "uniqueness-0075",
+      "proposal_id": "remediation-uniqueness-0066",
+      "ledger_id": "uniqueness-0066",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2462,8 +2209,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0076",
-      "ledger_id": "uniqueness-0076",
+      "proposal_id": "remediation-uniqueness-0067",
+      "ledger_id": "uniqueness-0067",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2494,8 +2241,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0077",
-      "ledger_id": "uniqueness-0077",
+      "proposal_id": "remediation-uniqueness-0068",
+      "ledger_id": "uniqueness-0068",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2526,40 +2273,8 @@
       "patch_plan": null
     },
     {
-      "proposal_id": "remediation-uniqueness-0078",
-      "ledger_id": "uniqueness-0078",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/leases/what-is-a-horse-trial-agreement/",
-      "members": [
-        "/leases/what-is-a-horse-trial-agreement/",
-        "/reference/what-is-a-horse-trial-agreement/"
-      ],
-      "families": [
-        "leases",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0079",
-      "ledger_id": "uniqueness-0079",
+      "proposal_id": "remediation-uniqueness-0069",
+      "ledger_id": "uniqueness-0069",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -2570,102 +2285,6 @@
       "members": [
         "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
         "/reference/what-legal-documents-do-i-need-to-run-a-boarding-barn/"
-      ],
-      "families": [
-        "boarding",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0080",
-      "ledger_id": "uniqueness-0080",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/boarding/what-liability-does-a-trainer-have/",
-      "members": [
-        "/boarding/what-liability-does-a-trainer-have/",
-        "/reference/what-liability-does-a-trainer-have/"
-      ],
-      "families": [
-        "boarding",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0081",
-      "ledger_id": "uniqueness-0081",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
-      "members": [
-        "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
-        "/reference/what-should-be-included-in-a-horse-bill-of-sale/"
-      ],
-      "families": [
-        "faq",
-        "reference"
-      ],
-      "reasons": [
-        "duplicate_title"
-      ],
-      "maximum_body_similarity": null,
-      "suggested_actions": [
-        "noindex_keep_llm",
-        "canonical_to_primary",
-        "differentiate_patch"
-      ],
-      "recommendation": "Review whether reference routes should be differentiated, canonicalized, noindexed, or consolidated into the strongest primary answer. No change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0082",
-      "ledger_id": "uniqueness-0082",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
-      "members": [
-        "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
-        "/reference/who-pays-vet-bills-while-a-horse-is-boarded/"
       ],
       "families": [
         "boarding",
