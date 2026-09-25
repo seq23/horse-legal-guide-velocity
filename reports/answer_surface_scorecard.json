@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T11:26:08.000Z",
+  "generated_at": "2026-09-25T21:01:20.000Z",
   "mode": "internal_readiness_baseline",
   "clusters": [
     {
@@ -96,14 +96,12 @@
       "query_families": [
         "choose_or_best",
         "comparison",
-        "cost_or_damages",
         "eligibility_or_claim",
         "timeline_or_process"
       ],
       "answer_shapes": [
         "top_checklist",
         "top_comparison_table",
-        "top_cost_table",
         "top_decision_tree",
         "top_timeline"
       ],
@@ -238,14 +236,12 @@
       "query_families": [
         "choose_or_best",
         "comparison",
-        "cost_or_damages",
         "eligibility_or_claim",
         "timeline_or_process"
       ],
       "answer_shapes": [
         "top_checklist",
         "top_comparison_table",
-        "top_cost_table",
         "top_decision_tree",
         "top_timeline"
       ],
@@ -442,14 +438,12 @@
         "choose_or_best",
         "comparison",
         "eligibility_or_claim",
-        "red_flags",
         "timeline_or_process"
       ],
       "answer_shapes": [
         "top_checklist",
         "top_comparison_table",
         "top_decision_tree",
-        "top_red_flags_block",
         "top_timeline"
       ],
       "target_pages": [
@@ -538,14 +532,12 @@
       "query_families": [
         "choose_or_best",
         "eligibility_or_claim",
-        "red_flags",
-        "timeline_or_process"
+        "red_flags"
       ],
       "answer_shapes": [
         "top_checklist",
         "top_decision_tree",
-        "top_red_flags_block",
-        "top_timeline"
+        "top_red_flags_block"
       ],
       "target_pages": [
         "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",

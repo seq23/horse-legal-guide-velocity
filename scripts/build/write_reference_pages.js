@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
+const { fitDescription, withSubject } = require('../lib/meta_text');
 const { renderModule, quickAnswerForPage } = require('../lib/answer_shape');
 const { validatePostRenderPage } = require('./validate_page_contract_post_render');
 const { findManifest, loadPatchForManifest, loadPatchForSlug, applyZoneOperations } = require('../lib/page_patch_utils');
@@ -87,7 +88,16 @@ ${wayfindingNav(cluster)}`;
         intro: `Other published surfaces filed under ${cluster.replace(/-/g, ' ')}, and the neighbouring topic hubs.`,
         items: topUp,
       })}`;
-      const html=renderLayout({title:entry.primary_query,description:`Signal reference for ${entry.primary_query}`.slice(0,155),url:`/reference/${slug}/`,body,schemaType:'FAQPage'});
+      // A reference surface renders its mapped page's own answer and says the
+      // full explanation lives there, so it is a copy of that page: canonical
+      // to it (and write_sitemaps.js leaves it out of the sitemap). Before
+      // this, 78 /reference/ pages carried the same title as their mapped page
+      // and both claimed to be canonical.
+      const description=fitDescription([
+        withSubject(entry.primary_query, quickAnswerForPage(pageModel)),
+        `Reference question filed under ${cluster.replace(/-/g,' ')} on Horse Legal Guide.`
+      ], `/reference/${slug}/`);
+      const html=renderLayout({title:entry.primary_query,description,url:`/reference/${slug}/`,canonicalUrl:targetUrl,body,schemaType:'FAQPage'});
       const filePath = path.join(targetDir,'index.html');
       fs.writeFileSync(filePath, html);
       results.push({ page: pageModel, filePath, html, queryFamily: answerShape.queryFamily, moduleType: answerShape.moduleType, validation: validatePostRenderPage({ page: pageModel, filePath, html }) });

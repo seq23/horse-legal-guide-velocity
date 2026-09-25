@@ -73,8 +73,21 @@ function resolveLastmods(distDir, canonicalDomain, urls) {
   return lastmods;
 }
 
+// A page whose canonical names another URL is a copy of that URL (the
+// /reference/ surfaces, see write_reference_pages.js). Listing it in the
+// sitemap would ask a crawler to index a URL the page itself says not to, so
+// only self-canonical pages are advertised, here and in the IndexNow batch.
+function isSelfCanonical(distDir, canonicalDomain, url) {
+  const rendered = path.join(distDir, url === '/' ? '' : url, 'index.html');
+  if (!fs.existsSync(rendered)) return true;
+  const m = fs.readFileSync(rendered, 'utf8').match(/<link rel="canonical" href="([^"]+)"/i);
+  if (!m) return true;
+  const own = `${canonicalDomain}${url === '/' ? '' : url}`.replace(/\/$/, '');
+  return m[1].replace(/\/$/, '') === own;
+}
+
 function writeSitemaps(distDir, canonicalDomain) {
-  const urls = collectHtmlUrls(distDir);
+  const urls = collectHtmlUrls(distDir).filter((url) => isSelfCanonical(distDir, canonicalDomain, url));
   const lastmods = resolveLastmods(distDir, canonicalDomain, urls);
   const pageEntries = urls.map((url) => {
     const loc = `${canonicalDomain}${url === '/' ? '' : url}`;

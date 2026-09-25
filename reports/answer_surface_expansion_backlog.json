@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T11:26:08.000Z",
+  "generated_at": "2026-09-25T21:01:20.000Z",
   "items": [
     {
       "priority_rank": 1,
@@ -67,13 +67,12 @@
       "status": "ready_but_unobserved",
       "dominant_query_families": [
         "comparison",
-        "eligibility_or_claim",
-        "timeline_or_process"
+        "choose_or_best",
+        "eligibility_or_claim"
       ],
       "recommended_actions": [
         "Run external citation observations for the seeded queries in this cluster to replace the current unobserved baseline.",
-        "Prioritize stronger head-to-head comparison tables and verdict blocks for comparison-heavy queries.",
-        "Strengthen timeline modules with named phases and fork logic for process-heavy queries."
+        "Prioritize stronger head-to-head comparison tables and verdict blocks for comparison-heavy queries."
       ]
     },
     {
@@ -82,8 +81,8 @@
       "priority_score": 0,
       "status": "ready_but_unobserved",
       "dominant_query_families": [
-        "comparison",
         "eligibility_or_claim",
+        "comparison",
         "choose_or_best"
       ],
       "recommended_actions": [

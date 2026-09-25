@@ -43,11 +43,27 @@ function requiredTopModuleForFamily(family) {
   return familyMap[family]?.required_top_module || 'top_checklist';
 }
 
+// The title ("Demand Letter vs Lawsuit") names the two sides cleanly; the
+// primary query wraps them in a question ("How should someone compare demand
+// letter vs lawsuit in an equine legal situation?"), and splitting that on "vs"
+// put the whole question into the published answer: "How should someone
+// compare demand letter and lawsuit in an equine legal situation? are not
+// interchangeable." Try the title first and strip the question frame.
 function comparisonSides(page) {
-  const raw = sentenceCase(page.primary_query || page.title || '');
-  const match = raw.split(/\s+vs\.?\s+/i);
-  if (match.length >= 2) {
-    return { left: sentenceCase(match[0]), right: sentenceCase(match.slice(1).join(' vs ')) };
+  for (const source of [page.title, page.primary_query]) {
+    const raw = String(source || '')
+      .replace(/^\s*how (?:should|do|can) (?:someone|i|you|we) compare\s+/i, '')
+      .replace(/\s+(?:in|for) an? [^?]*\?*\s*$/i, '')
+      .replace(/[?.!]+\s*$/, '')
+      .trim();
+    const match = raw.split(/\s+vs\.?\s+/i);
+    if (match.length >= 2 && match[0] && match[1]) {
+      return { left: sentenceCase(match[0]), right: sentenceCase(match.slice(1).join(' vs ')) };
+    }
+    // "Do I need both a waiver and insurance ..." published "option one and
+    // option two are not interchangeable" before this.
+    const both = raw.match(/\bboth\s+(.+?)\s+and\s+(.+)$/i);
+    if (both) return { left: sentenceCase(both[1]).replace(/^\w/, (c) => c.toUpperCase()), right: sentenceCase(both[2]) };
   }
   return { left: 'option one', right: 'option two' };
 }
