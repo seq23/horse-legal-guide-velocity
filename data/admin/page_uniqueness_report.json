@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-25T21:01:20.000Z",
+  "generated_at": "2026-09-25T22:11:35.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "cb0564c348d8ca4559b5c2c2b7496f59351a0d8b100bfc0c495906d021e3ce69",
+  "source_fingerprint": "fdd8d288b9dfec7e2e1d9a045cd90f0088b30f29b0cbe1cf3d4d44e140afd88b",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
@@ -672,6 +672,18 @@
       "title_b": "What Does Illinois Equine Liability Law Cover?"
     },
     {
+      "a": "/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/",
+      "b": "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8909,
+      "cosine_similarity": 0.8968,
+      "shingle_similarity": 0.8798,
+      "intent_similarity": 0.2727,
+      "title_a": "A therapeutic riding program uses volunteers and minors",
+      "title_b": "A therapeutic riding program collects health information"
+    },
+    {
       "a": "/business/how-to-start-a-training-barn-legally/",
       "b": "/business/how-to-start-a-boarding-barn-legally/",
       "family_a": "business",
@@ -718,18 +730,6 @@
       "intent_similarity": 0.2,
       "title_a": "What Does North Carolina Equine Liability Law Cover?",
       "title_b": "Do I Need a Horse Sale Contract in North Carolina?"
-    },
-    {
-      "a": "/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/",
-      "b": "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.888,
-      "cosine_similarity": 0.8925,
-      "shingle_similarity": 0.8798,
-      "intent_similarity": 0.2727,
-      "title_a": "A therapeutic riding program uses volunteers and minors. What should be checked?",
-      "title_b": "A therapeutic riding program collects health information. What should be reviewed?"
     },
     {
       "a": "/business/how-to-start-a-horse-retail-business/",
@@ -1560,18 +1560,6 @@
       "title_b": "How Do I Legally Start a Horse Business?"
     },
     {
-      "a": "/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
-      "b": "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8625,
-      "cosine_similarity": 0.9055,
-      "shingle_similarity": 0.7826,
-      "intent_similarity": 0.2727,
-      "title_a": "The buyer moved the horse before the dispute started. Why does that matter?",
-      "title_b": "A farrier or vet dispute affects a horse sale. What documents matter?"
-    },
-    {
       "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
       "b": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
       "family_a": "scenario",
@@ -1582,6 +1570,18 @@
       "intent_similarity": 0,
       "title_a": "What If I Already Signed Something I Did Not Understand?",
       "title_b": "I Sold a Horse Without a Contract — Am I Screwed?"
+    },
+    {
+      "a": "/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
+      "b": "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8619,
+      "cosine_similarity": 0.9062,
+      "shingle_similarity": 0.7795,
+      "intent_similarity": 0.2727,
+      "title_a": "The buyer moved the horse before the dispute started",
+      "title_b": "A farrier or vet dispute affects a horse sale. What documents matter?"
     },
     {
       "a": "/liability/do-i-need-insurance-for-my-horse-business/",
@@ -1680,18 +1680,6 @@
       "title_b": "Can a Sponsor Use My Image Without Permission?"
     },
     {
-      "a": "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
-      "b": "/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8583,
-      "cosine_similarity": 0.8981,
-      "shingle_similarity": 0.7842,
-      "intent_similarity": 0.3333,
-      "title_a": "Horse business partners are disagreeing. What documents matter?",
-      "title_b": "A horse business mixes personal and business money. Why does that matter?"
-    },
-    {
       "a": "/faq/what-should-be-included-in-a-horse-sale-contract/",
       "b": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
       "family_a": "faq",
@@ -1726,6 +1714,18 @@
       "intent_similarity": 0.5,
       "title_a": "Do I Need a Liability Waiver in South Carolina?",
       "title_b": "Can I Be Sued in South Carolina If I Have a Waiver?"
+    },
+    {
+      "a": "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
+      "b": "/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8573,
+      "cosine_similarity": 0.8983,
+      "shingle_similarity": 0.7812,
+      "intent_similarity": 0.3333,
+      "title_a": "Horse business partners are disagreeing. What documents matter?",
+      "title_b": "A horse business mixes personal and business money"
     },
     {
       "a": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
@@ -1764,6 +1764,18 @@
       "title_b": "Do I Need an LLC to Start a Horse Business?"
     },
     {
+      "a": "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
+      "b": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8566,
+      "cosine_similarity": 0.9269,
+      "shingle_similarity": 0.7261,
+      "intent_similarity": 0.25,
+      "title_a": "I received a demand letter about a horse dispute",
+      "title_b": "A demand letter has a deadline. What should be prioritized?"
+    },
+    {
       "a": "/leases/who-is-liable-during-a-horse-lease/",
       "b": "/leases/can-you-end-a-horse-lease-early/",
       "family_a": "leases",
@@ -1774,18 +1786,6 @@
       "intent_similarity": 0.4,
       "title_a": "Who Is Liable During a Horse Lease?",
       "title_b": "Can You End a Horse Lease Early?"
-    },
-    {
-      "a": "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
-      "b": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8558,
-      "cosine_similarity": 0.9256,
-      "shingle_similarity": 0.7261,
-      "intent_similarity": 0.25,
-      "title_a": "I received a demand letter about a horse dispute. What should I do first?",
-      "title_b": "A demand letter has a deadline. What should be prioritized?"
     },
     {
       "a": "/ip/how-do-i-protect-my-horse-business-brand/",

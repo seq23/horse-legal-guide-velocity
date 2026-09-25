@@ -97,7 +97,10 @@ ${wayfindingNav(cluster)}`;
         withSubject(entry.primary_query, quickAnswerForPage(pageModel)),
         `Reference question filed under ${cluster.replace(/-/g,' ')} on Horse Legal Guide.`
       ], `/reference/${slug}/`);
-      const html=renderLayout({title:entry.primary_query,description,url:`/reference/${slug}/`,canonicalUrl:targetUrl,body,schemaType:'FAQPage'});
+      // The <title> is the mapped page's own title: this page is its copy, and
+      // the raw query patterns ran to 115 characters ("How should someone
+      // compare ... in an equine legal situation?"). The H1 keeps the query.
+      const html=renderLayout({title:target.title||entry.primary_query,description,url:`/reference/${slug}/`,canonicalUrl:targetUrl,body,schemaType:'FAQPage'});
       const filePath = path.join(targetDir,'index.html');
       fs.writeFileSync(filePath, html);
       results.push({ page: pageModel, filePath, html, queryFamily: answerShape.queryFamily, moduleType: answerShape.moduleType, validation: validatePostRenderPage({ page: pageModel, filePath, html }) });

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-25T21:01:20.000Z",
-  "measurement_fingerprint": "cb0564c348d8ca4559b5c2c2b7496f59351a0d8b100bfc0c495906d021e3ce69",
+  "generated_at": "2026-09-25T22:11:35.000Z",
+  "measurement_fingerprint": "fdd8d288b9dfec7e2e1d9a045cd90f0088b30f29b0cbe1cf3d4d44e140afd88b",
   "title": "LLM Citation Velocity Dashboard",
   "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, page uniqueness, and workflow trace next steps.",
   "truth_boundary": "Scores are regenerated from the current repo files and freshly rendered dist HTML on every release build. Existing-page similarity findings are advisory and require owner approval before any live change. Draft similarity is automatically repaired before approval eligibility. These local measurements do not prove live GitHub Actions, live GSC, Bing, or IndexNow until those provider workflows run after apply.",
@@ -22,7 +22,7 @@
   ],
   "health": {
     "citation_velocity": 99,
-    "seo": 84,
+    "seo": 78,
     "aeo": 100,
     "geo": 100,
     "routing_contact": 100,
@@ -41,7 +41,7 @@
     "title_present": 561,
     "description_present": 561,
     "canonical_present": 561,
-    "duplicate_title_groups": 78,
+    "duplicate_title_groups": 262,
     "duplicate_description_groups": 94,
     "high_similarity_pairs": 160,
     "intent_overlap_pairs": 14,
@@ -107,7 +107,7 @@
   },
   "panels": {
     "seo": {
-      "score": 84,
+      "score": 78,
       "instructions": "Improve rendered title/meta/canonical coverage, sitemap parity, duplicate metadata warnings, body similarity, intent overlap, and crawl/index readiness. Existing-page findings remain owner-reviewed."
     },
     "aeo": {
@@ -175,7 +175,7 @@
         "https://github.com/seq23/horse-legal-guide-velocity/edit/main/scripts/build/write_pages.js",
         "https://github.com/seq23/horse-legal-guide-velocity/edit/main/scripts/build/write_reference_pages.js"
       ],
-      "source_metric": "78 duplicate title groups",
+      "source_metric": "262 duplicate title groups",
       "measurement": ""
     },
     {
