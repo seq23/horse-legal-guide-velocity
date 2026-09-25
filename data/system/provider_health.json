@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-24T14:37:17.500Z",
+  "generated_at": "2026-09-25T14:35:42.983Z",
   "providers": {
     "openrouter_web_search": {
       "state": "CONNECTED",
@@ -13,7 +13,7 @@
       }
     },
     "gemini_grounded_search": {
-      "state": "DEGRADED",
+      "state": "DISCONNECTED",
       "configured": true,
       "role": "fallback_citation_observer",
       "note": "Grounded google_search tool use returns 429 RESOURCE_EXHAUSTED on this project; plain generateContent returns 200.",
@@ -24,7 +24,7 @@
       }
     },
     "live_query_observer": {
-      "state": "DEGRADED",
+      "state": "CONNECTED",
       "stop": null,
       "primary_provider": "openrouter_web_search",
       "capabilities": {
