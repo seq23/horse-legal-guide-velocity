@@ -13,7 +13,11 @@
 //      the page) holds an entry the page does not answer, unless it is an editorial
 //      paraphrase listed for that page in data/queries/editorial_page_questions.json;
 //   5. a question removed from a page (data/community/requeued_page_questions.json)
-//      reaches neither the new-page queue nor a hold against a page: it was lost.
+//      reaches neither the new-page queue nor a hold against a page: it was lost;
+//   6. a normalized question has no row in the question queue
+//      (data/community/publish_queue.json). Pins 2026-09-26: publish:mode overwrote
+//      that file with page targets (an empty list once every page was approved), so
+//      checks 3 and 5 examined an empty queue and the Draft Queue Refresh lane went red.
 const fs = require('fs');
 const path = require('path');
 const { mapSignals, buildIndex, matchQuestion } = require('../../scripts/community/map_signals_to_targets');
@@ -63,6 +67,12 @@ function findQuestionQueueProblems(root = process.cwd()) {
 
   for (const e of findUnansweredEntries(targets, editorial)) {
     problems.push(`Live page ${e.slug} lists "${e.query}", which it does not answer. Run npm run clean:page-questions.`);
+  }
+
+  const queuedIds = new Set(publishQueue.map((q) => q.normalized_id).filter(Boolean));
+  const missing = normalized.filter((n) => !queuedIds.has(n.normalized_id));
+  if (missing.length) {
+    problems.push(`${missing.length} of ${normalized.length} normalized question(s) have no row in data/community/publish_queue.json (first: "${missing[0].preserved_query || missing[0].normalized_query}"). Only npm run map:signals may write that file.`);
   }
 
   const routed = new Set([...approvalQueue, ...publishQueue].map((q) => q.requeued_id).filter(Boolean));

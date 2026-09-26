@@ -120,8 +120,8 @@
     },
     {
       "path": "scripts/publishing/finalize_approved_pages.js",
-      "sha256": "087aec3030590934343c2eb4fc3a86c9e81c8c1e18c69e49385fb182428299a0",
-      "bytes": 304
+      "sha256": "5ab3d5a8ee4d764078c588ca580d79a7cc36142f2206249b0f9656296d0d7c2a",
+      "bytes": 922
     },
     {
       "path": "scripts/publishing/route_to_queue.js",
@@ -130,13 +130,14 @@
     },
     {
       "path": "scripts/publishing/run_mode_pipeline.js",
-      "sha256": "823d856ec05cc3eccf6adbbcf1b4839fc45ac012111af34d031cca4e07876279",
+      "sha256": "6f94bb95ba3b510ab094e51d2e5711a3349d0111fcd3e60c748fb9916c223735",
       "bytes": 1230
     }
   ],
-  "baseline_refreshed_at": "2026-08-27T16:27:04.459619Z",
-  "baseline_reason": "Gave Draft Queue Refresh a cadence. The workflow generated drafts every day at 11:15 with no ceiling: 306 drafts now sit in content/drafts/generated, every one pending, while the last client approval was 2026-04-29 - 17 weeks and 0 approvals ago. It was producing into a queue nobody is emptying, and a 307th draft makes review less likely rather than more. scripts/cadence/draft_queue_gate.mjs now reports the queue and the Generate drafts step is conditional on it; the gate never fails, because a full queue is a decision waiting on the client and not a broken build. Nothing about approval or publishing changed: validate_publish_safety_gate.js still blocks every non-approved route from public output, review_status still only becomes 'approved' through scripts/admin/*, and those remain reachable exclusively by workflow_dispatch. Only the drafts-refresh workflow's hash moved, and only to add the gate and commit reports/cadence.",
+  "baseline_refreshed_at": "2026-09-26T12:17:09.974895Z",
+  "baseline_reason": "Stopped publish:mode wiping the question queue. finalize_approved_pages.js overwrote data/community/publish_queue.json (the per-question queue written by scripts/community/map_signals_to_targets.js) with the unapproved page targets; with every page approved that list was empty, so each Draft Queue Refresh run emptied the question queue before validate:all and validate:question-queue failed on 2026-09-26 (requeued question 'in neither queue'). The page-level review list now goes to data/publish_state.json as last_queue_count and last_queue_slugs; routeToQueue, applyPublishingMode and classifyRisk are unchanged, so which pages publish and the manual approval path are exactly as before. Only finalize_approved_pages.js and run_mode_pipeline.js hashes moved.",
   "baseline_refresh_changed_files": [
-    ".github/workflows/drafts-refresh.yml"
+    "scripts/publishing/finalize_approved_pages.js",
+    "scripts/publishing/run_mode_pipeline.js"
   ]
 }

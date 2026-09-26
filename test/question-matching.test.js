@@ -180,3 +180,65 @@ test('validator fails when a requeued question reaches neither queue', () => {
   fs.writeFileSync(path.join(root, 'data/community/publish_queue.json'), '[]');
   assert.ok(findQuestionQueueProblems(root).problems.some((p) => /Requeued question/.test(p)));
 });
+
+// ---- the question queue has one writer (2026-09-26) ----
+// publish:mode (scripts/publishing/run_mode_pipeline.js) used to overwrite
+// data/community/publish_queue.json with unapproved page targets - an empty list
+// once every page was approved - so the Draft Queue Refresh lane wiped the question
+// queue and failed validate:question-queue. Both tests run the real entry points.
+const { execFileSync } = require('child_process');
+
+function publishModeIn(root) {
+  execFileSync(process.execPath, [path.join(repo, 'scripts/publishing/run_mode_pipeline.js')], { cwd: root, stdio: 'pipe' });
+}
+
+for (const [label, approveAll] of [['every page approved', true], ['a page still pending', false]]) {
+  test(`publish:mode leaves the question queue untouched (${label})`, () => {
+    const targets = JSON.parse(JSON.stringify(realTargets));
+    for (const t of targets) t.review_status = 'approved';
+    if (!approveAll) targets[0].review_status = 'pending';
+    const root = fixture([question(KICKS, 'norm_kicks')], targets, {
+      'data/system/config.json': JSON.parse(fs.readFileSync(path.join(repo, 'data/system/config.json'), 'utf8')),
+      'data/community/requeued_page_questions.json': [{ requeued_id: 'requeued_x', question: 'Who owns a foal born during a lease?', removed_from: '/x/' }]
+    });
+    mapIn(root);
+    const queueFile = path.join(root, 'data/community/publish_queue.json');
+    const before = fs.readFileSync(queueFile, 'utf8');
+    assert.ok(JSON.parse(before).length > 0, 'fixture must hold a non-empty question queue');
+    publishModeIn(root);
+    assert.equal(fs.readFileSync(queueFile, 'utf8'), before);
+    assert.deepEqual(findQuestionQueueProblems(root).problems, []);
+    const state = JSON.parse(fs.readFileSync(path.join(root, 'data/publish_state.json'), 'utf8'));
+    assert.equal(state.last_queue_count, approveAll ? 0 : 1);
+    assert.deepEqual(state.last_queue_slugs, approveAll ? [] : [targets[0].slug]);
+  });
+}
+
+test('only map:signals writes data/community/publish_queue.json', () => {
+  const files = [];
+  const walk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { if (e.name !== 'node_modules') walk(full); } else if (/\.(c|m)?js$/.test(e.name)) files.push(full);
+    }
+  };
+  walk(path.join(repo, 'scripts'));
+  assert.ok(files.length > 50, `scanned only ${files.length} script(s); the ownership check examined nothing`);
+  // A writer is a file whose write call targets publish_queue.json directly or via
+  // a variable that was assigned a path containing it.
+  const writesQueue = (src) => {
+    const pathVars = [...src.matchAll(/(?:const|let|var)\s+(\w+)\s*=[^;\n]*publish_queue\.json/g)].map((m) => m[1]);
+    return [...src.matchAll(/(?:writeFileSync|writeJson|writeFile)\s*\(\s*([^,)]+)/g)]
+      .some((m) => /publish_queue\.json/.test(m[1]) || pathVars.includes(m[1].trim()));
+  };
+  const writers = files.filter((f) => writesQueue(fs.readFileSync(f, 'utf8'))).map((f) => path.relative(repo, f));
+  assert.deepEqual(writers, ['scripts/community/map_signals_to_targets.js']);
+});
+
+test('validator fails when a normalized question has no row in the question queue', () => {
+  const root = fixture([question(KICKS, 'norm_kicks')]);
+  mapIn(root);
+  assert.deepEqual(findQuestionQueueProblems(root).problems, []);
+  fs.writeFileSync(path.join(root, 'data/community/publish_queue.json'), '[]');
+  assert.ok(findQuestionQueueProblems(root).problems.some((p) => /have no row in data\/community\/publish_queue\.json/.test(p)));
+});
