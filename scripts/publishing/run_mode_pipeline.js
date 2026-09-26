@@ -18,8 +18,8 @@ function main() {
   const withRisk = pages.map((page) => ({ ...page, risk_level: classifyRisk(page) }));
   const withMode = applyPublishingMode(withRisk);
   const { toPublish, toQueue } = routeToQueue(withMode);
-  finalizeApprovedPages(toQueue);
-  updatePublishState({ last_publish_completed_at: new Date().toISOString(), last_publish_status: 'passed', last_publish_candidate_count: toPublish.length, last_queue_count: toQueue.length });
+  const pageReview = finalizeApprovedPages(toQueue);
+  updatePublishState({ last_publish_completed_at: new Date().toISOString(), last_publish_status: 'passed', last_publish_candidate_count: toPublish.length, ...pageReview });
   console.log(`Publish: ${toPublish.length}`);
   console.log(`Queue: ${toQueue.length}`);
 }
