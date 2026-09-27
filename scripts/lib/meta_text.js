@@ -40,6 +40,14 @@ function shortenTitle(t) {
   if (t.length <= TITLE_MAX) return t;
   const first = t.split(/(?<=[.!?])\s+/)[0].replace(/\.$/, '').trim();
   if (first !== t && first.length <= TITLE_MAX && first.length >= TITLE_MIN) return first;
+  // Keep a complete subject before a long editorial subtitle as the search title.
+  // The page H1 retains the full headline.
+  const subject = t.split(':')[0].trim();
+  if (subject !== t && subject.length <= TITLE_MAX && subject.length >= TITLE_MIN) return subject;
+  // Some approved editorial headlines have no punctuation break. Preserve whole
+  // words and leave the unshortened source title visible in the page heading.
+  const wordBoundary = t.lastIndexOf(' ', TITLE_MAX);
+  if (wordBoundary >= TITLE_MIN) return t.slice(0, wordBoundary).trim();
   throw new Error(`title is ${t.length} characters (max ${TITLE_MAX}) and has no leading sentence of ${TITLE_MIN}-${TITLE_MAX} characters to stand for it: "${t}"`);
 }
 

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { fitTitle } = require('../lib/meta_text');
 const {
   readJson, writeJson, readText, loadBacklog, loadCalendar, saveBacklog, saveCalendar, syncCalendar,
   wordCount, advisoryWordBand, canonicalRoutingPresent, dataAtomPresent, directAnswerPresent,
@@ -25,6 +26,10 @@ function prevalidate(entry) {
   if (!rel) hard_fails.push('missing github_path');
   if (!raw.trim()) hard_fails.push('draft file missing or blank');
   if (!entry.title) hard_fails.push('missing title');
+  if (entry.title) {
+    try { fitTitle(entry.title); }
+    catch (error) { hard_fails.push(`search title cannot be rendered: ${error.message}`); }
+  }
   if (!entry.entry_id) hard_fails.push('missing entry_id');
   if (!entry.content_type) hard_fails.push('missing content_type');
   if (!['pending', 'approved', 'rejected', 'needs_revision', 'published'].includes(entry.status || 'pending')) warnings.push(`non-standard status: ${entry.status}`);
