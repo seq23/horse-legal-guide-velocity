@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-27T18:03:56.000Z",
-  "measurement_fingerprint": "e275f185cb8f5b74bd9d873ddf055fb957c3a1102cbff65e859f0c9e55ba15ac",
+  "generated_at": "2026-09-27T18:30:36.000Z",
+  "measurement_fingerprint": "f4a01f020870969cfe93f7707c9e5699e72534ad7469e23eb52d55f7aa687198",
   "title": "LLM Citation Velocity Dashboard",
   "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, page uniqueness, and workflow trace next steps.",
   "truth_boundary": "Scores are regenerated from the current repo files and freshly rendered dist HTML on every release build. Existing-page similarity findings are advisory and require owner approval before any live change. Draft similarity is automatically repaired before approval eligibility. These local measurements do not prove live GitHub Actions, live GSC, Bing, or IndexNow until those provider workflows run after apply.",
@@ -22,7 +22,7 @@
   ],
   "health": {
     "citation_velocity": 99,
-    "seo": 78,
+    "seo": 79,
     "aeo": 100,
     "geo": 100,
     "routing_contact": 100,
@@ -35,12 +35,12 @@
     "metadata_completeness": 100
   },
   "metrics": {
-    "rendered_public_pages": 563,
-    "total_html_pages": 563,
-    "sitemap_url_count": 302,
-    "title_present": 563,
-    "description_present": 563,
-    "canonical_present": 563,
+    "rendered_public_pages": 585,
+    "total_html_pages": 585,
+    "sitemap_url_count": 324,
+    "title_present": 585,
+    "description_present": 585,
+    "canonical_present": 585,
     "duplicate_title_groups": 262,
     "duplicate_description_groups": 94,
     "high_similarity_pairs": 160,
@@ -48,10 +48,10 @@
     "uniqueness_review_clusters": 27,
     "drafts_automatically_differentiated": 212,
     "draft_uniqueness_failures": 0,
-    "jsonld_present": 563,
-    "article_schema_pages": 563,
-    "breadcrumb_schema_pages": 563,
-    "internal_link_healthy_pages": 563,
+    "jsonld_present": 585,
+    "article_schema_pages": 585,
+    "breadcrumb_schema_pages": 585,
+    "internal_link_healthy_pages": 585,
     "zero_internal_link_pages": 0,
     "weak_internal_link_pages": 0,
     "draft_items": 330,
@@ -77,8 +77,8 @@
   },
   "summary": {
     "total": 330,
-    "pending": 327,
-    "approved": 3,
+    "pending": 305,
+    "approved": 25,
     "rejected": 0,
     "needs_revision": 0,
     "approval_eligible": 330,
@@ -107,7 +107,7 @@
   },
   "panels": {
     "seo": {
-      "score": 78,
+      "score": 79,
       "instructions": "Improve rendered title/meta/canonical coverage, sitemap parity, duplicate metadata warnings, body similarity, intent overlap, and crawl/index readiness. Existing-page findings remain owner-reviewed."
     },
     "aeo": {
@@ -229,6 +229,8 @@
         "/scenario/do-people-actually-get-sued-over-horse-deals/",
         "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
         "/leases/what-should-be-included-in-a-barn-lease/",
+        "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+        "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
         "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
         "/leases/what-liability-applies-in-a-horse-property-lease/",
         "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
@@ -261,10 +263,6 @@
         "/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/",
         "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
         "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
-        "/authority/",
-        "/articles/",
-        "/whitepapers/",
-        "/articles/",
         "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
         "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
         "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
@@ -272,7 +270,9 @@
         "/state/south-carolina/do-i-need-a-liability-waiver/",
         "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
         "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
-        "/therapeutic/do-i-need-insurance-for-therapeutic-riding/"
+        "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
+        "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+        "/scenario/am-i-overreacting-or-is-this-risky/"
       ],
       "bulk_fix_available": false,
       "action_label": "",
