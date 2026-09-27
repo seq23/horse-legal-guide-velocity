@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-09-27T14:23:59.000Z",
+  "generated_at": "2026-09-27T14:35:29.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-09-27T14:26:29.544Z",
-      "age_hours": 0,
+      "age_hours": 0.1,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-09-27T14:26:29.544Z",
-      "age_hours": 0,
+      "age_hours": 0.1,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-09-27T14:26:29.544Z",
-      "age_hours": 0,
+      "age_hours": 0.1,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -1608,12 +1608,12 @@
       "metadata_completeness": 100
     },
     "seo_metrics": {
-      "rendered_public_pages": 561,
-      "total_html_pages": 561,
-      "sitemap_url_count": 300,
-      "title_present": 561,
-      "description_present": 561,
-      "canonical_present": 561,
+      "rendered_public_pages": 562,
+      "total_html_pages": 562,
+      "sitemap_url_count": 301,
+      "title_present": 562,
+      "description_present": 562,
+      "canonical_present": 562,
       "duplicate_title_groups": 262,
       "duplicate_description_groups": 94,
       "high_similarity_pairs": 160,
@@ -1621,10 +1621,10 @@
       "uniqueness_review_clusters": 27,
       "drafts_automatically_differentiated": 212,
       "draft_uniqueness_failures": 0,
-      "jsonld_present": 561,
-      "article_schema_pages": 561,
-      "breadcrumb_schema_pages": 561,
-      "internal_link_healthy_pages": 561,
+      "jsonld_present": 562,
+      "article_schema_pages": 562,
+      "breadcrumb_schema_pages": 562,
+      "internal_link_healthy_pages": 562,
       "zero_internal_link_pages": 0,
       "weak_internal_link_pages": 0,
       "draft_items": 330,
@@ -1649,7 +1649,7 @@
       "github_actions_simulation_failures": 0
     },
     "page_uniqueness": {
-      "indexable_pages_measured": 299,
+      "indexable_pages_measured": 300,
       "duplicate_title_groups": 1,
       "duplicate_description_groups": 0,
       "high_similarity_pairs": 160,
@@ -1717,7 +1717,7 @@
         "intent_overlap_pair_memberships": 0
       },
       "insights": {
-        "pages": 2,
+        "pages": 3,
         "duplicate_title_memberships": 0,
         "high_similarity_pair_memberships": 0,
         "intent_overlap_pair_memberships": 0
