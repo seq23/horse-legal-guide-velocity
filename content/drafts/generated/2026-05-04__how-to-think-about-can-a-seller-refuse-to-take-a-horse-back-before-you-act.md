@@ -3,12 +3,12 @@ title: How to Think About Can a Seller Refuse to Take a Horse Back Before You Ac
 entry_id: draft-insight-2026-05-04-can-a-seller-refuse-to-take-a-horse-back
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-04
 source_cluster: horse-sale-and-purchase
 source_page_id: can-a-seller-refuse-to-take-a-horse-back
 slug: /drafts/2026-05-04/how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-04__how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act.md
 ---
 # How to Think About Can a Seller Refuse to Take a Horse Back Before You Act

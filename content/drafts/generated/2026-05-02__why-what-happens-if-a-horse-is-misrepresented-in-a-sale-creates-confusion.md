@@ -3,12 +3,12 @@ title: Why What Happens If a Horse Is Misrepresented in a Sale Creates Confusion
 entry_id: draft-insight-2026-05-02-what-happens-if-a-horse-is-misrepresented-in-a-sale
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-02
 source_cluster: horse-sale-and-purchase
 source_page_id: what-happens-if-a-horse-is-misrepresented-in-a-sale
 slug: /drafts/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-02__why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion.md
 ---
 # Why What Happens If a Horse Is Misrepresented in a Sale Creates Confusion

@@ -3,12 +3,12 @@ title: What Equestrians Often Miss About Is a Verbal Agreement Legally Binding i
 entry_id: draft-insight-2026-04-30-is-a-verbal-agreement-legally-binding-in-a-horse-sale
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-04-30
 source_cluster: horse-sale-and-purchase
 source_page_id: is-a-verbal-agreement-legally-binding-in-a-horse-sale
 slug: /drafts/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-04-30__what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale.md
 ---
 # What Equestrians Often Miss About Is a Verbal Agreement Legally Binding in a Horse Sale

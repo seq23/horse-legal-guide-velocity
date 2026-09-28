@@ -3,12 +3,12 @@ title: White Paper: Boarding, Training & Barn Operations - A Decision Framework 
 entry_id: draft-whitepaper-2026-05-01-boarding-training-and-barn-operations
 content_type: whitepaper
 cadence: monthly
-status: pending
+status: approved
 scheduled_date: 2026-05-01
 source_cluster: boarding-training-and-barn-operations
 source_page_id: 
 slug: /drafts/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-01__white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world.md
 ---
 # White Paper: Boarding, Training & Barn Operations - A Decision Framework for the Horse World

@@ -3,12 +3,12 @@ title: Where Who Is Responsible After a Horse Sale Is Completed Usually Goes Sid
 entry_id: draft-insight-2026-04-29-who-is-responsible-after-a-horse-sale-is-completed
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-04-29
 source_cluster: horse-sale-and-purchase
 source_page_id: who-is-responsible-after-a-horse-sale-is-completed
 slug: /drafts/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-04-29__where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways.md
 uniqueness_status: passed
 uniqueness_strategy: insurance-liability
@@ -20,7 +20,7 @@ uniqueness_strategy: insurance-liability
 
 The practical question behind **Who Is Responsible After a Horse Sale Is Completed** is not answered safely by repeating a general horse-contract overview. This version focuses on how injury, coverage, waiver language, and responsibility allocation affect risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Insurance, injury, and liability allocation
 

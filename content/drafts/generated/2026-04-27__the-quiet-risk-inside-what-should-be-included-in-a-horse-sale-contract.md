@@ -3,12 +3,12 @@ title: The Quiet Risk Inside What Should Be Included in a Horse Sale Contract
 entry_id: draft-insight-2026-04-27-what-should-be-included-in-a-horse-sale-contract
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-04-27
 source_cluster: horse-sale-and-purchase
 source_page_id: what-should-be-included-in-a-horse-sale-contract
 slug: /drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-04-27__the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract.md
 ---
 # The Quiet Risk Inside What Should Be Included in a Horse Sale Contract

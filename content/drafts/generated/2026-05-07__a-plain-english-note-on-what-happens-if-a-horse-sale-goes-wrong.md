@@ -3,12 +3,12 @@ title: Money, possession, and risk transfer for What Happens If a Horse Sale Goe
 entry_id: draft-insight-2026-05-07-what-happens-if-a-horse-sale-goes-wrong
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-07
 source_cluster: horse-sale-and-purchase
 source_page_id: what-happens-if-a-horse-sale-goes-wrong
 slug: /drafts/2026-05-07/a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-07__a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong.md
 uniqueness_status: passed
 uniqueness_strategy: money-risk-transfer
@@ -20,7 +20,7 @@ uniqueness_strategy: money-risk-transfer
 
 The practical question behind **What Happens If a Horse Sale Goes Wrong** is not answered safely by repeating a general horse-contract overview. This version focuses on when money, possession, care duties, and loss exposure move from one party to another. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Money, possession, and risk transfer
 

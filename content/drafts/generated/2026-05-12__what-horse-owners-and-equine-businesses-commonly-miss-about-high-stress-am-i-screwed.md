@@ -3,12 +3,12 @@ title: What Horse Owners and Equine Businesses Commonly Miss About High-Stress /
 entry_id: draft-article-2026-05-12-emotional-am-i-screwed
 content_type: article
 cadence: weekly
-status: pending
+status: approved
 scheduled_date: 2026-05-12
 source_cluster: emotional-am-i-screwed
 source_page_id: 
 slug: /drafts/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-12__what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed.md
 ---
 # What Horse Owners and Equine Businesses Commonly Miss About High-Stress / “Am I Screwed?”

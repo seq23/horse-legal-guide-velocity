@@ -3,12 +3,12 @@ title: Why What If I Sold a Horse Without a Contract Creates Confusion
 entry_id: draft-insight-2026-05-08-what-if-i-sold-a-horse-without-a-contract
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-08
 source_cluster: horse-sale-and-purchase
 source_page_id: what-if-i-sold-a-horse-without-a-contract
 slug: /drafts/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-08__why-what-if-i-sold-a-horse-without-a-contract-creates-confusion.md
 ---
 # Why What If I Sold a Horse Without a Contract Creates Confusion

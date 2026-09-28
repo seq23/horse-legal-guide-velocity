@@ -3,12 +3,12 @@ title: Why What Should Be Included in a Horse Bill of Sale Creates Confusion
 entry_id: draft-insight-2026-04-26-what-should-be-included-in-a-horse-bill-of-sale
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-04-26
 source_cluster: horse-sale-and-purchase
 source_page_id: what-should-be-included-in-a-horse-bill-of-sale
 slug: /drafts/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-04-26__why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion.md
 ---
 # Why What Should Be Included in a Horse Bill of Sale Creates Confusion

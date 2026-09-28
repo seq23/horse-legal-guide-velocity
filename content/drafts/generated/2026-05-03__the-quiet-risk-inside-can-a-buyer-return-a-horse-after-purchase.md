@@ -3,12 +3,12 @@ title: The Quiet Risk Inside Can a Buyer Return a Horse After Purchase
 entry_id: draft-insight-2026-05-03-can-a-buyer-return-a-horse-after-purchase
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-03
 source_cluster: horse-sale-and-purchase
 source_page_id: can-a-buyer-return-a-horse-after-purchase
 slug: /drafts/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-03__the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase.md
 ---
 # The Quiet Risk Inside Can a Buyer Return a Horse After Purchase

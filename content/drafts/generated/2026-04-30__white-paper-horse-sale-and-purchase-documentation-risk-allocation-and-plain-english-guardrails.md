@@ -3,12 +3,12 @@ title: White Paper: Horse Sale & Purchase - Documentation, Risk Allocation, and 
 entry_id: draft-whitepaper-2026-04-30-horse-sale-and-purchase
 content_type: whitepaper
 cadence: monthly
-status: pending
+status: approved
 scheduled_date: 2026-04-30
 source_cluster: horse-sale-and-purchase
 source_page_id: what-happens-if-a-horse-sale-goes-wrong
 slug: /drafts/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-04-30__white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails.md
 ---
 # White Paper: Horse Sale & Purchase - Documentation, Risk Allocation, and Plain-English Guardrails

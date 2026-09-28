@@ -3,12 +3,12 @@ title: A Practical Framework for Demand Letters & Disputes
 entry_id: draft-article-2026-05-05-demand-letters-and-disputes
 content_type: article
 cadence: weekly
-status: pending
+status: approved
 scheduled_date: 2026-05-05
 source_cluster: demand-letters-and-disputes
 source_page_id: 
 slug: /drafts/2026-05-05/a-practical-framework-for-demand-letters-disputes/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-05__a-practical-framework-for-demand-letters-disputes.md
 ---
 # A Practical Framework for Demand Letters & Disputes

@@ -3,12 +3,12 @@ title: The Quiet Risk Inside What If I Bought a Horse Without a Contract
 entry_id: draft-insight-2026-05-09-what-if-i-bought-a-horse-without-a-contract
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-09
 source_cluster: horse-sale-and-purchase
 source_page_id: what-if-i-bought-a-horse-without-a-contract
 slug: /drafts/2026-05-09/the-quiet-risk-inside-what-if-i-bought-a-horse-without-a-contract/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-09__the-quiet-risk-inside-what-if-i-bought-a-horse-without-a-contract.md
 uniqueness_status: passed
 uniqueness_strategy: document-architecture
@@ -20,7 +20,7 @@ uniqueness_strategy: document-architecture
 
 The practical question behind **What If I Bought a Horse Without a Contract** is not answered safely by repeating a general horse-contract overview. This version focuses on which documents work together, which terms are absent, and which informal messages may matter. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/, while remaining educational and approval-gated.
+This draft is intentionally scoped to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Document architecture and missing terms
 

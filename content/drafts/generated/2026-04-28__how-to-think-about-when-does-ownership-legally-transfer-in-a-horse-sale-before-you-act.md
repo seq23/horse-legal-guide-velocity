@@ -3,12 +3,12 @@ title: How to Think About When Does Ownership Legally Transfer in a Horse Sale B
 entry_id: draft-insight-2026-04-28-when-does-ownership-legally-transfer-in-a-horse-sale
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-04-28
 source_cluster: horse-sale-and-purchase
 source_page_id: when-does-ownership-legally-transfer-in-a-horse-sale
 slug: /drafts/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-04-28__how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act.md
 uniqueness_status: passed
 uniqueness_strategy: operations-handoff
@@ -20,7 +20,7 @@ uniqueness_strategy: operations-handoff
 
 The practical question behind **When Does Ownership Legally Transfer in a Horse Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /faq/when-does-ownership-legally-transfer-in-a-horse-sale/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Operational handoff and responsibility map
 

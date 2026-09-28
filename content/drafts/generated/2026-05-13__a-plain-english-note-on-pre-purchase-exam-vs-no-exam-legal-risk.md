@@ -3,12 +3,12 @@ title: A Plain-English Note on Pre-Purchase Exam vs No Exam: Legal Risk
 entry_id: draft-insight-2026-05-13-pre-purchase-exam-vs-no-exam-legal-risk
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-13
 source_cluster: horse-sale-and-purchase
 source_page_id: pre-purchase-exam-vs-no-exam-legal-risk
 slug: /drafts/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-13__a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk.md
 ---
 # A Plain-English Note on Pre-Purchase Exam vs No Exam: Legal Risk

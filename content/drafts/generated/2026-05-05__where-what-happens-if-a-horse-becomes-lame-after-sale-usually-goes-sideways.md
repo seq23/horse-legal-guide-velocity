@@ -3,12 +3,12 @@ title: Where What Happens If a Horse Becomes Lame After Sale Usually Goes Sidewa
 entry_id: draft-insight-2026-05-05-what-happens-if-a-horse-becomes-lame-after-sale
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-05
 source_cluster: horse-sale-and-purchase
 source_page_id: what-happens-if-a-horse-becomes-lame-after-sale
 slug: /drafts/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-05__where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways.md
 uniqueness_status: passed
 uniqueness_strategy: insurance-liability
@@ -20,7 +20,7 @@ uniqueness_strategy: insurance-liability
 
 The practical question behind **What Happens If a Horse Becomes Lame After Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on how injury, coverage, waiver language, and responsibility allocation affect risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Insurance, injury, and liability allocation
 

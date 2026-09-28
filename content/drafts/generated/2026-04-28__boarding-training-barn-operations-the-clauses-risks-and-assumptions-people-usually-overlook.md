@@ -3,12 +3,12 @@ title: Boarding, Training & Barn Operations: The Clauses, Risks, and Assumptions
 entry_id: draft-article-2026-04-28-boarding-training-and-barn-operations
 content_type: article
 cadence: weekly
-status: pending
+status: approved
 scheduled_date: 2026-04-28
 source_cluster: boarding-training-and-barn-operations
 source_page_id: 
 slug: /drafts/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-04-28__boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook.md
 ---
 # Boarding, Training & Barn Operations: The Clauses, Risks, and Assumptions People Usually Overlook

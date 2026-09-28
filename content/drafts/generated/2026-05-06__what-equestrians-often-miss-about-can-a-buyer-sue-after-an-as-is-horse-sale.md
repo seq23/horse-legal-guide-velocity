@@ -3,12 +3,12 @@ title: What Equestrians Often Miss About Can a Buyer Sue After an As-Is Horse Sa
 entry_id: draft-insight-2026-05-06-can-a-buyer-sue-after-an-as-is-horse-sale
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-06
 source_cluster: horse-sale-and-purchase
 source_page_id: can-a-buyer-sue-after-an-as-is-horse-sale
 slug: /drafts/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-06__what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale.md
 uniqueness_status: passed
 uniqueness_strategy: notice-communication
@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Can a Buyer Sue After an “As-Is” Horse Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 

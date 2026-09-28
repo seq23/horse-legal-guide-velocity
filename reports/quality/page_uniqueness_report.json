@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-25T22:11:35.000Z",
+  "generated_at": "2026-09-27T18:36:16.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "fdd8d288b9dfec7e2e1d9a045cd90f0088b30f29b0cbe1cf3d4d44e140afd88b",
+  "source_fingerprint": "f4a01f020870969cfe93f7707c9e5699e72534ad7469e23eb52d55f7aa687198",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
   },
   "metrics": {
-    "indexable_pages_measured": 299,
+    "indexable_pages_measured": 323,
     "duplicate_title_groups": 1,
     "duplicate_description_groups": 0,
     "high_similarity_pairs": 160,
@@ -17,15 +17,15 @@
   },
   "family_metrics": {
     "articles": {
-      "pages": 1,
+      "pages": 4,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 2,
+      "high_similarity_pair_memberships": 0,
       "intent_overlap_pair_memberships": 0
     },
     "authority": {
       "pages": 1,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 2,
+      "high_similarity_pair_memberships": 0,
       "intent_overlap_pair_memberships": 0
     },
     "boarding": {
@@ -77,9 +77,9 @@
       "intent_overlap_pair_memberships": 0
     },
     "insights": {
-      "pages": 2,
+      "pages": 21,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 0,
+      "high_similarity_pair_memberships": 6,
       "intent_overlap_pair_memberships": 0
     },
     "ip": {
@@ -137,9 +137,9 @@
       "intent_overlap_pair_memberships": 0
     },
     "whitepapers": {
-      "pages": 1,
+      "pages": 3,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 2,
+      "high_similarity_pair_memberships": 0,
       "intent_overlap_pair_memberships": 0
     }
   },
@@ -190,6 +190,18 @@
       "intent_similarity": 0.4,
       "title_a": "Who Is Responsible for Repairs in a Barn Lease?",
       "title_b": "What Should Be Included in a Barn Lease?"
+    },
+    {
+      "a": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "b": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+      "family_a": "insights",
+      "family_b": "insights",
+      "body_similarity": 0.936,
+      "cosine_similarity": 0.9524,
+      "shingle_similarity": 0.9056,
+      "intent_similarity": 0.1429,
+      "title_a": "What Equestrians Often Miss About Is a Verbal Agreement Legally",
+      "title_b": "The Quiet Risk Inside What Should Be Included in a Horse Sale Contract"
     },
     {
       "a": "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
@@ -382,30 +394,6 @@
       "intent_similarity": 0,
       "title_a": "What If I Already Signed Something I Did Not Understand?",
       "title_b": "Do People Actually Get Sued Over Horse Deals Like This?"
-    },
-    {
-      "a": "/authority/",
-      "b": "/articles/",
-      "family_a": "authority",
-      "family_b": "articles",
-      "body_similarity": 0.9048,
-      "cosine_similarity": 0.9363,
-      "shingle_similarity": 0.8462,
-      "intent_similarity": 0.4,
-      "title_a": "Equine Law Authority Briefs |",
-      "title_b": "Equine Law Articles |"
-    },
-    {
-      "a": "/whitepapers/",
-      "b": "/articles/",
-      "family_a": "whitepapers",
-      "family_b": "articles",
-      "body_similarity": 0.9048,
-      "cosine_similarity": 0.9363,
-      "shingle_similarity": 0.8462,
-      "intent_similarity": 0.4,
-      "title_a": "Equine Law White Papers |",
-      "title_b": "Equine Law Articles |"
     },
     {
       "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
@@ -780,18 +768,6 @@
       "title_b": "Can I Back Out of a Horse Deal Without Getting Sued?"
     },
     {
-      "a": "/whitepapers/",
-      "b": "/authority/",
-      "family_a": "whitepapers",
-      "family_b": "authority",
-      "body_similarity": 0.8845,
-      "cosine_similarity": 0.9166,
-      "shingle_similarity": 0.825,
-      "intent_similarity": 0.3333,
-      "title_a": "Equine Law White Papers |",
-      "title_b": "Equine Law Authority Briefs |"
-    },
-    {
       "a": "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
       "b": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
       "family_a": "therapeutic",
@@ -1090,6 +1066,18 @@
       "intent_similarity": 0.4286,
       "title_a": "What Legal Documents Do I Need for a Horse Business?",
       "title_b": "Do I Need an LLC to Start a Horse Business?"
+    },
+    {
+      "a": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+      "family_a": "insights",
+      "family_b": "insights",
+      "body_similarity": 0.8764,
+      "cosine_similarity": 0.9139,
+      "shingle_similarity": 0.8069,
+      "intent_similarity": 0.3,
+      "title_a": "The Quiet Risk Inside What Should Be Included in a Horse Sale Contract",
+      "title_b": "Why What Should Be Included in a Horse Bill of Sale Creates Confusion"
     },
     {
       "a": "/ip/should-i-trademark-my-barn-name/",
@@ -1954,6 +1942,18 @@
       "intent_similarity": 0.3333,
       "title_a": "What Should Be Included in a Horse Sale Contract?",
       "title_b": "Do I Need a Contract to Sell a Horse?"
+    },
+    {
+      "a": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+      "family_a": "insights",
+      "family_b": "insights",
+      "body_similarity": 0.8522,
+      "cosine_similarity": 0.8814,
+      "shingle_similarity": 0.7979,
+      "intent_similarity": 0.1538,
+      "title_a": "What Equestrians Often Miss About Is a Verbal Agreement Legally",
+      "title_b": "Why What Should Be Included in a Horse Bill of Sale Creates Confusion"
     },
     {
       "a": "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",

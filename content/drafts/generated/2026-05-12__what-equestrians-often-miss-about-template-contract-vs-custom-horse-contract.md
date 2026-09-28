@@ -3,12 +3,12 @@ title: What Equestrians Often Miss About Template Contract vs Custom Horse Contr
 entry_id: draft-insight-2026-05-12-template-contract-vs-custom-horse-contract
 content_type: insight
 cadence: daily
-status: pending
+status: approved
 scheduled_date: 2026-05-12
 source_cluster: horse-sale-and-purchase
 source_page_id: template-contract-vs-custom-horse-contract
 slug: /drafts/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/
-review_status: pending
+review_status: approved
 github_path: content/drafts/generated/2026-05-12__what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract.md
 ---
 # What Equestrians Often Miss About Template Contract vs Custom Horse Contract
