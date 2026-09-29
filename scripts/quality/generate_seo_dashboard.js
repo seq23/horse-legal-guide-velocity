@@ -44,7 +44,9 @@ function main(){
   const sitemap=sitemapFiles.map(f=>read(f,'')).join('\n');
   const sitemapLocs=uniq([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]));
   const sitemapPaths=sitemapLocs.map(u=>{try{return new URL(u).pathname.replace(/\/$/,'/')}catch{return u}});
-  const publicPages=pageRows.filter(p=>!p.path.startsWith('/admin')&&!p.path.startsWith('/agency'));
+  // Search metadata requirements apply to indexable pages. The noindex 404
+  // intentionally has no canonical; counting it made a second warm build fail.
+  const publicPages=pageRows.filter(p=>!p.path.startsWith('/admin')&&!p.path.startsWith('/agency')&&!/\bnoindex\b/i.test(p.robots));
   const titlePresent=publicPages.filter(p=>p.title).length;
   const descPresent=publicPages.filter(p=>p.description).length;
   const canonicalPresent=publicPages.filter(p=>p.canonical).length;
