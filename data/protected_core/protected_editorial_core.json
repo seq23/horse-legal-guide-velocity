@@ -10,8 +10,8 @@
     },
     {
       "path": ".github/workflows/drafts-refresh.yml",
-      "sha256": "00e974ad462f073adc67b906caefb54665954cba3460d26a3a6393aa7fb69a75",
-      "bytes": 2830
+      "sha256": "7a0e0e8138807ec6b74ee6217bb0c157193e06afe39c468b72e9f88c5b0fcf12",
+      "bytes": 3090
     },
     {
       "path": ".github/workflows/publish.yml",
@@ -139,5 +139,6 @@
   "baseline_refresh_changed_files": [
     "scripts/publishing/finalize_approved_pages.js",
     "scripts/publishing/run_mode_pipeline.js"
-  ]
+  ],
+  "baseline_refresh_reason": "Scoped owner-requested red-on-main repair: run Draft Queue Refresh on main changes to its metadata renderer, dashboard, regression test, or workflow. All approval gates, cadence, and protected editorial identity records remain unchanged."
 }

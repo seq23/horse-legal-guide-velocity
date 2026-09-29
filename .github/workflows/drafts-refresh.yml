@@ -2,6 +2,14 @@ name: Draft Queue Refresh
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/build/write_editorial_pages.js
+      - scripts/lib/meta_text.js
+      - scripts/quality/generate_seo_dashboard.js
+      - test/search-metadata-release.test.js
+      - .github/workflows/drafts-refresh.yml
   schedule:
     - cron: "15 11 * * *"
 
