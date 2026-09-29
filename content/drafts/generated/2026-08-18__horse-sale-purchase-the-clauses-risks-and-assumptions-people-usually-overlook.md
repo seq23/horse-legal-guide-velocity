@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Horse Sale & Purchase: The Clauses, Risks, and Assumptions People Usually Overlook** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-06-02/a-practical-framework-for-horse-sale-purchase/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-07-21/demand-letters-disputes-the-clauses-risks-and-assumptions-people-usually-overlook/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 

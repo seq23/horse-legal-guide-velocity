@@ -20,7 +20,7 @@ uniqueness_strategy: operations-handoff
 
 The practical question behind **Is It Too Late to Fix a Bad Horse Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-08-05/a-plain-english-note-on-is-it-too-late-to-fix-a-bad-horse-sale/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-10-21/what-equestrians-often-miss-about-how-do-i-get-a-sponsorship-for-horse-riding/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Operational handoff and responsibility map
 

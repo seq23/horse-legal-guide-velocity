@@ -20,7 +20,7 @@ uniqueness_strategy: insurance-liability
 
 The practical question behind **A Practical Framework for Equine Business Formation** is not answered safely by repeating a general horse-contract overview. This version focuses on how injury, coverage, waiver language, and responsibility allocation affect risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-05-19/equine-business-formation-a-plain-english-guide-to-the-parts-that-usually-matter-most/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-08-04/what-horse-owners-and-equine-businesses-commonly-miss-about-equine-business-formation/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Insurance, injury, and liability allocation
 

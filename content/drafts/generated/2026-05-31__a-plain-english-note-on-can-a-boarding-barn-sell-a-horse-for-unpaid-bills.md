@@ -20,7 +20,7 @@ uniqueness_strategy: evidence-timeline
 
 The practical question behind **Can a Boarding Barn Sell a Horse for Unpaid Bills** is not answered safely by repeating a general horse-contract overview. This version focuses on how the chronology, records, and sequence of events change the practical risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-05-25/a-plain-english-note-on-what-should-be-included-in-a-horse-boarding-agreement/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how the chronology, records, and sequence of events change the practical risk. It is designed to be materially distinct from /drafts/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Evidence and timeline audit
 

@@ -20,7 +20,7 @@ uniqueness_strategy: insurance-liability
 
 The practical question behind **White Paper: Liability, Waivers & Insurance - Risk Allocation, Documentation, and Plain-English Guardrails** is not answered safely by repeating a general horse-contract overview. This version focuses on how injury, coverage, waiver language, and responsibility allocation affect risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-06-30/quarterly-authority-brief-liability-waivers-and-insurance-a-strategic-plain-english-review/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-09-27/what-equestrians-often-miss-about-what-is-the-equine-activity-liability-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Insurance, injury, and liability allocation
 
