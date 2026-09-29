@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-28T13:46:23.443Z",
-  "total_signals": 3464,
+  "generated_at": "2026-09-29T13:46:21.711Z",
+  "total_signals": 3485,
   "signals_by_source": {
-    "reddit_equestrian": 1618,
+    "reddit_equestrian": 1638,
     "reddit_horses": 687,
     "forum_the_horse_forum": 30,
     "forum_chronicle_of_the_horse": 30,
@@ -14,35 +14,35 @@
     "reddit_legaladvice": 223,
     "reddit_smallbusiness": 219,
     "reddit_farming_ranching": 103,
-    "forum_horse_and_hound": 66
+    "forum_horse_and_hound": 67
   },
   "signals_by_platform": {
-    "reddit": 2850,
-    "equestrian_forums": 126,
+    "reddit": 2870,
+    "equestrian_forums": 127,
     "google_paa": 34,
     "serp_competitors": 207,
     "youtube": 189,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1410,
-  "duplicates_collapsed": 2054,
+  "normalized_count": 1415,
+  "duplicates_collapsed": 2070,
   "pages_created": 0,
   "pages_strengthened": 250,
   "rejected_signals": 0,
-  "pending_owner_review": 1154,
+  "pending_owner_review": 1159,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 722
+      "count": 723
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 227
+      "count": 230
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 176
+      "count": 177
     },
     {
       "name": "horse-sale-and-purchase",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1618
+      "count": 1638
     },
     {
       "name": "reddit_horses",
@@ -104,7 +104,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 66
+      "count": 67
     },
     {
       "name": "google_paa_manual_or_provider",
@@ -191,7 +191,7 @@
       "platform": "serp_competitors",
       "status": "success_with_data",
       "count": 7,
-      "error": "2 of 8 cited page(s) failed to fetch."
+      "error": "3 of 8 cited page(s) failed to fetch."
     },
     {
       "source_key": "youtube_search_comments",
@@ -22248,6 +22248,71 @@
       "llm_bait_phrase": "Boarding barn is closing - how much notice do they have to give and what happens to my horse",
       "source_signal_ids": [
         "google_paa_manual_or_provider_boarding-barn-is-closing-how-much-notice-do-they-hav_e6fe5577"
+      ]
+    },
+    {
+      "approval_id": "approval_1410_handling-pressure-to-lease",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3465_955d9a1d79",
+      "proposed_slug": "/faq/handling-pressure-to-lease/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Handling pressure to lease — what should I know?",
+      "llm_bait_phrase": "Handling pressure to lease",
+      "source_signal_ids": [
+        "reddit_equestrian_handling-pressure-to-lease-https-www-reddit-com-r-eq_0fae24a7"
+      ]
+    },
+    {
+      "approval_id": "approval_1411_seeking-trainer-training-recommendations-in-va",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3466_e3a77dc98b",
+      "proposed_slug": "/faq/seeking-trainer-training-recommendations-in-va/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "seeking trainer/ training recommendations in VA — what should I know?",
+      "llm_bait_phrase": "seeking trainer/ training recommendations in VA",
+      "source_signal_ids": [
+        "reddit_equestrian_seeking-trainer-training-recommendations-in-va-https_16b030fe"
+      ]
+    },
+    {
+      "approval_id": "approval_1412_this-is-what-desensitization-training-with-a-draft",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3470_0f318a016d",
+      "proposed_slug": "/faq/this-is-what-desensitization-training-with-a-draft-horse-looks-like/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "This is what desensitization training with a draft horse looks Like… — what should I know?",
+      "llm_bait_phrase": "This is what desensitization training with a draft horse looks Like…",
+      "source_signal_ids": [
+        "reddit_equestrian_this-is-what-desensitization-training-with-a-draft-h_c4bb672d"
+      ]
+    },
+    {
+      "approval_id": "approval_1413_recommended-horse-trainers-near-salt-lake-city",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3475_425bcb380c",
+      "proposed_slug": "/faq/recommended-horse-trainers-near-salt-lake-city/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Recommended horse trainers near Salt Lake City — what should I know?",
+      "llm_bait_phrase": "Recommended horse trainers near Salt Lake City",
+      "source_signal_ids": [
+        "reddit_equestrian_recommended-horse-trainers-near-salt-lake-city-https_fe391bd2"
+      ]
+    },
+    {
+      "approval_id": "approval_1414_over-cooked-or-over-horsed",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3484_98c7bf862a",
+      "proposed_slug": "/faq/over-cooked-or-over-horsed/",
+      "cluster": "state-specific",
+      "question": "Over-cooked, or over-horsed — what should I know?",
+      "llm_bait_phrase": "Over-cooked, or over-horsed",
+      "source_signal_ids": [
+        "forum_horse_and_hound_over-cooked-or-over-horsed-https-forums-horseandhoun_f4893118"
       ]
     }
   ]
