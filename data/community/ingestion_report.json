@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-29T13:46:21.711Z",
-  "total_signals": 3485,
+  "generated_at": "2026-09-30T13:44:20.595Z",
+  "total_signals": 3509,
   "signals_by_source": {
-    "reddit_equestrian": 1638,
+    "reddit_equestrian": 1658,
     "reddit_horses": 687,
     "forum_the_horse_forum": 30,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 34,
     "serp_competitor_research": 207,
-    "youtube_search_comments": 189,
+    "youtube_search_comments": 193,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 223,
@@ -17,32 +17,32 @@
     "forum_horse_and_hound": 67
   },
   "signals_by_platform": {
-    "reddit": 2870,
+    "reddit": 2890,
     "equestrian_forums": 127,
     "google_paa": 34,
     "serp_competitors": 207,
-    "youtube": 189,
+    "youtube": 193,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1415,
-  "duplicates_collapsed": 2070,
+  "normalized_count": 1426,
+  "duplicates_collapsed": 2083,
   "pages_created": 0,
   "pages_strengthened": 250,
   "rejected_signals": 0,
-  "pending_owner_review": 1159,
+  "pending_owner_review": 1170,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 723
+      "count": 729
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 230
+      "count": 234
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 177
+      "count": 178
     },
     {
       "name": "horse-sale-and-purchase",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1638
+      "count": 1658
     },
     {
       "name": "reddit_horses",
@@ -96,7 +96,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 189
+      "count": 193
     },
     {
       "name": "reddit_farming_ranching",
@@ -191,7 +191,7 @@
       "platform": "serp_competitors",
       "status": "success_with_data",
       "count": 7,
-      "error": "3 of 8 cited page(s) failed to fetch."
+      "error": "4 of 8 cited page(s) failed to fetch."
     },
     {
       "source_key": "youtube_search_comments",
@@ -22313,6 +22313,149 @@
       "llm_bait_phrase": "Over-cooked, or over-horsed",
       "source_signal_ids": [
         "forum_horse_and_hound_over-cooked-or-over-horsed-https-forums-horseandhoun_f4893118"
+      ]
+    },
+    {
+      "approval_id": "approval_1415_loose-horses",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3485_308a4fc1de",
+      "proposed_slug": "/faq/loose-horses/",
+      "cluster": "state-specific",
+      "question": "Loose Horses! — what should I know?",
+      "llm_bait_phrase": "Loose Horses!",
+      "source_signal_ids": [
+        "reddit_equestrian_loose-horses-https-www-reddit-com-r-equestrian-comme_2ffa4f93"
+      ]
+    },
+    {
+      "approval_id": "approval_1416_this-safe-for-the-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3487_df41b7913a",
+      "proposed_slug": "/faq/this-safe-for-the-horse/",
+      "cluster": "state-specific",
+      "question": "Is this safe for the horse?",
+      "llm_bait_phrase": "this safe for the horse",
+      "source_signal_ids": [
+        "reddit_equestrian_is-this-safe-for-the-horse-https-www-reddit-com-r-eq_70a7cd65"
+      ]
+    },
+    {
+      "approval_id": "approval_1417_horse-health-issues",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3494_9477f8db9c",
+      "proposed_slug": "/faq/horse-health-issues/",
+      "cluster": "state-specific",
+      "question": "Horse health issues — what should I know?",
+      "llm_bait_phrase": "Horse health issues",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-health-issues-https-www-reddit-com-r-equestria_ea568986"
+      ]
+    },
+    {
+      "approval_id": "approval_1418_anyone-else-play-horseland-in-the-early-2000-s",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3497_1cca63ef0b",
+      "proposed_slug": "/faq/anyone-else-play-horseland-in-the-early-2000-s/",
+      "cluster": "state-specific",
+      "question": "Anyone else play horseland in the early 2000's — what should I know?",
+      "llm_bait_phrase": "Anyone else play horseland in the early 2000's",
+      "source_signal_ids": [
+        "reddit_equestrian_anyone-else-play-horseland-in-the-early-2000-s-https_63cf60b5"
+      ]
+    },
+    {
+      "approval_id": "approval_1419_brand-new-lease-horse-topline-and-bitting-question",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3499_bf168b61a5",
+      "proposed_slug": "/faq/brand-new-lease-horse-topline-and-bitting-questions/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Brand new lease horse- topline and bitting questions — what should I know?",
+      "llm_bait_phrase": "Brand new lease horse- topline and bitting questions",
+      "source_signal_ids": [
+        "reddit_equestrian_brand-new-lease-horse-topline-and-bitting-questions-_6e1d8b43"
+      ]
+    },
+    {
+      "approval_id": "approval_1420_amish-horse-abuse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3500_63cddb6348",
+      "proposed_slug": "/faq/amish-horse-abuse/",
+      "cluster": "state-specific",
+      "question": "Amish Horse Abuse — what should I know?",
+      "llm_bait_phrase": "Amish Horse Abuse",
+      "source_signal_ids": [
+        "reddit_equestrian_amish-horse-abuse-https-www-reddit-com-r-equestrian-_4b48dbea"
+      ]
+    },
+    {
+      "approval_id": "approval_1421_pickles-vs-the-bag-training-update",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3504_d541947cad",
+      "proposed_slug": "/compare/pickles-vs-the-bag-training-update/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Pickles vs. The BAG (training update)",
+      "llm_bait_phrase": "Pickles vs. The BAG (training update)",
+      "source_signal_ids": [
+        "reddit_equestrian_pickles-vs-the-bag-training-update-https-www-reddit-_88c3450f"
+      ]
+    },
+    {
+      "approval_id": "approval_1422_to-sell-horse-services-without-discounting-yoursel",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3505_8eb7662d3e",
+      "proposed_slug": "/faq/to-sell-horse-services-without-discounting-yourself/",
+      "cluster": "state-specific",
+      "question": "How to Sell Horse Services Without Discounting Yourself?",
+      "llm_bait_phrase": "to Sell Horse Services Without Discounting Yourself",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-sell-horse-services-without-discounting-yours_edcde892"
+      ]
+    },
+    {
+      "approval_id": "approval_1423_fine-tuning-boarding-contracts",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3506_573a014141",
+      "proposed_slug": "/faq/fine-tuning-boarding-contracts/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Fine Tuning Boarding Contracts — what should I know?",
+      "llm_bait_phrase": "Fine Tuning Boarding Contracts",
+      "source_signal_ids": [
+        "youtube_search_comments_fine-tuning-boarding-contracts-https-www-youtube-com_68111957"
+      ]
+    },
+    {
+      "approval_id": "approval_1424_the-3-biggest-mistakes-boarding-stables-make-equin",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3507_b4db0c5c9a",
+      "proposed_slug": "/faq/the-3-biggest-mistakes-boarding-stables-make-equine-law-equine-liability-and-equine-inheri/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "The 3 Biggest Mistakes Boarding Stables Make | Equine Law, Equine Liability, And Equine Inherit Risk — what should I know?",
+      "llm_bait_phrase": "The 3 Biggest Mistakes Boarding Stables Make | Equine Law, Equine Liability, And Equine Inherit Risk",
+      "source_signal_ids": [
+        "youtube_search_comments_the-3-biggest-mistakes-boarding-stables-make-equine-_c8b5a3f1"
+      ]
+    },
+    {
+      "approval_id": "approval_1425_sail-boarding-liability-insurance",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3508_d9ba9a540e",
+      "proposed_slug": "/faq/sail-boarding-liability-insurance/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Sail Boarding Liability Insurance — what should I know?",
+      "llm_bait_phrase": "Sail Boarding Liability Insurance",
+      "source_signal_ids": [
+        "youtube_search_comments_sail-boarding-liability-insurance-https-www-youtube-_9cf57f05"
       ]
     }
   ]
