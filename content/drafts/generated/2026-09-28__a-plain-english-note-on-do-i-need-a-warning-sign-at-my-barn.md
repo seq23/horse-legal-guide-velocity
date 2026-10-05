@@ -20,7 +20,7 @@ uniqueness_strategy: business-governance
 
 The practical question behind **Do I Need a Warning Sign at My Barn** is not answered safely by repeating a general horse-contract overview. This version focuses on how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-06-13/why-do-i-need-a-warning-sign-at-my-barn-creates-confusion/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-08-29/a-plain-english-note-on-lease-to-purchase-vs-outright-purchase/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Business governance and repeatable process
 

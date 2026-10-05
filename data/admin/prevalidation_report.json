@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T10:27:01.958Z",
+  "generated_at": "2026-10-05T11:27:44.873Z",
   "policy": "prevalidation gates approval eligibility after automatic draft uniqueness self-healing; word count is warning-only; client approval and publication remain manual",
   "total": 347,
   "passed": 347,
@@ -24,7 +24,7 @@
         "strategy": "already_distinct",
         "repair_attempts": 0,
         "nearest_page": "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
-        "maximum_similarity": 0.7067,
+        "maximum_similarity": 0.8272,
         "threshold": 0.85
       },
       "scores": {
@@ -56,8 +56,8 @@
         "status": "passed",
         "strategy": "insurance-liability",
         "repair_attempts": 1,
-        "nearest_page": "/faq/do-i-need-a-contract-to-buy-a-horse/",
-        "maximum_similarity": 0.2452,
+        "nearest_page": "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
+        "maximum_similarity": 0.8173,
         "threshold": 0.85
       },
       "scores": {
@@ -88,7 +88,7 @@
         "strategy": "already_distinct",
         "repair_attempts": 0,
         "nearest_page": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
-        "maximum_similarity": 0.7075,
+        "maximum_similarity": 0.828,
         "threshold": 0.85
       },
       "scores": {
@@ -136,21 +136,23 @@
       "entry_id": "draft-article-2026-04-28-boarding-training-and-barn-operations",
       "title": "Boarding, Training & Barn Operations: The Clauses, Risks, and Assumptions People Usually Overlook",
       "content_type": "article",
-      "word_count": 1848,
+      "word_count": 1065,
       "advisory_word_band": {
         "soft_floor": 750,
         "soft_ceiling": 3500
       },
       "hard_fails": [],
-      "warnings": [],
+      "warnings": [
+        "draft automatically differentiated in 1 bounded repair attempt(s)"
+      ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "already_distinct",
-        "repair_attempts": 0,
+        "strategy": "business-governance",
+        "repair_attempts": 1,
         "nearest_page": "/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
-        "maximum_similarity": 0.8026,
+        "maximum_similarity": 0.225,
         "threshold": 0.85
       },
       "scores": {
@@ -182,8 +184,8 @@
         "status": "passed",
         "strategy": "operations-handoff",
         "repair_attempts": 1,
-        "nearest_page": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
-        "maximum_similarity": 0.2824,
+        "nearest_page": "/insights/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
+        "maximum_similarity": 0.8206,
         "threshold": 0.85
       },
       "scores": {
@@ -215,8 +217,8 @@
         "status": "passed",
         "strategy": "insurance-liability",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
-        "maximum_similarity": 0.6553,
+        "nearest_page": "/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
+        "maximum_similarity": 0.8179,
         "threshold": 0.85
       },
       "scores": {
@@ -246,8 +248,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
-        "maximum_similarity": 0.7895,
+        "nearest_page": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+        "maximum_similarity": 0.8254,
         "threshold": 0.85
       },
       "scores": {
@@ -264,29 +266,32 @@
       "entry_id": "draft-whitepaper-2026-04-30-horse-sale-and-purchase",
       "title": "White Paper: Horse Sale & Purchase - Documentation, Risk Allocation, and Plain-English Guardrails",
       "content_type": "whitepaper",
-      "word_count": 2744,
+      "word_count": 1037,
       "advisory_word_band": {
         "soft_floor": 1500,
         "soft_ceiling": 7500
       },
       "hard_fails": [],
-      "warnings": [],
+      "warnings": [
+        "draft automatically differentiated in 1 bounded repair attempt(s)",
+        "word count below advisory floor (1037 < 1500); warning only"
+      ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "already_distinct",
-        "repair_attempts": 0,
-        "nearest_page": "/whitepapers/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/",
-        "maximum_similarity": 0.8163,
+        "strategy": "operations-handoff",
+        "repair_attempts": 1,
+        "nearest_page": "/drafts/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
+        "maximum_similarity": 0.6768,
         "threshold": 0.85
       },
       "scores": {
-        "humanizationScore": 100,
-        "seoScore": 100,
+        "humanizationScore": 96,
+        "seoScore": 96,
         "aeoScore": 96,
         "geoScore": 96,
-        "llmCitationScore": 97,
+        "llmCitationScore": 96,
         "routingScore": 100,
         "legalSafetyScore": 100
       }
@@ -310,8 +315,8 @@
         "status": "passed",
         "strategy": "notice-communication",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
-        "maximum_similarity": 0.622,
+        "nearest_page": "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+        "maximum_similarity": 0.8227,
         "threshold": 0.85
       },
       "scores": {
@@ -328,29 +333,32 @@
       "entry_id": "draft-whitepaper-2026-05-01-boarding-training-and-barn-operations",
       "title": "White Paper: Boarding, Training & Barn Operations - A Decision Framework for the Horse World",
       "content_type": "whitepaper",
-      "word_count": 2733,
+      "word_count": 1070,
       "advisory_word_band": {
         "soft_floor": 1500,
         "soft_ceiling": 7500
       },
       "hard_fails": [],
-      "warnings": [],
+      "warnings": [
+        "draft automatically differentiated in 1 bounded repair attempt(s)",
+        "word count below advisory floor (1070 < 1500); warning only"
+      ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "already_distinct",
-        "repair_attempts": 0,
-        "nearest_page": "/whitepapers/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
-        "maximum_similarity": 0.8057,
+        "strategy": "due-diligence",
+        "repair_attempts": 1,
+        "nearest_page": "/drafts/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
+        "maximum_similarity": 0.6578,
         "threshold": 0.85
       },
       "scores": {
-        "humanizationScore": 100,
-        "seoScore": 100,
+        "humanizationScore": 96,
+        "seoScore": 96,
         "aeoScore": 96,
         "geoScore": 96,
-        "llmCitationScore": 97,
+        "llmCitationScore": 96,
         "routingScore": 100,
         "legalSafetyScore": 100
       }
@@ -372,8 +380,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
-        "maximum_similarity": 0.8269,
+        "nearest_page": "/insights/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/",
+        "maximum_similarity": 0.8315,
         "threshold": 0.85
       },
       "scores": {
@@ -390,21 +398,23 @@
       "entry_id": "draft-insight-2026-05-03-can-a-buyer-return-a-horse-after-purchase",
       "title": "The Quiet Risk Inside Can a Buyer Return a Horse After Purchase",
       "content_type": "insight",
-      "word_count": 1058,
+      "word_count": 1039,
       "advisory_word_band": {
         "soft_floor": 350,
         "soft_ceiling": 2000
       },
       "hard_fails": [],
-      "warnings": [],
+      "warnings": [
+        "draft automatically differentiated in 1 bounded repair attempt(s)"
+      ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "already_distinct",
-        "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
-        "maximum_similarity": 0.7482,
+        "strategy": "remedies-exit",
+        "repair_attempts": 1,
+        "nearest_page": "/drafts/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/",
+        "maximum_similarity": 0.6365,
         "threshold": 0.85
       },
       "scores": {
@@ -421,21 +431,23 @@
       "entry_id": "draft-insight-2026-05-04-can-a-seller-refuse-to-take-a-horse-back",
       "title": "How to Think About Can a Seller Refuse to Take a Horse Back Before You Act",
       "content_type": "insight",
-      "word_count": 1071,
+      "word_count": 1049,
       "advisory_word_band": {
         "soft_floor": 350,
         "soft_ceiling": 2000
       },
       "hard_fails": [],
-      "warnings": [],
+      "warnings": [
+        "draft automatically differentiated in 1 bounded repair attempt(s)"
+      ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "already_distinct",
-        "repair_attempts": 0,
-        "nearest_page": "/insights/2026-05-04/how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act/",
-        "maximum_similarity": 0.6808,
+        "strategy": "dispute-readiness",
+        "repair_attempts": 1,
+        "nearest_page": "/drafts/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
+        "maximum_similarity": 0.6355,
         "threshold": 0.85
       },
       "scores": {
@@ -452,21 +464,23 @@
       "entry_id": "draft-article-2026-05-05-demand-letters-and-disputes",
       "title": "A Practical Framework for Demand Letters & Disputes",
       "content_type": "article",
-      "word_count": 1798,
+      "word_count": 1026,
       "advisory_word_band": {
         "soft_floor": 750,
         "soft_ceiling": 3500
       },
       "hard_fails": [],
-      "warnings": [],
+      "warnings": [
+        "draft automatically differentiated in 1 bounded repair attempt(s)"
+      ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "already_distinct",
-        "repair_attempts": 0,
+        "strategy": "dispute-readiness",
+        "repair_attempts": 1,
         "nearest_page": "/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
-        "maximum_similarity": 0.7846,
+        "maximum_similarity": 0.2167,
         "threshold": 0.85
       },
       "scores": {
@@ -531,8 +545,8 @@
         "status": "passed",
         "strategy": "notice-communication",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
-        "maximum_similarity": 0.6555,
+        "nearest_page": "/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
+        "maximum_similarity": 0.8212,
         "threshold": 0.85
       },
       "scores": {
@@ -564,8 +578,8 @@
         "status": "passed",
         "strategy": "money-risk-transfer",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
-        "maximum_similarity": 0.673,
+        "nearest_page": "/insights/2026-05-07/a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong/",
+        "maximum_similarity": 0.8256,
         "threshold": 0.85
       },
       "scores": {
@@ -595,8 +609,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
-        "maximum_similarity": 0.8065,
+        "nearest_page": "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+        "maximum_similarity": 0.8255,
         "threshold": 0.85
       },
       "scores": {
@@ -628,8 +642,8 @@
         "status": "passed",
         "strategy": "document-architecture",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
-        "maximum_similarity": 0.6533,
+        "nearest_page": "/insights/2026-05-09/the-quiet-risk-inside-what-if-i-bought-a-horse-without-a-contract/",
+        "maximum_similarity": 0.8184,
         "threshold": 0.85
       },
       "scores": {
@@ -661,8 +675,8 @@
         "status": "passed",
         "strategy": "evidence-timeline",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
-        "maximum_similarity": 0.675,
+        "nearest_page": "/insights/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/",
+        "maximum_similarity": 0.8174,
         "threshold": 0.85
       },
       "scores": {
@@ -694,8 +708,8 @@
         "status": "passed",
         "strategy": "notice-communication",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/",
-        "maximum_similarity": 0.6741,
+        "nearest_page": "/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/",
+        "maximum_similarity": 0.8197,
         "threshold": 0.85
       },
       "scores": {
@@ -712,21 +726,23 @@
       "entry_id": "draft-article-2026-05-12-emotional-am-i-screwed",
       "title": "What Horse Owners and Equine Businesses Commonly Miss About High-Stress / “Am I Screwed?”",
       "content_type": "article",
-      "word_count": 1858,
+      "word_count": 1081,
       "advisory_word_band": {
         "soft_floor": 750,
         "soft_ceiling": 3500
       },
       "hard_fails": [],
-      "warnings": [],
+      "warnings": [
+        "draft automatically differentiated in 1 bounded repair attempt(s)"
+      ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "already_distinct",
-        "repair_attempts": 0,
+        "strategy": "business-governance",
+        "repair_attempts": 1,
         "nearest_page": "/articles/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
-        "maximum_similarity": 0.7888,
+        "maximum_similarity": 0.2431,
         "threshold": 0.85
       },
       "scores": {
@@ -756,8 +772,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
-        "maximum_similarity": 0.8018,
+        "nearest_page": "/insights/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/",
+        "maximum_similarity": 0.8374,
         "threshold": 0.85
       },
       "scores": {
@@ -788,7 +804,7 @@
         "strategy": "already_distinct",
         "repair_attempts": 0,
         "nearest_page": "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/",
-        "maximum_similarity": 0.7242,
+        "maximum_similarity": 0.8423,
         "threshold": 0.85
       },
       "scores": {
@@ -1227,8 +1243,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
-        "maximum_similarity": 0.8309,
+        "nearest_page": "/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
+        "maximum_similarity": 0.7773,
         "threshold": 0.85
       },
       "scores": {
@@ -1415,8 +1431,8 @@
         "status": "passed",
         "strategy": "evidence-timeline",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
-        "maximum_similarity": 0.6267,
+        "nearest_page": "/drafts/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
+        "maximum_similarity": 0.6408,
         "threshold": 0.85
       },
       "scores": {
@@ -1477,8 +1493,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/",
-        "maximum_similarity": 0.7773,
+        "nearest_page": "/whitepapers/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/",
+        "maximum_similarity": 0.7435,
         "threshold": 0.85
       },
       "scores": {
@@ -1508,8 +1524,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
-        "maximum_similarity": 0.8302,
+        "nearest_page": "/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
+        "maximum_similarity": 0.7878,
         "threshold": 0.85
       },
       "scores": {
@@ -1725,8 +1741,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/",
-        "maximum_similarity": 0.6661,
+        "nearest_page": "/drafts/2026-05-27/the-quiet-risk-inside-what-legal-documents-do-i-need-to-run-a-boarding-barn/",
+        "maximum_similarity": 0.6453,
         "threshold": 0.85
       },
       "scores": {
@@ -1758,8 +1774,8 @@
         "status": "passed",
         "strategy": "authority-roles",
         "repair_attempts": 1,
-        "nearest_page": "/liability/what-type-of-insurance-do-horse-owners-need/",
-        "maximum_similarity": 0.2016,
+        "nearest_page": "/drafts/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
+        "maximum_similarity": 0.7429,
         "threshold": 0.85
       },
       "scores": {
@@ -2512,8 +2528,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
-        "maximum_similarity": 0.8455,
+        "nearest_page": "/drafts/2026-06-02/a-practical-framework-for-horse-sale-purchase/",
+        "maximum_similarity": 0.8219,
         "threshold": 0.85
       },
       "scores": {
@@ -2667,8 +2683,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
-        "maximum_similarity": 0.6515,
+        "nearest_page": "/articles/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
+        "maximum_similarity": 0.6387,
         "threshold": 0.85
       },
       "scores": {
@@ -3362,7 +3378,7 @@
         "strategy": "notice-communication",
         "repair_attempts": 1,
         "nearest_page": "/drafts/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
-        "maximum_similarity": 0.1843,
+        "maximum_similarity": 0.6539,
         "threshold": 0.85
       },
       "scores": {
@@ -3615,8 +3631,8 @@
         "status": "passed",
         "strategy": "operations-handoff",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
-        "maximum_similarity": 0.1737,
+        "nearest_page": "/drafts/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
+        "maximum_similarity": 0.6718,
         "threshold": 0.85
       },
       "scores": {
@@ -3776,8 +3792,8 @@
         "status": "passed",
         "strategy": "remedies-exit",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-05-09/the-quiet-risk-inside-what-if-i-bought-a-horse-without-a-contract/",
-        "maximum_similarity": 0.6224,
+        "nearest_page": "/drafts/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/",
+        "maximum_similarity": 0.7792,
         "threshold": 0.85
       },
       "scores": {
@@ -3872,8 +3888,8 @@
         "status": "passed",
         "strategy": "money-risk-transfer",
         "repair_attempts": 1,
-        "nearest_page": "/business/how-to-start-an-equine-apparel-business/",
-        "maximum_similarity": 0.2256,
+        "nearest_page": "/drafts/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
+        "maximum_similarity": 0.6956,
         "threshold": 0.85
       },
       "scores": {
@@ -3905,8 +3921,8 @@
         "status": "passed",
         "strategy": "insurance-liability",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-06-09/what-horse-owners-and-equine-businesses-commonly-miss-about-intellectual-property-brand/",
-        "maximum_similarity": 0.7344,
+        "nearest_page": "/drafts/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
+        "maximum_similarity": 0.7429,
         "threshold": 0.85
       },
       "scores": {
@@ -5012,8 +5028,8 @@
         "status": "passed",
         "strategy": "operations-handoff",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-08-03/white-paper-equine-business-formation-a-decision-framework-for-the-horse-world/",
-        "maximum_similarity": 0.6616,
+        "nearest_page": "/drafts/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/",
+        "maximum_similarity": 0.7928,
         "threshold": 0.85
       },
       "scores": {
@@ -5724,8 +5740,8 @@
         "status": "passed",
         "strategy": "already_distinct",
         "repair_attempts": 0,
-        "nearest_page": "/drafts/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
-        "maximum_similarity": 0.4852,
+        "nearest_page": "/whitepapers/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
+        "maximum_similarity": 0.4777,
         "threshold": 0.85
       },
       "scores": {
@@ -6219,8 +6235,8 @@
         "status": "passed",
         "strategy": "due-diligence",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-09-01/what-horse-owners-and-equine-businesses-commonly-miss-about-liability-waivers-insurance/",
-        "maximum_similarity": 0.7464,
+        "nearest_page": "/drafts/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
+        "maximum_similarity": 0.7686,
         "threshold": 0.85
       },
       "scores": {
@@ -7325,23 +7341,23 @@
       "entry_id": "draft-article-2026-10-27-horse-lease-and-trial",
       "title": "What Horse Owners and Equine Businesses Commonly Miss About Horse Lease & Trial",
       "content_type": "article",
-      "word_count": 1063,
+      "word_count": 1059,
       "advisory_word_band": {
         "soft_floor": 750,
         "soft_ceiling": 3500
       },
       "hard_fails": [],
       "warnings": [
-        "draft automatically differentiated in 2 bounded repair attempt(s)"
+        "draft automatically differentiated in 3 bounded repair attempt(s)"
       ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "business-governance",
-        "repair_attempts": 2,
-        "nearest_page": "/drafts/2026-09-29/what-horse-owners-and-equine-businesses-commonly-miss-about-boarding-training-barn-operations/",
-        "maximum_similarity": 0.7455,
+        "strategy": "dispute-readiness",
+        "repair_attempts": 3,
+        "nearest_page": "/drafts/2026-09-01/what-horse-owners-and-equine-businesses-commonly-miss-about-liability-waivers-insurance/",
+        "maximum_similarity": 0.7428,
         "threshold": 0.85
       },
       "scores": {
@@ -8418,16 +8434,16 @@
       },
       "hard_fails": [],
       "warnings": [
-        "draft automatically differentiated in 3 bounded repair attempt(s)"
+        "draft automatically differentiated in 7 bounded repair attempt(s)"
       ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "dispute-readiness",
-        "repair_attempts": 3,
+        "strategy": "document-architecture",
+        "repair_attempts": 7,
         "nearest_page": "/drafts/2026-06-09/what-horse-owners-and-equine-businesses-commonly-miss-about-intellectual-property-brand/",
-        "maximum_similarity": 0.7518,
+        "maximum_similarity": 0.7546,
         "threshold": 0.85
       },
       "scores": {
@@ -8905,25 +8921,25 @@
     },
     {
       "entry_id": "draft-insight-2026-12-06-can-a-buyer-sue-after-an-as-is-horse-sale",
-      "title": "Authority, roles, and decision rights for Can a Buyer Sue After an “As-Is” Horse Sale",
+      "title": "Money, possession, and risk transfer for Can a Buyer Sue After an “As-Is” Horse Sale",
       "content_type": "insight",
-      "word_count": 1055,
+      "word_count": 1059,
       "advisory_word_band": {
         "soft_floor": 350,
         "soft_ceiling": 2000
       },
       "hard_fails": [],
       "warnings": [
-        "draft automatically differentiated in 1 bounded repair attempt(s)"
+        "draft automatically differentiated in 2 bounded repair attempt(s)"
       ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "authority-roles",
-        "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-11-26/what-equestrians-often-miss-about-what-should-be-included-in-a-horse-bill-of-sale/",
-        "maximum_similarity": 0.8255,
+        "strategy": "money-risk-transfer",
+        "repair_attempts": 2,
+        "nearest_page": "/drafts/2026-11-27/a-plain-english-note-on-what-should-be-included-in-a-horse-sale-contract/",
+        "maximum_similarity": 0.8231,
         "threshold": 0.85
       },
       "scores": {
@@ -9248,8 +9264,8 @@
         "status": "passed",
         "strategy": "business-governance",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-10-08/where-how-to-start-a-boarding-barn-legally-usually-goes-sideways/",
-        "maximum_similarity": 0.7838,
+        "nearest_page": "/drafts/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
+        "maximum_similarity": 0.8189,
         "threshold": 0.85
       },
       "scores": {
@@ -9297,7 +9313,7 @@
     },
     {
       "entry_id": "draft-insight-2026-12-16-what-is-a-horse-trial-agreement",
-      "title": "Money, possession, and risk transfer for What Is a Horse Trial Agreement",
+      "title": "Document architecture and missing terms for What Is a Horse Trial Agreement",
       "content_type": "insight",
       "word_count": 1034,
       "advisory_word_band": {
@@ -9306,16 +9322,16 @@
       },
       "hard_fails": [],
       "warnings": [
-        "draft automatically differentiated in 1 bounded repair attempt(s)"
+        "draft automatically differentiated in 2 bounded repair attempt(s)"
       ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "money-risk-transfer",
-        "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-09-07/how-to-think-about-trial-agreement-vs-lease-agreement-before-you-act/",
-        "maximum_similarity": 0.8481,
+        "strategy": "document-architecture",
+        "repair_attempts": 2,
+        "nearest_page": "/drafts/2026-09-12/the-quiet-risk-inside-who-is-liable-if-a-horse-is-injured-while-boarded/",
+        "maximum_similarity": 0.797,
         "threshold": 0.85
       },
       "scores": {
@@ -9502,16 +9518,16 @@
       },
       "hard_fails": [],
       "warnings": [
-        "draft automatically differentiated in 3 bounded repair attempt(s)"
+        "draft automatically differentiated in 4 bounded repair attempt(s)"
       ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "document-architecture",
-        "repair_attempts": 3,
-        "nearest_page": "/drafts/2026-11-24/what-horse-owners-and-equine-businesses-commonly-miss-about-real-property-leases/",
-        "maximum_similarity": 0.7493,
+        "strategy": "notice-communication",
+        "repair_attempts": 4,
+        "nearest_page": "/drafts/2026-07-21/demand-letters-disputes-the-clauses-risks-and-assumptions-people-usually-overlook/",
+        "maximum_similarity": 0.7676,
         "threshold": 0.85
       },
       "scores": {
@@ -9592,25 +9608,25 @@
     },
     {
       "entry_id": "draft-insight-2026-12-24-lease-to-own-vs-buying-outright",
-      "title": "Remedies, exit paths, and damage control for Lease to Own vs Buying Outright",
+      "title": "State-law, venue, and local-rule lens for Lease to Own vs Buying Outright",
       "content_type": "insight",
-      "word_count": 1034,
+      "word_count": 1044,
       "advisory_word_band": {
         "soft_floor": 350,
         "soft_ceiling": 2000
       },
       "hard_fails": [],
       "warnings": [
-        "draft automatically differentiated in 1 bounded repair attempt(s)"
+        "draft automatically differentiated in 2 bounded repair attempt(s)"
       ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "remedies-exit",
-        "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-12-14/what-equestrians-often-miss-about-lease-to-purchase-vs-outright-purchase/",
-        "maximum_similarity": 0.8439,
+        "strategy": "state-venue",
+        "repair_attempts": 2,
+        "nearest_page": "/drafts/2026-12-15/a-plain-english-note-on-what-should-be-included-in-a-horse-lease-agreement/",
+        "maximum_similarity": 0.8068,
         "threshold": 0.85
       },
       "scores": {
@@ -9658,25 +9674,25 @@
     },
     {
       "entry_id": "draft-insight-2026-12-26-what-should-be-included-in-a-training-agreement",
-      "title": "Authority, roles, and decision rights for What Should Be Included in a Training Agreement",
+      "title": "Money, possession, and risk transfer for What Should Be Included in a Training Agreement",
       "content_type": "insight",
-      "word_count": 1044,
+      "word_count": 1048,
       "advisory_word_band": {
         "soft_floor": 350,
         "soft_ceiling": 2000
       },
       "hard_fails": [],
       "warnings": [
-        "draft automatically differentiated in 1 bounded repair attempt(s)"
+        "draft automatically differentiated in 2 bounded repair attempt(s)"
       ],
       "prevalidation_status": "passed",
       "approval_eligible": true,
       "uniqueness": {
         "status": "passed",
-        "strategy": "authority-roles",
-        "repair_attempts": 1,
-        "nearest_page": "/drafts/2026-08-31/the-quiet-risk-inside-what-is-a-horse-trial-agreement/",
-        "maximum_similarity": 0.8233,
+        "strategy": "money-risk-transfer",
+        "repair_attempts": 2,
+        "nearest_page": "/drafts/2026-11-27/a-plain-english-note-on-what-should-be-included-in-a-horse-sale-contract/",
+        "maximum_similarity": 0.821,
         "threshold": 0.85
       },
       "scores": {
@@ -10652,8 +10668,8 @@
         "status": "passed",
         "strategy": "document-architecture",
         "repair_attempts": 1,
-        "nearest_page": "/drafts/2027-01-12/a-plain-english-note-on-trainer-agreement-vs-boarding-agreement/",
-        "maximum_similarity": 0.772,
+        "nearest_page": "/drafts/2026-12-16/why-what-is-a-horse-trial-agreement-creates-confusion/",
+        "maximum_similarity": 0.7764,
         "threshold": 0.85
       },
       "scores": {

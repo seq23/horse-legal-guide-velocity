@@ -20,7 +20,7 @@ uniqueness_strategy: business-governance
 
 The practical question behind **How should someone compare private horse sale vs trainer-assisted sale in an equine legal situation** is not answered safely by repeating a general horse-contract overview. This version focuses on how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2027-01-04/a-plain-english-note-on-private-horse-sale-vs-trainer-assisted-sale/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2027-01-28/a-plain-english-note-on-boarding-agreement-vs-training-agreement/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Business governance and repeatable process
 

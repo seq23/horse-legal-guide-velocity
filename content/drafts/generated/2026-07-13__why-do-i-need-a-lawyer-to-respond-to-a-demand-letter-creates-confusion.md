@@ -20,7 +20,7 @@ uniqueness_strategy: dispute-readiness
 
 The practical question behind **Do I Need a Lawyer to Respond to a Demand Letter** is not answered safely by repeating a general horse-contract overview. This version focuses on how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. It is designed to be materially distinct from /drafts/2026-07-10/where-what-should-i-do-if-i-receive-a-demand-letter-usually-goes-sideways/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. It is designed to be materially distinct from /drafts/2026-07-11/what-equestrians-often-miss-about-how-serious-is-a-legal-demand-letter/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Dispute readiness and early resolution
 

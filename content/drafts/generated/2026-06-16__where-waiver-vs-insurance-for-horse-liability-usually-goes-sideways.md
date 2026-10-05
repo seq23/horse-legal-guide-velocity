@@ -20,7 +20,7 @@ uniqueness_strategy: operations-handoff
 
 The practical question behind **Waiver vs Insurance for Horse Liability** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-06-08/the-quiet-risk-inside-do-i-need-a-liability-waiver-for-my-horse-business/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-05-17/where-who-is-liable-during-a-horse-lease-usually-goes-sideways/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Operational handoff and responsibility map
 

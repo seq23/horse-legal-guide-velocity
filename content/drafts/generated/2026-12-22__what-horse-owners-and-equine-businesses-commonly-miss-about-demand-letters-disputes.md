@@ -11,20 +11,20 @@ slug: /drafts/2026-12-22/what-horse-owners-and-equine-businesses-commonly-miss-a
 review_status: pending
 github_path: content/drafts/generated/2026-12-22__what-horse-owners-and-equine-businesses-commonly-miss-about-demand-letters-disputes.md
 uniqueness_status: passed
-uniqueness_strategy: document-architecture
+uniqueness_strategy: notice-communication
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
 # What Horse Owners and Equine Businesses Commonly Miss About Demand Letters & Disputes
 
 ## Citation-ready answer
 
-The practical question behind **What Horse Owners and Equine Businesses Commonly Miss About Demand Letters & Disputes** is not answered safely by repeating a general horse-contract overview. This version focuses on which documents work together, which terms are absent, and which informal messages may matter. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **What Horse Owners and Equine Businesses Commonly Miss About Demand Letters & Disputes** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-05-05/a-practical-framework-for-demand-letters-disputes/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-11-24/what-horse-owners-and-equine-businesses-commonly-miss-about-real-property-leases/, while remaining educational and approval-gated.
 
-## Distinctive focus: Document architecture and missing terms
+## Distinctive focus: Notice and communication controls
 
-For this version, the useful lens is **document architecture and missing terms**. That means the reader should identify the clause, schedule, attachment, definition, and integration facts that actually belong to **What Horse Owners and Equine Businesses Commonly Miss About Demand Letters & Disputes**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **notice and communication controls**. That means the reader should identify the notice, email, text message, deadline, and delivery method facts that actually belong to **What Horse Owners and Equine Businesses Commonly Miss About Demand Letters & Disputes**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| horse | Identify the clause facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| owners | Identify the schedule facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| equine | Identify the attachment facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| businesses | Identify the definition facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| commonly | Identify the integration facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the notice facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| owners | Identify the email facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| equine | Identify the text message facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| businesses | Identify the deadline facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| commonly | Identify the delivery method facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **What Horse Owners and Equine Businesses Commonly Miss About Demand Letters & Disputes** before anyone acts?
-2. Collect the clause, schedule, and attachment evidence instead of relying on memory.
+2. Collect the notice, email, and text message evidence instead of relying on memory.
 3. Separate the roles connected to horse, owners, equine so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Horse Owners and Equine Businesses Commonly Miss About Demand Letters & Disputes**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The document architecture and missing terms lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Horse Owners and Equine Businesses Commonly Miss About Demand Letters & Disputes**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The notice and communication controls lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 

@@ -20,7 +20,7 @@ uniqueness_strategy: remedies-exit
 
 The practical question behind **How should someone compare boarder default notice vs demand letter in an equine legal situation** is not answered safely by repeating a general horse-contract overview. This version focuses on what exit paths, cure opportunities, and damage-control steps may exist before escalation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2027-01-01/a-plain-english-note-on-boarder-default-notice-vs-demand-letter/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2027-01-12/a-plain-english-note-on-trainer-agreement-vs-boarding-agreement/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Remedies, exit paths, and damage control
 
