@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-10-04T15:47:39.000Z",
+  "generated_at": "2026-10-04T15:58:18.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-10-04T15:48:55.154Z",
-      "age_hours": 0,
+      "age_hours": 0.2,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-10-04T15:48:55.154Z",
-      "age_hours": 0,
+      "age_hours": 0.2,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-10-04T15:48:55.154Z",
-      "age_hours": 0,
+      "age_hours": 0.2,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -1601,7 +1601,7 @@
       "high_similarity_pairs": 132,
       "intent_overlap_pairs": 14,
       "uniqueness_review_clusters": 24,
-      "drafts_automatically_differentiated": 227,
+      "drafts_automatically_differentiated": 229,
       "draft_uniqueness_failures": 0,
       "jsonld_present": 585,
       "article_schema_pages": 585,
@@ -1609,14 +1609,14 @@
       "internal_link_healthy_pages": 585,
       "zero_internal_link_pages": 0,
       "weak_internal_link_pages": 0,
-      "draft_items": 338,
-      "approval_eligible": 338,
-      "direct_answer_ok": 338,
-      "data_atom_ok": 338,
-      "routing_ok": 338,
+      "draft_items": 347,
+      "approval_eligible": 347,
+      "direct_answer_ok": 347,
+      "data_atom_ok": 347,
+      "routing_ok": 347,
       "hard_fail_items": 0,
-      "word_warning_items": 8,
-      "ai_risk_items": 227,
+      "word_warning_items": 7,
+      "ai_risk_items": 229,
       "workflow_count": 17,
       "workflow_passed": 17,
       "workflow_warning_count": 0,
@@ -10677,22 +10677,15 @@
       "message": "Repeated cadence / AI-sound warnings",
       "routes": [
         "draft-insight-2026-04-25-do-i-need-a-contract-to-buy-a-horse",
-        "draft-article-2026-04-28-boarding-training-and-barn-operations",
         "draft-insight-2026-04-28-when-does-ownership-legally-transfer-in-a-horse-sale",
         "draft-insight-2026-04-29-who-is-responsible-after-a-horse-sale-is-completed",
-        "draft-whitepaper-2026-04-30-horse-sale-and-purchase",
         "draft-insight-2026-05-01-what-happens-if-there-is-no-written-agreement-in-a-horse-sale",
-        "draft-whitepaper-2026-05-01-boarding-training-and-barn-operations",
-        "draft-insight-2026-05-03-can-a-buyer-return-a-horse-after-purchase",
-        "draft-insight-2026-05-04-can-a-seller-refuse-to-take-a-horse-back",
-        "draft-article-2026-05-05-demand-letters-and-disputes",
         "draft-insight-2026-05-05-what-happens-if-a-horse-becomes-lame-after-sale",
         "draft-insight-2026-05-06-can-a-buyer-sue-after-an-as-is-horse-sale",
         "draft-insight-2026-05-07-what-happens-if-a-horse-sale-goes-wrong",
         "draft-insight-2026-05-09-what-if-i-bought-a-horse-without-a-contract",
         "draft-insight-2026-05-10-horse-sale-contract-vs-bill-of-sale",
         "draft-insight-2026-05-11-contract-vs-handshake-deal-in-a-horse-sale",
-        "draft-article-2026-05-12-emotional-am-i-screwed",
         "draft-insight-2026-05-17-who-is-liable-during-a-horse-lease",
         "draft-insight-2026-05-20-can-you-end-a-horse-lease-early",
         "draft-insight-2026-05-21-what-happens-if-a-leased-horse-becomes-unsound",
@@ -10725,7 +10718,14 @@
         "draft-insight-2026-08-13-when-does-ownership-legally-transfer-in-a-horse-sale",
         "draft-insight-2026-08-15-is-a-verbal-agreement-legally-binding-in-a-horse-sale",
         "draft-insight-2026-08-16-what-happens-if-there-is-no-written-agreement-in-a-horse-sale",
-        "draft-insight-2026-08-17-what-happens-if-a-horse-is-misrepresented-in-a-sale"
+        "draft-insight-2026-08-17-what-happens-if-a-horse-is-misrepresented-in-a-sale",
+        "draft-article-2026-08-18-horse-sale-and-purchase",
+        "draft-insight-2026-08-18-can-a-buyer-return-a-horse-after-purchase",
+        "draft-insight-2026-08-19-can-a-seller-refuse-to-take-a-horse-back",
+        "draft-insight-2026-08-20-what-happens-if-a-horse-becomes-lame-after-sale",
+        "draft-insight-2026-08-22-what-happens-if-a-horse-sale-goes-wrong",
+        "draft-insight-2026-08-23-what-if-i-sold-a-horse-without-a-contract",
+        "draft-insight-2026-08-24-what-if-i-bought-a-horse-without-a-contract"
       ],
       "recommended_action": "Rewrite openings around the specific horse transaction, document, dispute, or business issue; vary sentence length and reduce generic framing."
     },
@@ -10735,14 +10735,13 @@
       "code": "Editorial",
       "message": "Word count outside advisory band",
       "routes": [
-        "draft-whitepaper-2026-04-30-horse-sale-and-purchase",
-        "draft-whitepaper-2026-05-01-boarding-training-and-barn-operations",
         "draft-whitepaper-2026-08-03-equine-business-formation",
         "draft-whitepaper-2026-09-01-horse-lease-and-trial",
         "draft-whitepaper-2026-10-01-horse-sale-and-purchase",
         "draft-whitepaper-2026-11-02-intellectual-property-and-brand",
         "draft-whitepaper-2026-12-01-liability-waivers-insurance",
-        "continuity-deep_authority-2027-01-01-how-to-start-an-equine-apparel-business"
+        "continuity-deep_authority-2027-01-01-how-to-start-an-equine-apparel-business",
+        "continuity-whitepaper-2027-02-01-waiver-vs-insurance-for-horse-liability"
       ],
       "recommended_action": "Review only if the page also lacks an answer, atom, routing block, or useful links. Never block approval on word count alone."
     },
