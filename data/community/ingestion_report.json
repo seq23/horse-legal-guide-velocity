@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-10-02T13:44:40.698Z",
-  "total_signals": 3573,
+  "generated_at": "2026-10-05T13:48:42.087Z",
+  "total_signals": 3607,
   "signals_by_source": {
-    "reddit_equestrian": 1698,
+    "reddit_equestrian": 1718,
     "reddit_horses": 687,
     "forum_the_horse_forum": 30,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 34,
-    "serp_competitor_research": 207,
-    "youtube_search_comments": 193,
+    "serp_competitor_research": 217,
+    "youtube_search_comments": 194,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 223,
     "reddit_smallbusiness": 239,
     "reddit_farming_ranching": 103,
-    "forum_horse_and_hound": 71
+    "forum_horse_and_hound": 74
   },
   "signals_by_platform": {
-    "reddit": 2950,
-    "equestrian_forums": 131,
+    "reddit": 2970,
+    "equestrian_forums": 134,
     "google_paa": 34,
-    "serp_competitors": 207,
-    "youtube": 193,
+    "serp_competitors": 217,
+    "youtube": 194,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1450,
-  "duplicates_collapsed": 2123,
+  "normalized_count": 1462,
+  "duplicates_collapsed": 2145,
   "pages_created": 0,
   "pages_strengthened": 250,
   "rejected_signals": 0,
-  "pending_owner_review": 1194,
+  "pending_owner_review": 1206,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 744
+      "count": 751
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 238
+      "count": 241
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 180
+      "count": 181
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 162
+      "count": 163
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1698
+      "count": 1718
     },
     {
       "name": "reddit_horses",
@@ -92,11 +92,11 @@
     },
     {
       "name": "serp_competitor_research",
-      "count": 207
+      "count": 217
     },
     {
       "name": "youtube_search_comments",
-      "count": 193
+      "count": 194
     },
     {
       "name": "reddit_farming_ranching",
@@ -104,7 +104,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 71
+      "count": 74
     },
     {
       "name": "google_paa_manual_or_provider",
@@ -177,7 +177,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 10
+      "count": 11
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -189,7 +189,7 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 13,
+      "count": 14,
       "error": "3 of 8 cited page(s) failed to fetch."
     },
     {
@@ -22767,6 +22767,162 @@
       "llm_bait_phrase": "Thoughts please - finding homes",
       "source_signal_ids": [
         "forum_horse_and_hound_thoughts-please-finding-homes-https-forums-horseandh_2c656cfd"
+      ]
+    },
+    {
+      "approval_id": "approval_1450_sad-about-bringing-home-new-pony",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3577_bf1b490301",
+      "proposed_slug": "/faq/sad-about-bringing-home-new-pony/",
+      "cluster": "state-specific",
+      "question": "Sad about bringing home new pony — what should I know?",
+      "llm_bait_phrase": "Sad about bringing home new pony",
+      "source_signal_ids": [
+        "reddit_equestrian_sad-about-bringing-home-new-pony-https-www-reddit-co_369c0d97"
+      ]
+    },
+    {
+      "approval_id": "approval_1451_freelance-trainer",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3589_4305fc63ea",
+      "proposed_slug": "/faq/freelance-trainer/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Freelance Trainer — what should I know?",
+      "llm_bait_phrase": "Freelance Trainer",
+      "source_signal_ids": [
+        "reddit_equestrian_freelance-trainer-https-www-reddit-com-r-equestrian-_34fc8399"
+      ]
+    },
+    {
+      "approval_id": "approval_1452_horse-ridden-by-ego-driven-trainer",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3590_e672559a94",
+      "proposed_slug": "/faq/horse-ridden-by-ego-driven-trainer/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Horse Ridden By Ego-driven Trainer — what should I know?",
+      "llm_bait_phrase": "Horse Ridden By Ego-driven Trainer",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-ridden-by-ego-driven-trainer-https-www-reddit-_a3e1738b"
+      ]
+    },
+    {
+      "approval_id": "approval_1453_spot-the-horses",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3592_632318bd96",
+      "proposed_slug": "/faq/spot-the-horses/",
+      "cluster": "state-specific",
+      "question": "Spot the horses! — what should I know?",
+      "llm_bait_phrase": "Spot the horses!",
+      "source_signal_ids": [
+        "reddit_equestrian_spot-the-horses-https-www-reddit-com-r-equestrian-co_7a789f58"
+      ]
+    },
+    {
+      "approval_id": "approval_1454_harry-hall-sale",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3593_8bd07674d7",
+      "proposed_slug": "/faq/harry-hall-sale/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Harry Hall - Sale — what should I know?",
+      "llm_bait_phrase": "Harry Hall - Sale",
+      "source_signal_ids": [
+        "forum_horse_and_hound_harry-hall-sale-https-forums-horseandhound-co-uk_e0a43aa3"
+      ]
+    },
+    {
+      "approval_id": "approval_1455_help-with-potential-horse-shopping-please",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3594_f7f9c4dec5",
+      "proposed_slug": "/faq/help-with-potential-horse-shopping-please/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Help with potential horse shopping please :) — what should I know?",
+      "llm_bait_phrase": "Help with potential horse shopping please :)",
+      "source_signal_ids": [
+        "forum_horse_and_hound_help-with-potential-horse-shopping-please-https-foru_8b64c5bc"
+      ]
+    },
+    {
+      "approval_id": "approval_1456_bbp-mark-2-more-weird-horses",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3595_c22b5daa89",
+      "proposed_slug": "/faq/bbp-mark-2-more-weird-horses/",
+      "cluster": "state-specific",
+      "question": "BBP mark 2 - more weird horses — what should I know?",
+      "llm_bait_phrase": "BBP mark 2 - more weird horses",
+      "source_signal_ids": [
+        "forum_horse_and_hound_bbp-mark-2-more-weird-horses-https-forums-horseandho_93495f9c"
+      ]
+    },
+    {
+      "approval_id": "approval_1457_equine-vaccinations-for-year-round-protection",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3601_9877218d08",
+      "proposed_slug": "/faq/equine-vaccinations-for-year-round-protection/",
+      "cluster": "state-specific",
+      "question": "Equine Vaccinations for Year-Round Protection — what should I know?",
+      "llm_bait_phrase": "Equine Vaccinations for Year-Round Protection",
+      "source_signal_ids": [
+        "serp_competitor_research_equine-vaccinations-for-year-round-protection-https-_62dd40ac"
+      ]
+    },
+    {
+      "approval_id": "approval_1458_update-epm-in-horses",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3602_cd8c0802fd",
+      "proposed_slug": "/faq/update-epm-in-horses/",
+      "cluster": "state-specific",
+      "question": "Update: EPM in Horses — what should I know?",
+      "llm_bait_phrase": "Update: EPM in Horses",
+      "source_signal_ids": [
+        "serp_competitor_research_update-epm-in-horses-https-thehorse-com-18937-making_c2a3738d"
+      ]
+    },
+    {
+      "approval_id": "approval_1459_dealing-with-equine-colic-here-are-33-do-and-8217-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3604_8f39f6533c",
+      "proposed_slug": "/faq/dealing-with-equine-colic-here-are-33-do-and-8217-s-and-don-ts/",
+      "cluster": "state-specific",
+      "question": "Dealing With Equine Colic: Here are 33 Do&#8217;s and Don’ts — what should I know?",
+      "llm_bait_phrase": "Dealing With Equine Colic: Here are 33 Do&#8217;s and Don’ts",
+      "source_signal_ids": [
+        "serp_competitor_research_dealing-with-equine-colic-here-are-33-do-and-8217-s-_e27c2a54"
+      ]
+    },
+    {
+      "approval_id": "approval_1460_inside-the-equine-gut-microbiome",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3605_08ed070777",
+      "proposed_slug": "/faq/inside-the-equine-gut-microbiome/",
+      "cluster": "state-specific",
+      "question": "Inside the Equine Gut Microbiome — what should I know?",
+      "llm_bait_phrase": "Inside the Equine Gut Microbiome",
+      "source_signal_ids": [
+        "serp_competitor_research_inside-the-equine-gut-microbiome-https-thehorse-com-_5b9bb07f"
+      ]
+    },
+    {
+      "approval_id": "approval_1461_boarding-stable-liability",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3606_eaf7f1d7dd",
+      "proposed_slug": "/faq/boarding-stable-liability/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Boarding Stable Liability — what should I know?",
+      "llm_bait_phrase": "Boarding Stable Liability",
+      "source_signal_ids": [
+        "youtube_search_comments_boarding-stable-liability-https-www-youtube-com-resu_5806c47f"
       ]
     }
   ]
