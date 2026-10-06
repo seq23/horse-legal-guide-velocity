@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-05T13:48:42.087Z",
-  "total_signals": 3607,
+  "generated_at": "2026-10-06T13:45:09.471Z",
+  "total_signals": 3628,
   "signals_by_source": {
-    "reddit_equestrian": 1718,
+    "reddit_equestrian": 1738,
     "reddit_horses": 687,
     "forum_the_horse_forum": 30,
     "forum_chronicle_of_the_horse": 30,
@@ -14,31 +14,31 @@
     "reddit_legaladvice": 223,
     "reddit_smallbusiness": 239,
     "reddit_farming_ranching": 103,
-    "forum_horse_and_hound": 74
+    "forum_horse_and_hound": 75
   },
   "signals_by_platform": {
-    "reddit": 2970,
-    "equestrian_forums": 134,
+    "reddit": 2990,
+    "equestrian_forums": 135,
     "google_paa": 34,
     "serp_competitors": 217,
     "youtube": 194,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1462,
-  "duplicates_collapsed": 2145,
+  "normalized_count": 1468,
+  "duplicates_collapsed": 2160,
   "pages_created": 0,
   "pages_strengthened": 250,
   "rejected_signals": 0,
-  "pending_owner_review": 1206,
+  "pending_owner_review": 1212,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 751
+      "count": 756
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 241
+      "count": 242
     },
     {
       "name": "horse-lease-and-trial",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1718
+      "count": 1738
     },
     {
       "name": "reddit_horses",
@@ -104,7 +104,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 74
+      "count": 75
     },
     {
       "name": "google_paa_manual_or_provider",
@@ -151,8 +151,9 @@
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -177,7 +178,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 11
+      "count": 10
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -189,8 +190,8 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 14,
-      "error": "3 of 8 cited page(s) failed to fetch."
+      "count": 17,
+      "error": "4 of 8 cited page(s) failed to fetch."
     },
     {
       "source_key": "youtube_search_comments",
@@ -22923,6 +22924,84 @@
       "llm_bait_phrase": "Boarding Stable Liability",
       "source_signal_ids": [
         "youtube_search_comments_boarding-stable-liability-https-www-youtube-com-resu_5806c47f"
+      ]
+    },
+    {
+      "approval_id": "approval_1462_boarding-nightmare",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3609_778fa17d78",
+      "proposed_slug": "/faq/boarding-nightmare/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Boarding nightmare... — what should I know?",
+      "llm_bait_phrase": "Boarding nightmare...",
+      "source_signal_ids": [
+        "reddit_equestrian_boarding-nightmare-https-www-reddit-com-r-equestrian_2047bafe"
+      ]
+    },
+    {
+      "approval_id": "approval_1463_horse-refusing-to-pick-up-back-feet",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3613_4728e9bba5",
+      "proposed_slug": "/faq/horse-refusing-to-pick-up-back-feet/",
+      "cluster": "state-specific",
+      "question": "Horse refusing to pick up back feet — what should I know?",
+      "llm_bait_phrase": "Horse refusing to pick up back feet",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-refusing-to-pick-up-back-feet-https-www-reddit_be26e443"
+      ]
+    },
+    {
+      "approval_id": "approval_1464_new-pony-day-and-a-thank-you",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3614_21bb085b91",
+      "proposed_slug": "/faq/new-pony-day-and-a-thank-you/",
+      "cluster": "state-specific",
+      "question": "New pony day and a thank you — what should I know?",
+      "llm_bait_phrase": "New pony day and a thank you",
+      "source_signal_ids": [
+        "reddit_equestrian_new-pony-day-and-a-thank-you-https-www-reddit-com-r-_2056b566"
+      ]
+    },
+    {
+      "approval_id": "approval_1465_horse-transporter-recommendations-california",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3615_b56f8dec20",
+      "proposed_slug": "/faq/horse-transporter-recommendations-california/",
+      "cluster": "state-specific",
+      "question": "Horse Transporter Recommendations - California — what should I know?",
+      "llm_bait_phrase": "Horse Transporter Recommendations - California",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-transporter-recommendations-california-https-w_fd84c099"
+      ]
+    },
+    {
+      "approval_id": "approval_1466_anything-stick-out-to-you-about-this-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3626_cdf501ef0a",
+      "proposed_slug": "/faq/anything-stick-out-to-you-about-this-horse/",
+      "cluster": "state-specific",
+      "question": "Does anything stick out to you about this horse?",
+      "llm_bait_phrase": "anything stick out to you about this horse",
+      "source_signal_ids": [
+        "reddit_equestrian_does-anything-stick-out-to-you-about-this-horse-http_81b6e6fa"
+      ]
+    },
+    {
+      "approval_id": "approval_1467_i-did-a-stupid-thing-overhorsed-myself-advice-need",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3627_b6a1696c57",
+      "proposed_slug": "/faq/i-did-a-stupid-thing-overhorsed-myself-advice-needed/",
+      "cluster": "state-specific",
+      "question": "I did a stupid thing. Overhorsed myself. Advice needed — what should I know?",
+      "llm_bait_phrase": "I did a stupid thing. Overhorsed myself. Advice needed",
+      "source_signal_ids": [
+        "forum_horse_and_hound_i-did-a-stupid-thing-overhorsed-myself-advice-needed_d7dad06f"
       ]
     }
   ]
