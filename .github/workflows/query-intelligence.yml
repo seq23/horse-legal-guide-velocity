@@ -29,6 +29,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   query-intelligence:
+    timeout-minutes: 5  # ~3x median 0.8m over 1 green runs; fault detector, not a budget
     runs-on: ubuntu-latest
     env:
       # Primary provider for live citation observation. Gemini grounding is a
