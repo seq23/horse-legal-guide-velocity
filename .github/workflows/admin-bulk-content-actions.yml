@@ -52,6 +52,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   admin-bulk-action:
+    timeout-minutes: 5  # ~3x median 1.1m over 1 green runs; fault detector, not a budget
     runs-on: ubuntu-latest
     env:
       SITE_DOMAIN: https://horselegalguide.com

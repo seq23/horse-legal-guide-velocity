@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    timeout-minutes: 5  # ~3x median 0.4m over 1 green runs; fault detector, not a budget
     runs-on: ubuntu-latest
     env:
       SITE_DOMAIN: https://horselegalguide.com
