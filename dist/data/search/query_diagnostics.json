@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-06T14:35:55.212Z",
+  "generated_at": "2026-10-07T14:37:00.278Z",
   "truth_boundary": "A missing grounded observation is not proof of deindexing. GSC owned-site data and external grounded observations are recorded separately.",
   "summary": {
     "queries": 30,
-    "observed": 29,
-    "missing": 1,
+    "observed": 28,
+    "missing": 2,
     "wrong_page": 0,
     "cannibalization": 0,
     "unknown": 0
@@ -36,12 +36,12 @@
             "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts"
           },
           {
-            "url": "https://calps.siu.edu/_common/documents/facilities/equine-center/equine-boarding-contract.pdf",
-            "title": "EQUINE BOARDING AGREEMENT THIS CONTRACT is made and entered into this ____ day of ____________________, 20____, (“Effective Date”) by and"
-          },
-          {
             "url": "https://horses.extension.org/equine-boarding-stable-contracts",
             "title": "Equine Boarding Stable Contracts | Extension Horses"
+          },
+          {
+            "url": "https://equinelegaldocs.com/documents/boarding-agreements/horse-boarding-agreement",
+            "title": "Horse Boarding Agreement Template — Personalize & Download PDF | EquineLegalDocs"
           }
         ],
         "bing_connected": false
@@ -133,37 +133,20 @@
       "query": "What Should Be Included in a Horse Lease Agreement",
       "cluster": "horse-lease-and-trial",
       "target_page": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
-      "state": "OBSERVED",
+      "state": "MISSING",
       "reasons": [
-        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
       ],
       "evidence": {
-        "grounded_site_surfaced": true,
+        "grounded_site_surfaced": false,
         "gsc_impressions": 0,
         "gsc_clicks": 0,
         "gsc_average_position": 0,
         "gsc_pages": [],
-        "competitor_urls": [
-          {
-            "url": "https://warren.osu.edu/sites/warren/files/imce/Blank%20HORSE%20LEASE%20AGREEMENT_0%20(2).doc",
-            "title": "[DOC] HORSE LEASE AGREEMENT"
-          },
-          {
-            "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts",
-            "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
-          },
-          {
-            "url": "https://extension.oregonstate.edu/sites/extd8/files/documents/smitshei/horse-lease-agreement_0.pdf",
-            "title": "[PDF] Horse Lease Agreement"
-          },
-          {
-            "url": "https://www.rmhorse.com/wp-content/uploads/2019/07/Equine-Lease-ContractFILL.pdf",
-            "title": "Microsoft Word - Equine Lease Contract.docx"
-          }
-        ],
+        "competitor_urls": [],
         "bing_connected": false
       },
-      "next_action": "OBSERVE"
+      "next_action": "PREPARE_OWNER_REVIEW_REPAIR"
     },
     {
       "panel_id": "qpanel-006",
@@ -222,12 +205,12 @@
             "title": "Code of Virginia Code - Chapter 62. Equine Activity Liability"
           },
           {
-            "url": "https://www.irongateequine.com/education/horse-ownership-and-the-law",
-            "title": "Horse Ownership and the Law — Irongate Equine Clinic"
+            "url": "https://www.shouselaw.com/ca/personal-injury/equine-liability-lawsuit",
+            "title": "Equine Inherent Risk Law - Horse Riding Claims in California"
           },
           {
-            "url": "https://www.hinshawlaw.com/a/web/2rWb6D634viK1Cct52LHHu/a13yLx/yvonne-ocrant-cdlb-equine-liability-law-keeps-dangerous-sport-in-stride.pdf",
-            "title": "[PDF] Equine liability law keeps dangerous sport in stride"
+            "url": "https://www.irongateequine.com/education/horse-ownership-and-the-law",
+            "title": "Horse Ownership and the Law — Irongate Equine Clinic"
           }
         ],
         "bing_connected": false
@@ -258,14 +241,33 @@
       "cluster": "state-specific",
       "target_page": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
       "state": "OBSERVED",
-      "reasons": [],
+      "reasons": [
+        "COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE"
+      ],
       "evidence": {
         "grounded_site_surfaced": true,
         "gsc_impressions": 0,
         "gsc_clicks": 0,
         "gsc_average_position": 0,
         "gsc_pages": [],
-        "competitor_urls": [],
+        "competitor_urls": [
+          {
+            "url": "https://www.jdsupra.com/legalnews/legal-risks-in-horse-boarding-contracts-6322056",
+            "title": "Legal Risks in Horse Boarding Contracts Under North Carolina Law and How to Avoid Them | Ward and Smith, P.A. - JDSupra"
+          },
+          {
+            "url": "https://www.ushja.org/application/files/4716/5530/2073/Equine_Transaction_Laws-_An_Educational_Summary.pdf",
+            "title": "[PDF] Equine Transaction Laws - ushja"
+          },
+          {
+            "url": "https://www.wardandsmith.com/article/legal-risks-in-horse-boarding-contracts-under-north-carolina-law-and-how-to-avoid-them",
+            "title": "Legal Risks in Horse Boarding Contracts Under North Carolina Law and How to Avoid Them | Ward and Smith, P.A."
+          },
+          {
+            "url": "https://www.uslegalforms.com/animals/horses",
+            "title": "Horse Forms 2026 | US Legal Forms"
+          }
+        ],
         "bing_connected": false
       },
       "next_action": "OBSERVE"
@@ -289,22 +291,6 @@
           {
             "url": "https://www.equisure-inc.com/docs/default-source/applications/equine-assisted-activities-therapy-renewal-application5d800348-8b50-4cd4-902a-cecf9940b7b5.pdf?sfvrsn=db71edc4_3",
             "title": "equine-assisted-activities-therapy-renewal- ..."
-          },
-          {
-            "url": "https://link.springer.com/chapter/10.1007/978-3-031-74426-6_11",
-            "title": "Equine-Assisted Therapy for Substance Use and Mental Health Disorders | Springer Nature Link"
-          },
-          {
-            "url": "http://www.serpanalytics.com/keyword/equine+laws",
-            "title": "equine laws"
-          },
-          {
-            "url": "https://equusfoundation.org/transparency/transparency-eas-guidelines.php",
-            "title": "Guidelines for Organizations Conducting Equine Assisted ..."
-          },
-          {
-            "url": "https://www.equisure-inc.com/docs/default-source/applications/broker-equine-assisted-activities-therapy-application.pdf?sfvrsn=5783b7ee_2",
-            "title": "Microsoft Word - Broker Equine Assisted Activities Therapy Application.docx"
           }
         ],
         "bing_connected": false
@@ -395,12 +381,12 @@
             "title": "CONSUMER PROTECTION—5th Cir.: Amendment ..."
           },
           {
-            "url": "https://www.equinelawblog.com/printpilot-blogpost-as-is-disclaimers-horse-contracts.pdf?1790616216",
-            "title": "Equine Law Blog"
-          },
-          {
             "url": "https://kewlegal.com/equestrian-law",
             "title": "Equestrian Law - KEW Legal®"
+          },
+          {
+            "url": "https://www.equinelawblog.com/printpilot-blogpost-as-is-disclaimers-horse-contracts.pdf?1790616216",
+            "title": "Equine Law Blog"
           }
         ],
         "bing_connected": false
@@ -504,12 +490,12 @@
             "title": "Equine Liability: Related Statutes | Animal Legal & Historical Center"
           },
           {
-            "url": "https://www.lsuagcenter.com/topics/livestock/horses/educational%20resources/basic%20horse%20ownership/equineliabilitystatuteareyouincompliance",
-            "title": "Equine Liability Statute: Are you in compliance?"
-          },
-          {
             "url": "https://mca.legmt.gov/bills/mca/title_0270/chapter_0010/part_0070/section_0270/0270-0010-0070-0270.html",
             "title": "27-1-727. Equine activity liability limitations -- waivers, MCA"
+          },
+          {
+            "url": "https://www.lsuagcenter.com/topics/livestock/horses/educational%20resources/basic%20horse%20ownership/equineliabilitystatuteareyouincompliance",
+            "title": "Equine Liability Statute: Are you in compliance?"
           },
           {
             "url": "https://www.hinshawlaw.com/a/web/2rWb6D634viK1Cct52LHHu/a13yLx/yvonne-ocrant-cdlb-equine-liability-law-keeps-dangerous-sport-in-stride.pdf",
