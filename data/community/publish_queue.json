@@ -11326,14 +11326,15 @@
     "normalized_id": "norm_0799_0852656160",
     "action": "hold_for_owner_review",
     "source_signal_ids": [
-      "youtube_search_comments_episode-1-the-business-of-horses-with-attorney-kendr_cd14bd68"
+      "youtube_search_comments_episode-1-the-business-of-horses-with-attorney-kendr_cd14bd68",
+      "youtube_search_comments_episode-1-the-business-of-horses-with-attorney-kendr_d4b97166"
     ],
     "preserved_query": "Episode 1 - The Business of Horses with Attorney Kendra Streeter: Equine Law \\u0026 Contracts — what should I know?",
     "normalized_query": "Episode 1 - The Business of Horses with Attorney Kendra Streeter: Equine Law \\u0026 Contracts — what should I know?",
     "llm_bait_phrase": "Episode 1 - The Business of Horses with Attorney Kendra Streeter: Equine Law \\u0026 Contracts",
     "cluster": "equine-business-formation",
     "intent_type": "faq",
-    "signal_score": 0.65,
+    "signal_score": 1.8,
     "match_evidence": {
       "best_page": "/compare/equine-business-contract-vs-general-business-contract/",
       "shared_terms": [
@@ -14683,14 +14684,15 @@
     "normalized_id": "norm_1192_2642dc3748",
     "action": "hold_for_owner_review",
     "source_signal_ids": [
-      "reddit_equestrian_horses-https-www-reddit-com-r-equestrian-comments-1t_e98c3171"
+      "reddit_equestrian_horses-https-www-reddit-com-r-equestrian-comments-1t_e98c3171",
+      "reddit_equestrian_horses-https-www-reddit-com-r-equestrian-comments-1x_a69f073e"
     ],
-    "preserved_query": "Horses — what should I know?",
-    "normalized_query": "Horses — what should I know?",
-    "llm_bait_phrase": "Horses",
+    "preserved_query": "Horses 🙃 — what should I know?",
+    "normalized_query": "Horses 🙃 — what should I know?",
+    "llm_bait_phrase": "Horses 🙃",
     "cluster": "state-specific",
     "intent_type": "faq",
-    "signal_score": 1,
+    "signal_score": 2.5,
     "match_evidence": {
       "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "shared_terms": [],
@@ -37082,6 +37084,231 @@
       "page_coverage": 0
     },
     "mapped_slug": "/faq/can-t-catch-my-horse/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1478_5euros-per-hour-for-working-in-the-stables-more-than-5h-day",
+    "normalized_id": "norm_3650_3b8adfa4c8",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_5euros-per-hour-for-working-in-the-stables-more-than_1f22c874"
+    ],
+    "preserved_query": "5euros per hour for working in the stables more than 5h/day — what should I know?",
+    "normalized_query": "5euros per hour for working in the stables more than 5h/day — what should I know?",
+    "llm_bait_phrase": "5euros per hour for working in the stables more than 5h/day",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/compare/stable-rules-document-vs-boarding-contract/",
+      "shared_terms": [
+        "stabl"
+      ],
+      "question_coverage": 0.152,
+      "page_coverage": 0.276
+    },
+    "mapped_slug": "/faq/5euros-per-hour-for-working-in-the-stables-more-than-5h-day/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1479_trying-to-learn-here-is-this-horse-lame",
+    "normalized_id": "norm_3651_9d7fcf927d",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_trying-to-learn-here-is-this-horse-lame-https-www-re_5c61e82f"
+    ],
+    "preserved_query": "Trying to learn here.. is this horse lame — what should I know?",
+    "normalized_query": "Trying to learn here.. is this horse lame — what should I know?",
+    "llm_bait_phrase": "Trying to learn here.. is this horse lame",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
+      "shared_terms": [
+        "lame"
+      ],
+      "question_coverage": 0.309,
+      "page_coverage": 0.408
+    },
+    "mapped_slug": "/faq/trying-to-learn-here-is-this-horse-lame/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1480_help-my-horse-is-laid-up-with-a-tendon-injury-and-i-m-afraid",
+    "normalized_id": "norm_3652_27d66625fe",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_help-my-horse-is-laid-up-with-a-tendon-injury-and-i-_01301a74"
+    ],
+    "preserved_query": "HELP My horse is laid up with a tendon injury and I'm afraid he's going to eat me at this point. — what should I know?",
+    "normalized_query": "HELP My horse is laid up with a tendon injury and I'm afraid he's going to eat me at this point. — what should I know?",
+    "llm_bait_phrase": "HELP My horse is laid up with a tendon injury and I'm afraid he's going to eat me at this point.",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "shared_terms": [
+        "injur"
+      ],
+      "question_coverage": 0.098,
+      "page_coverage": 0.452
+    },
+    "mapped_slug": "/faq/help-my-horse-is-laid-up-with-a-tendon-injury-and-i-m-afraid-he-s-going-to-eat-me-at-this-/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1481_unbalanced-on-the-horse-leaning-left-any-tips",
+    "normalized_id": "norm_3653_f72ec709a4",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_unbalanced-on-the-horse-leaning-left-any-tips-https-_fd6f4ff3"
+    ],
+    "preserved_query": "Unbalanced on the horse, leaning left : any tips — what should I know?",
+    "normalized_query": "Unbalanced on the horse, leaning left : any tips — what should I know?",
+    "llm_bait_phrase": "Unbalanced on the horse, leaning left : any tips",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/unbalanced-on-the-horse-leaning-left-any-tips/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1482_advice-for-my-first-horse-who-is-different-than-he-was-adver",
+    "normalized_id": "norm_3654_e579792d02",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_advice-for-my-first-horse-who-is-different-than-he-w_1aea4bb7"
+    ],
+    "preserved_query": "Advice for my first horse, who is different than he was advertised. — what should I know?",
+    "normalized_query": "Advice for my first horse, who is different than he was advertised. — what should I know?",
+    "llm_bait_phrase": "Advice for my first horse, who is different than he was advertised.",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/scenario/a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/",
+      "shared_terms": [
+        "diffe",
+        "adver"
+      ],
+      "question_coverage": 0.634,
+      "page_coverage": 0.476
+    },
+    "mapped_slug": "/faq/advice-for-my-first-horse-who-is-different-than-he-was-advertised/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1483_unimaginable-loss-dressage-horses-killed-during-crash-on-b-c",
+    "normalized_id": "norm_3655_0347350082",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_unimaginable-loss-dressage-horses-killed-during-cras_ca15ecbe"
+    ],
+    "preserved_query": "'Unimaginable loss': Dressage horses killed during crash on B.C. highway | CBC News — what should I know?",
+    "normalized_query": "'Unimaginable loss': Dressage horses killed during crash on B.C. highway | CBC News — what should I know?",
+    "llm_bait_phrase": "'Unimaginable loss': Dressage horses killed during crash on B.C. highway | CBC News",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/leases/who-is-liable-during-a-horse-lease/",
+      "shared_terms": [
+        "dur"
+      ],
+      "question_coverage": 0.108,
+      "page_coverage": 0.448
+    },
+    "mapped_slug": "/faq/unimaginable-loss-dressage-horses-killed-during-crash-on-b-c-highway-cbc-news/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1484_update-3-on-the-boarding-barn-situation",
+    "normalized_id": "norm_3657_36c07233b2",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_update-3-on-the-boarding-barn-situation-https-www-re_3c289f58"
+    ],
+    "preserved_query": "Update:3 on the boarding barn situation — what should I know?",
+    "normalized_query": "Update:3 on the boarding barn situation — what should I know?",
+    "llm_bait_phrase": "Update:3 on the boarding barn situation",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/business/how-to-start-a-boarding-barn-legally/",
+      "shared_terms": [
+        "board",
+        "barn"
+      ],
+      "question_coverage": 0.541,
+      "page_coverage": 0.606
+    },
+    "mapped_slug": "/faq/update-3-on-the-boarding-barn-situation/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1485_another-am-i-too-big-for-my-horse-post",
+    "normalized_id": "norm_3661_dc9990faa4",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_another-am-i-too-big-for-my-horse-post-https-www-red_cce4d00f"
+    ],
+    "preserved_query": "Another \"Am I too big for my horse?\" Post — what should I know?",
+    "normalized_query": "What happens when Another \"Am I too big for my horse?\" Post?",
+    "llm_bait_phrase": "Another \"Am I too big for my horse?\" Post",
+    "cluster": "state-specific",
+    "intent_type": "scenario",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/business/can-i-run-a-horse-business-under-another-company/",
+      "shared_terms": [
+        "anoth"
+      ],
+      "question_coverage": 0.306,
+      "page_coverage": 0.267
+    },
+    "mapped_slug": "/scenario/another-am-i-too-big-for-my-horse-post/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1486_pushy-mouthy-gelding-who-s-constantly-testing-me-how-did-you",
+    "normalized_id": "norm_3668_733e1c3971",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_pushy-mouthy-gelding-who-s-constantly-testing-me-how_6be060ef"
+    ],
+    "preserved_query": "Pushy, mouthy gelding who's constantly testing me. How did you sort the manners — what should I know?",
+    "normalized_query": "Pushy, mouthy gelding who's constantly testing me. How did you sort the manners — what should I know?",
+    "llm_bait_phrase": "Pushy, mouthy gelding who's constantly testing me. How did you sort the manners",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/faq/what-documents-matter-most-when-a-waiver-is-tested-after-an-injury/",
+      "shared_terms": [
+        "test"
+      ],
+      "question_coverage": 0.13,
+      "page_coverage": 0.227
+    },
+    "mapped_slug": "/faq/pushy-mouthy-gelding-who-s-constantly-testing-me-how-did-you-sort-the-manners/",
     "status": "pending_owner_review",
     "reason": "No existing page answers this question; queued as a new page for owner review."
   },
