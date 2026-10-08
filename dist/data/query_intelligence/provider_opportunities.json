@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-10-08T11:28:56.000Z",
+  "generated_at": "2026-10-08T14:31:24.000Z",
   "provider_status": {
     "gsc": "ok",
     "bing": "not_connected",
@@ -12,7 +12,7 @@
     "improve_existing": 13,
     "differentiate_existing": 17,
     "cannibalization_review": 10,
-    "active_query_failures": 2
+    "active_query_failures": 1
   },
   "policy": "Provider and grounded-search data may create recommendations, pending candidates, and finished owner-review repairs only. They may not approve, publish, or mutate live legal pages.",
   "truth_boundary": "Grounded web surfacing is evidence of live cited sources, not literal organic rank. GSC is the source for owned-site Google clicks, impressions, CTR, and average position.",
@@ -159,8 +159,41 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0008",
-      "query": "equine legal",
+      "opportunity_id": "provider-opportunity-0013",
+      "query": "horse purchase agreement",
+      "type": "new_candidate",
+      "target_page": "/hubs/horse-sale-and-purchase/",
+      "provider_pages": [
+        "/hubs/horse-sale-and-purchase/"
+      ],
+      "providers": [
+        "gsc"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 6,
+        "average_position": 68
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.333,
+      "confidence": 0.539,
+      "reasons": [
+        "ranking_opportunity"
+      ],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0009",
+      "query": "equine legal advice",
       "type": "new_candidate",
       "target_page": "/insights/",
       "provider_pages": [
@@ -172,7 +205,7 @@
       "metrics": {
         "clicks": 0,
         "impressions": 6,
-        "average_position": 85.33
+        "average_position": 80.33
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
@@ -228,6 +261,39 @@
       "live_page_change_authorized": false
     },
     {
+      "opportunity_id": "provider-opportunity-0017",
+      "query": "horse sales agreement",
+      "type": "new_candidate",
+      "target_page": "/hubs/horse-sale-and-purchase/",
+      "provider_pages": [
+        "/hubs/horse-sale-and-purchase/"
+      ],
+      "providers": [
+        "gsc"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 4,
+        "average_position": 69.5
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.333,
+      "confidence": 0.537,
+      "reasons": [
+        "ranking_opportunity"
+      ],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
       "opportunity_id": "provider-opportunity-0006",
       "query": "equine law suit protection",
       "type": "cannibalization_review",
@@ -263,7 +329,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0013",
+      "opportunity_id": "provider-opportunity-0012",
       "query": "horse legal",
       "type": "cannibalization_review",
       "target_page": "/articles/",
@@ -333,8 +399,8 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0009",
-      "query": "equine legal advice",
+      "opportunity_id": "provider-opportunity-0008",
+      "query": "equine legal",
       "type": "new_candidate",
       "target_page": "/insights/",
       "provider_pages": [
@@ -346,7 +412,7 @@
       "metrics": {
         "clicks": 0,
         "impressions": 4,
-        "average_position": 75
+        "average_position": 89.5
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
@@ -569,7 +635,7 @@
     },
     {
       "opportunity_id": "provider-opportunity-0014",
-      "query": "horse purchase agreement",
+      "query": "horse sale contract",
       "type": "new_candidate",
       "target_page": "/hubs/horse-sale-and-purchase/",
       "provider_pages": [
@@ -581,7 +647,7 @@
       "metrics": {
         "clicks": 0,
         "impressions": 2,
-        "average_position": 64
+        "average_position": 69
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
@@ -615,39 +681,6 @@
         "clicks": 0,
         "impressions": 2,
         "average_position": 85
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.333,
-      "confidence": 0.535,
-      "reasons": [
-        "ranking_opportunity"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0017",
-      "query": "horse sales agreement",
-      "type": "new_candidate",
-      "target_page": "/hubs/horse-sale-and-purchase/",
-      "provider_pages": [
-        "/hubs/horse-sale-and-purchase/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 2,
-        "average_position": 71
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
@@ -767,39 +800,6 @@
     },
     {
       "opportunity_id": "provider-opportunity-0011",
-      "query": "horse law",
-      "type": "new_candidate",
-      "target_page": "/insights/",
-      "provider_pages": [
-        "/insights/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 2,
-        "average_position": 93
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.167,
-      "confidence": 0.494,
-      "reasons": [
-        "ranking_opportunity"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0012",
       "query": "horse laws",
       "type": "new_candidate",
       "target_page": "/insights/",
@@ -1251,22 +1251,22 @@
         "grounded_site_surfaced": true,
         "competitor_urls": [
           {
-            "url": "https://www.equisure-inc.com/docs/default-source/applications/equine-assisted-activities-therapy-renewal-application5d800348-8b50-4cd4-902a-cecf9940b7b5.pdf?sfvrsn=db71edc4_3",
-            "title": "equine-assisted-activities-therapy-renewal- ..."
+            "url": "https://link.springer.com/article/10.1186/s13011-022-00506-x",
+            "title": "Equine-assisted services for individuals with substance use disorders: a scoping review | Substance Abuse Treatment, Prevention, and Policy | Springer Nature Link"
           }
         ],
         "rank_verified": false
       },
       "grounded_competitors": [
         {
-          "url": "https://www.equisure-inc.com/docs/default-source/applications/equine-assisted-activities-therapy-renewal-application5d800348-8b50-4cd4-902a-cecf9940b7b5.pdf?sfvrsn=db71edc4_3",
-          "resolved_url": "https://www.equisure-inc.com/docs/default-source/applications/equine-assisted-activities-therapy-renewal-application5d800348-8b50-4cd4-902a-cecf9940b7b5.pdf?sfvrsn=db71edc4_3",
+          "url": "https://link.springer.com/article/10.1186/s13011-022-00506-x",
+          "resolved_url": "https://link.springer.com/article/10.1186/s13011-022-00506-x",
           "status": "ok",
           "http_status": 200,
-          "title": "",
+          "title": "Client Challenge",
           "h1": "",
           "headings": [],
-          "text_chars": 262770
+          "text_chars": 303
         }
       ],
       "coverage_match_score": 1,
@@ -1389,12 +1389,12 @@
             "title": "Equine Liability: Related Statutes | Animal Legal & Historical Center"
           },
           {
-            "url": "https://mca.legmt.gov/bills/mca/title_0270/chapter_0010/part_0070/section_0270/0270-0010-0070-0270.html",
-            "title": "27-1-727. Equine activity liability limitations -- waivers, MCA"
-          },
-          {
             "url": "https://www.lsuagcenter.com/topics/livestock/horses/educational%20resources/basic%20horse%20ownership/equineliabilitystatuteareyouincompliance",
             "title": "Equine Liability Statute: Are you in compliance?"
+          },
+          {
+            "url": "https://mca.legmt.gov/bills/mca/title_0270/chapter_0010/part_0070/section_0270/0270-0010-0070-0270.html",
+            "title": "27-1-727. Equine activity liability limitations -- waivers, MCA"
           },
           {
             "url": "https://www.hinshawlaw.com/a/web/2rWb6D634viK1Cct52LHHu/a13yLx/yvonne-ocrant-cdlb-equine-liability-law-keeps-dangerous-sport-in-stride.pdf",
@@ -1429,17 +1429,9 @@
           "text_chars": 48312
         },
         {
-          "url": "https://mca.legmt.gov/bills/mca/title_0270/chapter_0010/part_0070/section_0270/0270-0010-0070-0270.html",
-          "resolved_url": "https://mca.legmt.gov/bills/mca/title_0270/chapter_0010/part_0070/section_0270/0270-0010-0070-0270.html",
-          "status": "ok",
-          "http_status": 200,
-          "title": "27-1-727. Equine activity liability limitations -- waivers, MCA",
-          "h1": "Montana Code Annotated 2025",
-          "headings": [
-            "CHAPTER 1. AVAILABILITY OF REMEDIES -- LIABILITY",
-            "Part 7. Liability"
-          ],
-          "text_chars": 3174
+          "url": "https://www.lsuagcenter.com/topics/livestock/horses/educational%20resources/basic%20horse%20ownership/equineliabilitystatuteareyouincompliance",
+          "status": "fetch_failed",
+          "error": "fetch failed"
         }
       ],
       "coverage_match_score": 1,
@@ -1670,15 +1662,15 @@
           },
           {
             "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts",
-            "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts"
+            "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
           },
           {
             "url": "https://horses.extension.org/equine-boarding-stable-contracts",
             "title": "Equine Boarding Stable Contracts | Extension Horses"
           },
           {
-            "url": "https://equinelegaldocs.com/documents/boarding-agreements/horse-boarding-agreement",
-            "title": "Horse Boarding Agreement Template — Personalize & Download PDF | EquineLegalDocs"
+            "url": "https://www.horsenation.com/2015/05/14/equine-law-boarding-contracts",
+            "title": "Equine Law: Boarding Contracts | HORSE NATION"
           }
         ],
         "rank_verified": false
@@ -1728,7 +1720,7 @@
             "Working With Your Veterinarian on Treatment Plans",
             "Quick Links"
           ],
-          "text_chars": 21464
+          "text_chars": 21600
         },
         {
           "url": "https://horses.extension.org/equine-boarding-stable-contracts",
@@ -1776,17 +1768,89 @@
       },
       "active_query_evidence": {
         "panel_id": "qpanel-005",
-        "state": "MISSING",
-        "grounded_site_surfaced": false,
-        "competitor_urls": [],
+        "state": "OBSERVED",
+        "grounded_site_surfaced": true,
+        "competitor_urls": [
+          {
+            "url": "https://warren.osu.edu/sites/warren/files/imce/Blank%20HORSE%20LEASE%20AGREEMENT_0%20(2).doc",
+            "title": "[DOC] HORSE LEASE AGREEMENT"
+          },
+          {
+            "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts",
+            "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts – The Horse"
+          },
+          {
+            "url": "https://extension.oregonstate.edu/sites/extd8/files/documents/smitshei/horse-lease-agreement_0.pdf",
+            "title": "[PDF] Horse Lease Agreement"
+          },
+          {
+            "url": "https://www.rmhorse.com/wp-content/uploads/2019/07/Equine-Lease-ContractFILL.pdf",
+            "title": "Microsoft Word - Equine Lease Contract.docx"
+          },
+          {
+            "url": "https://buffalo.extension.wisc.edu/files/2010/06/Horse-Lease-Agreement.pdf",
+            "title": "[PDF] HORSE LEASE AGREEMENT - Extension Buffalo County"
+          }
+        ],
         "rank_verified": false
       },
-      "grounded_competitors": [],
+      "grounded_competitors": [
+        {
+          "url": "https://warren.osu.edu/sites/warren/files/imce/Blank%20HORSE%20LEASE%20AGREEMENT_0%20(2).doc",
+          "status": "http_error",
+          "http_status": 403
+        },
+        {
+          "url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts",
+          "resolved_url": "https://thehorse.com/18937/making-it-legal-equine-lease-sales-and-boarding-contracts/",
+          "status": "ok",
+          "http_status": 200,
+          "title": "Making it Legal: Equine Lease, Sales, and Boarding Contracts &#8211; The Horse",
+          "h1": "Making it Legal: Equine Lease, Sales, and Boarding Contracts",
+          "headings": [
+            "Cover Story",
+            "Managing Chronic Health Conditions in Your Athlete",
+            "Also in this Issue",
+            "Latest News",
+            "Disease Alerts",
+            "Event Coverage",
+            "Latest Features",
+            "Equine Vaccinations for Year-Round Protection",
+            "Update: EPM in Horses",
+            "Additional Features",
+            "Dealing With Equine Colic: Here are 33 Do&#8217;s and Don’ts",
+            "Inside the Equine Gut Microbiome",
+            "Parasite Control for Today’s Horses",
+            "Managing Your Performance Horse&#8217;s Joints",
+            "Equine Asthma",
+            "Latest Q&amp;A",
+            "Managing the Hard-Keeping PPID Horse",
+            "Q&amp;As",
+            "Equine Behavior",
+            "Horse Nutrition",
+            "Performance Horse Health",
+            "Featured Media:",
+            "Understanding Laminitis in Horses",
+            "Working With Your Veterinarian on Treatment Plans",
+            "Quick Links"
+          ],
+          "text_chars": 21600
+        },
+        {
+          "url": "https://extension.oregonstate.edu/sites/extd8/files/documents/smitshei/horse-lease-agreement_0.pdf",
+          "resolved_url": "https://extension.oregonstate.edu/sites/extd8/files/documents/smitshei/horse-lease-agreement_0.pdf",
+          "status": "ok",
+          "http_status": 200,
+          "title": "",
+          "h1": "",
+          "headings": [],
+          "text_chars": 512603
+        }
+      ],
       "coverage_match_score": 1,
       "confidence": 0.82,
       "reasons": [
-        "active_query_missing",
-        "SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION"
+        "query_matches_existing_coverage"
       ],
       "status": "pending_owner_review",
       "automatic_actions_completed": [
@@ -1818,10 +1882,6 @@
         "grounded_site_surfaced": true,
         "competitor_urls": [
           {
-            "url": "https://www.equisure-inc.com/docs/default-source/applications/equine-instructor-trainer-professional-liability-application467c128a-212a-439e-b2aa-8276e7643df6.pdf?sfvrsn=b6eab315_4",
-            "title": "Microsoft Word - Equine Instructor Trainer Professional Liability Application"
-          },
-          {
             "url": "https://blackstonesolicitorsltd.co.uk/equine-law/training-agreements",
             "title": "Equine Training Contract | Horse Training Agreement | Solicitors"
           },
@@ -1832,21 +1892,15 @@
           {
             "url": "https://www.netlawman.co.uk/d/horse-training-agreement",
             "title": "Horse Training Agreement - Equestrian Contract For Schooling"
+          },
+          {
+            "url": "https://www.stablewise.com/forms.htm",
+            "title": "Sample Horse Boarding Contracts And Other Equine Legal Forms - StableWise"
           }
         ],
         "rank_verified": false
       },
       "grounded_competitors": [
-        {
-          "url": "https://www.equisure-inc.com/docs/default-source/applications/equine-instructor-trainer-professional-liability-application467c128a-212a-439e-b2aa-8276e7643df6.pdf?sfvrsn=b6eab315_4",
-          "resolved_url": "https://www.equisure-inc.com/docs/default-source/applications/equine-instructor-trainer-professional-liability-application467c128a-212a-439e-b2aa-8276e7643df6.pdf?sfvrsn=b6eab315_4",
-          "status": "ok",
-          "http_status": 200,
-          "title": "",
-          "h1": "",
-          "headings": [],
-          "text_chars": 189350
-        },
         {
           "url": "https://blackstonesolicitorsltd.co.uk/equine-law/training-agreements",
           "resolved_url": "https://blackstonesolicitorsltd.co.uk/equine-law/training-agreements/",
@@ -1869,12 +1923,40 @@
             "Contact Us",
             "Registered Office"
           ],
-          "text_chars": 20480
+          "text_chars": 20435
         },
         {
           "url": "https://equinelegalsolutions.com/whats-in-our-forms-training",
           "status": "http_error",
           "http_status": 403
+        },
+        {
+          "url": "https://www.netlawman.co.uk/d/horse-training-agreement",
+          "resolved_url": "https://www.netlawman.co.uk/d/horse-training-agreement",
+          "status": "ok",
+          "http_status": 200,
+          "title": "Horse Training Agreement - Equestrian Contract For Schooling",
+          "h1": "Horse training agreement",
+          "headings": [
+            "Document only",
+            "Lawyer Assist",
+            "Become a Member",
+            "Key features",
+            "About this horse training agreement",
+            "Who should use this document ?",
+            "The law in this horse training agreement",
+            "Document features and contents",
+            "Recent reviews",
+            "Choose the level of support you need",
+            "Document only",
+            "Lawyer Assist",
+            "Standard",
+            "Professional",
+            "Professional Plus",
+            "What other customers thought",
+            "What other customers thought"
+          ],
+          "text_chars": 11218
         }
       ],
       "coverage_match_score": 1,
@@ -1917,12 +1999,12 @@
             "title": "Horses and The Law - FindLaw"
           },
           {
-            "url": "https://equinelegalsolutions.com/do-i-have-a-case",
-            "title": "Do I Have a Horse-Related Legal Case? - Equine Legal Solutions"
-          },
-          {
             "url": "https://www.tylerhuntlaw.com/blog/2024/08/so-you-received-a-demand-letter-what-now",
             "title": "So You Received A Demand Letter. What now? | Hunt Hunt & Winterbottom LLP"
+          },
+          {
+            "url": "https://content.next.westlaw.com/practical-law/document/I17347e1f31a711f0b6a3874d50b19388/Response-to-Demand-Letter?contextData=(sc.Default)&transitionType=Default&viewType=FullText",
+            "title": "Response to Demand Letter | Practical Law - Westlaw"
           }
         ],
         "rank_verified": false
@@ -1934,12 +2016,12 @@
           "http_status": 403
         },
         {
-          "url": "https://equinelegalsolutions.com/do-i-have-a-case",
+          "url": "https://www.tylerhuntlaw.com/blog/2024/08/so-you-received-a-demand-letter-what-now",
           "status": "http_error",
           "http_status": 403
         },
         {
-          "url": "https://www.tylerhuntlaw.com/blog/2024/08/so-you-received-a-demand-letter-what-now",
+          "url": "https://content.next.westlaw.com/practical-law/document/I17347e1f31a711f0b6a3874d50b19388/Response-to-Demand-Letter?contextData=(sc.Default)&transitionType=Default&viewType=FullText",
           "status": "http_error",
           "http_status": 403
         }
@@ -2197,6 +2279,14 @@
             "title": "Equine Inherent Risk Law - Horse Riding Claims in California"
           },
           {
+            "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
+            "title": "Detailed Discussion of the Equine Activity Liability Act | Animal Legal & Historical Center"
+          },
+          {
+            "url": "https://www.animallaw.info/intro/equine-activity-liability",
+            "title": "Equine Activity Liability | Animal Legal & Historical Center"
+          },
+          {
             "url": "https://www.irongateequine.com/education/horse-ownership-and-the-law",
             "title": "Horse Ownership and the Law — Irongate Equine Clinic"
           }
@@ -2243,24 +2333,21 @@
           "text_chars": 13733
         },
         {
-          "url": "https://www.irongateequine.com/education/horse-ownership-and-the-law",
-          "resolved_url": "https://www.irongateequine.com/education/horse-ownership-and-the-law",
+          "url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
+          "resolved_url": "https://www.animallaw.info/article/detailed-discussion-equine-activity-liability-act",
           "status": "ok",
           "http_status": 200,
-          "title": "Horse Ownership and the Law &mdash; Irongate Equine Clinic",
-          "h1": "Horse Ownership and the Law",
+          "title": "Detailed Discussion of the Equine Activity Liability Act | Animal Legal &amp; Historical Center",
+          "h1": "<span class=\"field field-name-field-full-title-name field-type-text-long field-label-inline clearfix\"> <span class=\"field-label\">Full Title Name:&nbsp;</span> <span class=\"field-items\"> <span class=\"field-item even\">Detailed Discussion of the Equine Activity Liability Act</span> </span> </span>",
           "headings": [
-            "The Law: The Equine Immunity Statute",
-            "The Solution: Get Insurance",
-            "Questions:",
-            "What if someone hurts my horse?",
-            "Does fencing have much impact on insurance claims/lawsuits?",
-            "I board my horse at a local facility. If she gets out and causes damage, who does that cost go back to - myself, or the facility that should be maintaining the fencing?",
-            "Neighborhood kids sometimes come over to ride my horses. I just give them a little note that I made saying that I'm not liable, and their parents sign it. Does this cover me?",
-            "Other states of instituted laws for emotional damage from the loss of pets. Where does Wisconsin stand on that?",
-            "Stringhalt: The Marionette Horse"
+            "You are here",
+            "I. General Purpose and Scope of the Law",
+            "II. Exceptions",
+            "III. Recent Cases",
+            "Full Site Search",
+            "Main menu"
           ],
-          "text_chars": 9682
+          "text_chars": 21083
         }
       ],
       "coverage_match_score": 0.714,
@@ -2382,7 +2469,7 @@
           },
           {
             "url": "https://www.wardandsmith.com/article/legal-risks-in-horse-boarding-contracts-under-north-carolina-law-and-how-to-avoid-them",
-            "title": "Legal Risks in Horse Boarding Contracts Under North Carolina Law and How to Avoid Them | Ward and Smith, P.A."
+            "title": "Legal Risks in Horse Boarding Contracts Under North ..."
           },
           {
             "url": "https://www.uslegalforms.com/animals/horses",
