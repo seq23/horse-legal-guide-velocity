@@ -10443,14 +10443,15 @@
     "source_signal_ids": [
       "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_221e7689",
       "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_ca167630",
-      "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_de7cf59e"
+      "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_de7cf59e",
+      "reddit_equestrian_what-color-is-this-horse-https-www-reddit-com-r-eque_f27ee6b8"
     ],
-    "preserved_query": "What color is this horse?",
-    "normalized_query": "What color is this horse?",
-    "llm_bait_phrase": "color is this horse",
+    "preserved_query": "What color is this horse? :)?",
+    "normalized_query": "What color is this horse? :)?",
+    "llm_bait_phrase": "color is this horse? :)",
     "cluster": "state-specific",
     "intent_type": "faq",
-    "signal_score": 3.85,
+    "signal_score": 5.35,
     "match_evidence": {
       "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "shared_terms": [],
@@ -37309,6 +37310,425 @@
       "page_coverage": 0.227
     },
     "mapped_slug": "/faq/pushy-mouthy-gelding-who-s-constantly-testing-me-how-did-you-sort-the-manners/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1487_saddle-not-fitting-because-horse-is-fat",
+    "normalized_id": "norm_3671_fdc945c2b7",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_saddle-not-fitting-because-horse-is-fat-https-www-re_799d5740"
+    ],
+    "preserved_query": "Saddle not fitting because horse is fat — what should I know?",
+    "normalized_query": "Saddle not fitting because horse is fat — what should I know?",
+    "llm_bait_phrase": "Saddle not fitting because horse is fat",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/saddle-not-fitting-because-horse-is-fat/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1488_8yo-horse-just-diagnosed-with-arthritis-is-this-a-deal-break",
+    "normalized_id": "norm_3673_e03a50e267",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_8yo-horse-just-diagnosed-with-arthritis-is-this-a-de_513adb8b"
+    ],
+    "preserved_query": "8yo horse just diagnosed with arthritis, is this a deal breaker — what should I know?",
+    "normalized_query": "8yo horse just diagnosed with arthritis, is this a deal breaker — what should I know?",
+    "llm_bait_phrase": "8yo horse just diagnosed with arthritis, is this a deal breaker",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+      "shared_terms": [
+        "deal"
+      ],
+      "question_coverage": 0.143,
+      "page_coverage": 0.478
+    },
+    "mapped_slug": "/faq/8yo-horse-just-diagnosed-with-arthritis-is-this-a-deal-breaker/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1489_recommended-training-programs",
+    "normalized_id": "norm_3676_be2aa61649",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_recommended-training-programs-https-www-reddit-com-r_936be393"
+    ],
+    "preserved_query": "Recommended training programs — what should I know?",
+    "normalized_query": "Recommended training programs — what should I know?",
+    "llm_bait_phrase": "Recommended training programs",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/what-liability-does-a-trainer-have/",
+      "shared_terms": [
+        "train"
+      ],
+      "question_coverage": 0.251,
+      "page_coverage": 0.521
+    },
+    "mapped_slug": "/faq/recommended-training-programs/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1490_advice-please",
+    "normalized_id": "norm_3681_ea5812211e",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_advice-please-https-www-reddit-com-r-equestrian-comm_fc8d58d9"
+    ],
+    "preserved_query": "Advice please! — what should I know?",
+    "normalized_query": "Advice please! — what should I know?",
+    "llm_bait_phrase": "Advice please!",
+    "cluster": "horse-lease-and-trial",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/leases/can-you-end-a-horse-lease-early/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/advice-please/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1491_back-into-training",
+    "normalized_id": "norm_3682_6390dc713e",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_back-into-training-https-www-reddit-com-r-equestrian_86728211"
+    ],
+    "preserved_query": "Back into training — what should I know?",
+    "normalized_query": "Back into training — what should I know?",
+    "llm_bait_phrase": "Back into training",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/what-liability-does-a-trainer-have/",
+      "shared_terms": [
+        "train"
+      ],
+      "question_coverage": 0.42,
+      "page_coverage": 0.521
+    },
+    "mapped_slug": "/faq/back-into-training/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1492_the-art-of-not-riding-your-horse",
+    "normalized_id": "norm_3684_7764d2247a",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_the-art-of-not-riding-your-horse-https-www-reddit-co_4b21ae43"
+    ],
+    "preserved_query": "The art of not riding your horse — what should I know?",
+    "normalized_query": "The art of not riding your horse — what should I know?",
+    "llm_bait_phrase": "The art of not riding your horse",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
+      "shared_terms": [
+        "rid"
+      ],
+      "question_coverage": 0.4,
+      "page_coverage": 0.526
+    },
+    "mapped_slug": "/faq/the-art-of-not-riding-your-horse/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1493_is-wrong-with-this-horse-as-someone-who-is-very-unfamiliar-w",
+    "normalized_id": "norm_3685_f5d64ec82e",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_what-is-wrong-with-this-horse-as-someone-who-is-very_d7b05abc"
+    ],
+    "preserved_query": "What is wrong with this horse? (As someone who is very unfamiliar with correct conformation)?",
+    "normalized_query": "What is wrong with this horse? (As someone who is very unfamiliar with correct conformation)?",
+    "llm_bait_phrase": "is wrong with this horse? (As someone who is very unfamiliar with correct conformation)",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/faq/what-happens-if-a-horse-sale-goes-wrong/",
+      "shared_terms": [
+        "wrong"
+      ],
+      "question_coverage": 0.201,
+      "page_coverage": 0.369
+    },
+    "mapped_slug": "/faq/is-wrong-with-this-horse-as-someone-who-is-very-unfamiliar-with-correct-conformation/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1494_leasing-a-horse",
+    "normalized_id": "norm_3687_ed55c3c05c",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_leasing-a-horse-https-www-reddit-com-r-equestrian-co_c5c61378"
+    ],
+    "preserved_query": "Leasing A Horse — what should I know?",
+    "normalized_query": "Leasing A Horse — what should I know?",
+    "llm_bait_phrase": "Leasing A Horse",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "shared_terms": [
+        "leas"
+      ],
+      "question_coverage": 1,
+      "page_coverage": 0.548
+    },
+    "mapped_slug": "/faq/leasing-a-horse/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1495_giant-horse-themed-furniture-store-room",
+    "normalized_id": "norm_3689_095c5668fe",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_giant-horse-themed-furniture-store-room-https-www-re_aea4e1c1"
+    ],
+    "preserved_query": "giant horse themed furniture store room — what should I know?",
+    "normalized_query": "giant horse themed furniture store room — what should I know?",
+    "llm_bait_phrase": "giant horse themed furniture store room",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/giant-horse-themed-furniture-store-room/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1496_leasing-vs-part-boarding-a-horse-cost-time-and-showing",
+    "normalized_id": "norm_3690_607a31f52e",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_leasing-vs-part-boarding-a-horse-cost-time-and-showi_38e2cf63"
+    ],
+    "preserved_query": "Leasing vs Part Boarding a Horse | Cost, Time and Showing",
+    "normalized_query": "Leasing vs Part Boarding a Horse | Cost, Time and Showing",
+    "llm_bait_phrase": "Leasing vs Part Boarding a Horse | Cost, Time and Showing",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "comparison",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "shared_terms": [
+        "leas"
+      ],
+      "question_coverage": 0.153,
+      "page_coverage": 0.548
+    },
+    "mapped_slug": "/compare/leasing-vs-part-boarding-a-horse-cost-time-and-showing/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1497_animal-court-horse-disagreement",
+    "normalized_id": "norm_3691_3caafd75d8",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_animal-court-horse-disagreement-https-www-youtube-co_8993c600"
+    ],
+    "preserved_query": "Animal Court: Horse Disagreement — what should I know?",
+    "normalized_query": "Animal Court: Horse Disagreement — what should I know?",
+    "llm_bait_phrase": "Animal Court: Horse Disagreement",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+      "shared_terms": [
+        "court"
+      ],
+      "question_coverage": 0.328,
+      "page_coverage": 0.259
+    },
+    "mapped_slug": "/faq/animal-court-horse-disagreement/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1498_leasing-a-horse-beginner-s-guide-to-horses-pt-3",
+    "normalized_id": "norm_3692_e0013193a2",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_leasing-a-horse-beginner-s-guide-to-horses-pt-3-http_e7475cc4"
+    ],
+    "preserved_query": "Leasing A Horse! | Beginner's Guide To Horses Pt.3 — what should I know?",
+    "normalized_query": "Leasing A Horse! | Beginner's Guide To Horses Pt.3 — what should I know?",
+    "llm_bait_phrase": "Leasing A Horse! | Beginner's Guide To Horses Pt.3",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "shared_terms": [
+        "leas"
+      ],
+      "question_coverage": 0.441,
+      "page_coverage": 0.548
+    },
+    "mapped_slug": "/faq/leasing-a-horse-beginner-s-guide-to-horses-pt-3/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1499_she-bought-the-ranch-s-cheapest-horse-for-35-then-discovered",
+    "normalized_id": "norm_3693_8052ff06df",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_she-bought-the-ranch-s-cheapest-horse-for-35-then-di_5875397e"
+    ],
+    "preserved_query": "She Bought the Ranch’s Cheapest Horse for $35—Then Discovered Its Lost Bloodline — what should I know?",
+    "normalized_query": "She Bought the Ranch’s Cheapest Horse for $35—Then Discovered Its Lost Bloodline — what should I know?",
+    "llm_bait_phrase": "She Bought the Ranch’s Cheapest Horse for $35—Then Discovered Its Lost Bloodline",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/scenario/what-if-i-bought-a-horse-without-a-contract/",
+      "shared_terms": [
+        "bough"
+      ],
+      "question_coverage": 0.143,
+      "page_coverage": 0.433
+    },
+    "mapped_slug": "/faq/she-bought-the-ranch-s-cheapest-horse-for-35-then-discovered-its-lost-bloodline/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1500_auction-ponies-sold-for-how-much-horse-prices-are-insane",
+    "normalized_id": "norm_3694_a0f70d74a9",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_auction-ponies-sold-for-how-much-horse-prices-are-in_bae96607"
+    ],
+    "preserved_query": "AUCTION PONIES SOLD FOR HOW MUCH?! HORSE PRICES ARE INSANE! — what should I know?",
+    "normalized_query": "AUCTION PONIES SOLD FOR HOW MUCH?! HORSE PRICES ARE INSANE! — what should I know?",
+    "llm_bait_phrase": "AUCTION PONIES SOLD FOR HOW MUCH?! HORSE PRICES ARE INSANE!",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/scenario/what-if-i-sold-a-horse-without-a-contract/",
+      "shared_terms": [
+        "sold"
+      ],
+      "question_coverage": 0.124,
+      "page_coverage": 0.392
+    },
+    "mapped_slug": "/faq/auction-ponies-sold-for-how-much-horse-prices-are-insane/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1501_i-m-selling-my-horse-but-which-one",
+    "normalized_id": "norm_3695_9fa79fcfc4",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_i-m-selling-my-horse-but-which-one-https-www-youtube_527e9a25"
+    ],
+    "preserved_query": "I'm Selling My Horse... But Which One — what should I know?",
+    "normalized_query": "I'm Selling My Horse... But Which One — what should I know?",
+    "llm_bait_phrase": "I'm Selling My Horse... But Which One",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+      "shared_terms": [
+        "sell"
+      ],
+      "question_coverage": 1,
+      "page_coverage": 0.622
+    },
+    "mapped_slug": "/faq/i-m-selling-my-horse-but-which-one/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1502_to-make-top-selling-videos-for-your-sale-horses",
+    "normalized_id": "norm_3696_5b9ee10d8d",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_how-to-make-top-selling-videos-for-your-sale-horses-_cf632935"
+    ],
+    "preserved_query": "HOW To Make TOP SELLING Videos For Your Sale Horses?",
+    "normalized_query": "HOW To Make TOP SELLING Videos For Your Sale Horses?",
+    "llm_bait_phrase": "To Make TOP SELLING Videos For Your Sale Horses",
+    "cluster": "horse-sale-and-purchase",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+      "shared_terms": [
+        "sell"
+      ],
+      "question_coverage": 0.243,
+      "page_coverage": 0.622
+    },
+    "mapped_slug": "/faq/to-make-top-selling-videos-for-your-sale-horses/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1503_to-sell-a-two-year-old-performance-horse-for-1-million",
+    "normalized_id": "norm_3697_a8f75222c7",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_how-to-sell-a-two-year-old-performance-horse-for-1-m_0b6488fe"
+    ],
+    "preserved_query": "How To Sell a Two Year Old Performance Horse For $1 Million?",
+    "normalized_query": "How To Sell a Two Year Old Performance Horse For $1 Million?",
+    "llm_bait_phrase": "To Sell a Two Year Old Performance Horse For $1 Million",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+      "shared_terms": [
+        "sell"
+      ],
+      "question_coverage": 0.171,
+      "page_coverage": 0.622
+    },
+    "mapped_slug": "/faq/to-sell-a-two-year-old-performance-horse-for-1-million/",
     "status": "pending_owner_review",
     "reason": "No existing page answers this question; queued as a new page for owner review."
   },

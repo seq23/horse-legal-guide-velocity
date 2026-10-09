@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T13:46:13.664Z",
-  "total_signals": 3670,
+  "generated_at": "2026-10-09T13:46:38.620Z",
+  "total_signals": 3698,
   "signals_by_source": {
-    "reddit_equestrian": 1778,
+    "reddit_equestrian": 1798,
     "reddit_horses": 687,
     "forum_the_horse_forum": 30,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 34,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 195,
+    "youtube_search_comments": 203,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 223,
@@ -17,36 +17,36 @@
     "forum_horse_and_hound": 76
   },
   "signals_by_platform": {
-    "reddit": 3030,
+    "reddit": 3050,
     "equestrian_forums": 136,
     "google_paa": 34,
     "serp_competitors": 217,
-    "youtube": 195,
+    "youtube": 203,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1487,
-  "duplicates_collapsed": 2183,
+  "normalized_count": 1504,
+  "duplicates_collapsed": 2194,
   "pages_created": 0,
   "pages_strengthened": 250,
   "rejected_signals": 0,
-  "pending_owner_review": 1231,
+  "pending_owner_review": 1248,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 772
+      "count": 784
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 245
+      "count": 248
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 181
+      "count": 182
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 163
+      "count": 164
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1778
+      "count": 1798
     },
     {
       "name": "reddit_horses",
@@ -96,7 +96,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 195
+      "count": 203
     },
     {
       "name": "reddit_farming_ranching",
@@ -151,9 +151,8 @@
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -178,7 +177,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 10
+      "count": 9
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -190,7 +189,7 @@
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 14,
+      "count": 17,
       "error": "4 of 8 cited page(s) failed to fetch."
     },
     {
@@ -9187,12 +9186,13 @@
       "normalized_id": "norm_0638_aaf707451a",
       "proposed_slug": "/faq/color-is-this-horse/",
       "cluster": "state-specific",
-      "question": "What color is this horse?",
-      "llm_bait_phrase": "color is this horse",
+      "question": "What color is this horse? :)?",
+      "llm_bait_phrase": "color is this horse? :)",
       "source_signal_ids": [
         "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_221e7689",
         "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_ca167630",
-        "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_de7cf59e"
+        "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_de7cf59e",
+        "reddit_equestrian_what-color-is-this-horse-https-www-reddit-com-r-eque_f27ee6b8"
       ]
     },
     {
@@ -23251,6 +23251,227 @@
       "llm_bait_phrase": "Pushy, mouthy gelding who's constantly testing me. How did you sort the manners",
       "source_signal_ids": [
         "reddit_equestrian_pushy-mouthy-gelding-who-s-constantly-testing-me-how_6be060ef"
+      ]
+    },
+    {
+      "approval_id": "approval_1487_saddle-not-fitting-because-horse-is-fat",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3671_fdc945c2b7",
+      "proposed_slug": "/faq/saddle-not-fitting-because-horse-is-fat/",
+      "cluster": "state-specific",
+      "question": "Saddle not fitting because horse is fat — what should I know?",
+      "llm_bait_phrase": "Saddle not fitting because horse is fat",
+      "source_signal_ids": [
+        "reddit_equestrian_saddle-not-fitting-because-horse-is-fat-https-www-re_799d5740"
+      ]
+    },
+    {
+      "approval_id": "approval_1488_8yo-horse-just-diagnosed-with-arthritis-is-this-a-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3673_e03a50e267",
+      "proposed_slug": "/faq/8yo-horse-just-diagnosed-with-arthritis-is-this-a-deal-breaker/",
+      "cluster": "state-specific",
+      "question": "8yo horse just diagnosed with arthritis, is this a deal breaker — what should I know?",
+      "llm_bait_phrase": "8yo horse just diagnosed with arthritis, is this a deal breaker",
+      "source_signal_ids": [
+        "reddit_equestrian_8yo-horse-just-diagnosed-with-arthritis-is-this-a-de_513adb8b"
+      ]
+    },
+    {
+      "approval_id": "approval_1489_recommended-training-programs",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3676_be2aa61649",
+      "proposed_slug": "/faq/recommended-training-programs/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Recommended training programs — what should I know?",
+      "llm_bait_phrase": "Recommended training programs",
+      "source_signal_ids": [
+        "reddit_equestrian_recommended-training-programs-https-www-reddit-com-r_936be393"
+      ]
+    },
+    {
+      "approval_id": "approval_1490_advice-please",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3681_ea5812211e",
+      "proposed_slug": "/faq/advice-please/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Advice please! — what should I know?",
+      "llm_bait_phrase": "Advice please!",
+      "source_signal_ids": [
+        "reddit_equestrian_advice-please-https-www-reddit-com-r-equestrian-comm_fc8d58d9"
+      ]
+    },
+    {
+      "approval_id": "approval_1491_back-into-training",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3682_6390dc713e",
+      "proposed_slug": "/faq/back-into-training/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Back into training — what should I know?",
+      "llm_bait_phrase": "Back into training",
+      "source_signal_ids": [
+        "reddit_equestrian_back-into-training-https-www-reddit-com-r-equestrian_86728211"
+      ]
+    },
+    {
+      "approval_id": "approval_1492_the-art-of-not-riding-your-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3684_7764d2247a",
+      "proposed_slug": "/faq/the-art-of-not-riding-your-horse/",
+      "cluster": "state-specific",
+      "question": "The art of not riding your horse — what should I know?",
+      "llm_bait_phrase": "The art of not riding your horse",
+      "source_signal_ids": [
+        "reddit_equestrian_the-art-of-not-riding-your-horse-https-www-reddit-co_4b21ae43"
+      ]
+    },
+    {
+      "approval_id": "approval_1493_is-wrong-with-this-horse-as-someone-who-is-very-un",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3685_f5d64ec82e",
+      "proposed_slug": "/faq/is-wrong-with-this-horse-as-someone-who-is-very-unfamiliar-with-correct-conformation/",
+      "cluster": "state-specific",
+      "question": "What is wrong with this horse? (As someone who is very unfamiliar with correct conformation)?",
+      "llm_bait_phrase": "is wrong with this horse? (As someone who is very unfamiliar with correct conformation)",
+      "source_signal_ids": [
+        "reddit_equestrian_what-is-wrong-with-this-horse-as-someone-who-is-very_d7b05abc"
+      ]
+    },
+    {
+      "approval_id": "approval_1494_leasing-a-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3687_ed55c3c05c",
+      "proposed_slug": "/faq/leasing-a-horse/",
+      "cluster": "state-specific",
+      "question": "Leasing A Horse — what should I know?",
+      "llm_bait_phrase": "Leasing A Horse",
+      "source_signal_ids": [
+        "reddit_equestrian_leasing-a-horse-https-www-reddit-com-r-equestrian-co_c5c61378"
+      ]
+    },
+    {
+      "approval_id": "approval_1495_giant-horse-themed-furniture-store-room",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3689_095c5668fe",
+      "proposed_slug": "/faq/giant-horse-themed-furniture-store-room/",
+      "cluster": "state-specific",
+      "question": "giant horse themed furniture store room — what should I know?",
+      "llm_bait_phrase": "giant horse themed furniture store room",
+      "source_signal_ids": [
+        "reddit_equestrian_giant-horse-themed-furniture-store-room-https-www-re_aea4e1c1"
+      ]
+    },
+    {
+      "approval_id": "approval_1496_leasing-vs-part-boarding-a-horse-cost-time-and-sho",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3690_607a31f52e",
+      "proposed_slug": "/compare/leasing-vs-part-boarding-a-horse-cost-time-and-showing/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Leasing vs Part Boarding a Horse | Cost, Time and Showing",
+      "llm_bait_phrase": "Leasing vs Part Boarding a Horse | Cost, Time and Showing",
+      "source_signal_ids": [
+        "youtube_search_comments_leasing-vs-part-boarding-a-horse-cost-time-and-showi_38e2cf63"
+      ]
+    },
+    {
+      "approval_id": "approval_1497_animal-court-horse-disagreement",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3691_3caafd75d8",
+      "proposed_slug": "/faq/animal-court-horse-disagreement/",
+      "cluster": "state-specific",
+      "question": "Animal Court: Horse Disagreement — what should I know?",
+      "llm_bait_phrase": "Animal Court: Horse Disagreement",
+      "source_signal_ids": [
+        "youtube_search_comments_animal-court-horse-disagreement-https-www-youtube-co_8993c600"
+      ]
+    },
+    {
+      "approval_id": "approval_1498_leasing-a-horse-beginner-s-guide-to-horses-pt-3",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3692_e0013193a2",
+      "proposed_slug": "/faq/leasing-a-horse-beginner-s-guide-to-horses-pt-3/",
+      "cluster": "state-specific",
+      "question": "Leasing A Horse! | Beginner's Guide To Horses Pt.3 — what should I know?",
+      "llm_bait_phrase": "Leasing A Horse! | Beginner's Guide To Horses Pt.3",
+      "source_signal_ids": [
+        "youtube_search_comments_leasing-a-horse-beginner-s-guide-to-horses-pt-3-http_e7475cc4"
+      ]
+    },
+    {
+      "approval_id": "approval_1499_she-bought-the-ranch-s-cheapest-horse-for-35-then-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3693_8052ff06df",
+      "proposed_slug": "/faq/she-bought-the-ranch-s-cheapest-horse-for-35-then-discovered-its-lost-bloodline/",
+      "cluster": "state-specific",
+      "question": "She Bought the Ranch’s Cheapest Horse for $35—Then Discovered Its Lost Bloodline — what should I know?",
+      "llm_bait_phrase": "She Bought the Ranch’s Cheapest Horse for $35—Then Discovered Its Lost Bloodline",
+      "source_signal_ids": [
+        "youtube_search_comments_she-bought-the-ranch-s-cheapest-horse-for-35-then-di_5875397e"
+      ]
+    },
+    {
+      "approval_id": "approval_1500_auction-ponies-sold-for-how-much-horse-prices-are-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3694_a0f70d74a9",
+      "proposed_slug": "/faq/auction-ponies-sold-for-how-much-horse-prices-are-insane/",
+      "cluster": "state-specific",
+      "question": "AUCTION PONIES SOLD FOR HOW MUCH?! HORSE PRICES ARE INSANE! — what should I know?",
+      "llm_bait_phrase": "AUCTION PONIES SOLD FOR HOW MUCH?! HORSE PRICES ARE INSANE!",
+      "source_signal_ids": [
+        "youtube_search_comments_auction-ponies-sold-for-how-much-horse-prices-are-in_bae96607"
+      ]
+    },
+    {
+      "approval_id": "approval_1501_i-m-selling-my-horse-but-which-one",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3695_9fa79fcfc4",
+      "proposed_slug": "/faq/i-m-selling-my-horse-but-which-one/",
+      "cluster": "state-specific",
+      "question": "I'm Selling My Horse... But Which One — what should I know?",
+      "llm_bait_phrase": "I'm Selling My Horse... But Which One",
+      "source_signal_ids": [
+        "youtube_search_comments_i-m-selling-my-horse-but-which-one-https-www-youtube_527e9a25"
+      ]
+    },
+    {
+      "approval_id": "approval_1502_to-make-top-selling-videos-for-your-sale-horses",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3696_5b9ee10d8d",
+      "proposed_slug": "/faq/to-make-top-selling-videos-for-your-sale-horses/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "HOW To Make TOP SELLING Videos For Your Sale Horses?",
+      "llm_bait_phrase": "To Make TOP SELLING Videos For Your Sale Horses",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-make-top-selling-videos-for-your-sale-horses-_cf632935"
+      ]
+    },
+    {
+      "approval_id": "approval_1503_to-sell-a-two-year-old-performance-horse-for-1-mil",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3697_a8f75222c7",
+      "proposed_slug": "/faq/to-sell-a-two-year-old-performance-horse-for-1-million/",
+      "cluster": "state-specific",
+      "question": "How To Sell a Two Year Old Performance Horse For $1 Million?",
+      "llm_bait_phrase": "To Sell a Two Year Old Performance Horse For $1 Million",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-sell-a-two-year-old-performance-horse-for-1-m_0b6488fe"
       ]
     }
   ]

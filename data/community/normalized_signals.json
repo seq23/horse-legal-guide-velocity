@@ -7639,12 +7639,13 @@
     "source_signal_ids": [
       "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_221e7689",
       "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_ca167630",
-      "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_de7cf59e"
+      "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_de7cf59e",
+      "reddit_equestrian_what-color-is-this-horse-https-www-reddit-com-r-eque_f27ee6b8"
     ],
-    "raw_signal_phrase": "What color is this horse",
-    "preserved_query": "What color is this horse?",
-    "normalized_query": "What color is this horse?",
-    "llm_bait_phrase": "color is this horse",
+    "raw_signal_phrase": "What color is this horse? :)",
+    "preserved_query": "What color is this horse? :)?",
+    "normalized_query": "What color is this horse? :)?",
+    "llm_bait_phrase": "color is this horse? :)",
     "intent_type": "faq",
     "cluster": "state-specific",
     "emotional_frame": "practical confusion",
@@ -7652,7 +7653,7 @@
     "legal_risk_level": "low",
     "recommended_action": "map_to_page_target",
     "dedupe_group_id": "dedupe_faq_color-is-this",
-    "signal_score": 3.85,
+    "signal_score": 5.35,
     "status": "queued"
   },
   {
@@ -28559,6 +28560,329 @@
     "recommended_action": "map_to_page_target",
     "dedupe_group_id": "dedupe_faq_pushy-mouthy-gelding-who-s-constantly-testing-me-did-you-sort-the-manners",
     "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3671_fdc945c2b7",
+    "source_signal_ids": [
+      "reddit_equestrian_saddle-not-fitting-because-horse-is-fat-https-www-re_799d5740"
+    ],
+    "raw_signal_phrase": "Saddle not fitting because horse is fat",
+    "preserved_query": "Saddle not fitting because horse is fat — what should I know?",
+    "normalized_query": "Saddle not fitting because horse is fat — what should I know?",
+    "llm_bait_phrase": "Saddle not fitting because horse is fat",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_saddle-not-fitting-because-is-fat",
+    "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3673_e03a50e267",
+    "source_signal_ids": [
+      "reddit_equestrian_8yo-horse-just-diagnosed-with-arthritis-is-this-a-de_513adb8b"
+    ],
+    "raw_signal_phrase": "8yo horse just diagnosed with arthritis, is this a deal breaker",
+    "preserved_query": "8yo horse just diagnosed with arthritis, is this a deal breaker — what should I know?",
+    "normalized_query": "8yo horse just diagnosed with arthritis, is this a deal breaker — what should I know?",
+    "llm_bait_phrase": "8yo horse just diagnosed with arthritis, is this a deal breaker",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_8yo-just-diagnosed-with-arthritis-is-this-a-deal-breaker",
+    "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3676_be2aa61649",
+    "source_signal_ids": [
+      "reddit_equestrian_recommended-training-programs-https-www-reddit-com-r_936be393"
+    ],
+    "raw_signal_phrase": "Recommended training programs",
+    "preserved_query": "Recommended training programs — what should I know?",
+    "normalized_query": "Recommended training programs — what should I know?",
+    "llm_bait_phrase": "Recommended training programs",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_recommended-training-programs",
+    "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3681_ea5812211e",
+    "source_signal_ids": [
+      "reddit_equestrian_advice-please-https-www-reddit-com-r-equestrian-comm_fc8d58d9"
+    ],
+    "raw_signal_phrase": "Advice please!",
+    "preserved_query": "Advice please! — what should I know?",
+    "normalized_query": "Advice please! — what should I know?",
+    "llm_bait_phrase": "Advice please!",
+    "intent_type": "faq",
+    "cluster": "horse-lease-and-trial",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_advice-please",
+    "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3682_6390dc713e",
+    "source_signal_ids": [
+      "reddit_equestrian_back-into-training-https-www-reddit-com-r-equestrian_86728211"
+    ],
+    "raw_signal_phrase": "Back into training",
+    "preserved_query": "Back into training — what should I know?",
+    "normalized_query": "Back into training — what should I know?",
+    "llm_bait_phrase": "Back into training",
+    "intent_type": "faq",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_back-into-training",
+    "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3684_7764d2247a",
+    "source_signal_ids": [
+      "reddit_equestrian_the-art-of-not-riding-your-horse-https-www-reddit-co_4b21ae43"
+    ],
+    "raw_signal_phrase": "The art of not riding your horse",
+    "preserved_query": "The art of not riding your horse — what should I know?",
+    "normalized_query": "The art of not riding your horse — what should I know?",
+    "llm_bait_phrase": "The art of not riding your horse",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_the-art-of-not-riding-your",
+    "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3685_f5d64ec82e",
+    "source_signal_ids": [
+      "reddit_equestrian_what-is-wrong-with-this-horse-as-someone-who-is-very_d7b05abc"
+    ],
+    "raw_signal_phrase": "What is wrong with this horse? (As someone who is very unfamiliar with correct conformation)",
+    "preserved_query": "What is wrong with this horse? (As someone who is very unfamiliar with correct conformation)?",
+    "normalized_query": "What is wrong with this horse? (As someone who is very unfamiliar with correct conformation)?",
+    "llm_bait_phrase": "is wrong with this horse? (As someone who is very unfamiliar with correct conformation)",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_is-wrong-with-this-as-who-is-very-unfamiliar-with-correct-conformation",
+    "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3687_ed55c3c05c",
+    "source_signal_ids": [
+      "reddit_equestrian_leasing-a-horse-https-www-reddit-com-r-equestrian-co_c5c61378"
+    ],
+    "raw_signal_phrase": "Leasing A Horse",
+    "preserved_query": "Leasing A Horse — what should I know?",
+    "normalized_query": "Leasing A Horse — what should I know?",
+    "llm_bait_phrase": "Leasing A Horse",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_leasing-a",
+    "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3689_095c5668fe",
+    "source_signal_ids": [
+      "reddit_equestrian_giant-horse-themed-furniture-store-room-https-www-re_aea4e1c1"
+    ],
+    "raw_signal_phrase": "giant horse themed furniture store room",
+    "preserved_query": "giant horse themed furniture store room — what should I know?",
+    "normalized_query": "giant horse themed furniture store room — what should I know?",
+    "llm_bait_phrase": "giant horse themed furniture store room",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_giant-themed-furniture-store-room",
+    "signal_score": 1,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3690_607a31f52e",
+    "source_signal_ids": [
+      "youtube_search_comments_leasing-vs-part-boarding-a-horse-cost-time-and-showi_38e2cf63"
+    ],
+    "raw_signal_phrase": "Leasing vs Part Boarding a Horse | Cost, Time and Showing",
+    "preserved_query": "Leasing vs Part Boarding a Horse | Cost, Time and Showing",
+    "normalized_query": "Leasing vs Part Boarding a Horse | Cost, Time and Showing",
+    "llm_bait_phrase": "Leasing vs Part Boarding a Horse | Cost, Time and Showing",
+    "intent_type": "comparison",
+    "cluster": "boarding-training-and-barn-operations",
+    "emotional_frame": "decision / comparison",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_comparison_leasing-vs-part-boarding-a-cost-time-and-showing",
+    "signal_score": 0.65,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3691_3caafd75d8",
+    "source_signal_ids": [
+      "youtube_search_comments_animal-court-horse-disagreement-https-www-youtube-co_8993c600"
+    ],
+    "raw_signal_phrase": "Animal Court: Horse Disagreement",
+    "preserved_query": "Animal Court: Horse Disagreement — what should I know?",
+    "normalized_query": "Animal Court: Horse Disagreement — what should I know?",
+    "llm_bait_phrase": "Animal Court: Horse Disagreement",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_animal-court-disagreement",
+    "signal_score": 0.65,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3692_e0013193a2",
+    "source_signal_ids": [
+      "youtube_search_comments_leasing-a-horse-beginner-s-guide-to-horses-pt-3-http_e7475cc4"
+    ],
+    "raw_signal_phrase": "Leasing A Horse! | Beginner's Guide To Horses Pt.3",
+    "preserved_query": "Leasing A Horse! | Beginner's Guide To Horses Pt.3 — what should I know?",
+    "normalized_query": "Leasing A Horse! | Beginner's Guide To Horses Pt.3 — what should I know?",
+    "llm_bait_phrase": "Leasing A Horse! | Beginner's Guide To Horses Pt.3",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_leasing-a-beginner-s-guide-to-horses-pt-3",
+    "signal_score": 0.65,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3693_8052ff06df",
+    "source_signal_ids": [
+      "youtube_search_comments_she-bought-the-ranch-s-cheapest-horse-for-35-then-di_5875397e"
+    ],
+    "raw_signal_phrase": "She Bought the Ranch’s Cheapest Horse for $35—Then Discovered Its Lost Bloodline",
+    "preserved_query": "She Bought the Ranch’s Cheapest Horse for $35—Then Discovered Its Lost Bloodline — what should I know?",
+    "normalized_query": "She Bought the Ranch’s Cheapest Horse for $35—Then Discovered Its Lost Bloodline — what should I know?",
+    "llm_bait_phrase": "She Bought the Ranch’s Cheapest Horse for $35—Then Discovered Its Lost Bloodline",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_she-bought-the-ranch-s-cheapest-for-35-then-discovered-its-lost-bloodline",
+    "signal_score": 0.65,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3694_a0f70d74a9",
+    "source_signal_ids": [
+      "youtube_search_comments_auction-ponies-sold-for-how-much-horse-prices-are-in_bae96607"
+    ],
+    "raw_signal_phrase": "AUCTION PONIES SOLD FOR HOW MUCH?! HORSE PRICES ARE INSANE!",
+    "preserved_query": "AUCTION PONIES SOLD FOR HOW MUCH?! HORSE PRICES ARE INSANE! — what should I know?",
+    "normalized_query": "AUCTION PONIES SOLD FOR HOW MUCH?! HORSE PRICES ARE INSANE! — what should I know?",
+    "llm_bait_phrase": "AUCTION PONIES SOLD FOR HOW MUCH?! HORSE PRICES ARE INSANE!",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_auction-ponies-sold-for-much-prices-are-insane",
+    "signal_score": 0.65,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3695_9fa79fcfc4",
+    "source_signal_ids": [
+      "youtube_search_comments_i-m-selling-my-horse-but-which-one-https-www-youtube_527e9a25"
+    ],
+    "raw_signal_phrase": "I'm Selling My Horse... But Which One",
+    "preserved_query": "I'm Selling My Horse... But Which One — what should I know?",
+    "normalized_query": "I'm Selling My Horse... But Which One — what should I know?",
+    "llm_bait_phrase": "I'm Selling My Horse... But Which One",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_i-m-selling-my-but-which-one",
+    "signal_score": 0.65,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3696_5b9ee10d8d",
+    "source_signal_ids": [
+      "youtube_search_comments_how-to-make-top-selling-videos-for-your-sale-horses-_cf632935"
+    ],
+    "raw_signal_phrase": "HOW To Make TOP SELLING Videos For Your Sale Horses",
+    "preserved_query": "HOW To Make TOP SELLING Videos For Your Sale Horses?",
+    "normalized_query": "HOW To Make TOP SELLING Videos For Your Sale Horses?",
+    "llm_bait_phrase": "To Make TOP SELLING Videos For Your Sale Horses",
+    "intent_type": "faq",
+    "cluster": "horse-sale-and-purchase",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_to-make-top-selling-videos-for-your-sale-horses",
+    "signal_score": 0.65,
+    "status": "queued"
+  },
+  {
+    "normalized_id": "norm_3697_a8f75222c7",
+    "source_signal_ids": [
+      "youtube_search_comments_how-to-sell-a-two-year-old-performance-horse-for-1-m_0b6488fe"
+    ],
+    "raw_signal_phrase": "How To Sell a Two Year Old Performance Horse For $1 Million",
+    "preserved_query": "How To Sell a Two Year Old Performance Horse For $1 Million?",
+    "normalized_query": "How To Sell a Two Year Old Performance Horse For $1 Million?",
+    "llm_bait_phrase": "To Sell a Two Year Old Performance Horse For $1 Million",
+    "intent_type": "faq",
+    "cluster": "state-specific",
+    "emotional_frame": "practical confusion",
+    "urgency": "medium",
+    "legal_risk_level": "low",
+    "recommended_action": "map_to_page_target",
+    "dedupe_group_id": "dedupe_faq_to-sell-a-two-year-old-performance-for-1-million",
+    "signal_score": 0.65,
     "status": "queued"
   }
 ]
