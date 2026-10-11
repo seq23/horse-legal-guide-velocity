@@ -74,6 +74,22 @@ function writeJsonLd(type, title, description, url, options = {}) {
     },
     breadcrumbList(config, url, title)
   ];
+  // WebPage with a SpeakableSpecification, for pages that name the passages an
+  // answer engine should read aloud (the home page's definition paragraph).
+  // The selectors are checked against the rendered page by
+  // _ops/validators/validate_home_definition_speakable.js.
+  const speakable = (options.webPage && options.webPage.speakableSelectors) || [];
+  if (speakable.length) {
+    graph.push({
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      name: title,
+      description,
+      url: pageUrl,
+      isPartOf: { '@id': websiteId },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: speakable }
+    });
+  }
   // FAQPage, built from the Q&A that is already visible on the page.
   //
   // This used to emit `mainEntity: []` on every page whose page_type was `faq`

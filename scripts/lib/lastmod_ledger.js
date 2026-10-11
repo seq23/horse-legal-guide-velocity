@@ -39,7 +39,8 @@ const path = require('path');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 
-const SCHEMA = 'lastmod-ledger-v1';
+// v2: hashes are pageContentHash (the <main> element), not the whole file.
+const SCHEMA = 'lastmod-ledger-v2';
 const ROOT = path.resolve(__dirname, '..', '..');
 const DEFAULT_PATH = path.join(ROOT, 'data', 'cadence', 'lastmod_ledger.json');
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -58,6 +59,19 @@ function buildDate() {
 
 function contentHash(payload) {
   return crypto.createHash('sha256').update(payload).digest('hex');
+}
+
+/**
+ * The part of a rendered page whose change is a content change: the <main>
+ * element a reader sees. <head> metadata (icons, Open Graph, canonical) and the
+ * JSON-LD after </main> are excluded, so a site-wide metadata change does not
+ * stamp every URL with the build date - which is the date-bump this ledger
+ * exists to prevent. A page with no <main> is hashed whole.
+ */
+function pageContentHash(html) {
+  const text = String(html);
+  const m = text.match(/<main\b[\s\S]*<\/main>/i);
+  return contentHash(m ? m[0] : text);
 }
 
 /**
@@ -152,4 +166,4 @@ function save(ledger, ledgerPath = DEFAULT_PATH) {
   fs.renameSync(tmp, ledgerPath);
 }
 
-module.exports = { SCHEMA, DEFAULT_PATH, buildDate, contentHash, hasFullHistory, lastCommitDate, load, resolve, rebuilt, save };
+module.exports = { SCHEMA, DEFAULT_PATH, buildDate, contentHash, pageContentHash, hasFullHistory, lastCommitDate, load, resolve, rebuilt, save };
