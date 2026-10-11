@@ -17,6 +17,7 @@
  *   one_faqpage_per_page      no public page carries more than one FAQPage; strengthened pages carry exactly one, matching the visible FAQ
  *   freeze_read_by_publisher  the flag is on, both publishers call the freeze, and nothing live is new and unmeasured
  *   no_measured_url_404       every URL with impressions in the export is served by the build
+ *   daily_workflow_wired      the scheduled monitor runs the loop and its commit rebases onto main before pushing
  */
 const fs = require('fs');
 const path = require('path');
@@ -53,7 +54,8 @@ function loadContext() {
     builtPageTargets: new Set([...pages.map((p) => p.urlPath)]),
     approvedPageTargets: (si.readJson('data/queries/page_targets.json', []) || []).filter((p) => p.review_status === 'approved'),
     revoked: new Set((si.readJson('dist/editorial-revoked-paths.json', { revoked_paths: [] }).revoked_paths || [])),
-    served: (route) => si.servedByBuild(route)
+    served: (route) => si.servedByBuild(route),
+    workflow: fs.readFileSync(si.abs('.github/workflows/agency-search-monitor.yml'), 'utf8')
   };
 }
 
@@ -197,6 +199,19 @@ const CHECKS = {
     return out;
   },
 
+  daily_workflow_wired(ctx) {
+    const out = [];
+    const wf = ctx.workflow || '';
+    if (!/cron:/.test(wf)) out.push('agency-search-monitor.yml has no schedule');
+    for (const step of ['collect_gsc.js', 'collect_index_coverage.js', 'build_loop.js']) if (!wf.includes(`node scripts/search_intelligence/${step}`)) out.push(`daily workflow does not run ${step}`);
+    const commit = (wf.split(/\n      - name: /).find((b) => b.startsWith('Commit measured search loop')) || '');
+    if (!/git add data\/search_intelligence/.test(commit)) out.push('measured-loop commit step does not add data/search_intelligence');
+    const pull = commit.indexOf('git pull --rebase'), push = commit.indexOf('push_with_retry.sh');
+    if (pull < 0 || push < 0 || pull > push) out.push('measured-loop commit step does not rebase onto main before pushing (non-fast-forward when main moves mid-run)');
+    if (!/github\.ref_name == 'main'/.test(commit)) out.push('measured-loop commit step is not gated to main');
+    return out;
+  },
+
   no_measured_url_404(ctx) {
     const out = [];
     const urls = new Set([...(ctx.export.by_page || []).filter((r) => r.impressions > 0).map((r) => r.keys[0]), ...(ctx.export.by_query_page || []).filter((r) => r.impressions > 0).map((r) => r.keys[1])]);
@@ -219,6 +234,7 @@ const BREAKS = {
   families_served: (c) => { c.strengthening = clone(c.strengthening); c.strengthening.pages[0].title = 'Unrelated Title'; },
   one_faqpage_per_page: (c) => { const [route, html] = [...c.html].find(([, h]) => /"FAQPage"/.test(h)); c.html = new Map(c.html); c.html.set(route, html.replace('</head>', `<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[]}</script></head>`)); },
   freeze_read_by_publisher: (c) => { c.editorialLive = [...c.editorialLive, { entry_id: '__new_unmeasured__', title: 'zz unmeasured probe', source_query_title: 'zz unmeasured probe' }]; },
+  daily_workflow_wired: (c) => { c.workflow = c.workflow.replace(/git pull --rebase -X theirs origin main\n/, ''); },
   no_measured_url_404: (c) => { c.export = clone(c.export); c.export.by_page.push({ keys: [`${si.SITE_ORIGIN}/zz-not-built/`], impressions: 3, clicks: 0, position: 9 }); }
 };
 
@@ -238,7 +254,7 @@ function main() {
     process.exit(1);
   }
   const f = ctx.families;
-  console.log(`OK: search intelligence - 7 checks pass and 7 negative proofs caught their break. truth ${ctx.truth.totals.impressions} impressions (${ctx.truth.window.start_date}..${ctx.truth.window.end_date}); coverage ${JSON.stringify(ctx.coverage.summary.by_coverage_state)}; ${ctx.targets.target_count} targets; ${f.qualifying_count} qualifying families ${JSON.stringify(f.status_counts)}.`);
+  console.log(`OK: search intelligence - ${Object.keys(CHECKS).length} checks pass and ${Object.keys(BREAKS).length} negative proofs caught their break. truth ${ctx.truth.totals.impressions} impressions (${ctx.truth.window.start_date}..${ctx.truth.window.end_date}); coverage ${JSON.stringify(ctx.coverage.summary.by_coverage_state)}; ${ctx.targets.target_count} targets; ${f.qualifying_count} qualifying families ${JSON.stringify(f.status_counts)}.`);
 }
 
 module.exports = { CHECKS, BREAKS, loadContext };

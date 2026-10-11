@@ -93,6 +93,13 @@ jobs:
             echo "No measured-loop changes to commit."
           else
             git commit -m "chore: refresh Search Console truth and index coverage"
+            # main moves during the ~3 min this loop runs (merges, bot lanes):
+            # 11 Oct 2026 run 38161572440 was rejected non-fast-forward when PR #51
+            # merged mid-run. Rebase onto the new main first; this commit only
+            # touches data/search_intelligence, which only this step writes, so on
+            # a conflict this run's fresh measurement wins (-X theirs = the commit
+            # being replayed).
+            git pull --rebase -X theirs origin main
             bash scripts/ops/push_with_retry.sh origin main
           fi
       - name: Refresh providers, intelligence, and private agency report
@@ -140,6 +147,8 @@ jobs:
             echo "No monitoring changes to commit."
           else
             git commit -m "chore: refresh GSC Bing and agency intelligence"
+            # Same race as the measured-loop commit above: main moves during the run.
+            git pull --rebase origin main
             bash scripts/ops/push_with_retry.sh origin main
           fi
       - name: Upload monitoring evidence
