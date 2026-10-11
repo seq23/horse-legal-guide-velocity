@@ -13,6 +13,8 @@
 // NAMED_STOP: INDEXNOW_RATE_LIMITED and exits 0 (BLOCKED, not a defect).
 // --dry-run skips the deploy wait and the POST (local proof of steps 2-3).
 import fs from 'node:fs';
+import { createRequire } from 'node:module';
+const { pagesDeployState } = createRequire(import.meta.url)('./pages_deploy_state.cjs');
 
 const DRY = process.argv.includes('--dry-run');
 const site = (process.env.SITE_DOMAIN || 'https://horselegalguide.com').replace(/\/$/, '');
@@ -21,19 +23,20 @@ const keyLocation = `${site}/${key}.txt`;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const summary = (line) => { console.log(line); if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${line}\n`); };
 
+// A superseded build never completes its own check run; see pages_deploy_state.cjs.
 async function waitForPagesDeploy() {
   const { GITHUB_REPOSITORY: repo, GITHUB_SHA: sha, GITHUB_TOKEN: token } = process.env;
   if (!repo || !sha || !token) throw new Error('GITHUB_REPOSITORY, GITHUB_SHA and GITHUB_TOKEN are required to wait for the Cloudflare Pages deploy.');
+  const gh = async (path) => { const res = await fetch(`https://api.github.com/repos/${repo}/${path}`, { headers: { authorization: `Bearer ${token}`, accept: 'application/vnd.github+json' } }); return res.ok ? res.json() : null; };
+  const pagesRun = async (ref) => ((await gh(`commits/${ref}/check-runs?check_name=${encodeURIComponent('Cloudflare Pages')}`)) || {}).check_runs?.[0] || null;
   const deadline = Date.now() + 25 * 60 * 1000;
   while (Date.now() < deadline) {
-    const res = await fetch(`https://api.github.com/repos/${repo}/commits/${sha}/check-runs?check_name=${encodeURIComponent('Cloudflare Pages')}`, { headers: { authorization: `Bearer ${token}`, accept: 'application/vnd.github+json' } });
-    if (res.ok) {
-      const run = (await res.json()).check_runs?.[0];
-      if (run?.status === 'completed') {
-        if (run.conclusion !== 'success') throw new Error(`Cloudflare Pages deploy for ${sha} concluded ${run.conclusion}; not pinging IndexNow.`);
-        return;
-      }
-    }
+    const own = await pagesRun(sha);
+    const headSha = own && own.status === 'completed' ? null : ((await gh('commits/main')) || {}).sha || null;
+    const head = headSha && headSha !== sha ? await pagesRun(headSha) : null;
+    const d = pagesDeployState({ sha, own, headSha, head });
+    if (d.state === 'live') { console.log(`Deploy live: ${d.reason}.`); return; }
+    if (d.state === 'failed') throw new Error(`${d.reason}; not pinging IndexNow.`);
     await sleep(20000);
   }
   throw new Error(`Cloudflare Pages deploy for ${sha} did not finish within 25 minutes.`);
