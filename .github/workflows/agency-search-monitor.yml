@@ -99,7 +99,7 @@ jobs:
             # touches data/search_intelligence, which only this step writes, so on
             # a conflict this run's fresh measurement wins (-X theirs = the commit
             # being replayed).
-            git pull --rebase -X theirs origin main
+            git pull --rebase --autostash -X theirs origin main
             bash scripts/ops/push_with_retry.sh origin main
           fi
       - name: Refresh providers, intelligence, and private agency report
@@ -148,7 +148,9 @@ jobs:
           else
             git commit -m "chore: refresh GSC Bing and agency intelligence"
             # Same race as the measured-loop commit above: main moves during the run.
-            git pull --rebase origin main
+            # --autostash: the build leaves outputs this step does not commit, and a
+            # rebase refuses to run over unstaged changes (run 38161959689).
+            git pull --rebase --autostash origin main
             bash scripts/ops/push_with_retry.sh origin main
           fi
       - name: Upload monitoring evidence

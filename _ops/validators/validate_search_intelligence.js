@@ -209,6 +209,11 @@ const CHECKS = {
     const pull = commit.indexOf('git pull --rebase'), push = commit.indexOf('push_with_retry.sh');
     if (pull < 0 || push < 0 || pull > push) out.push('measured-loop commit step does not rebase onto main before pushing (non-fast-forward when main moves mid-run)');
     if (!/github\.ref_name == 'main'/.test(commit)) out.push('measured-loop commit step is not gated to main');
+    for (const block of wf.split(/\n      - name: /).filter((b) => b.includes('push_with_retry.sh'))) {
+      for (const line of block.split('\n').filter((l) => /git pull --rebase/.test(l))) {
+        if (!/--autostash/.test(line)) out.push(`"${block.split('\n')[0]}" rebases without --autostash; a build leaves unstaged files and the rebase refuses (run 38161959689)`);
+      }
+    }
     return out;
   },
 
@@ -234,7 +239,7 @@ const BREAKS = {
   families_served: (c) => { c.strengthening = clone(c.strengthening); c.strengthening.pages[0].title = 'Unrelated Title'; },
   one_faqpage_per_page: (c) => { const [route, html] = [...c.html].find(([, h]) => /"FAQPage"/.test(h)); c.html = new Map(c.html); c.html.set(route, html.replace('</head>', `<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[]}</script></head>`)); },
   freeze_read_by_publisher: (c) => { c.editorialLive = [...c.editorialLive, { entry_id: '__new_unmeasured__', title: 'zz unmeasured probe', source_query_title: 'zz unmeasured probe' }]; },
-  daily_workflow_wired: (c) => { c.workflow = c.workflow.replace(/git pull --rebase -X theirs origin main\n/, ''); },
+  daily_workflow_wired: (c) => { c.workflow = c.workflow.replace(/git pull --rebase --autostash -X theirs origin main\n/, ''); },
   no_measured_url_404: (c) => { c.export = clone(c.export); c.export.by_page.push({ keys: [`${si.SITE_ORIGIN}/zz-not-built/`], impressions: 3, clicks: 0, position: 9 }); }
 };
 
