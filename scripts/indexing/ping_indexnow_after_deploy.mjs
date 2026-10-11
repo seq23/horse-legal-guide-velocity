@@ -8,7 +8,8 @@
 //    URL to https://api.indexnow.org/indexnow with keyLocation /<key>.txt.
 //
 // Exits non-zero on a failed deploy, a missing key file, an empty sitemap or a
-// rejected submission. A 429 from IndexNow is a provider rate limit: printed as
+// rejected submission (403 SiteVerificationNotCompleted is retried for ~5 min
+// first). A 429 from IndexNow is a provider rate limit: printed as
 // NAMED_STOP: INDEXNOW_RATE_LIMITED and exits 0 (BLOCKED, not a defect).
 // --dry-run skips the deploy wait and the POST (local proof of steps 2-3).
 import fs from 'node:fs';
@@ -60,14 +61,20 @@ async function main() {
   if (!urls.length) throw new Error('Live sitemap lists zero URLs; nothing to submit.');
   const payload = { host: new URL(site).host, key, keyLocation, urlList: urls.slice(0, 10000) };
   if (DRY) { summary(`DRY RUN: key file live (${keyLocation}); would submit ${payload.urlList.length} sitemap URLs to https://api.indexnow.org/indexnow.`); return; }
+  // 5xx and 403 SiteVerificationNotCompleted are retried. The 403 is IndexNow
+  // still fetching the key file on first sight of a keyLocation (seen on the
+  // first run, 11 Oct 2026: 403, then 200 a few minutes later).
   let res;
-  for (let attempt = 1; attempt <= 3; attempt += 1) {
+  let body = '';
+  for (let attempt = 1; attempt <= 6; attempt += 1) {
     res = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify(payload) });
-    if (res.status < 500) break;
-    await sleep(15000 * attempt);
+    body = res.ok ? '' : await res.text();
+    const verifying = res.status === 403 && body.includes('SiteVerificationNotCompleted');
+    if (res.status < 500 && !verifying) break;
+    if (attempt < 6) await sleep(60000);
   }
   if (res.status === 429) { summary(`NAMED_STOP: INDEXNOW_RATE_LIMITED - api.indexnow.org returned 429 for ${payload.urlList.length} URLs; the next push to main resubmits.`); return; }
-  if (res.status !== 200 && res.status !== 202) throw new Error(`IndexNow rejected the submission: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`);
+  if (res.status !== 200 && res.status !== 202) throw new Error(`IndexNow rejected the submission: HTTP ${res.status} ${body.slice(0, 200)}`);
   summary(`IndexNow: HTTP ${res.status}, submitted ${payload.urlList.length} sitemap URLs (keyLocation ${keyLocation}).`);
 }
 
