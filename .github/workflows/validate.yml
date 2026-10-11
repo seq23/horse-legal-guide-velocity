@@ -47,7 +47,7 @@ jobs:
     # _ops/validators/validate_indexnow_key_file.js.
     needs: validate
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    timeout-minutes: 20  # 15 min deploy wait ceiling + submission; new job, no history yet
+    timeout-minutes: 30  # waits up to 25 min for the Pages deploy (PR #47 preview build took 9.5 min) + submission
     runs-on: ubuntu-latest
     permissions:
       contents: read

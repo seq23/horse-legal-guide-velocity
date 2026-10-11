@@ -23,7 +23,7 @@ const summary = (line) => { console.log(line); if (process.env.GITHUB_STEP_SUMMA
 async function waitForPagesDeploy() {
   const { GITHUB_REPOSITORY: repo, GITHUB_SHA: sha, GITHUB_TOKEN: token } = process.env;
   if (!repo || !sha || !token) throw new Error('GITHUB_REPOSITORY, GITHUB_SHA and GITHUB_TOKEN are required to wait for the Cloudflare Pages deploy.');
-  const deadline = Date.now() + 15 * 60 * 1000;
+  const deadline = Date.now() + 25 * 60 * 1000;
   while (Date.now() < deadline) {
     const res = await fetch(`https://api.github.com/repos/${repo}/commits/${sha}/check-runs?check_name=${encodeURIComponent('Cloudflare Pages')}`, { headers: { authorization: `Bearer ${token}`, accept: 'application/vnd.github+json' } });
     if (res.ok) {
@@ -35,7 +35,7 @@ async function waitForPagesDeploy() {
     }
     await sleep(20000);
   }
-  throw new Error(`Cloudflare Pages deploy for ${sha} did not finish within 15 minutes.`);
+  throw new Error(`Cloudflare Pages deploy for ${sha} did not finish within 25 minutes.`);
 }
 
 async function liveText(url) {
