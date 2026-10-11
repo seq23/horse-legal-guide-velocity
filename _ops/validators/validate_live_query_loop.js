@@ -13,4 +13,6 @@ ok(obs.includes('stop&&stop.owner_held'),'owner-held branch does not gate the cl
 ok(/if\(stop\)\{[\s\S]{0,400}err\.namedStop=stop;throw err;/.test(obs),'non-owner-held provider blackout no longer fails red');
 ok(obs.includes('http_status:Number.isInteger(e?.httpStatus)?e.httpStatus:null'),'provider attempts do not record an HTTP status to classify on');
 ok(blackoutReport.includes('NAMED_STOP')&&monitor.includes('scripts/search/report_provider_blackout.mjs'),'agency monitor does not report why observation did not happen');
+ok(/paidProbeGate\(/.test(obs)&&obs.includes('DISABLED_BY_OWNER_POLICY'),'live observer is not gated by owner policy (paid lane must be off unless confirm_paid)');
+ok(blackoutReport.includes('DISABLED_BY_OWNER_POLICY'),'blackout report does not name the owner-policy stop as healthy');
 console.log('Live query → competitor → diagnosis → owner-approved repair loop OK.');

@@ -37,6 +37,11 @@ if (!stop) {
   process.exit(0);
 }
 
+if (stop.reason === 'DISABLED_BY_OWNER_POLICY') {
+  console.log(`NAMED_STOP: ${stop.reason} - ${stop.detail}`);
+  console.log('Healthy: live observation is off by owner policy, not blocked. To observe once, dispatch paid-citation-probe.yml with confirm_paid=true.');
+  process.exit(0);
+}
 console.log(`NAMED_STOP: ${stop.reason} - ${stop.detail}`);
 if (stop.owner_action) console.log(`Owner action: ${stop.owner_action}`);
 for (const row of stop.provider_statuses || []) {

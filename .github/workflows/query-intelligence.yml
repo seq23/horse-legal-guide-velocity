@@ -32,16 +32,7 @@ jobs:
     timeout-minutes: 5  # ~3x median 0.8m over 1 green runs; fault detector, not a budget
     runs-on: ubuntu-latest
     env:
-      # Primary provider for live citation observation. Gemini grounding is a
-      # 429-blocked fallback on this project; see live_query_observer.js.
-      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      # Pinned to the moving alias on purpose. gemini-2.5-flash-lite was retired -
-      # "no longer available to new users" - and every grounded observation came
-      # back 404, which recorded 30 provider_error rows that looked like a broken
-      # integration rather than a dead model name. An alias cannot go stale the
-      # same way.
-      GEMINI_SEARCH_MODEL: gemini-flash-lite-latest
+      # No model key: live observation is off by owner policy (11 Oct 2026).
       LIVE_QUERY_LIMIT: "30"
     steps:
       - uses: actions/checkout@v7

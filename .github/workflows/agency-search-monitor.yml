@@ -52,15 +52,9 @@ jobs:
       GSC_INSPECTION_LIMIT: 10
       BING_SITE_URL: ${{ secrets.BING_SITE_URL }}
       BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
-      # OpenRouter's web plugin is the primary citation observer. Gemini's
-      # grounded path (tools:[{google_search:{}}]) returns 429 RESOURCE_EXHAUSTED
-      # on this project - reproduced across three models, while plain
-      # generateContent on the same key returns 200 - so it is the fallback, not
-      # the measurement. Without this secret the observer had no working provider
-      # and every observation was recorded as provider_error.
-      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GEMINI_SEARCH_MODEL: gemini-flash-lite-latest
+      # No model key is passed here (owner policy, 11 Oct 2026: nothing paid).
+      # search:cycle's live observer records DISABLED_BY_OWNER_POLICY; paid
+      # observation runs only from paid-citation-probe.yml with confirm_paid.
       QUERY_MEASUREMENT_PANEL_SIZE: "30"
       LIVE_QUERY_LIMIT: "30"
     steps:
@@ -112,23 +106,6 @@ jobs:
       - name: Report whether live citation observation happened
         if: always()
         run: node scripts/search/report_provider_blackout.mjs
-      - name: Observe whether answer engines cite us
-        # The probe shipped in seven repos and was invoked by none, so no
-        # citation observation was ever taken. Grounded mode reads the pages
-        # the answer was actually built from; knowledge mode would only show
-        # whether a model memorised the brand, which is not a citation.
-        continue-on-error: true
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          CITATION_PROBE_MODE: grounded
-        run: node scripts/llm_citation_probe.mjs --limit 25
-      # The probe measures; nothing read what it measured. score_discovery_gap.mjs
-      # existed with no npm script and no workflow calling it, so the openness and
-      # lead-intent columns in the evidence file were a one-off hand run ageing
-      # into fiction while looking live. It runs here, in the same lane as the
-      # probe, so the reading is scored from the run that just produced it.
-      - name: Score the discovery gap from what the probe observed
-        run: npm run queries:discovery-gap
       # Writes only ever land on main. A branch run is a read-only rehearsal.
       - name: Commit monitoring snapshots
         if: ${{ steps.operation.outcome == 'success' && github.ref_name == 'main' }}
