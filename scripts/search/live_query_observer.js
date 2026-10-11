@@ -48,7 +48,7 @@
  * Observation resumes on the next run the moment credits or quota return; no
  * provider is disabled by any of this.
  */
-const fs=require('fs');const path=require('path');
+const fs=require('fs');const path=require('path');const {paidProbeGate}=require('../llm/free_router.js');
 // OpenRouter bills the web plugin per REQUEST on the parallel engine with 10
 // results included - measured at $0.00127/call on this account against ~$0.04
 // on the default engine's per-result billing. Identical url_citation schema.
@@ -133,7 +133,19 @@ async function observeOne(item,env,chain){
 
 function diagnose(item,own,cites,siteSurfaced,competitors){const reasons=[];const surface=`${own.title||''} ${own.description||''} ${own.h1||''}`.toLowerCase();const qt=item.query.toLowerCase();if(own.status!=='ok')reasons.push('TARGET_PAGE_MISSING');if(!siteSurfaced)reasons.push('SITE_NOT_SURFACED_IN_GROUNDED_OBSERVATION');if(!surface.includes(qt))reasons.push('QUERY_NOT_EXACTLY_ALIGNED_IN_PRIMARY_SEARCH_SURFACES');if((own.internal_links||0)<3)reasons.push('WEAK_INTERNAL_AUTHORITY');if((own.description||'').length<70)reasons.push('WEAK_META_DESCRIPTION');if(competitors.some(c=>c.status==='ok'&&c.text_chars>(own.text_chars||0)*1.35))reasons.push('COMPETITORS_HAVE_BROADER_VISIBLE_COVERAGE');return reasons;}
 
+// Owner policy, 11 Oct 2026: "nothing should be paid ... cut the probes". This
+// observer pays OpenRouter's web plugin (and Gemini grounding) to watch this
+// loop's own output, so it runs only when a human dispatches
+// paid-citation-probe.yml with confirm_paid=true. Otherwise it records a named,
+// healthy stop and calls nothing; history is left untouched.
+function writeDisabledByOwnerPolicy(){
+  const out={schema_version:'1.1.0',generated_at:new Date().toISOString(),provider_state:'DISABLED_BY_OWNER_POLICY',providers_attempted:[],primary_provider:null,stop:{reason:'DISABLED_BY_OWNER_POLICY',detail:'Live search observation calls a paid web-search model; it is off by owner policy (11 Oct 2026) and no model was called.',owner_held:true,owner_action:'none - dispatch paid-citation-probe.yml with confirm_paid=true to observe once',provider_statuses:[]},truth_boundary:'No observation was taken; none is claimed.',observations:[]};
+  write('data/search/query_observations.json',out);
+  return out;
+}
+
 async function main(){
+  if(!paidProbeGate('scripts/search/live_query_observer.js (live search observation)'))return writeDisabledByOwnerPolicy();
   let panel=read('data/search/measurement_panel.json',{queries:[]});
   if(!panel.queries?.length)panel=require('./build_measurement_panel').main();
   const env=process.env;

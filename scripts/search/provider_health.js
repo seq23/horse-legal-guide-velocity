@@ -6,6 +6,7 @@ function classify(status,configured){if(status==='ok'||status==='CONNECTED')retu
 // as evidence that Gemini grounding works - it does not on this project, where
 // it returns 429 RESOURCE_EXHAUSTED.
 function searchProviderState(q,name,configured){
+  if(q.provider_state==='DISABLED_BY_OWNER_POLICY')return 'DISABLED_BY_OWNER_POLICY';
   const obs=q.observations||[];
   if(obs.some(o=>o.status==='ok'&&o.provider===name))return 'CONNECTED';
   if(obs.some(o=>(o.provider_attempts||[]).some(a=>a.provider===name&&a.status!=='ok')))return 'DEGRADED';

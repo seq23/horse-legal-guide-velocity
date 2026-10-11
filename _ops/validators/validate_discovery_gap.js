@@ -33,7 +33,9 @@ const readJson = (p) => { try { return JSON.parse(readText(p)); } catch (e) { fa
 
 const SCRIPT = 'scripts/queries/score_discovery_gap.mjs';
 const EVIDENCE = 'data/queries/evidence/evidence_queries.json';
-const WORKFLOW = '.github/workflows/agency-search-monitor.yml';
+// The probe is a paid lane, off every schedule by owner policy (11 Oct 2026);
+// it and this scorer run together in the owner-confirmed probe workflow.
+const WORKFLOW = '.github/workflows/paid-citation-probe.yml';
 
 const src = readText(SCRIPT);
 const pkg = readJson('package.json') || { scripts: {} };
@@ -49,10 +51,13 @@ const npmName = npmEntry ? npmEntry[0] : null;
 const invokedByWorkflow = npmName
   ? new RegExp(`npm run ${npmName}\\b`).test(wf) || wf.includes('score_discovery_gap.mjs')
   : wf.includes('score_discovery_gap.mjs');
-if (!invokedByWorkflow) fail(`no scheduled workflow invokes the discovery-gap scorer (looked in ${WORKFLOW}). A generator only a human ever runs is an orphan.`);
+if (!invokedByWorkflow) fail(`no workflow invokes the discovery-gap scorer (looked in ${WORKFLOW}). A generator nothing invokes is an orphan.`);
 
 // It must run in the same lane as the probe that produces its input, or it will
 // score a window it never saw.
+if (invokedByWorkflow && wf.indexOf('llm_citation_probe.mjs') > wf.indexOf('queries:discovery-gap')) {
+  fail(`the discovery-gap scorer runs before the citation probe in ${WORKFLOW} - it would score the previous window.`);
+}
 if (invokedByWorkflow && !wf.includes('llm_citation_probe.mjs')) {
   fail(`the discovery-gap scorer runs in ${WORKFLOW} but the citation probe that produces its observations does not - it would score a stale window.`);
 }

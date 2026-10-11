@@ -1,0 +1,87 @@
+name: Paid Citation Probe (owner-confirmed only)
+
+# Owner policy, 11 Oct 2026: "nothing should be paid ... cut the probes and make
+# them free." These lanes pay a model (OpenRouter web search, Gemini grounding)
+# to observe whether answer engines cite this site - they score the loop's own
+# output, so they are off every schedule. A human may run them once by
+# dispatching with confirm_paid=true; anything else is a named stop.
+# Guarded by _ops/validators/validate_zero_paid_llm.js.
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_paid:
+        description: "Run paid citation observation once (costs money)"
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: horse-legal-guide-main-writer
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refuse unless confirm_paid is true
+        id: gate
+        env:
+          CONFIRM: ${{ inputs.confirm_paid }}
+        run: |
+          if [ "$CONFIRM" != "true" ]; then
+            echo "NAMED_STOP: PAID_PROBE_DISABLED_BY_OWNER_POLICY - paid citation observation is off by owner policy; dispatch with confirm_paid=true to run it once."
+            echo "allowed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "allowed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.gate.outputs.allowed == 'true'
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - if: steps.gate.outputs.allowed == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - if: steps.gate.outputs.allowed == 'true'
+        run: npm ci && npm run build
+      - name: Observe live search citations (paid)
+        if: steps.gate.outputs.allowed == 'true'
+        continue-on-error: true
+        env:
+          CONFIRM_PAID: "true"
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_SEARCH_MODEL: gemini-flash-lite-latest
+          LIVE_QUERY_LIMIT: "30"
+        run: npm run search:panel && npm run search:observe
+      - name: Observe whether answer engines cite us (paid)
+        if: steps.gate.outputs.allowed == 'true'
+        continue-on-error: true
+        env:
+          CONFIRM_PAID: "true"
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CITATION_PROBE_MODE: grounded
+        run: node scripts/llm_citation_probe.mjs --limit 25
+      # The scorer runs in the same lane as the probe so it scores the window
+      # this run just observed (validate_discovery_gap.js).
+      - name: Score the discovery gap from what the probe observed
+        if: steps.gate.outputs.allowed == 'true'
+        run: npm run queries:discovery-gap
+      - name: Commit observations
+        if: steps.gate.outputs.allowed == 'true'
+        run: |
+          git config user.name "horse-paid-citation-probe"
+          git config user.email "actions@github.com"
+          git add data/signals data/queries data/search
+          if git diff --cached --quiet; then
+            echo "No observation changes to commit."
+          else
+            git commit -m "chore: record owner-confirmed citation observation"
+            bash scripts/ops/push_with_retry.sh origin main
+          fi

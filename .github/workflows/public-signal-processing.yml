@@ -38,8 +38,6 @@ jobs:
       REDDIT_PUBLIC_TERM_LIMIT: "3"
       REDDIT_PUBLIC_DELAY_MS: "900"
       COLLECT_LIVE_SIGNALS: "1"
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GEMINI_SEARCH_MODEL: gemini-flash-lite-latest
     steps:
       # REFUSE_NON_MAIN: this lane pushes HEAD:main, so a dispatch from any other
       # ref would publish that branch to main. The push target is deliberately
@@ -58,7 +56,19 @@ jobs:
           node-version: 20
       - name: Install
         run: npm ci
+      - name: Prove the free router (receipt names the key label, never the key)
+        # FREE_LLM_RECEIPT carries outcome (free_model_answered /
+        # credential_refused / no_free_model_answered), model, cost_usd and
+        # key_label/key_info from GET /api/v1/auth/key. Exits 1 only on a
+        # non-zero reported cost.
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node scripts/llm/free_router.js --selftest
       - name: Collect public signals
+        # The PAA adapter asks only $0 OpenRouter models via
+        # scripts/llm/free_router.js; its FREE_LLM_RECEIPT lines are the proof.
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: npm run collect:signals
       - name: Normalize signals
         run: npm run normalize:signals
