@@ -64,7 +64,7 @@ function resolveLastmods(distDir, canonicalDomain, urls) {
     // and is the honest thing to seed a first sighting from.
     const rel = path.relative(process.cwd(), rendered).split(path.sep).join('/');
     pages[`${canonicalDomain}${url === '/' ? '' : url}`] = {
-      hash: ledgerLib.contentHash(fs.readFileSync(rendered)),
+      hash: ledgerLib.pageContentHash(fs.readFileSync(rendered, 'utf8')),
       file: rel
     };
   }

@@ -40,3 +40,25 @@ jobs:
         # 91-day window where pages stay citable. Warnings are reported
         # without failing the run.
         run: npm run cadence:gate
+
+  indexnow-after-deploy:
+    # Tells IndexNow (Bing, Yandex, Seznam, Naver...) about every sitemap URL once
+    # the Cloudflare Pages deploy of this commit is live. Guarded by
+    # _ops/validators/validate_indexnow_key_file.js.
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    timeout-minutes: 20  # 15 min deploy wait ceiling + submission; new job, no history yet
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: read
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - name: Ping IndexNow with the live sitemap URLs
+        run: node scripts/indexing/ping_indexnow_after_deploy.mjs
