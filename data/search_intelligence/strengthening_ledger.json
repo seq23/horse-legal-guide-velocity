@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "updated_on": "2026-10-11",
+  "gsc_window": "2026-09-11..2026-10-08",
+  "rule": "pages: strengthened pages with the date each was strengthened (from strengthening.json). pending: qualifying families with no strengthening yet and the date each first qualified. skipped: qualifying families that are not strengthened, with the reason and the date first recorded.",
+  "pages": [
+    {
+      "route": "/hubs/horse-sale-and-purchase/",
+      "families": [
+        "horse sale contract @ /hubs/horse-sale-and-purchase/"
+      ],
+      "strengthened_on": "2026-10-11",
+      "title": "Horse Sale Contract & Purchase Agreement: What to Include",
+      "faq_queries": [
+        "horse purchase agreement",
+        "horse sales agreement",
+        "horse sale contract",
+        "horse sales contract",
+        "horse sale contract lawyer"
+      ],
+      "facts": 4
+    },
+    {
+      "route": "/business/how-to-start-a-horse-retail-business/",
+      "families": [
+        "start an equestrian business @ /business/how-to-start-a-horse-retail-business/"
+      ],
+      "strengthened_on": "2026-10-11",
+      "title": "Start an Equestrian Business in Retail: Tack Shop Checklist",
+      "faq_queries": [
+        "start an equestrian business",
+        "buy an equestrian franchise",
+        "equestrian franchise opportunity"
+      ],
+      "facts": 4
+    },
+    {
+      "route": "/business/how-do-i-legally-start-a-horse-business/",
+      "families": [
+        "start an equestrian business @ /business/how-do-i-legally-start-a-horse-business/"
+      ],
+      "strengthened_on": "2026-10-11",
+      "title": "Start an Equestrian Business Legally: Barn & Lesson Checklist",
+      "faq_queries": [
+        "start an equestrian business"
+      ],
+      "facts": 4
+    },
+    {
+      "route": "/",
+      "families": [
+        "equine law @ /"
+      ],
+      "strengthened_on": "2026-10-11",
+      "title": "Equine Law Advice & Answers for Horse Owners | Horse Legal Guide",
+      "faq_queries": [
+        "equine law advice",
+        "equine law",
+        "horse laws"
+      ],
+      "facts": 3
+    }
+  ],
+  "pending": [],
+  "skipped": [
+    {
+      "family": "equine law @ /insights/",
+      "page": "/insights/",
+      "status": "no_answer_page",
+      "reason": "lands on /insights/, a index page that lists other pages; no single-answer page there serves \"equine law\"",
+      "impressions": 17,
+      "weighted_position": 82.7,
+      "recorded_on": "2026-10-11"
+    },
+    {
+      "family": "equestrian franchise @ /business/how-to-start-a-horse-retail-business/",
+      "page": "/business/how-to-start-a-horse-retail-business/",
+      "status": "intent_mismatch",
+      "reason": "query intent franchise_purchase vs page intent business_formation; strengthening /business/how-to-start-a-horse-retail-business/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through).",
+      "impressions": 7,
+      "weighted_position": 68.7,
+      "recorded_on": "2026-10-11"
+    },
+    {
+      "family": "equestrian franchise @ /faq/",
+      "page": "/faq/",
+      "status": "no_answer_page",
+      "reason": "lands on /faq/, a index page that lists other pages; no single-answer page there serves \"equestrian franchise\"",
+      "impressions": 3,
+      "weighted_position": 93.7,
+      "recorded_on": "2026-10-11"
+    },
+    {
+      "family": "boarding and training contract @ /compare/",
+      "page": "/compare/",
+      "status": "no_answer_page",
+      "reason": "lands on /compare/, a index page that lists other pages; no single-answer page there serves \"boarding and training contract\"",
+      "impressions": 1,
+      "weighted_position": 42,
+      "recorded_on": "2026-10-11"
+    },
+    {
+      "family": "boarding and training contract @ /reference/",
+      "page": "/reference/",
+      "status": "no_answer_page",
+      "reason": "lands on /reference/, a index page that lists other pages; no single-answer page there serves \"boarding and training contract\"",
+      "impressions": 1,
+      "weighted_position": 65,
+      "recorded_on": "2026-10-11"
+    },
+    {
+      "family": "horse lease agreement @ /reference/",
+      "page": "/reference/",
+      "status": "no_answer_page",
+      "reason": "lands on /reference/, a index page that lists other pages; no single-answer page there serves \"horse lease agreement\"",
+      "impressions": 1,
+      "weighted_position": 66,
+      "recorded_on": "2026-10-11"
+    }
+  ]
+}

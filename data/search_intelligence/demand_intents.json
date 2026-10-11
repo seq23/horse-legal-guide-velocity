@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "rule": "First matching pattern wins. Patterns run against the normalized query (lowercase, punctuation to spaces) and, for page intent, against the route's words. A query that matches nothing takes its landing page's intent.",
+  "site_head_intent": "equine_law_general",
+  "intents": [
+    { "intent": "franchise_purchase", "head_term": "equestrian franchise", "pattern": "\\bfranchise" },
+    { "intent": "business_formation", "head_term": "start an equestrian business", "pattern": "\\b(start|starting|open|opening)\\b.*\\b(business|barn|company)\\b|\\b(llc|syndicate|partnership|joint venture)\\b|retail business" },
+    { "intent": "sale_contract", "head_term": "horse sale contract", "pattern": "\\b(sale|sales|purchase|bill of sale|buy|buyer|sell|seller)\\b" },
+    { "intent": "lease_agreement", "head_term": "horse lease agreement", "pattern": "\\blease|trial agreement|lease to own" },
+    { "intent": "boarding_training", "head_term": "boarding and training contract", "pattern": "\\b(board|boarded|boarding|boarder|trainer|training)\\b" },
+    { "intent": "liability", "head_term": "equine liability", "pattern": "\\b(liability|liable|waiver|hurt|injur|activity liability|suit protection)" },
+    { "intent": "intellectual_property", "head_term": "equestrian brand protection", "pattern": "\\b(trademark|brand|sponsor|image rights)\\b" },
+    { "intent": "equine_law_general", "head_term": "equine law", "pattern": "\\b(equine|equestrian|horse)\\b.*\\b(law|laws|legal|lawyer|attorney|resources|contracts)\\b" }
+  ]
+}
