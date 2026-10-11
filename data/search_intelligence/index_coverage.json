@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "truth_source": "google_search_console_url_inspection",
   "site_url": "sc-domain:horselegalguide.com",
-  "collected_at": "2026-10-11T17:08:59.997Z",
+  "collected_at": "2026-10-11T18:02:29.217Z",
   "state": "OK",
   "inspected_this_run": 150,
   "errors_this_run": 0,
@@ -13,11 +13,12 @@
   "summary": {
     "by_coverage_state": {
       "Crawled - currently not indexed": 4,
-      "Discovered - currently not indexed": 1,
-      "NOT_INSPECTED": 173,
-      "Submitted and indexed": 145
+      "Discovered - currently not indexed": 3,
+      "NOT_INSPECTED": 23,
+      "Submitted and indexed": 292,
+      "URL is unknown to Google": 1
     },
-    "inspected_url_count": 150
+    "inspected_url_count": 300
   },
   "truth_boundary": "Google index state per URL at inspected_at. Not a ranking or traffic measure; impressions live in gsc_truth.json.",
   "urls": [
@@ -1823,903 +1824,1803 @@
     },
     {
       "url": "https://horselegalguide.com/insights/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-02T18:51:08Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/",
+      "userCanonical": "https://horselegalguide.com/insights/",
+      "inspected_at": "2026-10-11T18:00:34.064Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-15T13:30:44Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
+      "inspected_at": "2026-10-11T18:00:33.861Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": null,
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "userCanonical": null,
+      "inspected_at": "2026-10-11T18:00:33.878Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-02T23:31:22Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+      "inspected_at": "2026-10-11T18:00:34.103Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T03:57:50Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+      "inspected_at": "2026-10-11T18:00:34.287Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-02T19:48:46Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
+      "inspected_at": "2026-10-11T18:00:34.104Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T04:26:03Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
+      "inspected_at": "2026-10-11T18:00:34.062Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T04:35:26Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "inspected_at": "2026-10-11T18:00:34.037Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": null,
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "userCanonical": null,
+      "inspected_at": "2026-10-11T18:00:40.015Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-02T22:17:09Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/",
+      "inspected_at": "2026-10-11T18:00:40.498Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T02:21:57Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/",
+      "inspected_at": "2026-10-11T18:00:40.414Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-04/how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T04:07:18Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-04/how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-04/how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act/",
+      "inspected_at": "2026-10-11T18:00:40.419Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T04:16:41Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
+      "inspected_at": "2026-10-11T18:00:40.217Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T04:44:48Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
+      "inspected_at": "2026-10-11T18:00:40.317Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-07/a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-02T21:02:58Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-07/a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-07/a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong/",
+      "inspected_at": "2026-10-11T18:00:40.480Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T00:45:34Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+      "inspected_at": "2026-10-11T18:00:40.453Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-09/the-quiet-risk-inside-what-if-i-bought-a-horse-without-a-contract/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T02:47:01Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-09/the-quiet-risk-inside-what-if-i-bought-a-horse-without-a-contract/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-09/the-quiet-risk-inside-what-if-i-bought-a-horse-without-a-contract/",
+      "inspected_at": "2026-10-11T18:00:46.205Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T03:12:02Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/",
+      "inspected_at": "2026-10-11T18:00:47.243Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T03:37:02Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/",
+      "inspected_at": "2026-10-11T18:00:46.570Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": null,
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "userCanonical": null,
+      "inspected_at": "2026-10-11T18:00:46.793Z"
     },
     {
       "url": "https://horselegalguide.com/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-03T01:55:48Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/",
+      "userCanonical": "https://horselegalguide.com/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/",
+      "inspected_at": "2026-10-11T18:00:46.769Z"
     },
     {
       "url": "https://horselegalguide.com/ip/can-a-sponsor-use-my-image-without-permission/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-22T19:41:51Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/ip/can-a-sponsor-use-my-image-without-permission/",
+      "userCanonical": "https://horselegalguide.com/ip/can-a-sponsor-use-my-image-without-permission/",
+      "inspected_at": "2026-10-11T18:00:46.838Z"
     },
     {
       "url": "https://horselegalguide.com/ip/do-i-need-a-contract-for-a-sponsorship/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-14T04:15:16Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "userCanonical": "https://horselegalguide.com/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "inspected_at": "2026-10-11T18:00:46.858Z"
     },
     {
       "url": "https://horselegalguide.com/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-22T03:51:06Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+      "userCanonical": "https://horselegalguide.com/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+      "inspected_at": "2026-10-11T18:00:46.886Z"
     },
     {
       "url": "https://horselegalguide.com/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T12:59:33Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
+      "userCanonical": "https://horselegalguide.com/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
+      "inspected_at": "2026-10-11T18:00:52.357Z"
     },
     {
       "url": "https://horselegalguide.com/ip/how-do-i-protect-my-horse-business-brand/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:51:44Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/ip/how-do-i-protect-my-horse-business-brand/",
+      "userCanonical": "https://horselegalguide.com/ip/how-do-i-protect-my-horse-business-brand/",
+      "inspected_at": "2026-10-11T18:00:52.936Z"
     },
     {
       "url": "https://horselegalguide.com/ip/should-i-trademark-my-barn-name/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-09T19:18:44Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/ip/should-i-trademark-my-barn-name/",
+      "userCanonical": "https://horselegalguide.com/ip/should-i-trademark-my-barn-name/",
+      "inspected_at": "2026-10-11T18:00:53.127Z"
     },
     {
       "url": "https://horselegalguide.com/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-10T04:46:13Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
+      "userCanonical": "https://horselegalguide.com/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
+      "inspected_at": "2026-10-11T18:00:53.169Z"
     },
     {
       "url": "https://horselegalguide.com/leases/can-i-run-a-horse-business-under-my-lease/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-24T17:27:56Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/can-i-run-a-horse-business-under-my-lease/",
+      "userCanonical": "https://horselegalguide.com/leases/can-i-run-a-horse-business-under-my-lease/",
+      "inspected_at": "2026-10-11T18:00:53.192Z"
     },
     {
       "url": "https://horselegalguide.com/leases/can-you-end-a-horse-lease-early/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T12:50:33Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/can-you-end-a-horse-lease-early/",
+      "userCanonical": "https://horselegalguide.com/leases/can-you-end-a-horse-lease-early/",
+      "inspected_at": "2026-10-11T18:00:53.218Z"
     },
     {
       "url": "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-becomes-unsound/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-19T20:30:50Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+      "userCanonical": "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+      "inspected_at": "2026-10-11T18:00:53.279Z"
     },
     {
       "url": "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-is-injured/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-26T23:23:31Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-is-injured/",
+      "userCanonical": "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-is-injured/",
+      "inspected_at": "2026-10-11T18:00:53.875Z"
     },
     {
       "url": "https://horselegalguide.com/leases/what-is-a-horse-trial-agreement/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-17T17:52:11Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/what-is-a-horse-trial-agreement/",
+      "userCanonical": "https://horselegalguide.com/leases/what-is-a-horse-trial-agreement/",
+      "inspected_at": "2026-10-11T18:00:58.526Z"
     },
     {
       "url": "https://horselegalguide.com/leases/what-liability-applies-in-a-horse-property-lease/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-14T10:29:40Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/what-liability-applies-in-a-horse-property-lease/",
+      "userCanonical": "https://horselegalguide.com/leases/what-liability-applies-in-a-horse-property-lease/",
+      "inspected_at": "2026-10-11T18:00:59.107Z"
     },
     {
       "url": "https://horselegalguide.com/leases/what-should-be-included-in-a-barn-lease/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-19T19:13:12Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/what-should-be-included-in-a-barn-lease/",
+      "userCanonical": "https://horselegalguide.com/leases/what-should-be-included-in-a-barn-lease/",
+      "inspected_at": "2026-10-11T18:00:59.688Z"
     },
     {
       "url": "https://horselegalguide.com/leases/what-should-be-included-in-a-horse-lease-agreement/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:01:29Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/what-should-be-included-in-a-horse-lease-agreement/",
+      "userCanonical": "https://horselegalguide.com/leases/what-should-be-included-in-a-horse-lease-agreement/",
+      "inspected_at": "2026-10-11T18:00:59.552Z"
     },
     {
       "url": "https://horselegalguide.com/leases/who-is-liable-during-a-horse-lease/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-06T13:17:51Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/who-is-liable-during-a-horse-lease/",
+      "userCanonical": "https://horselegalguide.com/leases/who-is-liable-during-a-horse-lease/",
+      "inspected_at": "2026-10-11T18:00:59.363Z"
     },
     {
       "url": "https://horselegalguide.com/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-06T04:55:05Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
+      "userCanonical": "https://horselegalguide.com/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
+      "inspected_at": "2026-10-11T18:00:59.608Z"
     },
     {
       "url": "https://horselegalguide.com/leases/who-pays-vet-bills-in-a-horse-lease/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-27T16:38:31Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/leases/who-pays-vet-bills-in-a-horse-lease/",
+      "userCanonical": "https://horselegalguide.com/leases/who-pays-vet-bills-in-a-horse-lease/",
+      "inspected_at": "2026-10-11T18:00:59.427Z"
     },
     {
       "url": "https://horselegalguide.com/liability/can-i-still-be-sued-if-i-have-a-waiver/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-08T09:06:40Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/can-i-still-be-sued-if-i-have-a-waiver/",
+      "userCanonical": "https://horselegalguide.com/liability/can-i-still-be-sued-if-i-have-a-waiver/",
+      "inspected_at": "2026-10-11T18:01:00.257Z"
     },
     {
       "url": "https://horselegalguide.com/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-19T17:05:09Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
+      "userCanonical": "https://horselegalguide.com/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
+      "inspected_at": "2026-10-11T18:01:04.999Z"
     },
     {
       "url": "https://horselegalguide.com/liability/do-i-need-a-warning-sign-at-my-barn/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-27T08:19:56Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/do-i-need-a-warning-sign-at-my-barn/",
+      "userCanonical": "https://horselegalguide.com/liability/do-i-need-a-warning-sign-at-my-barn/",
+      "inspected_at": "2026-10-11T18:01:05.586Z"
     },
     {
       "url": "https://horselegalguide.com/liability/do-i-need-insurance-for-my-horse-business/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T13:45:54Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/do-i-need-insurance-for-my-horse-business/",
+      "userCanonical": "https://horselegalguide.com/liability/do-i-need-insurance-for-my-horse-business/",
+      "inspected_at": "2026-10-11T18:01:05.737Z"
     },
     {
       "url": "https://horselegalguide.com/liability/does-my-contract-need-statutory-warning-language/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-21T07:12:22Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/does-my-contract-need-statutory-warning-language/",
+      "userCanonical": "https://horselegalguide.com/liability/does-my-contract-need-statutory-warning-language/",
+      "inspected_at": "2026-10-11T18:01:06.051Z"
     },
     {
       "url": "https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T13:33:38Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
+      "userCanonical": "https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
+      "inspected_at": "2026-10-11T18:01:05.921Z"
     },
     {
       "url": "https://horselegalguide.com/liability/what-does-equine-liability-law-actually-protect-me-from/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-05T17:45:08Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/what-does-equine-liability-law-actually-protect-me-from/",
+      "userCanonical": "https://horselegalguide.com/liability/what-does-equine-liability-law-actually-protect-me-from/",
+      "inspected_at": "2026-10-11T18:01:06.209Z"
     },
     {
       "url": "https://horselegalguide.com/liability/what-happens-if-i-do-not-post-the-required-sign/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-27T03:46:04Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/what-happens-if-i-do-not-post-the-required-sign/",
+      "userCanonical": "https://horselegalguide.com/liability/what-happens-if-i-do-not-post-the-required-sign/",
+      "inspected_at": "2026-10-11T18:01:06.141Z"
     },
     {
       "url": "https://horselegalguide.com/liability/what-is-the-equine-activity-liability-act/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-07T16:46:10Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/what-is-the-equine-activity-liability-act/",
+      "userCanonical": "https://horselegalguide.com/liability/what-is-the-equine-activity-liability-act/",
+      "inspected_at": "2026-10-11T18:01:06.691Z"
     },
     {
       "url": "https://horselegalguide.com/liability/what-type-of-insurance-do-horse-owners-need/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T13:22:55Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/what-type-of-insurance-do-horse-owners-need/",
+      "userCanonical": "https://horselegalguide.com/liability/what-type-of-insurance-do-horse-owners-need/",
+      "inspected_at": "2026-10-11T18:01:11.297Z"
     },
     {
       "url": "https://horselegalguide.com/liability/what-type-of-insurance-do-trainers-need/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-07T05:18:20Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/liability/what-type-of-insurance-do-trainers-need/",
+      "userCanonical": "https://horselegalguide.com/liability/what-type-of-insurance-do-trainers-need/",
+      "inspected_at": "2026-10-11T18:01:11.964Z"
     },
     {
       "url": "https://horselegalguide.com/privacy-policy/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-09T05:47:34Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/privacy-policy/",
+      "userCanonical": "https://horselegalguide.com/privacy-policy/",
+      "inspected_at": "2026-10-11T18:01:11.883Z"
     },
     {
       "url": "https://horselegalguide.com/reference/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-13T19:07:29Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/reference/",
+      "userCanonical": "https://horselegalguide.com/reference/",
+      "inspected_at": "2026-10-11T18:01:12.296Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-20T20:13:52Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/",
+      "userCanonical": "https://horselegalguide.com/scenario/",
+      "inspected_at": "2026-10-11T18:01:12.697Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-29T18:51:30Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:01:12.544Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-barn-lease-does-not-say-who-handles-repairs-what-now/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-09T18:51:58Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-barn-lease-does-not-say-who-handles-repairs-what-now/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-barn-lease-does-not-say-who-handles-repairs-what-now/",
+      "inspected_at": "2026-10-11T18:01:12.560Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:11:33Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/",
+      "inspected_at": "2026-10-11T18:01:12.897Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-barn-wants-to-remove-a-difficult-boarder-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-22T03:51:06Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-barn-wants-to-remove-a-difficult-boarder-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-barn-wants-to-remove-a-difficult-boarder-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:01:17.770Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-boarder-stopped-paying-what-can-a-barn-do-next/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-20T07:55:52Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-boarder-stopped-paying-what-can-a-barn-do-next/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-boarder-stopped-paying-what-can-a-barn-do-next/",
+      "inspected_at": "2026-10-11T18:01:18.545Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-boarding-agreement-does-not-mention-emergency-care-what-now/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-08T06:15:36Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-boarding-agreement-does-not-mention-emergency-care-what-now/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-boarding-agreement-does-not-mention-emergency-care-what-now/",
+      "inspected_at": "2026-10-11T18:01:18.423Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-boarding-barn-changed-facility-rules-mid-relationship-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-24T01:59:04Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-boarding-barn-changed-facility-rules-mid-relationship-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-boarding-barn-changed-facility-rules-mid-relationship-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:01:18.648Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-boarding-barn-changed-ownership-what-happens-to-agreements/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-29T19:12:20Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-boarding-barn-changed-ownership-what-happens-to-agreements/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-boarding-barn-changed-ownership-what-happens-to-agreements/",
+      "inspected_at": "2026-10-11T18:01:18.907Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-19T19:24:46Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/",
+      "inspected_at": "2026-10-11T18:01:18.965Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:15:05Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/",
+      "inspected_at": "2026-10-11T18:01:19.127Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-04T15:17:55Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/",
+      "inspected_at": "2026-10-11T18:01:19.328Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:29:41Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
+      "inspected_at": "2026-10-11T18:01:24.131Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-21T18:00:29Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/",
+      "inspected_at": "2026-10-11T18:01:25.047Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-04T04:10:42Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/",
+      "inspected_at": "2026-10-11T18:01:24.957Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-buyer-wants-a-refund-after-changing-their-mind-what-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-18T22:51:08Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-buyer-wants-a-refund-after-changing-their-mind-what-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-buyer-wants-a-refund-after-changing-their-mind-what-matters/",
+      "inspected_at": "2026-10-11T18:01:25.213Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-buyer-wants-to-return-the-horse-what-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-25T07:14:00Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-buyer-wants-to-return-the-horse-what-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-buyer-wants-to-return-the-horse-what-matters/",
+      "inspected_at": "2026-10-11T18:01:25.427Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-29T04:39:44Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
+      "inspected_at": "2026-10-11T18:01:25.352Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-client-wants-to-cancel-a-training-agreement-what-terms-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-21T02:01:51Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-client-wants-to-cancel-a-training-agreement-what-terms-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-client-wants-to-cancel-a-training-agreement-what-terms-matter/",
+      "inspected_at": "2026-10-11T18:01:25.533Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-clinic-host-and-trainer-disagree-about-responsibility-what-documents-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:23:44Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-clinic-host-and-trainer-disagree-about-responsibility-what-documents-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-clinic-host-and-trainer-disagree-about-responsibility-what-documents-matter/",
+      "inspected_at": "2026-10-11T18:01:25.798Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T13:17:15Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "inspected_at": "2026-10-11T18:01:30.544Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-04T05:28:01Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
+      "inspected_at": "2026-10-11T18:01:31.348Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-19T14:30:12Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
+      "inspected_at": "2026-10-11T18:01:31.714Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:14:07Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
+      "inspected_at": "2026-10-11T18:01:31.598Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:05:01Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/",
+      "inspected_at": "2026-10-11T18:01:31.730Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:19:04Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
+      "inspected_at": "2026-10-11T18:01:31.799Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-04T17:18:19Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:01:31.911Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-business-wants-to-use-client-photos-in-marketing-what-permission-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-29T05:54:44Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-business-wants-to-use-client-photos-in-marketing-what-permission-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-business-wants-to-use-client-photos-in-marketing-what-permission-matters/",
+      "inspected_at": "2026-10-11T18:01:32.407Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-died-while-boarded-or-in-training-what-should-be-documented/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-15T06:05:49Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-died-while-boarded-or-in-training-what-should-be-documented/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-died-while-boarded-or-in-training-what-should-be-documented/",
+      "inspected_at": "2026-10-11T18:01:37.159Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:23:01Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/",
+      "inspected_at": "2026-10-11T18:01:37.936Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-lease-ended-early-what-issues-usually-come-up/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-29T19:16:30Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-lease-ended-early-what-issues-usually-come-up/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-lease-ended-early-what-issues-usually-come-up/",
+      "inspected_at": "2026-10-11T18:01:37.996Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-27T05:35:59Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:01:38.338Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-sale-involved-a-minor-what-extra-issues-can-arise/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:46:43Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-sale-involved-a-minor-what-extra-issues-can-arise/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-sale-involved-a-minor-what-extra-issues-can-arise/",
+      "inspected_at": "2026-10-11T18:01:38.104Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T13:48:54Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
+      "inspected_at": "2026-10-11T18:01:38.199Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-20T06:02:55Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/",
+      "inspected_at": "2026-10-11T18:01:38.306Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-was-hurt-while-boarded-who-is-responsible/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T13:33:10Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-was-hurt-while-boarded-who-is-responsible/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-was-hurt-while-boarded-who-is-responsible/",
+      "inspected_at": "2026-10-11T18:01:39.024Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-was-injured-during-a-paid-lesson-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-29T04:40:47Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-was-injured-during-a-paid-lesson-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-was-injured-during-a-paid-lesson-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:01:43.861Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-11T17:40:11Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/",
+      "inspected_at": "2026-10-11T18:01:44.433Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-was-sold-through-a-friend-or-agent-who-had-authority/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-21T04:02:26Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-was-sold-through-a-friend-or-agent-who-had-authority/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-was-sold-through-a-friend-or-agent-who-had-authority/",
+      "inspected_at": "2026-10-11T18:01:44.374Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-14T05:00:16Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/",
+      "inspected_at": "2026-10-11T18:01:44.485Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-lease-to-own-arrangement-is-unclear-what-problems-can-appear/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-15T05:43:15Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-lease-to-own-arrangement-is-unclear-what-problems-can-appear/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-lease-to-own-arrangement-is-unclear-what-problems-can-appear/",
+      "inspected_at": "2026-10-11T18:01:44.599Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-leased-horse-became-unsound-who-pays/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-14T08:56:29Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-leased-horse-became-unsound-who-pays/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-leased-horse-became-unsound-who-pays/",
+      "inspected_at": "2026-10-11T18:01:44.693Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-lessee-stopped-paying-board-or-vet-bills-what-happens-next/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:00:33Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-lessee-stopped-paying-board-or-vet-bills-what-happens-next/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-lessee-stopped-paying-board-or-vet-bills-what-happens-next/",
+      "inspected_at": "2026-10-11T18:01:44.789Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-parent-signed-a-waiver-for-a-minor-rider-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-11T06:42:18Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-parent-signed-a-waiver-for-a-minor-rider-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-parent-signed-a-waiver-for-a-minor-rider-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:01:45.612Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-payment-plan-horse-sale-has-gone-sideways-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:46:24Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-payment-plan-horse-sale-has-gone-sideways-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-payment-plan-horse-sale-has-gone-sideways-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:01:50.241Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-rider-used-a-facility-without-signing-a-waiver-what-risk-does-that-create/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:22:41Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-rider-used-a-facility-without-signing-a-waiver-what-risk-does-that-create/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-rider-used-a-facility-without-signing-a-waiver-what-risk-does-that-create/",
+      "inspected_at": "2026-10-11T18:01:50.729Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-rider-was-injured-at-a-clinic-what-should-organizers-review/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:01:01Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-rider-was-injured-at-a-clinic-what-should-organizers-review/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-rider-was-injured-at-a-clinic-what-should-organizers-review/",
+      "inspected_at": "2026-10-11T18:01:50.600Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-seller-disclosed-an-issue-verbally-but-not-in-writing-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-27T07:46:39Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-seller-disclosed-an-issue-verbally-but-not-in-writing-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-seller-disclosed-an-issue-verbally-but-not-in-writing-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:01:50.783Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-07T16:59:43Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/",
+      "inspected_at": "2026-10-11T18:01:50.955Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-13T13:13:35Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:01:51.309Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-social-media-collaboration-went-wrong-what-rights-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T13:55:29Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-social-media-collaboration-went-wrong-what-rights-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-social-media-collaboration-went-wrong-what-rights-matter/",
+      "inspected_at": "2026-10-11T18:01:51.396Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-sponsor-did-not-deliver-promised-payment-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-27T06:24:20Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-sponsor-did-not-deliver-promised-payment-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-sponsor-did-not-deliver-promised-payment-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:01:51.990Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-sponsor-used-my-image-without-permission-what-are-the-issues/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:31:01Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-sponsor-used-my-image-without-permission-what-are-the-issues/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-sponsor-used-my-image-without-permission-what-are-the-issues/",
+      "inspected_at": "2026-10-11T18:01:56.602Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-22T21:06:39Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:01:57.000Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-23T06:29:21Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:01:57.084Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-09T21:14:38Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:01:57.393Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-therapeutic-riding-waiver-is-unclear-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-19T02:55:07Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-therapeutic-riding-waiver-is-unclear-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-therapeutic-riding-waiver-is-unclear-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:01:57.357Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-trainer-changed-fees-without-a-signed-update-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:16:56Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-trainer-changed-fees-without-a-signed-update-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-trainer-changed-fees-without-a-signed-update-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:01:57.697Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-22T19:44:54Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:01:57.756Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-trainer-wants-commission-after-a-sale-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-23T08:34:21Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-trainer-wants-commission-after-a-sale-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-trainer-wants-commission-after-a-sale-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:01:58.369Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:04:02Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:02:03.192Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-warning-sign-was-not-posted-at-the-barn-what-risk-does-that-create/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:15:37Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/a-warning-sign-was-not-posted-at-the-barn-what-risk-does-that-create/",
+      "userCanonical": "https://horselegalguide.com/scenario/a-warning-sign-was-not-posted-at-the-barn-what-risk-does-that-create/",
+      "inspected_at": "2026-10-11T18:02:03.398Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/am-i-overreacting-or-is-this-risky/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-30T21:54:32Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/am-i-overreacting-or-is-this-risky/",
+      "userCanonical": "https://horselegalguide.com/scenario/am-i-overreacting-or-is-this-risky/",
+      "inspected_at": "2026-10-11T18:02:03.439Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-29T19:04:00Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:02:03.724Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/an-equestrian-sponsorship-agreement-went-sideways-what-should-be-checked/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-25T06:58:59Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/an-equestrian-sponsorship-agreement-went-sideways-what-should-be-checked/",
+      "userCanonical": "https://horselegalguide.com/scenario/an-equestrian-sponsorship-agreement-went-sideways-what-should-be-checked/",
+      "inspected_at": "2026-10-11T18:02:03.772Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/an-equine-therapy-client-was-injured-what-should-be-documented/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-09T19:28:59Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/an-equine-therapy-client-was-injured-what-should-be-documented/",
+      "userCanonical": "https://horselegalguide.com/scenario/an-equine-therapy-client-was-injured-what-should-be-documented/",
+      "inspected_at": "2026-10-11T18:02:03.882Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-22T05:06:06Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+      "userCanonical": "https://horselegalguide.com/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+      "inspected_at": "2026-10-11T18:02:04.140Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-03T17:37:50Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+      "userCanonical": "https://horselegalguide.com/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+      "inspected_at": "2026-10-11T18:02:05.045Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-27T04:23:40Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+      "userCanonical": "https://horselegalguide.com/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+      "inspected_at": "2026-10-11T18:02:09.397Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/do-people-actually-get-sued-over-horse-deals/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-21T07:29:31Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/do-people-actually-get-sued-over-horse-deals/",
+      "userCanonical": "https://horselegalguide.com/scenario/do-people-actually-get-sued-over-horse-deals/",
+      "inspected_at": "2026-10-11T18:02:09.551Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-10T19:13:04Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
+      "inspected_at": "2026-10-11T18:02:09.852Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-am-worried-i-am-overreacting-to-a-horse-dispute-how-should-i-think-about-it/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-25T07:28:55Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-am-worried-i-am-overreacting-to-a-horse-dispute-how-should-i-think-about-it/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-am-worried-i-am-overreacting-to-a-horse-dispute-how-should-i-think-about-it/",
+      "inspected_at": "2026-10-11T18:02:10.089Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T15:32:45Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
+      "inspected_at": "2026-10-11T18:02:09.971Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-ignored-a-horse-legal-issue-and-it-got-worse-what-now/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T12:52:42Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-ignored-a-horse-legal-issue-and-it-got-worse-what-now/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-ignored-a-horse-legal-issue-and-it-got-worse-what-now/",
+      "inspected_at": "2026-10-11T18:02:10.012Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-07T02:40:51Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
+      "inspected_at": "2026-10-11T18:02:10.345Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-signed-something-i-did-not-understand-what-should-i-do/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-04T17:44:39Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-signed-something-i-did-not-understand-what-should-i-do/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-signed-something-i-did-not-understand-what-should-i-do/",
+      "inspected_at": "2026-10-11T18:02:11.486Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-16T04:41:36Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+      "inspected_at": "2026-10-11T18:02:15.779Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-sold-a-horse-without-a-contract-what-now/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-13T13:08:14Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-sold-a-horse-without-a-contract-what-now/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-sold-a-horse-without-a-contract-what-now/",
+      "inspected_at": "2026-10-11T18:02:15.733Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-26T06:50:21Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/",
+      "inspected_at": "2026-10-11T18:02:16.221Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-trusted-a-handshake-deal-in-a-horse-sale-am-i-exposed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-19T19:01:40Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-trusted-a-handshake-deal-in-a-horse-sale-am-i-exposed/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-trusted-a-handshake-deal-in-a-horse-sale-am-i-exposed/",
+      "inspected_at": "2026-10-11T18:02:16.348Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/i-used-a-template-horse-contract-is-that-enough/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-07T22:47:21Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/i-used-a-template-horse-contract-is-that-enough/",
+      "userCanonical": "https://horselegalguide.com/scenario/i-used-a-template-horse-contract-is-that-enough/",
+      "inspected_at": "2026-10-11T18:02:16.153Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/insurance-denied-a-horse-related-claim-what-should-be-gathered/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:12:34Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/insurance-denied-a-horse-related-claim-what-should-be-gathered/",
+      "userCanonical": "https://horselegalguide.com/scenario/insurance-denied-a-horse-related-claim-what-should-be-gathered/",
+      "inspected_at": "2026-10-11T18:02:16.468Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-04T04:23:40Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
+      "userCanonical": "https://horselegalguide.com/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
+      "inspected_at": "2026-10-11T18:02:16.499Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/repairs-are-disputed-in-a-barn-lease-what-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-29T19:33:10Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/repairs-are-disputed-in-a-barn-lease-what-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/repairs-are-disputed-in-a-barn-lease-what-matters/",
+      "inspected_at": "2026-10-11T18:02:17.690Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/someone-copied-my-barn-name-online-what-should-i-gather/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-24T05:50:07Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/someone-copied-my-barn-name-online-what-should-i-gather/",
+      "userCanonical": "https://horselegalguide.com/scenario/someone-copied-my-barn-name-online-what-should-i-gather/",
+      "inspected_at": "2026-10-11T18:02:22.092Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:33:58Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/",
+      "userCanonical": "https://horselegalguide.com/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/",
+      "inspected_at": "2026-10-11T18:02:22.177Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-25T07:06:29Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/",
+      "userCanonical": "https://horselegalguide.com/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/",
+      "inspected_at": "2026-10-11T18:02:22.525Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:07:02Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/",
+      "userCanonical": "https://horselegalguide.com/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/",
+      "inspected_at": "2026-10-11T18:02:22.620Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-21T05:03:49Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/",
+      "inspected_at": "2026-10-11T18:02:22.721Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:19:37Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
+      "userCanonical": "https://horselegalguide.com/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
+      "inspected_at": "2026-10-11T18:02:22.823Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:05:31Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
+      "userCanonical": "https://horselegalguide.com/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
+      "inspected_at": "2026-10-11T18:02:22.891Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:09:36Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/",
+      "userCanonical": "https://horselegalguide.com/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/",
+      "inspected_at": "2026-10-11T18:02:24.239Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-seller-refuses-to-take-the-horse-back-what-matters/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-14T16:43:37Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/the-seller-refuses-to-take-the-horse-back-what-matters/",
+      "userCanonical": "https://horselegalguide.com/scenario/the-seller-refuses-to-take-the-horse-back-what-matters/",
+      "inspected_at": "2026-10-11T18:02:28.514Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-24T18:30:05Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/",
+      "userCanonical": "https://horselegalguide.com/scenario/the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/",
+      "inspected_at": "2026-10-11T18:02:28.594Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-24T19:45:05Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:02:28.726Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-08-07T14:08:33Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
+      "userCanonical": "https://horselegalguide.com/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
+      "inspected_at": "2026-10-11T18:02:28.969Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-20T18:25:06Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
+      "userCanonical": "https://horselegalguide.com/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
+      "inspected_at": "2026-10-11T18:02:28.879Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-if-i-already-signed-something-i-did-not-understand/",
-      "coverageState": "NOT_INSPECTED",
-      "verdict": null,
-      "inspected_at": null
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-09-15T07:02:04Z",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "googleCanonical": "https://horselegalguide.com/scenario/what-if-i-already-signed-something-i-did-not-understand/",
+      "userCanonical": "https://horselegalguide.com/scenario/what-if-i-already-signed-something-i-did-not-understand/",
+      "inspected_at": "2026-10-11T18:02:29.217Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-if-i-bought-a-horse-without-a-contract/",

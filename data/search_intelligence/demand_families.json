@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "gsc_window": "2026-09-11..2026-10-08",
-  "gsc_collected_at": "2026-10-11T17:06:57.066Z",
+  "gsc_collected_at": "2026-10-11T18:00:26.777Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
