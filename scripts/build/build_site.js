@@ -20,6 +20,7 @@ const { writePageManifests } = require('./write_page_manifest');
 const { resolveCanonicalTarget } = require('../lib/resolve_canonical_targets');
 const { validatePreRenderPage } = require('./validate_page_contract_pre_render');
 const { repairPageForRetry } = require('./regenerate_failed_pages');
+const { loadFreeze, decide: freezeDecide, recordHolds } = require('../search_intelligence/publish_freeze');
 
 function ensureDir(dirPath) { fs.mkdirSync(dirPath, { recursive: true }); }
 function rimraf(target) { fs.rmSync(target, { recursive: true, force: true }); }
@@ -114,7 +115,18 @@ function main() {
   const targets = loadPageTargets();
   const clusters = readJson('data/queries/clusters.json');
   const preflight = preflightApprovedPages(targets);
-  const approvedPages = preflight.approved.map((t) => ({
+  // Publishing freeze (scripts/search_intelligence/publish_freeze.js): a page
+  // target that was not live when the freeze began publishes only once one of
+  // its queries has a measured number; held targets are re-decided every build.
+  const freeze = loadFreeze();
+  const freezeHolds = [];
+  const publishable = preflight.approved.filter((t) => {
+    const d = freezeDecide(freeze, 'page_targets', t.slug, [t.primary_query, ...(t.supporting_queries || [])]);
+    if (!d.publish) freezeHolds.push({ slug: t.slug, query: t.primary_query, reason: d.reason });
+    return d.publish;
+  });
+  recordHolds('page_targets', freezeHolds);
+  const approvedPages = publishable.map((t) => ({
     ...t,
     quick_answer: t.quick_answer || 'Generally, situations like this depend heavily on the exact facts, the documents involved, and the state-specific legal context.',
     what_this_means: 'This page is part of a manual-review educational system and is designed to explain the topic in a neutral, non-advisory way.',

@@ -1,4 +1,5 @@
 const fs=require('fs'),path=require('path');const{renderLayout}=require('../lib/render_page');const{readJson}=require('../lib/load_config');const{fitDescription,withSubject}=require('../lib/meta_text');
+const { loadFreeze, decide: freezeDecide, recordHolds } = require('../search_intelligence/publish_freeze');
 // Section landings and articles had 37-49 character descriptions (Bing rule 118
 // on /authority/). Articles now lead with their question and first paragraph.
 const SECTION_DESC={insights:'Daily equine law insights from Horse Legal Guide: short, plain-English notes on what horse owners, buyers, sellers and barns often miss in everyday deals.',articles:'Weekly equine law articles from Horse Legal Guide that walk through horse sales, leases, boarding, liability and barn business questions in plain English.',whitepapers:'Monthly equine law white papers from Horse Legal Guide: longer reads on contracts, liability, insurance and risk for horse businesses and barn operators.',authority:'Quarterly equine law authority briefs from Horse Legal Guide: in-depth guides to the legal structure of horse sales, boarding, leasing and equine businesses.'};
@@ -123,13 +124,17 @@ function hubDirectory() {
   });
 }
 function landing(sec,items,cfg){const rows=items.filter(e=>e.section===sec).map(e=>`<article class="review-card"><h2><a href="${e.live_slug}">${esc(e.title)}</a></h2><p class="muted">${esc(e.publish_date)} · ${esc(label(e.content_type))} · ${esc((e.source_cluster||'general').replace(/-/g,' '))}</p><p>${esc(e.source_query_title||e.notes||'Neutral educational equine-law analysis.')}</p></article>`).join('\n')||'<p class="muted">No approved due items are live in this section yet. Approved future-dated items remain queued until their scheduled date.</p>';let tt=title(sec);return renderLayout({title:`Equine Law ${tt} | Horse Legal Guide`,description:fitDescription([SECTION_DESC[sec]||`Scheduled ${tt.toLowerCase()} for Horse Legal Guide, published only after owner approval and on their scheduled date, covering equine law topics for horse owners and barns.`],`/${sec}/`),url:`/${sec}/`,body:`<header class="content-header"><span class="eyebrow">${cadence(sec)} editorial surface</span><h1>${esc(tt)}</h1><p class="muted">Approved ${tt.toLowerCase()} publish here only when their scheduled date has arrived. Approval alone does not mass-publish future content.</p></header>${nav}<section><h2>Live ${esc(tt.toLowerCase())}</h2>${rows}</section>${hubDirectory()}<section class="routing-block"><p>This editorial surface supports general equine-law education and routes specific legal questions back to <a href="${esc(cfg.canonical_domain)}">${esc(cfg.canonical_brand_name)}</a>.</p></section>`})}
-function writeEditorialPages(dist){const cfg=readJson('data/system/config.json'),backlog=readJson('data/system/editorial_backlog.json'),t=today(),live=[];for(const e of backlog){e.publish_date=date(e);
+function writeEditorialPages(dist){const cfg=readJson('data/system/config.json'),backlog=readJson('data/system/editorial_backlog.json'),t=today(),live=[],freeze=loadFreeze(),holds=[];for(const e of backlog){e.publish_date=date(e);
   // Cleared unconditionally, every run, before the gate below decides whether
   // to set them back. A stale live_slug left over from a run where this entry
   // WAS live (then got rejected, or unapproved) is exactly as wrong a signal
   // to generate_admin_manifest.js as one that was never gated at all.
   delete e.live_slug;delete e.section;
   if(!approved(e)||!due(e,t))continue;if(!e.github_path||!fs.existsSync(path.resolve(process.cwd(),e.github_path)))continue;
+  // Publishing freeze (scripts/search_intelligence/publish_freeze.js): a new
+  // entry publishes only once its query has a measured number. Held entries
+  // are re-decided every build and publish as soon as they are measured.
+  {const d=freezeDecide(freeze,'editorial',e.entry_id,[e.source_query_title,e.title]);if(!d.publish){holds.push({entry_id:e.entry_id,title:e.title,query:e.source_query_title||e.title,reason:d.reason});continue;}}
   // live_slug/section are set ONLY here, on an entry that has actually passed
   // both gates above, and only these get persisted to editorial_backlog.json
   // below. generate_admin_manifest.js reads entry.live_slug as its sole
@@ -168,6 +173,7 @@ function writeEditorialPages(dist){const cfg=readJson('data/system/config.json')
   // otherwise. Persisting it here is what makes generate_admin_manifest.js see
   // the same truth this function just wrote to dist/.
   fs.writeFileSync(path.resolve(process.cwd(),'data/system/editorial_backlog.json'),JSON.stringify(backlog,null,2)+'\n');
+  recordHolds('editorial',holds);
   return live}
 // md/parse are exported so the draft preview surface renders a draft body with
 // the exact same markdown pipeline the published page will use. A preview that

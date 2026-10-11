@@ -82,6 +82,7 @@ jobs:
           set -euo pipefail
           node scripts/search_intelligence/collect_gsc.js
           node scripts/search_intelligence/collect_index_coverage.js
+          node scripts/search_intelligence/build_loop.js
       - name: Commit measured search loop
         if: ${{ steps.measured_loop.outcome == 'success' && github.ref_name == 'main' }}
         run: |
