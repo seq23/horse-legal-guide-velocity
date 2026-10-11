@@ -1,0 +1,22 @@
+{
+  "workflow": "paid-citation-probe.yml",
+  "path": ".github/workflows/paid-citation-probe.yml",
+  "workflow_key": "paid_citation_probe",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/paid-citation-probe.yml",
+  "purpose": "workflow lane",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run build",
+    "npm run search:panel",
+    "npm run search:observe",
+    "npm run queries:discovery-gap"
+  ],
+  "artifacts_checked": [],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-10-11T16:31:10.000Z",
+  "finished_at": "2026-10-11T16:31:10.000Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}

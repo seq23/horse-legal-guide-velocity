@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-09T13:46:38.620Z",
-  "total_signals": 3698,
+  "generated_at": "2026-10-11T16:35:48.160Z",
+  "total_signals": 3718,
   "signals_by_source": {
-    "reddit_equestrian": 1798,
+    "reddit_equestrian": 1818,
     "reddit_horses": 687,
     "forum_the_horse_forum": 30,
     "forum_chronicle_of_the_horse": 30,
@@ -17,7 +17,7 @@
     "forum_horse_and_hound": 76
   },
   "signals_by_platform": {
-    "reddit": 3050,
+    "reddit": 3070,
     "equestrian_forums": 136,
     "google_paa": 34,
     "serp_competitors": 217,
@@ -25,20 +25,20 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1504,
-  "duplicates_collapsed": 2194,
+  "normalized_count": 1510,
+  "duplicates_collapsed": 2208,
   "pages_created": 0,
   "pages_strengthened": 250,
   "rejected_signals": 0,
-  "pending_owner_review": 1248,
+  "pending_owner_review": 1254,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 784
+      "count": 788
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 248
+      "count": 250
     },
     {
       "name": "horse-lease-and-trial",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1798
+      "count": 1818
     },
     {
       "name": "reddit_horses",
@@ -151,8 +151,9 @@
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -177,19 +178,20 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 9
+      "count": 10
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "success_empty",
-      "count": 0
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 25000ms"
     },
     {
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
       "status": "success_with_data",
-      "count": 17,
+      "count": 14,
       "error": "4 of 8 cited page(s) failed to fetch."
     },
     {
@@ -23472,6 +23474,84 @@
       "llm_bait_phrase": "To Sell a Two Year Old Performance Horse For $1 Million",
       "source_signal_ids": [
         "youtube_search_comments_how-to-sell-a-two-year-old-performance-horse-for-1-m_0b6488fe"
+      ]
+    },
+    {
+      "approval_id": "approval_1504_looking-for-feedback-on-my-horse-gallop-animation",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3698_c796d8a437",
+      "proposed_slug": "/faq/looking-for-feedback-on-my-horse-gallop-animation/",
+      "cluster": "state-specific",
+      "question": "Looking for feedback on my horse gallop animation — what should I know?",
+      "llm_bait_phrase": "Looking for feedback on my horse gallop animation",
+      "source_signal_ids": [
+        "reddit_equestrian_looking-for-feedback-on-my-horse-gallop-animation-ht_1618d33a"
+      ]
+    },
+    {
+      "approval_id": "approval_1505_that-one-old-post-of-a-horse-with-perfect-conforma",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3699_0b262ed120",
+      "proposed_slug": "/faq/that-one-old-post-of-a-horse-with-perfect-conformation/",
+      "cluster": "state-specific",
+      "question": "That one old post of a horse with perfect conformation — what should I know?",
+      "llm_bait_phrase": "That one old post of a horse with perfect conformation",
+      "source_signal_ids": [
+        "reddit_equestrian_that-one-old-post-of-a-horse-with-perfect-conformati_d711930c"
+      ]
+    },
+    {
+      "approval_id": "approval_1506_anyone-else-s-horse-stand-like-a-goober",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3702_85c9c61d01",
+      "proposed_slug": "/faq/anyone-else-s-horse-stand-like-a-goober/",
+      "cluster": "state-specific",
+      "question": "Does anyone else’s horse stand like a goober?",
+      "llm_bait_phrase": "anyone else’s horse stand like a goober",
+      "source_signal_ids": [
+        "reddit_equestrian_does-anyone-else-s-horse-stand-like-a-goober-https-w_1516338e"
+      ]
+    },
+    {
+      "approval_id": "approval_1507_barn-drama-over-buddy-sour-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3703_8d1ecc4bb2",
+      "proposed_slug": "/faq/barn-drama-over-buddy-sour-horse/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Barn drama over buddy sour horse — what should I know?",
+      "llm_bait_phrase": "Barn drama over buddy sour horse",
+      "source_signal_ids": [
+        "reddit_equestrian_barn-drama-over-buddy-sour-horse-https-www-reddit-co_d073cff5"
+      ]
+    },
+    {
+      "approval_id": "approval_1508_pov-your-17-y-o-mares-outruns-the-4-y-o-racehorse-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3709_cf3372e560",
+      "proposed_slug": "/faq/pov-your-17-y-o-mares-outruns-the-4-y-o-racehorse-with-ease/",
+      "cluster": "state-specific",
+      "question": "POV your 17 y/o mares outruns the 4 y/o racehorse with ease — what should I know?",
+      "llm_bait_phrase": "POV your 17 y/o mares outruns the 4 y/o racehorse with ease",
+      "source_signal_ids": [
+        "reddit_equestrian_pov-your-17-y-o-mares-outruns-the-4-y-o-racehorse-wi_e4950bb9"
+      ]
+    },
+    {
+      "approval_id": "approval_1509_kicked-out-of-boarding-barn",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3714_687ed968fd",
+      "proposed_slug": "/faq/kicked-out-of-boarding-barn/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Kicked out of boarding barn — what should I know?",
+      "llm_bait_phrase": "Kicked out of boarding barn",
+      "source_signal_ids": [
+        "reddit_equestrian_kicked-out-of-boarding-barn-https-www-reddit-com-r-e_3db1816a"
       ]
     }
   ]
