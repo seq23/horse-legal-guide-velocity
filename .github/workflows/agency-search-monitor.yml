@@ -72,6 +72,28 @@ jobs:
       - run: npm ci
       - if: ${{ github.ref_name == 'main' }}
         run: git pull --rebase origin main
+      # The measured search loop (data/search_intelligence/). Runs first and
+      # commits on its own, so a red operation step below never costs a day of
+      # Search Console truth or index coverage. Collectors print a NAMED STOP and
+      # exit 0 when the credential is missing or refused; anything else is red.
+      - name: Measured search loop (truth, coverage, sitemaps, targets, families)
+        id: measured_loop
+        run: |
+          set -euo pipefail
+          node scripts/search_intelligence/collect_gsc.js
+          node scripts/search_intelligence/collect_index_coverage.js
+      - name: Commit measured search loop
+        if: ${{ steps.measured_loop.outcome == 'success' && github.ref_name == 'main' }}
+        run: |
+          git config user.name "horse-search-monitor"
+          git config user.email "actions@github.com"
+          git add data/search_intelligence
+          if git diff --cached --quiet; then
+            echo "No measured-loop changes to commit."
+          else
+            git commit -m "chore: refresh Search Console truth and index coverage"
+            bash scripts/ops/push_with_retry.sh origin main
+          fi
       - name: Refresh providers, intelligence, and private agency report
         id: operation
         continue-on-error: true
@@ -125,6 +147,7 @@ jobs:
         with:
           name: horse-legal-guide-agency-monitor
           path: |
+            data/search_intelligence
             data/agency
             data/search
             data/system
