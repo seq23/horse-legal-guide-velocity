@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-11T14:33:25.245Z",
+  "generated_at": "2026-10-11T18:10:52.156Z",
   "providers": {
     "openrouter_web_search": {
-      "state": "CONNECTED",
-      "configured": true,
+      "state": "DISABLED_BY_OWNER_POLICY",
+      "configured": false,
       "role": "primary_citation_observer",
       "capabilities": {
         "live_web": true,
@@ -13,8 +13,8 @@
       }
     },
     "gemini_grounded_search": {
-      "state": "DISCONNECTED",
-      "configured": true,
+      "state": "DISABLED_BY_OWNER_POLICY",
+      "configured": false,
       "role": "fallback_citation_observer",
       "note": "Grounded google_search tool use returns 429 RESOURCE_EXHAUSTED on this project; plain generateContent returns 200.",
       "capabilities": {
@@ -24,9 +24,15 @@
       }
     },
     "live_query_observer": {
-      "state": "CONNECTED",
-      "stop": null,
-      "primary_provider": "openrouter_web_search",
+      "state": "DISABLED_BY_OWNER_POLICY",
+      "stop": {
+        "reason": "DISABLED_BY_OWNER_POLICY",
+        "detail": "Live search observation calls a paid web-search model; it is off by owner policy (11 Oct 2026) and no model was called.",
+        "owner_held": true,
+        "owner_action": "none - dispatch paid-citation-probe.yml with confirm_paid=true to observe once",
+        "provider_statuses": []
+      },
+      "primary_provider": null,
       "capabilities": {
         "live_web": true,
         "grounded_citations": true,

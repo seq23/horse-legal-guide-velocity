@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **A Practical Framework for Intellectual Property & Brand** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-07-28/a-practical-framework-for-high-stress-am-i-screwed/, while remaining educational and approval-gated.
+This draft is intentionally scoped to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-05-05/a-practical-framework-for-demand-letters-disputes/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 

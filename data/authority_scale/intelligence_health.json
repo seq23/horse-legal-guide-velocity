@@ -5,15 +5,14 @@
   "distribution_observation_status": "HEALTHY",
   "observed_yield_trend": "IMPROVING",
   "minimum_observed_yield_events_met": true,
-  "observed_yield_events": 1196,
+  "observed_yield_events": 1406,
   "evidence_sources": [
-    "grounded_search",
     "gsc"
   ],
   "provider_states": {
-    "openrouter_web_search": "CONNECTED",
-    "gemini_grounded_search": "DISCONNECTED",
-    "live_query_observer": "CONNECTED",
+    "openrouter_web_search": "DISABLED_BY_OWNER_POLICY",
+    "gemini_grounded_search": "DISABLED_BY_OWNER_POLICY",
+    "live_query_observer": "DISABLED_BY_OWNER_POLICY",
     "gsc": "CONNECTED",
     "bing": "NOT_CONFIGURED",
     "indexnow": "DRY_RUN_ONLY"
