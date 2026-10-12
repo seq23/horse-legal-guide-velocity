@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T16:35:47.311Z",
+  "generated_at": "2026-10-12T14:03:40.540Z",
   "adapter_status": [
     {
       "source_key": "reddit_equestrian",
@@ -63,9 +63,9 @@
     {
       "source_key": "serp_competitor_research",
       "platform": "serp_competitors",
-      "status": "success_with_data",
-      "count": 14,
-      "error": "4 of 8 cited page(s) failed to fetch."
+      "status": "skipped_no_observations",
+      "count": 0,
+      "error": "data/search/query_observations.json holds no observations yet. Run npm run search:observe."
     },
     {
       "source_key": "youtube_search_comments",
@@ -86,7 +86,7 @@
       "count": 0
     }
   ],
-  "collected_count": 90,
+  "collected_count": 76,
   "reddit_collected_count": 20,
   "zero_reddit_warning": false,
   "collection_health": "degraded_failed_sources",
@@ -117,5 +117,5 @@
       "reason": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     }
   ],
-  "raw_store_count": 3718
+  "raw_store_count": 3738
 }
