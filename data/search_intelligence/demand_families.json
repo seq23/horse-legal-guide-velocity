@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-09-11..2026-10-08",
-  "gsc_collected_at": "2026-10-11T18:07:37.618Z",
+  "gsc_window": "2026-09-12..2026-10-09",
+  "gsc_collected_at": "2026-10-12T14:41:04.433Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -68,8 +68,8 @@
       "clicks": 0,
       "weighted_position": 82.7,
       "best_position": 64,
-      "page_impressions": 60,
-      "page_position": 33.1,
+      "page_impressions": 57,
+      "page_position": 34.5,
       "top_query": "equine law",
       "query_count": 9,
       "queries": [
@@ -304,8 +304,8 @@
       "clicks": 0,
       "weighted_position": 95.5,
       "best_position": 87,
-      "page_impressions": 25,
-      "page_position": 20.8,
+      "page_impressions": 22,
+      "page_position": 22.5,
       "top_query": "equine law advice",
       "query_count": 3,
       "queries": [
@@ -332,7 +332,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 6 of 20 by impressions; landing page at 20.8 position with 25 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 6 of 20 by impressions; landing page at 22.5 position with 22 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "equestrian franchise @ /faq/",
@@ -345,8 +345,8 @@
       "clicks": 0,
       "weighted_position": 93.7,
       "best_position": 93.7,
-      "page_impressions": 44,
-      "page_position": 10,
+      "page_impressions": 38,
+      "page_position": 11,
       "top_query": "buy an equestrian franchise",
       "query_count": 1,
       "queries": [
@@ -434,8 +434,8 @@
       "clicks": 0,
       "weighted_position": 42,
       "best_position": 42,
-      "page_impressions": 32,
-      "page_position": 5.3,
+      "page_impressions": 31,
+      "page_position": 5.5,
       "top_query": "horse training contracts",
       "query_count": 1,
       "queries": [
@@ -494,8 +494,8 @@
       "clicks": 0,
       "weighted_position": 65,
       "best_position": 65,
-      "page_impressions": 37,
-      "page_position": 7.8,
+      "page_impressions": 34,
+      "page_position": 8.1,
       "top_query": "horse training contracts",
       "query_count": 1,
       "queries": [
@@ -525,8 +525,8 @@
       "clicks": 0,
       "weighted_position": 66,
       "best_position": 66,
-      "page_impressions": 37,
-      "page_position": 7.8,
+      "page_impressions": 34,
+      "page_position": 8.1,
       "top_query": "equine lease agreement law firm wellington",
       "query_count": 1,
       "queries": [
@@ -614,8 +614,8 @@
       "clicks": 0,
       "weighted_position": 90,
       "best_position": 90,
-      "page_impressions": 96,
-      "page_position": 9.4,
+      "page_impressions": 82,
+      "page_position": 10.2,
       "top_query": "equine law advice",
       "query_count": 1,
       "queries": [
@@ -704,8 +704,8 @@
       "clicks": 0,
       "weighted_position": 99,
       "best_position": 99,
-      "page_impressions": 60,
-      "page_position": 33.1,
+      "page_impressions": 57,
+      "page_position": 34.5,
       "top_query": "equine law suit protection",
       "query_count": 1,
       "queries": [
@@ -720,7 +720,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 19 of 20 by impressions; landing page at 33.1 position with 60 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 19 of 20 by impressions; landing page at 34.5 position with 57 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "horse lease agreement @ /hubs/horse-lease-and-trial/",
