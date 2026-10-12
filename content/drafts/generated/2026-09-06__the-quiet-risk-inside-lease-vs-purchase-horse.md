@@ -20,7 +20,7 @@ uniqueness_strategy: money-risk-transfer
 
 The practical question behind **Lease vs Purchase Horse** is not answered safely by repeating a general horse-contract overview. This version focuses on when money, possession, care duties, and loss exposure move from one party to another. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-05-22/how-to-think-about-lease-vs-purchase-horse-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to when money, possession, care duties, and loss exposure move from one party to another. It is designed to be materially distinct from /drafts/2026-05-07/a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Money, possession, and risk transfer
 

@@ -20,7 +20,7 @@ uniqueness_strategy: authority-roles
 
 The practical question behind **I Bought a Horse and Something Is Wrong — What Now** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-08-03/where-i-bought-a-horse-and-something-is-wrong-what-now-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-11-08/what-equestrians-often-miss-about-can-i-run-a-horse-business-under-my-lease/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Authority, roles, and decision rights
 
