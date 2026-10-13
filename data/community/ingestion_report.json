@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-12T14:03:41.370Z",
-  "total_signals": 3738,
+  "generated_at": "2026-10-13T13:50:50.574Z",
+  "total_signals": 3759,
   "signals_by_source": {
-    "reddit_equestrian": 1838,
+    "reddit_equestrian": 1858,
     "reddit_horses": 687,
     "forum_the_horse_forum": 30,
     "forum_chronicle_of_the_horse": 30,
@@ -14,31 +14,31 @@
     "reddit_legaladvice": 223,
     "reddit_smallbusiness": 239,
     "reddit_farming_ranching": 103,
-    "forum_horse_and_hound": 76
+    "forum_horse_and_hound": 77
   },
   "signals_by_platform": {
-    "reddit": 3090,
-    "equestrian_forums": 136,
+    "reddit": 3110,
+    "equestrian_forums": 137,
     "google_paa": 34,
     "serp_competitors": 217,
     "youtube": 203,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1523,
-  "duplicates_collapsed": 2215,
+  "normalized_count": 1530,
+  "duplicates_collapsed": 2229,
   "pages_created": 0,
   "pages_strengthened": 250,
   "rejected_signals": 0,
-  "pending_owner_review": 1267,
+  "pending_owner_review": 1274,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 797
+      "count": 803
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 254
+      "count": 255
     },
     {
       "name": "horse-lease-and-trial",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1838
+      "count": 1858
     },
     {
       "name": "reddit_horses",
@@ -104,7 +104,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 76
+      "count": 77
     },
     {
       "name": "google_paa_manual_or_provider",
@@ -158,9 +158,8 @@
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 10
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -23721,6 +23720,97 @@
       "llm_bait_phrase": "Broodmares 1st show and it was pouring rain",
       "source_signal_ids": [
         "reddit_equestrian_broodmares-1st-show-and-it-was-pouring-rain-https-ww_f0e19f28"
+      ]
+    },
+    {
+      "approval_id": "approval_1523_welp-i-have-been-cleared-by-vets",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3738_d3afc84705",
+      "proposed_slug": "/faq/welp-i-have-been-cleared-by-vets/",
+      "cluster": "state-specific",
+      "question": "Welp, I have been cleared by vets — what should I know?",
+      "llm_bait_phrase": "Welp, I have been cleared by vets",
+      "source_signal_ids": [
+        "reddit_equestrian_welp-i-have-been-cleared-by-vets-https-www-reddit-co_f4cfea3d"
+      ]
+    },
+    {
+      "approval_id": "approval_1524_horse-ate-small-quantity-of-melia-azedarach-leaves",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3741_4074fbe39c",
+      "proposed_slug": "/faq/horse-ate-small-quantity-of-melia-azedarach-leaves/",
+      "cluster": "state-specific",
+      "question": "Horse ate small quantity of Melia azedarach leaves — what should I know?",
+      "llm_bait_phrase": "Horse ate small quantity of Melia azedarach leaves",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-ate-small-quantity-of-melia-azedarach-leaves-h_dfab5ed1"
+      ]
+    },
+    {
+      "approval_id": "approval_1525_favorite-online-used-tack-stores",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3744_5196ee4e57",
+      "proposed_slug": "/faq/favorite-online-used-tack-stores/",
+      "cluster": "state-specific",
+      "question": "Favorite online used tack stores — what should I know?",
+      "llm_bait_phrase": "Favorite online used tack stores",
+      "source_signal_ids": [
+        "reddit_equestrian_favorite-online-used-tack-stores-https-www-reddit-co_e98a1b50"
+      ]
+    },
+    {
+      "approval_id": "approval_1526_the-great-carrot-debacle-a-barn-etiquette-rant",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3746_9384c7662d",
+      "proposed_slug": "/faq/the-great-carrot-debacle-a-barn-etiquette-rant/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "The great carrot debacle: a barn etiquette rant — what should I know?",
+      "llm_bait_phrase": "The great carrot debacle: a barn etiquette rant",
+      "source_signal_ids": [
+        "reddit_equestrian_the-great-carrot-debacle-a-barn-etiquette-rant-https_f3cbc304"
+      ]
+    },
+    {
+      "approval_id": "approval_1527_my-short-backed-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3749_d76604531a",
+      "proposed_slug": "/faq/my-short-backed-horse/",
+      "cluster": "state-specific",
+      "question": "My short backed horse — what should I know?",
+      "llm_bait_phrase": "My short backed horse",
+      "source_signal_ids": [
+        "reddit_equestrian_my-short-backed-horse-https-www-reddit-com-r-equestr_27290bbd"
+      ]
+    },
+    {
+      "approval_id": "approval_1528_follow-up-to-28-yr-old-lesson-mare-who-would-pitch",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3757_a67a33cb20",
+      "proposed_slug": "/faq/follow-up-to-28-yr-old-lesson-mare-who-would-pitch-a-fit-at-every-trot-for-3-lessons-strai/",
+      "cluster": "state-specific",
+      "question": "Follow up to 28 yr old lesson mare who would pitch a fit at every trot for 3 lessons straight. — what should I know?",
+      "llm_bait_phrase": "Follow up to 28 yr old lesson mare who would pitch a fit at every trot for 3 lessons straight.",
+      "source_signal_ids": [
+        "reddit_equestrian_follow-up-to-28-yr-old-lesson-mare-who-would-pitch-a_6851a7fe"
+      ]
+    },
+    {
+      "approval_id": "approval_1529_sports-horses-v-alrounders",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3758_74e9105a35",
+      "proposed_slug": "/faq/sports-horses-v-alrounders/",
+      "cluster": "state-specific",
+      "question": "Sports horses v alrounders — what should I know?",
+      "llm_bait_phrase": "Sports horses v alrounders",
+      "source_signal_ids": [
+        "forum_horse_and_hound_sports-horses-v-alrounders-https-forums-horseandhoun_6b63897c"
       ]
     }
   ]
