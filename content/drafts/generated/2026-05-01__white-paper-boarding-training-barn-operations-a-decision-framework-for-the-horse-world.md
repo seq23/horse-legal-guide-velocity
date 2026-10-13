@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **White Paper: Boarding, Training & Barn Operations - A Decision Framework for the Horse World** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /whitepapers/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/, while remaining educational and approval-gated.
+This draft is intentionally scoped to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 
