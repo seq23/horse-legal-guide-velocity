@@ -1,44 +1,44 @@
 {
-  "generated_at": "2026-10-13T13:50:50.574Z",
-  "total_signals": 3759,
+  "generated_at": "2026-10-14T13:42:36.218Z",
+  "total_signals": 3782,
   "signals_by_source": {
-    "reddit_equestrian": 1858,
+    "reddit_equestrian": 1878,
     "reddit_horses": 687,
     "forum_the_horse_forum": 30,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 34,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 203,
+    "youtube_search_comments": 204,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 223,
     "reddit_smallbusiness": 239,
     "reddit_farming_ranching": 103,
-    "forum_horse_and_hound": 77
+    "forum_horse_and_hound": 79
   },
   "signals_by_platform": {
-    "reddit": 3110,
-    "equestrian_forums": 137,
+    "reddit": 3130,
+    "equestrian_forums": 139,
     "google_paa": 34,
     "serp_competitors": 217,
-    "youtube": 203,
+    "youtube": 204,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1530,
-  "duplicates_collapsed": 2229,
+  "normalized_count": 1539,
+  "duplicates_collapsed": 2243,
   "pages_created": 0,
   "pages_strengthened": 250,
   "rejected_signals": 0,
-  "pending_owner_review": 1274,
+  "pending_owner_review": 1283,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 803
+      "count": 811
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 255
+      "count": 256
     },
     {
       "name": "horse-lease-and-trial",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1858
+      "count": 1878
     },
     {
       "name": "reddit_horses",
@@ -96,7 +96,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 203
+      "count": 204
     },
     {
       "name": "reddit_farming_ranching",
@@ -104,7 +104,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 77
+      "count": 79
     },
     {
       "name": "google_paa_manual_or_provider",
@@ -158,8 +158,9 @@
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 10
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -177,7 +178,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 10
+      "count": 12
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -23811,6 +23812,123 @@
       "llm_bait_phrase": "Sports horses v alrounders",
       "source_signal_ids": [
         "forum_horse_and_hound_sports-horses-v-alrounders-https-forums-horseandhoun_6b63897c"
+      ]
+    },
+    {
+      "approval_id": "approval_1530_it-already-loss-of-quality-of-life-if-the-horse-ca",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3759_f840a393bd",
+      "proposed_slug": "/faq/it-already-loss-of-quality-of-life-if-the-horse-can-t-pick-up-it-s-hoofs-to-be-picked/",
+      "cluster": "state-specific",
+      "question": "Is it already loss of quality of life if the horse can’t pick up it’s hoofs (to be picked)?",
+      "llm_bait_phrase": "it already loss of quality of life if the horse can’t pick up it’s hoofs (to be picked)",
+      "source_signal_ids": [
+        "reddit_equestrian_is-it-already-loss-of-quality-of-life-if-the-horse-c_7f38e887"
+      ]
+    },
+    {
+      "approval_id": "approval_1531_i-like-my-horses-kid-proof",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3766_7372038d64",
+      "proposed_slug": "/faq/i-like-my-horses-kid-proof/",
+      "cluster": "state-specific",
+      "question": "I like my horses kid proof — what should I know?",
+      "llm_bait_phrase": "I like my horses kid proof",
+      "source_signal_ids": [
+        "reddit_equestrian_i-like-my-horses-kid-proof-https-www-reddit-com-r-eq_adf87d1a"
+      ]
+    },
+    {
+      "approval_id": "approval_1532_dobi-says-50cm-jump-big-red-puissance-wall-at-olym",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3772_c04d031886",
+      "proposed_slug": "/faq/dobi-says-50cm-jump-big-red-puissance-wall-at-olympia-it-s-all-the-same-to-me-his-enthusia/",
+      "cluster": "state-specific",
+      "question": "Dobi says “50cm jump, big red puissance wall at Olympia, it’s all the same to me!” His enthusiasm melts my heart, I love veterans who’re still enjoying themselves ❤️🥹 — what should I know?",
+      "llm_bait_phrase": "Dobi says “50cm jump, big red puissance wall at Olympia, it’s all the same to me!” His enthusiasm melts my heart, I love veterans who’re still enjoying themselves ❤️🥹",
+      "source_signal_ids": [
+        "reddit_equestrian_dobi-says-50cm-jump-big-red-puissance-wall-at-olympi_59e1e199"
+      ]
+    },
+    {
+      "approval_id": "approval_1533_new-york-city-horse-carriages-to-be-banned-in-2028",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3774_7faf55fb1f",
+      "proposed_slug": "/faq/new-york-city-horse-carriages-to-be-banned-in-2028-under-deal-with-mayor-zohran-mamdani/",
+      "cluster": "state-specific",
+      "question": "New York City horse carriages to be banned in 2028 under deal with Mayor Zohran Mamdani — what should I know?",
+      "llm_bait_phrase": "New York City horse carriages to be banned in 2028 under deal with Mayor Zohran Mamdani",
+      "source_signal_ids": [
+        "reddit_equestrian_new-york-city-horse-carriages-to-be-banned-in-2028-u_8af84b02"
+      ]
+    },
+    {
+      "approval_id": "approval_1534_weird-thing-my-horse-knows",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3775_01f352cb7f",
+      "proposed_slug": "/faq/weird-thing-my-horse-knows/",
+      "cluster": "state-specific",
+      "question": "Weird thing my horse knows — what should I know?",
+      "llm_bait_phrase": "Weird thing my horse knows",
+      "source_signal_ids": [
+        "reddit_equestrian_weird-thing-my-horse-knows-https-www-reddit-com-r-eq_21ec2da7"
+      ]
+    },
+    {
+      "approval_id": "approval_1535_barn-name-ideas",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3778_ad2ab39236",
+      "proposed_slug": "/faq/barn-name-ideas/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Barn name ideas — what should I know?",
+      "llm_bait_phrase": "Barn name ideas",
+      "source_signal_ids": [
+        "reddit_equestrian_barn-name-ideas-https-www-reddit-com-r-equestrian-co_7f300446"
+      ]
+    },
+    {
+      "approval_id": "approval_1536_your-horse-always-stand-at-stable-door",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3779_9cc9ce576a",
+      "proposed_slug": "/faq/your-horse-always-stand-at-stable-door/",
+      "cluster": "state-specific",
+      "question": "Does your horse always stand at stable door?",
+      "llm_bait_phrase": "your horse always stand at stable door",
+      "source_signal_ids": [
+        "forum_horse_and_hound_does-your-horse-always-stand-at-stable-door-https-fo_54c9b498"
+      ]
+    },
+    {
+      "approval_id": "approval_1537_automatic-horse-drinkers-in-stables",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3780_36fff73025",
+      "proposed_slug": "/faq/automatic-horse-drinkers-in-stables/",
+      "cluster": "state-specific",
+      "question": "Automatic horse drinkers in stables — what should I know?",
+      "llm_bait_phrase": "Automatic horse drinkers in stables",
+      "source_signal_ids": [
+        "forum_horse_and_hound_automatic-horse-drinkers-in-stables-https-forums-hor_9af196ab"
+      ]
+    },
+    {
+      "approval_id": "approval_1538_a-full-week-with-my-horse-part-loaning-edition-how",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3781_8703b264fc",
+      "proposed_slug": "/faq/a-full-week-with-my-horse-part-loaning-edition-how-does-sharing-a-horse-work-riding-with-r/",
+      "cluster": "state-specific",
+      "question": "A Full Week With My Horse *Part-Loaning Edition* | How Does Sharing A Horse Work? Riding With Rhi — what should I know?",
+      "llm_bait_phrase": "A Full Week With My Horse *Part-Loaning Edition* | How Does Sharing A Horse Work? Riding With Rhi",
+      "source_signal_ids": [
+        "youtube_search_comments_a-full-week-with-my-horse-part-loaning-edition-how-d_cf713084"
       ]
     }
   ]
