@@ -1,24 +1,24 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-10-14T11:27:04.000Z",
+  "generated_at": "2026-10-14T14:32:11.000Z",
   "provider_status": {
     "gsc": "ok",
     "bing": "not_connected",
     "grounded_search": "DISABLED_BY_OWNER_POLICY"
   },
   "summary": {
-    "opportunities": 24,
+    "opportunities": 22,
     "new_candidates": 16,
     "improve_existing": 0,
     "differentiate_existing": 0,
-    "cannibalization_review": 8,
+    "cannibalization_review": 6,
     "active_query_failures": 0
   },
   "policy": "Provider and grounded-search data may create recommendations, pending candidates, and finished owner-review repairs only. They may not approve, publish, or mutate live legal pages.",
   "truth_boundary": "Grounded web surfacing is evidence of live cited sources, not literal organic rank. GSC is the source for owned-site Google clicks, impressions, CTR, and average position.",
   "opportunities": [
     {
-      "opportunity_id": "provider-opportunity-0021",
+      "opportunity_id": "provider-opportunity-0019",
       "query": "start an equestrian business",
       "type": "cannibalization_review",
       "target_page": "/business/how-to-start-a-horse-retail-business/",
@@ -88,7 +88,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0014",
+      "opportunity_id": "provider-opportunity-0012",
       "query": "horse purchase agreement",
       "type": "new_candidate",
       "target_page": "/hubs/horse-sale-and-purchase/",
@@ -121,43 +121,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0005",
-      "query": "equine law advice",
-      "type": "cannibalization_review",
-      "target_page": "/articles/",
-      "provider_pages": [
-        "/articles/",
-        "/insights/",
-        "/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 10,
-        "average_position": 87.03
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.222,
-      "confidence": 0.516,
-      "reasons": [
-        "provider_query_maps_to_multiple_pages",
-        "ranking_opportunity"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0004",
+      "opportunity_id": "provider-opportunity-0003",
       "query": "equine law",
       "type": "cannibalization_review",
       "target_page": "/insights/",
@@ -170,13 +134,13 @@
       ],
       "metrics": {
         "clicks": 0,
-        "impressions": 8,
-        "average_position": 94.36
+        "impressions": 6,
+        "average_position": 94.72
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
       "coverage_match_score": 0.222,
-      "confidence": 0.514,
+      "confidence": 0.512,
       "reasons": [
         "provider_query_maps_to_multiple_pages",
         "ranking_opportunity"
@@ -192,7 +156,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0009",
+      "opportunity_id": "provider-opportunity-0008",
       "query": "equine legal advice",
       "type": "new_candidate",
       "target_page": "/insights/",
@@ -258,7 +222,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0018",
+      "opportunity_id": "provider-opportunity-0016",
       "query": "horse sales agreement",
       "type": "new_candidate",
       "target_page": "/hubs/horse-sale-and-purchase/",
@@ -291,43 +255,8 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0006",
-      "query": "equine law suit protection",
-      "type": "cannibalization_review",
-      "target_page": "/insights/",
-      "provider_pages": [
-        "/insights/",
-        "/reference/what-does-equine-liability-law-actually-protect-me-from/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 4,
-        "average_position": 95
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.222,
-      "confidence": 0.51,
-      "reasons": [
-        "provider_query_maps_to_multiple_pages",
-        "ranking_opportunity"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0013",
-      "query": "horse legal",
+      "opportunity_id": "provider-opportunity-0004",
+      "query": "equine law advice",
       "type": "cannibalization_review",
       "target_page": "/articles/",
       "provider_pages": [
@@ -340,7 +269,7 @@
       "metrics": {
         "clicks": 0,
         "impressions": 4,
-        "average_position": 76.5
+        "average_position": 91
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
@@ -361,7 +290,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0008",
+      "opportunity_id": "provider-opportunity-0007",
       "query": "equine legal",
       "type": "new_candidate",
       "target_page": "/insights/",
@@ -394,7 +323,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0010",
+      "opportunity_id": "provider-opportunity-0009",
       "query": "equine sale agreements",
       "type": "cannibalization_review",
       "target_page": "/faq/what-should-be-included-in-a-horse-sale-contract/",
@@ -429,7 +358,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0007",
+      "opportunity_id": "provider-opportunity-0006",
       "query": "equine lease agreement law firm wellington",
       "type": "cannibalization_review",
       "target_page": "/hubs/horse-lease-and-trial/",
@@ -464,7 +393,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0023",
+      "opportunity_id": "provider-opportunity-0021",
       "query": "what are the equine activity liability acts in my state?",
       "type": "new_candidate",
       "target_page": "/liability/what-is-the-equine-activity-liability-act/",
@@ -497,7 +426,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0024",
+      "opportunity_id": "provider-opportunity-0022",
       "query": "what should i know about equine law when renting horses",
       "type": "new_candidate",
       "target_page": "/insights/",
@@ -530,7 +459,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0022",
+      "opportunity_id": "provider-opportunity-0020",
       "query": "what are the best equine law resources for horse owners?",
       "type": "new_candidate",
       "target_page": "/hubs/",
@@ -563,7 +492,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0015",
+      "opportunity_id": "provider-opportunity-0013",
       "query": "horse sale contract",
       "type": "new_candidate",
       "target_page": "/hubs/horse-sale-and-purchase/",
@@ -596,7 +525,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0016",
+      "opportunity_id": "provider-opportunity-0014",
       "query": "horse sale contract lawyer",
       "type": "new_candidate",
       "target_page": "/hubs/horse-sale-and-purchase/",
@@ -629,7 +558,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0020",
+      "opportunity_id": "provider-opportunity-0018",
       "query": "horse syndicate ownership agreement",
       "type": "new_candidate",
       "target_page": "/compare/horse-co-ownership-agreement-vs-syndicate-structure/",
@@ -662,7 +591,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0017",
+      "opportunity_id": "provider-opportunity-0015",
       "query": "horse sale disputes",
       "type": "new_candidate",
       "target_page": "/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
@@ -695,7 +624,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0019",
+      "opportunity_id": "provider-opportunity-0017",
       "query": "horse sales contract",
       "type": "new_candidate",
       "target_page": "/hubs/horse-sale-and-purchase/",
@@ -728,7 +657,40 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0011",
+      "opportunity_id": "provider-opportunity-0005",
+      "query": "equine law suit protection",
+      "type": "new_candidate",
+      "target_page": "/insights/",
+      "provider_pages": [
+        "/insights/"
+      ],
+      "providers": [
+        "gsc"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 2,
+        "average_position": 99
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.222,
+      "confidence": 0.508,
+      "reasons": [
+        "ranking_opportunity"
+      ],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0010",
       "query": "horse contracts",
       "type": "new_candidate",
       "target_page": "/insights/",
@@ -761,7 +723,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0012",
+      "opportunity_id": "provider-opportunity-0011",
       "query": "horse laws",
       "type": "new_candidate",
       "target_page": "/insights/",
@@ -780,39 +742,6 @@
       "grounded_competitors": [],
       "coverage_match_score": 0.167,
       "confidence": 0.494,
-      "reasons": [
-        "ranking_opportunity"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0003",
-      "query": "equestrian law",
-      "type": "new_candidate",
-      "target_page": "/insights/",
-      "provider_pages": [
-        "/insights/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 2,
-        "average_position": 75
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.125,
-      "confidence": 0.483,
       "reasons": [
         "ranking_opportunity"
       ],
