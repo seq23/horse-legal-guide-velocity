@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-10-14T14:32:11.000Z",
+  "generated_at": "2026-10-15T11:25:34.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-10-14T14:32:13.055Z",
-      "age_hours": 0,
+      "age_hours": 20.9,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-10-14T14:32:13.055Z",
-      "age_hours": 0,
+      "age_hours": 20.9,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-10-14T14:32:13.055Z",
-      "age_hours": 0,
+      "age_hours": 20.9,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -1694,8 +1694,8 @@
       "workflow_count": 18,
       "workflow_passed": 18,
       "workflow_warning_count": 0,
-      "signal_raw_store_count": 3782,
-      "signal_fresh_collected_count": 78,
+      "signal_raw_store_count": 3845,
+      "signal_fresh_collected_count": 115,
       "signal_failed_sources": 0,
       "signal_zero_reddit_warning": false,
       "github_actions_simulation_status": "passed",
@@ -5382,35 +5382,6 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
-        "members": [
-          "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
-          "/leases/what-happens-if-a-leased-horse-is-injured/"
-        ],
-        "families": [
-          "leases"
-        ],
-        "reasons": [
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.8964,
-        "suggested_actions": [
-          "differentiate_patch"
-        ],
-        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0013",
-        "ledger_id": "uniqueness-0013",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
         "candidate_primary": "/scenario/what-if-i-bought-a-horse-without-a-contract/",
         "members": [
           "/scenario/what-if-i-bought-a-horse-without-a-contract/",
@@ -5432,8 +5403,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0014",
-        "ledger_id": "uniqueness-0014",
+        "proposal_id": "remediation-uniqueness-0013",
+        "ledger_id": "uniqueness-0013",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -5461,8 +5432,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0015",
-        "ledger_id": "uniqueness-0015",
+        "proposal_id": "remediation-uniqueness-0014",
+        "ledger_id": "uniqueness-0014",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -5493,8 +5464,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0016",
-        "ledger_id": "uniqueness-0016",
+        "proposal_id": "remediation-uniqueness-0015",
+        "ledger_id": "uniqueness-0015",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -5523,8 +5494,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0017",
-        "ledger_id": "uniqueness-0017",
+        "proposal_id": "remediation-uniqueness-0016",
+        "ledger_id": "uniqueness-0016",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -5552,8 +5523,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0018",
-        "ledger_id": "uniqueness-0018",
+        "proposal_id": "remediation-uniqueness-0017",
+        "ledger_id": "uniqueness-0017",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -5574,6 +5545,35 @@
           "high_body_similarity"
         ],
         "maximum_body_similarity": 0.8742,
+        "suggested_actions": [
+          "differentiate_patch"
+        ],
+        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0018",
+        "ledger_id": "uniqueness-0018",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
+        "candidate_primary": "/leases/what-happens-if-a-leased-horse-is-injured/",
+        "members": [
+          "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+          "/leases/what-happens-if-a-leased-horse-is-injured/"
+        ],
+        "families": [
+          "leases"
+        ],
+        "reasons": [
+          "high_body_similarity"
+        ],
+        "maximum_body_similarity": 0.874,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -6064,9 +6064,9 @@
         "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
         "/compare/mediation-vs-litigation-in-horse-disputes/",
         "/compare/mediation-vs-litigation-horse-disputes/",
-        "/leases/what-happens-if-a-leased-horse-is-injured/",
-        "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
         "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+        "/scenario/am-i-overreacting-or-is-this-risky/",
+        "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
         "/scenario/am-i-overreacting-or-is-this-risky/"
       ],
       "recommended_action": "Use the owner-review consolidation ledger to decide which existing pages should be differentiated or, in a separately approved phase, consolidated. This build does not mutate live pages."

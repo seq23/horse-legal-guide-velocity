@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-14T11:27:04.000Z",
-  "source_fingerprint": "ead10342230f9f92622d8f6e4c9048482830867e6ad90a74820f8c98863e72d6",
+  "generated_at": "2026-10-15T11:25:34.000Z",
+  "source_fingerprint": "3190a221ed7d8b7a3ab827af2bf6bdceb328cbb20aa6eabf353338bb47b3632c",
   "policy": "Owner review only. This ledger never mutates live pages, routes, canonicals, robots directives, or redirects.",
   "automatic_live_changes_allowed": false,
   "entry_count": 24,
@@ -254,25 +254,6 @@
       "ledger_id": "uniqueness-0012",
       "status": "owner_review_required",
       "action_applied": "none",
-      "candidate_primary": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
-      "members": [
-        "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
-        "/leases/what-happens-if-a-leased-horse-is-injured/"
-      ],
-      "families": [
-        "leases"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.8964,
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true
-    },
-    {
-      "ledger_id": "uniqueness-0013",
-      "status": "owner_review_required",
-      "action_applied": "none",
       "candidate_primary": "/scenario/what-if-i-bought-a-horse-without-a-contract/",
       "members": [
         "/scenario/what-if-i-bought-a-horse-without-a-contract/",
@@ -289,7 +270,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0014",
+      "ledger_id": "uniqueness-0013",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
@@ -308,7 +289,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0015",
+      "ledger_id": "uniqueness-0014",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
@@ -330,7 +311,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0016",
+      "ledger_id": "uniqueness-0015",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/disputes/how-serious-is-a-legal-demand-letter/",
@@ -350,7 +331,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0017",
+      "ledger_id": "uniqueness-0016",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
@@ -369,7 +350,7 @@
       "approval_required_for_live_change": true
     },
     {
-      "ledger_id": "uniqueness-0018",
+      "ledger_id": "uniqueness-0017",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
@@ -386,6 +367,25 @@
         "high_body_similarity"
       ],
       "maximum_body_similarity": 0.8742,
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "approval_required_for_live_change": true
+    },
+    {
+      "ledger_id": "uniqueness-0018",
+      "status": "owner_review_required",
+      "action_applied": "none",
+      "candidate_primary": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "members": [
+        "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+        "/leases/what-happens-if-a-leased-horse-is-injured/"
+      ],
+      "families": [
+        "leases"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.874,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },

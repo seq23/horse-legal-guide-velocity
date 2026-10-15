@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-14T14:33:33.000Z",
+  "generated_at": "2026-10-15T11:25:34.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "ead10342230f9f92622d8f6e4c9048482830867e6ad90a74820f8c98863e72d6",
+  "source_fingerprint": "3190a221ed7d8b7a3ab827af2bf6bdceb328cbb20aa6eabf353338bb47b3632c",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
@@ -430,18 +430,6 @@
       "intent_similarity": 1,
       "title_a": "Mediation vs litigation in horse disputes",
       "title_b": "Mediation vs Litigation in Horse Disputes"
-    },
-    {
-      "a": "/leases/what-happens-if-a-leased-horse-is-injured/",
-      "b": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
-      "family_a": "leases",
-      "family_b": "leases",
-      "body_similarity": 0.8964,
-      "cosine_similarity": 0.9667,
-      "shingle_similarity": 0.7658,
-      "intent_similarity": 0.5,
-      "title_a": "What Happens If a Leased Horse Is Injured?",
-      "title_b": "What Happens If a Leased Horse Becomes Unsound?"
     },
     {
       "a": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
@@ -922,6 +910,18 @@
       "intent_similarity": 0,
       "title_a": "What Should Be Included in a Training Agreement?",
       "title_b": "What Liability Does a Trainer Have?"
+    },
+    {
+      "a": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "b": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+      "family_a": "leases",
+      "family_b": "leases",
+      "body_similarity": 0.874,
+      "cosine_similarity": 0.9401,
+      "shingle_similarity": 0.7514,
+      "intent_similarity": 0.5,
+      "title_a": "What Happens If a Leased Horse Is Injured?",
+      "title_b": "What Happens If a Leased Horse Becomes Unsound?"
     },
     {
       "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
