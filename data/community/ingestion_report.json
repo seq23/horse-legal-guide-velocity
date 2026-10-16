@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-15T13:44:40.609Z",
-  "total_signals": 3845,
+  "generated_at": "2026-10-16T13:45:27.525Z",
+  "total_signals": 3865,
   "signals_by_source": {
-    "reddit_equestrian": 1898,
+    "reddit_equestrian": 1918,
     "reddit_horses": 687,
     "forum_the_horse_forum": 30,
     "forum_chronicle_of_the_horse": 30,
@@ -17,7 +17,7 @@
     "forum_horse_and_hound": 83
   },
   "signals_by_platform": {
-    "reddit": 3170,
+    "reddit": 3190,
     "equestrian_forums": 143,
     "google_paa": 50,
     "serp_competitors": 217,
@@ -25,16 +25,16 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1567,
-  "duplicates_collapsed": 2278,
+  "normalized_count": 1573,
+  "duplicates_collapsed": 2292,
   "pages_created": 0,
   "pages_strengthened": 253,
   "rejected_signals": 0,
-  "pending_owner_review": 1308,
+  "pending_owner_review": 1314,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 820
+      "count": 826
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1898
+      "count": 1918
     },
     {
       "name": "reddit_horses",
@@ -158,8 +158,9 @@
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -177,13 +178,14 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 13
+      "count": 9
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "success_with_data",
-      "count": 16
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 25000ms"
     },
     {
       "source_key": "serp_competitor_research",
@@ -24332,6 +24334,84 @@
       "llm_bait_phrase": "Buying a Horse",
       "source_signal_ids": [
         "youtube_search_comments_buying-a-horse-https-www-youtube-com-results-search-_0fa4cbe8"
+      ]
+    },
+    {
+      "approval_id": "approval_1567_advice-for-motivating-an-extremely-lazy-but-engage",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3846_2807381779",
+      "proposed_slug": "/faq/advice-for-motivating-an-extremely-lazy-but-engaged-horse-using-r/",
+      "cluster": "state-specific",
+      "question": "Advice for motivating an extremely lazy but engaged horse using R+ — what should I know?",
+      "llm_bait_phrase": "Advice for motivating an extremely lazy but engaged horse using R+",
+      "source_signal_ids": [
+        "reddit_equestrian_advice-for-motivating-an-extremely-lazy-but-engaged-_340e599d"
+      ]
+    },
+    {
+      "approval_id": "approval_1568_best-rain-rug-for-horse-with-big-shoulders",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3849_b832d5c99d",
+      "proposed_slug": "/faq/best-rain-rug-for-horse-with-big-shoulders/",
+      "cluster": "state-specific",
+      "question": "Best rain rug for horse with big shoulders — what should I know?",
+      "llm_bait_phrase": "Best rain rug for horse with big shoulders",
+      "source_signal_ids": [
+        "reddit_equestrian_best-rain-rug-for-horse-with-big-shoulders-https-www_a9e7d242"
+      ]
+    },
+    {
+      "approval_id": "approval_1569_guess-my-mares-breed",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3850_9ceeca23a8",
+      "proposed_slug": "/faq/guess-my-mares-breed/",
+      "cluster": "state-specific",
+      "question": "Guess my mares breed! — what should I know?",
+      "llm_bait_phrase": "Guess my mares breed!",
+      "source_signal_ids": [
+        "reddit_equestrian_guess-my-mares-breed-https-www-reddit-com-r-equestri_8cb1a66b"
+      ]
+    },
+    {
+      "approval_id": "approval_1570_to-prevent-this-white-stuff-in-my-tack-room",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3853_75b500e9e6",
+      "proposed_slug": "/faq/to-prevent-this-white-stuff-in-my-tack-room/",
+      "cluster": "state-specific",
+      "question": "How to prevent this white stuff in my tack room?",
+      "llm_bait_phrase": "to prevent this white stuff in my tack room",
+      "source_signal_ids": [
+        "reddit_equestrian_how-to-prevent-this-white-stuff-in-my-tack-room-http_7cdb1240"
+      ]
+    },
+    {
+      "approval_id": "approval_1571_feeding-a-an-old-horse-this-winter",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3857_74df73c9fb",
+      "proposed_slug": "/faq/feeding-a-an-old-horse-this-winter/",
+      "cluster": "state-specific",
+      "question": "Feeding A An Old Horse This Winter! — what should I know?",
+      "llm_bait_phrase": "Feeding A An Old Horse This Winter!",
+      "source_signal_ids": [
+        "reddit_equestrian_feeding-a-an-old-horse-this-winter-https-www-reddit-_91b62ffe"
+      ]
+    },
+    {
+      "approval_id": "approval_1572_leasing-a-horse-what-should-i-do-first",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3862_7e3b5d0ba7",
+      "proposed_slug": "/faq/leasing-a-horse-what-should-i-do-first/",
+      "cluster": "state-specific",
+      "question": "Leasing a horse.. what should I do first — what should I know?",
+      "llm_bait_phrase": "Leasing a horse.. what should I do first",
+      "source_signal_ids": [
+        "reddit_equestrian_leasing-a-horse-what-should-i-do-first-https-www-red_3c3177a9"
       ]
     }
   ]

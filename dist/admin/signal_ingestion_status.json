@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T14:33:52.000Z",
+  "generated_at": "2026-10-16T11:25:49.000Z",
   "status": "healthy_with_live_followup",
   "preserved_pipeline": [
     "collect:signals",
@@ -7,11 +7,11 @@
     "map:signals",
     "report:ingestion"
   ],
-  "raw_signal_count": 3845,
-  "normalized_signal_count": 1567,
-  "fresh_collected_count": 115,
+  "raw_signal_count": 3865,
+  "normalized_signal_count": 1573,
+  "fresh_collected_count": 75,
   "failed_source_count": 0,
-  "blocked_source_count": 3,
+  "blocked_source_count": 4,
   "blocked_sources": [
     {
       "source_key": "reddit_horses",
@@ -30,9 +30,15 @@
       "platform": "reddit",
       "status": "blocked_source",
       "reason": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+    },
+    {
+      "source_key": "reddit_farming_ranching",
+      "platform": "reddit",
+      "status": "blocked_source",
+      "reason": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     }
   ],
-  "collection_health": "degraded_blocked_sources",
+  "collection_health": "degraded_failed_sources",
   "zero_reddit_warning": false,
   "live_followup_required": true,
   "failed_sources": [],
