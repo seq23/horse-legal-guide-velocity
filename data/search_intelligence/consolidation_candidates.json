@@ -1,20 +1,20 @@
 {
   "schema_version": "1.0",
   "status": "LIST_ONLY_NO_REDIRECTS",
-  "gsc_window": "2026-09-15..2026-10-12",
-  "coverage_collected_at": "2026-10-15T14:32:30.786Z",
+  "gsc_window": "2026-09-16..2026-10-13",
+  "coverage_collected_at": "2026-10-16T14:33:16.843Z",
   "rule": "Sitemap leaf pages with 0 impressions in the 28-day export and fewer than 800 visible words in the built page. Nothing is redirected or removed by this file.",
   "thin_word_threshold": 800,
   "sitemap_url_count": 323,
-  "candidate_count": 20,
+  "candidate_count": 23,
   "candidates_by_hub": {
     "none": 1,
-    "/hubs/therapeutic-riding-and-hipaa/": 1,
+    "/hubs/therapeutic-riding-and-hipaa/": 2,
     "/hubs/intellectual-property-and-brand/": 3,
     "/hubs/demand-letters-and-disputes/": 5,
     "/hubs/liability-waivers-insurance/": 5,
     "/hubs/boarding-training-and-barn-operations/": 2,
-    "/hubs/horse-sale-and-purchase/": 1,
+    "/hubs/horse-sale-and-purchase/": 3,
     "/hubs/equine-business-formation/": 2
   },
   "candidates": [
@@ -65,6 +65,14 @@
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/demand-letters-and-disputes/",
       "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
+      "word_count": 745,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/therapeutic-riding-and-hipaa/",
+      "fold_basis": "page target cluster therapeutic-riding-and-hipaa"
     },
     {
       "route": "/boarding/what-liability-does-a-trainer-have/",
@@ -129,6 +137,22 @@
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/liability-waivers-insurance/",
       "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/faq/can-a-seller-refuse-to-take-a-horse-back/",
+      "word_count": 767,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+      "word_count": 769,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
     },
     {
       "route": "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
