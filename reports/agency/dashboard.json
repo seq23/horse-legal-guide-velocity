@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-10-16T11:25:49.000Z",
+  "generated_at": "2026-10-16T14:33:17.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -8,20 +8,20 @@
   "health": {
     "gsc": {
       "status": "ok",
-      "checked_at": "2026-10-15T14:32:32.459Z",
-      "age_hours": 20.9,
+      "checked_at": "2026-10-16T14:33:18.576Z",
+      "age_hours": 0,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
-      "checked_at": "2026-10-15T14:32:32.459Z",
-      "age_hours": 20.9,
+      "checked_at": "2026-10-16T14:33:18.576Z",
+      "age_hours": 0,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
-      "checked_at": "2026-10-15T14:32:32.459Z",
-      "age_hours": 20.9,
+      "checked_at": "2026-10-16T14:33:18.576Z",
+      "age_hours": 0,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -94,14 +94,14 @@
   },
   "performance": {
     "gsc": {
-      "clicks": 11,
-      "impressions": 696,
-      "ctr": 0.015804597701149427,
-      "position": 12.857758620689655,
+      "clicks": 12,
+      "impressions": 686,
+      "ctr": 0.01749271137026239,
+      "position": 13.174927113702624,
       "previous_clicks": 5,
-      "previous_impressions": 854,
-      "previous_ctr": 0.00585480093676815,
-      "previous_position": 19.73536299765808
+      "previous_impressions": 868,
+      "previous_ctr": 0.00576036866359447,
+      "previous_position": 18.641705069124423
     },
     "gsc_top_queries": [
       {
@@ -214,6 +214,15 @@
       },
       {
         "keys": [
+          "horse purchase contract"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "keys": [
           "horse sale contract"
         ],
         "clicks": 0,
@@ -309,9 +318,9 @@
           "https://horselegalguide.com/leases/can-you-end-a-horse-lease-early/"
         ],
         "clicks": 2,
-        "impressions": 17,
-        "ctr": 0.11764705882352941,
-        "position": 8
+        "impressions": 19,
+        "ctr": 0.10526315789473684,
+        "position": 7.473684210526316
       },
       {
         "keys": [
@@ -321,6 +330,15 @@
         "impressions": 12,
         "ctr": 0.08333333333333333,
         "position": 12.666666666666666
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/business/partnership-agreement-for-horse-business/"
+        ],
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 7.25
       },
       {
         "keys": [
@@ -345,9 +363,9 @@
           "https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/"
         ],
         "clicks": 1,
-        "impressions": 12,
-        "ctr": 0.08333333333333333,
-        "position": 7.25
+        "impressions": 11,
+        "ctr": 0.09090909090909091,
+        "position": 7.363636363636363
       },
       {
         "keys": [
@@ -372,9 +390,9 @@
           "https://horselegalguide.com/scenario/a-horse-died-while-boarded-or-in-training-what-should-be-documented/"
         ],
         "clicks": 1,
-        "impressions": 3,
-        "ctr": 0.3333333333333333,
-        "position": 7.333333333333333
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 7.75
       },
       {
         "keys": [
@@ -399,27 +417,27 @@
           "https://horselegalguide.com/"
         ],
         "clicks": 0,
-        "impressions": 51,
+        "impressions": 45,
         "ctr": 0,
-        "position": 11.235294117647058
+        "position": 13.044444444444444
       },
       {
         "keys": [
           "https://horselegalguide.com/articles/"
         ],
         "clicks": 0,
-        "impressions": 12,
+        "impressions": 10,
         "ctr": 0,
-        "position": 19.833333333333332
+        "position": 23.4
       },
       {
         "keys": [
           "https://horselegalguide.com/authority/"
         ],
         "clicks": 0,
-        "impressions": 8,
+        "impressions": 7,
         "ctr": 0,
-        "position": 16.25
+        "position": 17.571428571428573
       },
       {
         "keys": [
@@ -480,9 +498,9 @@
           "https://horselegalguide.com/boarding/who-pays-vet-bills-while-a-horse-is-boarded/"
         ],
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 5,
         "ctr": 0,
-        "position": 5.666666666666667
+        "position": 5.8
       },
       {
         "keys": [
@@ -558,30 +576,21 @@
       },
       {
         "keys": [
-          "https://horselegalguide.com/business/partnership-agreement-for-horse-business/"
-        ],
-        "clicks": 0,
-        "impressions": 3,
-        "ctr": 0,
-        "position": 8
-      },
-      {
-        "keys": [
           "https://horselegalguide.com/business/what-legal-documents-do-i-need-for-a-horse-business/"
         ],
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 10,
         "ctr": 0,
-        "position": 5.909090909090909
+        "position": 6.3
       },
       {
         "keys": [
           "https://horselegalguide.com/compare/"
         ],
         "clicks": 0,
-        "impressions": 22,
+        "impressions": 21,
         "ctr": 0,
-        "position": 5.181818181818182
+        "position": 6.619047619047619
       },
       {
         "keys": [
@@ -669,9 +678,9 @@
           "https://horselegalguide.com/compare/horse-co-ownership-agreement-vs-syndicate-structure/"
         ],
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 1,
         "ctr": 0,
-        "position": 35
+        "position": 41
       },
       {
         "keys": [
@@ -849,36 +858,36 @@
           "https://horselegalguide.com/coverage/"
         ],
         "clicks": 0,
-        "impressions": 24,
+        "impressions": 22,
         "ctr": 0,
-        "position": 4.625
+        "position": 4.681818181818182
       },
       {
         "keys": [
           "https://horselegalguide.com/disclaimer/"
         ],
         "clicks": 0,
-        "impressions": 28,
+        "impressions": 26,
         "ctr": 0,
-        "position": 14.928571428571429
+        "position": 15.307692307692308
       },
       {
         "keys": [
           "https://horselegalguide.com/faq/"
         ],
         "clicks": 0,
-        "impressions": 29,
+        "impressions": 26,
         "ctr": 0,
-        "position": 13.586206896551724
+        "position": 14.576923076923077
       },
       {
         "keys": [
           "https://horselegalguide.com/faq/can-a-buyer-return-a-horse-after-purchase/"
         ],
         "clicks": 0,
-        "impressions": 25,
+        "impressions": 24,
         "ctr": 0,
-        "position": 10.84
+        "position": 11.291666666666666
       },
       {
         "keys": [
@@ -891,30 +900,12 @@
       },
       {
         "keys": [
-          "https://horselegalguide.com/faq/can-a-seller-refuse-to-take-a-horse-back/"
-        ],
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 2
-      },
-      {
-        "keys": [
           "https://horselegalguide.com/faq/do-i-need-a-contract-to-buy-a-horse/"
         ],
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
         "position": 9
-      },
-      {
-        "keys": [
-          "https://horselegalguide.com/faq/do-i-need-a-contract-to-sell-a-horse/"
-        ],
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 5
       },
       {
         "keys": [
@@ -957,9 +948,9 @@
           "https://horselegalguide.com/faq/what-should-be-included-in-a-horse-bill-of-sale/"
         ],
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 3,
         "ctr": 0,
-        "position": 6.4
+        "position": 6
       },
       {
         "keys": [
@@ -1038,9 +1029,9 @@
           "https://horselegalguide.com/hubs/horse-sale-and-purchase/"
         ],
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 12,
         "ctr": 0,
-        "position": 70.9090909090909
+        "position": 70.66666666666667
       },
       {
         "keys": [
@@ -1067,16 +1058,16 @@
         "clicks": 0,
         "impressions": 4,
         "ctr": 0,
-        "position": 4.75
+        "position": 4
       },
       {
         "keys": [
           "https://horselegalguide.com/insights/"
         ],
         "clicks": 0,
-        "impressions": 37,
+        "impressions": 36,
         "ctr": 0,
-        "position": 28.972972972972972
+        "position": 29.694444444444443
       },
       {
         "keys": [
@@ -1128,9 +1119,9 @@
           "https://horselegalguide.com/leases/can-i-run-a-horse-business-under-my-lease/"
         ],
         "clicks": 0,
-        "impressions": 7,
+        "impressions": 6,
         "ctr": 0,
-        "position": 7
+        "position": 7.166666666666667
       },
       {
         "keys": [
@@ -1146,18 +1137,18 @@
           "https://horselegalguide.com/leases/what-is-a-horse-trial-agreement/"
         ],
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 2,
         "ctr": 0,
-        "position": 11.833333333333334
+        "position": 17.5
       },
       {
         "keys": [
           "https://horselegalguide.com/leases/what-liability-applies-in-a-horse-property-lease/"
         ],
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0,
-        "position": 4.5
+        "position": 6
       },
       {
         "keys": [
@@ -1182,9 +1173,9 @@
           "https://horselegalguide.com/leases/who-is-liable-during-a-horse-lease/"
         ],
         "clicks": 0,
-        "impressions": 9,
+        "impressions": 12,
         "ctr": 0,
-        "position": 5.666666666666667
+        "position": 6.583333333333333
       },
       {
         "keys": [
@@ -1200,9 +1191,27 @@
           "https://horselegalguide.com/leases/who-pays-vet-bills-in-a-horse-lease/"
         ],
         "clicks": 0,
-        "impressions": 55,
+        "impressions": 56,
         "ctr": 0,
-        "position": 8.036363636363635
+        "position": 8.035714285714285
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/liability/can-i-still-be-sued-if-i-have-a-waiver/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://horselegalguide.com/liability/do-i-need-a-warning-sign-at-my-barn/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
       }
     ],
     "gsc_sitemaps": [
@@ -1245,7 +1254,7 @@
         "url": "https://horselegalguide.com/leases/can-you-end-a-horse-lease-early/",
         "ok": true,
         "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=HS4fmnllT7w17tnkH2ErOA&utm_medium=link&utm_source=api",
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=WXt7Hqc-ikL9xhZ03TO2pQ&utm_medium=link&utm_source=api",
           "indexStatusResult": {
             "verdict": "PASS",
             "coverageState": "Submitted and indexed",
@@ -1286,7 +1295,7 @@
         "url": "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/",
         "ok": true,
         "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=dUp6WAUWbAXE5Gtz7lcBAA&utm_medium=link&utm_source=api",
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=LahOGerwRJqt2oMys9yVvw&utm_medium=link&utm_source=api",
           "indexStatusResult": {
             "verdict": "PASS",
             "coverageState": "Submitted and indexed",
@@ -1296,6 +1305,10 @@
             "pageFetchState": "SUCCESSFUL",
             "googleCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/",
             "userCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/",
+            "sitemap": [
+              "https://horselegalguide.com/sitemap-pages.xml",
+              "https://horselegalguide.com/sitemap.xml"
+            ],
             "referringUrls": [
               "https://horselegalguide.com/faq/"
             ],
@@ -1320,10 +1333,39 @@
         }
       },
       {
+        "url": "https://horselegalguide.com/business/partnership-agreement-for-horse-business/",
+        "ok": true,
+        "result": {
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=0kMHh7wwl6XlKuDy9q7oRA&utm_medium=link&utm_source=api",
+          "indexStatusResult": {
+            "verdict": "NEUTRAL",
+            "coverageState": "Crawled - currently not indexed",
+            "robotsTxtState": "ALLOWED",
+            "indexingState": "INDEXING_ALLOWED",
+            "lastCrawlTime": "2026-08-22T18:00:14Z",
+            "pageFetchState": "SUCCESSFUL",
+            "googleCanonical": "https://horselegalguide.com/business/partnership-agreement-for-horse-business/",
+            "userCanonical": "https://horselegalguide.com/business/partnership-agreement-for-horse-business/",
+            "sitemap": [
+              "https://horselegalguide.com/sitemap-pages.xml",
+              "https://horselegalguide.com/sitemap.xml"
+            ],
+            "referringUrls": [
+              "https://horselegalguide.com/faq/",
+              "https://horselegalguide.com/coverage/"
+            ],
+            "crawledAs": "MOBILE"
+          },
+          "mobileUsabilityResult": {
+            "verdict": "VERDICT_UNSPECIFIED"
+          }
+        }
+      },
+      {
         "url": "https://horselegalguide.com/compare/trial-period-vs-lease-to-own-horse-arrangement/",
         "ok": true,
         "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=df3qhyeNwy5Q9HJb2rMylQ&utm_medium=link&utm_source=api",
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=_dVtr-2l_5ILjUzJt5t9Xw&utm_medium=link&utm_source=api",
           "indexStatusResult": {
             "verdict": "PASS",
             "coverageState": "Submitted and indexed",
@@ -1333,10 +1375,6 @@
             "pageFetchState": "SUCCESSFUL",
             "googleCanonical": "https://horselegalguide.com/compare/trial-period-vs-lease-to-own-horse-arrangement/",
             "userCanonical": "https://horselegalguide.com/compare/trial-period-vs-lease-to-own-horse-arrangement/",
-            "sitemap": [
-              "https://horselegalguide.com/sitemap-pages.xml",
-              "https://horselegalguide.com/sitemap.xml"
-            ],
             "referringUrls": [
               "https://horselegalguide.com/compare/"
             ],
@@ -1364,7 +1402,7 @@
         "url": "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-becomes-unsound/",
         "ok": true,
         "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=omGn9vE3G66uK4eW7WZVQw&utm_medium=link&utm_source=api",
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=86T89SMjmlRMzsr1c13bYA&utm_medium=link&utm_source=api",
           "indexStatusResult": {
             "verdict": "PASS",
             "coverageState": "Submitted and indexed",
@@ -1405,7 +1443,7 @@
         "url": "https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
         "ok": true,
         "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=wfDDflONAo6HmfAsanhKXg&utm_medium=link&utm_source=api",
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=z1ItWJ3WeDussW9MIJ8_nQ&utm_medium=link&utm_source=api",
           "indexStatusResult": {
             "verdict": "PASS",
             "coverageState": "Submitted and indexed",
@@ -1415,6 +1453,10 @@
             "pageFetchState": "SUCCESSFUL",
             "googleCanonical": "https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
             "userCanonical": "https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/",
+            "sitemap": [
+              "https://horselegalguide.com/sitemap-pages.xml",
+              "https://horselegalguide.com/sitemap.xml"
+            ],
             "referringUrls": [
               "https://horselegalguide.com/liability/do-i-need-a-warning-sign-at-my-barn/",
               "https://horselegalguide.com/faq/"
@@ -1443,7 +1485,7 @@
         "url": "https://horselegalguide.com/reference/what-happens-if-a-leased-horse-becomes-unsound/",
         "ok": true,
         "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=upAx1DaAQAiklPZ8mtDjQw&utm_medium=link&utm_source=api",
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=HolnTd8lXfRPIKUYY7LppA&utm_medium=link&utm_source=api",
           "indexStatusResult": {
             "verdict": "PASS",
             "coverageState": "Submitted and indexed",
@@ -1480,7 +1522,7 @@
         "url": "https://horselegalguide.com/reference/what-should-someone-know-about-i-sold-a-horse-without-a-contract-what-now/",
         "ok": true,
         "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=WVeTD8XpmUy4bWLwL5YgKA&utm_medium=link&utm_source=api",
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=KwJMVbidVG1z2_-hzlHsIg&utm_medium=link&utm_source=api",
           "indexStatusResult": {
             "verdict": "PASS",
             "coverageState": "Submitted and indexed",
@@ -1517,7 +1559,7 @@
         "url": "https://horselegalguide.com/scenario/a-horse-died-while-boarded-or-in-training-what-should-be-documented/",
         "ok": true,
         "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=dJun3PMrZst9HBI-_3jEfA&utm_medium=link&utm_source=api",
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=r1J8Y_6U4lq3xugiPZWCxg&utm_medium=link&utm_source=api",
           "indexStatusResult": {
             "verdict": "PASS",
             "coverageState": "Submitted and indexed",
@@ -1558,7 +1600,7 @@
         "url": "https://horselegalguide.com/scenario/a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/",
         "ok": true,
         "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=QKFPfCUOB1qRQZA0tFhyCg&utm_medium=link&utm_source=api",
+          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=yioJwPpvkzhsWx4rkgREfQ&utm_medium=link&utm_source=api",
           "indexStatusResult": {
             "verdict": "PASS",
             "coverageState": "Submitted and indexed",
@@ -1575,47 +1617,6 @@
             "referringUrls": [
               "https://horselegalguide.com/reference/what-should-someone-know-about-a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/",
               "https://horselegalguide.com/scenario/"
-            ],
-            "crawledAs": "MOBILE"
-          },
-          "mobileUsabilityResult": {
-            "verdict": "VERDICT_UNSPECIFIED"
-          },
-          "richResultsResult": {
-            "verdict": "PASS",
-            "detectedItems": [
-              {
-                "richResultType": "Breadcrumbs",
-                "items": [
-                  {
-                    "name": "Unnamed item"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      },
-      {
-        "url": "https://horselegalguide.com/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
-        "ok": true,
-        "result": {
-          "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:horselegalguide.com&id=kLBWvh3j5f4awnmbEtrE2g&utm_medium=link&utm_source=api",
-          "indexStatusResult": {
-            "verdict": "PASS",
-            "coverageState": "Submitted and indexed",
-            "robotsTxtState": "ALLOWED",
-            "indexingState": "INDEXING_ALLOWED",
-            "lastCrawlTime": "2026-09-04T08:58:40Z",
-            "pageFetchState": "SUCCESSFUL",
-            "googleCanonical": "https://horselegalguide.com/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
-            "userCanonical": "https://horselegalguide.com/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
-            "sitemap": [
-              "https://horselegalguide.com/sitemap-pages.xml",
-              "https://horselegalguide.com/sitemap.xml"
-            ],
-            "referringUrls": [
-              "https://horselegalguide.com/faq/"
             ],
             "crawledAs": "MOBILE"
           },
@@ -2399,8 +2400,8 @@
       "grounded_search": "DISABLED_BY_OWNER_POLICY"
     },
     "summary": {
-      "opportunities": 22,
-      "new_candidates": 16,
+      "opportunities": 23,
+      "new_candidates": 17,
       "improve_existing": 0,
       "differentiate_existing": 0,
       "cannibalization_review": 6,
@@ -2408,7 +2409,7 @@
     },
     "opportunities": [
       {
-        "opportunity_id": "provider-opportunity-0019",
+        "opportunity_id": "provider-opportunity-0020",
         "query": "start an equestrian business",
         "type": "cannibalization_review",
         "target_page": "/business/how-to-start-a-horse-retail-business/",
@@ -2544,7 +2545,7 @@
         "live_page_change_authorized": false
       },
       {
-        "opportunity_id": "provider-opportunity-0016",
+        "opportunity_id": "provider-opportunity-0017",
         "query": "horse sales agreement",
         "type": "new_candidate",
         "target_page": "/hubs/horse-sale-and-purchase/",
@@ -2750,7 +2751,7 @@
         "live_page_change_authorized": false
       },
       {
-        "opportunity_id": "provider-opportunity-0021",
+        "opportunity_id": "provider-opportunity-0022",
         "query": "what are the equine activity liability acts in my state?",
         "type": "new_candidate",
         "target_page": "/liability/what-is-the-equine-activity-liability-act/",
@@ -2783,7 +2784,7 @@
         "live_page_change_authorized": false
       },
       {
-        "opportunity_id": "provider-opportunity-0022",
+        "opportunity_id": "provider-opportunity-0023",
         "query": "what should i know about equine law when renting horses",
         "type": "new_candidate",
         "target_page": "/insights/",
@@ -2816,7 +2817,7 @@
         "live_page_change_authorized": false
       },
       {
-        "opportunity_id": "provider-opportunity-0020",
+        "opportunity_id": "provider-opportunity-0021",
         "query": "what are the best equine law resources for horse owners?",
         "type": "new_candidate",
         "target_page": "/hubs/",
@@ -2849,7 +2850,7 @@
         "live_page_change_authorized": false
       },
       {
-        "opportunity_id": "provider-opportunity-0013",
+        "opportunity_id": "provider-opportunity-0014",
         "query": "horse sale contract",
         "type": "new_candidate",
         "target_page": "/hubs/horse-sale-and-purchase/",
@@ -2882,7 +2883,7 @@
         "live_page_change_authorized": false
       },
       {
-        "opportunity_id": "provider-opportunity-0014",
+        "opportunity_id": "provider-opportunity-0015",
         "query": "horse sale contract lawyer",
         "type": "new_candidate",
         "target_page": "/hubs/horse-sale-and-purchase/",
@@ -2915,7 +2916,7 @@
         "live_page_change_authorized": false
       },
       {
-        "opportunity_id": "provider-opportunity-0018",
+        "opportunity_id": "provider-opportunity-0019",
         "query": "horse syndicate ownership agreement",
         "type": "new_candidate",
         "target_page": "/compare/horse-co-ownership-agreement-vs-syndicate-structure/",
@@ -2948,7 +2949,40 @@
         "live_page_change_authorized": false
       },
       {
-        "opportunity_id": "provider-opportunity-0015",
+        "opportunity_id": "provider-opportunity-0013",
+        "query": "horse purchase contract",
+        "type": "new_candidate",
+        "target_page": "/hubs/horse-sale-and-purchase/",
+        "provider_pages": [
+          "/hubs/horse-sale-and-purchase/"
+        ],
+        "providers": [
+          "gsc"
+        ],
+        "metrics": {
+          "clicks": 0,
+          "impressions": 2,
+          "average_position": 68
+        },
+        "active_query_evidence": null,
+        "grounded_competitors": [],
+        "coverage_match_score": 0.286,
+        "confidence": 0.523,
+        "reasons": [
+          "ranking_opportunity"
+        ],
+        "status": "pending_owner_review",
+        "automatic_actions_completed": [
+          "measurement",
+          "classification",
+          "competitor_observation"
+        ],
+        "automatic_approval": false,
+        "automatic_publication": false,
+        "live_page_change_authorized": false
+      },
+      {
+        "opportunity_id": "provider-opportunity-0016",
         "query": "horse sale disputes",
         "type": "new_candidate",
         "target_page": "/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/",
@@ -2981,7 +3015,7 @@
         "live_page_change_authorized": false
       },
       {
-        "opportunity_id": "provider-opportunity-0017",
+        "opportunity_id": "provider-opportunity-0018",
         "query": "horse sales contract",
         "type": "new_candidate",
         "target_page": "/hubs/horse-sale-and-purchase/",
@@ -5829,7 +5863,7 @@
   },
   "provider_health": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-10-15T14:33:44.942Z",
+    "generated_at": "2026-10-16T14:34:29.720Z",
     "providers": {
       "openrouter_web_search": {
         "state": "DISABLED_BY_OWNER_POLICY",
@@ -5896,7 +5930,7 @@
   },
   "external_action_truth": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-10-15T14:33:45.091Z",
+    "generated_at": "2026-10-16T14:34:29.888Z",
     "actions": [
       {
         "id": "gemini_grounded_query",
