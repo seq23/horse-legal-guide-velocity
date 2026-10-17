@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-10-16T14:34:37.000Z",
+  "generated_at": "2026-10-17T14:27:21.000Z",
   "provider_status": {
     "gsc": "ok",
     "bing": "not_connected",
@@ -53,6 +53,39 @@
       "live_page_change_authorized": false
     },
     {
+      "opportunity_id": "provider-opportunity-0012",
+      "query": "horse purchase agreement",
+      "type": "new_candidate",
+      "target_page": "/hubs/horse-sale-and-purchase/",
+      "provider_pages": [
+        "/hubs/horse-sale-and-purchase/"
+      ],
+      "providers": [
+        "gsc"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 14,
+        "average_position": 68.43
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.333,
+      "confidence": 0.547,
+      "reasons": [
+        "ranking_opportunity"
+      ],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
       "opportunity_id": "provider-opportunity-0001",
       "query": "buy an equestrian franchise",
       "type": "cannibalization_review",
@@ -75,39 +108,6 @@
       "confidence": 0.526,
       "reasons": [
         "provider_query_maps_to_multiple_pages",
-        "ranking_opportunity"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0012",
-      "query": "horse purchase agreement",
-      "type": "new_candidate",
-      "target_page": "/hubs/horse-sale-and-purchase/",
-      "provider_pages": [
-        "/hubs/horse-sale-and-purchase/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 12,
-        "average_position": 68.83
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.333,
-      "confidence": 0.545,
-      "reasons": [
         "ranking_opportunity"
       ],
       "status": "pending_owner_review",
