@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T14:28:35.000Z",
+  "generated_at": "2026-10-18T14:29:16.000Z",
   "status": "healthy_with_live_followup",
   "preserved_pipeline": [
     "collect:signals",
@@ -7,9 +7,9 @@
     "map:signals",
     "report:ingestion"
   ],
-  "raw_signal_count": 3865,
-  "normalized_signal_count": 1573,
-  "fresh_collected_count": 75,
+  "raw_signal_count": 3906,
+  "normalized_signal_count": 1600,
+  "fresh_collected_count": 95,
   "failed_source_count": 0,
   "blocked_source_count": 4,
   "blocked_sources": [
@@ -38,7 +38,7 @@
       "reason": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     }
   ],
-  "collection_health": "degraded_failed_sources",
+  "collection_health": "degraded_blocked_sources",
   "zero_reddit_warning": false,
   "live_followup_required": true,
   "failed_sources": [],
