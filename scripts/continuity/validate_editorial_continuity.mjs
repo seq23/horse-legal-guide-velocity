@@ -16,5 +16,23 @@ for(const x of backlog.filter(x=>x.continuity_generated===true)){
   if(x.status!=='pending'||x.review_status!=='pending') errors.push(`continuity-not-pending:${x.entry_id}`);
   if(x.date<='2026-12-31') errors.push(`continuity-date-not-future:${x.entry_id}`);
 }
+// Target-rotation contract: every target picked this run must be least-used for
+// its content type (usage <= min usage + 1), so the runway never re-drafts the same
+// few targets until the uniqueness self-heal runs out of lenses.
+// The only report allowed without new_entry_targets is the one committed by the
+// last pre-fix sidecar run (2026-10-12); every report written from 2026-10-19 on
+// must carry the pick list. The next weekly sidecar run overwrites it.
+const PRE_ROTATION_REPORT_DATE='2026-10-12';
+const picks=Array.isArray(report.new_entry_targets)?report.new_entry_targets:null;
+if(!picks&&report.run_date<=PRE_ROTATION_REPORT_DATE) console.log(`CONTINUITY ROTATION CHECK NOT APPLICABLE: report run_date ${report.run_date} predates the target-rotation fix; next sidecar run writes new_entry_targets.`);
+else if(!picks) errors.push('new-entry-targets-missing');
+else{
+  if(picks.length!==Number(report.new_pending_entries||0)) errors.push(`new-entry-targets-count:${picks.length}!=${report.new_pending_entries}`);
+  const targets=JSON.parse(fs.readFileSync('data/queries/page_targets.json','utf8'));
+  if(!targets.length) errors.push('page-targets-empty');
+  const keys=[...new Set(targets.map(t=>String(t.page_id||t.primary_query||t.title||t.cluster||'')))];
+  const usage={};for(const x of backlog.filter(x=>x.continuity_generated===true)){const k=String(x.source_page_id||x.source_query_title||'');(usage[x.content_type]??={})[k]=(usage[x.content_type][k]||0)+1;}
+  for(const p of picks){const u=usage[p.content_type]||{};const min=Math.min(...keys.map(k=>u[k]||0));if((u[p.target]||0)>min+1) errors.push(`continuity-target-overused:${p.entry_id}:${u[p.target]}>${min+1}`);}
+}
 console.log(JSON.stringify({ok:!errors.length,...report,continuity_backlog_entries:backlog.filter(x=>x.continuity_generated===true).length,errors},null,2));
 if(errors.length) process.exit(1);
