@@ -19,8 +19,13 @@ for(const x of backlog.filter(x=>x.continuity_generated===true)){
 // Target-rotation contract: every target picked this run must be least-used for
 // its content type (usage <= min usage + 1), so the runway never re-drafts the same
 // few targets until the uniqueness self-heal runs out of lenses.
+// The only report allowed without new_entry_targets is the one committed by the
+// last pre-fix sidecar run (2026-10-12); every report written from 2026-10-19 on
+// must carry the pick list. The next weekly sidecar run overwrites it.
+const PRE_ROTATION_REPORT_DATE='2026-10-12';
 const picks=Array.isArray(report.new_entry_targets)?report.new_entry_targets:null;
-if(!picks) errors.push('new-entry-targets-missing');
+if(!picks&&report.run_date<=PRE_ROTATION_REPORT_DATE) console.log(`CONTINUITY ROTATION CHECK NOT APPLICABLE: report run_date ${report.run_date} predates the target-rotation fix; next sidecar run writes new_entry_targets.`);
+else if(!picks) errors.push('new-entry-targets-missing');
 else{
   if(picks.length!==Number(report.new_pending_entries||0)) errors.push(`new-entry-targets-count:${picks.length}!=${report.new_pending_entries}`);
   const targets=JSON.parse(fs.readFileSync('data/queries/page_targets.json','utf8'));
