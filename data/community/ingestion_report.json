@@ -1,56 +1,56 @@
 {
-  "generated_at": "2026-10-19T13:48:18.303Z",
-  "total_signals": 3906,
+  "generated_at": "2026-10-20T18:05:56.454Z",
+  "total_signals": 3945,
   "signals_by_source": {
-    "reddit_equestrian": 1938,
+    "reddit_equestrian": 1958,
     "reddit_horses": 687,
     "forum_the_horse_forum": 31,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 65,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 208,
+    "youtube_search_comments": 209,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
-    "reddit_legaladvice": 223,
+    "reddit_legaladvice": 241,
     "reddit_smallbusiness": 239,
     "reddit_farming_ranching": 123,
     "forum_horse_and_hound": 87
   },
   "signals_by_platform": {
-    "reddit": 3210,
+    "reddit": 3248,
     "equestrian_forums": 148,
     "google_paa": 65,
     "serp_competitors": 217,
-    "youtube": 208,
+    "youtube": 209,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1600,
-  "duplicates_collapsed": 2306,
+  "normalized_count": 1616,
+  "duplicates_collapsed": 2329,
   "pages_created": 0,
   "pages_strengthened": 261,
   "rejected_signals": 0,
-  "pending_owner_review": 1333,
+  "pending_owner_review": 1349,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 834
+      "count": 841
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 258
+      "count": 263
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 199
+      "count": 200
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 180
+      "count": 181
     },
     {
       "name": "liability-waivers-insurance",
-      "count": 54
+      "count": 56
     },
     {
       "name": "equine-business-formation",
@@ -76,19 +76,19 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1938
+      "count": 1958
     },
     {
       "name": "reddit_horses",
       "count": 687
     },
     {
-      "name": "reddit_smallbusiness",
-      "count": 239
+      "name": "reddit_legaladvice",
+      "count": 241
     },
     {
-      "name": "reddit_legaladvice",
-      "count": 223
+      "name": "reddit_smallbusiness",
+      "count": 239
     },
     {
       "name": "serp_competitor_research",
@@ -96,7 +96,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 208
+      "count": 209
     },
     {
       "name": "reddit_farming_ranching",
@@ -144,9 +144,8 @@
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -177,14 +176,15 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_with_data",
-      "count": 12
+      "status": "success_empty",
+      "count": 0
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "success_with_data",
-      "count": 16
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 25000ms"
     },
     {
       "source_key": "serp_competitor_research",
@@ -24870,6 +24870,214 @@
       "llm_bait_phrase": "My Father Secretly Sold My Horse Ranch to Pay My Brother’s Debts—A Buyer Brought a Second Contract",
       "source_signal_ids": [
         "youtube_search_comments_my-father-secretly-sold-my-horse-ranch-to-pay-my-bro_94b827be"
+      ]
+    },
+    {
+      "approval_id": "approval_1600_burned-out-on-barn-management-work-non-horse-jobs-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3906_fd457c6f4b",
+      "proposed_slug": "/faq/burned-out-on-barn-management-work-non-horse-jobs-that-pay-better/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Burned out on barn management work. Non horse jobs that pay better — what should I know?",
+      "llm_bait_phrase": "Burned out on barn management work. Non horse jobs that pay better",
+      "source_signal_ids": [
+        "reddit_equestrian_burned-out-on-barn-management-work-non-horse-jobs-th_47692443"
+      ]
+    },
+    {
+      "approval_id": "approval_1601_groups-that-help-with-horse-transport",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3908_a9f8c1c44a",
+      "proposed_slug": "/faq/groups-that-help-with-horse-transport/",
+      "cluster": "state-specific",
+      "question": "Groups that help with horse transport — what should I know?",
+      "llm_bait_phrase": "Groups that help with horse transport",
+      "source_signal_ids": [
+        "reddit_equestrian_groups-that-help-with-horse-transport-https-www-redd_24d5d50f"
+      ]
+    },
+    {
+      "approval_id": "approval_1602_what-s-everyone-s-horse-s-favorite-treats",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3912_bbff599c31",
+      "proposed_slug": "/faq/what-s-everyone-s-horse-s-favorite-treats/",
+      "cluster": "state-specific",
+      "question": "what’s everyone’s horse’s favorite treats?",
+      "llm_bait_phrase": "what’s everyone’s horse’s favorite treats",
+      "source_signal_ids": [
+        "reddit_equestrian_what-s-everyone-s-horse-s-favorite-treats-https-www-_42cd513e"
+      ]
+    },
+    {
+      "approval_id": "approval_1603_not-sure-which-flair-to-use-opinions-on-my-3-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3913_f8eb9c4718",
+      "proposed_slug": "/faq/not-sure-which-flair-to-use-opinions-on-my-3-horses-pedigrees-starting-with-their-parents-/",
+      "cluster": "state-specific",
+      "question": "Not sure which flair to use, opinions on my 3 horses pedigrees? Starting with their parents. Maybe tell me who their ancestors are/participated in? Im not super experienced in reading these lol. TIA — what should I know?",
+      "llm_bait_phrase": "Not sure which flair to use, opinions on my 3 horses pedigrees? Starting with their parents. Maybe tell me who their ancestors are/participated in? Im not super experienced in reading these lol. TIA",
+      "source_signal_ids": [
+        "reddit_equestrian_not-sure-which-flair-to-use-opinions-on-my-3-horses-_71cdbf23"
+      ]
+    },
+    {
+      "approval_id": "approval_1604_mare-attitude-is-this-a-new-thing",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3917_2ab6ee3256",
+      "proposed_slug": "/faq/mare-attitude-is-this-a-new-thing/",
+      "cluster": "state-specific",
+      "question": "Mare attitude... Is this a new thing — what should I know?",
+      "llm_bait_phrase": "Mare attitude... Is this a new thing",
+      "source_signal_ids": [
+        "reddit_equestrian_mare-attitude-is-this-a-new-thing-https-www-reddit-c_b5e6b8b8"
+      ]
+    },
+    {
+      "approval_id": "approval_1605_tips-for-moving-a-horse-to-a-new-barn",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3920_09a17d87a9",
+      "proposed_slug": "/faq/tips-for-moving-a-horse-to-a-new-barn/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "tips for moving a horse to a new barn — what should I know?",
+      "llm_bait_phrase": "tips for moving a horse to a new barn",
+      "source_signal_ids": [
+        "reddit_equestrian_tips-for-moving-a-horse-to-a-new-barn-https-www-redd_5e713399"
+      ]
+    },
+    {
+      "approval_id": "approval_1606_would-you-add-to-a-barn-tour-comparison-card",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3921_4f84537a5f",
+      "proposed_slug": "/faq/would-you-add-to-a-barn-tour-comparison-card/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "What would you add to a barn-tour comparison card?",
+      "llm_bait_phrase": "would you add to a barn-tour comparison card",
+      "source_signal_ids": [
+        "reddit_equestrian_what-would-you-add-to-a-barn-tour-comparison-card-ht_4cb15f65"
+      ]
+    },
+    {
+      "approval_id": "approval_1607_struggling-deciding-whether-to-give-up-on-horses-o",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3924_431c17bfeb",
+      "proposed_slug": "/faq/struggling-deciding-whether-to-give-up-on-horses-or-not/",
+      "cluster": "state-specific",
+      "question": "Struggling... deciding whether to give up on horses or not. — what should I know?",
+      "llm_bait_phrase": "Struggling... deciding whether to give up on horses or not.",
+      "source_signal_ids": [
+        "reddit_equestrian_struggling-deciding-whether-to-give-up-on-horses-or-_44cb3f8a"
+      ]
+    },
+    {
+      "approval_id": "approval_1608_il-condo-security-guard-was-caught-on-camera-hidin",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3926_60024ccf60",
+      "proposed_slug": "/faq/il-condo-security-guard-was-caught-on-camera-hiding-my-packages-and-stealing-items-hoa-kep/",
+      "cluster": "horse-lease-and-trial",
+      "question": "[IL] Condo security guard was caught on camera hiding my packages and stealing items. HOA kept him and refuses to release security logs — what should I know?",
+      "llm_bait_phrase": "[IL] Condo security guard was caught on camera hiding my packages and stealing items. HOA kept him and refuses to release security logs",
+      "source_signal_ids": [
+        "reddit_legaladvice_il-condo-security-guard-was-caught-on-camera-hiding-_bb21e26d"
+      ]
+    },
+    {
+      "approval_id": "approval_1609_wa-boarding-facility-added-4-200-in-special-handli",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3930_5dda408357",
+      "proposed_slug": "/faq/wa-boarding-facility-added-4-200-in-special-handling-fees-after-a-dog-bite-incident-origin/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "WA — Boarding facility added $4,200 in special-handling fees after a dog-bite incident. Original agreement was $95/night/dog. What are my rights — what should I know?",
+      "llm_bait_phrase": "WA — Boarding facility added $4,200 in special-handling fees after a dog-bite incident. Original agreement was $95/night/dog. What are my rights",
+      "source_signal_ids": [
+        "reddit_legaladvice_wa-boarding-facility-added-4-200-in-special-handling_b3950881"
+      ]
+    },
+    {
+      "approval_id": "approval_1610_hoa-board-refusing-to-accept-resignation",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3931_088ee73ad8",
+      "proposed_slug": "/faq/hoa-board-refusing-to-accept-resignation/",
+      "cluster": "state-specific",
+      "question": "HOA board refusing to \"accept\" resignation — what should I know?",
+      "llm_bait_phrase": "HOA board refusing to \"accept\" resignation",
+      "source_signal_ids": [
+        "reddit_legaladvice_hoa-board-refusing-to-accept-resignation-https-www-r_00e883f5"
+      ]
+    },
+    {
+      "approval_id": "approval_1611_what-s-my-risk-as-a-board-member-on-a-501-c-3",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3936_03891c32a5",
+      "proposed_slug": "/faq/what-s-my-risk-as-a-board-member-on-a-501-c-3/",
+      "cluster": "state-specific",
+      "question": "What's my risk as a board member on a 501(c)(3)?",
+      "llm_bait_phrase": "What's my risk as a board member on a 501(c)(3)",
+      "source_signal_ids": [
+        "reddit_legaladvice_what-s-my-risk-as-a-board-member-on-a-501-c-3-https-_59d9bf92"
+      ]
+    },
+    {
+      "approval_id": "approval_1612_a-couple-questions-from-a-dog-groomer-regarding-wo",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3939_dc18990046",
+      "proposed_slug": "/faq/a-couple-questions-from-a-dog-groomer-regarding-workers-comp-and-client-injury-liability/",
+      "cluster": "liability-waivers-insurance",
+      "question": "A couple questions from a dog groomer regarding workers comp and client injury liability — what should I know?",
+      "llm_bait_phrase": "A couple questions from a dog groomer regarding workers comp and client injury liability",
+      "source_signal_ids": [
+        "reddit_legaladvice_a-couple-questions-from-a-dog-groomer-regarding-work_934b7709"
+      ]
+    },
+    {
+      "approval_id": "approval_1613_co-ut-were-specific-laws-regulations-were-violated",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3940_a04620193a",
+      "proposed_slug": "/faq/co-ut-were-specific-laws-regulations-were-violated-here-seeking-passenger-liability-and-re/",
+      "cluster": "liability-waivers-insurance",
+      "question": "CO/UT | Were specific laws/regulations were violated here? Seeking passenger liability and reporting advice for school minibus trip. — what should I know?",
+      "llm_bait_phrase": "CO/UT | Were specific laws/regulations were violated here? Seeking passenger liability and reporting advice for school minibus trip.",
+      "source_signal_ids": [
+        "reddit_legaladvice_co-ut-were-specific-laws-regulations-were-violated-h_bba292da"
+      ]
+    },
+    {
+      "approval_id": "approval_1614_i-need-to-inform-the-owners-of-the-property-if-i-a",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3941_dd3a1822c5",
+      "proposed_slug": "/faq/i-need-to-inform-the-owners-of-the-property-if-i-am-going-to-take-my-horse-to-a-different-/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Do I need to inform the owners of the property if I am going to take my horse to a different barn?",
+      "llm_bait_phrase": "I need to inform the owners of the property if I am going to take my horse to a different barn",
+      "source_signal_ids": [
+        "reddit_legaladvice_do-i-need-to-inform-the-owners-of-the-property-if-i-_53454c17"
+      ]
+    },
+    {
+      "approval_id": "approval_1615_bills-of-sale-horse-buying-and-selling",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3944_03381e9afb",
+      "proposed_slug": "/faq/bills-of-sale-horse-buying-and-selling/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Bills of Sale - Horse Buying and Selling — what should I know?",
+      "llm_bait_phrase": "Bills of Sale - Horse Buying and Selling",
+      "source_signal_ids": [
+        "youtube_search_comments_bills-of-sale-horse-buying-and-selling-https-www-you_08cccd3c"
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T13:48:17.430Z",
+  "generated_at": "2026-10-20T18:05:55.566Z",
   "adapter_status": [
     {
       "source_key": "reddit_equestrian",
@@ -17,9 +17,8 @@
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -50,14 +49,15 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_with_data",
-      "count": 12
+      "status": "success_empty",
+      "count": 0
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "success_with_data",
-      "count": 16
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 25000ms"
     },
     {
       "source_key": "serp_competitor_research",
@@ -85,23 +85,17 @@
       "count": 0
     }
   ],
-  "collected_count": 95,
-  "reddit_collected_count": 20,
+  "collected_count": 87,
+  "reddit_collected_count": 40,
   "zero_reddit_warning": false,
-  "collection_health": "degraded_blocked_sources",
-  "blocked_source_count": 4,
+  "collection_health": "degraded_failed_sources",
+  "blocked_source_count": 3,
   "blocked_sources": [
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
       "status": "blocked_source",
       "reason": "Reddit refused 8 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
-    },
-    {
-      "source_key": "reddit_legaladvice",
-      "platform": "reddit",
-      "status": "blocked_source",
-      "reason": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -116,5 +110,5 @@
       "reason": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     }
   ],
-  "raw_store_count": 3906
+  "raw_store_count": 3945
 }
