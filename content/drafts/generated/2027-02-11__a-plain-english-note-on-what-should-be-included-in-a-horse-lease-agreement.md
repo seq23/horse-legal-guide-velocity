@@ -20,7 +20,7 @@ uniqueness_strategy: document-architecture
 
 The practical question behind **What Should Be Included in a Horse Lease Agreement** is not answered safely by repeating a general horse-contract overview. This version focuses on which documents work together, which terms are absent, and which informal messages may matter. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-05-15/the-quiet-risk-inside-what-should-be-included-in-a-horse-lease-agreement/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-05-20/why-can-you-end-a-horse-lease-early-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Document architecture and missing terms
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**included · horse · lease · agreement · plain · english · note · trial**
+**included · horse · lease · agreement · document · architecture · missing · terms**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | horse | Identify the schedule facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | lease | Identify the attachment facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | agreement | Identify the definition facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| plain | Identify the integration facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| document | Identify the integration facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
