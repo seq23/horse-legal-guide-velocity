@@ -20,7 +20,7 @@ uniqueness_strategy: insurance-liability
 
 The practical question behind **Who Is Liable During a Horse Lease** is not answered safely by repeating a general horse-contract overview. This version focuses on how injury, coverage, waiver language, and responsibility allocation affect risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-11-07/where-what-should-be-included-in-a-barn-lease-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-08-24/why-what-if-i-bought-a-horse-without-a-contract-creates-confusion/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Insurance, injury, and liability allocation
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**liable · horse · lease · remedies · exit · paths · damage · control**
+**liable · horse · lease · insurance · injury · liability · allocation · trial**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -43,8 +43,8 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | liable | Identify the insurance facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | horse | Identify the waiver facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | lease | Identify the injury facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| remedies | Identify the indemnity facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| exit | Identify the coverage facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| insurance | Identify the indemnity facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| injury | Identify the coverage facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

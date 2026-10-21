@@ -20,7 +20,7 @@ uniqueness_strategy: state-venue
 
 The practical question behind **Can a Buyer Return a Horse After Purchase** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-12-15/a-plain-english-note-on-what-should-be-included-in-a-horse-lease-agreement/, while remaining educational and approval-gated.
 
 ## Distinctive focus: State-law, venue, and local-rule lens
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**buyer · return · horse · purchase · remedies · exit · paths · damage**
+**buyer · return · horse · purchase · state · law · venue · local**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | return | Identify the venue facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | horse | Identify the choice of law facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | purchase | Identify the statute facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| remedies | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| state | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
