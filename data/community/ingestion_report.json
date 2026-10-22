@@ -1,40 +1,40 @@
 {
-  "generated_at": "2026-10-21T18:13:55.394Z",
-  "total_signals": 3977,
+  "generated_at": "2026-10-22T18:08:54.429Z",
+  "total_signals": 4003,
   "signals_by_source": {
-    "reddit_equestrian": 1978,
+    "reddit_equestrian": 1998,
     "reddit_horses": 687,
     "forum_the_horse_forum": 31,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 76,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 209,
+    "youtube_search_comments": 214,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 242,
     "reddit_smallbusiness": 239,
     "reddit_farming_ranching": 123,
-    "forum_horse_and_hound": 87
+    "forum_horse_and_hound": 88
   },
   "signals_by_platform": {
-    "reddit": 3269,
-    "equestrian_forums": 148,
+    "reddit": 3289,
+    "equestrian_forums": 149,
     "google_paa": 76,
     "serp_competitors": 217,
-    "youtube": 209,
+    "youtube": 214,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1635,
-  "duplicates_collapsed": 2342,
+  "normalized_count": 1649,
+  "duplicates_collapsed": 2354,
   "pages_created": 0,
   "pages_strengthened": 265,
   "rejected_signals": 0,
-  "pending_owner_review": 1364,
+  "pending_owner_review": 1378,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 846
+      "count": 855
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -42,11 +42,11 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 206
+      "count": 208
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 186
+      "count": 188
     },
     {
       "name": "liability-waivers-insurance",
@@ -54,7 +54,7 @@
     },
     {
       "name": "equine-business-formation",
-      "count": 33
+      "count": 34
     },
     {
       "name": "demand-letters-and-disputes",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 1978
+      "count": 1998
     },
     {
       "name": "reddit_horses",
@@ -96,7 +96,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 209
+      "count": 214
     },
     {
       "name": "reddit_farming_ranching",
@@ -104,7 +104,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 87
+      "count": 88
     },
     {
       "name": "google_paa_manual_or_provider",
@@ -144,8 +144,9 @@
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -157,15 +158,14 @@
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 17
     },
     {
       "source_key": "forum_the_horse_forum",
       "platform": "equestrian_forums",
-      "status": "success_with_data",
-      "count": 1
+      "status": "success_empty",
+      "count": 0
     },
     {
       "source_key": "forum_chronicle_of_the_horse",
@@ -176,14 +176,15 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_empty",
-      "count": 0
+      "status": "success_with_data",
+      "count": 12
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "success_with_data",
-      "count": 16
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 25000ms"
     },
     {
       "source_key": "serp_competitor_research",
@@ -25379,6 +25380,188 @@
       "llm_bait_phrase": "a horse owner take the horse back during a lease",
       "source_signal_ids": [
         "google_paa_manual_or_provider_can-a-horse-owner-take-the-horse-back-during-a-lease_2fcee47d"
+      ]
+    },
+    {
+      "approval_id": "approval_1635_need-boot-recommendations-please",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3979_ff06ca9b5d",
+      "proposed_slug": "/faq/need-boot-recommendations-please/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Need boot recommendations please — what should I know?",
+      "llm_bait_phrase": "Need boot recommendations please",
+      "source_signal_ids": [
+        "reddit_equestrian_need-boot-recommendations-please-https-www-reddit-co_065129a9"
+      ]
+    },
+    {
+      "approval_id": "approval_1636_horse-loading-help",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3982_44ab416265",
+      "proposed_slug": "/faq/horse-loading-help/",
+      "cluster": "state-specific",
+      "question": "Horse loading help — what should I know?",
+      "llm_bait_phrase": "Horse loading help",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-loading-help-https-www-reddit-com-r-equestrian_bd4e4905"
+      ]
+    },
+    {
+      "approval_id": "approval_1637_oh-pony",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3983_770313ce16",
+      "proposed_slug": "/faq/oh-pony/",
+      "cluster": "state-specific",
+      "question": "Oh pony 🤦‍♀️ — what should I know?",
+      "llm_bait_phrase": "Oh pony 🤦‍♀️",
+      "source_signal_ids": [
+        "reddit_equestrian_oh-pony-https-www-reddit-com-r-equestrian-comments-1_b386acad"
+      ]
+    },
+    {
+      "approval_id": "approval_1638_to-tell-people-to-stay-away-from-your-horse-nicely",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3984_545155e04d",
+      "proposed_slug": "/faq/to-tell-people-to-stay-away-from-your-horse-nicely/",
+      "cluster": "state-specific",
+      "question": "How to tell people to stay away from your horse nicely?",
+      "llm_bait_phrase": "to tell people to stay away from your horse nicely",
+      "source_signal_ids": [
+        "reddit_equestrian_how-to-tell-people-to-stay-away-from-your-horse-nice_330f8cc1"
+      ]
+    },
+    {
+      "approval_id": "approval_1639_mare-suddenly-urinates-in-cross-ties",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3986_7438ea1f08",
+      "proposed_slug": "/faq/mare-suddenly-urinates-in-cross-ties/",
+      "cluster": "state-specific",
+      "question": "Mare suddenly urinates in cross ties — what should I know?",
+      "llm_bait_phrase": "Mare suddenly urinates in cross ties",
+      "source_signal_ids": [
+        "reddit_equestrian_mare-suddenly-urinates-in-cross-ties-https-www-reddi_2b84c271"
+      ]
+    },
+    {
+      "approval_id": "approval_1640_offering-a-free-lease",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3991_5a5691d059",
+      "proposed_slug": "/faq/offering-a-free-lease/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Offering a free lease — what should I know?",
+      "llm_bait_phrase": "Offering a free lease",
+      "source_signal_ids": [
+        "reddit_equestrian_offering-a-free-lease-https-www-reddit-com-r-equestr_ec20d3b6"
+      ]
+    },
+    {
+      "approval_id": "approval_1641_do-you-stay-involved-with-horses-when-you-re-too-b",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3992_920d3cf901",
+      "proposed_slug": "/faq/do-you-stay-involved-with-horses-when-you-re-too-broke-for-lessons/",
+      "cluster": "state-specific",
+      "question": "How do you stay involved with horses when you're too broke for lessons?",
+      "llm_bait_phrase": "do you stay involved with horses when you're too broke for lessons",
+      "source_signal_ids": [
+        "reddit_equestrian_how-do-you-stay-involved-with-horses-when-you-re-too_0e003228"
+      ]
+    },
+    {
+      "approval_id": "approval_1642_tips-for-getting-an-even-cut-i-m-tired-of-giving-m",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3994_2ecb4bbdfc",
+      "proposed_slug": "/faq/tips-for-getting-an-even-cut-i-m-tired-of-giving-my-horse-layers/",
+      "cluster": "state-specific",
+      "question": "Tips for getting an even cut? I’m tired of giving my horse layers — what should I know?",
+      "llm_bait_phrase": "Tips for getting an even cut? I’m tired of giving my horse layers",
+      "source_signal_ids": [
+        "reddit_equestrian_tips-for-getting-an-even-cut-i-m-tired-of-giving-my-_a974c2fa"
+      ]
+    },
+    {
+      "approval_id": "approval_1643_prolite-girth-for-sale",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3997_e4ff52da6f",
+      "proposed_slug": "/faq/prolite-girth-for-sale/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Prolite girth for sale — what should I know?",
+      "llm_bait_phrase": "Prolite girth for sale",
+      "source_signal_ids": [
+        "forum_horse_and_hound_prolite-girth-for-sale-https-forums-horseandhound-co_e73e6791"
+      ]
+    },
+    {
+      "approval_id": "approval_1644_introduction-to-horse-sharing",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3998_cbb5d79725",
+      "proposed_slug": "/faq/introduction-to-horse-sharing/",
+      "cluster": "state-specific",
+      "question": "Introduction to horse sharing — what should I know?",
+      "llm_bait_phrase": "Introduction to horse sharing",
+      "source_signal_ids": [
+        "youtube_search_comments_introduction-to-horse-sharing-https-www-youtube-com-_dd84cb0d"
+      ]
+    },
+    {
+      "approval_id": "approval_1645_a-horse-failed-to-sell-at-auction-outran-everyone",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_3999_b683a7dfdd",
+      "proposed_slug": "/faq/a-horse-failed-to-sell-at-auction-outran-everyone/",
+      "cluster": "state-specific",
+      "question": "How a Horse Failed To Sell at Auction Outran Everyone?",
+      "llm_bait_phrase": "a Horse Failed To Sell at Auction Outran Everyone",
+      "source_signal_ids": [
+        "youtube_search_comments_how-a-horse-failed-to-sell-at-auction-outran-everyon_434eed5e"
+      ]
+    },
+    {
+      "approval_id": "approval_1646_business-owners-are-investing-millions-in-horse-ra",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4000_2c72c296ae",
+      "proposed_slug": "/faq/business-owners-are-investing-millions-in-horse-racing/",
+      "cluster": "equine-business-formation",
+      "question": "Why Business Owners are Investing MILLIONS in Horse Racing?",
+      "llm_bait_phrase": "Business Owners are Investing MILLIONS in Horse Racing",
+      "source_signal_ids": [
+        "youtube_search_comments_why-business-owners-are-investing-millions-in-horse-_a24044bd"
+      ]
+    },
+    {
+      "approval_id": "approval_1647_learning-sales-from-petros",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4001_1e84b6b38b",
+      "proposed_slug": "/faq/learning-sales-from-petros/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Learning Sales from Petros — what should I know?",
+      "llm_bait_phrase": "Learning Sales from Petros",
+      "source_signal_ids": [
+        "youtube_search_comments_learning-sales-from-petros-https-www-youtube-com-res_b30f99ce"
+      ]
+    },
+    {
+      "approval_id": "approval_1648_she-paid-6-for-the-horse-everyone-laughed-at-until",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4002_cb2fb3b98f",
+      "proposed_slug": "/faq/she-paid-6-for-the-horse-everyone-laughed-at-until-a-richest-ranchers-in-wyoming-begged-he/",
+      "cluster": "state-specific",
+      "question": "She Paid $6 for the Horse Everyone Laughed At—Until a Richest Ranchers in Wyoming Begged Her to Sell — what should I know?",
+      "llm_bait_phrase": "She Paid $6 for the Horse Everyone Laughed At—Until a Richest Ranchers in Wyoming Begged Her to Sell",
+      "source_signal_ids": [
+        "youtube_search_comments_she-paid-6-for-the-horse-everyone-laughed-at-until-a_4d512f6f"
       ]
     }
   ]
