@@ -27,7 +27,7 @@
     "authority:window": "node scripts/authority_scale/build_fanout_window.mjs --size=2500",
     "authority:yield": "node scripts/authority_scale/build_yield_feedback.mjs",
     "baseline": "node scripts/baseline.mjs",
-    "build": "node scripts/release/build_site_release.js && node scripts/build_404.js && node scripts/search_intelligence/apply_strengthening.js && node scripts/install_clarity.js && node scripts/build/write_build_id.js",
+    "build": "node scripts/release/build_site_release.js && node scripts/build_404.js && node scripts/search_intelligence/apply_strengthening.js && node scripts/install_clarity.js",
     "build:distribution": "node scripts/build/prepare_distribution_artifacts.js",
     "cadence:gate": "node scripts/cadence_gate.js",
     "cadence:headroom": "node scripts/cadence/publish_headroom.mjs",
