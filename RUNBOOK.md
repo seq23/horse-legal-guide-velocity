@@ -117,6 +117,14 @@ It is triggered by `.github/workflows/approved-content-email.yml`'s `workflow_ru
 
 Either way, the site's actual guarantee against a revoked page staying reachable is `functions/_shared/live_gate.js` plus `npm run validate:revoke-not-live-on-domain`, not this purge step - treat the purge step as a nice-to-have for propagation speed, not the safety mechanism.
 
+## Edge cache (added 2026-10-22)
+
+- **What:** `functions/_middleware.js` runs `functions/_shared/edge_cache.js` on every request (`_routes.json` includes `/*`). Public GET/HEAD 200 responses are kept in the colo's Cache API for 24 h; the response carries `x-edge-cache: HIT|MISS|BYPASS`. Cloudflare's own `cf-cache-status` stays `DYNAMIC` - that header describes the zone cache, which Pages HTML never uses; read `x-edge-cache` instead.
+- **Never cached:** `/api/*`, `/admin*`, `/agency*`, `/data/*`, non-GET/HEAD, and any non-200 (the live gate's revoke 404, redirects), `Set-Cookie`, `private` or `no-store` response. Browsers still get `public, max-age=0, must-revalidate`, so nothing is pinned in a reader's browser.
+- **Why a revoke still disappears at once:** every cache key carries `dist/build-id.txt`, a hash of `dist/` + `functions/` written last by `npm run build` (`scripts/build/write_build_id.js`), which Cloudflare Pages runs for every deployment. A revoke changes `dist/`, so the new deployment reads from a fresh key space - this is the purge-on-deploy, and it does not depend on any purge API call landing. The per-URL purge step in `admin-decision-issue.yml` still runs for the zone cache.
+- **www:** `www.horselegalguide.com` 301s to the apex in one hop (path and query kept; non-GET gets 308).
+- **Guard:** `test/edge-cache.test.js` (part of `npm test`).
+
 ## What is NOT required of you
 
 - **A failed or silent notification email never blocks publishing.** It runs *after* an approval, go-live, or revoke completes, as a separate, downstream notification - it does not gate the decision, the build, or the deploy in either direction. If that email lane is red, or SMTP isn't configured, your decision still takes effect on schedule.
