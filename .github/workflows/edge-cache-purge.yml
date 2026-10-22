@@ -1,0 +1,33 @@
+name: Edge Cache Purge After Deploy
+
+# Every production deploy (each completed Cloudflare Pages check run on main,
+# whoever pushed - including the bot commits a revoke produces) re-applies
+# the zone Cache Rule from scripts/ops/edge_cache_rule.mjs and purges the
+# zone, then proves / is fresh and cacheable. See RUNBOOK.md "Edge cache".
+on:
+  check_run:
+    types: [completed]
+  workflow_dispatch:
+
+concurrency:
+  group: edge-cache-purge
+  cancel-in-progress: false
+
+jobs:
+  purge:
+    if: github.event_name == 'workflow_dispatch' || (github.event.check_run.name == 'Cloudflare Pages' && github.event.check_run.conclusion == 'success' && github.event.check_run.check_suite.head_branch == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - name: Keep the zone Cache Rule as the repo defines it
+        run: node scripts/ops/edge_cache_rule.mjs
+      - name: Purge the zone and prove / is fresh and cached
+        run: node scripts/ops/purge_edge_after_deploy.mjs

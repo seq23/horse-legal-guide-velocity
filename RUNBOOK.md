@@ -119,11 +119,12 @@ Either way, the site's actual guarantee against a revoked page staying reachable
 
 ## Edge cache (added 2026-10-22)
 
-- **What:** `functions/_middleware.js` runs `functions/_shared/edge_cache.js` on every request (`_routes.json` includes `/*`). Public GET/HEAD 200 responses are kept in the colo's Cache API for 24 h; the response carries `x-edge-cache: HIT|MISS|BYPASS`. Cloudflare's own `cf-cache-status` stays `DYNAMIC` - that header describes the zone cache, which Pages HTML never uses; read `x-edge-cache` instead.
-- **Never cached:** `/api/*`, `/admin*`, `/agency*`, `/data/*`, non-GET/HEAD, and any non-200 (the live gate's revoke 404, redirects), `Set-Cookie`, `private` or `no-store` response. Browsers still get `public, max-age=0, must-revalidate`, so nothing is pinned in a reader's browser.
-- **Why a revoke still disappears at once:** every cache key carries `dist/build-id.txt`, a hash of `dist/` + `functions/` written last by `npm run build` (`scripts/build/write_build_id.js`), which Cloudflare Pages runs for every deployment. A revoke changes `dist/`, so the new deployment reads from a fresh key space - this is the purge-on-deploy, and it does not depend on any purge API call landing. The per-URL purge step in `admin-decision-issue.yml` still runs for the zone cache.
+- **What:** public pages are served from Cloudflare's zone cache (`cf-cache-status: HIT`). Three repo-owned parts: `functions/_middleware.js` (`functions/_shared/edge_cache.js`, `_routes.json` includes `/*`) adds `s-maxage=86400` to public 200s; `scripts/ops/edge_cache_rule.mjs` keeps the zone Cache Rule (apex only, eligible for cache, **respects origin headers**, excludes the dynamic prefixes); `.github/workflows/edge-cache-purge.yml` re-applies that rule and purges the zone after **every** production deploy.
+- **Never cached:** `/api/*`, `/admin*`, `/agency*`, `/data/*` (excluded by the middleware AND the zone rule), non-GET/HEAD, and any non-200 (the live gate's revoke 404, redirects), `Set-Cookie`, `private` or `no-store` response. Browsers still get `max-age=0`, so nothing is pinned in a reader's browser.
+- **How a revoke leaves the edge:** a revoke is a commit, so Cloudflare Pages deploys it; the deploy's "Cloudflare Pages" check run on `main` completing triggers `edge-cache-purge.yml` (whoever pushed, bot commits included), which purges everything, then proves `/` is fresh (MISS, or a HIT younger than the purge) and cacheable (second request HIT) - otherwise the run is red. `validate:revoke-not-live-on-domain` in `admin-decision-issue.yml` still checks the live domain afterwards. Manual re-run: Actions -> "Edge Cache Purge After Deploy" -> Run workflow.
 - **www:** `www.horselegalguide.com` 301s to the apex in one hop (path and query kept; non-GET gets 308).
 - **Guard:** `test/edge-cache.test.js` (part of `npm test`).
+- **Measured:** a Cache API layer inside the Pages Function (PR #55) gave no faster HIT than Pages itself (~50 ms of processing is the Functions floor), which is why the copy lives in the zone cache in front of Pages.
 
 ## What is NOT required of you
 
