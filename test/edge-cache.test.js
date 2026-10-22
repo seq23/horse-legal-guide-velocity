@@ -34,7 +34,8 @@ function makeContext(url, { method = 'GET', buildId = 'a'.repeat(32), body = '<h
       : new Response('asset')) } },
     waitUntil: () => {},
   };
-  ctx.next = async () => { ctx.calls += 1; return new Response(method === 'HEAD' ? null : body, { status, headers: { 'content-type': 'text/html', 'cache-control': 'public, max-age=0, must-revalidate', etag: '"e1"', ...headers } }); };
+  ctx.seen = [];
+  ctx.next = async (req) => { ctx.calls += 1; if (req) ctx.seen.push(req); return new Response(method === 'HEAD' ? null : body, { status, headers: { 'content-type': 'text/html', 'cache-control': 'public, max-age=0, must-revalidate', etag: '"e1"', ...headers } }); };
   return ctx;
 }
 
@@ -92,6 +93,9 @@ test('second request is a HIT without touching the asset layer; bypass paths nev
   assert.equal(r1.headers.get('x-edge-cache'), 'MISS');
   assert.equal(r1.headers.get('cache-control'), m.CLIENT_CACHE_CONTROL);
   assert.equal(await r1.text(), '<html>page</html>');
+  assert.equal(first.seen.length, 1);
+  assert.equal(first.seen[0].redirect, 'manual', 'asset-layer 301/308s must reach the browser, not be followed into a 200');
+  assert.equal(first.seen[0].method, 'GET');
   const second = makeContext('https://horselegalguide.com/articles/?utm_source=x');
   const r2 = await m.edgeCache(second, cache);
   assert.equal(r2.headers.get('x-edge-cache'), 'HIT');

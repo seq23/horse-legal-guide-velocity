@@ -119,7 +119,11 @@ export async function edgeCache(context, cache = globalThis.caches && globalThis
 
   // Ask the asset layer for the full body even if the browser sent a
   // conditional request, so what gets stored is always a complete 200.
-  const upstreamRequest = new Request(request.url, { method: 'GET', headers: request.headers });
+  // redirect: 'manual' is load-bearing: with the default 'follow', the
+  // asset layer's own 308s (/articles -> /articles/, /x.html -> /x/) and the
+  // _redirects 301s were followed internally and served as 200s at the
+  // un-normalised URL (preview deploy of PR #55, 2026-10-22).
+  const upstreamRequest = new Request(request, { method: 'GET', redirect: 'manual' });
   upstreamRequest.headers.delete('if-none-match');
   upstreamRequest.headers.delete('if-modified-since');
   const response = await context.next(upstreamRequest);
