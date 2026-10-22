@@ -59,9 +59,19 @@ if (!shared.includes("if(plan.needsIds&&!ids.length)")) fail('ID-requiring actio
 if (!shared.includes("Unknown admin action")) fail('Unknown admin actions are not rejected.');
 
 const routes = readJson('_routes.json');
-const includes = new Set(routes.include || []);
+// A protected route must reach its Function: listed itself or covered by a
+// wildcard include such as "/*" (functions/_middleware.js, the edge cache).
+// Cloudflare refuses to publish overlapping includes (Error 8000057, preview
+// deploy of PR #55, 2026-10-22), so overlap fails here first.
+const includes = routes.include || [];
+const excludes = routes.exclude || [];
+const covers = (rule, route) => rule === route || (rule.endsWith('/*') && route.startsWith(rule.slice(0, -1)));
 for (const route of ['/api/admin/*','/api/agency/*','/agency','/agency/*','/data/*']) {
-  if (!includes.has(route)) fail(`Cloudflare Functions route include missing: ${route}`);
+  if (!includes.some((rule) => covers(rule, route))) fail(`Cloudflare Functions route include missing: ${route}`);
+  if (excludes.some((rule) => covers(rule, route))) fail(`Cloudflare Functions route excluded: ${route}`);
+}
+for (const a of includes) for (const b of includes) {
+  if (a !== b && covers(a, b)) fail(`_routes.json include "${b}" is overlapped by "${a}" - Cloudflare Pages refuses to publish overlapping rules`);
 }
 
 const contract = readJson('data/system/admin_action_contract.json');
