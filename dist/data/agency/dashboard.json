@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-10-21T18:43:39.000Z",
+  "generated_at": "2026-10-22T15:31:40.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-10-21T18:43:40.983Z",
-      "age_hours": 0,
+      "age_hours": 20.8,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-10-21T18:43:40.983Z",
-      "age_hours": 0,
+      "age_hours": 20.8,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-10-21T18:43:40.983Z",
-      "age_hours": 0,
+      "age_hours": 20.8,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -1691,15 +1691,15 @@
       "hard_fail_items": 0,
       "word_warning_items": 9,
       "ai_risk_items": 251,
-      "workflow_count": 18,
-      "workflow_passed": 18,
+      "workflow_count": 19,
+      "workflow_passed": 19,
       "workflow_warning_count": 0,
       "signal_raw_store_count": 3977,
       "signal_fresh_collected_count": 103,
       "signal_failed_sources": 0,
       "signal_zero_reddit_warning": false,
       "github_actions_simulation_status": "passed",
-      "github_actions_simulated_workflows": 18,
+      "github_actions_simulated_workflows": 19,
       "github_actions_simulation_warnings": 0,
       "github_actions_live_followups": 3,
       "github_actions_simulation_failures": 0

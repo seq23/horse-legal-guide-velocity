@@ -20,7 +20,7 @@ uniqueness_strategy: remedies-exit
 
 The practical question behind **Can a Buyer Return a Horse After Purchase** is not answered safely by repeating a general horse-contract overview. This version focuses on what exit paths, cure opportunities, and damage-control steps may exist before escalation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/, while remaining educational and approval-gated.
+This draft is intentionally scoped to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /insights/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Remedies, exit paths, and damage control
 

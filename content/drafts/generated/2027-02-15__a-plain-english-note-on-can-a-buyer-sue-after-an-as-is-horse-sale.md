@@ -20,7 +20,7 @@ uniqueness_strategy: remedies-exit
 
 The practical question behind **Can a Buyer Sue After an “As-Is” Horse Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on what exit paths, cure opportunities, and damage-control steps may exist before escalation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2027-02-14/a-plain-english-note-on-can-a-buyer-return-a-horse-after-purchase/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2026-08-11/a-plain-english-note-on-what-should-be-included-in-a-horse-bill-of-sale/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Remedies, exit paths, and damage control
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**buyer · sue · horse · sale · state · law · venue · local**
+**buyer · sue · horse · sale · remedies · exit · paths · damage**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | sue | Identify the cure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | horse | Identify the return facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | sale | Identify the refund facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| state | Identify the default facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| remedies | Identify the default facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
