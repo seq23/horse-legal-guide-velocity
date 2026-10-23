@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T18:38:08.000Z",
+  "generated_at": "2026-10-23T15:45:23.000Z",
   "status": "healthy_with_live_followup",
   "preserved_pipeline": [
     "collect:signals",
@@ -7,9 +7,9 @@
     "map:signals",
     "report:ingestion"
   ],
-  "raw_signal_count": 4003,
-  "normalized_signal_count": 1649,
-  "fresh_collected_count": 95,
+  "raw_signal_count": 4030,
+  "normalized_signal_count": 1661,
+  "fresh_collected_count": 112,
   "failed_source_count": 0,
   "blocked_source_count": 3,
   "blocked_sources": [
@@ -32,7 +32,7 @@
       "reason": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     }
   ],
-  "collection_health": "degraded_failed_sources",
+  "collection_health": "degraded_blocked_sources",
   "zero_reddit_warning": false,
   "live_followup_required": true,
   "failed_sources": [],
