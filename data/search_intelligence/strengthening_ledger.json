@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_on": "2026-10-22",
-  "gsc_window": "2026-09-22..2026-10-19",
+  "updated_on": "2026-10-23",
+  "gsc_window": "2026-09-23..2026-10-20",
   "rule": "pages: strengthened pages with the date each was strengthened (from strengthening.json). pending: qualifying families with no strengthening yet and the date each first qualified. skipped: qualifying families that are not strengthened, with the reason and the date first recorded.",
   "pages": [
     {
@@ -64,21 +64,21 @@
   "pending": [],
   "skipped": [
     {
-      "family": "equine law @ /insights/",
-      "page": "/insights/",
-      "status": "no_answer_page",
-      "reason": "lands on /insights/, a index page that lists other pages; no single-answer page there serves \"equine law\"",
-      "impressions": 8,
-      "weighted_position": 88.4,
-      "recorded_on": "2026-10-11"
-    },
-    {
       "family": "equestrian franchise @ /business/how-to-start-a-horse-retail-business/",
       "page": "/business/how-to-start-a-horse-retail-business/",
       "status": "intent_mismatch",
       "reason": "query intent franchise_purchase vs page intent business_formation; strengthening /business/how-to-start-a-horse-retail-business/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through).",
       "impressions": 7,
       "weighted_position": 68.7,
+      "recorded_on": "2026-10-11"
+    },
+    {
+      "family": "equine law @ /insights/",
+      "page": "/insights/",
+      "status": "no_answer_page",
+      "reason": "lands on /insights/, a index page that lists other pages; no single-answer page there serves \"equine law\"",
+      "impressions": 7,
+      "weighted_position": 88,
       "recorded_on": "2026-10-11"
     },
     {
