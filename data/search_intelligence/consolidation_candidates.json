@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
   "status": "LIST_ONLY_NO_REDIRECTS",
-  "gsc_window": "2026-09-23..2026-10-20",
-  "coverage_collected_at": "2026-10-23T18:26:37.811Z",
+  "gsc_window": "2026-09-24..2026-10-21",
+  "coverage_collected_at": "2026-10-24T17:30:53.105Z",
   "rule": "Sitemap leaf pages with 0 impressions in the 28-day export and fewer than 800 visible words in the built page. Nothing is redirected or removed by this file.",
   "thin_word_threshold": 800,
   "sitemap_url_count": 323,
-  "candidate_count": 22,
+  "candidate_count": 23,
   "candidates_by_hub": {
     "none": 1,
     "/hubs/therapeutic-riding-and-hipaa/": 2,
-    "/hubs/intellectual-property-and-brand/": 3,
+    "/hubs/intellectual-property-and-brand/": 4,
     "/hubs/demand-letters-and-disputes/": 5,
     "/hubs/liability-waivers-insurance/": 5,
     "/hubs/equine-business-formation/": 2,
@@ -129,6 +129,14 @@
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/demand-letters-and-disputes/",
       "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+      "word_count": 765,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
     },
     {
       "route": "/liability/do-i-need-insurance-for-my-horse-business/",

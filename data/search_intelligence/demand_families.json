@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-09-23..2026-10-20",
-  "gsc_collected_at": "2026-10-23T18:24:36.411Z",
+  "gsc_window": "2026-09-24..2026-10-21",
+  "gsc_collected_at": "2026-10-24T17:28:45.280Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -10,12 +10,12 @@
     "ranking_min_impressions": 2,
     "pending_max_days": 7
   },
-  "family_count": 14,
-  "qualifying_count": 6,
+  "family_count": 15,
+  "qualifying_count": 7,
   "status_counts": {
-    "strengthened": 3,
-    "pending_strengthening": 0,
-    "intent_mismatch": 1,
+    "strengthened": 2,
+    "pending_strengthening": 1,
+    "intent_mismatch": 2,
     "no_answer_page": 2,
     "not_qualified": 8
   },
@@ -23,37 +23,37 @@
     {
       "rank": 1,
       "family": "horse sale contract @ /hubs/horse-sale-and-purchase/",
-      "impressions": 25,
-      "weighted_position": 64.9,
+      "impressions": 35,
+      "weighted_position": 62.6,
       "status": "strengthened"
     },
     {
       "rank": 2,
-      "family": "equestrian franchise @ /business/how-to-start-a-horse-retail-business/",
-      "impressions": 7,
-      "weighted_position": 68.7,
-      "status": "intent_mismatch"
-    },
-    {
-      "rank": 3,
       "family": "equine law @ /insights/",
       "impressions": 7,
       "weighted_position": 88,
       "status": "no_answer_page"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "family": "start an equestrian business @ /business/how-to-start-a-horse-retail-business/",
       "impressions": 6,
-      "weighted_position": 72.2,
+      "weighted_position": 75,
       "status": "strengthened"
     },
     {
+      "rank": 4,
+      "family": "equestrian franchise @ /business/how-to-start-a-horse-retail-business/",
+      "impressions": 5,
+      "weighted_position": 74,
+      "status": "intent_mismatch"
+    },
+    {
       "rank": 5,
-      "family": "start an equestrian business @ /business/how-do-i-legally-start-a-horse-business/",
-      "impressions": 4,
-      "weighted_position": 82,
-      "status": "strengthened"
+      "family": "equine liability @ /hubs/liability-waivers-insurance/",
+      "impressions": 3,
+      "weighted_position": 58.7,
+      "status": "pending_strengthening"
     }
   ],
   "families": [
@@ -64,26 +64,32 @@
       "page": "/hubs/horse-sale-and-purchase/",
       "page_kind": "hub",
       "page_intent": "sale_contract",
-      "impressions": 25,
+      "impressions": 35,
       "clicks": 0,
-      "weighted_position": 64.9,
-      "best_position": 57,
-      "page_impressions": 31,
-      "page_position": 55,
+      "weighted_position": 62.6,
+      "best_position": 45,
+      "page_impressions": 43,
+      "page_position": 55.9,
       "top_query": "horse purchase agreement",
-      "query_count": 8,
+      "query_count": 10,
       "queries": [
         {
           "query": "horse purchase agreement",
-          "impressions": 13,
+          "impressions": 16,
           "clicks": 0,
-          "position": 61.8
+          "position": 61.1
         },
         {
           "query": "horse sale contract",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 59.8
+        },
+        {
+          "query": "horse purchase contract",
           "impressions": 3,
           "clicks": 0,
-          "position": 61.7
+          "position": 60.7
         },
         {
           "query": "horse sales agreement",
@@ -92,22 +98,28 @@
           "position": 63
         },
         {
+          "query": "black horse contract purchase",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 57
+        },
+        {
+          "query": "horse sale agreement",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 62.5
+        },
+        {
           "query": "horse bill of sale",
           "impressions": 2,
           "clicks": 0,
           "position": 80.5
         },
         {
-          "query": "black horse contract purchase",
+          "query": "how do i create a legal contract for horse sale or purchase",
           "impressions": 1,
           "clicks": 0,
-          "position": 57
-        },
-        {
-          "query": "horse purchase contract",
-          "impressions": 1,
-          "clicks": 0,
-          "position": 68
+          "position": 45
         },
         {
           "query": "horse sales contract",
@@ -132,43 +144,6 @@
       "strengthened_on": "2026-10-11"
     },
     {
-      "family": "equestrian franchise @ /business/how-to-start-a-horse-retail-business/",
-      "intent": "franchise_purchase",
-      "head_term": "equestrian franchise",
-      "page": "/business/how-to-start-a-horse-retail-business/",
-      "page_kind": "page",
-      "page_intent": "business_formation",
-      "impressions": 7,
-      "clicks": 0,
-      "weighted_position": 68.7,
-      "best_position": 64.8,
-      "page_impressions": 13,
-      "page_position": 70.3,
-      "top_query": "buy an equestrian franchise",
-      "query_count": 2,
-      "queries": [
-        {
-          "query": "buy an equestrian franchise",
-          "impressions": 4,
-          "clicks": 0,
-          "position": 64.8
-        },
-        {
-          "query": "equestrian franchise opportunity",
-          "impressions": 3,
-          "clicks": 0,
-          "position": 74
-        }
-      ],
-      "rank": 2,
-      "basis": [
-        "top_demand"
-      ],
-      "qualifies": true,
-      "status": "intent_mismatch",
-      "reason": "query intent franchise_purchase vs page intent business_formation; strengthening /business/how-to-start-a-horse-retail-business/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through)."
-    },
-    {
       "family": "equine law @ /insights/",
       "intent": "equine_law_general",
       "head_term": "equine law",
@@ -179,8 +154,8 @@
       "clicks": 0,
       "weighted_position": 88,
       "best_position": 64,
-      "page_impressions": 17,
-      "page_position": 48.8,
+      "page_impressions": 15,
+      "page_position": 54.6,
       "top_query": "equine law",
       "query_count": 6,
       "queries": [
@@ -221,7 +196,7 @@
           "position": 92
         }
       ],
-      "rank": 3,
+      "rank": 2,
       "basis": [
         "top_demand"
       ],
@@ -238,10 +213,10 @@
       "page_intent": "business_formation",
       "impressions": 6,
       "clicks": 0,
-      "weighted_position": 72.2,
-      "best_position": 72.2,
-      "page_impressions": 13,
-      "page_position": 70.3,
+      "weighted_position": 75,
+      "best_position": 75,
+      "page_impressions": 11,
+      "page_position": 74.5,
       "top_query": "start an equestrian business",
       "query_count": 1,
       "queries": [
@@ -249,10 +224,10 @@
           "query": "start an equestrian business",
           "impressions": 6,
           "clicks": 0,
-          "position": 72.2
+          "position": 75
         }
       ],
-      "rank": 4,
+      "rank": 3,
       "basis": [
         "top_demand"
       ],
@@ -262,36 +237,41 @@
       "strengthened_on": "2026-10-11"
     },
     {
-      "family": "start an equestrian business @ /business/how-do-i-legally-start-a-horse-business/",
-      "intent": "business_formation",
-      "head_term": "start an equestrian business",
-      "page": "/business/how-do-i-legally-start-a-horse-business/",
+      "family": "equestrian franchise @ /business/how-to-start-a-horse-retail-business/",
+      "intent": "franchise_purchase",
+      "head_term": "equestrian franchise",
+      "page": "/business/how-to-start-a-horse-retail-business/",
       "page_kind": "page",
       "page_intent": "business_formation",
-      "impressions": 4,
+      "impressions": 5,
       "clicks": 0,
-      "weighted_position": 82,
-      "best_position": 82,
-      "page_impressions": 5,
-      "page_position": 67,
-      "top_query": "start an equestrian business",
-      "query_count": 1,
+      "weighted_position": 74,
+      "best_position": 74,
+      "page_impressions": 11,
+      "page_position": 74.5,
+      "top_query": "equestrian franchise opportunity",
+      "query_count": 2,
       "queries": [
         {
-          "query": "start an equestrian business",
-          "impressions": 4,
+          "query": "equestrian franchise opportunity",
+          "impressions": 3,
           "clicks": 0,
-          "position": 82
+          "position": 74
+        },
+        {
+          "query": "buy an equestrian franchise",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 74
         }
       ],
-      "rank": 5,
+      "rank": 4,
       "basis": [
         "top_demand"
       ],
       "qualifies": true,
-      "status": "strengthened",
-      "reason": "data/search_intelligence/strengthening.json entry for /business/how-do-i-legally-start-a-horse-business/, applied at build",
-      "strengthened_on": "2026-10-11"
+      "status": "intent_mismatch",
+      "reason": "query intent franchise_purchase vs page intent business_formation; strengthening /business/how-to-start-a-horse-retail-business/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through)."
     },
     {
       "family": "equine liability @ /hubs/liability-waivers-insurance/",
@@ -322,40 +302,43 @@
           "position": 58
         }
       ],
+      "rank": 5,
+      "basis": [
+        "top_demand"
+      ],
+      "qualifies": true,
+      "status": "pending_strengthening",
+      "qualified_on": "2026-10-24",
+      "reason": "qualified on 2026-10-24 (0 day(s) ago); no data/search_intelligence/strengthening.json entry yet. Allowed for 7 days, then the validator fails."
+    },
+    {
+      "family": "start an equestrian business @ /business/how-do-i-legally-start-a-horse-business/",
+      "intent": "business_formation",
+      "head_term": "start an equestrian business",
+      "page": "/business/how-do-i-legally-start-a-horse-business/",
+      "page_kind": "page",
+      "page_intent": "business_formation",
+      "impressions": 3,
+      "clicks": 0,
+      "weighted_position": 83,
+      "best_position": 83,
+      "page_impressions": 4,
+      "page_position": 64,
+      "top_query": "start an equestrian business",
+      "query_count": 1,
+      "queries": [
+        {
+          "query": "start an equestrian business",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 83
+        }
+      ],
       "rank": 6,
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 6 of 14 by impressions; landing page at 58.7 position with 3 page impressions (needs <= 15 with >= 2)"
-    },
-    {
-      "family": "equestrian franchise @ /faq/",
-      "intent": "franchise_purchase",
-      "head_term": "equestrian franchise",
-      "page": "/faq/",
-      "page_kind": "index",
-      "page_intent": "index",
-      "impressions": 3,
-      "clicks": 0,
-      "weighted_position": 93.7,
-      "best_position": 93.7,
-      "page_impressions": 11,
-      "page_position": 36.1,
-      "top_query": "buy an equestrian franchise",
-      "query_count": 1,
-      "queries": [
-        {
-          "query": "buy an equestrian franchise",
-          "impressions": 3,
-          "clicks": 0,
-          "position": 93.7
-        }
-      ],
-      "rank": 7,
-      "basis": [],
-      "qualifies": false,
-      "status": "not_qualified",
-      "reason": "rank 7 of 14 by impressions; landing page at 36.1 position with 11 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 6 of 15 by impressions; landing page at 64 position with 4 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "horse lease agreement @ /hubs/horse-lease-and-trial/",
@@ -380,11 +363,42 @@
           "position": 93.5
         }
       ],
-      "rank": 8,
+      "rank": 7,
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 8 of 14 by impressions; landing page at 49 position with 4 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 7 of 15 by impressions; landing page at 49 position with 4 page impressions (needs <= 15 with >= 2)"
+    },
+    {
+      "family": "start an equestrian business @ /hubs/equine-business-formation/",
+      "intent": "business_formation",
+      "head_term": "start an equestrian business",
+      "page": "/hubs/equine-business-formation/",
+      "page_kind": "hub",
+      "page_intent": "topic:hubs",
+      "impressions": 1,
+      "clicks": 0,
+      "weighted_position": 30,
+      "best_position": 30,
+      "page_impressions": 8,
+      "page_position": 13.6,
+      "top_query": "how to start an equestrian business",
+      "query_count": 1,
+      "queries": [
+        {
+          "query": "how to start an equestrian business",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 30
+        }
+      ],
+      "rank": 8,
+      "basis": [
+        "ranking_page"
+      ],
+      "qualifies": true,
+      "status": "intent_mismatch",
+      "reason": "query intent business_formation vs page intent topic:hubs; strengthening /hubs/equine-business-formation/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through)."
     },
     {
       "family": "equine liability @ /liability/what-is-the-equine-activity-liability-act/",
@@ -413,7 +427,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 9 of 14 by impressions; landing page at 38 position with 1 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 9 of 15 by impressions; landing page at 38 position with 1 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "start an equestrian business @ /compare/horse-co-ownership-agreement-vs-syndicate-structure/",
@@ -442,7 +456,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 10 of 14 by impressions; landing page at 41 position with 1 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 10 of 15 by impressions; landing page at 41 position with 1 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "equine law @ /hubs/",
@@ -471,7 +485,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 11 of 14 by impressions; landing page at 47 position with 1 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 11 of 15 by impressions; landing page at 47 position with 1 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "horse lease agreement @ /reference/",
@@ -484,8 +498,8 @@
       "clicks": 0,
       "weighted_position": 66,
       "best_position": 66,
-      "page_impressions": 9,
-      "page_position": 11.4,
+      "page_impressions": 8,
+      "page_position": 12.5,
       "top_query": "equine lease agreement law firm wellington",
       "query_count": 1,
       "queries": [
@@ -503,6 +517,35 @@
       "qualifies": true,
       "status": "no_answer_page",
       "reason": "lands on /reference/, a index page that lists other pages; no single-answer page there serves \"horse lease agreement\""
+    },
+    {
+      "family": "equestrian franchise @ /faq/",
+      "intent": "franchise_purchase",
+      "head_term": "equestrian franchise",
+      "page": "/faq/",
+      "page_kind": "index",
+      "page_intent": "index",
+      "impressions": 1,
+      "clicks": 0,
+      "weighted_position": 93,
+      "best_position": 93,
+      "page_impressions": 7,
+      "page_position": 28.4,
+      "top_query": "buy an equestrian franchise",
+      "query_count": 1,
+      "queries": [
+        {
+          "query": "buy an equestrian franchise",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 93
+        }
+      ],
+      "rank": 13,
+      "basis": [],
+      "qualifies": false,
+      "status": "not_qualified",
+      "reason": "rank 13 of 15 by impressions; landing page at 28.4 position with 7 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "equine law @ /articles/",
@@ -527,11 +570,11 @@
           "position": 98
         }
       ],
-      "rank": 13,
+      "rank": 14,
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 13 of 14 by impressions; landing page at 53.5 position with 2 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 14 of 15 by impressions; landing page at 53.5 position with 2 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "equine liability @ /insights/",
@@ -544,8 +587,8 @@
       "clicks": 0,
       "weighted_position": 99,
       "best_position": 99,
-      "page_impressions": 17,
-      "page_position": 48.8,
+      "page_impressions": 15,
+      "page_position": 54.6,
       "top_query": "equine law suit protection",
       "query_count": 1,
       "queries": [
@@ -556,11 +599,11 @@
           "position": 99
         }
       ],
-      "rank": 14,
+      "rank": 15,
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 14 of 14 by impressions; landing page at 48.8 position with 17 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 15 of 15 by impressions; landing page at 54.6 position with 15 page impressions (needs <= 15 with >= 2)"
     }
   ]
 }
