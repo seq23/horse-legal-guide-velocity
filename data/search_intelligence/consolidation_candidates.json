@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
   "status": "LIST_ONLY_NO_REDIRECTS",
-  "gsc_window": "2026-09-24..2026-10-21",
-  "coverage_collected_at": "2026-10-24T17:30:53.105Z",
+  "gsc_window": "2026-09-25..2026-10-22",
+  "coverage_collected_at": "2026-10-25T17:42:24.409Z",
   "rule": "Sitemap leaf pages with 0 impressions in the 28-day export and fewer than 800 visible words in the built page. Nothing is redirected or removed by this file.",
   "thin_word_threshold": 800,
   "sitemap_url_count": 323,
-  "candidate_count": 23,
+  "candidate_count": 24,
   "candidates_by_hub": {
     "none": 1,
     "/hubs/therapeutic-riding-and-hipaa/": 2,
     "/hubs/intellectual-property-and-brand/": 4,
     "/hubs/demand-letters-and-disputes/": 5,
     "/hubs/liability-waivers-insurance/": 5,
-    "/hubs/equine-business-formation/": 2,
+    "/hubs/equine-business-formation/": 3,
     "/hubs/horse-sale-and-purchase/": 3,
     "/hubs/boarding-training-and-barn-operations/": 1
   },
@@ -73,6 +73,14 @@
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/therapeutic-riding-and-hipaa/",
       "fold_basis": "page target cluster therapeutic-riding-and-hipaa"
+    },
+    {
+      "route": "/business/can-i-run-a-horse-business-under-another-company/",
+      "word_count": 747,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
     },
     {
       "route": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",

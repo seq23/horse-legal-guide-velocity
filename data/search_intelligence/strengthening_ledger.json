@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_on": "2026-10-24",
-  "gsc_window": "2026-09-24..2026-10-21",
+  "updated_on": "2026-10-25",
+  "gsc_window": "2026-09-25..2026-10-22",
   "rule": "pages: strengthened pages with the date each was strengthened (from strengthening.json). pending: qualifying families with no strengthening yet and the date each first qualified. skipped: qualifying families that are not strengthened, with the reason and the date first recorded.",
   "pages": [
     {
@@ -67,6 +67,12 @@
       "page": "/hubs/liability-waivers-insurance/",
       "qualified_on": "2026-10-24",
       "impressions": 3
+    },
+    {
+      "family": "horse lease agreement @ /hubs/horse-lease-and-trial/",
+      "page": "/hubs/horse-lease-and-trial/",
+      "qualified_on": "2026-10-25",
+      "impressions": 3
     }
   ],
   "skipped": [
@@ -75,8 +81,8 @@
       "page": "/insights/",
       "status": "no_answer_page",
       "reason": "lands on /insights/, a index page that lists other pages; no single-answer page there serves \"equine law\"",
-      "impressions": 7,
-      "weighted_position": 88,
+      "impressions": 6,
+      "weighted_position": 87.3,
       "recorded_on": "2026-10-11"
     },
     {
@@ -84,27 +90,18 @@
       "page": "/business/how-to-start-a-horse-retail-business/",
       "status": "intent_mismatch",
       "reason": "query intent franchise_purchase vs page intent business_formation; strengthening /business/how-to-start-a-horse-retail-business/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through).",
-      "impressions": 5,
+      "impressions": 3,
       "weighted_position": 74,
       "recorded_on": "2026-10-11"
     },
     {
-      "family": "start an equestrian business @ /hubs/equine-business-formation/",
-      "page": "/hubs/equine-business-formation/",
-      "status": "intent_mismatch",
-      "reason": "query intent business_formation vs page intent topic:hubs; strengthening /hubs/equine-business-formation/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through).",
-      "impressions": 1,
-      "weighted_position": 30,
-      "recorded_on": "2026-10-24"
-    },
-    {
-      "family": "horse lease agreement @ /reference/",
-      "page": "/reference/",
+      "family": "horse lease agreement @ /compare/",
+      "page": "/compare/",
       "status": "no_answer_page",
-      "reason": "lands on /reference/, a index page that lists other pages; no single-answer page there serves \"horse lease agreement\"",
+      "reason": "lands on /compare/, a index page that lists other pages; no single-answer page there serves \"horse lease agreement\"",
       "impressions": 1,
-      "weighted_position": 66,
-      "recorded_on": "2026-10-11"
+      "weighted_position": 26,
+      "recorded_on": "2026-10-25"
     }
   ]
 }
