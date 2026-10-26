@@ -2,21 +2,22 @@
   "schema_version": "1.0",
   "truth_source": "google_search_console_url_inspection",
   "site_url": "sc-domain:horselegalguide.com",
-  "collected_at": "2026-10-25T17:42:24.409Z",
+  "collected_at": "2026-10-26T15:14:56.721Z",
   "state": "OK",
   "inspected_this_run": 150,
   "errors_this_run": 0,
   "named_stop": null,
-  "sitemap_url_count": 323,
+  "sitemap_url_count": 324,
   "per_run": 150,
   "workers": 8,
   "summary": {
     "by_coverage_state": {
-      "Crawled - currently not indexed": 24,
+      "Crawled - currently not indexed": 23,
       "Discovered - currently not indexed": 3,
-      "Submitted and indexed": 296
+      "Submitted and indexed": 297,
+      "URL is unknown to Google": 1
     },
-    "inspected_url_count": 323
+    "inspected_url_count": 324
   },
   "truth_boundary": "Google index state per URL at inspected_at. Not a ranking or traffic measure; impressions live in gsc_truth.json.",
   "urls": [
@@ -24,13 +25,25 @@
       "url": "https://horselegalguide.com",
       "coverageState": "Submitted and indexed",
       "verdict": "PASS",
-      "lastCrawlTime": "2026-10-13T20:57:15Z",
+      "lastCrawlTime": "2026-10-19T22:53:35Z",
       "indexingState": "INDEXING_ALLOWED",
       "pageFetchState": "SUCCESSFUL",
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com",
       "userCanonical": "https://horselegalguide.com/",
-      "inspected_at": "2026-10-24T17:28:58.754Z"
+      "inspected_at": "2026-10-26T15:13:25.880Z"
+    },
+    {
+      "url": "https://horselegalguide.com/about/",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": null,
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "userCanonical": null,
+      "inspected_at": "2026-10-26T15:13:00.214Z"
     },
     {
       "url": "https://horselegalguide.com/articles/",
@@ -42,7 +55,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/articles/",
       "userCanonical": "https://horselegalguide.com/articles/",
-      "inspected_at": "2026-10-24T17:29:05.275Z"
+      "inspected_at": "2026-10-26T15:13:32.786Z"
     },
     {
       "url": "https://horselegalguide.com/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
@@ -54,7 +67,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
       "userCanonical": "https://horselegalguide.com/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
-      "inspected_at": "2026-10-24T17:28:58.724Z"
+      "inspected_at": "2026-10-26T15:13:25.562Z"
     },
     {
       "url": "https://horselegalguide.com/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
@@ -66,7 +79,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
       "userCanonical": "https://horselegalguide.com/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
-      "inspected_at": "2026-10-24T17:29:05.112Z"
+      "inspected_at": "2026-10-26T15:13:31.766Z"
     },
     {
       "url": "https://horselegalguide.com/articles/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
@@ -78,7 +91,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/articles/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
       "userCanonical": "https://horselegalguide.com/articles/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
-      "inspected_at": "2026-10-24T17:29:05.042Z"
+      "inspected_at": "2026-10-26T15:13:31.775Z"
     },
     {
       "url": "https://horselegalguide.com/authority/",
@@ -90,7 +103,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/authority/",
       "userCanonical": "https://horselegalguide.com/authority/",
-      "inspected_at": "2026-10-24T17:28:58.851Z"
+      "inspected_at": "2026-10-26T15:13:26.188Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
@@ -102,7 +115,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "userCanonical": "https://horselegalguide.com/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
-      "inspected_at": "2026-10-24T17:29:11.432Z"
+      "inspected_at": "2026-10-26T15:13:37.961Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/what-happens-if-a-boarder-damages-property/",
@@ -114,7 +127,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-boarder-damages-property/",
       "userCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-boarder-damages-property/",
-      "inspected_at": "2026-10-24T17:29:05.175Z"
+      "inspected_at": "2026-10-26T15:13:31.958Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/what-happens-if-a-boarder-does-not-pay/",
@@ -126,7 +139,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-boarder-does-not-pay/",
       "userCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-boarder-does-not-pay/",
-      "inspected_at": "2026-10-24T17:29:05.114Z"
+      "inspected_at": "2026-10-26T15:13:31.843Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
@@ -138,7 +151,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
       "userCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-contract-does-not-address-responsibility/",
-      "inspected_at": "2026-10-24T17:29:11.584Z"
+      "inspected_at": "2026-10-26T15:13:38.968Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/",
@@ -150,7 +163,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/",
       "userCanonical": "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/",
-      "inspected_at": "2026-10-24T17:29:05.051Z"
+      "inspected_at": "2026-10-26T15:13:31.743Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
@@ -162,7 +175,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
       "userCanonical": "https://horselegalguide.com/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
-      "inspected_at": "2026-10-24T17:29:11.601Z"
+      "inspected_at": "2026-10-26T15:13:41.458Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/what-liability-does-a-trainer-have/",
@@ -174,7 +187,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/what-liability-does-a-trainer-have/",
       "userCanonical": "https://horselegalguide.com/boarding/what-liability-does-a-trainer-have/",
-      "inspected_at": "2026-10-24T17:29:11.388Z"
+      "inspected_at": "2026-10-26T15:13:37.917Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
@@ -186,7 +199,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
       "userCanonical": "https://horselegalguide.com/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
-      "inspected_at": "2026-10-24T17:29:05.244Z"
+      "inspected_at": "2026-10-26T15:13:32.584Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/what-should-be-included-in-a-training-agreement/",
@@ -198,7 +211,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/what-should-be-included-in-a-training-agreement/",
       "userCanonical": "https://horselegalguide.com/boarding/what-should-be-included-in-a-training-agreement/",
-      "inspected_at": "2026-10-24T17:29:05.236Z"
+      "inspected_at": "2026-10-26T15:13:35.089Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
@@ -210,7 +223,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
       "userCanonical": "https://horselegalguide.com/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
-      "inspected_at": "2026-10-24T17:29:11.569Z"
+      "inspected_at": "2026-10-26T15:13:38.317Z"
     },
     {
       "url": "https://horselegalguide.com/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
@@ -222,7 +235,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
       "userCanonical": "https://horselegalguide.com/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
-      "inspected_at": "2026-10-24T17:29:11.600Z"
+      "inspected_at": "2026-10-26T15:13:39.558Z"
     },
     {
       "url": "https://horselegalguide.com/business/can-i-run-a-horse-business-under-another-company/",
@@ -234,7 +247,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/can-i-run-a-horse-business-under-another-company/",
       "userCanonical": "https://horselegalguide.com/business/can-i-run-a-horse-business-under-another-company/",
-      "inspected_at": "2026-10-24T17:29:11.441Z"
+      "inspected_at": "2026-10-26T15:13:38.348Z"
     },
     {
       "url": "https://horselegalguide.com/business/do-i-need-an-llc-to-start-a-horse-business/",
@@ -246,7 +259,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/do-i-need-an-llc-to-start-a-horse-business/",
       "userCanonical": "https://horselegalguide.com/business/do-i-need-an-llc-to-start-a-horse-business/",
-      "inspected_at": "2026-10-24T17:29:17.888Z"
+      "inspected_at": "2026-10-26T15:13:44.751Z"
     },
     {
       "url": "https://horselegalguide.com/business/horse-syndicate-legal-structure/",
@@ -258,7 +271,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/horse-syndicate-legal-structure/",
       "userCanonical": "https://horselegalguide.com/business/horse-syndicate-legal-structure/",
-      "inspected_at": "2026-10-24T17:29:17.741Z"
+      "inspected_at": "2026-10-26T15:13:44.153Z"
     },
     {
       "url": "https://horselegalguide.com/business/how-do-i-legally-start-a-horse-business/",
@@ -270,7 +283,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/how-do-i-legally-start-a-horse-business/",
       "userCanonical": "https://horselegalguide.com/business/how-do-i-legally-start-a-horse-business/",
-      "inspected_at": "2026-10-24T17:29:11.502Z"
+      "inspected_at": "2026-10-26T15:13:38.274Z"
     },
     {
       "url": "https://horselegalguide.com/business/how-do-i-separate-my-horse-business-from-personal-assets/",
@@ -282,7 +295,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/how-do-i-separate-my-horse-business-from-personal-assets/",
       "userCanonical": "https://horselegalguide.com/business/how-do-i-separate-my-horse-business-from-personal-assets/",
-      "inspected_at": "2026-10-24T17:29:17.883Z"
+      "inspected_at": "2026-10-26T15:13:44.743Z"
     },
     {
       "url": "https://horselegalguide.com/business/how-to-start-a-boarding-barn-legally/",
@@ -294,7 +307,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/how-to-start-a-boarding-barn-legally/",
       "userCanonical": "https://horselegalguide.com/business/how-to-start-a-boarding-barn-legally/",
-      "inspected_at": "2026-10-24T17:29:17.963Z"
+      "inspected_at": "2026-10-26T15:13:45.838Z"
     },
     {
       "url": "https://horselegalguide.com/business/how-to-start-a-horse-retail-business/",
@@ -306,7 +319,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/how-to-start-a-horse-retail-business/",
       "userCanonical": "https://horselegalguide.com/business/how-to-start-a-horse-retail-business/",
-      "inspected_at": "2026-10-24T17:29:17.767Z"
+      "inspected_at": "2026-10-26T15:13:44.194Z"
     },
     {
       "url": "https://horselegalguide.com/business/how-to-start-a-training-barn-legally/",
@@ -318,7 +331,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/how-to-start-a-training-barn-legally/",
       "userCanonical": "https://horselegalguide.com/business/how-to-start-a-training-barn-legally/",
-      "inspected_at": "2026-10-24T17:29:24.154Z"
+      "inspected_at": "2026-10-26T15:13:50.883Z"
     },
     {
       "url": "https://horselegalguide.com/business/how-to-start-an-equine-apparel-business/",
@@ -330,7 +343,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/how-to-start-an-equine-apparel-business/",
       "userCanonical": "https://horselegalguide.com/business/how-to-start-an-equine-apparel-business/",
-      "inspected_at": "2026-10-24T17:29:17.822Z"
+      "inspected_at": "2026-10-26T15:13:44.498Z"
     },
     {
       "url": "https://horselegalguide.com/business/how-to-start-an-equine-assisted-therapy-business/",
@@ -342,7 +355,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/how-to-start-an-equine-assisted-therapy-business/",
       "userCanonical": "https://horselegalguide.com/business/how-to-start-an-equine-assisted-therapy-business/",
-      "inspected_at": "2026-10-24T17:29:24.082Z"
+      "inspected_at": "2026-10-26T15:13:50.548Z"
     },
     {
       "url": "https://horselegalguide.com/business/joint-venture-agreement-equine-business/",
@@ -354,7 +367,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/joint-venture-agreement-equine-business/",
       "userCanonical": "https://horselegalguide.com/business/joint-venture-agreement-equine-business/",
-      "inspected_at": "2026-10-24T17:29:17.916Z"
+      "inspected_at": "2026-10-26T15:13:45.434Z"
     },
     {
       "url": "https://horselegalguide.com/business/partnership-agreement-for-horse-business/",
@@ -366,7 +379,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/partnership-agreement-for-horse-business/",
       "userCanonical": "https://horselegalguide.com/business/partnership-agreement-for-horse-business/",
-      "inspected_at": "2026-10-24T17:29:24.121Z"
+      "inspected_at": "2026-10-26T15:13:50.755Z"
     },
     {
       "url": "https://horselegalguide.com/business/what-legal-documents-do-i-need-for-a-horse-business/",
@@ -378,7 +391,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/business/what-legal-documents-do-i-need-for-a-horse-business/",
       "userCanonical": "https://horselegalguide.com/business/what-legal-documents-do-i-need-for-a-horse-business/",
-      "inspected_at": "2026-10-24T17:29:17.977Z"
+      "inspected_at": "2026-10-26T15:13:47.654Z"
     },
     {
       "url": "https://horselegalguide.com/compare/",
@@ -390,7 +403,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/",
       "userCanonical": "https://horselegalguide.com/compare/",
-      "inspected_at": "2026-10-24T17:29:24.312Z"
+      "inspected_at": "2026-10-26T15:13:54.030Z"
     },
     {
       "url": "https://horselegalguide.com/compare/as-is-clause-vs-disclosure-clause-in-a-horse-sale/",
@@ -402,19 +415,19 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/as-is-clause-vs-disclosure-clause-in-a-horse-sale/",
       "userCanonical": "https://horselegalguide.com/compare/as-is-clause-vs-disclosure-clause-in-a-horse-sale/",
-      "inspected_at": "2026-10-24T17:29:24.271Z"
+      "inspected_at": "2026-10-26T15:13:52.160Z"
     },
     {
       "url": "https://horselegalguide.com/compare/barn-lease-vs-boarding-agreement/",
-      "coverageState": "Crawled - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "2026-08-20T14:30:21Z",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-25T11:02:17Z",
       "indexingState": "INDEXING_ALLOWED",
       "pageFetchState": "SUCCESSFUL",
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/barn-lease-vs-boarding-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/barn-lease-vs-boarding-agreement/",
-      "inspected_at": "2026-10-24T17:29:24.204Z"
+      "inspected_at": "2026-10-26T15:13:51.138Z"
     },
     {
       "url": "https://horselegalguide.com/compare/bill-of-sale-vs-transfer-of-ownership-clause/",
@@ -426,7 +439,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/bill-of-sale-vs-transfer-of-ownership-clause/",
       "userCanonical": "https://horselegalguide.com/compare/bill-of-sale-vs-transfer-of-ownership-clause/",
-      "inspected_at": "2026-10-24T17:29:30.601Z"
+      "inspected_at": "2026-10-26T15:13:57.850Z"
     },
     {
       "url": "https://horselegalguide.com/compare/boarder-default-notice-vs-demand-letter/",
@@ -438,7 +451,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/boarder-default-notice-vs-demand-letter/",
       "userCanonical": "https://horselegalguide.com/compare/boarder-default-notice-vs-demand-letter/",
-      "inspected_at": "2026-10-24T17:29:30.409Z"
+      "inspected_at": "2026-10-26T15:13:56.939Z"
     },
     {
       "url": "https://horselegalguide.com/compare/boarding-agreement-vs-training-agreement/",
@@ -450,7 +463,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/boarding-agreement-vs-training-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/boarding-agreement-vs-training-agreement/",
-      "inspected_at": "2026-10-24T17:29:30.690Z"
+      "inspected_at": "2026-10-26T15:14:00.409Z"
     },
     {
       "url": "https://horselegalguide.com/compare/boarding-contract-vs-barn-lease/",
@@ -462,7 +475,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/boarding-contract-vs-barn-lease/",
       "userCanonical": "https://horselegalguide.com/compare/boarding-contract-vs-barn-lease/",
-      "inspected_at": "2026-10-24T17:29:24.237Z"
+      "inspected_at": "2026-10-26T15:13:51.121Z"
     },
     {
       "url": "https://horselegalguide.com/compare/boarding-lien-rights-vs-collections-lawsuit/",
@@ -474,7 +487,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/boarding-lien-rights-vs-collections-lawsuit/",
       "userCanonical": "https://horselegalguide.com/compare/boarding-lien-rights-vs-collections-lawsuit/",
-      "inspected_at": "2026-10-24T17:29:30.666Z"
+      "inspected_at": "2026-10-26T15:13:59.265Z"
     },
     {
       "url": "https://horselegalguide.com/compare/business-name-registration-vs-trademark-filing/",
@@ -486,7 +499,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/business-name-registration-vs-trademark-filing/",
       "userCanonical": "https://horselegalguide.com/compare/business-name-registration-vs-trademark-filing/",
-      "inspected_at": "2026-10-24T17:29:30.514Z"
+      "inspected_at": "2026-10-26T15:13:57.128Z"
     },
     {
       "url": "https://horselegalguide.com/compare/choice-of-law-clause-vs-venue-clause/",
@@ -498,7 +511,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/choice-of-law-clause-vs-venue-clause/",
       "userCanonical": "https://horselegalguide.com/compare/choice-of-law-clause-vs-venue-clause/",
-      "inspected_at": "2026-10-24T17:29:30.584Z"
+      "inspected_at": "2026-10-26T15:13:57.318Z"
     },
     {
       "url": "https://horselegalguide.com/compare/contract-review-vs-diy-horse-agreement/",
@@ -510,7 +523,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/contract-review-vs-diy-horse-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/contract-review-vs-diy-horse-agreement/",
-      "inspected_at": "2026-10-24T17:29:30.535Z"
+      "inspected_at": "2026-10-26T15:13:57.534Z"
     },
     {
       "url": "https://horselegalguide.com/compare/contract-vs-handshake-deal-horse-sale/",
@@ -522,7 +535,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/contract-vs-handshake-deal-horse-sale/",
       "userCanonical": "https://horselegalguide.com/compare/contract-vs-handshake-deal-horse-sale/",
-      "inspected_at": "2026-10-24T17:29:24.309Z"
+      "inspected_at": "2026-10-26T15:13:52.920Z"
     },
     {
       "url": "https://horselegalguide.com/compare/custom-contract-review-vs-online-legal-template/",
@@ -534,7 +547,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/custom-contract-review-vs-online-legal-template/",
       "userCanonical": "https://horselegalguide.com/compare/custom-contract-review-vs-online-legal-template/",
-      "inspected_at": "2026-10-24T17:29:36.868Z"
+      "inspected_at": "2026-10-26T15:14:03.510Z"
     },
     {
       "url": "https://horselegalguide.com/compare/demand-letter-vs-informal-text-dispute/",
@@ -546,7 +559,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/demand-letter-vs-informal-text-dispute/",
       "userCanonical": "https://horselegalguide.com/compare/demand-letter-vs-informal-text-dispute/",
-      "inspected_at": "2026-10-24T17:29:37.077Z"
+      "inspected_at": "2026-10-26T15:14:06.777Z"
     },
     {
       "url": "https://horselegalguide.com/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/",
@@ -558,7 +571,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/",
       "userCanonical": "https://horselegalguide.com/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/",
-      "inspected_at": "2026-10-24T17:29:36.875Z"
+      "inspected_at": "2026-10-26T15:14:03.836Z"
     },
     {
       "url": "https://horselegalguide.com/compare/demand-letter-vs-lawsuit/",
@@ -570,7 +583,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/demand-letter-vs-lawsuit/",
       "userCanonical": "https://horselegalguide.com/compare/demand-letter-vs-lawsuit/",
-      "inspected_at": "2026-10-24T17:29:36.772Z"
+      "inspected_at": "2026-10-26T15:14:03.322Z"
     },
     {
       "url": "https://horselegalguide.com/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/",
@@ -582,7 +595,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/",
       "userCanonical": "https://horselegalguide.com/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/",
-      "inspected_at": "2026-10-24T17:29:37.055Z"
+      "inspected_at": "2026-10-26T15:14:06.143Z"
     },
     {
       "url": "https://horselegalguide.com/compare/emergency-vet-authorization-vs-owner-consent-clause/",
@@ -594,7 +607,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/emergency-vet-authorization-vs-owner-consent-clause/",
       "userCanonical": "https://horselegalguide.com/compare/emergency-vet-authorization-vs-owner-consent-clause/",
-      "inspected_at": "2026-10-24T17:29:30.664Z"
+      "inspected_at": "2026-10-26T15:13:58.673Z"
     },
     {
       "url": "https://horselegalguide.com/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/",
@@ -606,7 +619,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/",
-      "inspected_at": "2026-10-24T17:29:36.941Z"
+      "inspected_at": "2026-10-26T15:14:04.133Z"
     },
     {
       "url": "https://horselegalguide.com/compare/equine-activity-statute-vs-negligence-claim/",
@@ -618,7 +631,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/equine-activity-statute-vs-negligence-claim/",
       "userCanonical": "https://horselegalguide.com/compare/equine-activity-statute-vs-negligence-claim/",
-      "inspected_at": "2026-10-24T17:29:43.201Z"
+      "inspected_at": "2026-10-26T15:14:09.926Z"
     },
     {
       "url": "https://horselegalguide.com/compare/equine-business-contract-vs-general-business-contract/",
@@ -630,7 +643,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/equine-business-contract-vs-general-business-contract/",
       "userCanonical": "https://horselegalguide.com/compare/equine-business-contract-vs-general-business-contract/",
-      "inspected_at": "2026-10-24T17:29:37.031Z"
+      "inspected_at": "2026-10-26T15:14:05.077Z"
     },
     {
       "url": "https://horselegalguide.com/compare/equine-therapy-consent-form-vs-liability-waiver/",
@@ -642,7 +655,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/equine-therapy-consent-form-vs-liability-waiver/",
       "userCanonical": "https://horselegalguide.com/compare/equine-therapy-consent-form-vs-liability-waiver/",
-      "inspected_at": "2026-10-24T17:29:36.950Z"
+      "inspected_at": "2026-10-26T15:14:04.214Z"
     },
     {
       "url": "https://horselegalguide.com/compare/facility-lease-vs-pasture-lease/",
@@ -654,7 +667,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/facility-lease-vs-pasture-lease/",
       "userCanonical": "https://horselegalguide.com/compare/facility-lease-vs-pasture-lease/",
-      "inspected_at": "2026-10-24T17:29:55.907Z"
+      "inspected_at": "2026-10-26T15:14:22.925Z"
     },
     {
       "url": "https://horselegalguide.com/compare/hold-harmless-clause-vs-indemnity-clause/",
@@ -666,7 +679,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/hold-harmless-clause-vs-indemnity-clause/",
       "userCanonical": "https://horselegalguide.com/compare/hold-harmless-clause-vs-indemnity-clause/",
-      "inspected_at": "2026-10-24T17:29:43.264Z"
+      "inspected_at": "2026-10-26T15:14:10.493Z"
     },
     {
       "url": "https://horselegalguide.com/compare/horse-co-ownership-agreement-vs-syndicate-structure/",
@@ -678,7 +691,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/horse-co-ownership-agreement-vs-syndicate-structure/",
       "userCanonical": "https://horselegalguide.com/compare/horse-co-ownership-agreement-vs-syndicate-structure/",
-      "inspected_at": "2026-10-24T17:29:43.282Z"
+      "inspected_at": "2026-10-26T15:14:10.623Z"
     },
     {
       "url": "https://horselegalguide.com/compare/horse-lease-vs-horse-purchase/",
@@ -690,7 +703,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/horse-lease-vs-horse-purchase/",
       "userCanonical": "https://horselegalguide.com/compare/horse-lease-vs-horse-purchase/",
-      "inspected_at": "2026-10-24T17:29:43.227Z"
+      "inspected_at": "2026-10-26T15:14:10.197Z"
     },
     {
       "url": "https://horselegalguide.com/compare/horse-lease-vs-horse-trial-agreement/",
@@ -702,7 +715,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/horse-lease-vs-horse-trial-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/horse-lease-vs-horse-trial-agreement/",
-      "inspected_at": "2026-10-24T17:29:43.102Z"
+      "inspected_at": "2026-10-26T15:14:09.924Z"
     },
     {
       "url": "https://horselegalguide.com/compare/horse-owner-liability-vs-trainer-liability/",
@@ -714,7 +727,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/horse-owner-liability-vs-trainer-liability/",
       "userCanonical": "https://horselegalguide.com/compare/horse-owner-liability-vs-trainer-liability/",
-      "inspected_at": "2026-10-24T17:29:49.581Z"
+      "inspected_at": "2026-10-26T15:14:16.317Z"
     },
     {
       "url": "https://horselegalguide.com/compare/horse-purchase-agreement-vs-bill-of-sale/",
@@ -726,7 +739,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/horse-purchase-agreement-vs-bill-of-sale/",
       "userCanonical": "https://horselegalguide.com/compare/horse-purchase-agreement-vs-bill-of-sale/",
-      "inspected_at": "2026-10-24T17:29:49.598Z"
+      "inspected_at": "2026-10-26T15:14:17.134Z"
     },
     {
       "url": "https://horselegalguide.com/compare/horse-purchase-deposit-vs-full-payment/",
@@ -738,7 +751,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/horse-purchase-deposit-vs-full-payment/",
       "userCanonical": "https://horselegalguide.com/compare/horse-purchase-deposit-vs-full-payment/",
-      "inspected_at": "2026-10-24T17:29:49.425Z"
+      "inspected_at": "2026-10-26T15:14:16.502Z"
     },
     {
       "url": "https://horselegalguide.com/compare/horse-sale-addendum-vs-new-contract/",
@@ -750,7 +763,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/horse-sale-addendum-vs-new-contract/",
       "userCanonical": "https://horselegalguide.com/compare/horse-sale-addendum-vs-new-contract/",
-      "inspected_at": "2026-10-24T17:29:43.356Z"
+      "inspected_at": "2026-10-26T15:14:11.204Z"
     },
     {
       "url": "https://horselegalguide.com/compare/horse-sale-contract-vs-bill-of-sale/",
@@ -762,7 +775,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/horse-sale-contract-vs-bill-of-sale/",
       "userCanonical": "https://horselegalguide.com/compare/horse-sale-contract-vs-bill-of-sale/",
-      "inspected_at": "2026-10-24T17:29:43.399Z"
+      "inspected_at": "2026-10-26T15:14:12.759Z"
     },
     {
       "url": "https://horselegalguide.com/compare/horse-syndicate-agreement-vs-partnership-agreement/",
@@ -774,7 +787,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/horse-syndicate-agreement-vs-partnership-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/horse-syndicate-agreement-vs-partnership-agreement/",
-      "inspected_at": "2026-10-24T17:29:49.602Z"
+      "inspected_at": "2026-10-26T15:14:16.996Z"
     },
     {
       "url": "https://horselegalguide.com/compare/insurance-certificate-vs-actual-policy-coverage/",
@@ -786,7 +799,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/insurance-certificate-vs-actual-policy-coverage/",
       "userCanonical": "https://horselegalguide.com/compare/insurance-certificate-vs-actual-policy-coverage/",
-      "inspected_at": "2026-10-24T17:29:49.584Z"
+      "inspected_at": "2026-10-26T15:14:16.705Z"
     },
     {
       "url": "https://horselegalguide.com/compare/lease-termination-clause-vs-informal-cancellation/",
@@ -798,7 +811,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/lease-termination-clause-vs-informal-cancellation/",
       "userCanonical": "https://horselegalguide.com/compare/lease-termination-clause-vs-informal-cancellation/",
-      "inspected_at": "2026-10-24T17:29:43.414Z"
+      "inspected_at": "2026-10-26T15:14:13.104Z"
     },
     {
       "url": "https://horselegalguide.com/compare/lease-to-own-vs-buying-outright/",
@@ -810,7 +823,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/lease-to-own-vs-buying-outright/",
       "userCanonical": "https://horselegalguide.com/compare/lease-to-own-vs-buying-outright/",
-      "inspected_at": "2026-10-24T17:29:49.749Z"
+      "inspected_at": "2026-10-26T15:14:19.357Z"
     },
     {
       "url": "https://horselegalguide.com/compare/lease-to-purchase-vs-outright-purchase/",
@@ -822,7 +835,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/lease-to-purchase-vs-outright-purchase/",
       "userCanonical": "https://horselegalguide.com/compare/lease-to-purchase-vs-outright-purchase/",
-      "inspected_at": "2026-10-24T17:29:49.754Z"
+      "inspected_at": "2026-10-26T15:14:19.302Z"
     },
     {
       "url": "https://horselegalguide.com/compare/lease-vs-purchase-horse/",
@@ -834,7 +847,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/lease-vs-purchase-horse/",
       "userCanonical": "https://horselegalguide.com/compare/lease-vs-purchase-horse/",
-      "inspected_at": "2026-10-24T17:29:49.690Z"
+      "inspected_at": "2026-10-26T15:14:17.592Z"
     },
     {
       "url": "https://horselegalguide.com/compare/liability-waiver-vs-insurance-for-horse-activities/",
@@ -846,7 +859,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/liability-waiver-vs-insurance-for-horse-activities/",
       "userCanonical": "https://horselegalguide.com/compare/liability-waiver-vs-insurance-for-horse-activities/",
-      "inspected_at": "2026-10-24T17:29:55.743Z"
+      "inspected_at": "2026-10-26T15:14:22.663Z"
     },
     {
       "url": "https://horselegalguide.com/compare/llc-vs-insurance-for-horse-business-liability/",
@@ -858,7 +871,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/llc-vs-insurance-for-horse-business-liability/",
       "userCanonical": "https://horselegalguide.com/compare/llc-vs-insurance-for-horse-business-liability/",
-      "inspected_at": "2026-10-24T17:29:55.938Z"
+      "inspected_at": "2026-10-26T15:14:23.358Z"
     },
     {
       "url": "https://horselegalguide.com/compare/llc-vs-insurance-for-liability-protection/",
@@ -870,7 +883,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/llc-vs-insurance-for-liability-protection/",
       "userCanonical": "https://horselegalguide.com/compare/llc-vs-insurance-for-liability-protection/",
-      "inspected_at": "2026-10-24T17:29:55.923Z"
+      "inspected_at": "2026-10-26T15:14:23.058Z"
     },
     {
       "url": "https://horselegalguide.com/compare/llc-vs-sole-proprietor-horse-business/",
@@ -882,7 +895,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/llc-vs-sole-proprietor-horse-business/",
       "userCanonical": "https://horselegalguide.com/compare/llc-vs-sole-proprietor-horse-business/",
-      "inspected_at": "2026-10-24T17:29:56.004Z"
+      "inspected_at": "2026-10-26T15:14:24.660Z"
     },
     {
       "url": "https://horselegalguide.com/compare/mediation-vs-litigation-horse-disputes/",
@@ -894,7 +907,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/mediation-vs-litigation-horse-disputes/",
       "userCanonical": "https://horselegalguide.com/compare/mediation-vs-litigation-horse-disputes/",
-      "inspected_at": "2026-10-24T17:29:56.086Z"
+      "inspected_at": "2026-10-26T15:14:25.933Z"
     },
     {
       "url": "https://horselegalguide.com/compare/mediation-vs-litigation-in-a-horse-dispute/",
@@ -906,7 +919,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/mediation-vs-litigation-in-a-horse-dispute/",
       "userCanonical": "https://horselegalguide.com/compare/mediation-vs-litigation-in-a-horse-dispute/",
-      "inspected_at": "2026-10-24T17:29:55.946Z"
+      "inspected_at": "2026-10-26T15:14:23.831Z"
     },
     {
       "url": "https://horselegalguide.com/compare/mediation-vs-litigation-in-horse-disputes/",
@@ -918,7 +931,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/mediation-vs-litigation-in-horse-disputes/",
       "userCanonical": "https://horselegalguide.com/compare/mediation-vs-litigation-in-horse-disputes/",
-      "inspected_at": "2026-10-24T17:30:02.262Z"
+      "inspected_at": "2026-10-26T15:14:29.673Z"
     },
     {
       "url": "https://horselegalguide.com/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/",
@@ -930,7 +943,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/",
       "userCanonical": "https://horselegalguide.com/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/",
-      "inspected_at": "2026-10-24T17:30:02.107Z"
+      "inspected_at": "2026-10-26T15:14:29.253Z"
     },
     {
       "url": "https://horselegalguide.com/compare/photo-release-vs-sponsorship-rights-agreement/",
@@ -942,7 +955,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/photo-release-vs-sponsorship-rights-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/photo-release-vs-sponsorship-rights-agreement/",
-      "inspected_at": "2026-10-24T17:30:02.267Z"
+      "inspected_at": "2026-10-26T15:14:29.803Z"
     },
     {
       "url": "https://horselegalguide.com/compare/pre-purchase-exam-vs-as-is-horse-sale/",
@@ -954,7 +967,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/pre-purchase-exam-vs-as-is-horse-sale/",
       "userCanonical": "https://horselegalguide.com/compare/pre-purchase-exam-vs-as-is-horse-sale/",
-      "inspected_at": "2026-10-24T17:29:56.089Z"
+      "inspected_at": "2026-10-26T15:14:25.686Z"
     },
     {
       "url": "https://horselegalguide.com/compare/pre-purchase-exam-vs-no-exam-legal-risk/",
@@ -966,7 +979,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/pre-purchase-exam-vs-no-exam-legal-risk/",
       "userCanonical": "https://horselegalguide.com/compare/pre-purchase-exam-vs-no-exam-legal-risk/",
-      "inspected_at": "2026-10-24T17:30:02.341Z"
+      "inspected_at": "2026-10-26T15:14:30.738Z"
     },
     {
       "url": "https://horselegalguide.com/compare/private-horse-sale-vs-trainer-assisted-sale/",
@@ -978,7 +991,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/private-horse-sale-vs-trainer-assisted-sale/",
       "userCanonical": "https://horselegalguide.com/compare/private-horse-sale-vs-trainer-assisted-sale/",
-      "inspected_at": "2026-10-24T17:30:20.315Z"
+      "inspected_at": "2026-10-26T15:14:43.328Z"
     },
     {
       "url": "https://horselegalguide.com/compare/purchase-deposit-agreement-vs-refundable-trial-payment/",
@@ -990,7 +1003,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/purchase-deposit-agreement-vs-refundable-trial-payment/",
       "userCanonical": "https://horselegalguide.com/compare/purchase-deposit-agreement-vs-refundable-trial-payment/",
-      "inspected_at": "2026-10-24T17:30:02.236Z"
+      "inspected_at": "2026-10-26T15:14:29.270Z"
     },
     {
       "url": "https://horselegalguide.com/compare/release-form-vs-liability-waiver/",
@@ -1002,7 +1015,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/release-form-vs-liability-waiver/",
       "userCanonical": "https://horselegalguide.com/compare/release-form-vs-liability-waiver/",
-      "inspected_at": "2026-10-24T17:30:02.365Z"
+      "inspected_at": "2026-10-26T15:14:31.178Z"
     },
     {
       "url": "https://horselegalguide.com/compare/release-of-claims-vs-settlement-agreement/",
@@ -1014,7 +1027,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/release-of-claims-vs-settlement-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/release-of-claims-vs-settlement-agreement/",
-      "inspected_at": "2026-10-24T17:30:08.586Z"
+      "inspected_at": "2026-10-26T15:14:35.450Z"
     },
     {
       "url": "https://horselegalguide.com/compare/retainer-agreement-vs-consultation-call/",
@@ -1026,7 +1039,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/retainer-agreement-vs-consultation-call/",
       "userCanonical": "https://horselegalguide.com/compare/retainer-agreement-vs-consultation-call/",
-      "inspected_at": "2026-10-24T17:30:08.612Z"
+      "inspected_at": "2026-10-26T15:14:35.855Z"
     },
     {
       "url": "https://horselegalguide.com/compare/risk-of-loss-clause-vs-possession-transfer/",
@@ -1038,7 +1051,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/risk-of-loss-clause-vs-possession-transfer/",
       "userCanonical": "https://horselegalguide.com/compare/risk-of-loss-clause-vs-possession-transfer/",
-      "inspected_at": "2026-10-24T17:30:08.703Z"
+      "inspected_at": "2026-10-26T15:14:36.279Z"
     },
     {
       "url": "https://horselegalguide.com/compare/sale-disclosure-form-vs-veterinary-records/",
@@ -1050,7 +1063,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/sale-disclosure-form-vs-veterinary-records/",
       "userCanonical": "https://horselegalguide.com/compare/sale-disclosure-form-vs-veterinary-records/",
-      "inspected_at": "2026-10-24T17:30:02.446Z"
+      "inspected_at": "2026-10-26T15:14:31.857Z"
     },
     {
       "url": "https://horselegalguide.com/compare/sole-proprietor-vs-llc-for-a-horse-business/",
@@ -1062,7 +1075,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/sole-proprietor-vs-llc-for-a-horse-business/",
       "userCanonical": "https://horselegalguide.com/compare/sole-proprietor-vs-llc-for-a-horse-business/",
-      "inspected_at": "2026-10-24T17:30:08.741Z"
+      "inspected_at": "2026-10-26T15:14:37.102Z"
     },
     {
       "url": "https://horselegalguide.com/compare/sponsor-deliverables-schedule-vs-general-sponsorship-promise/",
@@ -1074,7 +1087,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/sponsor-deliverables-schedule-vs-general-sponsorship-promise/",
       "userCanonical": "https://horselegalguide.com/compare/sponsor-deliverables-schedule-vs-general-sponsorship-promise/",
-      "inspected_at": "2026-10-24T17:30:08.430Z"
+      "inspected_at": "2026-10-26T15:14:32.141Z"
     },
     {
       "url": "https://horselegalguide.com/compare/sponsorship-agreement-vs-brand-ambassador-agreement/",
@@ -1086,7 +1099,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/sponsorship-agreement-vs-brand-ambassador-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/sponsorship-agreement-vs-brand-ambassador-agreement/",
-      "inspected_at": "2026-10-24T17:30:14.932Z"
+      "inspected_at": "2026-10-26T15:14:41.978Z"
     },
     {
       "url": "https://horselegalguide.com/compare/sponsorship-agreement-vs-simple-email-agreement/",
@@ -1098,7 +1111,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/sponsorship-agreement-vs-simple-email-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/sponsorship-agreement-vs-simple-email-agreement/",
-      "inspected_at": "2026-10-24T17:30:14.923Z"
+      "inspected_at": "2026-10-26T15:14:38.393Z"
     },
     {
       "url": "https://horselegalguide.com/compare/stable-rules-document-vs-boarding-contract/",
@@ -1110,7 +1123,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/stable-rules-document-vs-boarding-contract/",
       "userCanonical": "https://horselegalguide.com/compare/stable-rules-document-vs-boarding-contract/",
-      "inspected_at": "2026-10-24T17:30:08.808Z"
+      "inspected_at": "2026-10-26T15:14:37.784Z"
     },
     {
       "url": "https://horselegalguide.com/compare/state-equine-liability-act-vs-private-contract/",
@@ -1122,7 +1135,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/state-equine-liability-act-vs-private-contract/",
       "userCanonical": "https://horselegalguide.com/compare/state-equine-liability-act-vs-private-contract/",
-      "inspected_at": "2026-10-24T17:30:08.598Z"
+      "inspected_at": "2026-10-26T15:14:35.687Z"
     },
     {
       "url": "https://horselegalguide.com/compare/statutory-warning-signs-vs-liability-waivers/",
@@ -1134,7 +1147,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/statutory-warning-signs-vs-liability-waivers/",
       "userCanonical": "https://horselegalguide.com/compare/statutory-warning-signs-vs-liability-waivers/",
-      "inspected_at": "2026-10-24T17:30:15.125Z"
+      "inspected_at": "2026-10-26T15:14:42.247Z"
     },
     {
       "url": "https://horselegalguide.com/compare/template-contract-vs-custom-horse-contract/",
@@ -1146,7 +1159,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/template-contract-vs-custom-horse-contract/",
       "userCanonical": "https://horselegalguide.com/compare/template-contract-vs-custom-horse-contract/",
-      "inspected_at": "2026-10-24T17:30:14.776Z"
+      "inspected_at": "2026-10-26T15:14:38.166Z"
     },
     {
       "url": "https://horselegalguide.com/compare/template-horse-contract-vs-custom-horse-contract/",
@@ -1158,7 +1171,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/template-horse-contract-vs-custom-horse-contract/",
       "userCanonical": "https://horselegalguide.com/compare/template-horse-contract-vs-custom-horse-contract/",
-      "inspected_at": "2026-10-24T17:30:15.056Z"
+      "inspected_at": "2026-10-26T15:14:41.932Z"
     },
     {
       "url": "https://horselegalguide.com/compare/text-message-agreement-vs-signed-contract/",
@@ -1170,7 +1183,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/text-message-agreement-vs-signed-contract/",
       "userCanonical": "https://horselegalguide.com/compare/text-message-agreement-vs-signed-contract/",
-      "inspected_at": "2026-10-24T17:30:21.132Z"
+      "inspected_at": "2026-10-26T15:14:44.605Z"
     },
     {
       "url": "https://horselegalguide.com/compare/therapy-program-waiver-vs-general-barn-waiver/",
@@ -1182,7 +1195,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/therapy-program-waiver-vs-general-barn-waiver/",
       "userCanonical": "https://horselegalguide.com/compare/therapy-program-waiver-vs-general-barn-waiver/",
-      "inspected_at": "2026-10-24T17:30:15.174Z"
+      "inspected_at": "2026-10-26T15:14:42.525Z"
     },
     {
       "url": "https://horselegalguide.com/compare/trademark-vs-llc-name-for-an-equestrian-business/",
@@ -1194,7 +1207,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/trademark-vs-llc-name-for-an-equestrian-business/",
       "userCanonical": "https://horselegalguide.com/compare/trademark-vs-llc-name-for-an-equestrian-business/",
-      "inspected_at": "2026-10-24T17:30:21.473Z"
+      "inspected_at": "2026-10-26T15:14:48.520Z"
     },
     {
       "url": "https://horselegalguide.com/compare/trademark-vs-llc-name-horse-business/",
@@ -1206,7 +1219,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/trademark-vs-llc-name-horse-business/",
       "userCanonical": "https://horselegalguide.com/compare/trademark-vs-llc-name-horse-business/",
-      "inspected_at": "2026-10-24T17:30:21.287Z"
+      "inspected_at": "2026-10-26T15:14:44.754Z"
     },
     {
       "url": "https://horselegalguide.com/compare/trainer-agreement-vs-boarding-agreement/",
@@ -1218,7 +1231,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/trainer-agreement-vs-boarding-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/trainer-agreement-vs-boarding-agreement/",
-      "inspected_at": "2026-10-24T17:30:21.127Z"
+      "inspected_at": "2026-10-26T15:14:43.936Z"
     },
     {
       "url": "https://horselegalguide.com/compare/trainer-liability-vs-owner-liability/",
@@ -1230,7 +1243,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/trainer-liability-vs-owner-liability/",
       "userCanonical": "https://horselegalguide.com/compare/trainer-liability-vs-owner-liability/",
-      "inspected_at": "2026-10-24T17:30:21.390Z"
+      "inspected_at": "2026-10-26T15:14:48.223Z"
     },
     {
       "url": "https://horselegalguide.com/compare/training-fee-agreement-vs-commission-agreement/",
@@ -1242,7 +1255,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/training-fee-agreement-vs-commission-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/training-fee-agreement-vs-commission-agreement/",
-      "inspected_at": "2026-10-24T17:30:21.309Z"
+      "inspected_at": "2026-10-26T15:14:48.588Z"
     },
     {
       "url": "https://horselegalguide.com/compare/trial-agreement-vs-lease-agreement/",
@@ -1254,7 +1267,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/trial-agreement-vs-lease-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/trial-agreement-vs-lease-agreement/",
-      "inspected_at": "2026-10-24T17:30:21.499Z"
+      "inspected_at": "2026-10-26T15:14:49.084Z"
     },
     {
       "url": "https://horselegalguide.com/compare/trial-period-vs-lease-to-own-horse-arrangement/",
@@ -1266,7 +1279,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/trial-period-vs-lease-to-own-horse-arrangement/",
       "userCanonical": "https://horselegalguide.com/compare/trial-period-vs-lease-to-own-horse-arrangement/",
-      "inspected_at": "2026-10-24T17:30:27.491Z"
+      "inspected_at": "2026-10-26T15:14:50.567Z"
     },
     {
       "url": "https://horselegalguide.com/compare/use-of-image-rights-vs-copyright-ownership/",
@@ -1278,7 +1291,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/use-of-image-rights-vs-copyright-ownership/",
       "userCanonical": "https://horselegalguide.com/compare/use-of-image-rights-vs-copyright-ownership/",
-      "inspected_at": "2026-10-24T17:30:27.584Z"
+      "inspected_at": "2026-10-26T15:14:50.969Z"
     },
     {
       "url": "https://horselegalguide.com/compare/verbal-horse-agreement-vs-written-horse-agreement/",
@@ -1290,7 +1303,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/verbal-horse-agreement-vs-written-horse-agreement/",
       "userCanonical": "https://horselegalguide.com/compare/verbal-horse-agreement-vs-written-horse-agreement/",
-      "inspected_at": "2026-10-24T17:30:26.630Z"
+      "inspected_at": "2026-10-26T15:14:49.589Z"
     },
     {
       "url": "https://horselegalguide.com/compare/waiver-vs-insurance-horse-liability/",
@@ -1302,7 +1315,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/waiver-vs-insurance-horse-liability/",
       "userCanonical": "https://horselegalguide.com/compare/waiver-vs-insurance-horse-liability/",
-      "inspected_at": "2026-10-24T17:30:27.988Z"
+      "inspected_at": "2026-10-26T15:14:55.340Z"
     },
     {
       "url": "https://horselegalguide.com/compare/warning-sign-compliance-vs-signed-waiver/",
@@ -1326,7 +1339,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/compare/written-horse-contract-vs-handshake-deal/",
       "userCanonical": "https://horselegalguide.com/compare/written-horse-contract-vs-handshake-deal/",
-      "inspected_at": "2026-10-24T17:30:27.732Z"
+      "inspected_at": "2026-10-26T15:14:54.879Z"
     },
     {
       "url": "https://horselegalguide.com/coverage/",
@@ -1338,7 +1351,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/coverage/",
       "userCanonical": "https://horselegalguide.com/coverage/",
-      "inspected_at": "2026-10-24T17:30:27.670Z"
+      "inspected_at": "2026-10-26T15:14:54.670Z"
     },
     {
       "url": "https://horselegalguide.com/disclaimer/",
@@ -1350,7 +1363,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/disclaimer/",
       "userCanonical": "https://horselegalguide.com/disclaimer/",
-      "inspected_at": "2026-10-24T17:30:27.632Z"
+      "inspected_at": "2026-10-26T15:14:50.911Z"
     },
     {
       "url": "https://horselegalguide.com/disputes/can-a-contract-dispute-be-resolved-without-court/",
@@ -1362,7 +1375,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/disputes/can-a-contract-dispute-be-resolved-without-court/",
       "userCanonical": "https://horselegalguide.com/disputes/can-a-contract-dispute-be-resolved-without-court/",
-      "inspected_at": "2026-10-24T17:30:27.838Z"
+      "inspected_at": "2026-10-26T15:14:54.810Z"
     },
     {
       "url": "https://horselegalguide.com/disputes/can-i-ignore-a-demand-letter/",
@@ -1386,7 +1399,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
       "userCanonical": "https://horselegalguide.com/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
-      "inspected_at": "2026-10-24T17:30:33.957Z"
+      "inspected_at": "2026-10-26T15:14:56.721Z"
     },
     {
       "url": "https://horselegalguide.com/disputes/how-serious-is-a-legal-demand-letter/",
@@ -1434,7 +1447,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/faq/",
       "userCanonical": "https://horselegalguide.com/faq/",
-      "inspected_at": "2026-10-24T17:30:33.909Z"
+      "inspected_at": "2026-10-26T15:14:55.998Z"
     },
     {
       "url": "https://horselegalguide.com/faq/can-a-buyer-return-a-horse-after-purchase/",
@@ -2490,7 +2503,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/",
       "userCanonical": "https://horselegalguide.com/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/",
-      "inspected_at": "2026-10-24T17:28:52.376Z"
+      "inspected_at": "2026-10-26T15:13:19.258Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/a-barn-wants-to-remove-a-difficult-boarder-what-should-be-checked/",
@@ -3462,7 +3475,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/someone-copied-my-barn-name-online-what-should-i-gather/",
       "userCanonical": "https://horselegalguide.com/scenario/someone-copied-my-barn-name-online-what-should-i-gather/",
-      "inspected_at": "2026-10-23T18:26:25.085Z"
+      "inspected_at": "2026-10-26T15:13:00.096Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/",
@@ -3474,7 +3487,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/",
       "userCanonical": "https://horselegalguide.com/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/",
-      "inspected_at": "2026-10-23T18:26:21.785Z"
+      "inspected_at": "2026-10-26T15:12:59.895Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/",
@@ -3486,7 +3499,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/",
       "userCanonical": "https://horselegalguide.com/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/",
-      "inspected_at": "2026-10-23T18:26:25.098Z"
+      "inspected_at": "2026-10-26T15:13:00.039Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/",
@@ -3522,7 +3535,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
       "userCanonical": "https://horselegalguide.com/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
-      "inspected_at": "2026-10-23T18:26:25.128Z"
+      "inspected_at": "2026-10-26T15:13:00.004Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
@@ -3534,7 +3547,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
       "userCanonical": "https://horselegalguide.com/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
-      "inspected_at": "2026-10-23T18:26:25.092Z"
+      "inspected_at": "2026-10-26T15:12:59.852Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/",
@@ -3546,7 +3559,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/",
       "userCanonical": "https://horselegalguide.com/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/",
-      "inspected_at": "2026-10-23T18:26:25.193Z"
+      "inspected_at": "2026-10-26T15:13:06.053Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-seller-refuses-to-take-the-horse-back-what-matters/",
@@ -3558,7 +3571,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/the-seller-refuses-to-take-the-horse-back-what-matters/",
       "userCanonical": "https://horselegalguide.com/scenario/the-seller-refuses-to-take-the-horse-back-what-matters/",
-      "inspected_at": "2026-10-23T18:26:25.101Z"
+      "inspected_at": "2026-10-26T15:12:59.854Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/",
@@ -3570,7 +3583,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/",
       "userCanonical": "https://horselegalguide.com/scenario/the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/",
-      "inspected_at": "2026-10-23T18:26:31.439Z"
+      "inspected_at": "2026-10-26T15:13:06.484Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
@@ -3582,7 +3595,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
       "userCanonical": "https://horselegalguide.com/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
-      "inspected_at": "2026-10-23T18:26:25.102Z"
+      "inspected_at": "2026-10-26T15:13:00.006Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
@@ -3594,7 +3607,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
       "userCanonical": "https://horselegalguide.com/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
-      "inspected_at": "2026-10-23T18:26:31.433Z"
+      "inspected_at": "2026-10-26T15:13:06.286Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
@@ -3606,7 +3619,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
       "userCanonical": "https://horselegalguide.com/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
-      "inspected_at": "2026-10-23T18:26:28.128Z"
+      "inspected_at": "2026-10-26T15:13:06.287Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-if-i-already-signed-something-i-did-not-understand/",
@@ -3618,7 +3631,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-if-i-already-signed-something-i-did-not-understand/",
       "userCanonical": "https://horselegalguide.com/scenario/what-if-i-already-signed-something-i-did-not-understand/",
-      "inspected_at": "2026-10-23T18:26:31.449Z"
+      "inspected_at": "2026-10-26T15:13:06.257Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-if-i-bought-a-horse-without-a-contract/",
@@ -3630,7 +3643,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-if-i-bought-a-horse-without-a-contract/",
       "userCanonical": "https://horselegalguide.com/scenario/what-if-i-bought-a-horse-without-a-contract/",
-      "inspected_at": "2026-10-23T18:26:31.437Z"
+      "inspected_at": "2026-10-26T15:13:06.414Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-if-i-sold-a-horse-without-a-contract/",
@@ -3642,7 +3655,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-if-i-sold-a-horse-without-a-contract/",
       "userCanonical": "https://horselegalguide.com/scenario/what-if-i-sold-a-horse-without-a-contract/",
-      "inspected_at": "2026-10-23T18:26:31.530Z"
+      "inspected_at": "2026-10-26T15:13:12.270Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
@@ -3654,7 +3667,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
       "userCanonical": "https://horselegalguide.com/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
-      "inspected_at": "2026-10-23T18:26:31.486Z"
+      "inspected_at": "2026-10-26T15:13:06.817Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-should-a-barn-document-before-claiming-a-lien-or-sale-right/",
@@ -3666,7 +3679,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-should-a-barn-document-before-claiming-a-lien-or-sale-right/",
       "userCanonical": "https://horselegalguide.com/scenario/what-should-a-barn-document-before-claiming-a-lien-or-sale-right/",
-      "inspected_at": "2026-10-23T18:26:37.765Z"
+      "inspected_at": "2026-10-26T15:13:13.033Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
@@ -3678,7 +3691,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
       "userCanonical": "https://horselegalguide.com/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
-      "inspected_at": "2026-10-23T18:26:37.771Z"
+      "inspected_at": "2026-10-26T15:13:12.654Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-should-i-document-after-a-rider-injury-at-the-barn/",
@@ -3690,7 +3703,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-should-i-document-after-a-rider-injury-at-the-barn/",
       "userCanonical": "https://horselegalguide.com/scenario/what-should-i-document-after-a-rider-injury-at-the-barn/",
-      "inspected_at": "2026-10-23T18:26:34.477Z"
+      "inspected_at": "2026-10-26T15:13:12.585Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-should-i-gather-before-asking-for-a-refund-after-a-horse-sale/",
@@ -3702,7 +3715,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-should-i-gather-before-asking-for-a-refund-after-a-horse-sale/",
       "userCanonical": "https://horselegalguide.com/scenario/what-should-i-gather-before-asking-for-a-refund-after-a-horse-sale/",
-      "inspected_at": "2026-10-23T18:26:37.744Z"
+      "inspected_at": "2026-10-26T15:13:12.693Z"
     },
     {
       "url": "https://horselegalguide.com/scenario/what-should-i-gather-before-responding-to-a-demand-letter/",
@@ -3714,7 +3727,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/scenario/what-should-i-gather-before-responding-to-a-demand-letter/",
       "userCanonical": "https://horselegalguide.com/scenario/what-should-i-gather-before-responding-to-a-demand-letter/",
-      "inspected_at": "2026-10-23T18:26:31.406Z"
+      "inspected_at": "2026-10-26T15:13:06.207Z"
     },
     {
       "url": "https://horselegalguide.com/state/",
@@ -3726,7 +3739,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/state/",
       "userCanonical": "https://horselegalguide.com/state/",
-      "inspected_at": "2026-10-23T18:26:37.811Z"
+      "inspected_at": "2026-10-26T15:13:13.334Z"
     },
     {
       "url": "https://horselegalguide.com/state/illinois/what-does-illinois-equine-liability-law-cover/",
@@ -3738,7 +3751,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/state/illinois/what-does-illinois-equine-liability-law-cover/",
       "userCanonical": "https://horselegalguide.com/state/illinois/what-does-illinois-equine-liability-law-cover/",
-      "inspected_at": "2026-10-23T18:26:37.789Z"
+      "inspected_at": "2026-10-26T15:13:12.678Z"
     },
     {
       "url": "https://horselegalguide.com/state/north-carolina/do-i-need-a-horse-sale-contract/",
@@ -3750,7 +3763,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/state/north-carolina/do-i-need-a-horse-sale-contract/",
       "userCanonical": "https://horselegalguide.com/state/north-carolina/do-i-need-a-horse-sale-contract/",
-      "inspected_at": "2026-10-24T17:28:52.393Z"
+      "inspected_at": "2026-10-26T15:13:19.377Z"
     },
     {
       "url": "https://horselegalguide.com/state/north-carolina/do-i-need-warning-signs/",
@@ -3762,7 +3775,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/state/north-carolina/do-i-need-warning-signs/",
       "userCanonical": "https://horselegalguide.com/state/north-carolina/do-i-need-warning-signs/",
-      "inspected_at": "2026-10-23T18:26:37.800Z"
+      "inspected_at": "2026-10-26T15:13:12.939Z"
     },
     {
       "url": "https://horselegalguide.com/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
@@ -3774,7 +3787,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
       "userCanonical": "https://horselegalguide.com/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
-      "inspected_at": "2026-10-24T17:28:52.376Z"
+      "inspected_at": "2026-10-26T15:13:19.053Z"
     },
     {
       "url": "https://horselegalguide.com/state/south-carolina/can-i-be-sued-if-i-have-a-waiver/",
@@ -3786,7 +3799,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/state/south-carolina/can-i-be-sued-if-i-have-a-waiver/",
       "userCanonical": "https://horselegalguide.com/state/south-carolina/can-i-be-sued-if-i-have-a-waiver/",
-      "inspected_at": "2026-10-24T17:28:52.339Z"
+      "inspected_at": "2026-10-26T15:13:18.596Z"
     },
     {
       "url": "https://horselegalguide.com/state/south-carolina/do-i-need-a-liability-waiver/",
@@ -3798,7 +3811,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/state/south-carolina/do-i-need-a-liability-waiver/",
       "userCanonical": "https://horselegalguide.com/state/south-carolina/do-i-need-a-liability-waiver/",
-      "inspected_at": "2026-10-24T17:28:52.434Z"
+      "inspected_at": "2026-10-26T15:13:19.746Z"
     },
     {
       "url": "https://horselegalguide.com/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
@@ -3810,7 +3823,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
       "userCanonical": "https://horselegalguide.com/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
-      "inspected_at": "2026-10-24T17:28:52.428Z"
+      "inspected_at": "2026-10-26T15:13:19.718Z"
     },
     {
       "url": "https://horselegalguide.com/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
@@ -3822,7 +3835,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
       "userCanonical": "https://horselegalguide.com/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
-      "inspected_at": "2026-10-24T17:28:58.739Z"
+      "inspected_at": "2026-10-26T15:13:25.759Z"
     },
     {
       "url": "https://horselegalguide.com/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
@@ -3834,7 +3847,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
       "userCanonical": "https://horselegalguide.com/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
-      "inspected_at": "2026-10-24T17:28:58.713Z"
+      "inspected_at": "2026-10-26T15:13:25.182Z"
     },
     {
       "url": "https://horselegalguide.com/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
@@ -3846,7 +3859,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
       "userCanonical": "https://horselegalguide.com/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
-      "inspected_at": "2026-10-24T17:28:58.703Z"
+      "inspected_at": "2026-10-26T15:13:25.199Z"
     },
     {
       "url": "https://horselegalguide.com/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
@@ -3858,7 +3871,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
       "userCanonical": "https://horselegalguide.com/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
-      "inspected_at": "2026-10-24T17:28:52.371Z"
+      "inspected_at": "2026-10-26T15:13:18.972Z"
     },
     {
       "url": "https://horselegalguide.com/whitepapers/",
@@ -3870,7 +3883,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/whitepapers/",
       "userCanonical": "https://horselegalguide.com/whitepapers/",
-      "inspected_at": "2026-10-24T17:28:52.401Z"
+      "inspected_at": "2026-10-26T15:13:19.358Z"
     },
     {
       "url": "https://horselegalguide.com/whitepapers/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/",
@@ -3882,7 +3895,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/whitepapers/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/",
       "userCanonical": "https://horselegalguide.com/whitepapers/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/",
-      "inspected_at": "2026-10-24T17:28:58.768Z"
+      "inspected_at": "2026-10-26T15:13:26.298Z"
     },
     {
       "url": "https://horselegalguide.com/whitepapers/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
@@ -3894,7 +3907,7 @@
       "robotsTxtState": "ALLOWED",
       "googleCanonical": "https://horselegalguide.com/whitepapers/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
       "userCanonical": "https://horselegalguide.com/whitepapers/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
-      "inspected_at": "2026-10-24T17:28:58.727Z"
+      "inspected_at": "2026-10-26T15:13:25.637Z"
     }
   ]
 }

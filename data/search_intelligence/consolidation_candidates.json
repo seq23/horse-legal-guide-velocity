@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0",
   "status": "LIST_ONLY_NO_REDIRECTS",
-  "gsc_window": "2026-09-25..2026-10-22",
-  "coverage_collected_at": "2026-10-25T17:42:24.409Z",
+  "gsc_window": "2026-09-26..2026-10-23",
+  "coverage_collected_at": "2026-10-26T15:14:56.721Z",
   "rule": "Sitemap leaf pages with 0 impressions in the 28-day export and fewer than 800 visible words in the built page. Nothing is redirected or removed by this file.",
   "thin_word_threshold": 800,
-  "sitemap_url_count": 323,
-  "candidate_count": 24,
+  "sitemap_url_count": 324,
+  "candidate_count": 27,
   "candidates_by_hub": {
-    "none": 1,
+    "none": 2,
     "/hubs/therapeutic-riding-and-hipaa/": 2,
-    "/hubs/intellectual-property-and-brand/": 4,
+    "/hubs/intellectual-property-and-brand/": 5,
     "/hubs/demand-letters-and-disputes/": 5,
-    "/hubs/liability-waivers-insurance/": 5,
+    "/hubs/liability-waivers-insurance/": 6,
     "/hubs/equine-business-formation/": 3,
     "/hubs/horse-sale-and-purchase/": 3,
     "/hubs/boarding-training-and-barn-operations/": 1
@@ -23,6 +23,14 @@
       "word_count": 131,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/about/",
+      "word_count": 390,
+      "impressions_28d": 0,
+      "coverage_state": "URL is unknown to Google",
       "fold_into": null,
       "fold_basis": "no page target; section index"
     },
@@ -171,6 +179,14 @@
       "fold_basis": "page target cluster horse-sale-and-purchase"
     },
     {
+      "route": "/ip/how-do-i-protect-my-horse-business-brand/",
+      "word_count": 767,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
       "route": "/faq/do-i-need-a-contract-to-sell-a-horse/",
       "word_count": 769,
       "impressions_28d": 0,
@@ -193,6 +209,14 @@
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/boarding-training-and-barn-operations/",
       "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
+      "word_count": 781,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
     },
     {
       "route": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
