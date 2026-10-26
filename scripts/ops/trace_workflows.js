@@ -51,6 +51,7 @@ function classifyWorkflow(name) {
   if (name.includes('query-intelligence')) return 'provider-fed recommendations and owner-selected pending draft admission only';
   if (name.includes('page-remediation')) return 'owner-approved existing-page remediation with separate approve and apply gates';
   if (name.includes('approved-content-email')) return 'approved-content social copy email notification to Claire';
+  if (name.includes('live-smoke-check')) return 'post-deploy live check of the deployed origin; reads the edge, mutates nothing';
   return 'workflow lane';
 }
 function main() {

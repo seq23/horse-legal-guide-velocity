@@ -1,0 +1,47 @@
+name: Live Smoke Check
+
+# Post-deploy live check. Search Readiness Checklist item h4: "The build can
+# pass and the edge can still serve the wrong thing (a Worker that 301'd
+# robots.txt did)."
+#
+# Every other gate in this repository reads dist/. This one reads the deployed
+# origin, after a deploy, so a difference between what the build produced and
+# what Cloudflare serves fails here instead of being found weeks later in a
+# search console. It mutates nothing and needs no secrets.
+on:
+  workflow_run:
+    workflows: ["Deploy Distribution"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      origin:
+        description: Origin to check (defaults to the configured site domain)
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: horse-legal-guide-live-smoke-check
+  cancel-in-progress: true
+
+jobs:
+  live-smoke-check:
+    # The check is ~20 network round trips; 10 minutes is a fault detector for a
+    # hung edge, not a budget. Revisit once it has a run history.
+    timeout-minutes: 10
+    # A deploy that failed has nothing to smoke-check; a dispatch always runs.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: ${{ github.event.inputs.origin != '' && github.event.inputs.origin || 'https://horselegalguide.com' }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - name: Check the live site
+        run: npm run live:smoke-check

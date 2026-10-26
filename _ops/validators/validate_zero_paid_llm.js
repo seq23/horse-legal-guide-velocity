@@ -14,7 +14,11 @@
  *      invokes a probe script or sets CONFIRM_PAID;
  *   E. a scheduled workflow passes a model key other than OPENROUTER_API_KEY,
  *      or passes OPENROUTER_API_KEY anywhere but a step that runs a registered
- *      free-router consumer.
+ *      free-router consumer;
+ *   F. the policy is not written where the next agent in the repo will find it:
+ *      docs/cost/zero-paid-llm.md missing, or CLAUDE.md not saying "nothing
+ *      paid". Search Readiness Checklist item i10 - "a rule no code reads is a
+ *      wish". This section is the code that reads it.
  * Usage: node validate_zero_paid_llm.js [repo-root]
  */
 const fs = require('fs');
@@ -144,9 +148,33 @@ for (const wf of wfs) {
   });
 }
 
+// ------------------------------------------------- F. the rule is written down
+// A guard the next agent cannot find is a guard they will work around. The
+// accounting lives in docs/cost/zero-paid-llm.md and the standing rule lives in
+// CLAUDE.md, where an agent opening the repo reads it first.
+const POLICY_DOC = 'docs/cost/zero-paid-llm.md';
+if (!exists(POLICY_DOC)) {
+  fail(`${POLICY_DOC} is missing; the zero-paid accounting has nowhere to live`);
+} else if (!read(POLICY_DOC).trim()) {
+  fail(`${POLICY_DOC} is empty`);
+}
+if (!exists('CLAUDE.md')) {
+  fail('CLAUDE.md is missing; the "nothing paid" rule has nowhere an agent reads it first');
+} else {
+  const claude = read('CLAUDE.md');
+  // The phrase has to be the POLICY, stated as its own heading and assertion -
+  // not any mention of it. A first pass here matched /nothing paid/i anywhere
+  // in the file, so replacing the assertion with "Everything billable." still
+  // passed: the sentence describing this very check mentioned the phrase, and
+  // the gate read its own prose back to itself. Both anchors are required.
+  if (!/^##+\s+Nothing paid\s*$/im.test(claude)) fail('CLAUDE.md has no "## Nothing paid" section; the policy every gate above enforces is not written where an agent opening the repo will read it');
+  if (!/^\s*\*\*Nothing paid\.\*\*/im.test(claude)) fail('CLAUDE.md does not assert "**Nothing paid.**" as a standalone statement; a mention of the phrase elsewhere in the file is not the rule');
+  if (!claude.includes(POLICY_DOC)) fail(`CLAUDE.md does not point at ${POLICY_DOC}, so the rule and its accounting can drift apart`);
+}
+
 if (problems.length) {
   console.error(`zero-paid-llm: ${problems.length} problem(s)`);
   for (const p of problems) console.error(`  - ${p}`);
   process.exit(1);
 }
-console.log(`zero-paid-llm OK: ${(cfg.free_models || []).length} free models (snapshot ${cfg.pricing_snapshot.fetched_at}), ${lanes.length} probe lane(s) dispatch-only behind confirm_paid, ${consumers.length} free-router consumer(s), ${files.length} scripts and ${wfs.length} workflows scanned.`);
+console.log(`zero-paid-llm OK: ${(cfg.free_models || []).length} free models (snapshot ${cfg.pricing_snapshot.fetched_at}), ${lanes.length} probe lane(s) dispatch-only behind confirm_paid, ${consumers.length} free-router consumer(s), ${files.length} scripts and ${wfs.length} workflows scanned; "nothing paid" stated in CLAUDE.md and accounted for in ${POLICY_DOC}.`);

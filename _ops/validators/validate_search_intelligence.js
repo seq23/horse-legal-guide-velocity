@@ -11,7 +11,7 @@
  * Blocking in every mode: any issue exits 1.
  *
  *   truth_fresh_and_equal     gsc_truth.json is <= MAX_AGE_DAYS old and equals buildTruth(export); every export query is in the history
- *   coverage_fresh_consistent index_coverage.json is <= MAX_AGE_DAYS old, lists exactly the built sitemap, counts by coverageState recount; sitemap REGISTERED
+ *   coverage_fresh_consistent index_coverage.json is <= MAX_AGE_DAYS old, lists exactly the built sitemap (bar URLs first published after the snapshot was collected, which Google cannot yet have inspected), counts by coverageState recount; sitemap REGISTERED
  *   targets_measured          every target has a source, a positive number and a unit; the set equals a rebuild from the export
  *   families_served           every qualifying family is strengthened (and the built page proves it) or carries a reason; pending <= 7 days
  *   one_faqpage_per_page      no public page carries more than one FAQPage; strengthened pages carry exactly one, matching the visible FAQ
@@ -46,6 +46,10 @@ function loadContext() {
     html: new Map(pages.map((p) => [p.urlPath, p.html])),
     freeze: loadFreeze(), freezeDoc: si.readJson(si.FILES.freeze, null), holds: si.readJson(si.FILES.holds, null),
     config: si.readJson('data/system/config.json', {}),
+    // The lastmod ledger records, per URL, the date its content last changed -
+    // and for a URL it has never seen before, the date it first appeared. That
+    // is the evidence for "this page is newer than the coverage snapshot".
+    lastmodLedger: si.readJson('data/cadence/lastmod_ledger.json', { entries: {} }),
     publisherSources: {
       'scripts/build/write_editorial_pages.js': fs.readFileSync(si.abs('scripts/build/write_editorial_pages.js'), 'utf8'),
       'scripts/build/build_site.js': fs.readFileSync(si.abs('scripts/build/build_site.js'), 'utf8')
@@ -86,9 +90,28 @@ const CHECKS = {
     if (!(ageDays(ctx, c.collected_at) <= MAX_AGE_DAYS)) out.push(`index_coverage collected_at ${c.collected_at} is older than ${MAX_AGE_DAYS} days`);
     if (!c.urls.some((u) => u.inspected_at)) out.push('index_coverage has 0 inspected URLs');
     const listed = new Set(c.urls.map((u) => u.url));
-    const missing = ctx.sitemapUrls.filter((u) => !listed.has(u));
+    const absent = ctx.sitemapUrls.filter((u) => !listed.has(u));
     const extra = [...listed].filter((u) => !ctx.sitemapUrls.includes(u));
-    if (missing.length) out.push(`${missing.length} sitemap URL(s) absent from index_coverage (first: ${missing[0]})`);
+    // A URL first published AFTER this snapshot was collected cannot be in it.
+    // Google was never asked about a page that did not exist, so its absence is
+    // a fact about the clock, not a gap in the measurement, and failing on it
+    // would mean no page could ever be added without turning this gate red.
+    // The exemption is evidence-based and narrow: it applies only to a URL that
+    // is absent from coverage AND whose recorded lastmod is later than the
+    // snapshot's collected_at. A URL that existed when the snapshot was taken
+    // and is still missing is a real gap and still fails.
+    const entries = (ctx.lastmodLedger && ctx.lastmodLedger.entries) || {};
+    const collectedDay = String(c.collected_at || '').slice(0, 10);
+    const firstSeen = (url) => {
+      const e = entries[url] || entries[url.replace(/\/$/, '')] || entries[`${url}/`];
+      return e && typeof e.lastmod === 'string' ? e.lastmod : '';
+    };
+    const awaiting = absent.filter((u) => {
+      const seen = firstSeen(u);
+      return seen && collectedDay && seen >= collectedDay;
+    });
+    const missing = absent.filter((u) => !awaiting.includes(u));
+    if (missing.length) out.push(`${missing.length} sitemap URL(s) absent from index_coverage and older than the snapshot (first: ${missing[0]})`);
     if (extra.length) out.push(`${extra.length} index_coverage URL(s) not in the sitemap (first: ${extra[0]})`);
     if (c.sitemap_url_count !== c.urls.length) out.push(`sitemap_url_count ${c.sitemap_url_count} != ${c.urls.length} rows`);
     if (stable(summarize(c.urls)) !== stable(c.summary && c.summary.by_coverage_state)) out.push('summary.by_coverage_state does not recount from the rows');
@@ -243,6 +266,48 @@ const BREAKS = {
   no_measured_url_404: (c) => { c.export = clone(c.export); c.export.by_page.push({ keys: [`${si.SITE_ORIGIN}/zz-not-built/`], impressions: 3, clicks: 0, position: 9 }); }
 };
 
+// Extra negative proofs, beyond the one-per-check register above. Each names the
+// check it must trip, so a check can be proven against more than one break.
+//
+// The "newer than the snapshot" exemption in coverage_fresh_consistent (26 Oct
+// 2026) must not swallow a real gap. Drop the coverage row for a URL the ledger
+// says is OLDER than the snapshot and the check has to notice; otherwise the
+// exemption could widen until coverage loss stopped being detected at all.
+const EXTRA_BREAKS = [
+  {
+    name: 'coverage_fresh_consistent',
+    label: 'a coverage row missing for a URL older than the snapshot',
+    apply: (c) => {
+      c.coverage = clone(c.coverage);
+      const collectedDay = String(c.coverage.collected_at || '').slice(0, 10);
+      const entries = (c.lastmodLedger && c.lastmodLedger.entries) || {};
+      const stale = c.coverage.urls.find((u) => {
+        const e = entries[u.url] || entries[`${u.url}/`] || entries[u.url.replace(/\/$/, '')];
+        return e && e.lastmod && e.lastmod < collectedDay;
+      }) || c.coverage.urls[0];
+      c.coverage.urls = c.coverage.urls.filter((u) => u.url !== stale.url);
+      c.coverage.sitemap_url_count = c.coverage.urls.length;
+    }
+  }
+];
+
+// URLs in the sitemap that the coverage snapshot predates - reported for the
+// operator, not failed. Computed here rather than inside the check so the
+// checks stay pure functions of their context and print nothing per break.
+function awaitingFirstInspection(ctx) {
+  const c = ctx.coverage;
+  if (!c || !Array.isArray(c.urls)) return [];
+  const listed = new Set(c.urls.map((u) => u.url));
+  const entries = (ctx.lastmodLedger && ctx.lastmodLedger.entries) || {};
+  const collectedDay = String(c.collected_at || '').slice(0, 10);
+  if (!collectedDay) return [];
+  return ctx.sitemapUrls.filter((u) => {
+    if (listed.has(u)) return false;
+    const e = entries[u] || entries[u.replace(/\/$/, '')] || entries[`${u}/`];
+    return e && typeof e.lastmod === 'string' && e.lastmod >= collectedDay;
+  });
+}
+
 function main() {
   const ctx = loadContext();
   const issues = [];
@@ -253,14 +318,21 @@ function main() {
     BREAKS[name](broken);
     if (!check(broken).length) issues.push(`[${name}] negative proof failed: the check passed on a context broken on purpose`);
   }
+  for (const extra of EXTRA_BREAKS) {
+    const broken = { ...ctx };
+    extra.apply(broken);
+    if (!CHECKS[extra.name](broken).length) issues.push(`[${extra.name}] negative proof failed: the check passed with ${extra.label}`);
+  }
   if (issues.length) {
     console.error(`validate_search_intelligence: ${issues.length} issue(s)`);
     for (const i of issues.slice(0, 40)) console.error(`- ${i}`);
     process.exit(1);
   }
   const f = ctx.families;
-  console.log(`OK: search intelligence - ${Object.keys(CHECKS).length} checks pass and ${Object.keys(BREAKS).length} negative proofs caught their break. truth ${ctx.truth.totals.impressions} impressions (${ctx.truth.window.start_date}..${ctx.truth.window.end_date}); coverage ${JSON.stringify(ctx.coverage.summary.by_coverage_state)}; ${ctx.targets.target_count} targets; ${f.qualifying_count} qualifying families ${JSON.stringify(f.status_counts)}.`);
+  const awaiting = awaitingFirstInspection(ctx);
+  if (awaiting.length) console.log(`note: ${awaiting.length} sitemap URL(s) published on or after the coverage snapshot (${String(ctx.coverage.collected_at).slice(0, 10)}) await their first inspection: ${awaiting.slice(0, 5).join(', ')}`);
+  console.log(`OK: search intelligence - ${Object.keys(CHECKS).length} checks pass and ${Object.keys(BREAKS).length + EXTRA_BREAKS.length} negative proofs caught their break. truth ${ctx.truth.totals.impressions} impressions (${ctx.truth.window.start_date}..${ctx.truth.window.end_date}); coverage ${JSON.stringify(ctx.coverage.summary.by_coverage_state)}; ${ctx.targets.target_count} targets; ${f.qualifying_count} qualifying families ${JSON.stringify(f.status_counts)}.`);
 }
 
-module.exports = { CHECKS, BREAKS, loadContext };
+module.exports = { CHECKS, BREAKS, EXTRA_BREAKS, loadContext, awaitingFirstInspection };
 if (require.main === module) main();

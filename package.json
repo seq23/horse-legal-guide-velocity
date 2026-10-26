@@ -179,6 +179,7 @@
     "llm:free-selftest": "node scripts/llm/free_router.js --selftest",
     "validate:search-intelligence": "node _ops/validators/validate_search_intelligence.js",
     "validate:answer-formatting": "node _ops/validators/validate_answer_formatting.js",
-    "validate:about-page": "node _ops/validators/validate_about_page.js"
+    "validate:about-page": "node _ops/validators/validate_about_page.js",
+    "live:smoke-check": "node scripts/ops/live_smoke_check.mjs"
   }
 }
