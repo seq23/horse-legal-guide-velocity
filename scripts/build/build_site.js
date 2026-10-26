@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { readJson } = require('../lib/load_config');
 const { loadPageTargets } = require('../lib/load_query_targets');
-const { renderIndex, renderPolicyPage } = require('../lib/render_page');
+const { renderIndex, renderPolicyPage, renderAboutPage } = require('../lib/render_page');
 const { writeApprovedPages } = require('./write_pages');
 const { writeReferencePages } = require('./write_reference_pages');
 const { writeHubPages } = require('./write_hubs');
@@ -94,6 +94,13 @@ function main() {
   fs.writeFileSync(path.join(distDir, 'disclaimer', 'index.html'), renderPolicyPage({ title: 'Disclaimer', text: disclaimerText, url: '/disclaimer/' }));
   ensureDir(path.join(distDir, 'privacy-policy'));
   fs.writeFileSync(path.join(distDir, 'privacy-policy', 'index.html'), renderPolicyPage({ title: 'Privacy Policy', text: privacyText, url: '/privacy-policy/' }));
+
+  // /about/ - the publisher's own page. Search Readiness item c6: every page
+  // names Wise Covington PLLC as author and publisher, and until 26 Oct 2026
+  // /about/ returned 404, so there was nowhere to verify who that is.
+  // Guarded by _ops/validators/validate_about_page.js.
+  ensureDir(path.join(distDir, 'about'));
+  fs.writeFileSync(path.join(distDir, 'about', 'index.html'), renderAboutPage());
 
   for (const staticFile of ['robots.txt', '_headers', '_redirects', 'indexnow.txt']) {
     const src = path.resolve(process.cwd(), staticFile);

@@ -47,6 +47,12 @@ function writeJsonLd(type, title, description, url, options = {}) {
       name: firm.firm_name || config.canonical_brand_name || 'Wise Covington PLLC',
       url: firm.canonical_site || config.canonical_domain || 'https://wisecovington.com',
       sameAs: [firm.canonical_site || config.canonical_domain || 'https://wisecovington.com'].filter(Boolean),
+      // logo is one of the four properties an answer engine needs to resolve
+      // the publisher as an entity (name, url, logo, sameAs). It was absent on
+      // every page. The file is assets/brand/icon-512.png, which
+      // scripts/build/build_site.js copies flat into dist/, so it is served
+      // from the site root. Guarded by validate_jsonld_page_kinds.js.
+      logo: { '@type': 'ImageObject', url: `${originFromConfig(config)}/icon-512.png`, width: 512, height: 512 },
       employee: (firm.attorneys || []).map((attorney) => ({ '@type': 'Person', name: attorney.name }))
     },
     {
@@ -74,22 +80,31 @@ function writeJsonLd(type, title, description, url, options = {}) {
     },
     breadcrumbList(config, url, title)
   ];
-  // WebPage with a SpeakableSpecification, for pages that name the passages an
-  // answer engine should read aloud (the home page's definition paragraph).
-  // The selectors are checked against the rendered page by
-  // _ops/validators/validate_home_definition_speakable.js.
+  // WebPage on EVERY page, not only the ones carrying speakable selectors.
+  //
+  // This node used to be emitted only when options.webPage.speakableSelectors
+  // was non-empty - in practice the home page alone. Every other page
+  // therefore described itself as an Article inside a WebSite with no WebPage
+  // in between, and the page-to-site relationship engines use for attribution
+  // had nothing to hang on. Now the node is unconditional and the
+  // SpeakableSpecification is the optional part of it, which is the way round
+  // schema.org intends: speakable is a property of a WebPage, not its reason
+  // to exist. The selectors are still checked against the rendered home page
+  // by _ops/validators/validate_home_definition_speakable.js, and
+  // validate_jsonld_page_kinds.js now requires WebPage on every public page.
   const speakable = (options.webPage && options.webPage.speakableSelectors) || [];
-  if (speakable.length) {
-    graph.push({
-      '@type': 'WebPage',
-      '@id': `${pageUrl}#webpage`,
-      name: title,
-      description,
-      url: pageUrl,
-      isPartOf: { '@id': websiteId },
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: speakable }
-    });
-  }
+  graph.push({
+    '@type': 'WebPage',
+    '@id': `${pageUrl}#webpage`,
+    name: title,
+    description,
+    url: pageUrl,
+    isPartOf: { '@id': websiteId },
+    primaryImageOfPage: { '@type': 'ImageObject', url: `${originFromConfig(config)}/og.png` },
+    ...(options.datePublished || options.dateModified ? { datePublished: options.datePublished || options.dateModified } : {}),
+    ...(options.dateModified ? { dateModified: options.dateModified } : {}),
+    ...(speakable.length ? { speakable: { '@type': 'SpeakableSpecification', cssSelector: speakable } } : {})
+  });
   // FAQPage, built from the Q&A that is already visible on the page.
   //
   // This used to emit `mainEntity: []` on every page whose page_type was `faq`

@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-10-25T17:42:24.000Z",
+  "generated_at": "2026-10-26T04:37:13.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-10-25T17:42:26.280Z",
-      "age_hours": 0,
+      "age_hours": 10.9,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-10-25T17:42:26.280Z",
-      "age_hours": 0,
+      "age_hours": 10.9,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-10-25T17:42:26.280Z",
-      "age_hours": 0,
+      "age_hours": 10.9,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -1713,23 +1713,23 @@
       "metadata_completeness": 100
     },
     "seo_metrics": {
-      "rendered_public_pages": 585,
-      "total_html_pages": 585,
-      "sitemap_url_count": 324,
-      "title_present": 585,
-      "description_present": 585,
-      "canonical_present": 585,
+      "rendered_public_pages": 586,
+      "total_html_pages": 586,
+      "sitemap_url_count": 325,
+      "title_present": 586,
+      "description_present": 586,
+      "canonical_present": 586,
       "duplicate_title_groups": 262,
       "duplicate_description_groups": 94,
-      "high_similarity_pairs": 129,
+      "high_similarity_pairs": 130,
       "intent_overlap_pairs": 14,
       "uniqueness_review_clusters": 24,
       "drafts_automatically_differentiated": 251,
       "draft_uniqueness_failures": 0,
-      "jsonld_present": 585,
-      "article_schema_pages": 585,
-      "breadcrumb_schema_pages": 585,
-      "internal_link_healthy_pages": 585,
+      "jsonld_present": 586,
+      "article_schema_pages": 586,
+      "breadcrumb_schema_pages": 586,
+      "internal_link_healthy_pages": 586,
       "zero_internal_link_pages": 0,
       "weak_internal_link_pages": 0,
       "draft_items": 363,
@@ -1740,27 +1740,33 @@
       "hard_fail_items": 0,
       "word_warning_items": 9,
       "ai_risk_items": 251,
-      "workflow_count": 19,
-      "workflow_passed": 19,
+      "workflow_count": 20,
+      "workflow_passed": 20,
       "workflow_warning_count": 0,
       "signal_raw_store_count": 4030,
       "signal_fresh_collected_count": 112,
       "signal_failed_sources": 0,
       "signal_zero_reddit_warning": false,
       "github_actions_simulation_status": "passed",
-      "github_actions_simulated_workflows": 19,
+      "github_actions_simulated_workflows": 20,
       "github_actions_simulation_warnings": 0,
       "github_actions_live_followups": 3,
       "github_actions_simulation_failures": 0
     },
     "page_uniqueness": {
-      "indexable_pages_measured": 323,
+      "indexable_pages_measured": 324,
       "duplicate_title_groups": 1,
       "duplicate_description_groups": 0,
-      "high_similarity_pairs": 129,
+      "high_similarity_pairs": 130,
       "intent_overlap_pairs": 14
     },
     "family_metrics": {
+      "about": {
+        "pages": 1,
+        "duplicate_title_memberships": 0,
+        "high_similarity_pair_memberships": 0,
+        "intent_overlap_pair_memberships": 0
+      },
       "articles": {
         "pages": 4,
         "duplicate_title_memberships": 0,
@@ -1866,7 +1872,7 @@
       "scenario": {
         "pages": 106,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 72,
+        "high_similarity_pair_memberships": 74,
         "intent_overlap_pair_memberships": 9
       },
       "state": {
@@ -5391,7 +5397,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.936,
+        "maximum_body_similarity": 0.938,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5824,7 +5830,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8693,
+        "maximum_body_similarity": 0.8687,
         "suggested_actions": [
           "differentiate_patch"
         ],

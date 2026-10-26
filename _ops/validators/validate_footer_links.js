@@ -4,7 +4,8 @@ const files = collectRequired('dist', (file) => file.endsWith('index.html'), 'va
 for (const file of files) {
   if (file.includes('/admin/') || file.includes('\\admin\\') || file.includes('/agency/') || file.includes('\\agency\\')) continue;
   const html = fs.readFileSync(file, 'utf8');
+  if (!html.includes('href="/about/"')) fail(`About link missing in ${file}`);
   if (!html.includes('href="/disclaimer/"')) fail(`Disclaimer link missing in ${file}`);
   if (!html.includes('href="/privacy-policy/"')) fail(`Privacy policy link missing in ${file}`);
 }
-ok('footer links present');
+ok('footer links present (about, disclaimer, privacy policy)');

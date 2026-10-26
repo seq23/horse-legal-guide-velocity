@@ -2,8 +2,19 @@
   "validator": "validate_content_pattern_contract",
   "scope": "page",
   "mode": "enforce",
-  "issue_count": 53,
+  "issue_count": 54,
   "issues": [
+    {
+      "validator": "validate_content_pattern_contract",
+      "scope": "page",
+      "file": "dist/about/index.html",
+      "severity": "error",
+      "code": "missing_direct_answer",
+      "message": "No quick-answer block; nothing on this page is quotable without surrounding context.",
+      "fixHint": "Render a data-answer-summary=\"true\" block before the main body.",
+      "autofix": false,
+      "blocking": false
+    },
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
@@ -524,7 +535,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "162 page(s), coverage 72.2%",
+      "file": "163 page(s), coverage 72%",
       "severity": "warning",
       "code": "coverage_comparison_table",
       "message": "No comparison or cost table (agent request #2, 529 occurrences).",
@@ -535,7 +546,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "582 page(s), coverage 0%",
+      "file": "583 page(s), coverage 0%",
       "severity": "warning",
       "code": "coverage_named_sources",
       "message": "No named primary source (agent request #6, 288 occurrences).",
@@ -546,7 +557,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "45 page(s), coverage 92.3%",
+      "file": "46 page(s), coverage 92.1%",
       "severity": "warning",
       "code": "coverage_faq",
       "message": "No FAQ block or FAQPage schema (agent request #9).",
@@ -557,7 +568,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "492 page(s), coverage 15.5%",
+      "file": "493 page(s), coverage 15.4%",
       "severity": "warning",
       "code": "coverage_recommendation_summary",
       "fixHint": "undefined Full list: reports/content-pattern-contract.json",
@@ -567,7 +578,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "29 page(s), coverage 95%",
+      "file": "30 page(s), coverage 94.9%",
       "severity": "warning",
       "code": "coverage_definition_callout",
       "fixHint": "undefined Full list: reports/content-pattern-contract.json",
@@ -577,7 +588,7 @@
     {
       "validator": "validate_content_pattern_contract",
       "scope": "page",
-      "file": "582 page(s), coverage 0%",
+      "file": "583 page(s), coverage 0%",
       "severity": "warning",
       "code": "coverage_trust_block",
       "fixHint": "undefined Full list: reports/content-pattern-contract.json",

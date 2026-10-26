@@ -1,0 +1,19 @@
+{
+  "workflow": "live-smoke-check.yml",
+  "path": ".github/workflows/live-smoke-check.yml",
+  "workflow_key": "live_smoke_check",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/live-smoke-check.yml",
+  "purpose": "post-deploy live check of the deployed origin; reads the edge, mutates nothing",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run live:smoke-check"
+  ],
+  "artifacts_checked": [],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-10-26T04:37:13.000Z",
+  "finished_at": "2026-10-26T04:37:13.000Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}

@@ -13,6 +13,12 @@ function readConfig() {
   return JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'data/system/config.json'), 'utf8'));
 }
 
+function readJson(relPath, fallback = null) {
+  const abs = path.resolve(process.cwd(), relPath);
+  if (!fs.existsSync(abs)) return fallback;
+  return JSON.parse(fs.readFileSync(abs, 'utf8'));
+}
+
 function htmlEscape(str) {
   return String(str)
     .replace(/&/g, '&amp;')
@@ -405,6 +411,81 @@ ${siblingBlock({
   });
 }
 
+// The About page. Search Readiness Checklist item c6: "Author and publisher
+// are real, consistent, and have an About page; E-E-A-T signals (credentials,
+// sources, dates) visible." The 25 Oct 2026 sweep found /about/ returning 404,
+// so every page on the site named Wise Covington PLLC as its author and
+// publisher with nowhere for a reader - or an answer engine - to go and check
+// who that is. An unnamed publisher with no About page is the last thing an
+// engine cites.
+//
+// Everything on this page is read from the data the rest of the site already
+// publishes (data/firm/wise_covington_contact.json, data/system/config.json),
+// so the publisher cannot drift between the About page and the JSON-LD that
+// names it. The attorney names and the verification date come from the firm
+// record's own `attorneys` and `last_verified` fields.
+function renderAboutPage() {
+  const config = readConfig();
+  const firm = readJson('data/firm/wise_covington_contact.json', {});
+  const firmName = firm.firm_name || config.canonical_brand_name || 'Wise Covington PLLC';
+  const firmSite = firm.canonical_site || config.canonical_domain || 'https://wisecovington.com';
+  const attorneys = (firm.attorneys || []).map((a) => a.name).filter(Boolean);
+  const verified = firm.last_verified || '';
+  const years = config.equestrian_experience_years || 'more than 30 years';
+
+  const attorneyList = attorneys.length
+    ? `<ul>${attorneys.map((name) => `<li><strong>${htmlEscape(name)}</strong> — attorney, ${htmlEscape(firmName)}</li>`).join('')}</ul>`
+    : '';
+
+  const body = `<header class="content-header"><span class="eyebrow">Horse Legal Guide</span><h1>About Horse Legal Guide</h1>
+  <p class="muted">Who writes this guide, who publishes it, and what it is and is not.</p></header>
+<section>
+  <h2>Who publishes Horse Legal Guide</h2>
+  <p><strong>Short answer:</strong> Horse Legal Guide is published by <a href="${htmlEscape(firmSite)}">${htmlEscape(firmName)}</a>, a law firm built by equestrians for the equestrian community. Every page on this site names ${htmlEscape(firmName)} as its author and publisher, and this page is where you can check who that is.</p>
+  <p>${htmlEscape(config.primary_identity_sentence || `${firmName} is a law firm built by equestrians for the equestrian community.`)} The team behind ${htmlEscape(firmName)} has ${htmlEscape(years)} of combined equestrian and legal experience — people who have owned, boarded, leased, shown and sold horses, and who then went and practised law.</p>
+</section>
+<section>
+  <h2>The people behind it</h2>
+  ${attorneyList}
+  <p>Firm details, practice areas and consultation paths are maintained on the canonical firm site at <a href="${htmlEscape(firmSite)}">${htmlEscape(firmSite)}</a>, which is the source this guide reads its publisher details from${verified ? ` (last verified ${htmlEscape(verified)})` : ''}.</p>
+</section>
+<section>
+  <h2>How these pages are written and checked</h2>
+  <ol>
+    <li><strong>A real question comes first.</strong> Pages are built around questions horse owners, trainers, barns and equine businesses actually ask, not around keywords.</li>
+    <li><strong>The answer is scoped, not generalised.</strong> Each page separates the parties, documents, timing, money, possession, communications and state-specific facts rather than repeating a generic contract overview.</li>
+    <li><strong>A person approves it.</strong> No page publishes without owner review and approval; approval alone does not publish future-dated content before its scheduled date.</li>
+    <li><strong>The limits are stated on the page.</strong> Where an answer depends on your state, a deadline, a minor, an entity, disputed authority, injury or insurance, the page says so and routes the question to the firm instead of guessing.</li>
+    <li><strong>Dates are visible.</strong> Editorial pages carry their publication date, and the structured data on every page carries the same dates a reader sees.</li>
+  </ol>
+</section>
+<section>
+  <h2>What this guide is not</h2>
+  <p>This is legal education, not legal advice. Reading it does not create an attorney–client relationship, and no page here can account for the facts of your situation or the law of your state. For a specific matter, take it to ${htmlEscape(firmName)} or to a lawyer licensed where you are.</p>
+  <p>Our <a href="/disclaimer/">Disclaimer</a> sets out the educational boundary in full, and our <a href="/privacy-policy/">Privacy Policy</a> covers what happens to anything you send us.</p>
+</section>
+<nav aria-label="Site navigation"><h2>Where to start</h2><ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/coverage/">Coverage map</a> — every topic this guide covers</li>
+  <li><a href="/faq/">FAQ index</a> — direct answers to single questions</li>
+  <li><a href="/scenario/">Scenario index</a> — "this happened, what now"</li>
+  <li><a href="/compare/">Comparison index</a> — one option against another</li>
+  <li><a href="/insights/">Insights</a> — the editorial surface</li>
+</ul></nav>
+<section class="routing-block">
+  <p>Horse Legal Guide supports general equine-law education and routes specific legal questions back to <a href="${htmlEscape(firmSite)}">${htmlEscape(firmName)}</a>.</p>
+</section>`;
+
+  return renderLayout({
+    title: 'About Horse Legal Guide: Who Writes It',
+    description: fitDescription([
+      `Horse Legal Guide is published by ${firmName}, a law firm built by equestrians. Who writes these equine law pages, how they are reviewed and approved, and what this guide is not.`
+    ], '/about/'),
+    url: '/about/',
+    body
+  });
+}
+
 function renderPolicyPage({ title, text, url }) {
   const paragraphs = text.split(/\n+/).map((p) => `<p>${htmlEscape(p)}</p>`).join('\n');
   const body = `<header class="content-header"><span class="eyebrow">Horse Legal Guide</span><h1>${htmlEscape(title)}</h1></header>${paragraphs}
@@ -419,4 +500,4 @@ function renderPolicyPage({ title, text, url }) {
   return renderLayout({ title: `${title} | Horse Legal Guide`, description: fitDescription([`${title} for Horse Legal Guide, including educational boundaries, privacy, routing, and public citation-surface context.`], url), url, body });
 }
 
-module.exports = { renderLayout, renderIndex, renderPolicyPage, extractVisibleFaq };
+module.exports = { renderLayout, renderIndex, renderPolicyPage, renderAboutPage, extractVisibleFaq };

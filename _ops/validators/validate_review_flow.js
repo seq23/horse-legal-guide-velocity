@@ -8,7 +8,13 @@ const liveFiles = collectRequired('dist', (file) => file.endsWith('index.html'),
 for (const file of liveFiles) {
   const rel = file.split('/dist')[1].replace(/\/index\.html$/, '/').replace(/\\/g, '/');
   const allowedGenerated = rel.startsWith('/admin/') || rel.startsWith('/agency/') || rel.startsWith('/hubs/') || rel.startsWith('/reference/') || rel.startsWith('/coverage/') || rel.startsWith('/insights/') || rel.startsWith('/articles/') || rel.startsWith('/whitepapers/') || rel.startsWith('/authority/') || rel === '/faq/' || rel === '/scenario/' || rel === '/compare/' || rel === '/state/';
-  if (!['/','/disclaimer/','/privacy-policy/','/admin/'].includes(rel) && !approvedSlugs.has(rel) && !allowedGenerated) {
+  // Site-owned pages, not reviewable content: the home page, the policy pages
+  // and /about/ (the publisher page every page's JSON-LD points at, added
+  // 26 Oct 2026 for Search Readiness item c6). They are built from
+  // data/system/ and data/firm/ rather than from an approved page target, so
+  // they can never appear in approvedSlugs.
+  const siteOwned = ['/', '/about/', '/disclaimer/', '/privacy-policy/', '/admin/'];
+  if (!siteOwned.includes(rel) && !approvedSlugs.has(rel) && !allowedGenerated) {
     fail(`Live page exists without approved status: ${rel}`);
   }
 }

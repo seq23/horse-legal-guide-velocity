@@ -1,1298 +1,1302 @@
 {
-  "schema": "lastmod-ledger-v2",
+  "schema": "lastmod-ledger-v3",
   "note": "Per-URL content hash and the date that content last changed. lastmod only advances for a URL whose hash changed; see scripts/lib/lastmod_ledger.js. A URL the ledger has not seen before is seeded from its last commit date when the clone has full history, and from the build date otherwise. No dates are reconstructed or estimated.",
   "seeded_on": "2026-08-26",
   "entries": {
     "https://horselegalguide.com": {
-      "hash": "4ab46ffa6a319c28d01350cc4d614f12493f13d05eaf1c288ffcb4fb6a36058d",
+      "hash": "fd8a7471fcfaaa5c7b37a6e54cf51946d0c2ba52e087daa2efbefde7c716c3c8",
       "lastmod": "2026-10-11"
     },
+    "https://horselegalguide.com/about/": {
+      "hash": "2d6e34a9cc2d306f2f54805734c4fb78d9be46e12eec17df40f99c17904074e0",
+      "lastmod": "2026-10-26"
+    },
     "https://horselegalguide.com/articles/": {
-      "hash": "9e21acdf0ee6fb4824660826700c1c375e6e32106fc45a3ec98a8a6784198e97",
+      "hash": "8e163d2083908d1e692ebf25c3d07b5e9f017c8ee851de2b5c98db86ba9237a0",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/": {
-      "hash": "44134945cb173b27983689f6d263323814c0ca568c85246fbde54f4e3ce53fea",
+      "hash": "6440e32eb24abd9b569770a15f3216fe51e9f51ef8b8610c05de0e627db82b28",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/": {
-      "hash": "2cac954ae7fb4bc7019a20e3753aea84501e6cbed6cb38ce3b5526d3be636e36",
+      "hash": "5c2680d5883b5530d456f1f4d8386e6a34d6c02af4483b7c79248ca5ba047812",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/articles/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/": {
-      "hash": "7208ecaeac56775cf9f90b01a6ae34dfd3227d09e836e80e3565009e6389351d",
+      "hash": "c249a4d6d93b2a3ea6dd14fc83a5a1c9cd32015c388681b010b115615ee545ec",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/authority/": {
-      "hash": "b78d53604b29bcaabe055f32d4093d642fdbd68e710051b9e6805a998c258105",
+      "hash": "dabcc68f663e6c4f96d0be9c734a88e0c6bd67387de318e5e53af3667d767d62",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/": {
-      "hash": "3e7e7a31ffb3f195ce950b93f7d5f3e2222d1dd5daf8a3f5c809d80dff8117ea",
+      "hash": "4877caaeecb3e97018fd7ce6bd5f93c9fc066789fd348436e2b5a1779167abaa",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/boarding/what-happens-if-a-boarder-damages-property/": {
-      "hash": "9c96c68d312cd5a0594db3e1c9a2534f12c1257d5810f8a067d0a3c1829d8953",
+      "hash": "f8105c2d8761ac0a17e86aed5671324250562110c30372d48c7cfaabd892b186",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/boarding/what-happens-if-a-boarder-does-not-pay/": {
-      "hash": "502d62c9b52c045eb0a337586c5625172c704cde2f94012853198573e8bcb76f",
+      "hash": "86df563c031b7c8775672fac715fff0667ac75f3bcfcb0d31c0b75b644d62056",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/boarding/what-happens-if-a-contract-does-not-address-responsibility/": {
-      "hash": "e217ec06f93634050d9814ba8a18d64d3e79c6cc930f29be43faa5b7157f2ccf",
+      "hash": "3ad25c8d669f2635d2a714f34caf8384494ffca9bb4c192fe54863a67efccce3",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/boarding/what-happens-if-a-horse-dies-while-boarded/": {
-      "hash": "a8ba1b30bc03339abbd876f0a71a4c20ea45acb092ba7ce9ed3afb1f50bfb356",
+      "hash": "ce3cba146d7633d6dac236f43374074a3d33b3166915270ea9134a2abf944b81",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/": {
-      "hash": "8217670264f5931d4f8115a62ce305d02c5d0f8f66964ea2d43c4934c63a3c49",
+      "hash": "5e1552d1c19a421bf96fdffec1a3745c6de7f5fd41e95a5b27ecc815a8632729",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/boarding/what-liability-does-a-trainer-have/": {
-      "hash": "c686addc3c210b619f57c9e673531dec70fab94c27329810a48290cc431397c4",
+      "hash": "bc23eb0b4c8bff0fac0be239b44ff764f04b82b810c36e81626e01522fcc4dbc",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/boarding/what-should-be-included-in-a-horse-boarding-agreement/": {
-      "hash": "820fe39c7c63300621d05ca7833e2b1327b553bd25a714c4c142bb56e4cbab1b",
+      "hash": "6005cb1b938fda7180edeb25d2266d38198aefbd81111c5b4cd138cd1ef3c8c3",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/boarding/what-should-be-included-in-a-training-agreement/": {
-      "hash": "8c36837f7270d4679072ba365829ae214c135d17282e6823be2484a5fe9c3135",
+      "hash": "3a595176dba914517261f8bcb61ff2c2af4cecafa62d4fe254aa89bbbde2ff31",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/": {
-      "hash": "4e9aaaa216e10a64d11bc25e6995f3f3afc0701cf25c4abf49bc83436eb316cb",
+      "hash": "980a760f500fb35674ff43a1e21d30c16de512814ee1ca25524e4de00cafb336",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/boarding/who-pays-vet-bills-while-a-horse-is-boarded/": {
-      "hash": "1fc18870c5a93c02071d95cfd758f4f10789db7eeb031d56ebd92238298df753",
+      "hash": "bdd30105af629721e07f62277a019aa1a3e25b688855e5d59c94c0843fc50d86",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/can-i-run-a-horse-business-under-another-company/": {
-      "hash": "6370e2f50be05ab87b2b47ab6b4c13fea9ad84b78299c7d78ee943623bd20a52",
+      "hash": "9966758a7726184d66d13a5430728168b3389905a09799e8375386138593938d",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/business/do-i-need-an-llc-to-start-a-horse-business/": {
-      "hash": "b4f5be8fbf033423ebe470e69d0b0396091368d21a85e1aae7bd4f11386cce73",
+      "hash": "ea0dd7e39ad1789cf3a4f2e4b29220f635dde67493cd05681fc5decc08ffc598",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/horse-syndicate-legal-structure/": {
-      "hash": "946372926ed5377f50732c8b4ad14a0d54a06feb22d624869ca16cebdc8028a6",
+      "hash": "f8f8f4f7547f999f3e2beb50daa90b4c924afc49bfea31dbea9ad0d9da8f00da",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/how-do-i-legally-start-a-horse-business/": {
-      "hash": "ad224f96a12d9ce02752fdbdfe6148fd70e4749c4be2f19df382c108b028cd4b",
+      "hash": "9ecbf3dae6033dad16e0804c500c6c33da7ebf41bea5690da8dbb6ca2a8a58e2",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/how-do-i-separate-my-horse-business-from-personal-assets/": {
-      "hash": "7bec636064c0f980559a3c1e32e03d4b6da059cd40cb9c6dd76a118b178337bb",
+      "hash": "74f70e2b3b7fff2545bfb0b669c7ea2e2554c7e8bbc2d9f18ace373e49f3cc53",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/how-to-start-a-boarding-barn-legally/": {
-      "hash": "65d8f2204d10adc23433f1c3f24007afdf732a222bc2f74b72a4feb45a9ec32e",
+      "hash": "353eabb6794bad76528b764c8cd9adc388e32060a3ac7f17f43f1fabf75a3afc",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/business/how-to-start-a-horse-retail-business/": {
-      "hash": "41fc365f27ac37db870e2694f4b7f9de4c6244141c44b9c0f1200b5bfd6a514b",
+      "hash": "311e329b66a5650f9ccc4228092624e102771a0416a561975e26afd6290a8738",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/how-to-start-a-training-barn-legally/": {
-      "hash": "73fa9690505f455e4360e30261010d12948eedd80c9edba1c51dc8c6cfd9fb08",
+      "hash": "d884346d107f0e6c63be0ea2d2259e929d786c06857574a59f252c64f56d1b06",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/business/how-to-start-an-equine-apparel-business/": {
-      "hash": "fa3545164f4cf8971427250cf3a5d0c6fb4efa173650229057b90c4a5449e1f3",
+      "hash": "606aed7d79a6a8398323e2045bab47733f9a4bdfdc768545d145ef78c9154b24",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/how-to-start-an-equine-assisted-therapy-business/": {
-      "hash": "43852ef1d9be879384511bea154fa3694bc59513c01a01f31b4ed2600505922d",
+      "hash": "e5612a0c41ec377171d1e8a4ce4fe38e5a0b9d5de65560273e8feef3cf3cdd40",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/joint-venture-agreement-equine-business/": {
-      "hash": "9c2ce1b7965fb0ab67f16cbc45aa0b65fc22a036e240b2ff598c5101179d1ec1",
+      "hash": "dfde837a19ea1f8d9facd82f66a942bc56e94402b9c92444a05b84f3a9da4847",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/partnership-agreement-for-horse-business/": {
-      "hash": "e07366f443386b276121f7a9d0d65122c0b559149f5f3ec037fddc4c7c130cd0",
+      "hash": "ff2e702bc98b20360844fe86028ded08c1eb6122aa701ffc4b0c02abd9b1c2df",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/business/what-legal-documents-do-i-need-for-a-horse-business/": {
-      "hash": "8a7435494d7de079be10e043aaf29ef43e69eb2ad32ea8f24a82a2266bd41e98",
+      "hash": "84b262753ce7d639177980416d14ada7a76410e88c44b120c0c699a77ce90306",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/": {
-      "hash": "0078f54a8b51790aa43a7d34e3f39310c84dc26c4449031285b5a1412c2c2d43",
+      "hash": "f955b07d47494a8fafe385e74d4b1425581642e174d8141652f8bb7f16c5063d",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/as-is-clause-vs-disclosure-clause-in-a-horse-sale/": {
-      "hash": "0eefff62e978f02484bbc25863c77f2d7416ef20280c7f56de9ddf96285285f1",
+      "hash": "2ad807472c8b5856fe90928c1a9e380e0f519bcd1b7ace1f6de49f6ee440c6cb",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/barn-lease-vs-boarding-agreement/": {
-      "hash": "e36dbf699a6e52d510e6030621276b58704051d519b735043b0dc8c9f064c7ce",
+      "hash": "8f7c103e68c385119dc4530dd6c12b265933b2422eecbef0ce69be1678e5da0e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/bill-of-sale-vs-transfer-of-ownership-clause/": {
-      "hash": "b7ae0da0e60ea51af2e7e9312c2f5d9e484eca92ee42fb18ae6fb36d699b5b88",
+      "hash": "bfc45e07c96652f2cdefcf2a61196ee59f56d1a9cdae0a50b5c216548831c2bd",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/boarder-default-notice-vs-demand-letter/": {
-      "hash": "8854dc96a0bc41072a441605d083d646d90c89293c0f6ae22d59f1b264abcbf5",
+      "hash": "cb18db021bd9ab9a2a151d56915d4f997d75c743fcfcd7921c5026b02e1d6a2f",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/boarding-agreement-vs-training-agreement/": {
-      "hash": "ed4c5abfa405e2492391c2c67006de7108d494625be457585f737cc52ef9d78b",
+      "hash": "435905fd6a8250ed8bb8f633175627047ffd7f006eb925b935f2ede247875fac",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/compare/boarding-contract-vs-barn-lease/": {
-      "hash": "7f04652d1e6a48944637c92151c7897ca42c01f1ccf838d062e8de784ea741e7",
+      "hash": "1f23d25212c55299f8f086d32c56ea6ed6f89fb02f5162a993231349c8d072cd",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/boarding-lien-rights-vs-collections-lawsuit/": {
-      "hash": "112111fda4175a2b1b876b3bf1ac7ad728b7d6ac27e4ecad2c3c07bdd25b1774",
+      "hash": "b1f37e8a5e398b9db4ce4c0af81475e9c17cd9c5dc1b52c8fe9d7741c74b9606",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/business-name-registration-vs-trademark-filing/": {
-      "hash": "00aba77865c74026f507dbb9617bd3d7cfd498af95500e85902abf58eebaf391",
+      "hash": "2d35080656c2b0e608f64da0793e8a4a8dca9a056ca334dba002f2829db7ad42",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/choice-of-law-clause-vs-venue-clause/": {
-      "hash": "43a5b639ed941ef0a6745a2d39472ddad710d5409c36574e225e14a9c8976eb7",
+      "hash": "1daaf3638e3233539885b06128aa936f63497cb9bab8d4c7c5be529e0d2a49a5",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/contract-review-vs-diy-horse-agreement/": {
-      "hash": "f96e602bffc41c3912abe055a205a56da918a48faa0e08a1e8575fe95d7c043f",
+      "hash": "0c42d0ef81313d18dd261becc5fd7d807663b5d492c6008d4bb02bd38c533698",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/contract-vs-handshake-deal-horse-sale/": {
-      "hash": "4ce7c037b6d5a9061d344733b344fa865ec32856ebf8ccad47b0d91548364193",
+      "hash": "d256534d9be7711d4061a0eb7b46ee109c95de68d530f6e86ddd74fa23f7a334",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/custom-contract-review-vs-online-legal-template/": {
-      "hash": "35fcfdc7e12001eef453791bbf4b3c83265b8ca0f4f47ffc7c0a0911eab00874",
+      "hash": "3e8ffb0bf3fba8b39f999d1c32aa27f28c32a2e5f2e35bf91024cefe682c2be1",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/demand-letter-vs-informal-text-dispute/": {
-      "hash": "daa25ab4056a7bed7c5747c76d574b1d8a7897f8e0ea50d703077a0fa79f6b51",
+      "hash": "a00132f5353c1673bdbb2221c46528915facb68002bed170531b1157db0bd9a2",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/": {
-      "hash": "39687e32136464f8268675a21e106126d32dec19d12b0d131aa1e8114f4f7f26",
+      "hash": "ae80a2a3483ee327374830bbcff09dd74d21027ede0db063584b33cd57f78468",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/demand-letter-vs-lawsuit/": {
-      "hash": "83d6be6ea32cddeee4feee052fd945a91c83418405232b2bfe629d3ad2b4764e",
+      "hash": "96e8c935c16a5860a54071e428d35ea6564ed0a6066fb3fcd37c98f0b2eb46ad",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/": {
-      "hash": "a153ccbb2a03632bed255c8a1cd695210526a47c7c1467d488cf8aee4c33c4da",
+      "hash": "a1412136f6e00a01a15a79352ddbca1b6769c5bfe030ae3471faa518bffd6db7",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/emergency-vet-authorization-vs-owner-consent-clause/": {
-      "hash": "4d73abaee41db999106ac620f69fd39dd1a0dc9cb3d89cdc9e79904f46df080c",
+      "hash": "869be04903a3edbda30a8c7528039f46653391ae42615bdd264862744c492ec6",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/": {
-      "hash": "272e810d35a40a49f350772a1907b6164511987b49f8e7987adbcfab042a3441",
+      "hash": "0859175750b65d8827a8269081f3a06bab7c74bc63a03937268dcd6a9f0758cf",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/equine-activity-statute-vs-negligence-claim/": {
-      "hash": "c31d63d3b955ff97334490f81d1c96c78373918058e45bb37b95d48d6a2e53c4",
+      "hash": "2d1783e7e67486cbb6e151124de1600dddc17fa6b79edb7c9e09045e31b93d7b",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/equine-business-contract-vs-general-business-contract/": {
-      "hash": "548ab2ba2c8d079fd9c1a989518c94fea6b82c726a32eb125305024224477a05",
+      "hash": "595eb6ba526ae6375b37c1e8757df8bb8970cac1d598d6ee9a17f0785b9a8d40",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/equine-therapy-consent-form-vs-liability-waiver/": {
-      "hash": "84a18c7e7e3b826007e3c14abb1565c6c4e85a984814570660acc9c777724845",
+      "hash": "8006256ee47c6e082b6a5b8cf287ed26f62824d84183375bbfd8cf9771e71a33",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/facility-lease-vs-pasture-lease/": {
-      "hash": "7ff78d880b4abfee777c8376647d1286735454d1b3e4902c0603169c968d9425",
+      "hash": "058f67699fe1dbe1cea49e973c367ef601a944f2697c667f1466b3b4689420fe",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/compare/hold-harmless-clause-vs-indemnity-clause/": {
-      "hash": "770a4b09ccf6b112a4d248dd2019d56218021cb9600647da8e4799307ce50f57",
+      "hash": "e3968c9cea14204b59c7e22eeb389c946b5a3c6a12e7c3c0d375afe95f87ef87",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/horse-co-ownership-agreement-vs-syndicate-structure/": {
-      "hash": "6835fde7e5900eb98627f5b17f1c8c57f0e9a203383a80ea1ab51addd0165aa2",
+      "hash": "75813b5f0885ac94638c0d48d8a1ce2566b484ff9383bc0b8015e5b17becb122",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/horse-lease-vs-horse-purchase/": {
-      "hash": "31b18cb3fbaf3ff9638ec92c1221a1ee3558abf7cbc4032ad5b8c2f4e2007518",
+      "hash": "cc28b14382157fda728017e796b3b0a4f655a5fae0f776db079ae036c259439a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/horse-lease-vs-horse-trial-agreement/": {
-      "hash": "87f560f81ffb7b7d1f04b9a76e252a79a07eff24825c303a23ab0bb6a7c4a245",
+      "hash": "dfe21aec742905394b52f4667e9f4fe71bdb1d0939e914cffcd22bd915d28b8a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/horse-owner-liability-vs-trainer-liability/": {
-      "hash": "92bd05e7dd4dc0d9f64802a745402cd502eef7586bcf90517db4ba1306cb9519",
+      "hash": "25f121b191a6d010c09e7c5e4a556c3aa06e4f4b52148574894a86c1be70b77c",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/horse-purchase-agreement-vs-bill-of-sale/": {
-      "hash": "d5d26a98601ad7a858a4334afbd60b52df6e3c81d24c1f959517e9ceb5511399",
+      "hash": "ed05648b1f0fad02172c4b4e02a4558b7fb275960782cfea225b739d47d573da",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/horse-purchase-deposit-vs-full-payment/": {
-      "hash": "e3be515fe10440eb648886b328e893db4a2caaf8c3b726596eb51448a1fed481",
+      "hash": "ec1d6e6013efac06dd999e2c2e86eb5dec48027e3ef858a221e967213e387717",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/horse-sale-addendum-vs-new-contract/": {
-      "hash": "1f57c230d67966f4f21202e12ca511fdec9364cef85a664f432ed7b61008c69d",
+      "hash": "bf794c89e23ab947f96d6750a7162f199f991a7d3d0c033b7ae30c1ec8c327c5",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/horse-sale-contract-vs-bill-of-sale/": {
-      "hash": "14fa89361c938b2083db79eced393d3872f08c5976cd56c0c8956662048cd657",
+      "hash": "3784eea98087c24af0054c21a123f0ffd38cf99e620cda827b885ed297705d29",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/compare/horse-syndicate-agreement-vs-partnership-agreement/": {
-      "hash": "dc759cfa5c82cad1152f09877368dcd51e010dd54ca833fced9cdacc92f60db1",
+      "hash": "a40a6807610e1412cbda0d7c2dfa6e20b4a0e0dd62555b93731bbfa64f3f34c4",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/insurance-certificate-vs-actual-policy-coverage/": {
-      "hash": "e894eeb53f9b9f3d89dc031a77c5a2f01e9108c630793a21accf2879cc229fc4",
+      "hash": "f17f10059cbf1493b14f38be83b794d046e551cfee5ab608ae8f3d5b02cd64af",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/lease-termination-clause-vs-informal-cancellation/": {
-      "hash": "19b77570d66a377c629efdd6df0facdfa5bacc1b1921275ab81428eee30fba76",
+      "hash": "dee3654c8b04fce1ced11710c18d48350e2e165cea8d4b6d673292aca31a93ea",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/lease-to-own-vs-buying-outright/": {
-      "hash": "8246aa0cbf497609c99b50e9723ba5ee911e17ee659a7266e821b8b0a53414eb",
+      "hash": "af46672b3ebb269aee8b4ed39b94a9c10e5efb85d8069277cc57b5cf02f94a69",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/lease-to-purchase-vs-outright-purchase/": {
-      "hash": "a7297ec293f4b388b76011c7b8a265b06e413ab2d9fdde052714c1382cfa11a5",
+      "hash": "c83ee18623a8b1eb2779fdea696eb57ef93b3403e2e3d1bb40370cf288d4d40e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/lease-vs-purchase-horse/": {
-      "hash": "a569c18fd20d03958a14c9659d0141ded67d099c4ce04b12159f3082b2663b0c",
+      "hash": "c0d562e2dbe9b28efe2e348d6ac60d1ec706fcd8edf5c744f8c9710d41f28017",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/liability-waiver-vs-insurance-for-horse-activities/": {
-      "hash": "712952d8c384791c6f2f2008c58732f2ff93cec4ac391ce0a1f9a9431345de82",
+      "hash": "4b6db971df4b12dd67e976cf56fc49da9cf55b37f5bf43b8e0c228aeb301683b",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/llc-vs-insurance-for-horse-business-liability/": {
-      "hash": "7fabdec7395dd3a97874cf3905b8ea5eee627b6f24b66e0e2c5b14284bd7cba0",
+      "hash": "eaf99c726044cce365888ec4d93dcc411535566b07690220df9795e4de730a1d",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/compare/llc-vs-insurance-for-liability-protection/": {
-      "hash": "92e2b7ebe370e70000cfd57bfc9201550099462675c2b00adcf8827ee63a7fba",
+      "hash": "f7f84ca27facce073177d2be3895baccb660538d8fa2116c90f346c1b3f1b9e4",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/llc-vs-sole-proprietor-horse-business/": {
-      "hash": "5fec1aac53a18ec033b515706ff496b6630f56d71dbaebe81389f92c1a48192f",
+      "hash": "f7ead86f52c98aaa8e4b24879bbdbd443577dc0415890e0c4a4b3877b9963370",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/mediation-vs-litigation-horse-disputes/": {
-      "hash": "829aefda57d9df72395371d51fa7fd7eea73921a14c0197a539c29510d5e61bd",
+      "hash": "4cd5884b0c241e0e0b0d9e50842c2b53195d36fbc40ec37d16c32a324dd8d28e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/mediation-vs-litigation-in-a-horse-dispute/": {
-      "hash": "6829f9fb2272e7522e6629ee9498a7050475c61d2067a426d49a2881c99ab05f",
+      "hash": "b9a476d2c7912b308540faeaaf545aa8e7b57a6e98068d4a56fac6ee79d493b3",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/compare/mediation-vs-litigation-in-horse-disputes/": {
-      "hash": "a0fc1f09364ca7f30591f5a4493d91b439ba064fe02abea25cddbbfcdf0e828e",
+      "hash": "63cef1678f2f458381a11d21cc55695f71660f848c75454ff652a23ea8f56b2b",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/": {
-      "hash": "a9a99d36a6d45af25a8df6b96e4f34517e94af77904e4f31b22760fda9a84eed",
+      "hash": "03e6e98dac22712be6916d560d85cd314cdc52cf18e6dd7477956c9705c7f69d",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/photo-release-vs-sponsorship-rights-agreement/": {
-      "hash": "d4c23793d38f86283e282496806db61dacafe0c03b76f04f67da7dcd4dcd5781",
+      "hash": "67678da459e86de91792f6862edbd2c7b3466cf72c99107f6c2accd12cede40e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/pre-purchase-exam-vs-as-is-horse-sale/": {
-      "hash": "ecedb517f490fcb263a9f2b466b255ade7cace01797fb57e38f3567e27dbd41f",
+      "hash": "4531f797653c1dd881e51781c871aeefca10c09256417613d87ab5141ccbb30b",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/compare/pre-purchase-exam-vs-no-exam-legal-risk/": {
-      "hash": "cebee4d4bb4c73a222faacbd91263cc77d760007cdc2fd7b98fb49b5ac3fc642",
+      "hash": "9c62846a240b4253d6d9c103232c5d0dce64ce23e0ec86c927b019bd270b38b1",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/private-horse-sale-vs-trainer-assisted-sale/": {
-      "hash": "f1456a35e948c36a5876ce53e5f6860b33de4cf8874ce2b950e4b3338553065b",
+      "hash": "34ecbc8350ab3845e3be52d532c95b6868562bba5b7f07c8dff915b0c9606ee7",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/purchase-deposit-agreement-vs-refundable-trial-payment/": {
-      "hash": "9107ab57db34f1540f6985e558db487b203415f58a2b220b795526135461f77d",
+      "hash": "6ff906b91c5e7a20b279f4191850c16fb849e618bf9e23748ceed6fcb7b06605",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/release-form-vs-liability-waiver/": {
-      "hash": "bd270d88b7df1617ab05559864d037d15ef24c4b51b8e09d0be36a26c8643085",
+      "hash": "20fe23061115c78b827283b433c4d29c406e697e0ff9f8ece42742a8ca559fcd",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/release-of-claims-vs-settlement-agreement/": {
-      "hash": "0a0404c1780f27c03ee2d5c284430a46cf126c661a627b98fa93b239fab841f4",
+      "hash": "867dc34272037c5b80cb2123fb885e6ca8a8cd0f2c3455f06bb8c8f90e8090db",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/retainer-agreement-vs-consultation-call/": {
-      "hash": "5be251fda0bdc1f75015ab16a7526432d09a743a1447b77e5a26b924e714fde2",
+      "hash": "d11e0a4253803edd8ac17fabf51161a541a0c85294f1564ce05976de7780c36d",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/risk-of-loss-clause-vs-possession-transfer/": {
-      "hash": "fd18adb1d1685bbc7473ef19c16c80eebb094caf15e5ad0c2560e6af0bfda580",
+      "hash": "94eed209defdca42ebcd3f5cbe216eabc0a159d3effd0ce35b34828be2fcc41b",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/sale-disclosure-form-vs-veterinary-records/": {
-      "hash": "7efb4c41bcf255dc2cd0869487306fb67d1d805e57682f0ab01ad36a4a202a09",
+      "hash": "98d994235fde958f56f632c24d76a6864d2f622fe4cd4ef71950b800908cc495",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/sole-proprietor-vs-llc-for-a-horse-business/": {
-      "hash": "2f97d64d6b7aa899867b16118031bb61451b2881d88e83c6a5bfa554412a787c",
+      "hash": "fbab8e6d8f1f61aac8ebb3f838f4ff395128a0420aab51ef3df24f7ea882d6b3",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/sponsor-deliverables-schedule-vs-general-sponsorship-promise/": {
-      "hash": "1d91cc194175c40473486cd3277439fc2a8117910fd12f20e74d6b4d2e43eaa6",
+      "hash": "8896fbc39cf4efc281631179f8042a6e1ef6ca8f090325e56f1f27ef9e9a11e3",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/sponsorship-agreement-vs-brand-ambassador-agreement/": {
-      "hash": "e8b5a1a556deac5f9c5adcb3838c0039a0cf826dfabe772346f06648464bccc2",
+      "hash": "b2ab48f4f62ea291dd9b0d62a41b0c110be6a9b8a3ec5d3647ff5ecc82de16e0",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/sponsorship-agreement-vs-simple-email-agreement/": {
-      "hash": "20fe8084fdd2439369991bd773f979d99c0603714fb8d3c4ed28f6c078491b2e",
+      "hash": "ca38899b65151f553dcc2841fa9fd025200c4f985b3507f818ce81c60b5de4a4",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/stable-rules-document-vs-boarding-contract/": {
-      "hash": "eba24022f14f26a0d0b583ddd0d2a9a1c53ff1e09ff7c6b66e9e59b0e484dced",
+      "hash": "0316f8edb72b9669ea1b28d79b09a54c1e2635c149e594711e144638fca76665",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/compare/state-equine-liability-act-vs-private-contract/": {
-      "hash": "d2375a459bbf06f57765f522ec9e531c05f487052db935c99893fd4811dea6dd",
+      "hash": "2805224255c03babe5240c7c2a0a20f5a138f4c286a4081c698c826138448acd",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/statutory-warning-signs-vs-liability-waivers/": {
-      "hash": "69ca77d7129720ffa3e157f534dbe49a542d10a075341efe278ae847e6806f98",
+      "hash": "8a4c8475214f234ac164c025d970016d332870fac7d5087eaec8f78260546c0d",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/template-contract-vs-custom-horse-contract/": {
-      "hash": "1fe8dd389cbc4dc9e46432f94bab4964f3f6225bda0e12bf51ef738d04deac7f",
+      "hash": "7cad2af75c6bce10d2b68a8378f02afd75de61873c5b654ab49bb89272f15f5c",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/template-horse-contract-vs-custom-horse-contract/": {
-      "hash": "eedcb71c4c4f5439055044831855d7ff8d70d61b2338c9c862d1474053607815",
+      "hash": "8ded9d4e515aebeae5266ac8f02e7fa9f7f57a831cbbfbb2430f8a46a268fe9c",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/text-message-agreement-vs-signed-contract/": {
-      "hash": "bceb7ad6410ef9d6711aa945416e457dca48bb913be930715278aa957f6ae4c7",
+      "hash": "447b7696cd7a511c32660d57b52f5ae84a3e1a2e981838c036122184e53f71f3",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/therapy-program-waiver-vs-general-barn-waiver/": {
-      "hash": "cc1d902491f237d8be871ae99493b3a5f8359a38e9f5d1675b1d110bfc55b0c8",
+      "hash": "2bb7a3150f76cdc23b6c357e90ff2a32c9698738ff15ff87d3683e8dab9acda3",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/trademark-vs-llc-name-for-an-equestrian-business/": {
-      "hash": "d49b34183600935b8e14c0f9ab3b4fcb724bd2c66f644da5206bc04961ba7955",
+      "hash": "10128fc929a7a4f5eac2a51ad9c6221b8ce74127a1016fbd6949163a8b965f69",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/trademark-vs-llc-name-horse-business/": {
-      "hash": "1423a2ff653ac4cfa4b7afd71fdb8b4f788b7386565ec783ade508308d1ffd81",
+      "hash": "f751cdc1bcf5380cf6d6a9461539d9ebe86ec9016888c91782c1c666dd23a361",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/trainer-agreement-vs-boarding-agreement/": {
-      "hash": "4b559c99df976c6a0a3c067262eec42781464650ec87c691b7c10d183edaa58e",
+      "hash": "8e1636deaa48ebe8f2d53bd300ca06487a3e5bbe024c0aeff0f6b2d96b92a332",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/trainer-liability-vs-owner-liability/": {
-      "hash": "d2263a1fc02299b290ae7a6c638ae7329f72652c8331d6b242e202ab28aff1ec",
+      "hash": "d921a06eb71f7ba596896760d26f9aaf1b07e4ce297a0fadb1ef4d68d7dcb571",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/training-fee-agreement-vs-commission-agreement/": {
-      "hash": "93473fb34ccc006a586dd8858875726567248fe2c700dc75cff8a2d2adfa6674",
+      "hash": "50122b39c6a345e1b035ad08590810355295a8c319c9632668c814fc8029d789",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/compare/trial-agreement-vs-lease-agreement/": {
-      "hash": "f233e052202628f2a48bd8e02b8b6a41b230705a649c018e7fbf94bf61fe5d55",
+      "hash": "5fd043fa84e540864af6fa2fd43652717e26a66dc888abfb0e560f34463cbeff",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/trial-period-vs-lease-to-own-horse-arrangement/": {
-      "hash": "e18b13159107d9de36ef156a546b86b361e141acfa1ee72144f30e81f4e80dd5",
+      "hash": "91e8a452ddf0ba5fc2cb7697d4c84406b6ac9c8c0f24d165ec9efad391f9740a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/use-of-image-rights-vs-copyright-ownership/": {
-      "hash": "931191e82f485d73a48bf357dabee93501482059f9a32b086ac5f1fa6dbd184d",
+      "hash": "1b78474972d269a1129e67c9d40595ad8039d1108232d5819798fe9f549f8180",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/verbal-horse-agreement-vs-written-horse-agreement/": {
-      "hash": "5cbeee1c72e749dab8ba207b3180518580a04e35b6e325041107cee4769b6e43",
+      "hash": "175d74b48ab5fd82f6d06b03f37a01c9d66f8b859a2a9453ec2c555c3e4ea276",
       "lastmod": "2026-10-18"
     },
     "https://horselegalguide.com/compare/waiver-vs-insurance-horse-liability/": {
-      "hash": "ac9a5a583fa60429a0020702d83425031fca238bf748f1292434c3814967baf8",
+      "hash": "7c1f0d4c2ea0cf292ff7b3e5e7b13ce18f9abcfc088a062e1627347ff5adef34",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/warning-sign-compliance-vs-signed-waiver/": {
-      "hash": "27a85d0ec5a527fe88cb8b7380454869b1624dfa98cbe2eb87ff7b7f04e14d34",
+      "hash": "8076785e9fe375f3f570ecd92daca942f686900670ead6465c4d32bca659b50f",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/compare/written-horse-contract-vs-handshake-deal/": {
-      "hash": "08064fbb78696c917f0ba2e08b2a502d8e9788108d9e4d69580ff9200abaee8e",
+      "hash": "79f6b76e853b4874c0480e37745e88e148c5c0a23162b5da54bdab1fd3c3a735",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/coverage/": {
-      "hash": "76ac1434bb22a0636d1851412165eabd620ba27a0f47d664af70a8f154bb053a",
+      "hash": "a4368e83579b559a046584c5523faaf038cda386bb28ee8e7e90680456f5d065",
       "lastmod": "2026-10-23"
     },
     "https://horselegalguide.com/disclaimer/": {
-      "hash": "74202d14076fa2739620e331ec3df1ec8497eaad7ab7a52c1ec5d398ff7cc019",
+      "hash": "41e659a37375b5ee375f3fec32df0a078bed2656a4302812130512ff2d093bbe",
       "lastmod": "2026-08-25"
     },
     "https://horselegalguide.com/disputes/can-a-contract-dispute-be-resolved-without-court/": {
-      "hash": "9491b89189b282aeb21ea552d4336942d32f3682f2ec41523b364542ee63b844",
+      "hash": "d49091d1f1484c470b69ca6d65efc8d5c91f2a2fd6a8eeac532c810bf5435f0d",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/disputes/can-i-ignore-a-demand-letter/": {
-      "hash": "b22f2d1aba2cd956f894682df2863b7c4d8c17c02c3386f99380da95de3dea44",
+      "hash": "528c71e7af554eb8bfd17a979c06c07bab3dd68b89199a35b54ec933b6eb5a18",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/": {
-      "hash": "68ac671ebe906dd55a50b853c63e30b66327e3e09a577267582ea46893bc704c",
+      "hash": "36dc02621e6e422af3f2ce7663cda13ebad0705dc89a1ef75770b7f09119c664",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/disputes/how-serious-is-a-legal-demand-letter/": {
-      "hash": "a038183e36908923fb54ce519cb5064f1e54074cdcb9438625a3869a93c99589",
+      "hash": "962be4f719035424e30358600f101e2c0aaefb9d3c42d4cf08f60c9f6fa8a19a",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/disputes/what-happens-if-i-do-not-respond-to-a-legal-letter/": {
-      "hash": "5948ce80c968baae2abeb94b61d354c7822fa0db1c659597df077bae7bde7ca5",
+      "hash": "8ebfe76ccc73c416c64565b01dca51958de428e4acd42bff53443d4a2baf3cd2",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/disputes/what-should-i-do-if-i-receive-a-demand-letter/": {
-      "hash": "508bbadd5d021181f8d39311e50784db413c9c2c1beaf67f49dd656848dc33ad",
+      "hash": "25332cb35c0c78b6349086f0584d2f0f13e9c054076f95ac425c28c74fecaeb4",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/faq/": {
-      "hash": "2b2344ff2123ecf77acdc708c0e47b2796d910151ad964948206cc23f256e7bb",
+      "hash": "58f9238c2c44e01867011364d65516216f4816338d539b54374d80dbbfc44a36",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/can-a-buyer-return-a-horse-after-purchase/": {
-      "hash": "3753dcecf261725d1754eaeb6810d181a2b9e41419d6c521feca89a910ccab6e",
+      "hash": "34f6168d6c56c178967217990a682afa4f5374bb2a23962e90f8f0b62cd0501a",
       "lastmod": "2026-10-23"
     },
     "https://horselegalguide.com/faq/can-a-buyer-sue-after-an-as-is-horse-sale/": {
-      "hash": "5aa5670a017516a6f680711ec99f4bc31ace48e9cc46ca4bb18a75772c31f3da",
+      "hash": "7f1d1f8bc81b98500bf5ccc97dad82bd3043525e58248f967b52088b3d4392a9",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/can-a-seller-refuse-to-take-a-horse-back/": {
-      "hash": "58aeaa581a4511357da1fac36441fe6722192038c775d020c57f7f854d3f5a0c",
+      "hash": "f23c0c5e34760681342f612663e4599ec4d363cab43c45df3372a9c8ee8f19e4",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/": {
-      "hash": "4f02325f60074fcbbd6aeabeee966fddac46b6cd73c2ab4c82560177a0ab5387",
+      "hash": "4353fd6a131cdf92424fd08a9eae22f0a802f7515023ab45e71f35e8b2bf18b5",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/faq/do-i-need-a-contract-to-buy-a-horse/": {
-      "hash": "923fdff60d37cab2354d2806673c5c4101ada05d6d04308f430bb13718eae058",
+      "hash": "531e08e5837d77b55b583d797d9b0e724f5ba5609440eb30bf8c25dda0537b60",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/do-i-need-a-contract-to-sell-a-horse/": {
-      "hash": "840601334ae187a3820c337003b546c865e4fa22aeb3c1c5b87fb8816b3ab654",
+      "hash": "53e929dce07bf1a042af15e51e2a357ad5288d5f63a1d7e42f95d7139a3ddbec",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/": {
-      "hash": "6ee7dc2802a781f2355f512d28906f4dfeefd8eddfacbb9c422dd38beaa32e65",
+      "hash": "72032f9cf5784f510da2314c9c061e6d84dc32bfd86bc9b30b60f967b882a768",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/faq/what-documents-matter-most-in-a-horse-sale-dispute/": {
-      "hash": "60f6e53da8b6fa9a495e175a00c182b34cd628dab284cd2259b646349bb7f55b",
+      "hash": "a3abb517fa129a94bf0cf29f139bb7fa9b9d7815576a35ca33ef125f02fc6782",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/what-documents-matter-most-when-a-waiver-is-tested-after-an-injury/": {
-      "hash": "4a6e8db7bfb464a5b3d8851d3177cb337b1e83e53121c1435db15c4960aeda85",
+      "hash": "08b323c39150e9c4942067ec910565aa0a71a59ed1faba9b227a15d44458631e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/what-documents-should-i-review-before-answering-a-demand-letter/": {
-      "hash": "3144c9140ce16c9d5035f6e151c49e935c4bb5d44f8114325434b03d2bd3e58f",
+      "hash": "7041175b1a8f0c1aa83e1907b451e6f4b76750621b2d271eb5602bf71ea333f4",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/what-happens-if-a-horse-becomes-lame-after-sale/": {
-      "hash": "546393128d6d110cf4803140dd273a024d7155ed4e3102314954a88f96c41cf2",
+      "hash": "12f76126e95c346414acfd5978325dffe21047132a5674f5c023a0d6a0ce0ca0",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/": {
-      "hash": "8fc5aae873111d852d7cb89b51a1f6f2abc78433b90e4e3bcfba3a0500c74eb7",
+      "hash": "8ece4f8d3e6c57ef7633af14cd0c0c359e5425133865a09001ce03a668b9cd52",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/faq/what-happens-if-a-horse-sale-goes-wrong/": {
-      "hash": "d5b79f6c5b1caf722f75f969fdbdbd876ab45ccd3de869fc91209bae669982f3",
+      "hash": "4002b07a6298292a0952144589de391a3d6271a33301a99312db57c5144ec817",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/": {
-      "hash": "b58da389c262c3b956679a65746c79d9c98b2e9781d907dbfe98f77d4d5fa4d8",
+      "hash": "565da4d336f4ac25ecafbaa1a699e1b3e2510011959648b4b7f662a263f6f455",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/what-records-should-a-boarding-barn-keep-when-board-is-overdue/": {
-      "hash": "15dd7a755814e26ab319387baee69a64bcd599c95719a23e3646116b9581cc8d",
+      "hash": "3409fb36520354a4eb8be4ad6b7d3f2e8642dab583aa5183ec8d57658a5374fb",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/what-should-be-included-in-a-horse-bill-of-sale/": {
-      "hash": "d02b7692d45abd2f44b81c9195a6fc768406176262b1da560134695f626daa08",
+      "hash": "7d23399d91cb4c4167b85201973288470d5c1f7334ae269dc1de2380e815994d",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/faq/what-should-be-included-in-a-horse-sale-contract/": {
-      "hash": "2da097ea028b9f852a7003ce81973b74247675b9fa4291c5038efec4c1846f61",
+      "hash": "7ecb319d0c2c8c3178cc2ea114d030bb971f342c5e737e07402135ba702c88b2",
       "lastmod": "2026-10-15"
     },
     "https://horselegalguide.com/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/": {
-      "hash": "9f66713cb7b9764157777cb7d2f5abf0b62f81b90de1f49ea97b837b89463911",
+      "hash": "2ae565b15460c98d34448192c4f2ab3da05af945d00ec134b5811e4f6828d87f",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/when-does-ownership-legally-transfer-in-a-horse-sale/": {
-      "hash": "821c7d201fa0e56e858b5c36e4d22ad9e6ae3413a242b5564f9681bdeb6204e7",
+      "hash": "d58ebad5e11b0765538bd73d12fd7589d8a7411278f2aad23d4cf7980dba63c0",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/faq/who-is-responsible-after-a-horse-sale-is-completed/": {
-      "hash": "635e9ad4abc0b6d35e2b86fd7be028a8cb4b5744f70cbacac533854f4bf2aa07",
+      "hash": "6f26cfcf5815620088672d54428274bd436ef870b6733727ca21ae4fd892dbbc",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/": {
-      "hash": "2e33b7b31cd9b4454d206d87b68ff38fd708d8539eb198cc227428ad6c5a5578",
+      "hash": "506e14a8437bcb8b1d16dad93e5e9ba72af0c2642f366d90e72a0d258b079146",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/boarding-training-and-barn-operations/": {
-      "hash": "e3ee1e64fb04ef843551d1870e337cd9d4810ee32866e88e0351ea026820ba73",
+      "hash": "5c5b580cb7e86309da5a038c6cf7c722184410f7ed37bd7ecb7ae33f01af1c47",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/demand-letters-and-disputes/": {
-      "hash": "17a52865cff737eeace4cde248a02c5b7fe771bdbf2528788cee1f5bdf2e9210",
+      "hash": "11e6fe0a20a91c2687b6cbe7f58da2cbda919bf082907415eafde6533b01a73c",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/emotional-am-i-screwed/": {
-      "hash": "50f75c28927cfabc620bedfb554083d286be77569620108e7b696c4783f0dbaf",
+      "hash": "7a25718ac3f332eec7263837d3d284df07db887ee3b782772370487052088928",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/equine-business-formation/": {
-      "hash": "a209ee86c56eda7cad85fa120d5368b504f65464e90a8f5cb2b42f165a9c445c",
+      "hash": "62f16cf34a07e6a1c835ed19b982432704c2d6f4054bef18c26c5a15cac7e273",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/horse-lease-and-trial/": {
-      "hash": "4077e0c245ae48888a4f3cbfcf7a8bfe2efd76c6a56f339d3e152c629b0430c0",
+      "hash": "f55787d61fde86d28d31a5be368b07eeb245196547aabd96771455f06b5503ee",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/horse-sale-and-purchase/": {
-      "hash": "96552bcf2a60b89817f50ff6124f6077d1182e9769a0db05d74830057f543446",
+      "hash": "4a7af7df808f0c7cf5b6a46e8c34b75dc480b5fa63a7243ea430a95f4ed8c92c",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/intellectual-property-and-brand/": {
-      "hash": "a49c56afad4f1cabfe824f89f80df1964808c333a8c388f3d32fc73b8d2843c6",
+      "hash": "b05c81d749fee024c7c706e31c52f71099f1caf0e9354c68cc1c4b581cd59a83",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/liability-waivers-insurance/": {
-      "hash": "6d1b208a960e933217bafb04eba247656a6acf58866d20ad7b05c4efae6f5ae0",
+      "hash": "2b31caae8a38da6cec3e3404036349ad174c32d1834edaa5ed6e5aaa07a68181",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/real-property-and-leases/": {
-      "hash": "b392a1a5fd6dc4f66f10cf2587cfc4ddede10eb21c58b44324debb1b4e8ff805",
+      "hash": "dac71c5fd95ea985e323c145929ff8ca081158b14aeb38e7099eb200a9121744",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/state-specific/": {
-      "hash": "94cfc7777fa53611c80be56b0052d54fd3a56bf4064b28d730fdb3b818da0ae0",
+      "hash": "caab9f93c3229b0fc22d23bdc64df917e738d12dbdae80875f5a3dc18861f465",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/hubs/therapeutic-riding-and-hipaa/": {
-      "hash": "4923c6f802c2ad76524e30f5448ee2331929d0d60cb1155bc9c9e19136d53d4f",
+      "hash": "014300f69d2bcd1bb71b78de449d357654daa371d53d1ff89aa0c47adde09bd9",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/insights/": {
-      "hash": "ee0d1df5ea58b1e3c543dfcacc626976b79fb8072cd0e535f2dc1f6bc0bf3cba",
+      "hash": "b32498c79fa06aaf8536bda11ad9c9990e6b88fe7bba8fbf9e0e958beb052e28",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/": {
-      "hash": "1dfea88484bd7b45405b78c79beb159e2a10e543cd329357eab06fa1d3f462ef",
+      "hash": "14187f7b045b5d63651b89d027fca8c5e736bf8069ac3053a1c0c465316b5bf1",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/": {
-      "hash": "810d395d005143926475c3b7d014cc40dd5bb775dffc01d9e093b3294deddf5b",
+      "hash": "7a52dba5ef82d7768d1a76986883ee92537ae6aa48facd97872867d6036aff27",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/": {
-      "hash": "c0520efb48e11dba9bb67d161f74f936d3b3e736ebfbc8f51039a7614bcdcf8f",
+      "hash": "0f24e5f374d4bf73dd6a4274a5c79ea4fa6c289817764e752aa19b4784f1e3d9",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/": {
-      "hash": "b111d537c20e2a1900f248e8f01e45b3a63de4a724f7507b9b1821eec490198c",
+      "hash": "1301d26b2ac29d6a1bca23bc38ded8a1354986318ea5af092e7aea5c62b4ba85",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/insights/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/": {
-      "hash": "7eda4db061c41b73c4aa73694a8106e9eb7d7bfefc0560b0901948d24f5eabce",
+      "hash": "1a7503302c029c110ab95bc79b32eb0b3d173b998471913015c3bf2f35eed12e",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/": {
-      "hash": "63782c89dafdca0a052904895bc405d5827bf2d83f1b41ef6e296bc44c4066b1",
+      "hash": "56037124e68429f99688a868491f6d02a06b0ca54303fa34d97ab07ee4c45267",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/": {
-      "hash": "a2cdff49c2b4a3b0d410bcc8972f73a784b915a61c00266c34dff86dace11761",
+      "hash": "12ac8d2e216fedd652c5eec3f0c6a4c34145e0681714856f85decd69cf88eb9d",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/": {
-      "hash": "6c4f605e30385ed853837fb60e5c879075bf1539a3733b9f1ab12719e85f9a61",
+      "hash": "12808737ef882cb9790ec14b7a2299ea56df4a969e94c8abd3f7fb6ea4fb5b6b",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/insights/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/": {
-      "hash": "ba7755de5d549c9af242cc33f7300e2db9bd05ab4e03a14b3946b895a0852081",
+      "hash": "763fa5c82669911987bedbc93cc9e226aa7775e9b0c9519ff844de3d5c40705a",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/insights/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/": {
-      "hash": "ad0da2ee8f89adcd0a9dc3aafdaf1a16f4875ed28f4033e5cb11b4c5d7790c11",
+      "hash": "5f03833adc537e4cc784866496cdc8bcafdb8dd3d4c90062801d49f95bdf62e5",
       "lastmod": "2026-10-22"
     },
     "https://horselegalguide.com/insights/2026-05-04/how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act/": {
-      "hash": "b07456b6803846cc4de698a9cdc59bfeadfb973854db923184c37f0ac86ae4cb",
+      "hash": "31c10fdfb212dd6f34a30369ccf027ea0f50e8ba5512fe9149f91fea9613cc4d",
       "lastmod": "2026-10-22"
     },
     "https://horselegalguide.com/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/": {
-      "hash": "033fbbe1978e83ee239aeef854a669a9220b08088f4fc51054ec67abd571a1a4",
+      "hash": "6d30b9d3c51f0962c80069b985f32550e00c63359dfc1e7b313d5fdb0deb7588",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/": {
-      "hash": "bad4b899dee2b232a62a0625e8426b849577dd9c69a68448d08c918deb09bb9e",
+      "hash": "ddd185f020d8585b150491299a2bd24f186683943debe026456bb1dcc10b8b78",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/insights/2026-05-07/a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong/": {
-      "hash": "e3ff20cf450ee69e4d043f4680ddd13824ce19fa37c651d7ba71b9df94c60b4f",
+      "hash": "35f9e21b309799b8845afff503472844e8d2ec27dd1a178c5224f40688195da0",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/": {
-      "hash": "ebbfb9911938aff24aaa81a677c21d19b095867cebe8319bbeb77f14a926f2a5",
+      "hash": "51f622f2c9b3715c4879c9ff290027f7547e9f1eb3a6d2cb51c9c7b13c52ce19",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/insights/2026-05-09/the-quiet-risk-inside-what-if-i-bought-a-horse-without-a-contract/": {
-      "hash": "d2dd3361010510243b6b5bd3eafdc5a4572f5cf7f51d1694124291b83be8d549",
+      "hash": "5eff6043944dc0b009805e7c15978e5b09be3089953afabb77fca2ddde308554",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/insights/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/": {
-      "hash": "c2f6b68b98f1b240b17cbe523ee2b2a805b98436bad285b438c393c091125a3b",
+      "hash": "9fe5ec5bb145be7a46d3a291d7004f9fae8fe3dfcb5e36ea7c5009967016e0e2",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/": {
-      "hash": "82cc215da50d326068cc1a8c22746e3ea1c294e7b0cc59c63369cde304b21909",
+      "hash": "e10ac96c9623bdcf603ec707ddf557430c5014fa639d9e1f2ac19b5c04d55f71",
       "lastmod": "2026-10-21"
     },
     "https://horselegalguide.com/insights/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/": {
-      "hash": "1918bffebfa25489f9be12659089c28e83ba69a3d4dfff194ecaf38f94ec017f",
+      "hash": "a110fb00becad440153fea331d6865d4e49c61ecdfe51ebe22d21c3b06600a31",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/": {
-      "hash": "37fda11b4bc463de0be81435a414800e97f81e60d7932d5573d6e6fe2aa3d7b0",
+      "hash": "7bc6e616238a5cc815c7cddd84723eecb4fe90fc1e5ac340c08c78a8f8cbaaa5",
       "lastmod": "2026-09-30"
     },
     "https://horselegalguide.com/ip/can-a-sponsor-use-my-image-without-permission/": {
-      "hash": "958e37d7db2c04511315f80811574a8aa8ef321bef23a21ef60ab20f1e8a6907",
+      "hash": "126f44e2de9c2a2773befc1264ab0b1818a418ffb18a0a0265addd57616bfc14",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/ip/do-i-need-a-contract-for-a-sponsorship/": {
-      "hash": "1e60129d44af7a3239b568257c69e92a5277c8dbaacc5ae96dbf16c99ee07d95",
+      "hash": "a32f5af94c7c9bd3a7dc01c2e96fd597fcf04d61e9847de026e0128aa64a8420",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/ip/do-i-need-a-trademark-for-an-equestrian-brand/": {
-      "hash": "a85a278135d8b39439b393419abc0482bc3a3d2397898c7fe73b987034befc71",
+      "hash": "cfa1fa29176377e5b00f8627647c1a3cfcc32f9b4e8a20a3c907c7f32d3f02f5",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/ip/how-do-i-get-a-sponsorship-for-horse-riding/": {
-      "hash": "ba348b062df33db28de19149d53851eba6c69d58da421a74819f4a6f2bd1120e",
+      "hash": "50e1fa267d974579ae57abd6d3b1fce718e6fb863e6387a109e430f81ed4d990",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/ip/how-do-i-protect-my-horse-business-brand/": {
-      "hash": "9b319a323588221bedab05dad7adcda28728ee42f3d968a97192f811ba3c1a6c",
+      "hash": "f53dc0780c7be3bab87cf2e0433a52e8e3441b8525d2da16031e84d7e1768070",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/ip/should-i-trademark-my-barn-name/": {
-      "hash": "f634012e942145e0c7c03bb1d1c9a39671ebb20d7bfd2e5dc97579b76366712a",
+      "hash": "53f6d2ac3a9ce8ab8dd493e33ddbd04bd10d4422b6674070bca0de7baa86eb36",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/ip/what-should-be-in-an-equestrian-sponsorship-agreement/": {
-      "hash": "7c2ae843481298a4c9789c157ac69b533486be2f6058be9ae7cdf6406b778ac7",
+      "hash": "45f08792f69c4fafbdf3d43fdbe26c5d51d660e49877296d39f04f3f4312508a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/leases/can-i-run-a-horse-business-under-my-lease/": {
-      "hash": "35ef5220a5897df49deefc9a1d801f434ea51e2f0920d128f75d2965a6b8a6c1",
+      "hash": "03241b5ad1e3b978cc7d3b37d5ac8ce20d3011d1eb87dc38ee836b985df4dc12",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/leases/can-you-end-a-horse-lease-early/": {
-      "hash": "37f0986401333fbc74e4f4f5a95c5efbbd7454fc5ffbc40611c909b900ec626a",
+      "hash": "27365d213742cd2e9715d640651a742bf4acf66783fda74c1b87f7daf5af576a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-becomes-unsound/": {
-      "hash": "f7f731a56a07b4a141f5dcc5908e441de477823a7d4f7d2f30fc0e83c42b5fb0",
+      "hash": "c23372a704759e1b16374febb0d205d75976437179d4ea6419c238e8d4433387",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/leases/what-happens-if-a-leased-horse-is-injured/": {
-      "hash": "2c192568e55b821536c09fba923773c3b0c2b1a93625a93af5b84d1ad4af7a64",
+      "hash": "4b65c30d49106131c34b6c9457a60da95a4168002d162d99916e898e5fd6ec7d",
       "lastmod": "2026-10-23"
     },
     "https://horselegalguide.com/leases/what-is-a-horse-trial-agreement/": {
-      "hash": "9ba7a4bd37a4c702066f6e2c6b03e0814d27fdabaef0a1d77435957259cb34f4",
+      "hash": "4433d8c82f1569ed28d7c5be1e79ad2a01539f4ac885d706cc82ca792978cf2e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/leases/what-liability-applies-in-a-horse-property-lease/": {
-      "hash": "18d59be1b87012d16afaf5ce2350c913d91873818fc91976df8d58ec6bff4721",
+      "hash": "14c7050155b423c9d67f754b20daafa577daf35882ce168748eaca678c243742",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/leases/what-should-be-included-in-a-barn-lease/": {
-      "hash": "3a3fd1945f8430d1fff52c9b996faf9593e29cc0c84e19a2fd40451a2c01909d",
+      "hash": "b6776a9db68fda21fdf7ad1db3b8bddb5eb05af56cf440df6850ca63f167e16c",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/leases/what-should-be-included-in-a-horse-lease-agreement/": {
-      "hash": "d4e6692035c6b7514ecf719060a8b640f097a9b01f0bfc33b4d3637fbea07a71",
+      "hash": "741185c971a71d26e77bc2328782c605dc309f99763a99540ca879a7e0f660be",
       "lastmod": "2026-10-18"
     },
     "https://horselegalguide.com/leases/who-is-liable-during-a-horse-lease/": {
-      "hash": "7445c375866379bee1b87d063fe5b875c6ca1c47eb44abf5ef50ecb2f5a94b15",
+      "hash": "6dd7355616e3dbfbe4061f7bcef7742680259b9437f17d6f20e857deb3564b91",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/leases/who-is-responsible-for-repairs-in-a-barn-lease/": {
-      "hash": "f2bc3029274714c16d126bf133e38c936cd09bbbc43c1eeb3e917698a93fd0e5",
+      "hash": "770f4e4bd5a9b0488f6cafd8aa0689b51329591d9da2db3bff33fe1adc669e2c",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/leases/who-pays-vet-bills-in-a-horse-lease/": {
-      "hash": "2f9f48c9efe9290094de81367e9743dccf764d615f9be2b31513d1f9043ce12c",
+      "hash": "83700861aca7d99ff5865ac897f3617348103ffe57ea9f6ed0fafaf7479d6b9a",
       "lastmod": "2026-10-18"
     },
     "https://horselegalguide.com/liability/can-i-still-be-sued-if-i-have-a-waiver/": {
-      "hash": "239878e47210d0596ef5fb55c380c4c1cc454fbd78387ebe5a157e42849c9dff",
+      "hash": "ffa94f000d670acc27aa168620d170d3e5709f5830a184125f617044f30618ca",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/liability/do-i-need-a-liability-waiver-for-my-horse-business/": {
-      "hash": "053593f6432e4caf21c5876669fdf79637811ed1d68702a970c09d9a552d2dcd",
+      "hash": "068c87953f1b551f6dad473b03b634ee2c88c58256b204ee069b59e7d2ac6360",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/liability/do-i-need-a-warning-sign-at-my-barn/": {
-      "hash": "6ea6a152d0aa917a38c81810837b9883f1115bc1347733e72c2ad6ac6ecf59bd",
+      "hash": "36e381f0419b33b4dbee848e0eeef369e13f42ce063cde22465af2bdf0ba6351",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/liability/do-i-need-insurance-for-my-horse-business/": {
-      "hash": "74b9fee13555e6e082c22da511df0e2cb43f6134720af11fc5686ecba19b47ea",
+      "hash": "b39fca49520bc41963de3ee57dc3988d1dfb31c35d62f6304697c5a384fb3d97",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/liability/does-my-contract-need-statutory-warning-language/": {
-      "hash": "18bb7c4922e3bb0691eb8695fe8887a5f2eb56f0a81102c957045c1bc08ef156",
+      "hash": "7fff4e3f608d70e490e38bcd5e9d939efd62220cd99905add74de9b7092b2c33",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/": {
-      "hash": "93be42e2566a9ba2dc520110ccb49211c931633ce995a3028a3644c6de2b2b68",
+      "hash": "695def1f934f0cb4bbf8ad973c6602b6f996ed13bc6d4a037e104ce0f1434acd",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/liability/what-does-equine-liability-law-actually-protect-me-from/": {
-      "hash": "3eeb1dda1526e364c51e65702974155c84b15451b58a12f1e9db37dbcb6df491",
+      "hash": "d07d10b0929feb6345b960c2c0e12c88aa2377a3bdae8c1ff3e8718c13aea6f8",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/liability/what-happens-if-i-do-not-post-the-required-sign/": {
-      "hash": "553303a195fe8290c867b11a4268e70674c60a0d7c86bb6fd6eea207dba2d439",
+      "hash": "c9b729c0d016c9d051fecf4abe6a94f944cf741cce04db6aa6454c5622435df1",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/liability/what-is-the-equine-activity-liability-act/": {
-      "hash": "2d02ad19c88f7f19242dd3eab0ad0b6ba330eb6f21aa2400a5147f1cb0f46cf9",
+      "hash": "fc51c2f0ccaee3b57e92cb18b969d3d2421774fcc6a56767faef48a467de2763",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/liability/what-type-of-insurance-do-horse-owners-need/": {
-      "hash": "c090149df811345102ddb97c4ba74d347573e922840fc63b70907a26febda3cd",
+      "hash": "2f0abf15e2ec88a2fee7c49d06342adf5a1ef9d35695f897005bdd3d21a16681",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/liability/what-type-of-insurance-do-trainers-need/": {
-      "hash": "4774eb4cbb5bfe980a0b2dbe75b0246c009efa9022fe9d43426af022a19c7ed3",
+      "hash": "1f3f47d97f811263bf900558ff10d7be08f26c373d638edda2923515b088d90d",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/privacy-policy/": {
-      "hash": "214a6d10547b928b19dc8b8ece2d1580d3364092c70ff9b31fe039bcbc0c5f7c",
+      "hash": "c2e5298cd10ae38bf7ca62858debd6e0d6bbde53a00759876fdb46e9320cd15b",
       "lastmod": "2026-08-25"
     },
     "https://horselegalguide.com/reference/": {
-      "hash": "2ab5df4ecb55c147407d236d1df7c7ea7e5dcf6919daef89b70249c1b1a77c2d",
+      "hash": "b8ded7eb9cb39ac7f3d3c66034f72820deed1eea2907e44aac18cfca65f1b693",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/": {
-      "hash": "5917fc3f5a01ec30a88db47f2dd05bd136f04b6dff0cb4f3b3b7915912681971",
+      "hash": "44ab2b5c15bda4ff96629f9ba1ef72b29e3d9b3bc7f72a74401c6a0a3bab055b",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/": {
-      "hash": "17f1a40527152bf17ef9dbd40179de9486d42df3b1a9d2457ad5ce5a8e51838d",
+      "hash": "0354acb30465389a719d5a5fc3018398a36ae95cca2ccc94bd62f9fd2522e84a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-barn-lease-does-not-say-who-handles-repairs-what-now/": {
-      "hash": "62281c0fb617ad33edaed0a7ab82692f3a0b02dc5d20eedeb98394ffb2696ca4",
+      "hash": "c8cdfb766f04bfcbbf2aa28cf9123dde534ad46cf8c78062d5758d114ff4f6c9",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/": {
-      "hash": "badcd972ff3baf3f45442d763392fcad7755eec311168412f05e3107d4721c36",
+      "hash": "6700fbe8c88c7eb4ec6ae9921e5993f81dda4f097829ad601c83a9848995a22d",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-barn-wants-to-remove-a-difficult-boarder-what-should-be-checked/": {
-      "hash": "8064934a0c58521b8c9f56ff2aae12c5921eef43663fc5929cc53658af11d43b",
+      "hash": "91e48815f663f2c9ae946d56f2daf7aaaa380bdbe19dc937ce0b0f2492c15539",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-boarder-stopped-paying-what-can-a-barn-do-next/": {
-      "hash": "baefc3a6f22413b601ec01e19581d9925b63033198ad17a8d5eafbea29466264",
+      "hash": "a79cf2b42e8c029e93923ef2b2da4e2f2fe9bae04776ab93095096b97e2b2386",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-boarding-agreement-does-not-mention-emergency-care-what-now/": {
-      "hash": "b4c088892f69631f6e9294e33a18db47eb308606dabe074f33ee2b75e942e3c8",
+      "hash": "af767e2ece6f965a3d28e91c3cb2011ab65b48d7324841e65b17e6a42e4d1af5",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-boarding-barn-changed-facility-rules-mid-relationship-what-should-be-checked/": {
-      "hash": "e3693ed224115b975545edb2ab2a1807436c23b61efb0294d1de5979d76824ac",
+      "hash": "ef4783912b49fdad1985ec8f2d4cc62827fb449cb12ba93e63e32b35b3a699b5",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-boarding-barn-changed-ownership-what-happens-to-agreements/": {
-      "hash": "dd6643fadd34beb0d4f37ce1a083996e7501227440fd1a39c689c972fcebabfa",
+      "hash": "c6b9b8e699fb9d19efed1505319e077315c0900f86ed5861ab3fe93e0d160f06",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/": {
-      "hash": "fbe98495d67adde656ae66d9b86b37e97ba5ed2cd34aa51df5fe369b6f57d7b7",
+      "hash": "41a97df974e43705a8efb808ad7c927e8d44418ffcc0dfdddd27f22674bff775",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/": {
-      "hash": "0de718db4cac4fd8e845aab336a02aab8a449d37225e19afd146a1df6016da53",
+      "hash": "22567a9d6d60969589f30911dd85e591e93df5fb3b525d7517e56cc9f2c0ba48",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-buyer-and-seller-remember-the-deal-differently-what-should-be-preserved/": {
-      "hash": "f3acc9f4c4d2cfac722d507afffcc51f8889fc8dd069d3f8b1418242e2dba8ab",
+      "hash": "563889be8e9bf08d84f173b1e62c2bd8412195b32a1684bc267aff9ea16a22ee",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-buyer-claims-misrepresentation-after-a-horse-sale-what-matters/": {
-      "hash": "bfa64c3117a5bd0b07db464c3f31ddb103505684b82827b020a809764de886c2",
+      "hash": "bf3f7b491e4b912277efdb7cbdf9ca95c657224dd9b5eba257ac942995e63282",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-buyer-found-an-old-injury-after-purchase-what-should-be-gathered/": {
-      "hash": "d1e791a4e4f87041ac9f79c62f1553d1b0753c176393628931513617694f83cb",
+      "hash": "3c6b9179544237005ad4bc123a46c04eecb989839dda5277121e5948bd24bde8",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-buyer-skipped-the-pre-purchase-exam-and-now-regrets-it-what-matters/": {
-      "hash": "9a7305e1acbc69c6e46384c0e952c9b39550cf738d92f91e9b9f13496f846e92",
+      "hash": "ef2e0338da89de0ee070030df6979b0189170cb2c9d8ae4cd35fb0c70f3b3455",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-buyer-wants-a-refund-after-changing-their-mind-what-matters/": {
-      "hash": "87f6be240e89052bc2c1f3b64c9705c4fe329518f0931ea4d0ad9910b361288d",
+      "hash": "f9213316741ccc9427409b062da1fe1666ff501fb27511c8fa381f2e2861410f",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-buyer-wants-to-return-the-horse-what-matters/": {
-      "hash": "50488181f0504df6ad4655a6c0b5f5411c41f8fc740a255c957aa83ca983c781",
+      "hash": "1f46ebe02832ac56108b489c3dd6a93c917e88905824d110b752e0d6a7e17cdb",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/": {
-      "hash": "dae8702851eaf81e37b3b426e98cd0235b35fb9a0dab9ba7c94abe41ef27aa81",
+      "hash": "55a8c0c14ba724c1c800aa458fb6e0956412d72486cb5e4f884eea18d766fb57",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-client-wants-to-cancel-a-training-agreement-what-terms-matter/": {
-      "hash": "38e63440d708536f601def25189a99322e2e3a8c765a4ea921cf86aa7897f88e",
+      "hash": "fa683cab7c62994011c8dfe5d6f374bf9d6e81ee1d5a7f07d6be510beb49497b",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-clinic-host-and-trainer-disagree-about-responsibility-what-documents-matter/": {
-      "hash": "bbbd5f88c8a17363d745eb96b922aaf9f3092118664bc2a80d2a44c66c2d3990",
+      "hash": "c6ebd0df2d7a130196780b81a71cf00c490824ebfd871f10537cf55cac900680",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/": {
-      "hash": "c69a2e698d27a3b61bff193b5ef289a1827408d7fe62d1ef3c5d12e48446a4de",
+      "hash": "db37e8b6c855d4cfc4bb282a74cce23f5ca3b211cd85259d51ef3a84b3aca9fc",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-contract-names-the-wrong-party-why-does-that-matter/": {
-      "hash": "bdfc590496ca8f98562dcdd149d0678437a5135776d961ac334febc17b837bb7",
+      "hash": "d714ca55102af2d167368b8dded391998dac4fe5d5f09ea386fd6f487cd3df53",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/": {
-      "hash": "f5aaf619215a778fa6c2931b4db75cebf85a669d1e69d5439786d2f48cb8b8d6",
+      "hash": "6e050152e572abce07df577f7d76fafc6a3dfc8a1b2b958a85e747fd2a731ec7",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/": {
-      "hash": "48169149d9aa81695283d4f974bfe906b927d9dce003ba0654b0f02e88b07e34",
+      "hash": "b155941d4bd2db16e3bbb013354c96a301ade513a4ec3b3ae2d2de0e748e3a77",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/": {
-      "hash": "3828322b93b5dcf41fdae82eed7880a964bf297b36faa46fac0b50e50300da8a",
+      "hash": "03742b13a4259b718299c46b2b7ae349d5239348202dd5e8f2e21cbea78f2069",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/": {
-      "hash": "a4b522574a38dfb7b5b0663eff3b27e7f72b5f91093b35aa484ea4b43a104bb7",
+      "hash": "b9552209469d897eca2247ed1e2173d2870341ca2be94c738e3050b589a409bc",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/": {
-      "hash": "3c2661a04522b6611e75bd3a06f45564516a89d271897113c5479ec9a0e83dd0",
+      "hash": "1807e607a1960630d406d3de8942bc241df763a655bba4f516ef3709554a07e0",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-business-wants-to-use-client-photos-in-marketing-what-permission-matters/": {
-      "hash": "f3b2832f7108124bd4b5a1857f57d9d238678af813a61cc80cf2329964d976e8",
+      "hash": "5722dc68682bbc2046f9ea021a0633d76670d5034831e12dfdb24e757458bd33",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-died-while-boarded-or-in-training-what-should-be-documented/": {
-      "hash": "cbe0976dca4e0bcb6e912d2731448e061175b831e44c0651c9cb194bec85acc5",
+      "hash": "7d677c10f2cec57e461c7748d816c5720d1c686aa24b15e7b46ed27e768fb39d",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/": {
-      "hash": "efa0a63084c3ba6e6c571eadd9b026d783d81c9e64ff75d895c339c280f5f8e4",
+      "hash": "cee8005019570fffb1ed9fd373f25215658cdf4488cb7e94b2946cbff1a61feb",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-lease-ended-early-what-issues-usually-come-up/": {
-      "hash": "42bf1a454336648ac8077c1568dd6327b73eda0b21c73427e817a890dfc8df83",
+      "hash": "d49cce892921d3efa1612d7058036cc351a873aa0a4afd794b2ca187f50215a8",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/": {
-      "hash": "6d61e5b4b9731773388d3ed285c61fd6b25a867aee58e6871d884e5acc4a084a",
+      "hash": "c6baf0a58dd35b54f5c4091f70edcde254b3ff19d18daa1fa684d97e791b3e72",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-horse-sale-involved-a-minor-what-extra-issues-can-arise/": {
-      "hash": "83a057c5c14ddc25f44216372b658ccca4a68635f1312e165a70dbfd66090578",
+      "hash": "326e405fb25b8875e741e2860c677b68a84ce585d6dd0b94a76262e86e43b4be",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/": {
-      "hash": "3e30e13197b910b40f5cefbaf0d8110a8f810716c41b03800116bb2bb803d815",
+      "hash": "42c5739df42e11bb044041a1cfe5d3bdf006d3b5ef35fb8fe8189cac46c59faa",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/": {
-      "hash": "c2be847e2a555ff1f1cf202dbec3d07cdd659f2db979bf016d1a37d4fe13767e",
+      "hash": "8b1f8ed2e7e35fe27b2aa87c5d30ef3f1fbb28e4db60ae59814caea352cab5a7",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-was-hurt-while-boarded-who-is-responsible/": {
-      "hash": "26938f6f6cc2235fe2ec37a1b110eaf66078bc606f8238732fa5be7a706b7b88",
+      "hash": "d14a2f09dacb251c227c2b3fbaa1612843650ea735e96362d96c417574ce90d9",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-horse-was-injured-during-a-paid-lesson-what-should-be-reviewed/": {
-      "hash": "0f9f7c950be6f4fb0364f4c6a44313f6c98429b97f67e32c3392d25f85d378d1",
+      "hash": "ae797bd3c6760ede522fb195dd903bea5f211c450ac9c33f0c227beb96d3da4c",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/": {
-      "hash": "5be221479057d03de2e1bb20db960582def47dbce423c23cb07763adfb9ef412",
+      "hash": "1c9e2ece87ad691df4569f5965f956a8a8f2e3140fe0d338bd5fa0f233707eef",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-was-sold-through-a-friend-or-agent-who-had-authority/": {
-      "hash": "4aa27d8e85332066a6bd94127d7cdaae1eb3d5a003b777b928384a6ce3e19ade",
+      "hash": "643513e0a64a9f6539c93261d1a2140d1379d016cbea9d475fa7d8cddfa352c5",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/": {
-      "hash": "4796f9f90a8a9bf037f26b728b17d70604dc2a939354190cf1b71db11e13417a",
+      "hash": "7090d0174434bf138e713ca84aa3e1d09ba725d0277de25b869fb96c15981a4a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-lease-to-own-arrangement-is-unclear-what-problems-can-appear/": {
-      "hash": "953f2de23d9f9f778679e202c204aa19b9cf0c6f97fbb6dd5b27bb7e12a4e949",
+      "hash": "fbbe3c127eddfaf0ff1a510d91057fdeb5cfd34390f46a19ba472dc708b5cf74",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-leased-horse-became-unsound-who-pays/": {
-      "hash": "4984d17ccaf22bca63ffd535afe6391366795515c098b358fe527df836652c1c",
+      "hash": "d686f2db34a51672bc0a220ddfa08bd98f19c6ba0334e964ca8f64ad7edace72",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-lessee-stopped-paying-board-or-vet-bills-what-happens-next/": {
-      "hash": "d263015141de62f2d58bfedcfd9382cf9cf977151a243c596b78f9016de20337",
+      "hash": "6cd1cfc5d099ef6910c5a276531314c478418ba6c043db9bfc2e237343874629",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-parent-signed-a-waiver-for-a-minor-rider-what-should-be-checked/": {
-      "hash": "cefb12f253ff298d79b72d507ce121278e16b4fb996c0ff1fb6fe15b31e1f0b3",
+      "hash": "ae953157d415882bb45b630087a6c670d52c171aff46f4eb9bb592b1c80c94ae",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-payment-plan-horse-sale-has-gone-sideways-what-should-be-reviewed/": {
-      "hash": "aed5055f090591f954f0a174defce62e77e259e7466148535afad294d87c4ca9",
+      "hash": "5e70595f3d0e21b125f4dba8e01f3ded64722f4fb3ef47b7080bd78c85976a6f",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-rider-used-a-facility-without-signing-a-waiver-what-risk-does-that-create/": {
-      "hash": "6be33208604c9c25a758905616112db197f49b0222a08faabcbf16b3b65fb5a8",
+      "hash": "7018913364b41943812fd3b05a60d21179e8817ce82bd5aadd2bdd117305b5a1",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-rider-was-injured-at-a-clinic-what-should-organizers-review/": {
-      "hash": "615cfc32e5f36107a4403ddbb13fb7b315317e81432aee5590a5be6191cf588f",
+      "hash": "19a28a32dbf499f09f24a8aa06ae021e46e5bd762790fc1d75f20a54d7e42850",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-seller-disclosed-an-issue-verbally-but-not-in-writing-what-should-be-reviewed/": {
-      "hash": "f47ef5bf15780188be21a3ef21a5c644fb64a4f9872a8addc5b2dad1210e9ea8",
+      "hash": "d337c9d3c7e4779329a74192c24c642e8d3ff5f2def6a4bb5b28fde3bd795ee6",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/": {
-      "hash": "523527c6ac56650610a5dbfc90d38535285ccaba28e5ea14049f741d9fc6ca9f",
+      "hash": "99762e52375a1dfad8eacd89204f2be0dfbe604bbde486fab57eaa0a139f8e99",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/": {
-      "hash": "edc87903104160e17dba0d1dca3a736ddb6a303544f90dfb9f4fe680a288a8ad",
+      "hash": "5c090600139785e3a6861b9411acfebf684d1521abb74822070fe073c649509e",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-social-media-collaboration-went-wrong-what-rights-matter/": {
-      "hash": "5690236a2994c366d19bffb4f59d0653928ae3f65d0b349a6aa6b5f2103e5409",
+      "hash": "af36c269d915a9db24b8cdf25e13e0a31e7d24158b4503333fcbb07e301a3cba",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-sponsor-did-not-deliver-promised-payment-what-should-be-checked/": {
-      "hash": "fc304e9de87adae7bf76db533799f623388d83f7a27ce74ff98206f0a2791f7b",
+      "hash": "639cc4c8b5ed9707c32d904de26dff799bec5efead8ffb9d4c21cb6e31bb8769",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-sponsor-used-my-image-without-permission-what-are-the-issues/": {
-      "hash": "5ebb3087c2d7a1a94eef3998363052e2018dc32e8927e8a8047dc6210d37f879",
+      "hash": "d320e8d77786daa6f1f00979d7db2833bb82458b9d0ab774964bf3767714a04e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/": {
-      "hash": "936afc9c4bc3ad079832394858461abab05a436542ee4917578fd43c8f4e9806",
+      "hash": "1c6e0635f4feaaed891938ca62f689370da101b99c2aae74d4fba9b57b12df7e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/": {
-      "hash": "1f4f77c3aa71a218a3e2dde0e60c258c7f7c0a3ea4cdc938fa275d5ce69894d7",
+      "hash": "81f65841d46962f55828370fbb75c1110bd9a55831f837dab970f2c1b7df56a0",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/": {
-      "hash": "8832c927e9745d485bab0f6435ffb7858633681ea459c24c514d7487120166cc",
+      "hash": "be9875546cfb565c5411fdb787c18e43cb32bb5a17c9fc9da9ca3764a4648c97",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-therapeutic-riding-waiver-is-unclear-what-should-be-checked/": {
-      "hash": "71a9eac0353053b3a7f827f28f5a397c284184584e8f099d3cdbcaa271736df5",
+      "hash": "ca46729c116d90d949917d1b45b5bef4fb657a82eda5a69f0814479831695716",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-trainer-changed-fees-without-a-signed-update-what-should-be-checked/": {
-      "hash": "a582f9315e5b6bdb13b93d3825b2713b91ebb3b3ed674ac9e1975ff0ed6fcf31",
+      "hash": "6f9ebc6e9dc6fe1dc19b131914bd49630d2ca9d1cbbef3b72b3b50a21268193e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/": {
-      "hash": "d784da01c62cbfde72a1fbb237e5e973d040b2ffc7ff20cdb44d0287e9aa12e5",
+      "hash": "105a3c94685c1880cb38d174af50ca83c1c492b092eb7ddc5aff7fb6eaf3280f",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/a-trainer-wants-commission-after-a-sale-what-should-be-checked/": {
-      "hash": "2aff36d6d2635c03e66fbc0826b9ca0d2983f1ce57fae2cb3c449d351fb5d0f7",
+      "hash": "374fb1534b3341dba1245e1e7bdbd1f2dab62adef68640f2b0ce84bac3d4d584",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/": {
-      "hash": "64f483f121b483477d3a695e52ccad00a6faaa1353a91adc9272454c98356d39",
+      "hash": "7a6610335cb1343ad89b233cda6e9cac1e195a71119b1a30732a7e3837beab0a",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/a-warning-sign-was-not-posted-at-the-barn-what-risk-does-that-create/": {
-      "hash": "fbadb130885b96dd32e902e256d567d7c1c1e7322102a0c3167d09900b915cf8",
+      "hash": "5f91049c8b7a70ac6a2b62b8153e3c5cb702b945333067f5a4bcb94b3a42b08a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/am-i-overreacting-or-is-this-risky/": {
-      "hash": "6b3af14c1ac24eb2315ef024b19c085774ebdf77cffa1fd439d713cf8cf5d362",
+      "hash": "49f9c9f3c1ffdaf9a8754d3b67feaa2221285a2cefea3e09d12161ff2dcb45e3",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/": {
-      "hash": "575cf4e0923880ffd95936e36ebc14b1e194fd0b5ec580df16bddb8d20fd67d4",
+      "hash": "c7eb7fc44ec4ae566af99870a9ddc9bdea0649d6053a4f5a5726d57c04c2d2c2",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/an-equestrian-sponsorship-agreement-went-sideways-what-should-be-checked/": {
-      "hash": "6a85a33805aa91222fc25ae9212f58e9b2744cd3a16943b76c7e111261bdea69",
+      "hash": "4f04e5b3cc4ba5c01e4224aa40aa922a21c61f26290f7ed5d62f5c4de039c4c1",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/an-equine-therapy-client-was-injured-what-should-be-documented/": {
-      "hash": "6c00dc795162df1c21a0f12e13a8b220751147aa2953d27610f68ec09572f407",
+      "hash": "8a527c2f383534c6b4bad54227f9b0cfe83869c13c61412eb4c3181a21ea280b",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/": {
-      "hash": "9e0aec7a5fe38df7ffabe3f64792bf138db487b7c391397e1d8b5dba9324a65b",
+      "hash": "2ce765914fa4ed324884cff71d892e0328c7684bec65c5ecad01ef35bcd0d289",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/did-i-mess-up-by-trusting-a-handshake-deal/": {
-      "hash": "a63fac6e3491b9873b6033a1ea60e2f8ff3f744219dc6334d777696b26c1a3d5",
+      "hash": "a9d22d2abd648476cae0b2a87f34dc53da31f08b7a5c5e2ab2b75808f01ba13d",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/do-people-actually-get-sued-over-horse-deals-like-this/": {
-      "hash": "ebb31a40db4a9aa5c0228301900f86f5f36227c68978c82c044584592927b6a9",
+      "hash": "51c2d8cf1588429820b49e26b322f49e4de6d72427eba3f39e29834cc1cdfe60",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/do-people-actually-get-sued-over-horse-deals/": {
-      "hash": "9c532ea012e72f8463c23165c1fa443ee629b50fb73c9ff4e833d7d1eb437346",
+      "hash": "0b66433f521d8765afe89cbe101476b310cb7fb50c751f38d15637c6f753fb42",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/horse-business-partners-are-disagreeing-what-documents-matter/": {
-      "hash": "e9e205f536dda1cd0751def20dace178b383411fabf660e8b813e4cccc5a9ad6",
+      "hash": "ab99e18160e49d9224f1e72041f75b87ece637b099831e4abbf2c81271454f7c",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/i-am-worried-i-am-overreacting-to-a-horse-dispute-how-should-i-think-about-it/": {
-      "hash": "c84597213de591932b78856890de185065291c95ade0a9865e5f93cc19c6a7cc",
+      "hash": "20c0694729b3f9b6b590f31e40e0f9b45986859b522b8af0b43bae95657f3821",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/i-bought-a-horse-and-something-is-wrong-what-now/": {
-      "hash": "e2385cb3feeab986f3de39a0413b978ba97c4c09383116886639fa7b54e9f476",
+      "hash": "2e61d7c0e04ac23df425e7dae1667f74b0da8fcad441a7cbbdec22c35acba615",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/i-ignored-a-horse-legal-issue-and-it-got-worse-what-now/": {
-      "hash": "6398bfad42494a6eb084e5ea054faf175e5478da6dffb061a8887073f1ce6120",
+      "hash": "96b01e610068edcd98b5cba4ed31d047effd2d65a84481dce74fb48bd990668c",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/": {
-      "hash": "d77aa67835c63120331758a93b54991ced075c567529d9977b39caae60a5f156",
+      "hash": "4c49eb4753b535d96f3045db5ff431dc6c7304f747949c3a7fb6141101bed822",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/i-signed-something-i-did-not-understand-what-should-i-do/": {
-      "hash": "379aefb790c6223918833a569268af2fc682e5d27c1fc8d28a89be313e37c025",
+      "hash": "def0bbdc9f2ea894d7d746fe17176fed25c6f1ad124054fd7ef447eca247da45",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/": {
-      "hash": "577fe653ed0f70dbeceb8fbd074a71278b9346f9bdd91eb9bd04ca4252205364",
+      "hash": "b1aec35c1ae12d6189e133253b6706f66038f2b40bdd38ea69c93090ca5fc234",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/i-sold-a-horse-without-a-contract-what-now/": {
-      "hash": "b072898a016d0cccb9cb479cbf3fbef49c8cfe24981baf29274a9f9b6ea7bbbf",
+      "hash": "e096c2cdf5912b9c5e46928e09cd422b00c29ce2a5b33cecf687c312e669bf35",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/": {
-      "hash": "72b828d74076eb41c16b98d7e3cf3916bed500b17c994d89d42734a7ef534355",
+      "hash": "f36539074543e6b7eed99a86ae1d8c0176a770fa773f6b64c42f4ceabbe70bea",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/i-trusted-a-handshake-deal-in-a-horse-sale-am-i-exposed/": {
-      "hash": "3f6318039b773e5acb2f9e01d0dae76b0325808443620698059bd5c23ef2d710",
+      "hash": "8f0b877b247f3458610a949fe0a824c3454973b2d758cd18c1aff65c9e4edbc6",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/i-used-a-template-horse-contract-is-that-enough/": {
-      "hash": "dd6360ac8a322eed9fcb77a46d0d1a6abbf4d0c0769f8f0364e4f82fa7afec69",
+      "hash": "fa5c1d4bed105fd9b12a6bbe0bb1840e54ca5395a42419790ebbb85b8421e128",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/insurance-denied-a-horse-related-claim-what-should-be-gathered/": {
-      "hash": "cf9bf281e60693141a5b7eeafefc106d1a17572a6c203c166bbb80c1577efd1e",
+      "hash": "53151f99feb5cada3f4a15ccf0be2dd539774d6a84ae21d941f9725547a8ce8b",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/is-it-too-late-to-fix-a-bad-horse-sale/": {
-      "hash": "178c779fc2cae617ddac3f6b2ce50a8a249597fd270201cd485494410050245e",
+      "hash": "020b03440c0f90b95c5cd8c33fdcda8328189f57b87a422b334ec76b7babcc9c",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/repairs-are-disputed-in-a-barn-lease-what-matters/": {
-      "hash": "3f3c2a9ed5f33b51c7351eb464d532e09eef303b5041acabc07002d6faf6ae82",
+      "hash": "b6cbe6dea09a864d13834af363048ea823e70d57a6904fe79e8802958841c7d3",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/someone-copied-my-barn-name-online-what-should-i-gather/": {
-      "hash": "2365e208809c492244652cbf027e25149e36d4f927ddfd32acfdf44a834d95e1",
+      "hash": "bf92342ff3c3abe32707b7d932e81c3d4dd33c9e56ff7c4a783cd9a1c5ba73c1",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/": {
-      "hash": "cf8ce21726ed9e88e6020d5651f05320e33138032e04e809c7d9c5d00c7fdacd",
+      "hash": "22077344919d084591c06835124a9d90145f31845a3c167ff98053efd11d3cbc",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/": {
-      "hash": "42eaf6bcf9e937943f59739c4d8ed583be10f6aef8900a1be1efa93052c5116e",
+      "hash": "973e0391a94421f835b13ec2df2a7e3568022db8cf55d7f23c910a6e38924445",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/": {
-      "hash": "98c6732d3bb57208d2a804f02652917bee3aaeca3241de5e1d137b1672c5406b",
+      "hash": "e3d246da6930d910b8c8a8c8d3cc449c2cf39579e7db06ead327f2f4e11edc15",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/": {
-      "hash": "8cb05dff0dd8d5099f47c0ee255b703efed20abc51c5007d11e0cdfbef2329d8",
+      "hash": "859caa4d177860a47c9a093949530f2cf96da24fd479c9d30aa891db0b4153d0",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/": {
-      "hash": "6a277c0a4f0c2f894a1a89f6944c1f2a4e04b3ecf3546487fb076650f46bc40c",
+      "hash": "c7122b41b76a70aa1d286af1b3787d1abed3670145e702afde91bb1c2c53207f",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/": {
-      "hash": "3d44944811e46b448f0db0e053521a51c274a4a37db5aa2c4667fce73b7bd6f2",
+      "hash": "6e27eb45b95e89b68b2881b740791b1c6d7af4c57b52c8bfba2e4794a9241616",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/": {
-      "hash": "60f98259089fd3968f396273ecf78b0ae2f5d248b3f99b4cb971918eaff9ce2a",
+      "hash": "f6ed2bc54e39f8b78abd50c7eaf183d86615fb7725b7837b685e1ed9b4ead9dd",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/the-seller-refuses-to-take-the-horse-back-what-matters/": {
-      "hash": "fdd328d678ba8985e5e531a8e0b02d80132cbdcb43d96819793a2eb0cfb5ea6a",
+      "hash": "de61052c01d32fb9a4bc6f29a569a410c69bae54ad107a3cc2764b8ffdc25b5f",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/the-seller-says-the-horse-was-sold-as-is-what-does-that-usually-affect/": {
-      "hash": "c2a550644c7a4228fc00f05ae74721d4279f2dbeff09447c526dc523c5c2ad93",
+      "hash": "7e453ca44c323c4998435dc3c21141db0a024e30c2998cd31c05a98ddc04b106",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/": {
-      "hash": "5fb5e906fd2de2979c85ef05120b6722b53e2c850b5986de5380e824918bc51f",
+      "hash": "d9b4b01f6ce455432f006779c415029bd7a4ca7d15d4642ce93931e751998e7e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/": {
-      "hash": "bc11ef7f34cf18652a891c2b5358b6ac42de1127f317067427988cd5e7f76a61",
+      "hash": "41ad4db937fcd019ac43fad3cd4e4b8d258313df9779ebe1957d80bc5e29656a",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/": {
-      "hash": "b4f69e9f5561cce2641f8d4c18ac77cfc5bee33ad1792faf7fe5c75bb8a95c07",
+      "hash": "b61998c641db833503b593bd2f438d16b084d5f3511825a3f8ac9e5f55971078",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/what-if-i-already-signed-something-i-did-not-understand/": {
-      "hash": "d0ea4c4d5bc26df8f285ceb7e57a2d870c88a1fa7b16216ee8c46a3e3a79b349",
+      "hash": "790a0a96e5bfa8a4a7ee3d7d3baad5ae2496980b3f08b2ffb802738d66ce5e5e",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/what-if-i-bought-a-horse-without-a-contract/": {
-      "hash": "9fd2c1482aab3f2b0668f6e76eeabab3b5611bb2c087dfc9249172ca8e768987",
+      "hash": "6bcbdca0b21de0dcd4f61d96ad525a5ddfe711b17a316ddfa109a94e6c5f8597",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/what-if-i-sold-a-horse-without-a-contract/": {
-      "hash": "e16ae4c4149e110e1cce69322cc7a9f9a22b52cd51865cdece80012802af84a6",
+      "hash": "1204eae1a88f8f86df3ba8280d5c54f8c763e5b2857969b277ef67534b6ebf8d",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/": {
-      "hash": "70745edb118fdbb404bb91dca4f6544ec8b43a372b9057e454ed9d2d3d4cf8e5",
+      "hash": "98c359ccbb94150fcee8c7ed623bf7a4b8796048d319d770780f453af3de19e4",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/what-should-a-barn-document-before-claiming-a-lien-or-sale-right/": {
-      "hash": "b6a8ca9daaffffe80d8a69f32e37e09ef5db500285c360b9d0f91efc37af0942",
+      "hash": "3c46e2dca6a440c58eeb63d5574ca1bc4d356f77c4cd1a40caeaf681c3592897",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/what-should-be-documented-when-a-lease-horse-is-injured/": {
-      "hash": "3ad3dc6e2e52e0278933c9d3b2a8c30757eb2854cfea7a44a69ef94b1c7cc0ac",
+      "hash": "bca2ddfb8953983b36ef6d678f0b86f2cc85ce35cb3e09095a83b48cec7cbb9a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/what-should-i-document-after-a-rider-injury-at-the-barn/": {
-      "hash": "9d3f7a1030a87550dab57db15368130cf6022114d29c6ef76c6548bc091c8dd3",
+      "hash": "2fbed163ad81d495e6aa876e89e6f9ebaf277bfda73252c232fd0e7e3d293aca",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/what-should-i-gather-before-asking-for-a-refund-after-a-horse-sale/": {
-      "hash": "65c266f920012f98e32e20098569c884ffeba20a388a3c13655d9c97388cea9b",
+      "hash": "bc6ecb5b921fa2908192991b1e2cfac7a125d898e471aaca44addb0f5fd07523",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/scenario/what-should-i-gather-before-responding-to-a-demand-letter/": {
-      "hash": "db471d5213ea2bc5edccaecc2ad8c85436d58ffc02c99436210ea33177bb22e6",
+      "hash": "3ba275a8942d2887d379cadc7ff7cc92f1856d03f657c5fe8ba0324f768c8830",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/state/": {
-      "hash": "c8703c01834f6325e83113bfd106b93b4dab9f7220c33fcee9a360d7298aa710",
+      "hash": "2d80935f8eda053fdd715b3b8adf871889daed9688e88222c91b8e61010a8c65",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/state/illinois/what-does-illinois-equine-liability-law-cover/": {
-      "hash": "8de1d1d1a490e4198c882439fd750eb7fbeb85dd6a2adf105b7861cf68fa0b46",
+      "hash": "beec26557cfa8db99201e782eed6b65016146a80af09ed5dfe5a54a566dbe8e8",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/state/north-carolina/do-i-need-a-horse-sale-contract/": {
-      "hash": "11c666cece3db5adfeb077a9ffc803c676e1aba770ed6cdf9a1701d0520206a7",
+      "hash": "d3b5907db5c82861c56586d28a817abd7f8d305a410fd979503efe0bec5332a4",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/state/north-carolina/do-i-need-warning-signs/": {
-      "hash": "fd06dfd656ac67ade0333c941ead319a849caae34b3529c3aea1c3a004589fb1",
+      "hash": "a80a06d6bb67f3b8f76938858a9ba496d9578427b2249bcfaab27b20fb5cd58a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/": {
-      "hash": "8cc7cf6e9a2aa61d38b9ed567c833d245d46d8701a46626df94530d4ed9ba1f9",
+      "hash": "b24491c4187d1bea57f85a34bb414c9cb917677c00faf86468dee9f24bf5562c",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/state/south-carolina/can-i-be-sued-if-i-have-a-waiver/": {
-      "hash": "5a928a3a570ac2191ff6f37617755ce31636da0990bbc9c331fefdde12fa15d1",
+      "hash": "34fdbf332118422c23f8f059024cea387bcea7e7334ddf2fa5884ca6ababc158",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/state/south-carolina/do-i-need-a-liability-waiver/": {
-      "hash": "484ebb037ca6aaf5c928ad009474f06150f7c2c2d393bc0042f66cdb8fa2de00",
+      "hash": "75f120f00afc04084816e2bff84fd3422cf18c1a136fd9142c13e1d9046403dd",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/": {
-      "hash": "215a1d9967fa25d2e5f0ea1394e8467d92836c969188ced8f806373de43e2d56",
+      "hash": "7ca2adf9c2a4b3ddf3c2b331989440044a52819c45c57e53ae5167b41cb2060a",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/therapeutic/do-i-need-insurance-for-therapeutic-riding/": {
-      "hash": "8a93041597994ed31220e2b9e0342a982d994c898be18e6d04b9b209187efbf4",
+      "hash": "5c990fdf4e5454b3933cca8c8d4fa00d30a630ce7957ce1d613c2909f32c35a7",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/": {
-      "hash": "0ad6faaee9866daef5a81631d96967566eccfed532f580e67582f505fe380895",
+      "hash": "a6a2ee3fb29f744f84048cc5f519beeb702a5175fc0518e70c64fb86791283a5",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/": {
-      "hash": "5e080502ceaa2ab448c0a9d76884442f80b3bc6069b6d3577fcb6569234f73b8",
+      "hash": "4e0fcbef015109b61bde8a7ab981ca4257d015af01cd43847bcf42ec524740d9",
       "lastmod": "2026-09-25"
     },
     "https://horselegalguide.com/therapeutic/what-waivers-are-required-for-equine-therapy-programs/": {
-      "hash": "d28ed1341295b05edad76337ae8c0bea582488385f38d820572c8aad7eb723c1",
+      "hash": "ea736c2b497755ab253d6f04f20c6654d8a4a439eb4a39c4757112c68e4bdbf9",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/whitepapers/": {
-      "hash": "d349674699ff4066ae7d7ba0a2afc7ce46ad0f122da36857abed0d5aacf9c8d2",
+      "hash": "bc0b55b04fdda00b036159048945de5d5ca2e4ecdae8110a091c5d74cdff1325",
       "lastmod": "2026-09-28"
     },
     "https://horselegalguide.com/whitepapers/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/": {
-      "hash": "b443a5983479d574282e9053f2ae93a3b4ada4c0ca697095ecc7f0c3318f4a2f",
+      "hash": "860d2c199f778990c5e29981bbc36e0e72f08c968ce03396ca21af2a4bb34b98",
       "lastmod": "2026-10-22"
     },
     "https://horselegalguide.com/whitepapers/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/": {
-      "hash": "77d5a6fd78581918630e3bb53a44190ca6f29e82819d0df313e8290de65d9635",
+      "hash": "877279b0b7c5cd8a7f4e2a51a625943a8833913d34f541f00d5b8cc8ee5eda90",
       "lastmod": "2026-10-22"
     }
   }

@@ -40,7 +40,22 @@ const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 
 // v2: hashes are pageContentHash (the <main> element), not the whole file.
-const SCHEMA = 'lastmod-ledger-v2';
+// v3 (26 Oct 2026): the hash covers the page's own content INSIDE <main>, with
+// the site chrome removed. renderLayout puts the brand header and the site
+// footer inside <main class="page-shell">, so adding one link to the footer
+// nav re-hashed all 324 URLs at once and advanced every lastmod to the build
+// date. That is the uniform date-bump this ledger exists to prevent, arriving
+// through the content hash instead of through a shallow clone: a navigation
+// link is not a change to 324 pages, and telling a crawler that all of them
+// were updated today is the false freshness signal, not a strong one.
+const SCHEMA = 'lastmod-ledger-v3';
+// Chrome repeated verbatim on every page. Stripped before hashing so a change
+// to it moves no page's date; a change to a page's own body still moves that
+// page's date and only that page's.
+const CHROME = [
+  /<header class="site-brand-header">[\s\S]*?<\/header>/gi,
+  /<footer class="site-footer">[\s\S]*?<\/footer>/gi
+];
 const ROOT = path.resolve(__dirname, '..', '..');
 const DEFAULT_PATH = path.join(ROOT, 'data', 'cadence', 'lastmod_ledger.json');
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -71,7 +86,9 @@ function contentHash(payload) {
 function pageContentHash(html) {
   const text = String(html);
   const m = text.match(/<main\b[\s\S]*<\/main>/i);
-  return contentHash(m ? m[0] : text);
+  let region = m ? m[0] : text;
+  for (const chrome of CHROME) region = region.replace(chrome, '');
+  return contentHash(region);
 }
 
 /**
@@ -124,10 +141,22 @@ function resolve(pages, ledger, today, opts = {}) {
   const day = today || buildDate();
   const entries = (ledger && ledger.entries) || {};
   const trustGit = opts.trustGit === undefined ? hasFullHistory() : opts.trustGit;
+  // A change to the hash DEFINITION is not a change to any page's content.
+  // When the stored ledger was written under an earlier schema, every hash
+  // mismatches for a reason that has nothing to do with the content, and
+  // treating that as "everything changed today" would bump every date on the
+  // one build that migrates - the exact failure this file guards. A URL the
+  // ledger already knows therefore keeps the date it already recorded, and is
+  // re-keyed to the new hash. No date is invented: each one is the date this
+  // ledger previously recorded for that URL. Only URLs the ledger has never
+  // seen are seeded, by the normal path below.
+  const migrating = Boolean(ledger && ledger.schema && ledger.schema !== SCHEMA && Object.keys(entries).length);
   const out = {};
   for (const [url, page] of Object.entries(pages)) {
     const prev = entries[url];
-    if (prev && prev.hash === page.hash && DATE.test(String(prev.lastmod))) {
+    if (migrating && prev && DATE.test(String(prev.lastmod))) {
+      out[url] = prev.lastmod;
+    } else if (prev && prev.hash === page.hash && DATE.test(String(prev.lastmod))) {
       out[url] = prev.lastmod;
     } else if (!prev && trustGit) {
       // First sighting. A commit date is a recorded fact about when this file's

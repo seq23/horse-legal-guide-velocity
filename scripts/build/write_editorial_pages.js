@@ -31,6 +31,13 @@ function parse(raw){let m=raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);return 
  *  - ```generator fences. See scripts/build/render_document_tool.js for why a
  *    working fill-in tool is the differentiator on these queries.
  *
+ *  - Ordered lists. `1. ` / `2. ` lines were matched by the same branch as
+ *    `- ` bullets, pushed into the same buffer and flushed as <ul> with the
+ *    numbering stripped. Every "Decision sequence" in the corpus - written as
+ *    a numbered process by scripts/quality/draft_uniqueness.js - therefore
+ *    shipped as an unordered list, and a list snippet is only ever extracted
+ *    from a literal <ol>. The buffer now carries its kind.
+ *
  * Everything except the generator block is still escaped through inline(): raw
  * HTML in a draft body is content, not markup, and is not trusted here.
  */
@@ -60,7 +67,8 @@ function md(raw){
   const out = [];
   let p = [], l = [], q = [], rows = [];
   const fp = () => { if (p.length) { out.push(`<p>${inline(p.join(' '))}</p>`); p = []; } };
-  const fl = () => { if (l.length) { out.push(`<ul>${l.map(x => `<li>${inline(x)}</li>`).join('')}</ul>`); l = []; } };
+  let lk = 'ul';
+  const fl = () => { if (l.length) { out.push(`<${lk}>${l.map(x => `<li>${inline(x)}</li>`).join('')}</${lk}>`); l = []; lk = 'ul'; } };
   const fq = () => { if (q.length) { out.push(`<blockquote class="clause-text"><p>${q.map(inline).join('</p><p>')}</p></blockquote>`); q = []; } };
   const cells = (line) => line.replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
   const ft = () => {
@@ -93,6 +101,12 @@ function md(raw){
       q.push(line.replace(/^>\s?/, ''));
     } else if (/^[-*]\s+/.test(line) || /^\d+\.\s+/.test(line)) {
       fp(); fq();
+      // A numbered line opens (or continues) an <ol>; a bullet opens a <ul>.
+      // Switching kind mid-run closes the list that is open rather than
+      // silently absorbing the new item into the wrong element.
+      const kind = /^\d+\.\s+/.test(line) ? 'ol' : 'ul';
+      if (l.length && lk !== kind) fl();
+      lk = kind;
       l.push(line.replace(/^[-*]\s+/, '').replace(/^\d+\.\s+/, ''));
     } else {
       fl(); fq();
