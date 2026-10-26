@@ -14,7 +14,13 @@
 // checks the rendered result.
 const SITE_NAME = 'Horse Legal Guide';
 const TITLE_MIN = 30;
-const TITLE_MAX = 70;
+// 65, not 70, since 26 Oct 2026. Google truncates the result title at roughly
+// 600px - about 60-65 characters - so a 70-character title spends its last
+// words on an ellipsis. The Search Readiness Checklist (item b1) sets the
+// ceiling at 65 and the 25 Oct sweep failed this site on two pages, at 70 and
+// 68. Bing Site Scan's own "title too long" threshold of 70 still passes
+// underneath a 65 ceiling.
+const TITLE_MAX = 65;
 const DESC_MIN = 110;
 const DESC_MAX = 160;
 
@@ -30,7 +36,8 @@ function stripShortAnswer(text) {
 // allowed to repeat. A title that is still short after that is a source defect
 // the writer has to fix, so it is left short for the validator to catch.
 //
-// Bing Site Scan flags titles over 70 characters. The long ones are scenario
+// Bing Site Scan flags titles over 70 characters and Google truncates near 65
+// (TITLE_MAX). The long ones are scenario
 // questions shaped "<situation>. <follow-up question>?" ("A boarding barn has
 // unpaid invoices and unclear records. What should be organized?", 82). The
 // situation sentence is the whole phrase that names the page, so the title

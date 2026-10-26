@@ -1,21 +1,27 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-24T17:32:14.000Z",
+  "generated_at": "2026-10-26T04:34:10.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "806aa973b352df4816975fb0b25959189c69c4b11652de5c401a0993bb8378bb",
+  "source_fingerprint": "38be45adbb0ae7685eb2fd79dcc9ce3b2bb092523d3c35d8ba0fb277ac53e6e2",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
   },
   "metrics": {
-    "indexable_pages_measured": 323,
+    "indexable_pages_measured": 324,
     "duplicate_title_groups": 1,
     "duplicate_description_groups": 0,
-    "high_similarity_pairs": 129,
+    "high_similarity_pairs": 130,
     "intent_overlap_pairs": 14
   },
   "family_metrics": {
+    "about": {
+      "pages": 1,
+      "duplicate_title_memberships": 0,
+      "high_similarity_pair_memberships": 0,
+      "intent_overlap_pair_memberships": 0
+    },
     "articles": {
       "pages": 4,
       "duplicate_title_memberships": 0,
@@ -121,7 +127,7 @@
     "scenario": {
       "pages": 106,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 72,
+      "high_similarity_pair_memberships": 74,
       "intent_overlap_pair_memberships": 9
     },
     "state": {
@@ -184,12 +190,12 @@
       "b": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
       "family_a": "insights",
       "family_b": "insights",
-      "body_similarity": 0.936,
-      "cosine_similarity": 0.9524,
+      "body_similarity": 0.938,
+      "cosine_similarity": 0.9554,
       "shingle_similarity": 0.9056,
       "intent_similarity": 0.1429,
       "title_a": "What Equestrians Often Miss About Is a Verbal Agreement Legally",
-      "title_b": "The Quiet Risk Inside What Should Be Included in a Horse Sale Contract"
+      "title_b": "The Quiet Risk Inside What Should Be Included in a Horse Sale"
     },
     {
       "a": "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
@@ -744,6 +750,18 @@
       "title_b": "How to Start a Training Barn Legally"
     },
     {
+      "a": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+      "family_a": "insights",
+      "family_b": "insights",
+      "body_similarity": 0.8793,
+      "cosine_similarity": 0.9182,
+      "shingle_similarity": 0.8069,
+      "intent_similarity": 0.3,
+      "title_a": "The Quiet Risk Inside What Should Be Included in a Horse Sale",
+      "title_b": "Why What Should Be Included in a Horse Bill of Sale Creates"
+    },
+    {
       "a": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
       "b": "/business/how-do-i-legally-start-a-horse-business/",
       "family_a": "business",
@@ -838,18 +856,6 @@
       "intent_similarity": 0.4286,
       "title_a": "What Legal Documents Do I Need for a Horse Business?",
       "title_b": "Do I Need an LLC to Start a Horse Business?"
-    },
-    {
-      "a": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
-      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
-      "family_a": "insights",
-      "family_b": "insights",
-      "body_similarity": 0.8764,
-      "cosine_similarity": 0.9139,
-      "shingle_similarity": 0.8069,
-      "intent_similarity": 0.3,
-      "title_a": "The Quiet Risk Inside What Should Be Included in a Horse Sale Contract",
-      "title_b": "Why What Should Be Included in a Horse Bill of Sale Creates Confusion"
     },
     {
       "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
@@ -1008,18 +1014,6 @@
       "title_b": "How Do I Protect My Horse Business Brand?"
     },
     {
-      "a": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
-      "b": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8693,
-      "cosine_similarity": 0.8842,
-      "shingle_similarity": 0.8418,
-      "intent_similarity": 0.1,
-      "title_a": "A seller relied on a verbal as-is statement. What should be reviewed?",
-      "title_b": "A horse sale crossed state lines. What should be reviewed?"
-    },
-    {
       "a": "/liability/what-type-of-insurance-do-trainers-need/",
       "b": "/liability/what-is-the-equine-activity-liability-act/",
       "family_a": "liability",
@@ -1030,6 +1024,18 @@
       "intent_similarity": 0,
       "title_a": "What Type of Insurance Do Trainers Need?",
       "title_b": "What Is the Equine Activity Liability Act?"
+    },
+    {
+      "a": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "b": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8687,
+      "cosine_similarity": 0.8849,
+      "shingle_similarity": 0.8386,
+      "intent_similarity": 0.1,
+      "title_a": "A seller relied on a verbal as-is statement",
+      "title_b": "A horse sale crossed state lines. What should be reviewed?"
     },
     {
       "a": "/business/how-to-start-an-equine-apparel-business/",
@@ -1644,6 +1650,18 @@
       "title_b": "Can a Buyer Sue After an “As-Is” Horse Sale?"
     },
     {
+      "a": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+      "family_a": "insights",
+      "family_b": "insights",
+      "body_similarity": 0.8531,
+      "cosine_similarity": 0.8829,
+      "shingle_similarity": 0.7979,
+      "intent_similarity": 0.1538,
+      "title_a": "What Equestrians Often Miss About Is a Verbal Agreement Legally",
+      "title_b": "Why What Should Be Included in a Horse Bill of Sale Creates"
+    },
+    {
       "a": "/faq/what-should-be-included-in-a-horse-sale-contract/",
       "b": "/faq/do-i-need-a-contract-to-sell-a-horse/",
       "family_a": "faq",
@@ -1654,18 +1672,6 @@
       "intent_similarity": 0.3333,
       "title_a": "What Should Be Included in a Horse Sale Contract?",
       "title_b": "Do I Need a Contract to Sell a Horse?"
-    },
-    {
-      "a": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
-      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
-      "family_a": "insights",
-      "family_b": "insights",
-      "body_similarity": 0.8522,
-      "cosine_similarity": 0.8814,
-      "shingle_similarity": 0.7979,
-      "intent_similarity": 0.1538,
-      "title_a": "What Equestrians Often Miss About Is a Verbal Agreement Legally",
-      "title_b": "Why What Should Be Included in a Horse Bill of Sale Creates Confusion"
     },
     {
       "a": "/business/how-to-start-a-boarding-barn-legally/",
@@ -1690,6 +1696,18 @@
       "intent_similarity": 0,
       "title_a": "I signed something I did not understand. What should I do?",
       "title_b": "A contract names the wrong party. Why does that matter?"
+    },
+    {
+      "a": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "b": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8507,
+      "cosine_similarity": 0.8879,
+      "shingle_similarity": 0.7817,
+      "intent_similarity": 0,
+      "title_a": "A seller relied on a verbal as-is statement",
+      "title_b": "A contract has no state law clause. Why can that matter?"
     },
     {
       "a": "/business/how-to-start-an-equine-apparel-business/",
@@ -1840,9 +1858,9 @@
       "b": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "family_a": "scenario",
       "family_b": "boarding",
-      "body_similarity": 0.5116,
+      "body_similarity": 0.5143,
       "intent_similarity": 0.75,
-      "title_a": "A boarding barn wants to sell a horse for unpaid bills. What matters?",
+      "title_a": "A boarding barn wants to sell a horse for unpaid bills",
       "title_b": "Can a Boarding Barn Sell a Horse for Unpaid Bills?"
     }
   ]

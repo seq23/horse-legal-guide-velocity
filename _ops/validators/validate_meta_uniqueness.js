@@ -7,8 +7,9 @@
 // 114 short descriptions, 23 short titles, one template sentence as the whole
 // description of 87 pages, and 78 title pairs between /reference/<q>/ and the
 // page it maps to, both self-canonical. Each of those now fails here:
-//   - title outside 30-70 characters (Bing Site Scan "Title too long" over
-//     70: 26 scenario titles of 71-83 after #33), description outside 110-160
+//   - title outside 30-65 characters (Bing Site Scan "Title too long" over
+//     70: 26 scenario titles of 71-83 after #33; ceiling tightened to 65 on
+//     26 Oct 2026, where Google truncates), description outside 110-160
 //   - two self-canonical indexable pages sharing a title or a description
 //   - a sitemap URL whose page names a different canonical
 //   - a /reference/ surface that is self-canonical (it copies its mapped page)
@@ -17,7 +18,10 @@ const fs = require('fs');
 const path = require('path');
 
 const TITLE_MIN = 30;
-const TITLE_MAX = 70;
+// Lowered from 70 on 26 Oct 2026 to match scripts/lib/meta_text.js and Search
+// Readiness Checklist item b1: Google truncates the result title near 65
+// characters, so anything past it is spent on an ellipsis.
+const TITLE_MAX = 65;
 const DESC_MIN = 110;
 const DESC_MAX = 160;
 const SITE = 'https://horselegalguide.com';
@@ -78,7 +82,7 @@ if (checked === 0) {
   if (missing > 0) fail(`${missing} rendered pages missing title or meta description`);
   if (canonicalOf.size === 0) fail('GATE_EXAMINED_NOTHING: every rendered page was skipped as operator or noindex; no public page was checked.');
   if (shortTitle.length) fail(`${shortTitle.length} titles under ${TITLE_MIN} characters (Bing rule 114):\n  ${listed(shortTitle)}`);
-  if (longTitle.length) fail(`${longTitle.length} titles over ${TITLE_MAX} characters (Bing Site Scan: title too long):\n  ${listed(longTitle)}`);
+  if (longTitle.length) fail(`${longTitle.length} titles over ${TITLE_MAX} characters (Google truncates the result title near ${TITLE_MAX}; Bing Site Scan: title too long):\n  ${listed(longTitle)}`);
   if (badDesc.length) fail(`${badDesc.length} meta descriptions outside ${DESC_MIN}-${DESC_MAX} characters (Bing rule 118):\n  ${listed(badDesc)}`);
   const dupTitles = [...byTitle.entries()].filter(([, v]) => v.length > 1).map(([k, v]) => `"${k}" x${v.length}: ${v.slice(0, 3).join(', ')}`);
   if (dupTitles.length) fail(`${dupTitles.length} titles shared by self-canonical pages:\n  ${listed(dupTitles)}`);
