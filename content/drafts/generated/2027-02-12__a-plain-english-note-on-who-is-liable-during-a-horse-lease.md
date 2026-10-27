@@ -1,5 +1,5 @@
 ---
-title: Remedies, exit paths, and damage control for Who Is Liable During a Horse Lease
+title: Insurance, injury, and liability allocation for Who Is Liable During a Horse Lease
 entry_id: continuity-insight-2027-02-12-who-is-liable-during-a-horse-lease
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2027-02-12/a-plain-english-note-on-who-is-liable-during-a-horse-le
 review_status: pending
 github_path: content/drafts/generated/2027-02-12__a-plain-english-note-on-who-is-liable-during-a-horse-lease.md
 uniqueness_status: passed
-uniqueness_strategy: remedies-exit
+uniqueness_strategy: insurance-liability
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Remedies, exit paths, and damage control for Who Is Liable During a Horse Lease
+# Insurance, injury, and liability allocation for Who Is Liable During a Horse Lease
 
 ## Citation-ready answer
 
-The practical question behind **Who Is Liable During a Horse Lease** is not answered safely by repeating a general horse-contract overview. This version focuses on what exit paths, cure opportunities, and damage-control steps may exist before escalation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **Who Is Liable During a Horse Lease** is not answered safely by repeating a general horse-contract overview. This version focuses on how injury, coverage, waiver language, and responsibility allocation affect risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2026-09-01/how-to-think-about-who-is-liable-during-a-horse-lease-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how injury, coverage, waiver language, and responsibility allocation affect risk. It is designed to be materially distinct from /drafts/2026-11-07/where-what-should-be-included-in-a-barn-lease-usually-goes-sideways/, while remaining educational and approval-gated.
 
-## Distinctive focus: Remedies, exit paths, and damage control
+## Distinctive focus: Insurance, injury, and liability allocation
 
-For this version, the useful lens is **remedies, exit paths, and damage control**. That means the reader should identify the termination, cure, return, refund, and default facts that actually belong to **Who Is Liable During a Horse Lease**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **insurance, injury, and liability allocation**. That means the reader should identify the insurance, waiver, injury, indemnity, and coverage facts that actually belong to **Who Is Liable During a Horse Lease**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**liable · horse · lease · insurance · injury · liability · allocation · trial**
+**liable · horse · lease · remedies · exit · paths · damage · control**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| liable | Identify the termination facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| horse | Identify the cure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| lease | Identify the return facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| insurance | Identify the refund facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| injury | Identify the default facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| liable | Identify the insurance facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the waiver facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| lease | Identify the injury facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| remedies | Identify the indemnity facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| exit | Identify the coverage facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **Who Is Liable During a Horse Lease** before anyone acts?
-2. Collect the termination, cure, and return evidence instead of relying on memory.
+2. Collect the insurance, waiver, and injury evidence instead of relying on memory.
 3. Separate the roles connected to liable, horse, lease so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **Who Is Liable During a Horse Lease**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The remedies, exit paths, and damage control lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **Who Is Liable During a Horse Lease**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The insurance, injury, and liability allocation lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 

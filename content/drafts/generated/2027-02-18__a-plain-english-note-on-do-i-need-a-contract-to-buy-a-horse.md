@@ -20,7 +20,7 @@ uniqueness_strategy: due-diligence
 
 The practical question behind **Do I Need a Contract to Buy a Horse** is not answered safely by repeating a general horse-contract overview. This version focuses on what should be verified before relying on a promise, description, template, or informal understanding. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what should be verified before relying on a promise, description, template, or informal understanding. It is designed to be materially distinct from /drafts/2026-09-24/the-quiet-risk-inside-do-i-need-insurance-for-my-horse-business/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Due diligence and verification
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**need · contract · buy · horse · plain · english · note · sale**
+**need · contract · buy · horse · due · diligence · verification · sale**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | contract | Identify the verification facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | buy | Identify the records facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | horse | Identify the representation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| plain | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| due | Identify the disclosure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

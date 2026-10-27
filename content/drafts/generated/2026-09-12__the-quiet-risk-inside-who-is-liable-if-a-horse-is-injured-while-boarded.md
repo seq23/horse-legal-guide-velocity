@@ -20,7 +20,7 @@ uniqueness_strategy: document-architecture
 
 The practical question behind **Who Is Liable If a Horse Is Injured While Boarded** is not answered safely by repeating a general horse-contract overview. This version focuses on which documents work together, which terms are absent, and which informal messages may matter. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-05-28/how-to-think-about-who-is-liable-if-a-horse-is-injured-while-boarded-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which documents work together, which terms are absent, and which informal messages may matter. It is designed to be materially distinct from /drafts/2026-08-22/what-equestrians-often-miss-about-what-happens-if-a-horse-sale-goes-wrong/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Document architecture and missing terms
 

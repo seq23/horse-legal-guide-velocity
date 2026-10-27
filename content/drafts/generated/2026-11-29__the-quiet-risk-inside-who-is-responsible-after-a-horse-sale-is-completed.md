@@ -20,7 +20,7 @@ uniqueness_strategy: business-governance
 
 The practical question behind **Who Is Responsible After a Horse Sale Is Completed** is not answered safely by repeating a general horse-contract overview. This version focuses on how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-08-14/how-to-think-about-who-is-responsible-after-a-horse-sale-is-completed-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-09-28/a-plain-english-note-on-do-i-need-a-warning-sign-at-my-barn/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Business governance and repeatable process
 

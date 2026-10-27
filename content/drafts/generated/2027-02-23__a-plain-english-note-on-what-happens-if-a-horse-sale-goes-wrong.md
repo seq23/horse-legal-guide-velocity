@@ -1,5 +1,5 @@
 ---
-title: Business governance and repeatable process for What Happens If a Horse Sale Goes Wrong
+title: Dispute readiness and early resolution for What Happens If a Horse Sale Goes Wrong
 entry_id: continuity-insight-2027-02-23-what-happens-if-a-horse-sale-goes-wrong
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2027-02-23/a-plain-english-note-on-what-happens-if-a-horse-sale-go
 review_status: pending
 github_path: content/drafts/generated/2027-02-23__a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong.md
 uniqueness_status: passed
-uniqueness_strategy: business-governance
+uniqueness_strategy: dispute-readiness
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Business governance and repeatable process for What Happens If a Horse Sale Goes Wrong
+# Dispute readiness and early resolution for What Happens If a Horse Sale Goes Wrong
 
 ## Citation-ready answer
 
-The practical question behind **What Happens If a Horse Sale Goes Wrong** is not answered safely by repeating a general horse-contract overview. This version focuses on how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **What Happens If a Horse Sale Goes Wrong** is not answered safely by repeating a general horse-contract overview. This version focuses on how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-12-07/where-what-happens-if-a-horse-sale-goes-wrong-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. It is designed to be materially distinct from /drafts/2027-02-22/a-plain-english-note-on-what-happens-if-a-horse-is-misrepresented-in-a-sale/, while remaining educational and approval-gated.
 
-## Distinctive focus: Business governance and repeatable process
+## Distinctive focus: Dispute readiness and early resolution
 
-For this version, the useful lens is **business governance and repeatable process**. That means the reader should identify the policy, procedure, entity, approval, and recordkeeping facts that actually belong to **What Happens If a Horse Sale Goes Wrong**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **dispute readiness and early resolution**. That means the reader should identify the demand, preservation, settlement, position, and documentation facts that actually belong to **What Happens If a Horse Sale Goes Wrong**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**happens · horse · sale · goes · wrong · plain · english · note**
+**happens · horse · sale · goes · wrong · business · governance · repeatable**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| happens | Identify the policy facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| horse | Identify the procedure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| sale | Identify the entity facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| goes | Identify the approval facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| wrong | Identify the recordkeeping facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| happens | Identify the demand facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the preservation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| sale | Identify the settlement facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| goes | Identify the position facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| wrong | Identify the documentation facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **What Happens If a Horse Sale Goes Wrong** before anyone acts?
-2. Collect the policy, procedure, and entity evidence instead of relying on memory.
+2. Collect the demand, preservation, and settlement evidence instead of relying on memory.
 3. Separate the roles connected to happens, horse, sale so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Happens If a Horse Sale Goes Wrong**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The business governance and repeatable process lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Happens If a Horse Sale Goes Wrong**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The dispute readiness and early resolution lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 

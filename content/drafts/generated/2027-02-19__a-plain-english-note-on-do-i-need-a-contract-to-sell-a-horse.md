@@ -20,7 +20,7 @@ uniqueness_strategy: business-governance
 
 The practical question behind **Do I Need a Contract to Sell a Horse** is not answered safely by repeating a general horse-contract overview. This version focuses on how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how a barn, trainer, program, or equine business can make the issue repeatable instead of improvisational. It is designed to be materially distinct from /drafts/2026-09-28/a-plain-english-note-on-do-i-need-a-warning-sign-at-my-barn/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Business governance and repeatable process
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**need · contract · sell · horse · plain · english · note · sale**
+**need · contract · sell · horse · business · governance · repeatable · process**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | contract | Identify the procedure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | sell | Identify the entity facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | horse | Identify the approval facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| plain | Identify the recordkeeping facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| business | Identify the recordkeeping facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

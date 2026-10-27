@@ -1,5 +1,5 @@
 ---
-title: Authority, roles, and decision rights for What Happens If a Horse Becomes Lame After Sale
+title: Operational handoff and responsibility map for What Happens If a Horse Becomes Lame After Sale
 entry_id: continuity-insight-2027-02-21-what-happens-if-a-horse-becomes-lame-after-sale
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2027-02-21/a-plain-english-note-on-what-happens-if-a-horse-becomes
 review_status: pending
 github_path: content/drafts/generated/2027-02-21__a-plain-english-note-on-what-happens-if-a-horse-becomes-lame-after-sale.md
 uniqueness_status: passed
-uniqueness_strategy: authority-roles
+uniqueness_strategy: operations-handoff
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Authority, roles, and decision rights for What Happens If a Horse Becomes Lame After Sale
+# Operational handoff and responsibility map for What Happens If a Horse Becomes Lame After Sale
 
 ## Citation-ready answer
 
-The practical question behind **What Happens If a Horse Becomes Lame After Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on who had authority to promise, sign, deliver, direct, or change the arrangement. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **What Happens If a Horse Becomes Lame After Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to who had authority to promise, sign, deliver, direct, or change the arrangement. It is designed to be materially distinct from /drafts/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-12-01/where-what-happens-if-there-is-no-written-agreement-in-a-horse-sale-usually-goes-sideways/, while remaining educational and approval-gated.
 
-## Distinctive focus: Authority, roles, and decision rights
+## Distinctive focus: Operational handoff and responsibility map
 
-For this version, the useful lens is **authority, roles, and decision rights**. That means the reader should identify the authority, agent, owner, trainer, and representative facts that actually belong to **What Happens If a Horse Becomes Lame After Sale**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **operational handoff and responsibility map**. That means the reader should identify the care, maintenance, transport, boarding, and training facts that actually belong to **What Happens If a Horse Becomes Lame After Sale**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**happens · horse · becomes · lame · sale · plain · english · note**
+**happens · horse · becomes · lame · sale · authority · roles · decision**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| happens | Identify the authority facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| horse | Identify the agent facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| becomes | Identify the owner facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| lame | Identify the trainer facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| sale | Identify the representative facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| happens | Identify the care facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the maintenance facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| becomes | Identify the transport facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| lame | Identify the boarding facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| sale | Identify the training facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **What Happens If a Horse Becomes Lame After Sale** before anyone acts?
-2. Collect the authority, agent, and owner evidence instead of relying on memory.
+2. Collect the care, maintenance, and transport evidence instead of relying on memory.
 3. Separate the roles connected to happens, horse, becomes so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Happens If a Horse Becomes Lame After Sale**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The authority, roles, and decision rights lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Happens If a Horse Becomes Lame After Sale**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The operational handoff and responsibility map lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 

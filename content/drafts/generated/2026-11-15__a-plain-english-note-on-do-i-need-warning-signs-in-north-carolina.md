@@ -20,7 +20,7 @@ uniqueness_strategy: dispute-readiness
 
 The practical question behind **Do I Need Warning Signs in North Carolina** is not answered safely by repeating a general horse-contract overview. This version focuses on how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. It is designed to be materially distinct from /drafts/2026-07-27/how-to-think-about-do-i-need-a-horse-sale-contract-in-north-carolina-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how to preserve options, reduce avoidable escalation, and prepare the record for early resolution. It is designed to be materially distinct from /drafts/2026-08-10/what-equestrians-often-miss-about-do-i-need-a-contract-to-buy-a-horse/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Dispute readiness and early resolution
 
