@@ -20,7 +20,7 @@ uniqueness_strategy: operations-handoff
 
 The practical question behind **What Happens If a Horse Becomes Lame After Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-12-01/where-what-happens-if-there-is-no-written-agreement-in-a-horse-sale-usually-goes-sideways/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-12-19/where-what-happens-if-a-leased-horse-is-injured-usually-goes-sideways/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Operational handoff and responsibility map
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**happens · horse · becomes · lame · sale · authority · roles · decision**
+**happens · horse · becomes · lame · sale · operational · handoff · responsibility**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
