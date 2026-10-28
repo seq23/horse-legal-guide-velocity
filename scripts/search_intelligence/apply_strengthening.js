@@ -18,6 +18,7 @@
 const fs = require('fs');
 const path = require('path');
 const { FILES, ROOT, readJson, SITE_ORIGIN } = require('./lib');
+const { fitTitle } = require('../lib/meta_text');
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const fileFor = (dist, route) => path.join(dist, route.replace(/^\//, ''), 'index.html');
@@ -86,9 +87,10 @@ function insertBeforeTail(html, block) {
 
 function applyEntry(html, entry) {
   let out = stripMarked(html);
-  out = out.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(entry.title)}</title>`)
-    .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${esc(entry.title)}$2`)
-    .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${esc(entry.title)}$2`);
+  const title = esc(fitTitle(entry.title));
+  out = out.replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${title}$2`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${title}$2`);
   if (entry.definition) out = out.replace(/<\/h1>/, `</h1>\n  <p class="search-definition" data-search-definition="true">${esc(entry.definition)}</p>`);
   // Question H2s: after the quick answer block when present, else after the header holding the H1.
   const h1 = out.indexOf('<h1');

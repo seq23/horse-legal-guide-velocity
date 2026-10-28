@@ -5,6 +5,38 @@ const os = require('node:os');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const repo = path.resolve(__dirname, '..');
+const { fitTitle } = require('../scripts/lib/meta_text');
+
+test('long article titles retain the site name inside the search title limit', () => {
+  for (const title of [
+    'How to Start an Equine-Assisted Therapy Business',
+    'Purchase deposit agreement vs refundable trial payment',
+    'A lease-to-own arrangement is unclear. What problems can appear?',
+    'How to Think About Can a Seller Refuse to Take a Horse Back Before You Act',
+    'Equine Law Advice & Answers for Horse Owners | Horse Legal Guide',
+    'About Horse Legal Guide: Who Writes It',
+  ]) {
+    const result = fitTitle(title);
+    assert.ok(result.includes('Horse Legal Guide'), result);
+    assert.ok(result.length >= 30 && result.length <= 65, result);
+    assert.equal(fitTitle(result), result, 'repeated formatting must not duplicate the brand');
+  }
+});
+
+test('search strengthening keeps the brand on all three title tags', () => {
+  const { applyEntry } = require('../scripts/search_intelligence/apply_strengthening');
+  const title = 'Start an Equestrian Business Legally: Barn & Lesson Checklist';
+  const source = '<head><title>Old</title><meta property="og:title" content="Old"><meta name="twitter:title" content="Old"></head><main><header><h1>Full original heading</h1></header></main>';
+  const html = applyEntry(source, { title, route: '/business/example/', sections: [], facts: [], faq: [] });
+  const actual = html.match(/<title>(.*?)<\/title>/)[1].replace(/&amp;/g, '&');
+  assert.ok(actual.includes('Horse Legal Guide'));
+  assert.ok(actual.startsWith('Start an Equestrian Business'));
+  assert.ok(actual.length <= 65);
+  const escaped = actual.replace(/&/g, '&amp;');
+  assert.ok(html.includes(`property="og:title" content="${escaped}"`));
+  assert.ok(html.includes(`name="twitter:title" content="${escaped}"`));
+  assert.ok(html.includes('<h1>Full original heading</h1>'));
+});
 
 /** Write a target_query_set.json in a fixture root that measures exactly these queries. */
 function measure(root, queries) {
@@ -25,7 +57,7 @@ test('editorial renderer distinguishes two formats sharing a source topic and op
     const opening = 'The practical question behind What Happens If a Horse Sale Goes Wrong is not answered by a label alone. Documents, payment, possession, and risk need separate attention.';
     const rows = [
       { entry_id: 'fixture-insight', title: 'Money, possession, and risk transfer for What Happens If a Horse Sale Goes Wrong', content_type: 'insight' },
-      { entry_id: 'fixture-whitepaper', title: 'White Paper: Horse Sale & Purchase - Documentation, Risk Allocation, and Plain-English Guardrails', content_type: 'whitepaper' },
+      { entry_id: 'fixture-whitepaper', title: 'White Paper: Horse Sale & Purchase - Documentation, Risk Allocation, and Plain-English Guardrails', search_title: 'Horse Sale & Purchase: Contract Guardrails', content_type: 'whitepaper' },
     ].map((row, i) => ({ ...row, source_query_title: topic, source_cluster: 'horse-sale-purchase', slug: `fixture-${i}`, status: 'approved', publish_date: '2026-04-30', github_path: `fixture-${i}.md` }));
     for (let i = 0; i < rows.length; i++) fs.writeFileSync(path.join(root, `fixture-${i}.md`), opening);
     fs.writeFileSync(path.join(root, 'data/system/editorial_backlog.json'), JSON.stringify(rows));
@@ -38,6 +70,7 @@ test('editorial renderer distinguishes two formats sharing a source topic and op
       const slug = require('../scripts/build/write_editorial_pages').liveSlug(row);
       const html = fs.readFileSync(path.join(root, 'dist', slug, 'index.html'), 'utf8');
       assert.ok(html.includes(row.title.replace(/&/g, '&amp;')));
+      if (row.search_title) assert.ok(html.includes(`<title>${fitTitle(row.search_title).replace(/&/g, '&amp;')}</title>`));
       const description = html.match(/<meta name="description" content="([^"]+)"/)[1];
       assert.ok(description.length >= 110 && description.length <= 170);
       return description;
