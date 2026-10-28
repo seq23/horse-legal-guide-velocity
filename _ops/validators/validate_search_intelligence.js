@@ -28,6 +28,7 @@ const { buildTargetQuerySet, PRECEDENCE } = require('../../scripts/search_intell
 const fam = require('../../scripts/search_intelligence/demand_families');
 const { loadFreeze, decide } = require('../../scripts/search_intelligence/publish_freeze');
 const { jsonLdGraph, publicPages, decode } = require('./seo_pages');
+const { fitTitle } = require('../../scripts/lib/meta_text');
 
 const MAX_AGE_DAYS = 4;
 const clone = (v) => JSON.parse(JSON.stringify(v));
@@ -154,7 +155,7 @@ const CHECKS = {
       const prefixes = [x.head_term, ...x.queries.map((q) => q.query)].map(si.norm);
       if (!(e.title.length <= 65) || !prefixes.some((p) => si.norm(e.title).startsWith(p))) out.push(`${x.page}: title "${e.title}" is not query-first and <= 65 chars`);
       const title = (html.match(/<title>([\s\S]*?)<\/title>/) || [])[1];
-      if (decode(title || '') !== e.title) out.push(`${x.page}: built <title> is not the strengthened title`);
+      if (decode(title || '') !== fitTitle(e.title)) out.push(`${x.page}: built <title> is not the branded strengthened title`);
       const def = html.match(/<\/h1>\s*<p[^>]*>([\s\S]*?)<\/p>/);
       const words = def ? textOf(def[1]).split(' ').length : 0;
       if (words < 40 || words > 60) out.push(`${x.page}: paragraph under the H1 is ${words} words (need 40-60)`);

@@ -1,11 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 /**
- * Install the Microsoft Clarity tag into every published page.
- *
- * The Clarity projects already existed - one per property - but no tag was ever
- * installed, so every project sat on "Almost there!" and none of them recorded a
- * single session. This closes that.
+ * Install Microsoft Clarity only on public form or purchase pages (e9).
  *
  * The snippet resolves its project id from location.hostname rather than being
  * hardcoded, because some trees serve more than one domain from the same files
@@ -13,8 +9,7 @@
  * two separate Clarity projects). A hardcoded id would send one domain's sessions
  * to the other domain's project.
  *
- * Idempotent: pages already carrying the marker are left alone, so this can run
- * on every build.
+ * Reconcile existing tags too, so a removed form also removes its recording tag.
  */
 const fs = require('fs');
 const path = require('path');
@@ -49,6 +44,24 @@ const snippet = `<script ${MARKER}>(function(w,d,m){var h=(w.location.hostname||
 let touched = 0;
 let already = 0;
 let skipped = 0;
+let removed = 0;
+
+function formOrBuy(html, rel) {
+  // Operator forms and error pages are not visitor conversion steps. Ignore
+  // script strings and comments that merely describe a form or checkout.
+  if (/^(admin|agency)\//.test(rel) || rel === '404.html') return false;
+  const markup = html.replace(/<!--[\s\S]*?-->|<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '');
+  if (/<form\b/i.test(markup)) return true;
+  return [...markup.matchAll(/<a\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)].some((m) => {
+    try {
+      const url = new URL(m[1] ?? m[2] ?? m[3], 'https://horselegalguide.com/');
+      return /^https?:$/.test(url.protocol) && (
+        /(^|\.)(gumroad\.com|stripe\.com|paypal\.com|lemonsqueezy\.com|square\.link|checkout\.shopify\.com)$/.test(url.hostname)
+        || /\/(checkout|cart|buy|order|book(ing)?)(\/|$)/i.test(url.pathname)
+      );
+    } catch { return false; }
+  });
+}
 
 function walk(dir, depth) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -58,13 +71,20 @@ function walk(dir, depth) {
     if (!entry.name.endsWith('.html')) continue;
     const rel = path.relative(outDir, abs).replace(/\\/g, '/');
     if (skipFiles.has(rel) || skipFiles.has(entry.name)) { skipped += 1; continue; }
-    const html = fs.readFileSync(abs, 'utf8');
-    if (html.includes(MARKER)) { already += 1; continue; }
+    const original = fs.readFileSync(abs, 'utf8');
+    const html = original.replace(/<script\b[^>]*\bdata-clarity-loader\b[^>]*>[\s\S]*?<\/script>\s*/gi, '');
+    if (!formOrBuy(html, rel)) {
+      if (html !== original) { fs.writeFileSync(abs, html); removed += 1; }
+      skipped += 1;
+      continue;
+    }
     if (!/<\/head>/i.test(html)) { skipped += 1; continue; }
-    fs.writeFileSync(abs, html.replace(/<\/head>/i, `${snippet}</head>`));
+    const next = html.replace(/<\/head>/i, `${snippet}</head>`);
+    if (next === original) { already += 1; continue; }
+    fs.writeFileSync(abs, next);
     touched += 1;
   }
 }
 walk(outDir, 0);
 
-console.log(`clarity: installed on ${touched} page(s); ${already} already had it; ${skipped} skipped`);
+console.log(`clarity: installed on ${touched} form/buy page(s); ${already} unchanged; ${removed} removed; ${skipped} skipped`);

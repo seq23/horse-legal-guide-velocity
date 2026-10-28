@@ -32,9 +32,8 @@ function stripShortAnswer(text) {
   return clean(text).replace(/^short answer:\s*/i, '');
 }
 
-// A title under the floor gets the site name, which is the one suffix that is
-// allowed to repeat. A title that is still short after that is a source defect
-// the writer has to fix, so it is left short for the validator to catch.
+// Reserve room for the site name on every title (Search Readiness b10).
+// The page's full question remains in its H1.
 //
 // Bing Site Scan flags titles over 70 characters and Google truncates near 65
 // (TITLE_MAX). The long ones are scenario
@@ -43,25 +42,28 @@ function stripShortAnswer(text) {
 // situation sentence is the whole phrase that names the page, so the title
 // keeps it and drops the follow-up; the H1 keeps the full question. A long
 // title with no such shape is a source defect and fails the build.
-function shortenTitle(t) {
-  if (t.length <= TITLE_MAX) return t;
+function shortenTitle(t, max = TITLE_MAX) {
+  if (t.length <= max) return t;
   const first = t.split(/(?<=[.!?])\s+/)[0].replace(/\.$/, '').trim();
-  if (first !== t && first.length <= TITLE_MAX && first.length >= TITLE_MIN) return first;
+  if (first !== t && first.length <= max && first.length >= TITLE_MIN) return first;
   // Keep a complete subject before a long editorial subtitle as the search title.
   // The page H1 retains the full headline.
   const subject = t.split(':')[0].trim();
-  if (subject !== t && subject.length <= TITLE_MAX && subject.length >= TITLE_MIN) return subject;
+  if (subject !== t && subject.length <= max && subject.length >= TITLE_MIN) return subject;
   // Some approved editorial headlines have no punctuation break. Preserve whole
   // words and leave the unshortened source title visible in the page heading.
-  const wordBoundary = t.lastIndexOf(' ', TITLE_MAX);
+  const wordBoundary = t.lastIndexOf(' ', max);
   if (wordBoundary >= TITLE_MIN) return t.slice(0, wordBoundary).trim();
-  throw new Error(`title is ${t.length} characters (max ${TITLE_MAX}) and has no leading sentence of ${TITLE_MIN}-${TITLE_MAX} characters to stand for it: "${t}"`);
+  throw new Error(`title is ${t.length} characters (max ${max}) and has no leading sentence of ${TITLE_MIN}-${max} characters to stand for it: "${t}"`);
 }
 
 function fitTitle(title) {
-  const t = shortenTitle(clean(title));
-  if (t.length >= TITLE_MIN || t.includes(SITE_NAME)) return t;
-  return `${t} | ${SITE_NAME}`;
+  const t = clean(title);
+  if (t.includes(SITE_NAME) && t.length <= TITLE_MAX) return t;
+  const suffix = ` | ${SITE_NAME}`;
+  const subject = t.endsWith(suffix) ? t.slice(0, -suffix.length) : t;
+  if (subject.includes(SITE_NAME)) return shortenTitle(subject);
+  return `${shortenTitle(subject, TITLE_MAX - suffix.length)}${suffix}`;
 }
 
 function comparable(text) {

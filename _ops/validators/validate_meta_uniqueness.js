@@ -40,6 +40,7 @@ const dist = path.resolve(process.cwd(), 'dist');
 let checked = 0;
 let missing = 0;
 const shortTitle = [];
+const unbrandedTitle = [];
 const longTitle = [];
 const badDesc = [];
 const byTitle = new Map();
@@ -58,6 +59,7 @@ if (fs.existsSync(dist)) {
     // Operator surfaces and noindex pages are not in any crawl invitation.
     if (/^\/(admin|agency)\//.test(rel) || /<meta name="robots" content="[^"]*noindex/i.test(html)) continue;
     const title = decode(t[1]).trim();
+    if (!title.includes('Horse Legal Guide')) unbrandedTitle.push(`${rel} "${title}"`);
     const desc = decode(d[1]).trim();
     const c = html.match(/<link rel="canonical" href="([^"]+)"/i);
     const canonical = c ? c[1] : '';
@@ -82,6 +84,7 @@ if (checked === 0) {
   if (missing > 0) fail(`${missing} rendered pages missing title or meta description`);
   if (canonicalOf.size === 0) fail('GATE_EXAMINED_NOTHING: every rendered page was skipped as operator or noindex; no public page was checked.');
   if (shortTitle.length) fail(`${shortTitle.length} titles under ${TITLE_MIN} characters (Bing rule 114):\n  ${listed(shortTitle)}`);
+  if (unbrandedTitle.length) fail(`${unbrandedTitle.length} titles do not name Horse Legal Guide (Search Readiness b10):\n  ${listed(unbrandedTitle)}`);
   if (longTitle.length) fail(`${longTitle.length} titles over ${TITLE_MAX} characters (Google truncates the result title near ${TITLE_MAX}; Bing Site Scan: title too long):\n  ${listed(longTitle)}`);
   if (badDesc.length) fail(`${badDesc.length} meta descriptions outside ${DESC_MIN}-${DESC_MAX} characters (Bing rule 118):\n  ${listed(badDesc)}`);
   const dupTitles = [...byTitle.entries()].filter(([, v]) => v.length > 1).map(([k, v]) => `"${k}" x${v.length}: ${v.slice(0, 3).join(', ')}`);
