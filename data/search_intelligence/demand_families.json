@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-09-28..2026-10-25",
-  "gsc_collected_at": "2026-10-28T14:24:02.099Z",
+  "gsc_window": "2026-09-29..2026-10-26",
+  "gsc_collected_at": "2026-10-29T14:25:08.683Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -23,8 +23,8 @@
     {
       "rank": 1,
       "family": "horse sale contract @ /hubs/horse-sale-and-purchase/",
-      "impressions": 48,
-      "weighted_position": 60.2,
+      "impressions": 50,
+      "weighted_position": 59,
       "status": "strengthened"
     },
     {
@@ -37,8 +37,8 @@
     {
       "rank": 3,
       "family": "equine liability @ /hubs/liability-waivers-insurance/",
-      "impressions": 4,
-      "weighted_position": 59.7,
+      "impressions": 5,
+      "weighted_position": 60.2,
       "status": "pending_strengthening"
     },
     {
@@ -64,20 +64,20 @@
       "page": "/hubs/horse-sale-and-purchase/",
       "page_kind": "hub",
       "page_intent": "sale_contract",
-      "impressions": 48,
+      "impressions": 50,
       "clicks": 0,
-      "weighted_position": 60.2,
+      "weighted_position": 59,
       "best_position": 13,
-      "page_impressions": 65,
-      "page_position": 54.4,
+      "page_impressions": 72,
+      "page_position": 52.9,
       "top_query": "horse purchase agreement",
       "query_count": 12,
       "queries": [
         {
           "query": "horse purchase agreement",
-          "impressions": 20,
+          "impressions": 21,
           "clicks": 0,
-          "position": 59
+          "position": 58.5
         },
         {
           "query": "horse sale contract",
@@ -87,21 +87,21 @@
         },
         {
           "query": "black horse contract purchase",
-          "impressions": 5,
+          "impressions": 6,
           "clicks": 0,
-          "position": 54.4
+          "position": 54
+        },
+        {
+          "query": "horse sales agreement",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 55.3
         },
         {
           "query": "horse purchase contract",
           "impressions": 3,
           "clicks": 0,
           "position": 60.7
-        },
-        {
-          "query": "horse sales agreement",
-          "impressions": 3,
-          "clicks": 0,
-          "position": 63
         },
         {
           "query": "horse bill of sale",
@@ -131,7 +131,7 @@
           "query": "horse sales contract",
           "impressions": 1,
           "clicks": 0,
-          "position": 74
+          "position": 55
         },
         {
           "query": "horse sale contract lawyer",
@@ -166,8 +166,8 @@
       "clicks": 0,
       "weighted_position": 89.7,
       "best_position": 64,
-      "page_impressions": 12,
-      "page_position": 68.8,
+      "page_impressions": 10,
+      "page_position": 82.2,
       "top_query": "equine law",
       "query_count": 5,
       "queries": [
@@ -217,12 +217,12 @@
       "page": "/hubs/liability-waivers-insurance/",
       "page_kind": "hub",
       "page_intent": "liability",
-      "impressions": 4,
+      "impressions": 5,
       "clicks": 0,
-      "weighted_position": 59.7,
-      "best_position": 58,
-      "page_impressions": 4,
-      "page_position": 59.8,
+      "weighted_position": 60.2,
+      "best_position": 60,
+      "page_impressions": 5,
+      "page_position": 60.2,
       "top_query": "equine liability waiver",
       "query_count": 2,
       "queries": [
@@ -234,9 +234,9 @@
         },
         {
           "query": "horse liability waiver",
-          "impressions": 1,
+          "impressions": 2,
           "clicks": 0,
-          "position": 58
+          "position": 60
         }
       ],
       "rank": 3,
@@ -246,7 +246,7 @@
       "qualifies": true,
       "status": "pending_strengthening",
       "qualified_on": "2026-10-24",
-      "reason": "qualified on 2026-10-24 (4 day(s) ago); no data/search_intelligence/strengthening.json entry yet. Allowed for 7 days, then the validator fails."
+      "reason": "qualified on 2026-10-24 (5 day(s) ago); no data/search_intelligence/strengthening.json entry yet. Allowed for 7 days, then the validator fails."
     },
     {
       "family": "horse lease agreement @ /hubs/horse-lease-and-trial/",
@@ -259,8 +259,8 @@
       "clicks": 0,
       "weighted_position": 72.3,
       "best_position": 30,
-      "page_impressions": 5,
-      "page_position": 45.2,
+      "page_impressions": 6,
+      "page_position": 39.3,
       "top_query": "equine lease agreement law firm wellington",
       "query_count": 2,
       "queries": [
@@ -284,7 +284,7 @@
       "qualifies": true,
       "status": "pending_strengthening",
       "qualified_on": "2026-10-25",
-      "reason": "qualified on 2026-10-25 (3 day(s) ago); no data/search_intelligence/strengthening.json entry yet. Allowed for 7 days, then the validator fails."
+      "reason": "qualified on 2026-10-25 (4 day(s) ago); no data/search_intelligence/strengthening.json entry yet. Allowed for 7 days, then the validator fails."
     },
     {
       "family": "equestrian franchise @ /business/how-to-start-a-horse-retail-business/",
@@ -353,6 +353,41 @@
       "reason": "rank 6 of 18 by impressions; landing page at 65.4 position with 7 page impressions (needs <= 15 with >= 2)"
     },
     {
+      "family": "start an equestrian business @ /hubs/equine-business-formation/",
+      "intent": "business_formation",
+      "head_term": "start an equestrian business",
+      "page": "/hubs/equine-business-formation/",
+      "page_kind": "hub",
+      "page_intent": "topic:hubs",
+      "impressions": 2,
+      "clicks": 0,
+      "weighted_position": 20.5,
+      "best_position": 11,
+      "page_impressions": 8,
+      "page_position": 22.8,
+      "top_query": "you have decided that you are going to start a new business giving horseback riding lessons. you need to decide which legal form you will use for your business. choose a sole proprietorship, partnership, or corporation. write a paragraph explaining why you chose the legal form you did and the advantages and disadvantages of your choice.",
+      "query_count": 2,
+      "queries": [
+        {
+          "query": "you have decided that you are going to start a new business giving horseback riding lessons. you need to decide which legal form you will use for your business. choose a sole proprietorship, partnership, or corporation. write a paragraph explaining why you chose the legal form you did and the advantages and disadvantages of your choice.",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 11
+        },
+        {
+          "query": "how to start an equestrian business",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 30
+        }
+      ],
+      "rank": 7,
+      "basis": [],
+      "qualifies": false,
+      "status": "not_qualified",
+      "reason": "rank 7 of 18 by impressions; landing page at 22.8 position with 8 page impressions (needs <= 15 with >= 2)"
+    },
+    {
       "family": "horse lease agreement @ /reference/",
       "intent": "lease_agreement",
       "head_term": "horse lease agreement",
@@ -363,8 +398,8 @@
       "clicks": 0,
       "weighted_position": 57.5,
       "best_position": 49,
-      "page_impressions": 4,
-      "page_position": 44.5,
+      "page_impressions": 3,
+      "page_position": 57.3,
       "top_query": "horse trial agreement",
       "query_count": 2,
       "queries": [
@@ -381,11 +416,11 @@
           "position": 66
         }
       ],
-      "rank": 7,
+      "rank": 8,
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 7 of 18 by impressions; landing page at 44.5 position with 4 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 8 of 18 by impressions; landing page at 57.3 position with 3 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "boarding and training contract @ /hubs/boarding-training-and-barn-operations/",
@@ -398,8 +433,8 @@
       "clicks": 0,
       "weighted_position": 67,
       "best_position": 67,
-      "page_impressions": 5,
-      "page_position": 35.6,
+      "page_impressions": 4,
+      "page_position": 42.3,
       "top_query": "how to vet a boarding barn",
       "query_count": 1,
       "queries": [
@@ -410,11 +445,11 @@
           "position": 67
         }
       ],
-      "rank": 8,
+      "rank": 9,
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 8 of 18 by impressions; landing page at 35.6 position with 5 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 9 of 18 by impressions; landing page at 42.3 position with 4 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "start an equestrian business @ /business/how-do-i-legally-start-a-horse-business/",
@@ -439,11 +474,11 @@
           "position": 85.5
         }
       ],
-      "rank": 9,
+      "rank": 10,
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 9 of 18 by impressions; landing page at 85.5 position with 2 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 10 of 18 by impressions; landing page at 85.5 position with 2 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "horse lease agreement @ /compare/",
@@ -456,8 +491,8 @@
       "clicks": 0,
       "weighted_position": 26,
       "best_position": 26,
-      "page_impressions": 5,
-      "page_position": 16,
+      "page_impressions": 3,
+      "page_position": 24.7,
       "top_query": "horse trial agreement",
       "query_count": 1,
       "queries": [
@@ -468,40 +503,11 @@
           "position": 26
         }
       ],
-      "rank": 10,
-      "basis": [],
-      "qualifies": false,
-      "status": "not_qualified",
-      "reason": "rank 10 of 18 by impressions; landing page at 16 position with 5 page impressions (needs <= 15 with >= 2)"
-    },
-    {
-      "family": "start an equestrian business @ /hubs/equine-business-formation/",
-      "intent": "business_formation",
-      "head_term": "start an equestrian business",
-      "page": "/hubs/equine-business-formation/",
-      "page_kind": "hub",
-      "page_intent": "topic:hubs",
-      "impressions": 1,
-      "clicks": 0,
-      "weighted_position": 30,
-      "best_position": 30,
-      "page_impressions": 7,
-      "page_position": 24.1,
-      "top_query": "how to start an equestrian business",
-      "query_count": 1,
-      "queries": [
-        {
-          "query": "how to start an equestrian business",
-          "impressions": 1,
-          "clicks": 0,
-          "position": 30
-        }
-      ],
       "rank": 11,
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 11 of 18 by impressions; landing page at 24.1 position with 7 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 11 of 18 by impressions; landing page at 24.7 position with 3 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "equine liability @ /liability/what-is-the-equine-activity-liability-act/",
@@ -601,8 +607,8 @@
       "clicks": 0,
       "weighted_position": 57,
       "best_position": 57,
-      "page_impressions": 4,
-      "page_position": 44.5,
+      "page_impressions": 3,
+      "page_position": 57.3,
       "top_query": "horse training contract",
       "query_count": 1,
       "queries": [
@@ -617,7 +623,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 15 of 18 by impressions; landing page at 44.5 position with 4 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 15 of 18 by impressions; landing page at 57.3 position with 3 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "equine law @ /articles/",
@@ -659,8 +665,8 @@
       "clicks": 0,
       "weighted_position": 93,
       "best_position": 93,
-      "page_impressions": 12,
-      "page_position": 68.8,
+      "page_impressions": 10,
+      "page_position": 82.2,
       "top_query": "law of the horse",
       "query_count": 1,
       "queries": [
@@ -675,7 +681,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 17 of 18 by impressions; landing page at 68.8 position with 12 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 17 of 18 by impressions; landing page at 82.2 position with 10 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "equine liability @ /insights/",
@@ -688,8 +694,8 @@
       "clicks": 0,
       "weighted_position": 99,
       "best_position": 99,
-      "page_impressions": 12,
-      "page_position": 68.8,
+      "page_impressions": 10,
+      "page_position": 82.2,
       "top_query": "equine law suit protection",
       "query_count": 1,
       "queries": [
@@ -704,7 +710,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 18 of 18 by impressions; landing page at 68.8 position with 12 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 18 of 18 by impressions; landing page at 82.2 position with 10 page impressions (needs <= 15 with >= 2)"
     }
   ]
 }
