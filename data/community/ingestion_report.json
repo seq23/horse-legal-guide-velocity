@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-28T13:38:15.283Z",
-  "total_signals": 4105,
+  "generated_at": "2026-10-29T13:37:48.563Z",
+  "total_signals": 4125,
   "signals_by_source": {
-    "reddit_equestrian": 2073,
+    "reddit_equestrian": 2093,
     "reddit_horses": 687,
     "forum_the_horse_forum": 31,
     "forum_chronicle_of_the_horse": 30,
@@ -17,7 +17,7 @@
     "forum_horse_and_hound": 92
   },
   "signals_by_platform": {
-    "reddit": 3368,
+    "reddit": 3388,
     "equestrian_forums": 153,
     "google_paa": 90,
     "serp_competitors": 217,
@@ -25,28 +25,28 @@
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1697,
-  "duplicates_collapsed": 2408,
+  "normalized_count": 1706,
+  "duplicates_collapsed": 2419,
   "pages_created": 0,
   "pages_strengthened": 269,
   "rejected_signals": 0,
-  "pending_owner_review": 1422,
+  "pending_owner_review": 1431,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 877
+      "count": 882
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 271
+      "count": 272
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 216
+      "count": 217
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 201
+      "count": 203
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 2073
+      "count": 2093
     },
     {
       "name": "reddit_horses",
@@ -151,9 +151,8 @@
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -177,8 +176,8 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_with_data",
-      "count": 10
+      "status": "success_empty",
+      "count": 0
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -26242,6 +26241,123 @@
       "llm_bait_phrase": "Horse chewing wooden gates",
       "source_signal_ids": [
         "forum_horse_and_hound_horse-chewing-wooden-gates-https-forums-horseandhoun_fa638f43"
+      ]
+    },
+    {
+      "approval_id": "approval_1697_a-lesson-fee-on-a-sale-horse-be-an-immediate-red-f",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4105_ddb7503496",
+      "proposed_slug": "/faq/a-lesson-fee-on-a-sale-horse-be-an-immediate-red-flag/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Would a lesson fee on a sale horse be an immediate red flag?",
+      "llm_bait_phrase": "a lesson fee on a sale horse be an immediate red flag",
+      "source_signal_ids": [
+        "reddit_equestrian_would-a-lesson-fee-on-a-sale-horse-be-an-immediate-r_e03eab26"
+      ]
+    },
+    {
+      "approval_id": "approval_1698_the-teenager-who-stabbed-horses-at-a-show-in-vegas",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4107_9770c0607a",
+      "proposed_slug": "/faq/the-teenager-who-stabbed-horses-at-a-show-in-vegas-has-been-found-competent-to-stand-trial/",
+      "cluster": "horse-lease-and-trial",
+      "question": "The teenager who stabbed horses at a show in Vegas has been found competent to stand trial. — what should I know?",
+      "llm_bait_phrase": "The teenager who stabbed horses at a show in Vegas has been found competent to stand trial.",
+      "source_signal_ids": [
+        "reddit_equestrian_the-teenager-who-stabbed-horses-at-a-show-in-vegas-h_72c9b33e"
+      ]
+    },
+    {
+      "approval_id": "approval_1699_my-mare-look-preggy-with-twins",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4109_53a976ffe4",
+      "proposed_slug": "/faq/my-mare-look-preggy-with-twins/",
+      "cluster": "state-specific",
+      "question": "Does my mare look preggy with twins?",
+      "llm_bait_phrase": "my mare look preggy with twins",
+      "source_signal_ids": [
+        "reddit_equestrian_does-my-mare-look-preggy-with-twins-https-www-reddit_d82dccc6"
+      ]
+    },
+    {
+      "approval_id": "approval_1700_exercise-rider-keeps-yanking-horses-mouths",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4113_825fdcb420",
+      "proposed_slug": "/faq/exercise-rider-keeps-yanking-horses-mouths/",
+      "cluster": "state-specific",
+      "question": "Exercise rider keeps yanking horses' mouths — what should I know?",
+      "llm_bait_phrase": "Exercise rider keeps yanking horses' mouths",
+      "source_signal_ids": [
+        "reddit_equestrian_exercise-rider-keeps-yanking-horses-mouths-https-www_1a261c44"
+      ]
+    },
+    {
+      "approval_id": "approval_1701_licking-salt-for-horses",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4116_635d07b8f7",
+      "proposed_slug": "/faq/licking-salt-for-horses/",
+      "cluster": "state-specific",
+      "question": "Licking salt for horses — what should I know?",
+      "llm_bait_phrase": "Licking salt for horses",
+      "source_signal_ids": [
+        "reddit_equestrian_licking-salt-for-horses-https-www-reddit-com-r-eques_3b713576"
+      ]
+    },
+    {
+      "approval_id": "approval_1702_academic-survey-international-perspectives-on-mode",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4118_67c1b34eaf",
+      "proposed_slug": "/faq/academic-survey-international-perspectives-on-modern-horse-breeding-short-3-minute-student/",
+      "cluster": "state-specific",
+      "question": "[Academic Survey] International Perspectives on Modern Horse Breeding (Short, 3-minute student survey) — what should I know?",
+      "llm_bait_phrase": "[Academic Survey] International Perspectives on Modern Horse Breeding (Short, 3-minute student survey)",
+      "source_signal_ids": [
+        "reddit_equestrian_academic-survey-international-perspectives-on-modern_128aaa26"
+      ]
+    },
+    {
+      "approval_id": "approval_1703_it-fair-to-expect-a-full-refund-after-an-accident-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4119_31f1ff37c0",
+      "proposed_slug": "/scenario/it-fair-to-expect-a-full-refund-after-an-accident-caused-me-to-terminate-a-lease-immediate/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Is it fair to expect a full refund after an accident caused me to terminate a lease immediately?",
+      "llm_bait_phrase": "it fair to expect a full refund after an accident caused me to terminate a lease immediately",
+      "source_signal_ids": [
+        "reddit_equestrian_is-it-fair-to-expect-a-full-refund-after-an-accident_3c4e8122"
+      ]
+    },
+    {
+      "approval_id": "approval_1704_best-hunter-jumper-trainer-in-utah-salt-lake-co-or",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4120_4704980372",
+      "proposed_slug": "/faq/best-hunter-jumper-trainer-in-utah-salt-lake-co-or-utah-co-preferred/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Best hunter/jumper trainer in Utah (Salt Lake Co or Utah Co preferred) — what should I know?",
+      "llm_bait_phrase": "Best hunter/jumper trainer in Utah (Salt Lake Co or Utah Co preferred)",
+      "source_signal_ids": [
+        "reddit_equestrian_best-hunter-jumper-trainer-in-utah-salt-lake-co-or-u_53a7857d"
+      ]
+    },
+    {
+      "approval_id": "approval_1705_update-horse-impaled-herself",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4122_cad4408013",
+      "proposed_slug": "/faq/update-horse-impaled-herself/",
+      "cluster": "state-specific",
+      "question": "Update - Horse Impaled Herself — what should I know?",
+      "llm_bait_phrase": "Update - Horse Impaled Herself",
+      "source_signal_ids": [
+        "reddit_equestrian_update-horse-impaled-herself-https-www-reddit-com-r-_6e4cd41f"
       ]
     }
   ]

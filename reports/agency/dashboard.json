@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-10-28T14:26:03.000Z",
+  "generated_at": "2026-10-29T11:20:33.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-10-28T14:26:05.912Z",
-      "age_hours": 0,
+      "age_hours": 20.9,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "not_connected",
       "checked_at": "2026-10-28T14:26:05.912Z",
-      "age_hours": 0,
+      "age_hours": 20.9,
       "message": "Add BING_WEBMASTER_API_KEY and BING_SITE_URL to GitHub Actions."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-10-28T14:26:05.912Z",
-      "age_hours": 0,
+      "age_hours": 20.9,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -1761,9 +1761,9 @@
       "canonical_present": 586,
       "duplicate_title_groups": 262,
       "duplicate_description_groups": 94,
-      "high_similarity_pairs": 130,
+      "high_similarity_pairs": 136,
       "intent_overlap_pairs": 14,
-      "uniqueness_review_clusters": 24,
+      "uniqueness_review_clusters": 23,
       "drafts_automatically_differentiated": 257,
       "draft_uniqueness_failures": 0,
       "jsonld_present": 586,
@@ -1783,8 +1783,8 @@
       "workflow_count": 20,
       "workflow_passed": 20,
       "workflow_warning_count": 0,
-      "signal_raw_store_count": 4105,
-      "signal_fresh_collected_count": 76,
+      "signal_raw_store_count": 4125,
+      "signal_fresh_collected_count": 86,
       "signal_failed_sources": 0,
       "signal_zero_reddit_warning": false,
       "github_actions_simulation_status": "passed",
@@ -1797,7 +1797,7 @@
       "indexable_pages_measured": 324,
       "duplicate_title_groups": 1,
       "duplicate_description_groups": 0,
-      "high_similarity_pairs": 130,
+      "high_similarity_pairs": 136,
       "intent_overlap_pairs": 14
     },
     "family_metrics": {
@@ -1828,7 +1828,7 @@
       "business": {
         "pages": 13,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 62,
+        "high_similarity_pair_memberships": 64,
         "intent_overlap_pair_memberships": 0
       },
       "compare": {
@@ -1852,13 +1852,13 @@
       "disputes": {
         "pages": 6,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 4,
+        "high_similarity_pair_memberships": 6,
         "intent_overlap_pair_memberships": 0
       },
       "faq": {
         "pages": 21,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 10,
+        "high_similarity_pair_memberships": 14,
         "intent_overlap_pair_memberships": 0
       },
       "hubs": {
@@ -1912,7 +1912,7 @@
       "scenario": {
         "pages": 106,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 74,
+        "high_similarity_pair_memberships": 76,
         "intent_overlap_pair_memberships": 9
       },
       "state": {
@@ -1924,7 +1924,7 @@
       "therapeutic": {
         "pages": 5,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 12,
+        "high_similarity_pair_memberships": 14,
         "intent_overlap_pair_memberships": 0
       },
       "whitepapers": {
@@ -5439,8 +5439,8 @@
   },
   "remediation": {
     "summary": {
-      "total": 24,
-      "pending_owner_approval": 24,
+      "total": 23,
+      "pending_owner_approval": 23,
       "approved": 0,
       "applied": 0,
       "rejected": 0
@@ -5506,7 +5506,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9497,
+        "maximum_body_similarity": 0.9504,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5536,7 +5536,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.938,
+        "maximum_body_similarity": 0.9426,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5566,7 +5566,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9343,
+        "maximum_body_similarity": 0.931,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5599,7 +5599,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9179,
+        "maximum_body_similarity": 0.9154,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5617,8 +5617,9 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
+        "candidate_primary": "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
         "members": [
+          "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
           "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
           "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
           "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
@@ -5630,7 +5631,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.915,
+        "maximum_body_similarity": 0.9152,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5668,7 +5669,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9121,
+        "maximum_body_similarity": 0.9109,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5680,6 +5681,39 @@
       {
         "proposal_id": "remediation-uniqueness-0008",
         "ledger_id": "uniqueness-0008",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
+        "candidate_primary": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+        "members": [
+          "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
+          "/faq/can-a-seller-refuse-to-take-a-horse-back/",
+          "/faq/do-i-need-a-contract-to-sell-a-horse/",
+          "/faq/what-should-be-included-in-a-horse-sale-contract/",
+          "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+          "/faq/who-is-responsible-after-a-horse-sale-is-completed/"
+        ],
+        "families": [
+          "faq"
+        ],
+        "reasons": [
+          "high_body_similarity"
+        ],
+        "maximum_body_similarity": 0.9053,
+        "suggested_actions": [
+          "differentiate_patch"
+        ],
+        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0009",
+        "ledger_id": "uniqueness-0009",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -5698,36 +5732,6 @@
           "high_body_similarity"
         ],
         "maximum_body_similarity": 0.9031,
-        "suggested_actions": [
-          "differentiate_patch"
-        ],
-        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0009",
-        "ledger_id": "uniqueness-0009",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
-        "candidate_primary": "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
-        "members": [
-          "/faq/do-i-need-a-contract-to-sell-a-horse/",
-          "/faq/what-should-be-included-in-a-horse-sale-contract/",
-          "/faq/who-is-responsible-after-a-horse-sale-is-completed/"
-        ],
-        "families": [
-          "faq"
-        ],
-        "reasons": [
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.8996,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5761,7 +5765,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8975,
+        "maximum_body_similarity": 0.8987,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5809,10 +5813,10 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/scenario/what-if-i-bought-a-horse-without-a-contract/",
+        "candidate_primary": "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
         "members": [
-          "/scenario/what-if-i-bought-a-horse-without-a-contract/",
-          "/scenario/what-if-i-sold-a-horse-without-a-contract/"
+          "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
+          "/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/"
         ],
         "families": [
           "scenario"
@@ -5820,7 +5824,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8933,
+        "maximum_body_similarity": 0.8937,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5838,10 +5842,10 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
+        "candidate_primary": "/scenario/what-if-i-bought-a-horse-without-a-contract/",
         "members": [
-          "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
-          "/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/"
+          "/scenario/what-if-i-bought-a-horse-without-a-contract/",
+          "/scenario/what-if-i-sold-a-horse-without-a-contract/"
         ],
         "families": [
           "scenario"
@@ -5849,7 +5853,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8909,
+        "maximum_body_similarity": 0.8933,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5879,7 +5883,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.887,
+        "maximum_body_similarity": 0.8844,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5908,7 +5912,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.881,
+        "maximum_body_similarity": 0.8794,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5939,7 +5943,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8742,
+        "maximum_body_similarity": 0.8756,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -5969,7 +5973,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8687,
+        "maximum_body_similarity": 0.8686,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -6029,7 +6033,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8609,
+        "maximum_body_similarity": 0.8623,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -6059,7 +6063,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8563,
+        "maximum_body_similarity": 0.8599,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -6077,19 +6081,18 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+        "candidate_primary": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
         "members": [
-          "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
-          "/faq/can-a-seller-refuse-to-take-a-horse-back/",
-          "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/"
+          "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
+          "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/"
         ],
         "families": [
-          "faq"
+          "scenario"
         ],
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8556,
+        "maximum_body_similarity": 0.8573,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -6107,10 +6110,10 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
+        "candidate_primary": "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
         "members": [
-          "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
-          "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/"
+          "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
+          "/scenario/i-signed-something-i-did-not-understand-what-should-i-do/"
         ],
         "families": [
           "scenario"
@@ -6118,7 +6121,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8547,
+        "maximum_body_similarity": 0.8523,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -6147,36 +6150,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8542,
-        "suggested_actions": [
-          "differentiate_patch"
-        ],
-        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0024",
-        "ledger_id": "uniqueness-0024",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
-        "candidate_primary": "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
-        "members": [
-          "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
-          "/scenario/i-signed-something-i-did-not-understand-what-should-i-do/"
-        ],
-        "families": [
-          "scenario"
-        ],
-        "reasons": [
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.851,
+        "maximum_body_similarity": 0.8512,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -6453,12 +6427,12 @@
         "/leases/what-should-be-included-in-a-barn-lease/",
         "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
         "/scenario/am-i-overreacting-or-is-this-risky/",
+        "/state/south-carolina/do-i-need-a-liability-waiver/",
+        "/state/illinois/what-does-illinois-equine-liability-law-cover/",
         "/liability/do-i-need-insurance-for-my-horse-business/",
         "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
         "/state/south-carolina/do-i-need-a-liability-waiver/",
         "/state/north-carolina/do-i-need-a-horse-sale-contract/",
-        "/state/south-carolina/do-i-need-a-liability-waiver/",
-        "/state/illinois/what-does-illinois-equine-liability-law-cover/",
         "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
         "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
         "/business/how-to-start-an-equine-assisted-therapy-business/",
@@ -6467,32 +6441,32 @@
         "/leases/what-liability-applies-in-a-horse-property-lease/",
         "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
         "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
-        "/compare/demand-letter-vs-lawsuit/",
-        "/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/",
         "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
         "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-        "/leases/what-should-be-included-in-a-barn-lease/",
-        "/leases/what-liability-applies-in-a-horse-property-lease/",
         "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
         "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "/compare/demand-letter-vs-lawsuit/",
+        "/compare/demand-letter-vs-lawsuit-in-a-horse-dispute/",
+        "/leases/what-should-be-included-in-a-barn-lease/",
+        "/leases/what-liability-applies-in-a-horse-property-lease/",
         "/state/south-carolina/do-i-need-a-liability-waiver/",
         "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
-        "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
-        "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
-        "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
-        "/scenario/am-i-overreacting-or-is-this-risky/",
         "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
         "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
+        "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
+        "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
         "/ip/do-i-need-a-contract-for-a-sponsorship/",
         "/ip/can-a-sponsor-use-my-image-without-permission/",
+        "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+        "/scenario/am-i-overreacting-or-is-this-risky/",
         "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
         "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
-        "/compare/mediation-vs-litigation-in-horse-disputes/",
-        "/compare/mediation-vs-litigation-horse-disputes/",
         "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
         "/scenario/am-i-overreacting-or-is-this-risky/",
-        "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
-        "/scenario/am-i-overreacting-or-is-this-risky/"
+        "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
+        "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
+        "/compare/mediation-vs-litigation-in-horse-disputes/",
+        "/compare/mediation-vs-litigation-horse-disputes/"
       ],
       "recommended_action": "Use the owner-review consolidation ledger to decide which existing pages should be differentiated or, in a separately approved phase, consolidated. This build does not mutate live pages."
     },

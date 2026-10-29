@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-28T11:21:23.000Z",
+  "generated_at": "2026-10-29T11:20:33.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "252a3618259780b0588abc7f314db8308bb4855e748e8b94e1e995e6cf4f93ea",
+  "source_fingerprint": "8f24db831082ac7967bde8188dd8d68714df93ee5b9abc7562cb5928f68366f2",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
@@ -12,7 +12,7 @@
     "indexable_pages_measured": 324,
     "duplicate_title_groups": 1,
     "duplicate_description_groups": 0,
-    "high_similarity_pairs": 130,
+    "high_similarity_pairs": 136,
     "intent_overlap_pairs": 14
   },
   "family_metrics": {
@@ -43,7 +43,7 @@
     "business": {
       "pages": 13,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 62,
+      "high_similarity_pair_memberships": 64,
       "intent_overlap_pair_memberships": 0
     },
     "compare": {
@@ -67,13 +67,13 @@
     "disputes": {
       "pages": 6,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 4,
+      "high_similarity_pair_memberships": 6,
       "intent_overlap_pair_memberships": 0
     },
     "faq": {
       "pages": 21,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 10,
+      "high_similarity_pair_memberships": 14,
       "intent_overlap_pair_memberships": 0
     },
     "hubs": {
@@ -127,7 +127,7 @@
     "scenario": {
       "pages": 106,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 74,
+      "high_similarity_pair_memberships": 76,
       "intent_overlap_pair_memberships": 9
     },
     "state": {
@@ -139,7 +139,7 @@
     "therapeutic": {
       "pages": 5,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 12,
+      "high_similarity_pair_memberships": 14,
       "intent_overlap_pair_memberships": 0
     },
     "whitepapers": {
@@ -151,7 +151,7 @@
   },
   "duplicate_title_groups": [
     {
-      "value": "mediation vs litigation in horse disputes",
+      "value": "mediation vs litigation in horse disputes |",
       "routes": [
         "/compare/mediation-vs-litigation-horse-disputes/",
         "/compare/mediation-vs-litigation-in-horse-disputes/"
@@ -167,47 +167,47 @@
       "family_a": "state",
       "family_b": "state",
       "body_similarity": 0.9613,
-      "cosine_similarity": 0.9829,
+      "cosine_similarity": 0.9828,
       "shingle_similarity": 0.9213,
       "intent_similarity": 0.5714,
-      "title_a": "What Does North Carolina Equine Liability Law Cover?",
-      "title_b": "What Does Illinois Equine Liability Law Cover?"
+      "title_a": "What Does North Carolina Equine Liability Law |",
+      "title_b": "What Does Illinois Equine Liability Law |"
     },
     {
       "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
       "b": "/scenario/do-people-actually-get-sued-over-horse-deals/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.9497,
-      "cosine_similarity": 0.9795,
+      "body_similarity": 0.9504,
+      "cosine_similarity": 0.9807,
       "shingle_similarity": 0.8943,
       "intent_similarity": 0,
-      "title_a": "What Is the Worst-Case Scenario If I Do Nothing?",
-      "title_b": "Do People Actually Get Sued Over Horse Deals?"
+      "title_a": "What Is the Worst-Case Scenario If I Do |",
+      "title_b": "Do People Actually Get Sued Over Horse Deals? |"
     },
     {
       "a": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
       "b": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
       "family_a": "insights",
       "family_b": "insights",
-      "body_similarity": 0.938,
-      "cosine_similarity": 0.9554,
+      "body_similarity": 0.9426,
+      "cosine_similarity": 0.9625,
       "shingle_similarity": 0.9056,
       "intent_similarity": 0.1429,
-      "title_a": "What Equestrians Often Miss About Is a Verbal Agreement Legally",
-      "title_b": "The Quiet Risk Inside What Should Be Included in a Horse Sale"
+      "title_a": "What Equestrians Often Miss About Is a Verbal |",
+      "title_b": "The Quiet Risk Inside What Should Be Included |"
     },
     {
       "a": "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
       "b": "/leases/what-should-be-included-in-a-barn-lease/",
       "family_a": "leases",
       "family_b": "leases",
-      "body_similarity": 0.9343,
-      "cosine_similarity": 0.9751,
-      "shingle_similarity": 0.8587,
+      "body_similarity": 0.931,
+      "cosine_similarity": 0.9743,
+      "shingle_similarity": 0.8507,
       "intent_similarity": 0.4,
-      "title_a": "Who Is Responsible for Repairs in a Barn Lease?",
-      "title_b": "What Should Be Included in a Barn Lease?"
+      "title_a": "Who Is Responsible for Repairs in a Barn |",
+      "title_b": "What Should Be Included in a Barn Lease? |"
     },
     {
       "a": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
@@ -218,92 +218,116 @@
       "cosine_similarity": 0.9476,
       "shingle_similarity": 0.8739,
       "intent_similarity": 0,
-      "title_a": "Is It Too Late to Fix a Bad Horse Sale?",
-      "title_b": "Am I Overreacting or Is This Risky?"
-    },
-    {
-      "a": "/liability/do-i-need-insurance-for-my-horse-business/",
-      "b": "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
-      "family_a": "liability",
-      "family_b": "liability",
-      "body_similarity": 0.9179,
-      "cosine_similarity": 0.9643,
-      "shingle_similarity": 0.8317,
-      "intent_similarity": 0.5,
-      "title_a": "Do I Need Insurance for My Horse Business?",
-      "title_b": "Do I Need a Liability Waiver for My Horse Business?"
-    },
-    {
-      "a": "/state/south-carolina/do-i-need-a-liability-waiver/",
-      "b": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
-      "family_a": "state",
-      "family_b": "state",
-      "body_similarity": 0.9162,
-      "cosine_similarity": 0.9439,
-      "shingle_similarity": 0.8649,
-      "intent_similarity": 0.2222,
-      "title_a": "Do I Need a Liability Waiver in South Carolina?",
-      "title_b": "Do I Need a Horse Sale Contract in North Carolina?"
+      "title_a": "Is It Too Late to Fix a Bad Horse Sale? |",
+      "title_b": "Am I Overreacting or Is This Risky? |"
     },
     {
       "a": "/state/south-carolina/do-i-need-a-liability-waiver/",
       "b": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
       "family_a": "state",
       "family_b": "state",
-      "body_similarity": 0.9151,
-      "cosine_similarity": 0.956,
+      "body_similarity": 0.917,
+      "cosine_similarity": 0.959,
       "shingle_similarity": 0.8391,
       "intent_similarity": 0.1111,
-      "title_a": "Do I Need a Liability Waiver in South Carolina?",
-      "title_b": "What Does Illinois Equine Liability Law Cover?"
+      "title_a": "Do I Need a Liability Waiver in South |",
+      "title_b": "What Does Illinois Equine Liability Law |"
+    },
+    {
+      "a": "/liability/do-i-need-insurance-for-my-horse-business/",
+      "b": "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
+      "family_a": "liability",
+      "family_b": "liability",
+      "body_similarity": 0.9154,
+      "cosine_similarity": 0.9644,
+      "shingle_similarity": 0.8246,
+      "intent_similarity": 0.5,
+      "title_a": "Do I Need Insurance for My Horse Business? |",
+      "title_b": "Do I Need a Liability Waiver for My Horse |"
+    },
+    {
+      "a": "/state/south-carolina/do-i-need-a-liability-waiver/",
+      "b": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+      "family_a": "state",
+      "family_b": "state",
+      "body_similarity": 0.9152,
+      "cosine_similarity": 0.9444,
+      "shingle_similarity": 0.861,
+      "intent_similarity": 0.2222,
+      "title_a": "Do I Need a Liability Waiver in South |",
+      "title_b": "Do I Need a Horse Sale Contract in North |"
     },
     {
       "a": "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
       "b": "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
       "family_a": "therapeutic",
       "family_b": "therapeutic",
-      "body_similarity": 0.915,
-      "cosine_similarity": 0.9379,
-      "shingle_similarity": 0.8726,
+      "body_similarity": 0.9152,
+      "cosine_similarity": 0.9402,
+      "shingle_similarity": 0.8686,
       "intent_similarity": 0.1,
-      "title_a": "What Waivers Are Required for Equine Therapy Programs?",
-      "title_b": "What Legal Requirements Apply to Therapeutic Riding Programs?"
+      "title_a": "What Waivers Are Required for Equine Therapy |",
+      "title_b": "What Legal Requirements Apply to Therapeutic |"
     },
     {
       "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
       "b": "/business/how-to-start-an-equine-apparel-business/",
       "family_a": "business",
       "family_b": "business",
-      "body_similarity": 0.9121,
+      "body_similarity": 0.9109,
       "cosine_similarity": 0.9617,
-      "shingle_similarity": 0.8201,
+      "shingle_similarity": 0.8166,
       "intent_similarity": 0.5,
-      "title_a": "How to Start an Equine-Assisted Therapy Business",
-      "title_b": "How to Start an Equine Apparel Business"
+      "title_a": "How to Start an Equine-Assisted Therapy |",
+      "title_b": "How to Start an Equine Apparel Business |"
     },
     {
       "a": "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
       "b": "/leases/what-liability-applies-in-a-horse-property-lease/",
       "family_a": "leases",
       "family_b": "leases",
-      "body_similarity": 0.9113,
-      "cosine_similarity": 0.946,
-      "shingle_similarity": 0.8468,
+      "body_similarity": 0.9102,
+      "cosine_similarity": 0.9465,
+      "shingle_similarity": 0.8429,
       "intent_similarity": 0.125,
-      "title_a": "Who Is Responsible for Repairs in a Barn Lease?",
-      "title_b": "What Liability Applies in a Horse Property Lease?"
+      "title_a": "Who Is Responsible for Repairs in a Barn |",
+      "title_b": "What Liability Applies in a Horse Property |"
     },
     {
       "a": "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
       "b": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
       "family_a": "therapeutic",
       "family_b": "therapeutic",
-      "body_similarity": 0.9033,
-      "cosine_similarity": 0.946,
-      "shingle_similarity": 0.824,
+      "body_similarity": 0.9091,
+      "cosine_similarity": 0.9529,
+      "shingle_similarity": 0.8278,
       "intent_similarity": 0.2222,
-      "title_a": "What Waivers Are Required for Equine Therapy Programs?",
-      "title_b": "How Do I Start an Equine-Assisted Therapy Program Legally?"
+      "title_a": "What Waivers Are Required for Equine Therapy |",
+      "title_b": "How Do I Start an Equine-Assisted Therapy |"
+    },
+    {
+      "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
+      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.9066,
+      "cosine_similarity": 0.957,
+      "shingle_similarity": 0.8129,
+      "intent_similarity": 0,
+      "title_a": "What If I Already Signed Something I Did Not |",
+      "title_b": "Can I Back Out of a Horse Deal Without |"
+    },
+    {
+      "a": "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
+      "b": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "family_a": "faq",
+      "family_b": "faq",
+      "body_similarity": 0.9053,
+      "cosine_similarity": 0.9628,
+      "shingle_similarity": 0.7985,
+      "intent_similarity": 0.3333,
+      "title_a": "Who Is Responsible After a Horse Sale Is |",
+      "title_b": "What Should Be Included in a Horse Sale |"
     },
     {
       "a": "/compare/demand-letter-vs-lawsuit/",
@@ -315,67 +339,67 @@
       "shingle_similarity": 0.7768,
       "intent_similarity": 0.6,
       "title_a": "Demand Letter vs Lawsuit |",
-      "title_b": "Demand Letter vs Lawsuit in a Horse Dispute"
-    },
-    {
-      "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
-      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.9031,
-      "cosine_similarity": 0.9516,
-      "shingle_similarity": 0.8129,
-      "intent_similarity": 0,
-      "title_a": "What If I Already Signed Something I Did Not Understand?",
-      "title_b": "Can I Back Out of a Horse Deal Without Getting Sued?"
+      "title_b": "Demand Letter vs Lawsuit in a Horse Dispute |"
     },
     {
       "a": "/leases/what-should-be-included-in-a-barn-lease/",
       "b": "/leases/what-liability-applies-in-a-horse-property-lease/",
       "family_a": "leases",
       "family_b": "leases",
-      "body_similarity": 0.9023,
-      "cosine_similarity": 0.9529,
-      "shingle_similarity": 0.8083,
+      "body_similarity": 0.9007,
+      "cosine_similarity": 0.9524,
+      "shingle_similarity": 0.8046,
       "intent_similarity": 0.1429,
-      "title_a": "What Should Be Included in a Barn Lease?",
-      "title_b": "What Liability Applies in a Horse Property Lease?"
-    },
-    {
-      "a": "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
-      "b": "/faq/what-should-be-included-in-a-horse-sale-contract/",
-      "family_a": "faq",
-      "family_b": "faq",
-      "body_similarity": 0.8996,
-      "cosine_similarity": 0.9578,
-      "shingle_similarity": 0.7916,
-      "intent_similarity": 0.3333,
-      "title_a": "Who Is Responsible After a Horse Sale Is Completed?",
-      "title_b": "What Should Be Included in a Horse Sale Contract?"
+      "title_a": "What Should Be Included in a Barn Lease? |",
+      "title_b": "What Liability Applies in a Horse Property |"
     },
     {
       "a": "/state/south-carolina/do-i-need-a-liability-waiver/",
       "b": "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
       "family_a": "state",
       "family_b": "state",
-      "body_similarity": 0.8996,
-      "cosine_similarity": 0.9417,
+      "body_similarity": 0.9007,
+      "cosine_similarity": 0.9433,
       "shingle_similarity": 0.8215,
       "intent_similarity": 0.2222,
-      "title_a": "Do I Need a Liability Waiver in South Carolina?",
-      "title_b": "What Does North Carolina Equine Liability Law Cover?"
+      "title_a": "Do I Need a Liability Waiver in South |",
+      "title_b": "What Does North Carolina Equine Liability Law |"
+    },
+    {
+      "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
+      "b": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.9005,
+      "cosine_similarity": 0.9554,
+      "shingle_similarity": 0.7985,
+      "intent_similarity": 0,
+      "title_a": "What Is the Worst-Case Scenario If I Do |",
+      "title_b": "What If I Already Signed Something I Did Not |"
     },
     {
       "a": "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
       "b": "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
       "family_a": "therapeutic",
       "family_b": "therapeutic",
-      "body_similarity": 0.8991,
-      "cosine_similarity": 0.958,
+      "body_similarity": 0.9004,
+      "cosine_similarity": 0.96,
       "shingle_similarity": 0.7896,
       "intent_similarity": 0.25,
-      "title_a": "What Legal Requirements Apply to Therapeutic Riding Programs?",
-      "title_b": "Do I Need Insurance for Therapeutic Riding?"
+      "title_a": "What Legal Requirements Apply to Therapeutic |",
+      "title_b": "Do I Need Insurance for Therapeutic Riding? |"
+    },
+    {
+      "a": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.8987,
+      "cosine_similarity": 0.9666,
+      "shingle_similarity": 0.7726,
+      "intent_similarity": 0,
+      "title_a": "Do I Need a Contract for a Sponsorship? |",
+      "title_b": "Can a Sponsor Use My Image Without |"
     },
     {
       "a": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
@@ -386,44 +410,44 @@
       "cosine_similarity": 0.9492,
       "shingle_similarity": 0.8042,
       "intent_similarity": 0,
-      "title_a": "Did I Mess Up by Trusting a Handshake Deal?",
-      "title_b": "Am I Overreacting or Is This Risky?"
-    },
-    {
-      "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
-      "b": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8985,
-      "cosine_similarity": 0.9524,
-      "shingle_similarity": 0.7985,
-      "intent_similarity": 0,
-      "title_a": "What Is the Worst-Case Scenario If I Do Nothing?",
-      "title_b": "What If I Already Signed Something I Did Not Understand?"
-    },
-    {
-      "a": "/ip/do-i-need-a-contract-for-a-sponsorship/",
-      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8975,
-      "cosine_similarity": 0.9648,
-      "shingle_similarity": 0.7726,
-      "intent_similarity": 0,
-      "title_a": "Do I Need a Contract for a Sponsorship?",
-      "title_b": "Can a Sponsor Use My Image Without Permission?"
+      "title_a": "Did I Mess Up by Trusting a Handshake Deal? |",
+      "title_b": "Am I Overreacting or Is This Risky? |"
     },
     {
       "a": "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
       "b": "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
       "family_a": "therapeutic",
       "family_b": "therapeutic",
-      "body_similarity": 0.8971,
-      "cosine_similarity": 0.9469,
+      "body_similarity": 0.8985,
+      "cosine_similarity": 0.9491,
       "shingle_similarity": 0.8046,
       "intent_similarity": 0,
-      "title_a": "What Waivers Are Required for Equine Therapy Programs?",
-      "title_b": "Do I Need Insurance for Therapeutic Riding?"
+      "title_a": "What Waivers Are Required for Equine Therapy |",
+      "title_b": "Do I Need Insurance for Therapeutic Riding? |"
+    },
+    {
+      "a": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+      "b": "/scenario/am-i-overreacting-or-is-this-risky/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8984,
+      "cosine_similarity": 0.9478,
+      "shingle_similarity": 0.8067,
+      "intent_similarity": 0,
+      "title_a": "Can I Back Out of a Horse Deal Without |",
+      "title_b": "Am I Overreacting or Is This Risky? |"
+    },
+    {
+      "a": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
+      "b": "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
+      "family_a": "therapeutic",
+      "family_b": "therapeutic",
+      "body_similarity": 0.8977,
+      "cosine_similarity": 0.9428,
+      "shingle_similarity": 0.814,
+      "intent_similarity": 0,
+      "title_a": "How Do I Start an Equine-Assisted Therapy |",
+      "title_b": "Do I Need Insurance for Therapeutic Riding? |"
     },
     {
       "a": "/compare/mediation-vs-litigation-in-horse-disputes/",
@@ -434,44 +458,56 @@
       "cosine_similarity": 0.9548,
       "shingle_similarity": 0.7891,
       "intent_similarity": 1,
-      "title_a": "Mediation vs litigation in horse disputes",
-      "title_b": "Mediation vs Litigation in Horse Disputes"
-    },
-    {
-      "a": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-      "b": "/scenario/am-i-overreacting-or-is-this-risky/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.896,
-      "cosine_similarity": 0.9441,
-      "shingle_similarity": 0.8067,
-      "intent_similarity": 0,
-      "title_a": "Can I Back Out of a Horse Deal Without Getting Sued?",
-      "title_b": "Am I Overreacting or Is This Risky?"
+      "title_a": "Mediation vs litigation in horse disputes |",
+      "title_b": "Mediation vs Litigation in Horse Disputes |"
     },
     {
       "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
       "b": "/scenario/am-i-overreacting-or-is-this-risky/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.8958,
-      "cosine_similarity": 0.957,
+      "body_similarity": 0.8965,
+      "cosine_similarity": 0.9582,
       "shingle_similarity": 0.7821,
       "intent_similarity": 0,
-      "title_a": "What If I Already Signed Something I Did Not Understand?",
-      "title_b": "Am I Overreacting or Is This Risky?"
+      "title_a": "What If I Already Signed Something I Did Not |",
+      "title_b": "Am I Overreacting or Is This Risky? |"
     },
     {
-      "a": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
-      "b": "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
-      "family_a": "therapeutic",
-      "family_b": "therapeutic",
-      "body_similarity": 0.8949,
-      "cosine_similarity": 0.9385,
-      "shingle_similarity": 0.814,
+      "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
+      "b": "/scenario/do-people-actually-get-sued-over-horse-deals/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8942,
+      "cosine_similarity": 0.9511,
+      "shingle_similarity": 0.7886,
       "intent_similarity": 0,
-      "title_a": "How Do I Start an Equine-Assisted Therapy Program Legally?",
-      "title_b": "Do I Need Insurance for Therapeutic Riding?"
+      "title_a": "What If I Already Signed Something I Did Not |",
+      "title_b": "Do People Actually Get Sued Over Horse Deals? |"
+    },
+    {
+      "a": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+      "b": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
+      "family_a": "state",
+      "family_b": "state",
+      "body_similarity": 0.8942,
+      "cosine_similarity": 0.929,
+      "shingle_similarity": 0.8296,
+      "intent_similarity": 0,
+      "title_a": "Do I Need a Horse Sale Contract in North |",
+      "title_b": "What Does Illinois Equine Liability Law |"
+    },
+    {
+      "a": "/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/",
+      "b": "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8937,
+      "cosine_similarity": 0.9012,
+      "shingle_similarity": 0.8798,
+      "intent_similarity": 0.2727,
+      "title_a": "A therapeutic riding program uses volunteers |",
+      "title_b": "A therapeutic riding program collects health |"
     },
     {
       "a": "/scenario/what-if-i-sold-a-horse-without-a-contract/",
@@ -482,80 +518,32 @@
       "cosine_similarity": 0.9664,
       "shingle_similarity": 0.7577,
       "intent_similarity": 0.6,
-      "title_a": "What If I Sold a Horse Without a Contract?",
-      "title_b": "What If I Bought a Horse Without a Contract?"
-    },
-    {
-      "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
-      "b": "/scenario/do-people-actually-get-sued-over-horse-deals/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.893,
-      "cosine_similarity": 0.9493,
-      "shingle_similarity": 0.7886,
-      "intent_similarity": 0,
-      "title_a": "What If I Already Signed Something I Did Not Understand?",
-      "title_b": "Do People Actually Get Sued Over Horse Deals?"
-    },
-    {
-      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
-      "b": "/business/how-do-i-legally-start-a-horse-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8926,
-      "cosine_similarity": 0.9636,
-      "shingle_similarity": 0.7608,
-      "intent_similarity": 0.2857,
-      "title_a": "What Legal Documents Do I Need for a Horse Business?",
-      "title_b": "How Do I Legally Start a Horse Business?"
-    },
-    {
-      "a": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
-      "b": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
-      "family_a": "state",
-      "family_b": "state",
-      "body_similarity": 0.892,
-      "cosine_similarity": 0.9256,
-      "shingle_similarity": 0.8296,
-      "intent_similarity": 0,
-      "title_a": "Do I Need a Horse Sale Contract in North Carolina?",
-      "title_b": "What Does Illinois Equine Liability Law Cover?"
-    },
-    {
-      "a": "/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/",
-      "b": "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8909,
-      "cosine_similarity": 0.8968,
-      "shingle_similarity": 0.8798,
-      "intent_similarity": 0.2727,
-      "title_a": "A therapeutic riding program uses volunteers and minors",
-      "title_b": "A therapeutic riding program collects health information"
-    },
-    {
-      "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
-      "b": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8902,
-      "cosine_similarity": 0.9568,
-      "shingle_similarity": 0.7664,
-      "intent_similarity": 0,
-      "title_a": "What Is the Worst-Case Scenario If I Do Nothing?",
-      "title_b": "Did I Mess Up by Trusting a Handshake Deal?"
+      "title_a": "What If I Sold a Horse Without a Contract? |",
+      "title_b": "What If I Bought a Horse Without a Contract? |"
     },
     {
       "a": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
       "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.89,
-      "cosine_similarity": 0.9351,
+      "body_similarity": 0.8925,
+      "cosine_similarity": 0.9389,
       "shingle_similarity": 0.8063,
       "intent_similarity": 0.1,
-      "title_a": "Is It Too Late to Fix a Bad Horse Sale?",
-      "title_b": "Can I Back Out of a Horse Deal Without Getting Sued?"
+      "title_a": "Is It Too Late to Fix a Bad Horse Sale? |",
+      "title_b": "Can I Back Out of a Horse Deal Without |"
+    },
+    {
+      "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
+      "b": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8909,
+      "cosine_similarity": 0.958,
+      "shingle_similarity": 0.7664,
+      "intent_similarity": 0,
+      "title_a": "What Is the Worst-Case Scenario If I Do |",
+      "title_b": "Did I Mess Up by Trusting a Handshake Deal? |"
     },
     {
       "a": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
@@ -566,20 +554,56 @@
       "cosine_similarity": 0.9427,
       "shingle_similarity": 0.7921,
       "intent_similarity": 0.1,
-      "title_a": "Is It Too Late to Fix a Bad Horse Sale?",
-      "title_b": "Do People Actually Get Sued Over Horse Deals?"
+      "title_a": "Is It Too Late to Fix a Bad Horse Sale? |",
+      "title_b": "Do People Actually Get Sued Over Horse Deals? |"
+    },
+    {
+      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "b": "/business/how-do-i-legally-start-a-horse-business/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8898,
+      "cosine_similarity": 0.9628,
+      "shingle_similarity": 0.7542,
+      "intent_similarity": 0.2857,
+      "title_a": "What Legal Documents Do I Need for a Horse |",
+      "title_b": "How Do I Legally Start a Horse Business? |"
+    },
+    {
+      "a": "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
+      "b": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
+      "family_a": "therapeutic",
+      "family_b": "therapeutic",
+      "body_similarity": 0.8897,
+      "cosine_similarity": 0.9291,
+      "shingle_similarity": 0.8165,
+      "intent_similarity": 0,
+      "title_a": "What Legal Requirements Apply to Therapeutic |",
+      "title_b": "How Do I Start an Equine-Assisted Therapy |"
     },
     {
       "a": "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
       "b": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
       "family_a": "state",
       "family_b": "state",
-      "body_similarity": 0.8885,
-      "cosine_similarity": 0.9196,
+      "body_similarity": 0.8895,
+      "cosine_similarity": 0.9212,
       "shingle_similarity": 0.8306,
       "intent_similarity": 0.2,
-      "title_a": "What Does North Carolina Equine Liability Law Cover?",
-      "title_b": "Do I Need a Horse Sale Contract in North Carolina?"
+      "title_a": "What Does North Carolina Equine Liability Law |",
+      "title_b": "Do I Need a Horse Sale Contract in North |"
+    },
+    {
+      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
+      "b": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.8881,
+      "cosine_similarity": 0.9617,
+      "shingle_similarity": 0.7514,
+      "intent_similarity": 0.1667,
+      "title_a": "What Should Be in an Equestrian Sponsorship |",
+      "title_b": "Do I Need a Trademark for an Equestrian |"
     },
     {
       "a": "/business/how-to-start-a-horse-retail-business/",
@@ -590,32 +614,56 @@
       "cosine_similarity": 0.9652,
       "shingle_similarity": 0.743,
       "intent_similarity": 0.5,
-      "title_a": "How to Start a Horse Retail Business",
-      "title_b": "Do I Need an LLC to Start a Horse Business?"
+      "title_a": "How to Start a Horse Retail Business |",
+      "title_b": "Do I Need an LLC to Start a Horse Business? |"
+    },
+    {
+      "a": "/ip/should-i-trademark-my-barn-name/",
+      "b": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.8852,
+      "cosine_similarity": 0.9529,
+      "shingle_similarity": 0.7595,
+      "intent_similarity": 0.1667,
+      "title_a": "Should I Trademark My Barn Name? |",
+      "title_b": "Do I Need a Trademark for an Equestrian |"
+    },
+    {
+      "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
+      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.885,
+      "cosine_similarity": 0.9474,
+      "shingle_similarity": 0.769,
+      "intent_similarity": 0,
+      "title_a": "What Is the Worst-Case Scenario If I Do |",
+      "title_b": "Can I Back Out of a Horse Deal Without |"
+    },
+    {
+      "a": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
+      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.8848,
+      "cosine_similarity": 0.9444,
+      "shingle_similarity": 0.7741,
+      "intent_similarity": 0,
+      "title_a": "How Do I Get a Sponsorship for Horse Riding? |",
+      "title_b": "Can a Sponsor Use My Image Without |"
     },
     {
       "a": "/disputes/how-serious-is-a-legal-demand-letter/",
       "b": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
       "family_a": "disputes",
       "family_b": "disputes",
-      "body_similarity": 0.887,
-      "cosine_similarity": 0.9524,
-      "shingle_similarity": 0.7655,
+      "body_similarity": 0.8844,
+      "cosine_similarity": 0.9521,
+      "shingle_similarity": 0.7587,
       "intent_similarity": 0.2857,
-      "title_a": "How Serious Is a Legal Demand Letter?",
-      "title_b": "Do I Need a Lawyer to Respond to a Demand Letter?"
-    },
-    {
-      "a": "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
-      "b": "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
-      "family_a": "therapeutic",
-      "family_b": "therapeutic",
-      "body_similarity": 0.8845,
-      "cosine_similarity": 0.9211,
-      "shingle_similarity": 0.8165,
-      "intent_similarity": 0,
-      "title_a": "What Legal Requirements Apply to Therapeutic Riding Programs?",
-      "title_b": "How Do I Start an Equine-Assisted Therapy Program Legally?"
+      "title_a": "How Serious Is a Legal Demand Letter? |",
+      "title_b": "Do I Need a Lawyer to Respond to a Demand |"
     },
     {
       "a": "/scenario/do-people-actually-get-sued-over-horse-deals/",
@@ -626,56 +674,32 @@
       "cosine_similarity": 0.9595,
       "shingle_similarity": 0.7448,
       "intent_similarity": 0,
-      "title_a": "Do People Actually Get Sued Over Horse Deals?",
-      "title_b": "Did I Mess Up by Trusting a Handshake Deal?"
-    },
-    {
-      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-      "b": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8841,
-      "cosine_similarity": 0.9563,
-      "shingle_similarity": 0.75,
-      "intent_similarity": 0.1667,
-      "title_a": "What Should Be in an Equestrian Sponsorship Agreement?",
-      "title_b": "Do I Need a Trademark for an Equestrian Brand?"
-    },
-    {
-      "a": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
-      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8836,
-      "cosine_similarity": 0.9426,
-      "shingle_similarity": 0.7741,
-      "intent_similarity": 0,
-      "title_a": "How Do I Get a Sponsorship for Horse Riding?",
-      "title_b": "Can a Sponsor Use My Image Without Permission?"
-    },
-    {
-      "a": "/ip/should-i-trademark-my-barn-name/",
-      "b": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8836,
-      "cosine_similarity": 0.9504,
-      "shingle_similarity": 0.7595,
-      "intent_similarity": 0.1667,
-      "title_a": "Should I Trademark My Barn Name?",
-      "title_b": "Do I Need a Trademark for an Equestrian Brand?"
+      "title_a": "Do People Actually Get Sued Over Horse Deals? |",
+      "title_b": "Did I Mess Up by Trusting a Handshake Deal? |"
     },
     {
       "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
       "b": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.8828,
-      "cosine_similarity": 0.9265,
+      "body_similarity": 0.884,
+      "cosine_similarity": 0.9283,
       "shingle_similarity": 0.8018,
       "intent_similarity": 0,
-      "title_a": "What Is the Worst-Case Scenario If I Do Nothing?",
-      "title_b": "Is It Too Late to Fix a Bad Horse Sale?"
+      "title_a": "What Is the Worst-Case Scenario If I Do |",
+      "title_b": "Is It Too Late to Fix a Bad Horse Sale? |"
+    },
+    {
+      "a": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
+      "b": "/business/how-do-i-legally-start-a-horse-business/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8836,
+      "cosine_similarity": 0.9672,
+      "shingle_similarity": 0.7283,
+      "intent_similarity": 0.2857,
+      "title_a": "How Do I Separate My Horse Business from |",
+      "title_b": "How Do I Legally Start a Horse Business? |"
     },
     {
       "a": "/business/how-do-i-legally-start-a-horse-business/",
@@ -686,20 +710,20 @@
       "cosine_similarity": 0.9731,
       "shingle_similarity": 0.7145,
       "intent_similarity": 0.5,
-      "title_a": "How Do I Legally Start a Horse Business?",
-      "title_b": "Do I Need an LLC to Start a Horse Business?"
+      "title_a": "How Do I Legally Start a Horse Business? |",
+      "title_b": "Do I Need an LLC to Start a Horse Business? |"
     },
     {
-      "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
-      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8823,
-      "cosine_similarity": 0.9434,
-      "shingle_similarity": 0.769,
+      "a": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
+      "b": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.8821,
+      "cosine_similarity": 0.9451,
+      "shingle_similarity": 0.7653,
       "intent_similarity": 0,
-      "title_a": "What Is the Worst-Case Scenario If I Do Nothing?",
-      "title_b": "Can I Back Out of a Horse Deal Without Getting Sued?"
+      "title_a": "How Do I Get a Sponsorship for Horse Riding? |",
+      "title_b": "Do I Need a Trademark for an Equestrian |"
     },
     {
       "a": "/business/how-to-start-a-training-barn-legally/",
@@ -710,32 +734,32 @@
       "cosine_similarity": 0.9552,
       "shingle_similarity": 0.7449,
       "intent_similarity": 0.6,
-      "title_a": "How to Start a Training Barn Legally",
-      "title_b": "How to Start a Boarding Barn Legally"
+      "title_a": "How to Start a Training Barn Legally |",
+      "title_b": "How to Start a Boarding Barn Legally |"
     },
     {
-      "a": "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
-      "b": "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
-      "family_a": "faq",
-      "family_b": "faq",
-      "body_similarity": 0.881,
-      "cosine_similarity": 0.9467,
-      "shingle_similarity": 0.7588,
-      "intent_similarity": 0.4286,
-      "title_a": "What Happens If There Is No Written Agreement in a Horse Sale?",
-      "title_b": "What Happens If a Horse Becomes Lame After Sale?"
-    },
-    {
-      "a": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
-      "b": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
+      "b": "/ip/do-i-need-a-contract-for-a-sponsorship/",
       "family_a": "ip",
       "family_b": "ip",
-      "body_similarity": 0.8805,
-      "cosine_similarity": 0.9426,
-      "shingle_similarity": 0.7653,
-      "intent_similarity": 0,
-      "title_a": "How Do I Get a Sponsorship for Horse Riding?",
-      "title_b": "Do I Need a Trademark for an Equestrian Brand?"
+      "body_similarity": 0.8811,
+      "cosine_similarity": 0.9582,
+      "shingle_similarity": 0.738,
+      "intent_similarity": 0.2,
+      "title_a": "What Should Be in an Equestrian Sponsorship |",
+      "title_b": "Do I Need a Contract for a Sponsorship? |"
+    },
+    {
+      "a": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+      "family_a": "insights",
+      "family_b": "insights",
+      "body_similarity": 0.8804,
+      "cosine_similarity": 0.9199,
+      "shingle_similarity": 0.8069,
+      "intent_similarity": 0.3,
+      "title_a": "The Quiet Risk Inside What Should Be Included |",
+      "title_b": "Why What Should Be Included in a Horse Bill |"
     },
     {
       "a": "/business/how-to-start-an-equine-apparel-business/",
@@ -746,56 +770,56 @@
       "cosine_similarity": 0.9348,
       "shingle_similarity": 0.7788,
       "intent_similarity": 0.1429,
-      "title_a": "How to Start an Equine Apparel Business",
-      "title_b": "How to Start a Training Barn Legally"
+      "title_a": "How to Start an Equine Apparel Business |",
+      "title_b": "How to Start a Training Barn Legally |"
     },
     {
-      "a": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
-      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
-      "family_a": "insights",
-      "family_b": "insights",
-      "body_similarity": 0.8793,
-      "cosine_similarity": 0.9182,
-      "shingle_similarity": 0.8069,
-      "intent_similarity": 0.3,
-      "title_a": "The Quiet Risk Inside What Should Be Included in a Horse Sale",
-      "title_b": "Why What Should Be Included in a Horse Bill of Sale Creates"
-    },
-    {
-      "a": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
-      "b": "/business/how-do-i-legally-start-a-horse-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8783,
-      "cosine_similarity": 0.9625,
-      "shingle_similarity": 0.7219,
-      "intent_similarity": 0.2857,
-      "title_a": "How Do I Separate My Horse Business from Personal Assets?",
-      "title_b": "How Do I Legally Start a Horse Business?"
+      "a": "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+      "b": "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
+      "family_a": "faq",
+      "family_b": "faq",
+      "body_similarity": 0.8794,
+      "cosine_similarity": 0.9461,
+      "shingle_similarity": 0.7556,
+      "intent_similarity": 0.4286,
+      "title_a": "What Happens If There Is No Written Agreement |",
+      "title_b": "What Happens If a Horse Becomes Lame After |"
     },
     {
       "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
       "b": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.8779,
-      "cosine_similarity": 0.9329,
+      "body_similarity": 0.879,
+      "cosine_similarity": 0.9347,
       "shingle_similarity": 0.7756,
       "intent_similarity": 0,
-      "title_a": "What If I Already Signed Something I Did Not Understand?",
-      "title_b": "Is It Too Late to Fix a Bad Horse Sale?"
+      "title_a": "What If I Already Signed Something I Did Not |",
+      "title_b": "Is It Too Late to Fix a Bad Horse Sale? |"
     },
     {
-      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-      "b": "/ip/do-i-need-a-contract-for-a-sponsorship/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8776,
-      "cosine_similarity": 0.9554,
-      "shingle_similarity": 0.7332,
+      "a": "/scenario/do-people-actually-get-sued-over-horse-deals/",
+      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8784,
+      "cosine_similarity": 0.944,
+      "shingle_similarity": 0.7566,
       "intent_similarity": 0.2,
-      "title_a": "What Should Be in an Equestrian Sponsorship Agreement?",
-      "title_b": "Do I Need a Contract for a Sponsorship?"
+      "title_a": "Do People Actually Get Sued Over Horse Deals? |",
+      "title_b": "Can I Back Out of a Horse Deal Without |"
+    },
+    {
+      "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
+      "b": "/scenario/am-i-overreacting-or-is-this-risky/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8777,
+      "cosine_similarity": 0.927,
+      "shingle_similarity": 0.786,
+      "intent_similarity": 0,
+      "title_a": "What Is the Worst-Case Scenario If I Do |",
+      "title_b": "Am I Overreacting or Is This Risky? |"
     },
     {
       "a": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
@@ -806,8 +830,8 @@
       "cosine_similarity": 0.9323,
       "shingle_similarity": 0.7759,
       "intent_similarity": 0,
-      "title_a": "Is It Too Late to Fix a Bad Horse Sale?",
-      "title_b": "Did I Mess Up by Trusting a Handshake Deal?"
+      "title_a": "Is It Too Late to Fix a Bad Horse Sale? |",
+      "title_b": "Did I Mess Up by Trusting a Handshake Deal? |"
     },
     {
       "a": "/business/how-to-start-an-equine-apparel-business/",
@@ -818,20 +842,8 @@
       "cosine_similarity": 0.9448,
       "shingle_similarity": 0.7514,
       "intent_similarity": 0.3333,
-      "title_a": "How to Start an Equine Apparel Business",
-      "title_b": "How Do I Legally Start a Horse Business?"
-    },
-    {
-      "a": "/scenario/do-people-actually-get-sued-over-horse-deals/",
-      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8771,
-      "cosine_similarity": 0.942,
-      "shingle_similarity": 0.7566,
-      "intent_similarity": 0.2,
-      "title_a": "Do People Actually Get Sued Over Horse Deals?",
-      "title_b": "Can I Back Out of a Horse Deal Without Getting Sued?"
+      "title_a": "How to Start an Equine Apparel Business |",
+      "title_b": "How Do I Legally Start a Horse Business? |"
     },
     {
       "a": "/business/how-to-start-an-equine-apparel-business/",
@@ -842,32 +854,44 @@
       "cosine_similarity": 0.9431,
       "shingle_similarity": 0.7542,
       "intent_similarity": 0.3333,
-      "title_a": "How to Start an Equine Apparel Business",
-      "title_b": "How to Start a Horse Retail Business"
+      "title_a": "How to Start an Equine Apparel Business |",
+      "title_b": "How to Start a Horse Retail Business |"
     },
     {
-      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
-      "b": "/business/do-i-need-an-llc-to-start-a-horse-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8765,
-      "cosine_similarity": 0.9628,
-      "shingle_similarity": 0.7164,
-      "intent_similarity": 0.4286,
-      "title_a": "What Legal Documents Do I Need for a Horse Business?",
-      "title_b": "Do I Need an LLC to Start a Horse Business?"
-    },
-    {
-      "a": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
-      "b": "/scenario/am-i-overreacting-or-is-this-risky/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8764,
-      "cosine_similarity": 0.9252,
-      "shingle_similarity": 0.786,
+      "a": "/boarding/what-should-be-included-in-a-training-agreement/",
+      "b": "/boarding/what-liability-does-a-trainer-have/",
+      "family_a": "boarding",
+      "family_b": "boarding",
+      "body_similarity": 0.8756,
+      "cosine_similarity": 0.9445,
+      "shingle_similarity": 0.7476,
       "intent_similarity": 0,
-      "title_a": "What Is the Worst-Case Scenario If I Do Nothing?",
-      "title_b": "Am I Overreacting or Is This Risky?"
+      "title_a": "What Should Be Included in a Training |",
+      "title_b": "What Liability Does a Trainer Have? |"
+    },
+    {
+      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
+      "b": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.875,
+      "cosine_similarity": 0.9511,
+      "shingle_similarity": 0.7336,
+      "intent_similarity": 0.1667,
+      "title_a": "What Should Be in an Equestrian Sponsorship |",
+      "title_b": "How Do I Get a Sponsorship for Horse Riding? |"
+    },
+    {
+      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
+      "b": "/ip/should-i-trademark-my-barn-name/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.8747,
+      "cosine_similarity": 0.9622,
+      "shingle_similarity": 0.7122,
+      "intent_similarity": 0,
+      "title_a": "What Should Be in an Equestrian Sponsorship |",
+      "title_b": "Should I Trademark My Barn Name? |"
     },
     {
       "a": "/ip/should-i-trademark-my-barn-name/",
@@ -878,8 +902,8 @@
       "cosine_similarity": 0.9372,
       "shingle_similarity": 0.758,
       "intent_similarity": 0,
-      "title_a": "Should I Trademark My Barn Name?",
-      "title_b": "How Do I Get a Sponsorship for Horse Riding?"
+      "title_a": "Should I Trademark My Barn Name? |",
+      "title_b": "How Do I Get a Sponsorship for Horse Riding? |"
     },
     {
       "a": "/scenario/do-people-actually-get-sued-over-horse-deals/",
@@ -890,68 +914,80 @@
       "cosine_similarity": 0.9272,
       "shingle_similarity": 0.7764,
       "intent_similarity": 0,
-      "title_a": "Do People Actually Get Sued Over Horse Deals?",
-      "title_b": "Am I Overreacting or Is This Risky?"
-    },
-    {
-      "a": "/boarding/what-should-be-included-in-a-training-agreement/",
-      "b": "/boarding/what-liability-does-a-trainer-have/",
-      "family_a": "boarding",
-      "family_b": "boarding",
-      "body_similarity": 0.8742,
-      "cosine_similarity": 0.9431,
-      "shingle_similarity": 0.7462,
-      "intent_similarity": 0,
-      "title_a": "What Should Be Included in a Training Agreement?",
-      "title_b": "What Liability Does a Trainer Have?"
-    },
-    {
-      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-      "b": "/ip/should-i-trademark-my-barn-name/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8733,
-      "cosine_similarity": 0.9608,
-      "shingle_similarity": 0.7109,
-      "intent_similarity": 0,
-      "title_a": "What Should Be in an Equestrian Sponsorship Agreement?",
-      "title_b": "Should I Trademark My Barn Name?"
+      "title_a": "Do People Actually Get Sued Over Horse Deals? |",
+      "title_b": "Am I Overreacting or Is This Risky? |"
     },
     {
       "a": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
       "b": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.8729,
-      "cosine_similarity": 0.9143,
+      "body_similarity": 0.8743,
+      "cosine_similarity": 0.9165,
       "shingle_similarity": 0.7958,
       "intent_similarity": 0,
-      "title_a": "I Bought a Horse and Something Is Wrong — What Now?",
-      "title_b": "Did I Mess Up by Trusting a Handshake Deal?"
-    },
-    {
-      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-      "b": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8728,
-      "cosine_similarity": 0.9485,
-      "shingle_similarity": 0.7322,
-      "intent_similarity": 0.1667,
-      "title_a": "What Should Be in an Equestrian Sponsorship Agreement?",
-      "title_b": "How Do I Get a Sponsorship for Horse Riding?"
+      "title_a": "I Bought a Horse and Something Is Wrong — |",
+      "title_b": "Did I Mess Up by Trusting a Handshake Deal? |"
     },
     {
       "a": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
       "b": "/ip/do-i-need-a-contract-for-a-sponsorship/",
       "family_a": "ip",
       "family_b": "ip",
-      "body_similarity": 0.8722,
-      "cosine_similarity": 0.947,
+      "body_similarity": 0.874,
+      "cosine_similarity": 0.9498,
       "shingle_similarity": 0.7332,
       "intent_similarity": 0.1667,
-      "title_a": "Do I Need a Trademark for an Equestrian Brand?",
-      "title_b": "Do I Need a Contract for a Sponsorship?"
+      "title_a": "Do I Need a Trademark for an Equestrian |",
+      "title_b": "Do I Need a Contract for a Sponsorship? |"
+    },
+    {
+      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "b": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8739,
+      "cosine_similarity": 0.9622,
+      "shingle_similarity": 0.7101,
+      "intent_similarity": 0.4286,
+      "title_a": "What Legal Documents Do I Need for a Horse |",
+      "title_b": "Do I Need an LLC to Start a Horse Business? |"
+    },
+    {
+      "a": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
+      "b": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8731,
+      "cosine_similarity": 0.9626,
+      "shingle_similarity": 0.707,
+      "intent_similarity": 0.25,
+      "title_a": "How Do I Separate My Horse Business from |",
+      "title_b": "Do I Need an LLC to Start a Horse Business? |"
+    },
+    {
+      "a": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8729,
+      "cosine_similarity": 0.9354,
+      "shingle_similarity": 0.7568,
+      "intent_similarity": 0.1111,
+      "title_a": "Did I Mess Up by Trusting a Handshake Deal? |",
+      "title_b": "Can I Back Out of a Horse Deal Without |"
+    },
+    {
+      "a": "/business/how-to-start-an-equine-apparel-business/",
+      "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8724,
+      "cosine_similarity": 0.94,
+      "shingle_similarity": 0.7467,
+      "intent_similarity": 0.125,
+      "title_a": "How to Start an Equine Apparel Business |",
+      "title_b": "How Do I Separate My Horse Business from |"
     },
     {
       "a": "/business/how-to-start-a-horse-retail-business/",
@@ -962,8 +998,20 @@
       "cosine_similarity": 0.9653,
       "shingle_similarity": 0.6976,
       "intent_similarity": 0.6,
-      "title_a": "How to Start a Horse Retail Business",
-      "title_b": "How Do I Legally Start a Horse Business?"
+      "title_a": "How to Start a Horse Retail Business |",
+      "title_b": "How Do I Legally Start a Horse Business? |"
+    },
+    {
+      "a": "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8711,
+      "cosine_similarity": 0.901,
+      "shingle_similarity": 0.8157,
+      "intent_similarity": 0.1818,
+      "title_a": "Do People Actually Get Sued Over Horse Deals |",
+      "title_b": "Can I Back Out of a Horse Deal Without |"
     },
     {
       "a": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
@@ -974,32 +1022,8 @@
       "cosine_similarity": 0.9519,
       "shingle_similarity": 0.7186,
       "intent_similarity": 0.1667,
-      "title_a": "How Do I Get a Sponsorship for Horse Riding?",
-      "title_b": "Do I Need a Contract for a Sponsorship?"
-    },
-    {
-      "a": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
-      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8703,
-      "cosine_similarity": 0.9315,
-      "shingle_similarity": 0.7568,
-      "intent_similarity": 0.1111,
-      "title_a": "Did I Mess Up by Trusting a Handshake Deal?",
-      "title_b": "Can I Back Out of a Horse Deal Without Getting Sued?"
-    },
-    {
-      "a": "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
-      "b": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8698,
-      "cosine_similarity": 0.8989,
-      "shingle_similarity": 0.8157,
-      "intent_similarity": 0.1818,
-      "title_a": "Do People Actually Get Sued Over Horse Deals Like This?",
-      "title_b": "Can I Back Out of a Horse Deal Without Getting Sued?"
+      "title_a": "How Do I Get a Sponsorship for Horse Riding? |",
+      "title_b": "Do I Need a Contract for a Sponsorship? |"
     },
     {
       "a": "/ip/should-i-trademark-my-barn-name/",
@@ -1010,8 +1034,20 @@
       "cosine_similarity": 0.9381,
       "shingle_similarity": 0.7425,
       "intent_similarity": 0,
-      "title_a": "Should I Trademark My Barn Name?",
-      "title_b": "How Do I Protect My Horse Business Brand?"
+      "title_a": "Should I Trademark My Barn Name? |",
+      "title_b": "How Do I Protect My Horse Business Brand? |"
+    },
+    {
+      "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
+      "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8689,
+      "cosine_similarity": 0.9302,
+      "shingle_similarity": 0.7551,
+      "intent_similarity": 0.1111,
+      "title_a": "How to Start an Equine-Assisted Therapy |",
+      "title_b": "How Do I Separate My Horse Business from |"
     },
     {
       "a": "/liability/what-type-of-insurance-do-trainers-need/",
@@ -1022,44 +1058,20 @@
       "cosine_similarity": 0.9366,
       "shingle_similarity": 0.743,
       "intent_similarity": 0,
-      "title_a": "What Type of Insurance Do Trainers Need?",
-      "title_b": "What Is the Equine Activity Liability Act?"
+      "title_a": "What Type of Insurance Do Trainers Need? |",
+      "title_b": "What Is the Equine Activity Liability Act? |"
     },
     {
       "a": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
       "b": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.8687,
-      "cosine_similarity": 0.8849,
+      "body_similarity": 0.8686,
+      "cosine_similarity": 0.8847,
       "shingle_similarity": 0.8386,
       "intent_similarity": 0.1,
-      "title_a": "A seller relied on a verbal as-is statement",
-      "title_b": "A horse sale crossed state lines. What should be reviewed?"
-    },
-    {
-      "a": "/business/how-to-start-an-equine-apparel-business/",
-      "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8685,
-      "cosine_similarity": 0.9358,
-      "shingle_similarity": 0.7435,
-      "intent_similarity": 0.125,
-      "title_a": "How to Start an Equine Apparel Business",
-      "title_b": "How Do I Separate My Horse Business from Personal Assets?"
-    },
-    {
-      "a": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
-      "b": "/business/do-i-need-an-llc-to-start-a-horse-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8682,
-      "cosine_similarity": 0.9583,
-      "shingle_similarity": 0.7007,
-      "intent_similarity": 0.25,
-      "title_a": "How Do I Separate My Horse Business from Personal Assets?",
-      "title_b": "Do I Need an LLC to Start a Horse Business?"
+      "title_a": "A seller relied on a verbal as-is statement |",
+      "title_b": "A horse sale crossed state lines |"
     },
     {
       "a": "/liability/do-i-need-insurance-for-my-horse-business/",
@@ -1070,8 +1082,8 @@
       "cosine_similarity": 0.941,
       "shingle_similarity": 0.7325,
       "intent_similarity": 0.1429,
-      "title_a": "Do I Need Insurance for My Horse Business?",
-      "title_b": "Do I Need a Warning Sign at My Barn?"
+      "title_a": "Do I Need Insurance for My Horse Business? |",
+      "title_b": "Do I Need a Warning Sign at My Barn? |"
     },
     {
       "a": "/leases/who-is-liable-during-a-horse-lease/",
@@ -1082,8 +1094,8 @@
       "cosine_similarity": 0.9643,
       "shingle_similarity": 0.6877,
       "intent_similarity": 0.4,
-      "title_a": "Who Is Liable During a Horse Lease?",
-      "title_b": "Can You End a Horse Lease Early?"
+      "title_a": "Who Is Liable During a Horse Lease? |",
+      "title_b": "Can You End a Horse Lease Early? |"
     },
     {
       "a": "/business/how-to-start-a-training-barn-legally/",
@@ -1094,8 +1106,20 @@
       "cosine_similarity": 0.9291,
       "shingle_similarity": 0.7528,
       "intent_similarity": 0.1429,
-      "title_a": "How to Start a Training Barn Legally",
-      "title_b": "How to Start a Horse Retail Business"
+      "title_a": "How to Start a Training Barn Legally |",
+      "title_b": "How to Start a Horse Retail Business |"
+    },
+    {
+      "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
+      "b": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8664,
+      "cosine_similarity": 0.9497,
+      "shingle_similarity": 0.7116,
+      "intent_similarity": 0,
+      "title_a": "What If I Already Signed Something I Did Not |",
+      "title_b": "Did I Mess Up by Trusting a Handshake Deal? |"
     },
     {
       "a": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
@@ -1106,32 +1130,8 @@
       "cosine_similarity": 0.9172,
       "shingle_similarity": 0.7712,
       "intent_similarity": 0,
-      "title_a": "Who Pays Vet Bills While a Horse Is Boarded?",
-      "title_b": "What Liability Does a Trainer Have?"
-    },
-    {
-      "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
-      "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8661,
-      "cosine_similarity": 0.9258,
-      "shingle_similarity": 0.7551,
-      "intent_similarity": 0.1111,
-      "title_a": "How to Start an Equine-Assisted Therapy Business",
-      "title_b": "How Do I Separate My Horse Business from Personal Assets?"
-    },
-    {
-      "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
-      "b": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8661,
-      "cosine_similarity": 0.9493,
-      "shingle_similarity": 0.7116,
-      "intent_similarity": 0,
-      "title_a": "What If I Already Signed Something I Did Not Understand?",
-      "title_b": "Did I Mess Up by Trusting a Handshake Deal?"
+      "title_a": "Who Pays Vet Bills While a Horse Is Boarded? |",
+      "title_b": "What Liability Does a Trainer Have? |"
     },
     {
       "a": "/business/how-to-start-a-training-barn-legally/",
@@ -1142,8 +1142,8 @@
       "cosine_similarity": 0.942,
       "shingle_similarity": 0.7243,
       "intent_similarity": 0.3333,
-      "title_a": "How to Start a Training Barn Legally",
-      "title_b": "How Do I Legally Start a Horse Business?"
+      "title_a": "How to Start a Training Barn Legally |",
+      "title_b": "How Do I Legally Start a Horse Business? |"
     },
     {
       "a": "/liability/what-type-of-insurance-do-trainers-need/",
@@ -1154,32 +1154,32 @@
       "cosine_similarity": 0.9453,
       "shingle_similarity": 0.7172,
       "intent_similarity": 0.5,
-      "title_a": "What Type of Insurance Do Trainers Need?",
-      "title_b": "What Type of Insurance Do Horse Owners Need?"
+      "title_a": "What Type of Insurance Do Trainers Need? |",
+      "title_b": "What Type of Insurance Do Horse Owners Need? |"
     },
     {
       "a": "/ip/how-do-i-protect-my-horse-business-brand/",
       "b": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
       "family_a": "ip",
       "family_b": "ip",
-      "body_similarity": 0.8653,
+      "body_similarity": 0.8642,
       "cosine_similarity": 0.9451,
-      "shingle_similarity": 0.7172,
+      "shingle_similarity": 0.714,
       "intent_similarity": 0.1429,
-      "title_a": "How Do I Protect My Horse Business Brand?",
-      "title_b": "Do I Need a Trademark for an Equestrian Brand?"
+      "title_a": "How Do I Protect My Horse Business Brand? |",
+      "title_b": "Do I Need a Trademark for an Equestrian |"
     },
     {
       "a": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
       "b": "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
       "family_a": "boarding",
       "family_b": "boarding",
-      "body_similarity": 0.8648,
-      "cosine_similarity": 0.9225,
-      "shingle_similarity": 0.7576,
+      "body_similarity": 0.8638,
+      "cosine_similarity": 0.9228,
+      "shingle_similarity": 0.7543,
       "intent_similarity": 0.2857,
-      "title_a": "Who Pays Vet Bills While a Horse Is Boarded?",
-      "title_b": "Who Is Liable If a Horse Is Injured While Boarded?"
+      "title_a": "Who Pays Vet Bills While a Horse Is Boarded? |",
+      "title_b": "Who Is Liable If a Horse Is Injured While |"
     },
     {
       "a": "/business/how-to-start-a-boarding-barn-legally/",
@@ -1190,8 +1190,8 @@
       "cosine_similarity": 0.9486,
       "shingle_similarity": 0.7057,
       "intent_similarity": 0.3333,
-      "title_a": "How to Start a Boarding Barn Legally",
-      "title_b": "How Do I Legally Start a Horse Business?"
+      "title_a": "How to Start a Boarding Barn Legally |",
+      "title_b": "How Do I Legally Start a Horse Business? |"
     },
     {
       "a": "/leases/what-is-a-horse-trial-agreement/",
@@ -1202,92 +1202,140 @@
       "cosine_similarity": 0.9546,
       "shingle_similarity": 0.6946,
       "intent_similarity": 0.1667,
-      "title_a": "What Is a Horse Trial Agreement?",
-      "title_b": "Can You End a Horse Lease Early?"
-    },
-    {
-      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
-      "b": "/business/partnership-agreement-for-horse-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8634,
-      "cosine_similarity": 0.9237,
-      "shingle_similarity": 0.7514,
-      "intent_similarity": 0.2857,
-      "title_a": "What Legal Documents Do I Need for a Horse Business?",
-      "title_b": "Partnership Agreement for a Horse Business"
-    },
-    {
-      "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
-      "b": "/business/how-do-i-legally-start-a-horse-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8633,
-      "cosine_similarity": 0.9347,
-      "shingle_similarity": 0.7306,
-      "intent_similarity": 0.2857,
-      "title_a": "How to Start an Equine-Assisted Therapy Business",
-      "title_b": "How Do I Legally Start a Horse Business?"
+      "title_a": "What Is a Horse Trial Agreement? |",
+      "title_b": "Can You End a Horse Lease Early? |"
     },
     {
       "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
       "b": "/business/how-to-start-a-training-barn-legally/",
       "family_a": "business",
       "family_b": "business",
-      "body_similarity": 0.8624,
-      "cosine_similarity": 0.9242,
+      "body_similarity": 0.8634,
+      "cosine_similarity": 0.9256,
       "shingle_similarity": 0.7477,
       "intent_similarity": 0.125,
-      "title_a": "How to Start an Equine-Assisted Therapy Business",
-      "title_b": "How to Start a Training Barn Legally"
-    },
-    {
-      "a": "/liability/do-i-need-a-warning-sign-at-my-barn/",
-      "b": "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
-      "family_a": "liability",
-      "family_b": "liability",
-      "body_similarity": 0.8612,
-      "cosine_similarity": 0.9201,
-      "shingle_similarity": 0.7519,
-      "intent_similarity": 0.125,
-      "title_a": "Do I Need a Warning Sign at My Barn?",
-      "title_b": "Do I Need a Liability Waiver for My Horse Business?"
-    },
-    {
-      "a": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
-      "b": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.861,
-      "cosine_similarity": 0.8993,
-      "shingle_similarity": 0.79,
-      "intent_similarity": 0.1111,
-      "title_a": "Is It Too Late to Fix a Bad Horse Sale?",
-      "title_b": "I Bought a Horse and Something Is Wrong — What Now?"
-    },
-    {
-      "a": "/leases/what-happens-if-a-leased-horse-is-injured/",
-      "b": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
-      "family_a": "leases",
-      "family_b": "leases",
-      "body_similarity": 0.8609,
-      "cosine_similarity": 0.9228,
-      "shingle_similarity": 0.7458,
-      "intent_similarity": 0.5,
-      "title_a": "What Happens If a Leased Horse Is Injured?",
-      "title_b": "What Happens If a Leased Horse Becomes Unsound?"
+      "title_a": "How to Start an Equine-Assisted Therapy |",
+      "title_b": "How to Start a Training Barn Legally |"
     },
     {
       "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
       "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
       "family_a": "business",
       "family_b": "business",
-      "body_similarity": 0.8606,
-      "cosine_similarity": 0.9494,
+      "body_similarity": 0.8631,
+      "cosine_similarity": 0.9533,
       "shingle_similarity": 0.6957,
       "intent_similarity": 0.25,
-      "title_a": "What Legal Documents Do I Need for a Horse Business?",
-      "title_b": "How Do I Separate My Horse Business from Personal Assets?"
+      "title_a": "What Legal Documents Do I Need for a Horse |",
+      "title_b": "How Do I Separate My Horse Business from |"
+    },
+    {
+      "a": "/liability/do-i-need-a-warning-sign-at-my-barn/",
+      "b": "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
+      "family_a": "liability",
+      "family_b": "liability",
+      "body_similarity": 0.8628,
+      "cosine_similarity": 0.9226,
+      "shingle_similarity": 0.7519,
+      "intent_similarity": 0.125,
+      "title_a": "Do I Need a Warning Sign at My Barn? |",
+      "title_b": "Do I Need a Liability Waiver for My Horse |"
+    },
+    {
+      "a": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
+      "b": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8624,
+      "cosine_similarity": 0.9015,
+      "shingle_similarity": 0.79,
+      "intent_similarity": 0.1111,
+      "title_a": "Is It Too Late to Fix a Bad Horse Sale? |",
+      "title_b": "I Bought a Horse and Something Is Wrong — |"
+    },
+    {
+      "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
+      "b": "/business/how-do-i-legally-start-a-horse-business/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8623,
+      "cosine_similarity": 0.9349,
+      "shingle_similarity": 0.7274,
+      "intent_similarity": 0.2857,
+      "title_a": "How to Start an Equine-Assisted Therapy |",
+      "title_b": "How Do I Legally Start a Horse Business? |"
+    },
+    {
+      "a": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "b": "/leases/what-happens-if-a-leased-horse-becomes-unsound/",
+      "family_a": "leases",
+      "family_b": "leases",
+      "body_similarity": 0.8623,
+      "cosine_similarity": 0.925,
+      "shingle_similarity": 0.7458,
+      "intent_similarity": 0.5,
+      "title_a": "What Happens If a Leased Horse Is Injured? |",
+      "title_b": "What Happens If a Leased Horse Becomes |"
+    },
+    {
+      "a": "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
+      "b": "/boarding/what-should-be-included-in-a-training-agreement/",
+      "family_a": "boarding",
+      "family_b": "boarding",
+      "body_similarity": 0.8622,
+      "cosine_similarity": 0.9343,
+      "shingle_similarity": 0.7283,
+      "intent_similarity": 0,
+      "title_a": "Who Is Liable If a Horse Is Injured While |",
+      "title_b": "What Should Be Included in a Training |"
+    },
+    {
+      "a": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.8613,
+      "cosine_similarity": 0.9419,
+      "shingle_similarity": 0.7116,
+      "intent_similarity": 0,
+      "title_a": "Do I Need a Trademark for an Equestrian |",
+      "title_b": "Can a Sponsor Use My Image Without |"
+    },
+    {
+      "a": "/ip/should-i-trademark-my-barn-name/",
+      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.8608,
+      "cosine_similarity": 0.9396,
+      "shingle_similarity": 0.7146,
+      "intent_similarity": 0,
+      "title_a": "Should I Trademark My Barn Name? |",
+      "title_b": "Can a Sponsor Use My Image Without |"
+    },
+    {
+      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "b": "/business/partnership-agreement-for-horse-business/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8604,
+      "cosine_similarity": 0.9225,
+      "shingle_similarity": 0.745,
+      "intent_similarity": 0.2857,
+      "title_a": "What Legal Documents Do I Need for a Horse |",
+      "title_b": "Partnership Agreement for a Horse Business |"
+    },
+    {
+      "a": "/scenario/do-people-actually-get-sued-over-horse-deals/",
+      "b": "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8603,
+      "cosine_similarity": 0.922,
+      "shingle_similarity": 0.7457,
+      "intent_similarity": 0.8571,
+      "title_a": "Do People Actually Get Sued Over Horse Deals? |",
+      "title_b": "Do People Actually Get Sued Over Horse Deals |"
     },
     {
       "a": "/liability/what-type-of-insurance-do-horse-owners-need/",
@@ -1298,8 +1346,20 @@
       "cosine_similarity": 0.9447,
       "shingle_similarity": 0.7026,
       "intent_similarity": 0.5,
-      "title_a": "What Type of Insurance Do Horse Owners Need?",
-      "title_b": "Do I Need Insurance for My Horse Business?"
+      "title_a": "What Type of Insurance Do Horse Owners Need? |",
+      "title_b": "Do I Need Insurance for My Horse Business? |"
+    },
+    {
+      "a": "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
+      "b": "/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8599,
+      "cosine_similarity": 0.9021,
+      "shingle_similarity": 0.7816,
+      "intent_similarity": 0.3333,
+      "title_a": "Horse business partners are disagreeing |",
+      "title_b": "A horse business mixes personal and business |"
     },
     {
       "a": "/business/partnership-agreement-for-horse-business/",
@@ -1310,20 +1370,20 @@
       "cosine_similarity": 0.9275,
       "shingle_similarity": 0.7336,
       "intent_similarity": 0.3333,
-      "title_a": "Partnership Agreement for a Horse Business",
-      "title_b": "How Do I Legally Start a Horse Business?"
+      "title_a": "Partnership Agreement for a Horse Business |",
+      "title_b": "How Do I Legally Start a Horse Business? |"
     },
     {
-      "a": "/ip/should-i-trademark-my-barn-name/",
-      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
-      "family_a": "ip",
-      "family_b": "ip",
+      "a": "/business/how-to-start-a-training-barn-legally/",
+      "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
+      "family_a": "business",
+      "family_b": "business",
       "body_similarity": 0.8597,
-      "cosine_similarity": 0.9378,
-      "shingle_similarity": 0.7146,
+      "cosine_similarity": 0.9316,
+      "shingle_similarity": 0.7261,
       "intent_similarity": 0,
-      "title_a": "Should I Trademark My Barn Name?",
-      "title_b": "Can a Sponsor Use My Image Without Permission?"
+      "title_a": "How to Start a Training Barn Legally |",
+      "title_b": "How Do I Separate My Horse Business from |"
     },
     {
       "a": "/business/how-to-start-an-equine-apparel-business/",
@@ -1334,32 +1394,44 @@
       "cosine_similarity": 0.9287,
       "shingle_similarity": 0.7301,
       "intent_similarity": 0.1429,
-      "title_a": "How to Start an Equine Apparel Business",
-      "title_b": "How to Start a Boarding Barn Legally"
+      "title_a": "How to Start an Equine Apparel Business |",
+      "title_b": "How to Start a Boarding Barn Legally |"
     },
     {
-      "a": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
-      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
+      "a": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
+      "b": "/scenario/am-i-overreacting-or-is-this-risky/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8591,
+      "cosine_similarity": 0.9011,
+      "shingle_similarity": 0.781,
+      "intent_similarity": 0,
+      "title_a": "I Bought a Horse and Something Is Wrong — |",
+      "title_b": "Am I Overreacting or Is This Risky? |"
+    },
+    {
+      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
+      "b": "/ip/how-do-i-protect-my-horse-business-brand/",
       "family_a": "ip",
       "family_b": "ip",
-      "body_similarity": 0.8586,
-      "cosine_similarity": 0.9377,
-      "shingle_similarity": 0.7116,
+      "body_similarity": 0.8587,
+      "cosine_similarity": 0.9427,
+      "shingle_similarity": 0.7028,
       "intent_similarity": 0,
-      "title_a": "Do I Need a Trademark for an Equestrian Brand?",
-      "title_b": "Can a Sponsor Use My Image Without Permission?"
+      "title_a": "What Should Be in an Equestrian Sponsorship |",
+      "title_b": "How Do I Protect My Horse Business Brand? |"
     },
     {
-      "a": "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
-      "b": "/boarding/what-should-be-included-in-a-training-agreement/",
-      "family_a": "boarding",
-      "family_b": "boarding",
-      "body_similarity": 0.8583,
-      "cosine_similarity": 0.929,
-      "shingle_similarity": 0.7269,
-      "intent_similarity": 0,
-      "title_a": "Who Is Liable If a Horse Is Injured While Boarded?",
-      "title_b": "What Should Be Included in a Training Agreement?"
+      "a": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+      "family_a": "insights",
+      "family_b": "insights",
+      "body_similarity": 0.8586,
+      "cosine_similarity": 0.8912,
+      "shingle_similarity": 0.7979,
+      "intent_similarity": 0.1538,
+      "title_a": "What Equestrians Often Miss About Is a Verbal |",
+      "title_b": "Why What Should Be Included in a Horse Bill |"
     },
     {
       "a": "/business/how-to-start-a-horse-retail-business/",
@@ -1370,32 +1442,44 @@
       "cosine_similarity": 0.9355,
       "shingle_similarity": 0.7145,
       "intent_similarity": 0.1429,
-      "title_a": "How to Start a Horse Retail Business",
-      "title_b": "How to Start a Boarding Barn Legally"
+      "title_a": "How to Start a Horse Retail Business |",
+      "title_b": "How to Start a Boarding Barn Legally |"
     },
     {
-      "a": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
-      "b": "/scenario/am-i-overreacting-or-is-this-risky/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8577,
-      "cosine_similarity": 0.8991,
-      "shingle_similarity": 0.781,
+      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
+      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
+      "family_a": "ip",
+      "family_b": "ip",
+      "body_similarity": 0.8581,
+      "cosine_similarity": 0.9466,
+      "shingle_similarity": 0.6936,
       "intent_similarity": 0,
-      "title_a": "I Bought a Horse and Something Is Wrong — What Now?",
-      "title_b": "Am I Overreacting or Is This Risky?"
+      "title_a": "What Should Be in an Equestrian Sponsorship |",
+      "title_b": "Can a Sponsor Use My Image Without |"
     },
     {
-      "a": "/state/south-carolina/do-i-need-a-liability-waiver/",
-      "b": "/state/south-carolina/can-i-be-sued-if-i-have-a-waiver/",
-      "family_a": "state",
-      "family_b": "state",
-      "body_similarity": 0.8577,
-      "cosine_similarity": 0.9559,
-      "shingle_similarity": 0.6755,
-      "intent_similarity": 0.5,
-      "title_a": "Do I Need a Liability Waiver in South Carolina?",
-      "title_b": "Can I Be Sued in South Carolina If I Have a Waiver?"
+      "a": "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
+      "b": "/boarding/what-liability-does-a-trainer-have/",
+      "family_a": "boarding",
+      "family_b": "boarding",
+      "body_similarity": 0.8576,
+      "cosine_similarity": 0.9216,
+      "shingle_similarity": 0.7387,
+      "intent_similarity": 0,
+      "title_a": "Who Is Liable If a Horse Is Injured While |",
+      "title_b": "What Liability Does a Trainer Have? |"
+    },
+    {
+      "a": "/disputes/how-serious-is-a-legal-demand-letter/",
+      "b": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+      "family_a": "disputes",
+      "family_b": "disputes",
+      "body_similarity": 0.8573,
+      "cosine_similarity": 0.942,
+      "shingle_similarity": 0.6998,
+      "intent_similarity": 0,
+      "title_a": "How Serious Is a Legal Demand Letter? |",
+      "title_b": "Can a Contract Dispute Be Resolved Without |"
     },
     {
       "a": "/leases/who-pays-vet-bills-in-a-horse-lease/",
@@ -1406,32 +1490,56 @@
       "cosine_similarity": 0.9259,
       "shingle_similarity": 0.7298,
       "intent_similarity": 0.1429,
-      "title_a": "Who Pays Vet Bills in a Horse Lease?",
-      "title_b": "What Is a Horse Trial Agreement?"
+      "title_a": "Who Pays Vet Bills in a Horse Lease? |",
+      "title_b": "What Is a Horse Trial Agreement? |"
     },
     {
-      "a": "/business/how-to-start-a-training-barn-legally/",
-      "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8571,
-      "cosine_similarity": 0.9276,
-      "shingle_similarity": 0.7261,
-      "intent_similarity": 0,
-      "title_a": "How to Start a Training Barn Legally",
-      "title_b": "How Do I Separate My Horse Business from Personal Assets?"
-    },
-    {
-      "a": "/scenario/do-people-actually-get-sued-over-horse-deals/",
-      "b": "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+      "a": "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
+      "b": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.8569,
-      "cosine_similarity": 0.9217,
-      "shingle_similarity": 0.7367,
-      "intent_similarity": 0.8571,
-      "title_a": "Do People Actually Get Sued Over Horse Deals?",
-      "title_b": "Do People Actually Get Sued Over Horse Deals Like This?"
+      "body_similarity": 0.8573,
+      "cosine_similarity": 0.9292,
+      "shingle_similarity": 0.7237,
+      "intent_similarity": 0.25,
+      "title_a": "I received a demand letter about a horse |",
+      "title_b": "A demand letter has a deadline |"
+    },
+    {
+      "a": "/state/south-carolina/do-i-need-a-liability-waiver/",
+      "b": "/state/south-carolina/can-i-be-sued-if-i-have-a-waiver/",
+      "family_a": "state",
+      "family_b": "state",
+      "body_similarity": 0.8573,
+      "cosine_similarity": 0.9552,
+      "shingle_similarity": 0.6755,
+      "intent_similarity": 0.5,
+      "title_a": "Do I Need a Liability Waiver in South |",
+      "title_b": "Can I Be Sued in South Carolina If I Have a |"
+    },
+    {
+      "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
+      "b": "/business/how-to-start-a-boarding-barn-legally/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.857,
+      "cosine_similarity": 0.9192,
+      "shingle_similarity": 0.7416,
+      "intent_similarity": 0.125,
+      "title_a": "How to Start an Equine-Assisted Therapy |",
+      "title_b": "How to Start a Boarding Barn Legally |"
+    },
+    {
+      "a": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
+      "b": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8567,
+      "cosine_similarity": 0.8805,
+      "shingle_similarity": 0.8125,
+      "intent_similarity": 0.1111,
+      "title_a": "Is It Too Late to Fix a Bad Horse Sale? |",
+      "title_b": "I Sold a Horse Without a Contract — Am I |"
     },
     {
       "a": "/business/horse-syndicate-legal-structure/",
@@ -1442,44 +1550,20 @@
       "cosine_similarity": 0.9045,
       "shingle_similarity": 0.7678,
       "intent_similarity": 0.125,
-      "title_a": "Horse Syndicate Legal Structure",
-      "title_b": "Do I Need an LLC to Start a Horse Business?"
+      "title_a": "Horse Syndicate Legal Structure |",
+      "title_b": "Do I Need an LLC to Start a Horse Business? |"
     },
     {
-      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-      "b": "/ip/how-do-i-protect-my-horse-business-brand/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8565,
-      "cosine_similarity": 0.9401,
-      "shingle_similarity": 0.7015,
-      "intent_similarity": 0,
-      "title_a": "What Should Be in an Equestrian Sponsorship Agreement?",
-      "title_b": "How Do I Protect My Horse Business Brand?"
-    },
-    {
-      "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
-      "b": "/business/how-to-start-a-boarding-barn-legally/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8563,
-      "cosine_similarity": 0.918,
-      "shingle_similarity": 0.7416,
-      "intent_similarity": 0.125,
-      "title_a": "How to Start an Equine-Assisted Therapy Business",
-      "title_b": "How to Start a Boarding Barn Legally"
-    },
-    {
-      "a": "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
-      "b": "/scenario/a-horse-business-mixes-personal-and-business-money-why-does-that-matter/",
+      "a": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
+      "b": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
       "family_a": "scenario",
       "family_b": "scenario",
       "body_similarity": 0.8563,
-      "cosine_similarity": 0.8965,
-      "shingle_similarity": 0.7816,
-      "intent_similarity": 0.3333,
-      "title_a": "Horse business partners are disagreeing. What documents matter?",
-      "title_b": "A horse business mixes personal and business money"
+      "cosine_similarity": 0.8895,
+      "shingle_similarity": 0.7947,
+      "intent_similarity": 0.1,
+      "title_a": "A horse sale crossed state lines |",
+      "title_b": "A contract has no state law clause |"
     },
     {
       "a": "/leases/who-is-liable-during-a-horse-lease/",
@@ -1490,80 +1574,20 @@
       "cosine_similarity": 0.9598,
       "shingle_similarity": 0.6636,
       "intent_similarity": 0.2,
-      "title_a": "Who Is Liable During a Horse Lease?",
-      "title_b": "What Is a Horse Trial Agreement?"
-    },
-    {
-      "a": "/disputes/how-serious-is-a-legal-demand-letter/",
-      "b": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
-      "family_a": "disputes",
-      "family_b": "disputes",
-      "body_similarity": 0.8561,
-      "cosine_similarity": 0.9403,
-      "shingle_similarity": 0.6998,
-      "intent_similarity": 0,
-      "title_a": "How Serious Is a Legal Demand Letter?",
-      "title_b": "Can a Contract Dispute Be Resolved Without Court?"
-    },
-    {
-      "a": "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
-      "b": "/boarding/what-liability-does-a-trainer-have/",
-      "family_a": "boarding",
-      "family_b": "boarding",
-      "body_similarity": 0.8557,
-      "cosine_similarity": 0.9187,
-      "shingle_similarity": 0.7387,
-      "intent_similarity": 0,
-      "title_a": "Who Is Liable If a Horse Is Injured While Boarded?",
-      "title_b": "What Liability Does a Trainer Have?"
-    },
-    {
-      "a": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
-      "b": "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
-      "family_a": "faq",
-      "family_b": "faq",
-      "body_similarity": 0.8556,
-      "cosine_similarity": 0.941,
-      "shingle_similarity": 0.6969,
-      "intent_similarity": 0.2857,
-      "title_a": "When Does Ownership Legally Transfer in a Horse Sale?",
-      "title_b": "Can a Buyer Sue After an “As-Is” Horse Sale?"
+      "title_a": "Who Is Liable During a Horse Lease? |",
+      "title_b": "What Is a Horse Trial Agreement? |"
     },
     {
       "a": "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
       "b": "/scenario/am-i-overreacting-or-is-this-risky/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.8554,
-      "cosine_similarity": 0.8912,
+      "body_similarity": 0.8558,
+      "cosine_similarity": 0.8918,
       "shingle_similarity": 0.7889,
       "intent_similarity": 0,
-      "title_a": "Do People Actually Get Sued Over Horse Deals Like This?",
-      "title_b": "Am I Overreacting or Is This Risky?"
-    },
-    {
-      "a": "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
-      "b": "/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8553,
-      "cosine_similarity": 0.8806,
-      "shingle_similarity": 0.8083,
-      "intent_similarity": 0.3333,
-      "title_a": "Horse business partners are disagreeing. What documents matter?",
-      "title_b": "A horse syndicate member wants out. What documents matter?"
-    },
-    {
-      "a": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
-      "b": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8552,
-      "cosine_similarity": 0.8783,
-      "shingle_similarity": 0.8125,
-      "intent_similarity": 0.1111,
-      "title_a": "Is It Too Late to Fix a Bad Horse Sale?",
-      "title_b": "I Sold a Horse Without a Contract — Am I Screwed?"
+      "title_a": "Do People Actually Get Sued Over Horse Deals |",
+      "title_b": "Am I Overreacting or Is This Risky? |"
     },
     {
       "a": "/business/partnership-agreement-for-horse-business/",
@@ -1574,68 +1598,8 @@
       "cosine_similarity": 0.9158,
       "shingle_similarity": 0.7414,
       "intent_similarity": 0.1429,
-      "title_a": "Partnership Agreement for a Horse Business",
-      "title_b": "Horse Syndicate Legal Structure"
-    },
-    {
-      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
-      "b": "/business/how-to-start-a-horse-retail-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8548,
-      "cosine_similarity": 0.9418,
-      "shingle_similarity": 0.6933,
-      "intent_similarity": 0.2857,
-      "title_a": "What Legal Documents Do I Need for a Horse Business?",
-      "title_b": "How to Start a Horse Retail Business"
-    },
-    {
-      "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-      "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
-      "family_a": "ip",
-      "family_b": "ip",
-      "body_similarity": 0.8547,
-      "cosine_similarity": 0.9421,
-      "shingle_similarity": 0.6923,
-      "intent_similarity": 0,
-      "title_a": "What Should Be in an Equestrian Sponsorship Agreement?",
-      "title_b": "Can a Sponsor Use My Image Without Permission?"
-    },
-    {
-      "a": "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
-      "b": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8547,
-      "cosine_similarity": 0.9253,
-      "shingle_similarity": 0.7237,
-      "intent_similarity": 0.25,
-      "title_a": "I received a demand letter about a horse dispute",
-      "title_b": "A demand letter has a deadline. What should be prioritized?"
-    },
-    {
-      "a": "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
-      "b": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8545,
-      "cosine_similarity": 0.8867,
-      "shingle_similarity": 0.7947,
-      "intent_similarity": 0.1,
-      "title_a": "A horse sale crossed state lines. What should be reviewed?",
-      "title_b": "A contract has no state law clause. Why can that matter?"
-    },
-    {
-      "a": "/compare/template-horse-contract-vs-custom-horse-contract/",
-      "b": "/compare/template-contract-vs-custom-horse-contract/",
-      "family_a": "compare",
-      "family_b": "compare",
-      "body_similarity": 0.8542,
-      "cosine_similarity": 0.9657,
-      "shingle_similarity": 0.6472,
-      "intent_similarity": 1,
-      "title_a": "Template horse contract vs custom horse contract",
-      "title_b": "Template Contract vs Custom Horse Contract"
+      "title_a": "Partnership Agreement for a Horse Business |",
+      "title_b": "Horse Syndicate Legal Structure |"
     },
     {
       "a": "/faq/can-a-seller-refuse-to-take-a-horse-back/",
@@ -1646,68 +1610,152 @@
       "cosine_similarity": 0.928,
       "shingle_similarity": 0.7159,
       "intent_similarity": 0.125,
-      "title_a": "Can a Seller Refuse to Take a Horse Back?",
-      "title_b": "Can a Buyer Sue After an “As-Is” Horse Sale?"
+      "title_a": "Can a Seller Refuse to Take a Horse Back? |",
+      "title_b": "Can a Buyer Sue After an “As-Is” Horse Sale? |"
     },
     {
-      "a": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
-      "b": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
-      "family_a": "insights",
-      "family_b": "insights",
-      "body_similarity": 0.8531,
-      "cosine_similarity": 0.8829,
-      "shingle_similarity": 0.7979,
-      "intent_similarity": 0.1538,
-      "title_a": "What Equestrians Often Miss About Is a Verbal Agreement Legally",
-      "title_b": "Why What Should Be Included in a Horse Bill of Sale Creates"
-    },
-    {
-      "a": "/faq/what-should-be-included-in-a-horse-sale-contract/",
-      "b": "/faq/do-i-need-a-contract-to-sell-a-horse/",
-      "family_a": "faq",
-      "family_b": "faq",
-      "body_similarity": 0.8524,
-      "cosine_similarity": 0.9553,
-      "shingle_similarity": 0.6613,
-      "intent_similarity": 0.3333,
-      "title_a": "What Should Be Included in a Horse Sale Contract?",
-      "title_b": "Do I Need a Contract to Sell a Horse?"
+      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "b": "/business/how-to-start-a-horse-retail-business/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8537,
+      "cosine_similarity": 0.9417,
+      "shingle_similarity": 0.6902,
+      "intent_similarity": 0.2857,
+      "title_a": "What Legal Documents Do I Need for a Horse |",
+      "title_b": "How to Start a Horse Retail Business |"
     },
     {
       "a": "/business/how-to-start-a-boarding-barn-legally/",
       "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
       "family_a": "business",
       "family_b": "business",
-      "body_similarity": 0.8511,
-      "cosine_similarity": 0.9233,
+      "body_similarity": 0.8536,
+      "cosine_similarity": 0.9273,
       "shingle_similarity": 0.7169,
       "intent_similarity": 0,
-      "title_a": "How to Start a Boarding Barn Legally",
-      "title_b": "How Do I Separate My Horse Business from Personal Assets?"
+      "title_a": "How to Start a Boarding Barn Legally |",
+      "title_b": "How Do I Separate My Horse Business from |"
+    },
+    {
+      "a": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+      "b": "/faq/can-a-buyer-sue-after-an-as-is-horse-sale/",
+      "family_a": "faq",
+      "family_b": "faq",
+      "body_similarity": 0.8534,
+      "cosine_similarity": 0.9409,
+      "shingle_similarity": 0.6908,
+      "intent_similarity": 0.2857,
+      "title_a": "When Does Ownership Legally Transfer in a |",
+      "title_b": "Can a Buyer Sue After an “As-Is” Horse Sale? |"
+    },
+    {
+      "a": "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
+      "b": "/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8529,
+      "cosine_similarity": 0.8802,
+      "shingle_similarity": 0.8021,
+      "intent_similarity": 0.3333,
+      "title_a": "Horse business partners are disagreeing |",
+      "title_b": "A horse syndicate member wants out |"
+    },
+    {
+      "a": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "b": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+      "family_a": "faq",
+      "family_b": "faq",
+      "body_similarity": 0.8526,
+      "cosine_similarity": 0.9556,
+      "shingle_similarity": 0.6613,
+      "intent_similarity": 0.3333,
+      "title_a": "What Should Be Included in a Horse Sale |",
+      "title_b": "Do I Need a Contract to Sell a Horse? |"
     },
     {
       "a": "/scenario/i-signed-something-i-did-not-understand-what-should-i-do/",
       "b": "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.851,
-      "cosine_similarity": 0.929,
+      "body_similarity": 0.8523,
+      "cosine_similarity": 0.931,
       "shingle_similarity": 0.7061,
       "intent_similarity": 0,
-      "title_a": "I signed something I did not understand. What should I do?",
-      "title_b": "A contract names the wrong party. Why does that matter?"
+      "title_a": "I signed something I did not understand |",
+      "title_b": "A contract names the wrong party |"
+    },
+    {
+      "a": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+      "b": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "family_a": "faq",
+      "family_b": "faq",
+      "body_similarity": 0.8514,
+      "cosine_similarity": 0.9483,
+      "shingle_similarity": 0.6714,
+      "intent_similarity": 0.2857,
+      "title_a": "When Does Ownership Legally Transfer in a |",
+      "title_b": "What Should Be Included in a Horse Sale |"
     },
     {
       "a": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
       "b": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.8507,
-      "cosine_similarity": 0.8879,
+      "body_similarity": 0.8513,
+      "cosine_similarity": 0.8888,
       "shingle_similarity": 0.7817,
       "intent_similarity": 0,
-      "title_a": "A seller relied on a verbal as-is statement",
-      "title_b": "A contract has no state law clause. Why can that matter?"
+      "title_a": "A seller relied on a verbal as-is statement |",
+      "title_b": "A contract has no state law clause |"
+    },
+    {
+      "a": "/compare/template-horse-contract-vs-custom-horse-contract/",
+      "b": "/compare/template-contract-vs-custom-horse-contract/",
+      "family_a": "compare",
+      "family_b": "compare",
+      "body_similarity": 0.8512,
+      "cosine_similarity": 0.9648,
+      "shingle_similarity": 0.6404,
+      "intent_similarity": 1,
+      "title_a": "Template horse contract vs custom horse |",
+      "title_b": "Template Contract vs Custom Horse Contract |"
+    },
+    {
+      "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
+      "b": "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+      "family_a": "scenario",
+      "family_b": "scenario",
+      "body_similarity": 0.8511,
+      "cosine_similarity": 0.878,
+      "shingle_similarity": 0.8011,
+      "intent_similarity": 0,
+      "title_a": "What If I Already Signed Something I Did Not |",
+      "title_b": "Do People Actually Get Sued Over Horse Deals |"
+    },
+    {
+      "a": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
+      "b": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+      "family_a": "disputes",
+      "family_b": "disputes",
+      "body_similarity": 0.8508,
+      "cosine_similarity": 0.9253,
+      "shingle_similarity": 0.7126,
+      "intent_similarity": 0,
+      "title_a": "Do I Need a Lawyer to Respond to a Demand |",
+      "title_b": "Can a Contract Dispute Be Resolved Without |"
+    },
+    {
+      "a": "/business/how-to-start-a-horse-retail-business/",
+      "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8504,
+      "cosine_similarity": 0.9384,
+      "shingle_similarity": 0.6872,
+      "intent_similarity": 0.2857,
+      "title_a": "How to Start a Horse Retail Business |",
+      "title_b": "How Do I Separate My Horse Business from |"
     },
     {
       "a": "/business/how-to-start-an-equine-apparel-business/",
@@ -1718,8 +1766,32 @@
       "cosine_similarity": 0.9372,
       "shingle_similarity": 0.689,
       "intent_similarity": 0.2857,
-      "title_a": "How to Start an Equine Apparel Business",
-      "title_b": "Do I Need an LLC to Start a Horse Business?"
+      "title_a": "How to Start an Equine Apparel Business |",
+      "title_b": "Do I Need an LLC to Start a Horse Business? |"
+    },
+    {
+      "a": "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
+      "b": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+      "family_a": "faq",
+      "family_b": "faq",
+      "body_similarity": 0.8503,
+      "cosine_similarity": 0.9424,
+      "shingle_similarity": 0.6792,
+      "intent_similarity": 0.1429,
+      "title_a": "Who Is Responsible After a Horse Sale Is |",
+      "title_b": "Do I Need a Contract to Sell a Horse? |"
+    },
+    {
+      "a": "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
+      "b": "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
+      "family_a": "therapeutic",
+      "family_b": "therapeutic",
+      "body_similarity": 0.8503,
+      "cosine_similarity": 0.8909,
+      "shingle_similarity": 0.7747,
+      "intent_similarity": 0.2857,
+      "title_a": "What Waivers Are Required for Equine Therapy |",
+      "title_b": "Am I Subject to HIPAA in Equine Therapy? |"
     }
   ],
   "intent_overlap_pairs": [
@@ -1730,18 +1802,18 @@
       "family_b": "compare",
       "body_similarity": 0.8968,
       "intent_similarity": 1,
-      "title_a": "Mediation vs litigation in horse disputes",
-      "title_b": "Mediation vs Litigation in Horse Disputes"
+      "title_a": "Mediation vs litigation in horse disputes |",
+      "title_b": "Mediation vs Litigation in Horse Disputes |"
     },
     {
       "a": "/compare/template-horse-contract-vs-custom-horse-contract/",
       "b": "/compare/template-contract-vs-custom-horse-contract/",
       "family_a": "compare",
       "family_b": "compare",
-      "body_similarity": 0.8542,
+      "body_similarity": 0.8512,
       "intent_similarity": 1,
-      "title_a": "Template horse contract vs custom horse contract",
-      "title_b": "Template Contract vs Custom Horse Contract"
+      "title_a": "Template horse contract vs custom horse |",
+      "title_b": "Template Contract vs Custom Horse Contract |"
     },
     {
       "a": "/compare/sole-proprietor-vs-llc-for-a-horse-business/",
@@ -1750,8 +1822,8 @@
       "family_b": "compare",
       "body_similarity": 0.805,
       "intent_similarity": 1,
-      "title_a": "Sole proprietor vs LLC for a horse business",
-      "title_b": "LLC vs Sole Proprietor Horse Business"
+      "title_a": "Sole proprietor vs LLC for a horse business |",
+      "title_b": "LLC vs Sole Proprietor Horse Business |"
     },
     {
       "a": "/compare/lease-vs-purchase-horse/",
@@ -1768,10 +1840,10 @@
       "b": "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.8569,
+      "body_similarity": 0.8603,
       "intent_similarity": 0.8571,
-      "title_a": "Do People Actually Get Sued Over Horse Deals?",
-      "title_b": "Do People Actually Get Sued Over Horse Deals Like This?"
+      "title_a": "Do People Actually Get Sued Over Horse Deals? |",
+      "title_b": "Do People Actually Get Sued Over Horse Deals |"
     },
     {
       "a": "/scenario/what-if-i-sold-a-horse-without-a-contract/",
@@ -1780,38 +1852,38 @@
       "family_b": "scenario",
       "body_similarity": 0.8246,
       "intent_similarity": 0.8,
-      "title_a": "What If I Sold a Horse Without a Contract?",
-      "title_b": "I sold a horse without a contract. What now?"
+      "title_a": "What If I Sold a Horse Without a Contract? |",
+      "title_b": "I sold a horse without a contract. What now? |"
     },
     {
       "a": "/compare/waiver-vs-insurance-horse-liability/",
       "b": "/compare/liability-waiver-vs-insurance-for-horse-activities/",
       "family_a": "compare",
       "family_b": "compare",
-      "body_similarity": 0.7858,
+      "body_similarity": 0.7877,
       "intent_similarity": 0.8,
-      "title_a": "Waiver vs Insurance for Horse Liability",
-      "title_b": "Liability waiver vs insurance for horse activities"
+      "title_a": "Waiver vs Insurance for Horse Liability |",
+      "title_b": "Liability waiver vs insurance for horse |"
     },
     {
       "a": "/scenario/what-if-i-sold-a-horse-without-a-contract/",
       "b": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.7118,
+      "body_similarity": 0.7164,
       "intent_similarity": 0.8,
-      "title_a": "What If I Sold a Horse Without a Contract?",
-      "title_b": "I Sold a Horse Without a Contract — Am I Screwed?"
+      "title_a": "What If I Sold a Horse Without a Contract? |",
+      "title_b": "I Sold a Horse Without a Contract — Am I |"
     },
     {
       "a": "/liability/do-i-need-insurance-for-my-horse-business/",
       "b": "/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/",
       "family_a": "liability",
       "family_b": "compare",
-      "body_similarity": 0.6083,
+      "body_similarity": 0.6059,
       "intent_similarity": 0.8,
-      "title_a": "Do I Need Insurance for My Horse Business?",
-      "title_b": "Do I Need Both a Waiver and Insurance for a Horse Business?"
+      "title_a": "Do I Need Insurance for My Horse Business? |",
+      "title_b": "Do I Need Both a Waiver and Insurance for a |"
     },
     {
       "a": "/compare/trial-agreement-vs-lease-agreement/",
@@ -1820,18 +1892,18 @@
       "family_b": "compare",
       "body_similarity": 0.782,
       "intent_similarity": 0.75,
-      "title_a": "Trial Agreement vs Lease Agreement",
-      "title_b": "Horse lease vs horse trial agreement"
+      "title_a": "Trial Agreement vs Lease Agreement |",
+      "title_b": "Horse lease vs horse trial agreement |"
     },
     {
       "a": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
       "b": "/scenario/i-signed-something-i-did-not-understand-what-should-i-do/",
       "family_a": "scenario",
       "family_b": "scenario",
-      "body_similarity": 0.7279,
+      "body_similarity": 0.7248,
       "intent_similarity": 0.75,
-      "title_a": "What If I Already Signed Something I Did Not Understand?",
-      "title_b": "I signed something I did not understand. What should I do?"
+      "title_a": "What If I Already Signed Something I Did Not |",
+      "title_b": "I signed something I did not understand |"
     },
     {
       "a": "/compare/trainer-liability-vs-owner-liability/",
@@ -1840,8 +1912,8 @@
       "family_b": "compare",
       "body_similarity": 0.6924,
       "intent_similarity": 0.75,
-      "title_a": "Trainer liability vs owner liability",
-      "title_b": "Horse Owner Liability vs Trainer Liability"
+      "title_a": "Trainer liability vs owner liability |",
+      "title_b": "Horse Owner Liability vs Trainer Liability |"
     },
     {
       "a": "/leases/what-is-a-horse-trial-agreement/",
@@ -1850,18 +1922,18 @@
       "family_b": "compare",
       "body_similarity": 0.6356,
       "intent_similarity": 0.75,
-      "title_a": "What Is a Horse Trial Agreement?",
-      "title_b": "Horse lease vs horse trial agreement"
+      "title_a": "What Is a Horse Trial Agreement? |",
+      "title_b": "Horse lease vs horse trial agreement |"
     },
     {
       "a": "/scenario/a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/",
       "b": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "family_a": "scenario",
       "family_b": "boarding",
-      "body_similarity": 0.5143,
+      "body_similarity": 0.5116,
       "intent_similarity": 0.75,
-      "title_a": "A boarding barn wants to sell a horse for unpaid bills",
-      "title_b": "Can a Boarding Barn Sell a Horse for Unpaid Bills?"
+      "title_a": "A boarding barn wants to sell a horse for |",
+      "title_b": "Can a Boarding Barn Sell a Horse for Unpaid |"
     }
   ]
 }
