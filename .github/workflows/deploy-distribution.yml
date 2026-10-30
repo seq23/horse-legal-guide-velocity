@@ -55,7 +55,7 @@ jobs:
             echo "No distribution receipt changes."
           else
             git commit -m "Record post-publish distribution receipt"
-            git push origin main
+            bash scripts/ops/push_with_retry.sh origin main
           fi
       - name: Upload distribution evidence
         if: always()

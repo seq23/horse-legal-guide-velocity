@@ -5,12 +5,29 @@ This script is intentionally dependency-free so GitHub Actions can run it with
 Python stdlib only. It sends only approved entries that have not already been
 recorded in data/social/approved_content_email_state.json, unless --force-resend
 is passed.
+
+Sending is claim-then-send so a lost state commit can never send the same email
+twice. The workflow runs:
+
+  1. --claim         select what is due, write it to state as `pending_send`;
+                     the workflow pushes that claim to main BEFORE any mail goes.
+                     If the push fails, nothing was sent and the next run retries.
+  2. --send-claimed  send exactly the claimed email, then move the claim into the
+                     sent lists (or release it if the transport refused).
+
+A `pending_send` found at the start of any later run means a run claimed, may
+have sent, and never recorded the outcome (its final push failed or the runner
+died). It is finalized as notified and NOT resent - at most once - and logged
+in sent_log with outcome "in_doubt_not_resent". 30 Oct 2026, run 41071059217:
+the state push hit a GitHub 500 after the send step, which under the old
+send-then-commit order would have re-sent the email on the next run.
 """
 from __future__ import annotations
 
 import argparse
 import email.message
 import glob
+import hashlib
 import json
 import os
 import re
@@ -357,7 +374,15 @@ def main() -> int:
     parser.add_argument("--ids", nargs="*", default=None)
     parser.add_argument("--force-resend", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--claim", action="store_true", help="record what is due as pending_send; send nothing")
+    mode.add_argument("--send-claimed", action="store_true", help="send the pending_send claim, then record it")
     args = parser.parse_args()
+    if args.claim and args.dry_run:
+        parser.error("--claim cannot be combined with --dry-run")
+
+    if args.send_claimed:
+        return send_claimed(args.recipient)
 
     backlog = read_json(BACKLOG_PATH, [])
     if not isinstance(backlog, list):
@@ -367,6 +392,10 @@ def main() -> int:
         {"sent_entry_ids": [], "sent_log": [], "approval_notified_entry_ids": [], "revoke_notified_keys": []},
     )
     draft_index = load_draft_index()
+
+    if state.get("pending_send") and not args.dry_run:
+        state = finalize_in_doubt_claim(state)
+        write_json(STATE_PATH, state)
 
     # Three distinct real events, each fires its own notice in the same run
     # regardless of which route produced it (a bulk-action workflow dispatch,
@@ -457,37 +486,112 @@ def main() -> int:
               f"to send and cannot be delivered because {', '.join(missing)} is not set. Preview written to "
               f"{PREVIEW_PATH}. Add the missing secret(s) in repository settings; do not invent a value.", file=sys.stderr)
         return 2
-    sent = False if args.dry_run else send_email(subject, markdown_body, args.recipient)
-    if sent:
-        sent_ids = list(dict.fromkeys([*(state.get("sent_entry_ids") or []), *[item["entry_id"] for item in packages]]))
-        approval_notified = list(dict.fromkeys([*(state.get("approval_notified_entry_ids") or []), *[item["entry_id"] for item in new_approvals]]))
-        revoke_notified = list(dict.fromkeys([
-            *(state.get("revoke_notified_keys") or []),
-            *[f"{item['entry_id']}:{item['rejected_at']}" for item in new_revokes if item.get("rejected_at")],
-        ]))
-        sent_log = list(state.get("sent_log") or [])
-        sent_log.append({
-            "sent_at": datetime.now(timezone.utc).isoformat(),
-            "recipient": args.recipient,
-            "entry_ids": [item["entry_id"] for item in packages],
-            "newly_approved_entry_ids": [item["entry_id"] for item in new_approvals],
-            "revoked_entry_ids": [item["entry_id"] for item in new_revokes],
-            "count": len(packages) + len(new_approvals) + len(new_revokes),
-        })
-        write_json(STATE_PATH, {
-            "sent_entry_ids": sent_ids,
-            "approval_notified_entry_ids": approval_notified,
-            "revoke_notified_keys": revoke_notified,
-            "sent_log": sent_log[-100:],
-        })
-        print(f"Sent decision-notification email to {args.recipient}: {subject}.")
-    else:
+    if args.dry_run:
         print(f"Preview generated at {PREVIEW_PATH}. Email was not sent.")
-        if args.dry_run:
-            print("NAMED_STOP: DRY_RUN_PREVIEW_ONLY - sending was disabled by --dry-run.")
-        else:
-            print("NAMED_FAILURE: EMAIL_SEND_FAILED - the transport was configured but did not deliver.", file=sys.stderr)
-            return 2
+        print("NAMED_STOP: DRY_RUN_PREVIEW_ONLY - sending was disabled by --dry-run.")
+        return 0
+
+    claim = build_claim(subject, args.recipient, packages, new_approvals, new_revokes)
+    state["pending_send"] = claim
+    write_json(STATE_PATH, state)
+    print(f"Claimed {claim['count']} notification(s) as pending_send key={claim['key']}: {subject}.")
+    if args.claim:
+        github_output = os.environ.get("GITHUB_OUTPUT")
+        if github_output:
+            with open(github_output, "a", encoding="utf-8") as handle:
+                handle.write("claimed=true\n")
+        print("Claim written; push it to main, then run --send-claimed.")
+        return 0
+    # Local, single-process use: claim and send in one go.
+    return send_claimed(args.recipient)
+
+
+def build_claim(
+    subject: str,
+    recipient: str,
+    packages: List[Dict[str, Any]],
+    new_approvals: List[Dict[str, Any]],
+    new_revokes: List[Dict[str, Any]],
+) -> Dict[str, Any]:
+    entry_ids = [item["entry_id"] for item in packages]
+    approval_ids = [item["entry_id"] for item in new_approvals]
+    revoke_keys = [f"{item['entry_id']}:{item['rejected_at']}" for item in new_revokes if item.get("rejected_at")]
+    revoked_ids = [item["entry_id"] for item in new_revokes]
+    # The de-duplication key: the same set of notices always hashes the same.
+    key = hashlib.sha256(json.dumps(
+        {"recipient": recipient, "entry_ids": sorted(entry_ids), "approvals": sorted(approval_ids), "revokes": sorted(revoke_keys)},
+        sort_keys=True,
+    ).encode("utf-8")).hexdigest()[:16]
+    return {
+        "key": key,
+        "claimed_at": datetime.now(timezone.utc).isoformat(),
+        "run_id": os.environ.get("GITHUB_RUN_ID", "local"),
+        "recipient": recipient,
+        "subject": subject,
+        "entry_ids": entry_ids,
+        "newly_approved_entry_ids": approval_ids,
+        "revoked_entry_ids": revoked_ids,
+        "revoke_keys": revoke_keys,
+        "count": len(entry_ids) + len(approval_ids) + len(revoked_ids),
+    }
+
+
+def record_claim(state: Dict[str, Any], claim: Dict[str, Any], outcome: str) -> Dict[str, Any]:
+    """Move a claim into the notified lists; drop pending_send."""
+    sent_log = list(state.get("sent_log") or [])
+    sent_log.append({
+        "sent_at": datetime.now(timezone.utc).isoformat(),
+        "recipient": claim.get("recipient"),
+        "entry_ids": list(claim.get("entry_ids") or []),
+        "newly_approved_entry_ids": list(claim.get("newly_approved_entry_ids") or []),
+        "revoked_entry_ids": list(claim.get("revoked_entry_ids") or []),
+        "count": claim.get("count", 0),
+        "key": claim.get("key"),
+        "outcome": outcome,
+    })
+    updated = {k: v for k, v in state.items() if k != "pending_send"}
+    updated["sent_entry_ids"] = list(dict.fromkeys([*(state.get("sent_entry_ids") or []), *(claim.get("entry_ids") or [])]))
+    updated["approval_notified_entry_ids"] = list(dict.fromkeys([
+        *(state.get("approval_notified_entry_ids") or []), *(claim.get("newly_approved_entry_ids") or []),
+    ]))
+    updated["revoke_notified_keys"] = list(dict.fromkeys([*(state.get("revoke_notified_keys") or []), *(claim.get("revoke_keys") or [])]))
+    updated["sent_log"] = sent_log[-100:]
+    return updated
+
+
+def finalize_in_doubt_claim(state: Dict[str, Any]) -> Dict[str, Any]:
+    claim = state["pending_send"]
+    print(f"NAMED_STOP: IN_DOUBT_CLAIM_NOT_RESENT - run {claim.get('run_id')} claimed key={claim.get('key')} "
+          f"({claim.get('subject')}) and never recorded the outcome. It is recorded as notified and not resent, "
+          "so the client never gets the same email twice. Resend by hand with --ids ... --force-resend if needed.")
+    return record_claim(state, claim, "in_doubt_not_resent")
+
+
+def send_claimed(recipient: str) -> int:
+    state = read_json(STATE_PATH, {})
+    claim = state.get("pending_send")
+    if not claim:
+        print("NAMED_FAILURE: NO_PENDING_CLAIM - --send-claimed ran without a pending_send in state; nothing was sent.", file=sys.stderr)
+        return 2
+    if not PREVIEW_PATH.exists():
+        print(f"NAMED_FAILURE: CLAIM_BODY_MISSING - {PREVIEW_PATH} is missing; nothing was sent.", file=sys.stderr)
+        return 2
+    body = PREVIEW_PATH.read_text(encoding="utf-8")
+    try:
+        sent = send_email(claim["subject"], body, claim.get("recipient") or recipient)
+    except (smtplib.SMTPException, OSError) as exc:
+        # The transport refused before accepting the message: nothing was
+        # delivered, so the claim is released and the next run tries again.
+        print(f"NAMED_FAILURE: EMAIL_SEND_FAILED - {type(exc).__name__}: {exc}. Claim key={claim['key']} released.", file=sys.stderr)
+        write_json(STATE_PATH, {k: v for k, v in state.items() if k != "pending_send"})
+        return 2
+    if not sent:
+        print("NAMED_FAILURE: EMAIL_SEND_FAILED - the transport was configured but did not deliver. "
+              f"Claim key={claim['key']} released.", file=sys.stderr)
+        write_json(STATE_PATH, {k: v for k, v in state.items() if k != "pending_send"})
+        return 2
+    write_json(STATE_PATH, record_claim(state, claim, "sent"))
+    print(f"Sent decision-notification email to {claim.get('recipient') or recipient}: {claim['subject']} (key={claim['key']}).")
     return 0
 
 

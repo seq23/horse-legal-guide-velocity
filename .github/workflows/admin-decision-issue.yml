@@ -175,7 +175,7 @@ jobs:
             exit 0
           fi
           git commit -m "chore: apply admin decision from issue #${{ steps.issue_context.outputs.number }}"
-          git push
+          bash scripts/ops/push_with_retry.sh origin "$(git branch --show-current)"
 
       # dist/ and the record are already correct by this point - this only
       # asks Cloudflare's edge cache to catch up sooner than its own TTL
@@ -231,7 +231,7 @@ jobs:
             echo "No receipt change to commit."
           else
             git commit -m "chore: record admin decision issue receipt"
-            git push origin main
+            bash scripts/ops/push_with_retry.sh origin main
           fi
 
       - name: Reply with the outcome and close
