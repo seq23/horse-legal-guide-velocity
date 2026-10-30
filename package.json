@@ -168,7 +168,7 @@
     "validate:self-heal-loop": "node _ops/validators/validate_self_heal_loop.js",
     "validate:self-heal-report": "node _ops/validators/validate_self_heal_report.js",
     "validate:seo-aeo-geo": "npm run validate:admin-seo-dashboard && npm run validate:page-uniqueness && npm run validate:schema-completeness && npm run validate:meta-uniqueness && npm run validate:answer-formatting",
-    "validate:seo-hygiene": "npm run validate:favicon-manifest && npm run validate:social-meta && npm run validate:jsonld-page-kinds && npm run validate:home-definition-speakable && npm run validate:sitemap-indexable-count && npm run validate:indexnow-key-file && npm run validate:about-page",
+    "validate:seo-hygiene": "npm run validate:favicon-manifest && npm run validate:social-meta && npm run validate:jsonld-page-kinds && npm run validate:home-definition-speakable && npm run validate:sitemap-indexable-count && npm run validate:indexnow-key-file && npm run validate:about-page && npm run validate:entity-graph && npm run validate:editorial-policy-gate",
     "validate:sitemap-indexable-count": "node _ops/validators/validate_sitemap_indexable_count.js",
     "validate:sitemap-parity": "node _ops/validators/validate_sitemap_page_parity.js",
     "validate:social-meta": "node _ops/validators/validate_social_meta.js",
@@ -180,6 +180,9 @@
     "validate:search-intelligence": "node _ops/validators/validate_search_intelligence.js",
     "validate:answer-formatting": "node _ops/validators/validate_answer_formatting.js",
     "validate:about-page": "node _ops/validators/validate_about_page.js",
+    "validate:entity-graph": "node _ops/validators/validate_entity_graph.js",
+    "validate:editorial-policy-gate": "node _ops/validators/validate_editorial_policy_gate.js",
+    "entity:backlink-watch": "node scripts/entity/entity_backlink_watch.mjs",
     "live:smoke-check": "node scripts/ops/live_smoke_check.mjs"
   }
 }

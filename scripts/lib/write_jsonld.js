@@ -38,21 +38,30 @@ function writeJsonLd(type, title, description, url, options = {}) {
   const config = readJson('data/system/config.json', {});
   const firm = readJson('data/firm/wise_covington_contact.json', {});
   const pageUrl = absoluteUrl(config, url);
-  const orgId = `${firm.canonical_site || config.canonical_domain || 'https://wisecovington.com'}#organization`;
+  // The Organization node comes from data/entities/entity.json and nowhere
+  // else, so the structured data, the weekly entity_backlink_watch and
+  // validate_entity_graph all read one record. A missing record fails the build
+  // rather than falling back to a guessed sameAs.
+  const entity = readJson('data/entities/entity.json', null);
+  if (!entity || !entity['@id'] || !entity.name || !Array.isArray(entity.sameAs)) {
+    throw new Error('data/entities/entity.json is missing or has no @id/name/sameAs; the Organization node cannot be written.');
+  }
+  const orgId = entity['@id'];
   const websiteId = `${originFromConfig(config)}/#website`;
   const graph = [
     {
       '@type': 'Organization',
       '@id': orgId,
-      name: firm.firm_name || config.canonical_brand_name || 'Wise Covington PLLC',
-      url: firm.canonical_site || config.canonical_domain || 'https://wisecovington.com',
-      sameAs: [firm.canonical_site || config.canonical_domain || 'https://wisecovington.com'].filter(Boolean),
+      name: entity.name,
+      url: entity.url,
+      sameAs: [...entity.sameAs],
+      description: entity.description,
       // logo is one of the four properties an answer engine needs to resolve
-      // the publisher as an entity (name, url, logo, sameAs). It was absent on
-      // every page. The file is assets/brand/icon-512.png, which
-      // scripts/build/build_site.js copies flat into dist/, so it is served
-      // from the site root. Guarded by validate_jsonld_page_kinds.js.
-      logo: { '@type': 'ImageObject', url: `${originFromConfig(config)}/icon-512.png`, width: 512, height: 512 },
+      // the publisher as an entity (name, url, logo, sameAs). The file is
+      // assets/brand/icon-512.png, which scripts/build/build_site.js copies flat
+      // into dist/, so it is served from the site root. Guarded by
+      // validate_jsonld_page_kinds.js and validate_entity_graph.js.
+      logo: { '@type': 'ImageObject', url: entity.logo, width: 512, height: 512 },
       employee: (firm.attorneys || []).map((attorney) => ({ '@type': 'Person', name: attorney.name }))
     },
     {

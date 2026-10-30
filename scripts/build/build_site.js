@@ -102,6 +102,21 @@ function main() {
   ensureDir(path.join(distDir, 'about'));
   fs.writeFileSync(path.join(distDir, 'about', 'index.html'), renderAboutPage());
 
+  // /editorial-policy/ - staged, client-gated. Authority audit 30 Oct 2026: the
+  // site had no editorial policy page. This is a client site, so the text in
+  // data/system/editorial_policy_full.txt publishes only once
+  // data/system/editorial_policy_release.json records the client's written
+  // approval. Until then nothing is written and the build names the stop.
+  // Guarded by _ops/validators/validate_editorial_policy_gate.js.
+  const editorialRelease = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'data/system/editorial_policy_release.json'), 'utf8'));
+  if (editorialRelease.client_approved === true) {
+    const editorialText = fs.readFileSync(path.resolve(process.cwd(), 'data/system/editorial_policy_full.txt'), 'utf8').trim();
+    ensureDir(path.join(distDir, 'editorial-policy'));
+    fs.writeFileSync(path.join(distDir, 'editorial-policy', 'index.html'), renderPolicyPage({ title: 'Editorial Policy', text: editorialText, url: '/editorial-policy/' }));
+  } else {
+    console.log('NAMED_STOP: EDITORIAL_POLICY_AWAITING_CLIENT_APPROVAL - /editorial-policy/ is staged in data/system/editorial_policy_full.txt and not built until data/system/editorial_policy_release.json records the client\'s written approval.');
+  }
+
   for (const staticFile of ['robots.txt', '_headers', '_redirects', 'indexnow.txt']) {
     const src = path.resolve(process.cwd(), staticFile);
     if (fs.existsSync(src)) fs.copyFileSync(src, path.join(distDir, path.basename(staticFile)));

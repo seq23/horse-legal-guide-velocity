@@ -1,0 +1,29 @@
+{
+  "_comment": "The one entity record for horselegalguide.com. scripts/lib/write_jsonld.js reads the Organization node from here; _ops/validators/validate_entity_graph.js checks every built page against it; scripts/entity/entity_backlink_watch.mjs (weekly, .github/workflows/entity-backlink-watch.yml) fetches every sameAs URL, removes dead ones, promotes profiles_pending that now resolve, and names a stop for any profile that does not link back. sameAs lists only profiles that exist and resolve now.",
+  "site_kind": "client",
+  "site_host": "horselegalguide.com",
+  "@id": "https://wisecovington.com#organization",
+  "name": "Wise Covington PLLC",
+  "url": "https://wisecovington.com",
+  "logo": "https://horselegalguide.com/icon-512.png",
+  "description": "Wise Covington PLLC is a law firm built by equestrians for the equestrian community.",
+  "sameAs": [
+    "https://wisecovington.com"
+  ],
+  "parentOrganization": null,
+  "parentOrganization_note": "Client site: the publisher is the firm itself. No Spry Labs or West Peek parent, ever.",
+  "founder": null,
+  "profiles_pending": [],
+  "profiles_awaiting_client_approval": [
+    {
+      "url": "https://www.instagram.com/legally__sound",
+      "evidence": "linked from the footer of https://wisecovington.com (checked 30 Oct 2026)",
+      "note": "Real and resolving, but adding it to sameAs changes the client's public structured data. Never auto-promoted; moves into sameAs only on the client's written approval."
+    },
+    {
+      "url": "https://x.com/WiseCovington",
+      "evidence": "linked from the footer of https://wisecovington.com (checked 30 Oct 2026)",
+      "note": "Real and resolving, but adding it to sameAs changes the client's public structured data. Never auto-promoted; moves into sameAs only on the client's written approval."
+    }
+  ]
+}

@@ -52,6 +52,7 @@ function classifyWorkflow(name) {
   if (name.includes('page-remediation')) return 'owner-approved existing-page remediation with separate approve and apply gates';
   if (name.includes('approved-content-email')) return 'approved-content social copy email notification to Claire';
   if (name.includes('live-smoke-check')) return 'post-deploy live check of the deployed origin; reads the edge, mutates nothing';
+  if (name.includes('entity-backlink-watch')) return 'weekly sameAs resolve and link-back watch; self-heals dead or newly live profiles in data/entities/entity.json, names missing link-backs';
   return 'workflow lane';
 }
 function main() {

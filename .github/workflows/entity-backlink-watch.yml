@@ -1,0 +1,63 @@
+name: Entity Backlink Watch
+
+# Weekly: is data/entities/entity.json still true on the live web?
+# scripts/entity/entity_backlink_watch.mjs fetches every sameAs URL, checks it
+# links back to horselegalguide.com where the platform renders server-side, and
+# records `unverifiable` where it renders in JS. Dead URLs are removed and
+# pending profiles that now resolve are promoted; when that changes entity.json
+# the site is rebuilt, held to validate:entity-graph, and committed through the
+# repo's one bot-push helper (Actions here cannot open PRs, and every other
+# self-heal lane in this repo commits the same way). A missing link-back is a
+# named stop in the step summary: only the profile's owner can add it.
+on:
+  schedule:
+    - cron: "17 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: horse-legal-guide-main-writer
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    # A handful of fetches with retries; 10 minutes is a fault detector, not a budget.
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    env:
+      SITE_DOMAIN: https://horselegalguide.com
+      CANONICAL_DOMAIN: https://wisecovington.com
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - name: Install
+        run: npm ci
+      - name: Watch sameAs profiles
+        run: npm run entity:backlink-watch
+      - name: Upload watch report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: entity-backlink-watch
+          path: reports/entity/entity_backlink_watch.json
+          if-no-files-found: error
+      # The report decides whether anything healed, not git diff (the build
+      # stamps timestamps into hundreds of files on every run).
+      - name: Rebuild, validate and commit a self-heal
+        run: |
+          CHANGED=$(node -e 'console.log(require("./reports/entity/entity_backlink_watch.json").changed ? "yes" : "")')
+          if [ -z "$CHANGED" ]; then
+            echo "Entity backlink watch: sameAs unchanged - nothing to commit."
+            exit 0
+          fi
+          npm run build
+          npm run validate:entity-graph
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data/entities/entity.json reports/entity dist
+          git commit -m "Entity backlink watch: self-healed sameAs (see reports/entity/entity_backlink_watch.json)"
+          bash scripts/ops/push_with_retry.sh origin "$(git branch --show-current)"

@@ -1,0 +1,6 @@
+{
+  "_comment": "Gate for /editorial-policy/. This is a client site: the page publishes only once the client has approved the text in data/system/editorial_policy_full.txt in writing. Until then the build does not write it and prints NAMED_STOP: EDITORIAL_POLICY_AWAITING_CLIENT_APPROVAL. To release: set client_approved true, approved_on to the date of the written approval, and approval_record to where that approval is kept (no private names here). Guarded by _ops/validators/validate_editorial_policy_gate.js.",
+  "client_approved": false,
+  "approved_on": null,
+  "approval_record": null
+}
