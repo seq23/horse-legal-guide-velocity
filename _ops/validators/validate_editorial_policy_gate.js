@@ -35,7 +35,7 @@ let state = 'unchecked';
 if (release) {
   if (release.client_approved === true) {
     if (!release.approved_on || !release.approval_record) block(RELEASE, 'editorial_approval_unrecorded', 'client_approved is true but approved_on / approval_record are empty; approval must be traceable.');
-    if (!built) block('dist/editorial-policy/index.html', 'editorial_policy_not_built', 'The client approved the editorial policy but /editorial-policy/ was not built.');
+    if (!built) block(RELEASE, 'editorial_policy_not_built', 'The client approved the editorial policy but /editorial-policy/ was not built.');
     state = 'released';
   } else {
     if (built) block(built.rel, 'editorial_policy_published_without_approval', '/editorial-policy/ is built but the client has not approved it. Client content never publishes without written approval.');
