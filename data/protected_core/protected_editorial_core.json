@@ -5,13 +5,13 @@
   "files": [
     {
       "path": ".github/workflows/admin-bulk-content-actions.yml",
-      "sha256": "4f29c1ffdc46a417506258153f160600ff192f860e952cf570eb582a7cb0442c",
-      "bytes": 6487
+      "sha256": "e5876efd88a2b966f51cc3631fb04a0262ca3af6d1da3263088ea288fcdbaad2",
+      "bytes": 6669
     },
     {
       "path": ".github/workflows/drafts-refresh.yml",
-      "sha256": "0d8439921afae4d834900e96410e99bf63eed74959e4405b87c2cd81915e04e7",
-      "bytes": 3090
+      "sha256": "75f17f0f2cea186162874dcca2bec992b2cfa1ff792240df661b947f4a4beac8",
+      "bytes": 3245
     },
     {
       "path": ".github/workflows/publish.yml",
@@ -20,8 +20,8 @@
     },
     {
       "path": ".github/workflows/approved-content-email.yml",
-      "sha256": "e5a67636359c85e6c2181379485208bc24d435c8b6076eee3434371c4cccf2bc",
-      "bytes": 5173
+      "sha256": "b4ecb94ca394cbac99d982eed29110b783bc3cd848080d5c1569d51e5edd7e3c",
+      "bytes": 6666
     },
     {
       "path": "data/system/review_rules.json",
@@ -134,11 +134,12 @@
       "bytes": 1230
     }
   ],
-  "baseline_refreshed_at": "2026-09-26T12:17:09.974895Z",
+  "baseline_refreshed_at": "2026-10-30T14:41:30.512640Z",
   "baseline_reason": "Stopped publish:mode wiping the question queue. finalize_approved_pages.js overwrote data/community/publish_queue.json (the per-question queue written by scripts/community/map_signals_to_targets.js) with the unapproved page targets; with every page approved that list was empty, so each Draft Queue Refresh run emptied the question queue before validate:all and validate:question-queue failed on 2026-09-26 (requeued question 'in neither queue'). The page-level review list now goes to data/publish_state.json as last_queue_count and last_queue_slugs; routeToQueue, applyPublishingMode and classifyRisk are unchanged, so which pages publish and the manual approval path are exactly as before. Only finalize_approved_pages.js and run_mode_pipeline.js hashes moved.",
   "baseline_refresh_changed_files": [
-    "scripts/publishing/finalize_approved_pages.js",
-    "scripts/publishing/run_mode_pipeline.js"
+    ".github/workflows/admin-bulk-content-actions.yml",
+    ".github/workflows/drafts-refresh.yml",
+    ".github/workflows/approved-content-email.yml"
   ],
-  "baseline_refresh_reason": "Scoped owner-requested red-on-main repair: run Draft Queue Refresh on main changes to its metadata renderer, dashboard, regression test, or workflow. All approval gates, cadence, and protected editorial identity records remain unchanged."
+  "baseline_refresh_reason": "Scoped CI-sweep repair (30 Oct 2026, Approved Content Email run 41071059217 red on a GitHub 500 during git push): these workflows now push through scripts/ops/push_with_retry.sh instead of a bare git push, and the approved-content email claims before it sends so a lost state push cannot resend. Only the push lines and the email claim/send steps changed; all approval gates, cadence, and protected editorial identity records remain unchanged."
 }

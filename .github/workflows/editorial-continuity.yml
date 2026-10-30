@@ -60,4 +60,4 @@ jobs:
           git add data/authority_scale data/continuity data/system/editorial_backlog.json data/system/content_calendar.json content/drafts/generated data/admin data/content_atoms reports dist .build
           if git diff --cached --quiet; then echo "No continuity changes."; exit 0; fi
           git commit -m "chore: extend manual-review editorial runway"
-          git push
+          bash scripts/ops/push_with_retry.sh origin "$(git branch --show-current)"

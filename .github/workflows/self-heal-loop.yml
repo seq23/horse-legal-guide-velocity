@@ -106,4 +106,4 @@ jobs:
             exit 0
           fi
           git commit -m "Self-heal loop: repaired ${REPAIRED}"
-          git push
+          bash scripts/ops/push_with_retry.sh origin "$(git branch --show-current)"

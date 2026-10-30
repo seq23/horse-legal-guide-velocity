@@ -84,7 +84,7 @@ jobs:
             echo "No remediation changes to commit."
           else
             git commit -m "chore: record owner-approved page remediation"
-            git push origin main
+            bash scripts/ops/push_with_retry.sh origin main
           fi
       - name: Upload remediation evidence
         if: always()
@@ -117,7 +117,7 @@ jobs:
             echo "No receipt change to commit."
           else
             git commit -m "chore: record authenticated admin action"
-            git push origin main
+            bash scripts/ops/push_with_retry.sh origin main
           fi
       - name: Preserve operation failure
         if: ${{ steps.operation.outcome != 'success' }}

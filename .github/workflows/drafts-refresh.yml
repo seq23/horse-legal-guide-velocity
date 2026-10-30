@@ -76,4 +76,4 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh draft queue and admin dashboard"
-          git push
+          bash scripts/ops/push_with_retry.sh origin "$(git branch --show-current)"

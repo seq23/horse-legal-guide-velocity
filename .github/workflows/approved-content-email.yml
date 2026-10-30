@@ -63,7 +63,12 @@ jobs:
       - name: Email credential gate
         id: email_gate
         run: node scripts/social/email_credential_gate.mjs
-      - name: Generate and send approved content email
+      # Claim, push the claim, then send (scripts/social/send_approved_content_email.py
+      # docstring). The claim is on main before any mail goes, so a failed state
+      # push can never cause the same email to be sent twice: 30 Oct 2026 run
+      # 41071059217 hit a GitHub 500 on the state push after the send step.
+      - name: Claim approved content email
+        id: claim
         if: steps.email_gate.outputs.can_send == 'true'
         env:
           EMAIL_IDS: ${{ github.event.inputs.ids || '' }}
@@ -81,8 +86,20 @@ jobs:
             ARGS+=(--ids "${ID_LIST[@]}")
           fi
           if [ "$FORCE" = "true" ]; then ARGS+=(--force-resend); fi
-          if [ "$DRY" = "true" ]; then ARGS+=(--dry-run); fi
+          if [ "$DRY" = "true" ]; then ARGS+=(--dry-run); else ARGS+=(--claim); fi
           python3 scripts/social/send_approved_content_email.py "${ARGS[@]}"
+      - name: Push the claim before sending
+        if: steps.claim.outputs.claimed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/social/approved_content_email_state.json reports/approved-content-email-preview.md
+          git commit -m "chore: claim approved content email notification"
+          bash scripts/ops/push_with_retry.sh origin "$(git branch --show-current)"
+      - name: Send the claimed approved content email
+        if: steps.claim.outputs.claimed == 'true'
+        run: python3 scripts/social/send_approved_content_email.py --send-claimed
       - name: Generate approved content email preview without delivery
         if: steps.email_gate.outputs.can_send != 'true'
         env:
@@ -112,9 +129,12 @@ jobs:
           if-no-files-found: warn
       - name: Validate repository after notification-state update
         run: npm run validate:all
+      # Runs after a failed send or validation too whenever a claim was pushed,
+      # so the outcome (sent, or released after a refused send) reaches main.
       - name: Commit sent-email state
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+        if: ${{ !cancelled() && github.event.inputs.dry_run != 'true' && (success() || steps.claim.outputs.claimed == 'true') }}
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/social/approved_content_email_state.json reports/approved-content-email-preview.md
@@ -123,4 +143,4 @@ jobs:
             exit 0
           fi
           git commit -m "chore: record approved content email notification"
-          git push
+          bash scripts/ops/push_with_retry.sh origin "$(git branch --show-current)"

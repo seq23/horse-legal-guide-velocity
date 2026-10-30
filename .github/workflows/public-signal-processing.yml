@@ -96,4 +96,4 @@ jobs:
           git commit -m "Run public signal processing"
           git fetch origin main
           git rebase origin/main
-          git push origin HEAD:main
+          bash scripts/ops/push_with_retry.sh origin HEAD:main
