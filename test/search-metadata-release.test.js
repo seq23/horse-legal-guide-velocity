@@ -50,7 +50,7 @@ function measure(root, queries) {
 test('editorial renderer distinguishes two formats sharing a source topic and opening', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'horse-meta-release-'));
   try {
-    for (const rel of ['scripts', 'templates', 'data/system', 'data/queries', 'data/reference', 'data/firm']) {
+    for (const rel of ['scripts', 'templates', 'data/system', 'data/queries', 'data/reference', 'data/firm', 'data/entities']) {
       fs.cpSync(path.join(repo, rel), path.join(root, rel), { recursive: true });
     }
     const topic = 'What Happens If a Horse Sale Goes Wrong?';
@@ -104,7 +104,7 @@ test('dashboard accepts noindex 404 but still flags an indexable missing canonic
 test('publishing freeze holds a new unmeasured editorial entry and publishes it once its query is measured', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'horse-freeze-'));
   try {
-    for (const rel of ['scripts', 'templates', 'data/system', 'data/queries', 'data/reference', 'data/firm']) {
+    for (const rel of ['scripts', 'templates', 'data/system', 'data/queries', 'data/reference', 'data/firm', 'data/entities']) {
       fs.cpSync(path.join(repo, rel), path.join(root, rel), { recursive: true });
     }
     const config = JSON.parse(fs.readFileSync(path.join(root, 'data/system/config.json'), 'utf8'));

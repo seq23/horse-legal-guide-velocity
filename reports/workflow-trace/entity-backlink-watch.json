@@ -1,0 +1,21 @@
+{
+  "workflow": "entity-backlink-watch.yml",
+  "path": ".github/workflows/entity-backlink-watch.yml",
+  "workflow_key": "entity_backlink_watch",
+  "github_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/workflows/entity-backlink-watch.yml",
+  "purpose": "weekly sameAs resolve and link-back watch; self-heals dead or newly live profiles in data/entities/entity.json, names missing link-backs",
+  "status": "passed",
+  "proof_type": "local-equivalent-structure-and-artifact-trace",
+  "commands_checked": [
+    "npm run entity:backlink-watch",
+    "npm run build",
+    "npm run validate:entity-graph"
+  ],
+  "artifacts_checked": [],
+  "missing_artifacts_warning_only": [],
+  "started_at": "2026-10-30T22:39:09.483Z",
+  "finished_at": "2026-10-30T22:39:09.483Z",
+  "warnings": [],
+  "hard_fails": [],
+  "live_github_actions_status": "not_executed_in_chatgpt_container"
+}
