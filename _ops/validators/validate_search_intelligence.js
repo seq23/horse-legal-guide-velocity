@@ -146,6 +146,11 @@ const CHECKS = {
     const realQueries = new Set([...(ctx.export.by_query || []).map((r) => si.norm(r.keys[0])), ...(((ctx.history || {}).queries) || []).map((q) => q.query_norm)]);
     for (const x of f.families.filter((y) => y.qualifies)) {
       if (!x.reason) out.push(`qualifying family ${x.family} has no reason`);
+      // The 7-day clock lives in the ledger. A recompute (or the self-heal repair,
+      // which runs one) must carry it forward, never restart it: a family whose
+      // qualified_on is later than the ledger's has had its deadline laundered.
+      const held = (((ctx.ledger && ctx.ledger.pending) || []).find((p) => p.family === x.family) || {}).qualified_on;
+      if (x.status === 'pending_strengthening' && held && x.qualified_on !== held) out.push(`family ${x.family} reports qualified_on ${x.qualified_on} but the ledger holds ${held}; the pending clock was reset`);
       if (x.status === 'pending_strengthening' && ageDays(ctx, x.qualified_on) > fam.RULE.pending_max_days) out.push(`family ${x.family} has waited since ${x.qualified_on} (> ${fam.RULE.pending_max_days} days) for strengthening`);
       if (!['strengthened', 'pending_strengthening', 'intent_mismatch', 'no_answer_page'].includes(x.status)) out.push(`qualifying family ${x.family} has status ${x.status}`);
       if (x.status !== 'strengthened') continue;
@@ -267,6 +272,19 @@ const BREAKS = {
   no_measured_url_404: (c) => { c.export = clone(c.export); c.export.by_page.push({ keys: [`${si.SITE_ORIGIN}/zz-not-built/`], impressions: 3, clicks: 0, position: 9 }); }
 };
 
+// Turn the first strengthened family back into a pending one: drop its
+// strengthening entry, mark it pending with `reported`, and give the ledger `held`.
+function pendingProbe(c, reported, held) {
+  c.families = clone(c.families);
+  const x = c.families.families.find((f) => f.status === 'strengthened');
+  if (!x) throw new Error('pendingProbe: no strengthened family to turn pending');
+  x.status = 'pending_strengthening'; x.qualified_on = reported;
+  c.strengthening = clone(c.strengthening);
+  c.strengthening.pages = c.strengthening.pages.filter((p) => !(p.families || []).includes(x.family));
+  c.ledger = clone(c.ledger || { pages: [], pending: [] });
+  c.ledger.pending = [...(c.ledger.pending || []).filter((p) => p.family !== x.family), { family: x.family, page: x.page, qualified_on: held }];
+}
+
 // Extra negative proofs, beyond the one-per-check register above. Each names the
 // check it must trip, so a check can be proven against more than one break.
 //
@@ -275,6 +293,19 @@ const BREAKS = {
 // says is OLDER than the snapshot and the check has to notice; otherwise the
 // exemption could widen until coverage loss stopped being detected at all.
 const EXTRA_BREAKS = [
+  // 31 Oct 2026: main went red when two families sat in pending_strengthening
+  // past 7 days. Both halves of that deadline are pinned: an overdue family is
+  // caught, and a recompute that restarts the clock is caught.
+  {
+    name: 'families_served',
+    label: 'a pending family past the 7-day deadline',
+    apply: (c) => pendingProbe(c, '2000-01-01', '2000-01-01')
+  },
+  {
+    name: 'families_served',
+    label: 'a pending family whose clock was reset against the ledger',
+    apply: (c) => pendingProbe(c, si.isoDate(c.now), '2000-01-01')
+  },
   {
     name: 'coverage_fresh_consistent',
     label: 'a coverage row missing for a URL older than the snapshot',
