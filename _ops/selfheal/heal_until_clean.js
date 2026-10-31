@@ -62,6 +62,16 @@ const REPAIRS = {
     why: 'build_provider_query_intelligence.js produces the intelligence artifact the check validates.' },
   'validate:remediation-workflow': { command: 'npm run search:prepare-repairs', content: false,
     why: 'prepare_query_repairs.js writes the repair proposals this check reads.' },
+  // 31 Oct 2026: validate:search-intelligence went red and the loop reported
+  // UNRESOLVED with nothing to run. Two classes live in that check. The derived
+  // half (demand_families.json / ledger / targets out of step with the committed
+  // export, or strengthened pages missing from dist) is regenerated here. The
+  // ledger keeps each pending family's qualified_on, and the validator fails a
+  // reset clock, so this repair can never launder the 7-day deadline. An overdue
+  // family needs sourced words written in strengthening.json; that is authoring,
+  // not repair, and stays UNRESOLVED rather than fabricated.
+  'validate:search-intelligence': { command: 'npm run search:rebuild-loop', content: false,
+    why: 'build_loop.js writes the families, ledger and targets this check recomputes; build writes the strengthened pages it reads.' },
   'validate:publish_quality': { command: 'npm run content:self-heal', content: true,
     why: 'run_self_heal.js differentiates substantially similar DRAFTS, which is the defect this check reports. Approval stays manual.' },
   'validate:self-heal-report': { command: 'npm run content:self-heal', content: true,

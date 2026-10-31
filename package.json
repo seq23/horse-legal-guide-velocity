@@ -66,6 +66,7 @@
     "remediation:refresh": "node scripts/remediation/build_remediation_queue.js",
     "report:ingestion": "node scripts/community/generate_ingestion_report.js",
     "search:cycle": "npm run search:panel && npm run search:observe && npm run search:diagnose && npm run search:prepare-repairs && npm run search:provider-health && npm run system:external-action-truth",
+    "search:rebuild-loop": "node scripts/search_intelligence/build_loop.js && npm run build",
     "search:diagnose": "node scripts/search/build_query_diagnostics.js",
     "search:observe": "node scripts/search/live_query_observer.js",
     "search:panel": "node scripts/search/build_measurement_panel.js",
