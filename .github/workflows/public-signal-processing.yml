@@ -3,7 +3,8 @@ name: Public Signal Processing
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 13 * * 1-5"
+    - cron: "30 8 * * 1-5"  # America/Chicago, all year
+      timezone: America/Chicago
 
 permissions:
   contents: write

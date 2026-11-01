@@ -19,7 +19,8 @@ on:
     workflows: ["Admin Bulk Content Actions", "Manual Publish", "Admin Decision Issue"]
     types: [completed]
   schedule:
-    - cron: "17 14 * * *"
+    - cron: "17 9 * * *"  # America/Chicago, all year
+      timezone: America/Chicago
 
 permissions:
   contents: write
