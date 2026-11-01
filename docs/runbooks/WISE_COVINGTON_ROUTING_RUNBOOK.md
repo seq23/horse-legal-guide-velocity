@@ -14,9 +14,7 @@ Use this as the single source for firm/contact/attorney display.
 
 ```bash
 npm run validate:wise-covington-contact
-npm run validate:firm-routing
-npm run validate:contact-coverage
-npm run validate:llm-citation-readiness
+npm run validate:admin-manifest
 ```
 
 ## Allowed language

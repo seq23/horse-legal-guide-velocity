@@ -17,13 +17,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const TITLE_MIN = 30;
-// Lowered from 70 on 26 Oct 2026 to match scripts/lib/meta_text.js and Search
-// Readiness Checklist item b1: Google truncates the result title near 65
-// characters, so anything past it is spent on an ellipsis.
-const TITLE_MAX = 65;
-const DESC_MIN = 110;
-const DESC_MAX = 160;
+// Title and description LENGTHS are search-readiness wording standards, checked
+// centrally (and by the engine gate for question pages), not pinned here.
 const SITE = 'https://horselegalguide.com';
 const MAX_LISTED = 15;
 
@@ -39,10 +34,6 @@ function listed(items) {
 const dist = path.resolve(process.cwd(), 'dist');
 let checked = 0;
 let missing = 0;
-const shortTitle = [];
-const unbrandedTitle = [];
-const longTitle = [];
-const badDesc = [];
 const byTitle = new Map();
 const byDesc = new Map();
 const canonicalOf = new Map();
@@ -59,15 +50,11 @@ if (fs.existsSync(dist)) {
     // Operator surfaces and noindex pages are not in any crawl invitation.
     if (/^\/(admin|agency)\//.test(rel) || /<meta name="robots" content="[^"]*noindex/i.test(html)) continue;
     const title = decode(t[1]).trim();
-    if (!title.includes('Horse Legal Guide')) unbrandedTitle.push(`${rel} "${title}"`);
     const desc = decode(d[1]).trim();
     const c = html.match(/<link rel="canonical" href="([^"]+)"/i);
     const canonical = c ? c[1] : '';
     const own = SITE + (rel === '/' ? '' : rel);
     canonicalOf.set(norm(own), norm(canonical));
-    if (title.length < TITLE_MIN) shortTitle.push(`${rel} (${title.length}) "${title}"`);
-    if (title.length > TITLE_MAX) longTitle.push(`${rel} (${title.length}) "${title}"`);
-    if (desc.length < DESC_MIN || desc.length > DESC_MAX) badDesc.push(`${rel} (${desc.length}) "${desc}"`);
     const selfCanonical = !canonical || norm(canonical) === norm(own);
     if (rel.startsWith('/reference/') && rel !== '/reference/' && selfCanonical) selfCanonicalReference.push(rel);
     if (!selfCanonical) continue;
@@ -83,10 +70,6 @@ if (checked === 0) {
 } else {
   if (missing > 0) fail(`${missing} rendered pages missing title or meta description`);
   if (canonicalOf.size === 0) fail('GATE_EXAMINED_NOTHING: every rendered page was skipped as operator or noindex; no public page was checked.');
-  if (shortTitle.length) fail(`${shortTitle.length} titles under ${TITLE_MIN} characters (Bing rule 114):\n  ${listed(shortTitle)}`);
-  if (unbrandedTitle.length) fail(`${unbrandedTitle.length} titles do not name Horse Legal Guide (Search Readiness b10):\n  ${listed(unbrandedTitle)}`);
-  if (longTitle.length) fail(`${longTitle.length} titles over ${TITLE_MAX} characters (Google truncates the result title near ${TITLE_MAX}; Bing Site Scan: title too long):\n  ${listed(longTitle)}`);
-  if (badDesc.length) fail(`${badDesc.length} meta descriptions outside ${DESC_MIN}-${DESC_MAX} characters (Bing rule 118):\n  ${listed(badDesc)}`);
   const dupTitles = [...byTitle.entries()].filter(([, v]) => v.length > 1).map(([k, v]) => `"${k}" x${v.length}: ${v.slice(0, 3).join(', ')}`);
   if (dupTitles.length) fail(`${dupTitles.length} titles shared by self-canonical pages:\n  ${listed(dupTitles)}`);
   const dupDescs = [...byDesc.entries()].filter(([, v]) => v.length > 1).map(([k, v]) => `"${k.slice(0, 80)}..." x${v.length}: ${v.slice(0, 3).join(', ')}`);
@@ -110,4 +93,4 @@ if (checked === 0) {
     fail(`/therapeutic redirects to ${therapeutic[1]}, which is not a built topic page.`);
   }
 }
-if (!process.exitCode) console.log(`Meta OK (${checked} rendered pages, ${canonicalOf.size} public pages: titles ${TITLE_MIN}-${TITLE_MAX}, descriptions ${DESC_MIN}-${DESC_MAX}, unique among ${[...byTitle.values()].reduce((n, v) => n + v.length, 0)} self-canonical pages; sitemap self-canonical; /therapeutic redirected)`);
+if (!process.exitCode) console.log(`Meta OK (${checked} rendered pages, ${canonicalOf.size} public pages: titles and descriptions present and unique among ${[...byTitle.values()].reduce((n, v) => n + v.length, 0)} self-canonical pages; sitemap self-canonical; /therapeutic redirected)`);

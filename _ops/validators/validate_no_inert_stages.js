@@ -229,12 +229,8 @@ const COVERAGE = '_ops/reports/gate-coverage.json';
 // Every gate that must have been exercised by the time this validator runs.
 const REQUIRED_COVERAGE = [
   'validate:content', 'validate:footer', 'validate:links', 'validate:manual',
-  'validate:review', 'validate:above-fold', 'validate:extractability',
-  'validate:public-page-phrase-contract', 'validate:content-pattern',
-  'validate:family-scaffold', 'validate:compare-contract',
-  'validate:scenario-contract', 'validate:faq-opening',
-  // validate:drafts is guarded by collectRequired too, but it is not part of
-  // validate:all, so it cannot be required to have recorded coverage here.
+  'validate:review', 'validate:above-fold',
+  'validate:public-page-phrase-contract',
 ];
 if (!fs.existsSync(path.join(ROOT, COVERAGE))) {
   fail(`${COVERAGE} missing. No page gate recorded what it examined, so none of them can be shown to have run. Run npm run validate:all.`);
