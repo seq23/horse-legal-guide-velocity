@@ -1,0 +1,91 @@
+{
+  "schema": "search-loop-config-v1",
+  "site": "horselegalguide.com",
+  "base_url": "https://horselegalguide.com",
+  "site_name": "Horse Legal Guide",
+  "publisher": { "name": "Wise Covington PLLC", "url": "https://wisecovington.com" },
+  "audience": "horse owners, buyers, sellers, boarders, barn and lesson-program operators, trainers and equine business owners in the United States trying to understand a horse-world legal question in plain English",
+  "voice": "plain-English legal education, calm and neutral; general information only, never legal advice and never telling the reader what they should do in their own matter; use 'generally', 'often', 'this depends on' and name the facts, documents and state law that decide the answer; never promise an outcome; never use the words best, top, expert, leading or specialist; never rank, endorse or recommend any lawyer; no invented cases, statutes, people, quotes or statistics",
+  "topics": [
+    "horse sale contract",
+    "horse purchase dispute",
+    "horse lease agreement",
+    "horse trial period",
+    "horse boarding agreement",
+    "unpaid boarding bill horse",
+    "horse trainer liability",
+    "equine liability waiver",
+    "equine activity liability law",
+    "horse business llc",
+    "horse barn insurance",
+    "horse farm lease",
+    "therapeutic riding program legal",
+    "horse ownership dispute"
+  ],
+  "find": { "exclude_words": ["for sale", "craigslist", "near me", "jobs", "salary", "free template download", "lawyer near me", "best lawyer", "top lawyer"] },
+  "action": { "label": "Contact Wise Covington PLLC about your situation", "url": "https://wisecovington.com/contact" },
+  "allowed_link_targets": [
+    "https://horselegalguide.com",
+    "https://wisecovington.com"
+  ],
+  "mode": "normal",
+  "pace": { "start_per_day": 10, "step_per_week": 5, "cap": 30 },
+  "menu_pages_need_approval": true,
+  "menu_pages": ["/", "/faq/", "/scenario/", "/compare/", "/reference/", "/coverage/", "/insights/", "/articles/", "/whitepapers/", "/authority/", "/hubs/", "/about/", "/disclaimer/", "/privacy-policy/"],
+  "health_gate": "none",
+  "protected_paths": [
+    "index.html",
+    "faq",
+    "scenario",
+    "compare",
+    "insights",
+    "articles",
+    "whitepapers",
+    "authority",
+    "hubs",
+    "business",
+    "boarding",
+    "liability",
+    "leases",
+    "state",
+    "ip",
+    "disputes",
+    "therapeutic",
+    "about",
+    "disclaimer",
+    "privacy-policy",
+    "admin",
+    "agency",
+    "dist",
+    "content",
+    "reference",
+    "templates",
+    "functions"
+  ],
+  "output": {
+    "dir": "questions",
+    "format": "dir-index",
+    "url_prefix": "/questions/"
+  },
+  "template": {
+    "section_name": "Questions",
+    "stylesheets": ["/assets/questions.css"],
+    "og_image": { "url": "https://horselegalguide.com/og.png", "width": 1200, "height": 630 },
+    "header_html": "<header class=\"site-header\"><a class=\"brand\" href=\"/\">Horse Legal Guide</a></header>",
+    "footer_html": "<footer class=\"site-footer\"><section class=\"routing-block\"><p>Situations like this depend heavily on the specific facts, documents, and jurisdiction.</p><p><strong>Wise Covington PLLC is a law firm built by equestrians for the equestrian community.</strong></p><p>This page is educational only and does not provide legal advice or create an attorney-client relationship.</p></section><p><a href=\"https://wisecovington.com\">Wise Covington PLLC</a> is a law firm built by equestrians for the equestrian community.</p><p>This content does not constitute legal advice or create an attorney-client relationship.</p><p><a href=\"/about/\">About</a> · <a href=\"/disclaimer/\">Disclaimer</a> · <a href=\"/privacy-policy/\">Privacy Policy</a></p></footer>"
+  },
+  "related": {
+    "max_pages_per_new_page": 2,
+    "scan_dirs": ["questions", "faq", "scenario", "compare", "insights", "articles", "whitepapers", "authority", "business", "boarding", "liability", "leases", "state", "ip", "disputes", "therapeutic"],
+    "skip_dirs": []
+  },
+  "gsc": { "site_url_env": "GSC_SITE_URL" },
+  "indexnow": {
+    "key": "b9e9166f9d6046c3a9699a77f2c0d948",
+    "key_location": "https://horselegalguide.com/b9e9166f9d6046c3a9699a77f2c0d948.txt"
+  },
+  "analytics": { "ai_referrals": "cloudflare", "ai_bot_hits": "cloudflare", "zone": "horselegalguide.com" },
+  "conversions": { "source": "none" },
+  "shares_audience_with": [],
+  "ledger_dir": "data/search-loop"
+}
