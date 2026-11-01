@@ -10,7 +10,10 @@ branch="${GITHUB_REF_NAME:-main}"
 node scripts/search_loop/mirror_site.js --clean
 git config user.name "github-actions[bot]"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git add -A questions data/search-loop _redirects 2>/dev/null
+# Only paths that exist: one missing pathspec (questions/ before the first
+# page) makes git add refuse the whole list, and the ledger was never committed.
+paths=(); for p in questions data/search-loop _redirects; do [ -e "$p" ] && paths+=("$p"); done
+[ ${#paths[@]} -gt 0 ] && git add -A -- "${paths[@]}"
 if git diff --cached --quiet; then echo "search-loop: nothing to commit"; exit 0; fi
 git commit -q -m "${COMMIT_MESSAGE:-search loop: daily pages, checks and ledger}"
 git reset -q --hard HEAD   # drop the build churn left by the setup build
