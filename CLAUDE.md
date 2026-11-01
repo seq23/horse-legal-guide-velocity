@@ -6,6 +6,10 @@ equine-law pages that route real matters to the canonical firm site, Wise Coving
 Repo authority and the terminal entry points live in [`AGENTS.md`](AGENTS.md). Operating
 procedure is in [`RUNBOOK.md`](RUNBOOK.md). Read both before changing anything here.
 
+## Company brain
+
+Read `~/Brains/friends.md` before any work (business facts, priorities, voice, settled decisions). New business facts go to the brain via Boss OS, not into this repo or memory. Repo how-tos stay in `docs/`.
+
 ## Nothing paid
 
 **Nothing paid.** No model call in this repository may cost money. Owner policy, 11 Oct 2026:
