@@ -58,6 +58,3 @@ Setup:
 - `docs/runbooks/OWNER_APPROVED_REMEDIATION_RUNBOOK.md`
 
 
-## Validator mode truth boundary
-
-`validate:foundation:audit` softens only validators implemented through the shared `createReport()` helper. Legacy validators that call `fail()` or set a non-zero exit code directly remain blocking in both audit and enforce modes. Therefore **audit mode is not a globally non-blocking validation pass**. `validate:foundation:enforce` remains the authoritative blocking foundation mode.
