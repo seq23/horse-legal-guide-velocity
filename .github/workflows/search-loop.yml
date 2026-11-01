@@ -11,8 +11,6 @@ name: Search Loop
 # passes the legal gate in the fold step before it is served.
 # Throttle without touching this repo: gh variable set SEARCH_LOOP_MODE --body slow -R seq23/search-loop
 on:
-  push:  # TEMPORARY proof-run trigger for the adoption branch; removed before merge
-    branches: [search-loop-adopt]
   schedule:
     - cron: "23 13 * * *"  # America/Chicago 07:23 CST / 08:23 CDT
   workflow_dispatch:
