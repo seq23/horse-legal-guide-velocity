@@ -17,7 +17,8 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: '17 14 * * *'
+    - cron: '17 9 * * *'  # America/Chicago, all year
+      timezone: America/Chicago
 
 permissions:
   contents: write
