@@ -4,6 +4,12 @@ const queue = readJson('data/community/publish_queue.json');
 if (!Array.isArray(queue)) fail('publish_queue.json must be an array');
 const targets = readJson('data/queries/page_targets.json');
 const approvedSlugs = new Set(targets.filter((p) => p.review_status === 'approved').map((p) => p.slug));
+// Search-loop question pages (owner ruling 1 Nov 2026: off-menu pages publish
+// without client approval; menu pages still need it). Allowed only when the
+// engine's ledger records the page as live; anything else under /questions/
+// is an unapproved page like any other.
+const loopBook = fs.existsSync('data/search-loop/pages.json') ? JSON.parse(fs.readFileSync('data/search-loop/pages.json', 'utf8')) : { pages: [] };
+const loopLive = new Set((loopBook.pages || []).filter((p) => p.status === 'live').map((p) => p.route));
 const liveFiles = collectRequired('dist', (file) => file.endsWith('index.html'), 'validate:review');
 for (const file of liveFiles) {
   const rel = file.split('/dist')[1].replace(/\/index\.html$/, '/').replace(/\\/g, '/');
@@ -14,7 +20,8 @@ for (const file of liveFiles) {
   // data/system/ and data/firm/ rather than from an approved page target, so
   // they can never appear in approvedSlugs.
   const siteOwned = ['/', '/about/', '/disclaimer/', '/privacy-policy/', '/admin/'];
-  if (!siteOwned.includes(rel) && !approvedSlugs.has(rel) && !allowedGenerated) {
+  const loopPage = rel.startsWith('/questions/') && loopLive.has(rel);
+  if (!siteOwned.includes(rel) && !approvedSlugs.has(rel) && !allowedGenerated && !loopPage) {
     fail(`Live page exists without approved status: ${rel}`);
   }
 }

@@ -15,6 +15,11 @@
  *   E. a scheduled workflow passes a model key other than OPENROUTER_API_KEY,
  *      or passes OPENROUTER_API_KEY anywhere but a step that runs a registered
  *      free-router consumer;
+ *      (One caller is not a step: the shared search-loop engine,
+ *      seq23/search-loop, called as a reusable job. Its own model route is
+ *      $0-only - max_cost_usd 0, no paid fallback, a non-zero usage.cost fails
+ *      loud - so its job may receive OPENROUTER_API_KEY in its secrets: block.
+ *      No other model key may reach it.)
  *   F. the policy is not written where the next agent in the repo will find it:
  *      docs/cost/zero-paid-llm.md missing, or CLAUDE.md not saying "nothing
  *      paid". Search Readiness Checklist item i10 - "a rule no code reads is a
@@ -34,6 +39,8 @@ const exists = (p) => fs.existsSync(path.join(ROOT, p));
 const PROVIDER_URL = /openrouter\.ai\/api|generativelanguage\.googleapis\.com|api\.openai\.com\/v1|api\.anthropic\.com|api\.perplexity\.ai/;
 const PAID_MODEL_SLUG = /\b(anthropic\/claude[\w.-]*|openai\/gpt[\w.-]*|google\/gemini[\w.-]*|perplexity\/[\w.-]+)\b/;
 const OTHER_MODEL_KEYS = /\b(GEMINI_API_KEY|GOOGLE_GEMINI_API_KEY|OPENAI_API_KEY|ANTHROPIC_API_KEY|PERPLEXITY_API_KEY)\b/;
+// The shared search-loop engine as a reusable job (its route is $0-only).
+const ENGINE_CALLER = /^\s+uses:\s*seq23\/search-loop\/\.github\/workflows\/search-loop\.yml@v\d+\s*$/m;
 const ROUTERS = ['scripts/llm/free_router.js', 'scripts/llm/free_router.py'];
 
 // ---------------------------------------------------------------- A. config
@@ -143,6 +150,7 @@ for (const wf of wfs) {
   lines.forEach((line, i) => {
     if (!/OPENROUTER_API_KEY/.test(line) || /^\s*#/.test(line)) return;
     const step = stepOf(lines, i);
+    if (!step && ENGINE_CALLER.test(text) && /^\s+OPENROUTER_API_KEY:\s*\$\{\{\s*secrets\.OPENROUTER_API_KEY\s*\}\}\s*$/.test(line)) return;
     if (!step) { fail(`${wf}:${i + 1} passes OPENROUTER_API_KEY at job/workflow level; scope it to the free-router step`); return; }
     if (!consumerTokens.some((t) => invokes(step, t) || step.includes(t))) fail(`${wf}:${i + 1} passes OPENROUTER_API_KEY to a step that runs no registered free-router consumer`);
   });

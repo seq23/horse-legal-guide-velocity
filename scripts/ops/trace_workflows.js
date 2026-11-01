@@ -72,10 +72,13 @@ function main() {
     const warnings = [];
     const checkout = yaml.match(/uses:\s*actions\/checkout@v(\d+)/);
     const setupNode = yaml.match(/uses:\s*actions\/setup-node@v(\d+)/);
-    if (!checkout) hard_fails.push('missing checkout action');
-    else if (Number(checkout[1]) < 7) warnings.push(`checkout action major v${checkout[1]} is behind the current supported workflow baseline`);
-    if (!setupNode) warnings.push('workflow does not set up node directly; verify if intentional');
-    else if (Number(setupNode[1]) < 7) warnings.push(`setup-node action major v${setupNode[1]} is behind the current supported workflow baseline`);
+    // A job that calls a reusable workflow (e.g. the shared search-loop engine)
+    // checks out and sets up node inside the called workflow, not here.
+    const reusableCaller = /^\s+uses:\s*[\w.-]+\/[\w.-]+\/\.github\/workflows\/[\w.-]+\.ya?ml@\S+\s*$/m.test(yaml);
+    if (!checkout && !reusableCaller) hard_fails.push('missing checkout action');
+    else if (checkout && Number(checkout[1]) < 7) warnings.push(`checkout action major v${checkout[1]} is behind the current supported workflow baseline`);
+    if (!setupNode && !reusableCaller) warnings.push('workflow does not set up node directly; verify if intentional');
+    else if (setupNode && Number(setupNode[1]) < 7) warnings.push(`setup-node action major v${setupNode[1]} is behind the current supported workflow baseline`);
     if (missingScripts.length) hard_fails.push(`referenced npm scripts missing: ${missingScripts.join(', ')}`);
     if (missingArtifacts.length) warnings.push(`expected local-equivalent artifacts not present yet: ${missingArtifacts.join(', ')}`);
     const writesMain = /permissions:\s*[\s\S]*?contents:\s*write/.test(yaml) && /git\s+push/.test(yaml);

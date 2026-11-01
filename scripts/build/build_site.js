@@ -7,6 +7,7 @@ const { writeApprovedPages } = require('./write_pages');
 const { writeReferencePages } = require('./write_reference_pages');
 const { writeHubPages } = require('./write_hubs');
 const { writeSitemaps } = require('./write_sitemaps');
+const { foldQuestionPages } = require('../search_loop/fold_question_pages');
 const { writeLlmsTxt } = require('./write_feeds');
 const { writeAdminPage } = require('./write_admin');
 const { writeDraftPreviews } = require('./write_draft_previews');
@@ -165,6 +166,9 @@ function main() {
   generateAnswerSurfaceReports();
   generateRecommendationReports();
   writeEditorialPages(distDir);
+  // Search-loop question pages (hidden: no nav, no hub). Before writeSitemaps so
+  // served pages reach the sitemap and IndexNow and held pages do not.
+  foldQuestionPages(distDir);
   writeSectionRedirects(distDir, approvedPages, clusters);
   writeSitemaps(distDir, config.site_domain || 'https://example.com');
   writeLlmsTxt(distDir, config.canonical_domain);

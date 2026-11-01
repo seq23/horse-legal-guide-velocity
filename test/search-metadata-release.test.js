@@ -61,8 +61,8 @@ test('editorial renderer distinguishes two formats sharing a source topic and op
     ].map((row, i) => ({ ...row, source_query_title: topic, source_cluster: 'horse-sale-purchase', slug: `fixture-${i}`, status: 'approved', publish_date: '2026-04-30', github_path: `fixture-${i}.md` }));
     for (let i = 0; i < rows.length; i++) fs.writeFileSync(path.join(root, `fixture-${i}.md`), opening);
     fs.writeFileSync(path.join(root, 'data/system/editorial_backlog.json'), JSON.stringify(rows));
-    // The publishing freeze is on (data/system/config.json), so the fixture's
-    // query carries a measured number, as a real new entry must before it publishes.
+    // The fixture's query carries a measured number, so it publishes whether or
+    // not the (now off) publishing freeze is switched on.
     measure(root, [topic]);
     const result = spawnSync(process.execPath, ['-e', "require('./scripts/build/write_editorial_pages').writeEditorialPages('dist')"], { cwd: root, env: { ...process.env, PUBLISH_TODAY: '2026-09-29' }, encoding: 'utf8' });
     assert.equal(result.status, 0, result.stderr);
@@ -101,14 +101,14 @@ test('dashboard accepts noindex 404 but still flags an indexable missing canonic
   } finally { fs.rmSync(root, { recursive: true, force: true }); }
 });
 
-test('publishing freeze holds a new unmeasured editorial entry and publishes it once its query is measured', () => {
+test('freeze off (owner 1 Nov 2026): an approved unmeasured entry publishes straight away; switched on, the freeze still holds it until measured', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'horse-freeze-'));
   try {
     for (const rel of ['scripts', 'templates', 'data/system', 'data/queries', 'data/reference', 'data/firm', 'data/entities']) {
       fs.cpSync(path.join(repo, rel), path.join(root, rel), { recursive: true });
     }
     const config = JSON.parse(fs.readFileSync(path.join(root, 'data/system/config.json'), 'utf8'));
-    assert.equal(config.search_publishing_freeze, true, 'the freeze flag is on in the committed config');
+    assert.equal(config.search_publishing_freeze, false, 'the freeze flag is off in the committed config (new pages publish straight away)');
     const topic = 'Can a Horse Freeze Fixture Be Measured?';
     const row = { entry_id: 'fixture-freeze', title: 'Freeze fixture: what equestrians miss about measured demand', content_type: 'insight', source_query_title: topic, source_cluster: 'horse-sale-purchase', slug: 'fixture-freeze', status: 'approved', publish_date: '2026-04-30', github_path: 'fixture-freeze.md' };
     fs.writeFileSync(path.join(root, 'fixture-freeze.md'), 'Measured demand decides what publishes. Documents, payment, possession, and risk need separate attention.');
@@ -123,7 +123,11 @@ test('publishing freeze holds a new unmeasured editorial entry and publishes it 
     };
     measure(root, ['an unrelated measured query']);
     let state = build();
-    assert.deepEqual(state.live, [], 'an approved, due, unmeasured new entry must not publish');
+    assert.deepEqual(state.live, ['fixture-freeze'], 'with the freeze off, an approved, due, unmeasured new entry publishes straight away');
+    assert.deepEqual(state.holds, []);
+    fs.writeFileSync(path.join(root, 'data/system/config.json'), JSON.stringify({ ...config, search_publishing_freeze: true }));
+    state = build();
+    assert.deepEqual(state.live, [], 'switched back on, the freeze holds an approved, due, unmeasured new entry');
     assert.deepEqual(state.holds, ['fixture-freeze'], 'the held entry is listed with its reason');
     measure(root, [topic]);
     state = build();

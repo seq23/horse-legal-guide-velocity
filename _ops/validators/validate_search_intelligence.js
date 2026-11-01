@@ -202,29 +202,24 @@ const CHECKS = {
   },
 
   freeze_read_by_publisher(ctx) {
+    // Owner ruling 1 Nov 2026 (search growth loop): new pages publish straight
+    // away; the "frozen until the query has a Search Console number" rule is
+    // replaced for this site. The flag is OFF and nothing may be held by it.
+    // Both publishers still read the flag, so switching it back on works, and
+    // the mechanism is proven to hold an unmeasured entry when it is on.
     const out = [];
-    if (ctx.config.search_publishing_freeze !== true) out.push('data/system/config.json search_publishing_freeze is not true');
-    const fd = ctx.freezeDoc;
-    if (!fd || !(fd.grandfathered && (fd.grandfathered.editorial || []).length && (fd.grandfathered.page_targets || []).length)) out.push(`${si.FILES.freeze} has no grandfathered live set`);
+    if (ctx.config.search_publishing_freeze !== false) out.push('data/system/config.json search_publishing_freeze is not false (owner ruling 1 Nov 2026: new pages publish straight away)');
     for (const [file, src] of Object.entries(ctx.publisherSources)) {
       if (!/require\(['"]\.\.\/search_intelligence\/publish_freeze['"]\)/.test(src) || !/freezeDecide\(/.test(src) || !/recordHolds\(/.test(src)) out.push(`${file} does not read the publishing freeze`);
     }
     if (!ctx.holds || !ctx.holds.lanes || !ctx.holds.lanes.editorial || !ctx.holds.lanes.page_targets) out.push(`${si.FILES.holds} was not written by both publishers on the last build`);
-    // Behaviour: with the flag on, an unmeasured new page is held and a measured one is not.
-    const probe = { ...ctx.freeze, enabled: ctx.config.search_publishing_freeze === true };
-    const measured = [...probe.measured.keys()][0];
-    if (decide(probe, 'editorial', '__probe_new__', ['zz unmeasured probe query']).publish) out.push('freeze decide() publishes an unmeasured new entry');
-    if (measured && !decide(probe, 'editorial', '__probe_new__', [measured]).publish) out.push('freeze decide() holds a measured entry');
-    // What the build actually published: nothing live is new and unmeasured.
-    for (const e of ctx.editorialLive) {
-      const d = decide(probe, 'editorial', e.entry_id, [e.source_query_title, e.title]);
-      if (!d.publish) out.push(`editorial entry ${e.entry_id} is live but new and unmeasured`);
-    }
-    for (const p of ctx.approvedPageTargets) {
-      if (!ctx.builtPageTargets.has(p.slug)) continue;
-      const d = decide(probe, 'page_targets', p.slug, [p.primary_query, ...(p.supporting_queries || [])]);
-      if (!d.publish) out.push(`page target ${p.slug} is live but new and unmeasured`);
-    }
+    else if (ctx.holds.total_held) out.push(`${si.FILES.holds} lists ${ctx.holds.total_held} held page(s) with the freeze off; approved pages must publish straight away`);
+    const off = { ...ctx.freeze, enabled: ctx.config.search_publishing_freeze === true };
+    if (!decide(off, 'editorial', '__probe_new__', ['zz unmeasured probe query']).publish) out.push('freeze decide() holds an unmeasured new entry while the freeze is off');
+    const on = { ...ctx.freeze, enabled: true };
+    const measured = [...on.measured.keys()][0];
+    if (decide(on, 'editorial', '__probe_new__', ['zz unmeasured probe query']).publish) out.push('freeze decide() switched on would publish an unmeasured new entry');
+    if (measured && !decide(on, 'editorial', '__probe_new__', [measured]).publish) out.push('freeze decide() switched on would hold a measured entry');
     return out;
   },
 
@@ -267,7 +262,7 @@ const BREAKS = {
   targets_measured: (c) => { c.targets = clone(c.targets); c.targets.targets[0].number = null; },
   families_served: (c) => { c.strengthening = clone(c.strengthening); c.strengthening.pages[0].title = 'Unrelated Title'; },
   one_faqpage_per_page: (c) => { const [route, html] = [...c.html].find(([, h]) => /"FAQPage"/.test(h)); c.html = new Map(c.html); c.html.set(route, html.replace('</head>', `<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[]}</script></head>`)); },
-  freeze_read_by_publisher: (c) => { c.editorialLive = [...c.editorialLive, { entry_id: '__new_unmeasured__', title: 'zz unmeasured probe', source_query_title: 'zz unmeasured probe' }]; },
+  freeze_read_by_publisher: (c) => { c.holds = clone(c.holds); c.holds.total_held = 1; },
   daily_workflow_wired: (c) => { c.workflow = c.workflow.replace(/git pull --rebase --autostash -X theirs origin main\n/, ''); },
   no_measured_url_404: (c) => { c.export = clone(c.export); c.export.by_page.push({ keys: [`${si.SITE_ORIGIN}/zz-not-built/`], impressions: 3, clicks: 0, position: 9 }); }
 };
