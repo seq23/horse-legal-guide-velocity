@@ -152,7 +152,7 @@ test('a non-fast-forward rejection fetches, rebases onto the target branch and p
   assert.deepEqual(result.gitLog, [
     'push origin HEAD:main',
     'fetch origin main',
-    'rebase FETCH_HEAD',
+    'rebase --autostash FETCH_HEAD',
     'push origin HEAD:main',
   ]);
   assert.match(result.stderr, /non-fast-forward/);
@@ -162,7 +162,7 @@ test('a rebase conflict aborts the rebase, pushes nothing more and fails non-zer
   const result = runPushCase('rebase_conflict');
   assert.equal(result.status, 1);
   assert.equal(result.pushCount, 1);
-  assert.deepEqual(result.gitLog, ['push origin main', 'fetch origin main', 'rebase FETCH_HEAD', 'rebase --abort']);
+  assert.deepEqual(result.gitLog, ['push origin main', 'fetch origin main', 'rebase --autostash FETCH_HEAD', 'rebase --abort']);
   assert.match(result.stderr, /NAMED_FAILURE: GIT_PUSH_FAILED cause=rebase_conflict/);
 });
 
@@ -171,4 +171,52 @@ test('an empty branch name (detached HEAD) is refused rather than defaulting to 
   assert.equal(result.status, 2);
   assert.equal(result.pushCount, 0);
   assert.match(result.stderr, /cause=usage/);
+});
+
+// 1 Nov 2026, Approved Content Email run 41320735301: the build had rewritten
+// tracked files the commit step does not stage, main moved during the run, and
+// the rebase refused the dirty tree ("cannot rebase: You have unstaged
+// changes"), exiting 128 with no NAMED_FAILURE. Real git, no fake.
+test('main moving while the build left unstaged tracked changes still rebases, pushes and keeps the changes', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'horse-push-dirty-'));
+  const git = (cwd, ...args) => {
+    const r = spawnSync('git', args, { cwd, encoding: 'utf8' });
+    assert.equal(r.status, 0, `git ${args.join(' ')}: ${r.stderr}`);
+    return r.stdout.trim();
+  };
+  const ident = ['-c', 'user.name=t', '-c', 'user.email=t@example.invalid'];
+  const remote = path.join(tmp, 'remote.git');
+  git(tmp, 'init', '-q', '--bare', '-b', 'main', remote);
+  const seed = path.join(tmp, 'seed');
+  git(tmp, 'clone', '-q', remote, seed);
+  fs.writeFileSync(path.join(seed, 'state.json'), '{}\n');
+  fs.writeFileSync(path.join(seed, 'built.html'), 'v1\n');
+  git(seed, 'add', '.');
+  git(seed, ...ident, 'commit', '-q', '-m', 'seed');
+  git(seed, 'push', '-q', 'origin', 'HEAD:main');
+  const runner = path.join(tmp, 'runner');
+  git(tmp, 'clone', '-q', remote, runner);
+  // Another workflow pushes to main mid-run.
+  fs.writeFileSync(path.join(seed, 'other.json'), '{"x":1}\n');
+  git(seed, 'add', '.');
+  git(seed, ...ident, 'commit', '-q', '-m', 'other workflow');
+  git(seed, 'push', '-q', 'origin', 'HEAD:main');
+  // The runner's build rewrote a tracked file it will not stage; it commits only state.
+  fs.writeFileSync(path.join(runner, 'built.html'), 'rebuilt\n');
+  fs.writeFileSync(path.join(runner, 'state.json'), '{"sent":true}\n');
+  git(runner, 'add', 'state.json');
+  git(runner, ...ident, 'commit', '-q', '-m', 'record state');
+
+  const result = spawnSync('bash', [helper, 'origin', 'main'], {
+    cwd: runner,
+    encoding: 'utf8',
+    env: { ...process.env, PUSH_RETRY_ATTEMPTS: '2', PUSH_RETRY_DELAY_SECONDS: '0',
+      GIT_CONFIG_COUNT: '2', GIT_CONFIG_KEY_0: 'user.name', GIT_CONFIG_VALUE_0: 't',
+      GIT_CONFIG_KEY_1: 'user.email', GIT_CONFIG_VALUE_1: 't@example.invalid' },
+  });
+  assert.equal(result.status, 0, result.stderr);
+  const remoteLog = git(seed, 'ls-remote', remote, 'refs/heads/main').split(/\s+/)[0];
+  assert.equal(remoteLog, git(runner, 'rev-parse', 'HEAD'));
+  assert.equal(git(runner, 'log', '--format=%s', '-3'), 'record state\nother workflow\nseed');
+  assert.equal(fs.readFileSync(path.join(runner, 'built.html'), 'utf8'), 'rebuilt\n');
 });

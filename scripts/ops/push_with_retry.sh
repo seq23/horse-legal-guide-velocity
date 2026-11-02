@@ -12,6 +12,10 @@
 #   - a non-fast-forward rejection (main moved during the run): fetch the
 #     target branch, rebase onto it, push again. A rebase conflict aborts the
 #     rebase and fails at once - it is never resolved by guessing.
+#     The rebase uses --autostash: callers commit only their state files while
+#     the build has regenerated other tracked files, and a plain rebase refuses
+#     a dirty tree (1 Nov 2026, Approved Content Email run 41320735301:
+#     "cannot rebase: You have unstaged changes", exit 128).
 # Anything else (403, protected branch, hook declined) fails at once with git's
 # own exit status. Every final failure prints one NAMED_FAILURE line with the
 # cause and exits non-zero.
@@ -127,10 +131,12 @@ while [ "$attempt" -le "$attempts" ]; do
       fi
     else
       rebase_status=0
-      rebase_output="$(git rebase FETCH_HEAD 2>&1)" || rebase_status=$?
+      rebase_output="$(git rebase --autostash FETCH_HEAD 2>&1)" || rebase_status=$?
       if [ "$rebase_status" -ne 0 ]; then
         printf '%s\n' "$rebase_output" >&2
-        git rebase --abort >&2
+        # A rebase that refused to start leaves nothing to abort; never let
+        # that mask the named failure below under set -e.
+        git rebase --abort >&2 2>/dev/null || true
         echo "push_with_retry: rebase onto ${remote}/${target_branch} conflicted; aborted, nothing pushed" >&2
         give_up "rebase_conflict" 1
       fi
