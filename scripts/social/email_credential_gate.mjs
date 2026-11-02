@@ -33,12 +33,16 @@ const JSON_ONLY = process.argv.includes('--json');
 
 // Kept in step with REQUIRED_SMTP_VARS in scripts/social/send_approved_content_email.py.
 const REQUIRED_SMTP_VARS = ['SMTP_HOST', 'SMTP_USERNAME', 'SMTP_PASSWORD', 'SMTP_FROM'];
-const missing = REQUIRED_SMTP_VARS.filter((name) => !process.env[name]);
+// The client's address lives only in this repository secret (never in the
+// public repo); without it there is nobody to send to, so it gates like SMTP.
+const RECIPIENT_SECRET = 'APPROVED_CONTENT_EMAIL_TO';
+const REQUIRED_SECRETS = [...REQUIRED_SMTP_VARS, RECIPIENT_SECRET];
+const missing = REQUIRED_SECRETS.filter((name) => !process.env[name]);
 const canSend = missing.length === 0;
 
 const report = {
   generated_at: new Date().toISOString().slice(0, 10),
-  required_secrets: REQUIRED_SMTP_VARS,
+  required_secrets: REQUIRED_SECRETS,
   missing_secrets: missing,
   can_send: canSend,
   status: canSend ? 'DELIVERY_ENABLED' : 'EMAIL_DELIVERY_DISABLED_MISSING_CREDENTIAL',
@@ -56,7 +60,7 @@ if (process.env.GITHUB_OUTPUT) {
 if (JSON_ONLY) {
   console.log(JSON.stringify(report, null, 2));
 } else if (canSend) {
-  console.log('EMAIL CREDENTIAL GATE DELIVERY_ENABLED: every required SMTP secret is present; the send path will run.');
+  console.log('EMAIL CREDENTIAL GATE DELIVERY_ENABLED: every required SMTP secret and the recipient secret are present; the send path will run.');
 } else {
   console.log(`NAMED_STOP: EMAIL_DELIVERY_DISABLED_MISSING_CREDENTIAL - ${missing.join(', ')} is not set in this repository's secrets.`);
   console.log('The preview is still generated, but no mail can be delivered and none will be claimed as sent.');

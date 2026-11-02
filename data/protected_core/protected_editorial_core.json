@@ -20,8 +20,8 @@
     },
     {
       "path": ".github/workflows/approved-content-email.yml",
-      "sha256": "f6a99c2257a75e959911f65482a4dcfbaec9ac3710afbdbae516db95ee4ba018",
-      "bytes": 6726
+      "sha256": "bd3348fe409e2b3c4462d7ebb306aefcd17ea64e8d68a30ac7075d3fe506475c",
+      "bytes": 6742
     },
     {
       "path": "data/system/review_rules.json",
@@ -137,9 +137,7 @@
   "baseline_refreshed_at": "2026-10-30T14:41:30.512640Z",
   "baseline_reason": "Stopped publish:mode wiping the question queue. finalize_approved_pages.js overwrote data/community/publish_queue.json (the per-question queue written by scripts/community/map_signals_to_targets.js) with the unapproved page targets; with every page approved that list was empty, so each Draft Queue Refresh run emptied the question queue before validate:all and validate:question-queue failed on 2026-09-26 (requeued question 'in neither queue'). The page-level review list now goes to data/publish_state.json as last_queue_count and last_queue_slugs; routeToQueue, applyPublishingMode and classifyRisk are unchanged, so which pages publish and the manual approval path are exactly as before. Only finalize_approved_pages.js and run_mode_pipeline.js hashes moved.",
   "baseline_refresh_changed_files": [
-    ".github/workflows/admin-bulk-content-actions.yml",
-    ".github/workflows/drafts-refresh.yml",
     ".github/workflows/approved-content-email.yml"
   ],
-  "baseline_refresh_reason": "Scoped CI-sweep repair (30 Oct 2026, Approved Content Email run 41071059217 red on a GitHub 500 during git push): these workflows now push through scripts/ops/push_with_retry.sh instead of a bare git push, and the approved-content email claims before it sends so a lost state push cannot resend. Only the push lines and the email claim/send steps changed; all approval gates, cadence, and protected editorial identity records remain unchanged."
+  "baseline_refresh_reason": "Every repo is public: the Approved Content Email recipient now comes from secrets.APPROVED_CONTENT_EMAIL_TO instead of an address written in the workflow. Only the APPROVED_CONTENT_EMAIL_TO env line changed; triggers, schedule, claim/send order, approval gates and protected editorial identity records are unchanged."
 }

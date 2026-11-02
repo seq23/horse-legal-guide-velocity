@@ -39,6 +39,7 @@ function run(dir, args) {
       GITHUB_OUTPUT: out,
       GITHUB_RUN_ID: 'test-run',
       SMTP_HOST: '127.0.0.1', SMTP_PORT: '1', SMTP_USERNAME: 'u', SMTP_PASSWORD: 'p', SMTP_FROM: 'f@example.com',
+      APPROVED_CONTENT_EMAIL_TO: 'client-inbox@example.test',
     },
   });
   return { ...result, output: fs.readFileSync(out, 'utf8'), state: JSON.parse(fs.readFileSync(path.join(dir, STATE_REL), 'utf8')) };
