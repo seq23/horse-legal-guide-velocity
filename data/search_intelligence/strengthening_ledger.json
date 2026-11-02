@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_on": "2026-11-01",
-  "gsc_window": "2026-10-02..2026-10-29",
+  "updated_on": "2026-11-02",
+  "gsc_window": "2026-10-03..2026-10-30",
   "rule": "pages: strengthened pages with the date each was strengthened (from strengthening.json). pending: qualifying families with no strengthening yet and the date each first qualified. skipped: qualifying families that are not strengthened, with the reason and the date first recorded.",
   "pages": [
     {
@@ -90,12 +90,21 @@
   "pending": [],
   "skipped": [
     {
+      "family": "equine law @ /about/",
+      "page": "/about/",
+      "status": "intent_mismatch",
+      "reason": "query intent equine_law_general vs page intent topic:about; strengthening /about/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through).",
+      "impressions": 6,
+      "weighted_position": 30.8,
+      "recorded_on": "2026-10-31"
+    },
+    {
       "family": "equine law @ /insights/",
       "page": "/insights/",
       "status": "no_answer_page",
       "reason": "lands on /insights/, a index page that lists other pages; no single-answer page there serves \"equine law\"",
       "impressions": 6,
-      "weighted_position": 89.7,
+      "weighted_position": 90.5,
       "recorded_on": "2026-10-11"
     },
     {
@@ -106,15 +115,6 @@
       "impressions": 3,
       "weighted_position": 74,
       "recorded_on": "2026-10-11"
-    },
-    {
-      "family": "equine law @ /about/",
-      "page": "/about/",
-      "status": "intent_mismatch",
-      "reason": "query intent equine_law_general vs page intent topic:about; strengthening /about/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through).",
-      "impressions": 1,
-      "weighted_position": 18,
-      "recorded_on": "2026-10-31"
     }
   ]
 }

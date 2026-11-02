@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "status": "LIST_ONLY_NO_REDIRECTS",
-  "gsc_window": "2026-10-02..2026-10-29",
-  "coverage_collected_at": "2026-11-01T15:20:50.236Z",
+  "gsc_window": "2026-10-03..2026-10-30",
+  "coverage_collected_at": "2026-11-02T15:22:17.957Z",
   "rule": "Sitemap leaf pages with 0 impressions in the 28-day export and fewer than 800 visible words in the built page. Nothing is redirected or removed by this file.",
   "thin_word_threshold": 800,
-  "sitemap_url_count": 324,
+  "sitemap_url_count": 325,
   "candidate_count": 29,
   "candidates_by_hub": {
     "none": 1,
@@ -13,8 +13,8 @@
     "/hubs/real-property-and-leases/": 1,
     "/hubs/intellectual-property-and-brand/": 5,
     "/hubs/demand-letters-and-disputes/": 5,
-    "/hubs/liability-waivers-insurance/": 6,
-    "/hubs/equine-business-formation/": 4,
+    "/hubs/liability-waivers-insurance/": 7,
+    "/hubs/equine-business-formation/": 3,
     "/hubs/horse-sale-and-purchase/": 2,
     "/hubs/boarding-training-and-barn-operations/": 3
   },
@@ -92,14 +92,6 @@
       "fold_basis": "page target cluster equine-business-formation"
     },
     {
-      "route": "/business/do-i-need-an-llc-to-start-a-horse-business/",
-      "word_count": 751,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/equine-business-formation/",
-      "fold_basis": "page target cluster equine-business-formation"
-    },
-    {
       "route": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
       "word_count": 754,
       "impressions_28d": 0,
@@ -126,6 +118,14 @@
     {
       "route": "/liability/what-type-of-insurance-do-trainers-need/",
       "word_count": 761,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/liability/what-is-the-equine-activity-liability-act/",
+      "word_count": 762,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/liability-waivers-insurance/",
