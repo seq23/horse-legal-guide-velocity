@@ -500,4 +500,30 @@ function renderPolicyPage({ title, text, url }) {
   return renderLayout({ title: `${title} | Horse Legal Guide`, description: fitDescription([`${title} for Horse Legal Guide, including educational boundaries, privacy, routing, and public citation-surface context.`], url), url, body });
 }
 
-module.exports = { renderLayout, renderIndex, renderPolicyPage, renderAboutPage, extractVisibleFaq };
+// A labelled, self-contained answer an answer engine can quote without the
+// surrounding page (data-answer-summary marks it, the same marker reference and
+// question pages already carry). Every content writer that has no hand-written
+// quick answer passes its own lead here, so the block is generated, never
+// demanded by a check. The lead is cut at a sentence end near 60 words.
+function leadForAnswer(text, maxWords = 60) {
+  const clean = String(text || '').replace(/\s+/g, ' ').trim();
+  const words = clean.split(' ');
+  if (words.length <= maxWords) return clean;
+  const sentences = clean.match(/[^.!?]+[.!?]+(?:\s|$)/g) || [];
+  let out = '';
+  for (const s of sentences) {
+    const next = (out + s).trim();
+    if (next.split(' ').length > maxWords) break;
+    out = next + ' ';
+  }
+  out = out.trim();
+  return out || `${words.slice(0, maxWords).join(' ')}…`;
+}
+
+function renderQuickAnswer(text) {
+  const lead = leadForAnswer(text);
+  if (!lead) return '';
+  return `<section class="quick-answer-block" data-answer-summary="true" data-editable-zone="quick_answer_block"><h2>Quick answer</h2><p><strong>${htmlEscape(lead)}</strong></p></section>`;
+}
+
+module.exports = { renderQuickAnswer, leadForAnswer, renderLayout, renderIndex, renderPolicyPage, renderAboutPage, extractVisibleFaq };

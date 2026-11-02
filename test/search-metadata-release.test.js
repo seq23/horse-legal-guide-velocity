@@ -5,7 +5,8 @@ const os = require('node:os');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const repo = path.resolve(__dirname, '..');
-const { fitTitle } = require('../scripts/lib/meta_text');
+const { fitTitle, fitDescription, TITLE_MIN, TITLE_MAX, DESC_MIN, DESC_MAX } = require('../scripts/lib/meta_text');
+const { belowFloor } = require('../scripts/lib/limits');
 
 test('long article titles retain the site name inside the search title limit', () => {
   for (const title of [
@@ -18,9 +19,47 @@ test('long article titles retain the site name inside the search title limit', (
   ]) {
     const result = fitTitle(title);
     assert.ok(result.includes('Horse Legal Guide'), result);
-    assert.ok(result.length >= 30 && result.length <= 65, result);
+    assert.ok(result.length <= TITLE_MAX, `generator must trim to fit: ${result}`);
+    assert.ok(!belowFloor(result.length, TITLE_MIN), result);
     assert.equal(fitTitle(result), result, 'repeated formatting must not duplicate the brand');
   }
+});
+
+test('over a length limit never fails: fitTitle trims any title, fitDescription fails only below 75% of its floor', () => {
+  // Titles that used to throw (no sentence, colon or word break that fits).
+  for (const title of [
+    'Supercalifragilisticexpialidociousequinecontractualobligationsandmore-andevenmorewithoutspaces',
+    'Short words then Averyveryverylongunbrokenequinewordthatrunsonandonpastthesixtyfivecharacterlimit',
+  ]) {
+    const result = fitTitle(title);
+    assert.ok(result.length <= TITLE_MAX, result);
+    assert.ok(result.length > 0);
+  }
+  // A description just under the floor (above 75% of it) ships; far under fails.
+  const near = 'x'.repeat(Math.ceil(DESC_MIN * 0.75) + 1);
+  assert.equal(fitDescription([near]), near);
+  assert.throws(() => fitDescription(['Too short to describe a page.']), /at least 75% of/);
+  // Over the ceiling is trimmed, never thrown.
+  assert.ok(fitDescription(['word '.repeat(80)]).length <= DESC_MAX);
+});
+
+test('home definition: over 60 words passes, under 75% of 40 fails, a near miss is a note', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'horse-home-def-'));
+  try {
+    fs.mkdirSync(path.join(root, 'dist'), { recursive: true });
+    const page = (words) => `<html><head><script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'WebPage', speakable: { cssSelector: ['h1', '#home-definition'] } }] })}</script></head><body><h1>Horse Legal Guide</h1><p id="home-definition">${Array(words).fill('word').join(' ')}</p></body></html>`;
+    const run = (words) => {
+      fs.writeFileSync(path.join(root, 'dist/index.html'), page(words));
+      const r = spawnSync(process.execPath, [path.join(repo, '_ops/validators/validate_home_definition_speakable.js')], { cwd: root, encoding: 'utf8', env: { ...process.env, VALIDATION_MODE: 'enforce' } });
+      return { status: r.status, report: JSON.parse(fs.readFileSync(path.join(root, '_ops/reports/validate_home_definition_speakable.json'), 'utf8')) };
+    };
+    assert.equal(run(50).status, 0);
+    const over = run(95);
+    assert.equal(over.status, 0, 'over a word limit never fails');
+    assert.ok(over.report.issues.every((i) => !i.blocking));
+    assert.equal(run(31).status, 0, '31 words is above 75% of 40');
+    assert.equal(run(29).status, 1, '29 words is below 75% of 40');
+  } finally { fs.rmSync(root, { recursive: true, force: true }); }
 });
 
 test('search strengthening keeps the brand on all three title tags', () => {
@@ -72,7 +111,11 @@ test('editorial renderer distinguishes two formats sharing a source topic and op
       assert.ok(html.includes(row.title.replace(/&/g, '&amp;')));
       if (row.search_title) assert.ok(html.includes(`<title>${fitTitle(row.search_title).replace(/&/g, '&amp;')}</title>`));
       const description = html.match(/<meta name="description" content="([^"]+)"/)[1];
-      assert.ok(description.length >= 110 && description.length <= 170);
+      const plain = description.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+      assert.ok(plain.length <= DESC_MAX, `generator must trim to fit: ${plain}`);
+      assert.ok(!belowFloor(plain.length, DESC_MIN), plain);
+      // The generator gives every editorial page a labelled answer block from its lead.
+      assert.match(html, /<section class="quick-answer-block" data-answer-summary="true"[^>]*><h2>Quick answer<\/h2><p><strong>The practical question behind/);
       return description;
     });
     assert.notEqual(...descriptions);

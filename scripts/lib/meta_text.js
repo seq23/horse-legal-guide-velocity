@@ -12,6 +12,7 @@
 // floor is enforced in one place and a page that cannot reach it fails the
 // build instead of shipping short. _ops/validators/validate_meta_uniqueness.js
 // checks the rendered result.
+const { belowFloor } = require('./limits');
 const SITE_NAME = 'Horse Legal Guide';
 const TITLE_MIN = 30;
 // 65, not 70, since 26 Oct 2026. Google truncates the result title at roughly
@@ -41,7 +42,7 @@ function stripShortAnswer(text) {
 // unpaid invoices and unclear records. What should be organized?", 82). The
 // situation sentence is the whole phrase that names the page, so the title
 // keeps it and drops the follow-up; the H1 keeps the full question. A long
-// title with no such shape is a source defect and fails the build.
+// title with no such shape is cut at a word boundary; it never fails the build.
 function shortenTitle(t, max = TITLE_MAX) {
   if (t.length <= max) return t;
   const first = t.split(/(?<=[.!?])\s+/)[0].replace(/\.$/, '').trim();
@@ -54,7 +55,11 @@ function shortenTitle(t, max = TITLE_MAX) {
   // words and leave the unshortened source title visible in the page heading.
   const wordBoundary = t.lastIndexOf(' ', max);
   if (wordBoundary >= TITLE_MIN) return t.slice(0, wordBoundary).trim();
-  throw new Error(`title is ${t.length} characters (max ${max}) and has no leading sentence of ${TITLE_MIN}-${max} characters to stand for it: "${t}"`);
+  // Over the limit never fails the build (owner ruling 2 Nov 2026): the title
+  // is trimmed to fit at the last word that fits, or cut at the limit when no
+  // word break exists. The H1 keeps the full headline.
+  if (wordBoundary > 0) return t.slice(0, wordBoundary).replace(/[\s,;:\-—]+$/, '');
+  return t.slice(0, max);
 }
 
 function fitTitle(title) {
@@ -94,8 +99,9 @@ function truncate(text) {
 }
 
 // parts: ordered page-specific sentences. Joined until the floor is met, then
-// cut back under the ceiling. Throws when the page's own data cannot reach the
-// floor: Rule 0, no silently short description.
+// cut back under the ceiling (truncate always fits it). Throws only when the
+// page's own data falls below 75% of the floor (scripts/lib/limits.js): Rule 0,
+// no silently empty description, and no red build over a few characters.
 function fitDescription(parts, label = 'page') {
   const list = (Array.isArray(parts) ? parts : [parts]).map(clean).filter(Boolean);
   // Take parts in order until the floor is met; when the next part would run
@@ -110,8 +116,8 @@ function fitDescription(parts, label = 'page') {
     text = join(part);
   }
   text = truncate(text);
-  if (text.length < DESC_MIN || text.length > DESC_MAX) {
-    throw new Error(`meta description for ${label} is ${text.length} characters (needs ${DESC_MIN}-${DESC_MAX}): "${text}"`);
+  if (belowFloor(text.length, DESC_MIN)) {
+    throw new Error(`meta description for ${label} is ${text.length} characters (needs at least 75% of ${DESC_MIN}): "${text}"`);
   }
   return text;
 }
