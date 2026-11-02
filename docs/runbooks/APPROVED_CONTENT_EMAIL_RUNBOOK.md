@@ -4,7 +4,7 @@
 
 Send Claire approved Horse Legal Guide content links with ready-to-post LinkedIn, Twitter/X, and Instagram copy.
 
-Recipient: `claire@wisecovington.com`
+Recipient: the client. The address lives only in the `APPROVED_CONTENT_EMAIL_TO` repository secret, never in this public repo.
 
 ## Workflow
 

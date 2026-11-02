@@ -7,6 +7,23 @@ const workflow = '.github/workflows/approved-content-email.yml';
 const script = 'scripts/social/send_approved_content_email.py';
 const state = 'data/social/approved_content_email_state.json';
 const gate = 'scripts/social/email_credential_gate.mjs';
+const preview = 'reports/approved-content-email-preview.md';
+const config = 'data/system/config.json';
+// Every repo is public: the client's address lives only in the
+// APPROVED_CONTENT_EMAIL_TO repository secret. No file the lane reads or
+// writes may carry an address (the bot's noreply identity is the one exception).
+const ADDRESS = /[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}/g;
+function addressesIn(text) {
+  return (text.match(ADDRESS) || []).filter((a) => !a.endsWith('@users.noreply.github.com') && !a.endsWith('@example.com'));
+}
+let addressFilesChecked = 0;
+for (const rel of [workflow, script, state, gate, preview, config]) {
+  if (!exists(rel)) continue;
+  addressFilesChecked += 1;
+  const found = addressesIn(read(rel));
+  if (found.length) fail(`${rel} carries ${found.length} email address(es); the recipient must come from secrets.APPROVED_CONTENT_EMAIL_TO only`);
+}
+if (addressFilesChecked < 4) fail(`address check examined ${addressFilesChecked} files; expected the workflow, script, state and gate at least`);
 for (const rel of [workflow, script, state, gate]) if (!exists(rel)) fail(`${rel} missing`);
 if (exists(workflow)) {
   const yaml = read(workflow);
@@ -16,7 +33,7 @@ if (exists(workflow)) {
     'workflow_run',
     'Admin Bulk Content Actions',
     'Manual Publish',
-    'claire@wisecovington.com',
+    'APPROVED_CONTENT_EMAIL_TO: ${{ secrets.APPROVED_CONTENT_EMAIL_TO }}',
     'scripts/social/send_approved_content_email.py',
     'secrets.SMTP_HOST',
     'secrets.SMTP_USERNAME',
@@ -58,7 +75,7 @@ if (exists(gate)) {
 }
 if (exists(script)) {
   const src = read(script);
-  for (const phrase of ['linkedin', 'twitter', 'instagram', 'claire@wisecovington.com', 'SMTP_HOST', 'approved_content_email_state.json', 'sent_entry_ids', 'resolve_live_public_url', 'dist_path_exists', 'skipped_not_live', 'pending_send', 'finalize_in_doubt_claim', 'IN_DOUBT_CLAIM_NOT_RESENT', 'send_claimed']) {
+  for (const phrase of ['linkedin', 'twitter', 'instagram', 'APPROVED_CONTENT_EMAIL_TO', 'RECIPIENT_LABEL', 'SMTP_HOST', 'approved_content_email_state.json', 'sent_entry_ids', 'resolve_live_public_url', 'dist_path_exists', 'skipped_not_live', 'pending_send', 'finalize_in_doubt_claim', 'IN_DOUBT_CLAIM_NOT_RESENT', 'send_claimed']) {
     if (!src.includes(phrase)) fail(`${script} missing phrase: ${phrase}`);
   }
   if (src.includes('smtp.gmail.com') || src.includes('SENDGRID_API_KEY')) fail(`${script} must not hard-code a vendor transport`);
@@ -67,5 +84,7 @@ if (exists(script)) {
 if (exists(state)) {
   const parsed = JSON.parse(read(state));
   if (!Array.isArray(parsed.sent_entry_ids) || !Array.isArray(parsed.sent_log)) fail(`${state} malformed`);
+  const recorded = [...(parsed.sent_log || []), ...(parsed.pending_send ? [parsed.pending_send] : [])];
+  for (const row of recorded) if (row.recipient && row.recipient !== 'client') fail(`${state} records a recipient other than "client"`);
 }
 if (!process.exitCode) console.log('Approved content email workflow OK');

@@ -42,7 +42,11 @@ ROOT = Path.cwd()
 BACKLOG_PATH = ROOT / "data/system/editorial_backlog.json"
 STATE_PATH = ROOT / "data/social/approved_content_email_state.json"
 PREVIEW_PATH = ROOT / "reports/approved-content-email-preview.md"
-DEFAULT_RECIPIENT = "claire@wisecovington.com"
+# The client's address is never written in this public repo. It lives only in
+# the repository secret APPROVED_CONTENT_EMAIL_TO and is read at send time.
+# Claims, state and the committed preview record RECIPIENT_LABEL instead.
+RECIPIENT_ENV = "APPROVED_CONTENT_EMAIL_TO"
+RECIPIENT_LABEL = "client"
 DEFAULT_SITE = "https://horselegalguide.com"
 
 
@@ -282,7 +286,7 @@ def render_markdown(
     lines = [
         "# Horse Legal Guide: content decisions",
         "",
-        f"Recipient: {recipient}",
+        f"Recipient: the {recipient} (address held in the {RECIPIENT_ENV} repository secret)",
         f"Generated: {datetime.now(timezone.utc).isoformat()}",
     ]
     if new_approvals:
@@ -369,7 +373,6 @@ def send_email(subject: str, markdown_body: str, recipient: str) -> bool:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--recipient", default=os.environ.get("APPROVED_CONTENT_EMAIL_TO", DEFAULT_RECIPIENT))
     parser.add_argument("--site-domain", default=os.environ.get("SITE_DOMAIN", DEFAULT_SITE))
     parser.add_argument("--ids", nargs="*", default=None)
     parser.add_argument("--force-resend", action="store_true")
@@ -382,7 +385,7 @@ def main() -> int:
         parser.error("--claim cannot be combined with --dry-run")
 
     if args.send_claimed:
-        return send_claimed(args.recipient)
+        return send_claimed()
 
     backlog = read_json(BACKLOG_PATH, [])
     if not isinstance(backlog, list):
@@ -449,7 +452,7 @@ def main() -> int:
     nothing_to_report = not packages and not new_approvals and not new_revokes
 
     if nothing_to_report:
-        markdown_body = render_markdown([], args.recipient, skipped_not_live, [], [])
+        markdown_body = render_markdown([], RECIPIENT_LABEL, skipped_not_live, [], [])
         PREVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
         PREVIEW_PATH.write_text(markdown_body, encoding="utf-8")
         print("No new approval, go-live, or revoke needed an email.")
@@ -468,7 +471,7 @@ def main() -> int:
             return 2
         return 0
 
-    markdown_body = render_markdown(packages, args.recipient, skipped_not_live, new_approvals, new_revokes)
+    markdown_body = render_markdown(packages, RECIPIENT_LABEL, skipped_not_live, new_approvals, new_revokes)
     PREVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
     PREVIEW_PATH.write_text(markdown_body, encoding="utf-8")
 
@@ -491,7 +494,7 @@ def main() -> int:
         print("NAMED_STOP: DRY_RUN_PREVIEW_ONLY - sending was disabled by --dry-run.")
         return 0
 
-    claim = build_claim(subject, args.recipient, packages, new_approvals, new_revokes)
+    claim = build_claim(subject, RECIPIENT_LABEL, packages, new_approvals, new_revokes)
     state["pending_send"] = claim
     write_json(STATE_PATH, state)
     print(f"Claimed {claim['count']} notification(s) as pending_send key={claim['key']}: {subject}.")
@@ -503,7 +506,7 @@ def main() -> int:
         print("Claim written; push it to main, then run --send-claimed.")
         return 0
     # Local, single-process use: claim and send in one go.
-    return send_claimed(args.recipient)
+    return send_claimed()
 
 
 def build_claim(
@@ -541,7 +544,7 @@ def record_claim(state: Dict[str, Any], claim: Dict[str, Any], outcome: str) -> 
     sent_log = list(state.get("sent_log") or [])
     sent_log.append({
         "sent_at": datetime.now(timezone.utc).isoformat(),
-        "recipient": claim.get("recipient"),
+        "recipient": RECIPIENT_LABEL,
         "entry_ids": list(claim.get("entry_ids") or []),
         "newly_approved_entry_ids": list(claim.get("newly_approved_entry_ids") or []),
         "revoked_entry_ids": list(claim.get("revoked_entry_ids") or []),
@@ -567,18 +570,29 @@ def finalize_in_doubt_claim(state: Dict[str, Any]) -> Dict[str, Any]:
     return record_claim(state, claim, "in_doubt_not_resent")
 
 
-def send_claimed(recipient: str) -> int:
+def client_address() -> str:
+    """The one place the To: address comes from: the repository secret, never a claim or state."""
+    return os.environ.get(RECIPIENT_ENV, "").strip()
+
+
+def send_claimed() -> int:
     state = read_json(STATE_PATH, {})
     claim = state.get("pending_send")
     if not claim:
         print("NAMED_FAILURE: NO_PENDING_CLAIM - --send-claimed ran without a pending_send in state; nothing was sent.", file=sys.stderr)
+        return 2
+    to_address = client_address()
+    if not to_address:
+        print(f"NAMED_FAILURE: RECIPIENT_SECRET_MISSING - {RECIPIENT_ENV} is not set; nothing was sent. "
+              f"Claim key={claim['key']} released.", file=sys.stderr)
+        write_json(STATE_PATH, {k: v for k, v in state.items() if k != "pending_send"})
         return 2
     if not PREVIEW_PATH.exists():
         print(f"NAMED_FAILURE: CLAIM_BODY_MISSING - {PREVIEW_PATH} is missing; nothing was sent.", file=sys.stderr)
         return 2
     body = PREVIEW_PATH.read_text(encoding="utf-8")
     try:
-        sent = send_email(claim["subject"], body, claim.get("recipient") or recipient)
+        sent = send_email(claim["subject"], body, to_address)
     except (smtplib.SMTPException, OSError) as exc:
         # The transport refused before accepting the message: nothing was
         # delivered, so the claim is released and the next run tries again.
@@ -591,7 +605,7 @@ def send_claimed(recipient: str) -> int:
         write_json(STATE_PATH, {k: v for k, v in state.items() if k != "pending_send"})
         return 2
     write_json(STATE_PATH, record_claim(state, claim, "sent"))
-    print(f"Sent decision-notification email to {claim.get('recipient') or recipient}: {claim['subject']} (key={claim['key']}).")
+    print(f"Sent decision-notification email to the {RECIPIENT_LABEL}: {claim['subject']} (key={claim['key']}).")
     return 0
 
 

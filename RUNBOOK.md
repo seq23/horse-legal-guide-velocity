@@ -59,9 +59,9 @@ This is why the round trip **approve → live → revoke → down → approve �
 
 For someone helping with publishing who is **not an owner** and does not hold a role on this GitHub repository. Its own labelled, visually subordinate area - on `/admin/` after the "Send your decisions" card, and on each individual draft page after the "Your decision" card:
 
-- **Email an approval / Email "needs changes" / Email "revoke this one"** - each drafts an email, addressed to the configured recipient (`data/system/config.json`'s `owner_review_email`, currently `claire@wisecovington.com` - a single recipient, no CC or BCC by design), naming the selected drafts.
+- **Email an approval / Email "needs changes" / Email "revoke this one"** - each drafts an email, with an empty To: line - type the client's address there (it is deliberately not written in this public repo; single recipient, no CC or BCC by design), naming the selected drafts.
 - **These only draft an email. They publish nothing by themselves.** Someone with a GitHub account still has to take the real GitHub-request action (steps 1-5 above) before anything changes.
-- If no recipient is configured, the page says so plainly on the button itself instead of silently opening a blank `To:` field.
+- The draft opens with an empty `To:` line and the page says so plainly: the client's address is deliberately not written into the public admin pages.
 
 ## What happens automatically after you submit
 
@@ -93,7 +93,7 @@ The **"Overdue"** tile is separate from status - it counts drafts whose schedule
 
 ## Email notifications
 
-One mechanism, `scripts/social/send_approved_content_email.py`, sends a decision-notification email addressed to the recipient configured in `data/system/config.json`'s `owner_review_email` (currently `claire@wisecovington.com`) whenever a **real event** happens, no matter which route produced it:
+One mechanism, `scripts/social/send_approved_content_email.py`, sends a decision-notification email addressed to the client, whose address is read from the `APPROVED_CONTENT_EMAIL_TO` repository secret (never written in this public repo) whenever a **real event** happens, no matter which route produced it:
 
 - **On approval** - names the piece and its scheduled publish date, even if it is not due yet.
 - **On go-live** - the piece is now live; includes the link and ready-to-post copy for LinkedIn, Twitter/X, and Instagram.

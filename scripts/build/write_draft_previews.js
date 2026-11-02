@@ -186,7 +186,7 @@ function metaLine(entry) {
   return bits.map((b) => `<span class="pill">${esc(b)}</span>`).join('');
 }
 
-function previewPage(entry, bodyHtml, missing, previewPath, repoUrl, gateHash, reviewEmail, calendarLine) {
+function previewPage(entry, bodyHtml, missing, previewPath, repoUrl, gateHash, calendarLine) {
   // "Edit this draft on GitHub" pointed at the raw markdown source - the
   // owner found that, plus a separate "Read the source markdown" link,
   // superfluous: the rendered article is already the whole page body below.
@@ -254,20 +254,18 @@ ${statusBanner}
 ${decisionIssueClientScript()}
 (function(){
   var REPO_URL=${JSON.stringify(String(repoUrl || ''))};
-  var EMAIL=${JSON.stringify(String(reviewEmail || ''))};
   var TITLE=${JSON.stringify(String(entry.title || ''))};
   var ID=${JSON.stringify(String(entry.entry_id || ''))};
   var IS_LIVE=${JSON.stringify(Boolean(entry.live_slug))};
   var WORDS={approve:'approve',needs_revision:'needs changes',rejected:'revoke this one'};
   function emailFallback(kind){
-    if(!EMAIL){var s=document.getElementById('decision-status');if(s)s.textContent='Cannot draft this email: no recipient is configured (data/system/config.json owner_review_email). Ask the repo owner to set it.';return;}
     var nl=String.fromCharCode(10);
     var INTRO={approve:'I approve this draft for publishing:',needs_revision:'This draft needs changes before publishing:',rejected:'Please revoke this draft:'};
     var subject='Horse Legal Guide: "'+TITLE+'" marked "'+WORDS[kind]+'"';
     var body=INTRO[kind]+nl+nl+'- '+TITLE+' ('+ID+')'+nl+nl+'Sent from '+window.location.pathname+'.';
-    window.location.href='mailto:'+encodeURIComponent(EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    window.location.href='mailto:?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     var status=document.getElementById('decision-status');
-    if(status)status.textContent='Added to an email marked "'+WORDS[kind]+'". This only drafted an email; nothing is published until whoever receives it takes the GitHub-request action above.';
+    if(status)status.textContent='Added to an email marked "'+WORDS[kind]+'". This only drafted an email. Type the client email address in the To: line - it is deliberately not written into this public page. Nothing is published until whoever receives it takes the GitHub-request action above.';
   }
   function send(kind){
     if(!REPO_URL){emailFallback(kind);return;}
@@ -413,7 +411,6 @@ function writeDraftPreviews(distDir) {
   // Same gate, same password, same sessionStorage key as /admin/, so unlocking
   // once covers the admin root, this index, and every draft preview.
   const gateHash = String(config.admin_password_sha256 || '');
-  const reviewEmail = String(config.owner_review_email || '').trim();
   const lineMap = backlogEntryLineMap();
 
   const rows = [];
@@ -427,7 +424,7 @@ function writeDraftPreviews(distDir) {
     }
     const raw = fs.readFileSync(sourcePath, 'utf8');
     const rendered = resolveDraftLinks(md(parse(raw)), distDir);
-    const page = previewPage(entry, rendered.html, rendered.missing, previewPath, repoUrl, gateHash, reviewEmail, lineMap.get(entry.entry_id));
+    const page = previewPage(entry, rendered.html, rendered.missing, previewPath, repoUrl, gateHash, lineMap.get(entry.entry_id));
     const outDir = path.join(distDir, previewPath.replace(/^\//, '').replace(/\/$/, ''));
     ensureDir(outDir);
     fs.writeFileSync(path.join(outDir, 'index.html'), page.html);
