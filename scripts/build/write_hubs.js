@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { renderLayout } = require('../lib/render_page');
+const { renderLayout, renderQuickAnswer } = require('../lib/render_page');
 const { fitDescription } = require('../lib/meta_text');
 function clean(v) { return String(v || '').replace(/\s+/g, ' ').trim(); }
 const { breadcrumbNav, pickSiblings, rotate, siblingBlock, wayfindingNav } = require('../lib/site_navigation');
@@ -58,6 +58,7 @@ ${breadcrumbNav(cluster.slug, cluster.title || titleize(cluster.cluster))}
   <h1>${cluster.title || titleize(cluster.cluster)}</h1>
   <p class="muted">This hub collects the core educational pages for ${cluster.title || titleize(cluster.cluster)} so readers can move from broad questions to more specific issues without leaving the topic cluster.</p>
 </header>
+${renderQuickAnswer(hubDescription(cluster, clusterPages))}
 <section>
   <h2>Pages in this hub</h2>
   <ul>${list}</ul>

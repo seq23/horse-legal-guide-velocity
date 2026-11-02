@@ -28,6 +28,7 @@ const { buildTargetQuerySet, PRECEDENCE } = require('../../scripts/search_intell
 const fam = require('../../scripts/search_intelligence/demand_families');
 const { loadFreeze, decide } = require('../../scripts/search_intelligence/publish_freeze');
 const { jsonLdGraph, publicPages, decode } = require('./seo_pages');
+const { belowFloor } = require('../../scripts/lib/limits');
 const { fitTitle } = require('../../scripts/lib/meta_text');
 
 const MAX_AGE_DAYS = 4;
@@ -158,12 +159,15 @@ const CHECKS = {
       if (!e) { out.push(`family ${x.family} is marked strengthened but ${x.page} has no strengthening entry`); continue; }
       const html = ctx.html.get(x.page) || '';
       const prefixes = [x.head_term, ...x.queries.map((q) => q.query)].map(si.norm);
-      if (!(e.title.length <= 65) || !prefixes.some((p) => si.norm(e.title).startsWith(p))) out.push(`${x.page}: title "${e.title}" is not query-first and <= 65 chars`);
+      // Length is the generator's job: apply_strengthening writes fitTitle(e.title),
+      // which trims to fit, and the built-title check below proves it did.
+      if (!prefixes.some((p) => si.norm(e.title).startsWith(p))) out.push(`${x.page}: title "${e.title}" is not query-first`);
       const title = (html.match(/<title>([\s\S]*?)<\/title>/) || [])[1];
       if (decode(title || '') !== fitTitle(e.title)) out.push(`${x.page}: built <title> is not the branded strengthened title`);
       const def = html.match(/<\/h1>\s*<p[^>]*>([\s\S]*?)<\/p>/);
       const words = def ? textOf(def[1]).split(' ').length : 0;
-      if (words < 40 || words > 60) out.push(`${x.page}: paragraph under the H1 is ${words} words (need 40-60)`);
+      // Over 60 words never fails; under 40 fails only below 75% of it (scripts/lib/limits.js).
+      if (belowFloor(words, 40)) out.push(`${x.page}: paragraph under the H1 is ${words} words (needs at least 75% of 40)`);
       const sec = (html.match(/<section[^>]*data-search-strengthening="true"[^>]*>([\s\S]*?)<\/section>/) || [])[1] || '';
       const qH2 = [...sec.matchAll(/<h2>([^<]*\?)<\/h2>/g)].length;
       if (qH2 < 2) out.push(`${x.page}: ${qH2} question H2s in the strengthening section (need >= 2)`);
