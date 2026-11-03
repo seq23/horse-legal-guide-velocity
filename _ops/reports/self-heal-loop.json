@@ -1,38 +1,56 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-29T21:21:04.065Z",
+  "generated_at": "2026-11-03T13:46:10.710Z",
   "mode": "repair-non-content",
   "max_attempts": 3,
-  "steps_checked": 64,
-  "status": "CLEAN",
-  "unresolved": [],
+  "steps_checked": 70,
+  "status": "UNRESOLVED",
+  "unresolved": [
+    "validate:meta-uniqueness"
+  ],
   "attempts": [
     {
       "attempt": 1,
       "failed_before": [
-        "validate:generated-surfaces",
-        "validate:links",
-        "validate:public-surfaces"
+        "validate:meta-uniqueness"
       ],
       "actions": [
         {
-          "step": "validate:generated-surfaces",
+          "step": "validate:meta-uniqueness",
           "action": "npm run build",
           "ran": true,
           "repair_exit": 0,
-          "why": "The check reads dist/; build is what writes it. A stale or missing surface is regenerated, not hand-patched."
-        },
+          "why": "Reads titles and meta descriptions from rendered dist/ pages; the build is their only writer."
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "failed_before": [
+        "validate:meta-uniqueness"
+      ],
+      "actions": [
         {
-          "step": "validate:links",
-          "action": "no declared repair",
-          "ran": false
-        },
-        {
-          "step": "validate:public-surfaces",
+          "step": "validate:meta-uniqueness",
           "action": "npm run build",
           "ran": true,
           "repair_exit": 0,
-          "why": "Reads rendered public surfaces under dist/; the build is their only writer."
+          "why": "Reads titles and meta descriptions from rendered dist/ pages; the build is their only writer."
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "failed_before": [
+        "validate:meta-uniqueness"
+      ],
+      "actions": [
+        {
+          "step": "validate:meta-uniqueness",
+          "action": "npm run build",
+          "ran": true,
+          "repair_exit": 0,
+          "why": "Reads titles and meta descriptions from rendered dist/ pages; the build is their only writer."
         }
       ]
     }
