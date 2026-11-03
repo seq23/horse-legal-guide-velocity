@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-10-03..2026-10-30",
-  "gsc_collected_at": "2026-11-02T15:20:16.735Z",
+  "gsc_window": "2026-10-04..2026-10-31",
+  "gsc_collected_at": "2026-11-03T15:18:48.539Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -23,8 +23,8 @@
     {
       "rank": 1,
       "family": "horse sale contract @ /hubs/horse-sale-and-purchase/",
-      "impressions": 57,
-      "weighted_position": 59.9,
+      "impressions": 60,
+      "weighted_position": 59.8,
       "status": "strengthened"
     },
     {
@@ -64,32 +64,32 @@
       "page": "/hubs/horse-sale-and-purchase/",
       "page_kind": "hub",
       "page_intent": "sale_contract",
-      "impressions": 57,
+      "impressions": 60,
       "clicks": 0,
-      "weighted_position": 59.9,
+      "weighted_position": 59.8,
       "best_position": 13,
-      "page_impressions": 86,
-      "page_position": 51.8,
+      "page_impressions": 89,
+      "page_position": 52,
       "top_query": "horse purchase agreement",
       "query_count": 12,
       "queries": [
         {
           "query": "horse purchase agreement",
-          "impressions": 24,
+          "impressions": 25,
           "clicks": 0,
-          "position": 60.9
+          "position": 61.5
+        },
+        {
+          "query": "black horse contract purchase",
+          "impressions": 10,
+          "clicks": 0,
+          "position": 54.1
         },
         {
           "query": "horse sale contract",
           "impressions": 9,
           "clicks": 0,
           "position": 58.7
-        },
-        {
-          "query": "black horse contract purchase",
-          "impressions": 8,
-          "clicks": 0,
-          "position": 55.8
         },
         {
           "query": "horse sales agreement",
@@ -264,8 +264,8 @@
       "clicks": 0,
       "weighted_position": 60.2,
       "best_position": 60,
-      "page_impressions": 6,
-      "page_position": 50.3,
+      "page_impressions": 7,
+      "page_position": 44.6,
       "top_query": "equine liability waiver",
       "query_count": 2,
       "queries": [
