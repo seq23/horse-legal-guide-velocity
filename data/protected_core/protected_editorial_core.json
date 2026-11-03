@@ -10,13 +10,13 @@
     },
     {
       "path": ".github/workflows/drafts-refresh.yml",
-      "sha256": "7a53a6fffdae045ff02366b9ffdfdb4dc820c86070d662fe5e6bb2c965decf2b",
-      "bytes": 3305
+      "sha256": "d982c8295a137c877137f5f4ca85e65e08e46e11c0c604394df64406d4d0532f",
+      "bytes": 3130
     },
     {
       "path": ".github/workflows/publish.yml",
       "sha256": "16d43be1774fb4885a96b60b5aa7d4cbdffd9e29b4a13cbe884aaf697e73bbc5",
-      "bytes": 1359
+      "bytes": 1459
     },
     {
       "path": ".github/workflows/approved-content-email.yml",
@@ -65,8 +65,8 @@
     },
     {
       "path": "scripts/admin/approve_many.js",
-      "sha256": "1ad7ade52c1962cf0e819162c4ed5b9ca2032b35a67941dc731932cc118f8c5c",
-      "bytes": 803
+      "sha256": "4feef5cd0ad42fc3e85924a2c290bbebcab5ae4f08b3aeadfbae1ff4e66c9b2e",
+      "bytes": 1053
     },
     {
       "path": "scripts/admin/approve_one.js",
@@ -90,8 +90,8 @@
     },
     {
       "path": "scripts/admin/reject_many.js",
-      "sha256": "6158e61dad58a5399162cf4fcbb3bbb643c1338cbc23b943f6323a86a2e6b3f5",
-      "bytes": 718
+      "sha256": "ac79267b7713cdc01170ed95ef6467cfc747bb5009af9dd4358e69474b340fca",
+      "bytes": 967
     },
     {
       "path": "scripts/admin/reject_one.js",
@@ -139,5 +139,5 @@
   "baseline_refresh_changed_files": [
     ".github/workflows/approved-content-email.yml"
   ],
-  "baseline_refresh_reason": "Every repo is public: the Approved Content Email recipient now comes from secrets.APPROVED_CONTENT_EMAIL_TO instead of an address written in the workflow. Only the APPROVED_CONTENT_EMAIL_TO env line changed; triggers, schedule, claim/send order, approval gates and protected editorial identity records are unchanged."
+  "baseline_refresh_reason": "Owners ruling 3 Nov 2026 (relayed by Sequoia): the 356 template drafts the owners never approved (last approval 29 Apr) leave the queue; the search-loop engine fills it in approval mode. The 25 approved, published entries are unchanged."
 }

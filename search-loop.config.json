@@ -29,7 +29,8 @@
     "https://wisecovington.com"
   ],
   "mode": "normal",
-  "pace": { "start_per_day": 10, "step_per_week": 5, "cap": 30 },
+  "cap": { "max_per_day": 3 },
+  "approval": { "new_pages": true, "pending_dir": "data/search-loop/pending", "approvals_file": "data/search-loop/approvals.json" },
   "menu_pages_need_approval": true,
   "menu_pages": ["/", "/faq/", "/scenario/", "/compare/", "/reference/", "/coverage/", "/insights/", "/articles/", "/whitepapers/", "/authority/", "/hubs/", "/about/", "/disclaimer/", "/privacy-policy/"],
   "health_gate": "none",

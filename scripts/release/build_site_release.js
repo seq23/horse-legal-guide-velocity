@@ -205,7 +205,9 @@ function typeWord(type) {
     whitepaper: 'White paper',
     deep_authority: 'In-depth guide',
     authority: 'In-depth guide',
-    template: 'Template'
+    template: 'Template',
+    search_question: 'Question page (search engine)',
+    site_change: 'Site-wide change'
   }[type] || String(type || 'Article');
 }
 // A decision on /admin/ has to reach something that can actually change
@@ -231,7 +233,10 @@ function typeWord(type) {
 function writeAdminIndex() {
   const config = readJson('data/system/config.json', {});
   const manifest = readJson('data/admin/editorial_manifest.json', { items: [] });
-  const items = Array.isArray(manifest.items) ? manifest.items : [];
+  // Engine question pages and site-wide changes wait in the same queue (scripts/search_loop/owner_queue.js).
+  const ownerQueue = require('../search_loop/owner_queue');
+  const items = [...(Array.isArray(manifest.items) ? manifest.items : []), ...ownerQueue.queueItems()];
+  ownerQueue.writePreviews(require('path').resolve(process.cwd(), 'dist'));
   const counts = summarizeStatusCounts(items);
   // Warning count the reviewer sees excludes the internal self-heal note.
   const warnings = items.filter((item) => reviewerWarnings(item).length).length;
@@ -241,7 +246,8 @@ function writeAdminIndex() {
   // revoked_from_live instead, which IS how a revoke's history is recorded.
   const revokedCount = items.filter((item) => item.revoked_from_live).length;
   const clusters = [...new Set(items.map((item) => item.source_cluster).filter(Boolean))].sort();
-  const types = [...new Set(items.map((item) => item.content_type).filter(Boolean))].sort();
+  // Every queue type stays filterable even when none is waiting right now.
+  const types = [...new Set(['insight', 'article', 'whitepaper', 'deep_authority', 'search_question', 'site_change', ...items.map((item) => item.content_type).filter(Boolean)])].sort();
 
   // Publication truth. `public_url` is only populated once a draft has actually
   // been rendered to a live page, so it is the only field that can answer

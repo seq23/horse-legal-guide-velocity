@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-03T10:16:02.348Z",
+  "generated_at": "2026-11-03T13:15:32.046Z",
   "reads": "data/authority_scale/query_atlas.json#queries[].publishable",
   "policy": "Full taxonomy coverage is an index, not a publishing queue. Pages may only be generated against evidence_tier T1-T3. T4 synthetic permutations are a hypothesis reserve consulted when a cluster has no evidence, and never publish on their own.",
   "note": "Reporting surface only. Nothing here approves, queues or publishes anything; the publishable flag marks a query as eligible to be written against, never as cleared to go live.",
   "atlas_queries_total": 62,
   "publishable_total": 62,
-  "covered_total": 30,
-  "covered_by_live_page": 14,
-  "covered_by_queued_draft_only": 16,
-  "uncovered_total": 32,
-  "highest_uncovered_rank_score": 3.5,
+  "covered_total": 22,
+  "covered_by_live_page": 22,
+  "covered_by_queued_draft_only": 0,
+  "uncovered_total": 40,
+  "highest_uncovered_rank_score": 192,
   "queries": [
     {
       "query": "equine bill of sale",
@@ -24,14 +24,13 @@
       "keyword_difficulty": 9,
       "intent": "transactional",
       "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-08-equine-bill-of-sale",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "equine bill of sale"
+        "kind": "reference_page",
+        "status": "live",
+        "how": "all query terms present",
+        "matched_on": "How should someone compare bill of sale vs transfer-of-ownership clause in an equine legal situation?"
       },
       "covered": true,
-      "live": false
+      "live": true
     },
     {
       "query": "horse bill of sale",
@@ -45,14 +44,14 @@
       "keyword_difficulty": 17,
       "intent": "transactional",
       "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-08-equine-bill-of-sale",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "horse bill of sale"
+        "kind": "published_page",
+        "id": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "status": "live",
+        "how": "phrase contained in target",
+        "matched_on": "What Should Be Included in a Horse Bill of Sale?"
       },
       "covered": true,
-      "live": false
+      "live": true
     },
     {
       "query": "horse lease agreement",
@@ -66,14 +65,14 @@
       "keyword_difficulty": 12,
       "intent": "transactional",
       "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-09-horse-lease-agreement",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "horse lease agreement"
+        "kind": "published_page",
+        "id": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+        "status": "live",
+        "how": "phrase contained in target",
+        "matched_on": "What Should Be Included in a Horse Lease Agreement?"
       },
       "covered": true,
-      "live": false
+      "live": true
     },
     {
       "query": "horse boarding contract",
@@ -86,14 +85,8 @@
       "demand_basis": "search_volume",
       "keyword_difficulty": 0,
       "intent": "transactional",
-      "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-07-horse-boarding-contract",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "horse boarding contract"
-      },
-      "covered": true,
+      "covered_by": null,
+      "covered": false,
       "live": false
     },
     {
@@ -108,14 +101,14 @@
       "keyword_difficulty": 0,
       "intent": "transactional",
       "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-07-horse-boarding-contract",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "horse boarding agreement"
+        "kind": "published_page",
+        "id": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+        "status": "live",
+        "how": "phrase contained in target",
+        "matched_on": "What Should Be Included in a Horse Boarding Agreement?"
       },
       "covered": true,
-      "live": false
+      "live": true
     },
     {
       "query": "horse purchase agreement",
@@ -129,14 +122,14 @@
       "keyword_difficulty": 2,
       "intent": "transactional",
       "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-10-horse-purchase-agreement",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "horse purchase agreement"
+        "kind": "published_page",
+        "id": "/compare/horse-purchase-agreement-vs-bill-of-sale/",
+        "status": "live",
+        "how": "phrase contained in target",
+        "matched_on": "Horse purchase agreement vs bill of sale"
       },
       "covered": true,
-      "live": false
+      "live": true
     },
     {
       "query": "do i need liability insurance for my horse in nc?",
@@ -256,14 +249,8 @@
       "demand_basis": "impressions_90d",
       "keyword_difficulty": null,
       "intent": null,
-      "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-10-horse-purchase-agreement",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "horse purchase contract"
-      },
-      "covered": true,
+      "covered_by": null,
+      "covered": false,
       "live": false
     },
     {
@@ -277,14 +264,8 @@
       "demand_basis": "impressions_90d",
       "keyword_difficulty": null,
       "intent": null,
-      "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-10-horse-purchase-agreement",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "horse sales agreement"
-      },
-      "covered": true,
+      "covered_by": null,
+      "covered": false,
       "live": false
     },
     {
@@ -520,14 +501,8 @@
       "demand_basis": "impressions_90d",
       "keyword_difficulty": null,
       "intent": null,
-      "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-11-equine-liability-waiver",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "waiver and release of liability"
-      },
-      "covered": true,
+      "covered_by": null,
+      "covered": false,
       "live": false
     },
     {
@@ -556,14 +531,8 @@
       "demand_basis": "impressions_90d",
       "keyword_difficulty": null,
       "intent": null,
-      "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-11-equine-liability-waiver",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "what is a liability release form"
-      },
-      "covered": true,
+      "covered_by": null,
+      "covered": false,
       "live": false
     },
     {
@@ -593,14 +562,14 @@
       "keyword_difficulty": null,
       "intent": null,
       "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-08-equine-bill-of-sale",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "bill of sale horse"
+        "kind": "published_page",
+        "id": "/compare/horse-purchase-agreement-vs-bill-of-sale/",
+        "status": "live",
+        "how": "all query terms present",
+        "matched_on": "Horse purchase agreement vs bill of sale"
       },
       "covered": true,
-      "live": false
+      "live": true
     },
     {
       "query": "can i pay using my stables",
@@ -701,14 +670,13 @@
       "keyword_difficulty": null,
       "intent": null,
       "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-09-horse-lease-agreement",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "equine lease agreement"
+        "kind": "reference_page",
+        "status": "live",
+        "how": "all query terms present",
+        "matched_on": "How should someone compare barn lease vs boarding agreement in an equine legal situation?"
       },
       "covered": true,
-      "live": false
+      "live": true
     },
     {
       "query": "equine purchase agreement",
@@ -722,14 +690,13 @@
       "keyword_difficulty": null,
       "intent": null,
       "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-10-horse-purchase-agreement",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "equine purchase agreement"
+        "kind": "reference_page",
+        "status": "live",
+        "how": "all query terms present",
+        "matched_on": "How should someone compare purchase deposit agreement vs refundable trial payment in an equine legal situation?"
       },
       "covered": true,
-      "live": false
+      "live": true
     },
     {
       "query": "equine veterinary treatment disputes",
@@ -808,14 +775,8 @@
       "demand_basis": "impressions_90d",
       "keyword_difficulty": null,
       "intent": null,
-      "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-insight-2026-09-05-what-happens-if-a-leased-horse-becomes-unsound",
-        "status": "pending",
-        "how": "all query terms present",
-        "matched_on": "State-law, venue, and local-rule lens for What Happens If a Leased Horse Becomes Unsound"
-      },
-      "covered": true,
+      "covered_by": null,
+      "covered": false,
       "live": false
     },
     {
@@ -946,14 +907,8 @@
       "demand_basis": "impressions_90d",
       "keyword_difficulty": null,
       "intent": null,
-      "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-09-horse-lease-agreement",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "leasing a horse contract"
-      },
-      "covered": true,
+      "covered_by": null,
+      "covered": false,
       "live": false
     },
     {
@@ -1030,14 +985,8 @@
       "demand_basis": "impressions_90d",
       "keyword_difficulty": null,
       "intent": null,
-      "covered_by": {
-        "kind": "queued_draft",
-        "id": "draft-template-2026-09-12-horse-trainer-contract",
-        "status": "pending",
-        "how": "exact",
-        "matched_on": "standard training agreement"
-      },
-      "covered": true,
+      "covered_by": null,
+      "covered": false,
       "live": false
     },
     {
