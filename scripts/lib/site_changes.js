@@ -83,4 +83,25 @@ function publicTitle(title) {
   return t;
 }
 
-module.exports = { QUEUE, readQueue, changeApproved, cleanMarkdown, cleanText, publicTitle, INTERNAL_SENTENCE };
+// ---- one-action-link -------------------------------------------------------
+// Every page should end in the site's one action (Boss OS Search Readiness item f9: 11 of 11
+// sampled pages on 3 Nov 2026 ended with no way to act, because the footer links only to the
+// firm's home page). The action itself is read from the one place it is already named,
+// search-loop.config.json's `action`, so this can never drift into a second wording.
+function oneAction(root = process.cwd()) {
+  const file = path.join(root, 'search-loop.config.json');
+  const cfg = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
+  const url = String(cfg.action?.url || '').trim();
+  const label = String(cfg.action?.label || '').trim();
+  if (!url || !label) throw new Error('search-loop.config.json must name action.label and action.url');
+  return { url, label };
+}
+
+/** The footer's action line once the owners approve it, '' until then (byte-identical footer). */
+function oneActionFooterLine(root = process.cwd()) {
+  if (!changeApproved('one-action-link', root)) return '';
+  const { url, label } = oneAction(root);
+  return `\n  <p class="footer-action"><a href="${url}">${label}</a></p>`;
+}
+
+module.exports = { QUEUE, readQueue, changeApproved, cleanMarkdown, cleanText, publicTitle, INTERNAL_SENTENCE, oneAction, oneActionFooterLine };

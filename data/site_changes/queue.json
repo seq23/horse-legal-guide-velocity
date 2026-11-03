@@ -18,6 +18,18 @@
         { "what": "Paragraph on 11 topic hubs", "before": "That cluster logic matters for LLM ingestion and for human readers. …", "after": "People rarely arrive with the whole legal map in mind. … (sentence about LLMs removed)" },
         { "what": "Length of an insight page", "before": "about 970 words", "after": "about 530 words (only the internal notes are removed)" }
       ]
+    },
+    {
+      "id": "one-action-link",
+      "status": "pending",
+      "queued_at": "2026-11-03",
+      "title": "End every page with a direct link to the Wise Covington contact page",
+      "summary": "A reader who finishes a page today has no way to act on it: the footer names Wise Covington PLLC and links to the firm's home page, so every page ends one click short of the contact form. Approving adds ONE line to the shared footer, under the lines already there: \"Contact Wise Covington PLLC about your situation\", linking to https://wisecovington.com/contact (the one action already named in search-loop.config.json). Nothing else changes: no page text, no headline, no layout, no new page, no page address, nothing removed, and no tracking of any kind.",
+      "pages_affected": "every page on the site, through the one shared footer (templates/partial.footer.html); /admin/ and /agency/ have no public footer, and the search-loop question pages already end in the same action",
+      "before_after": [
+        { "what": "Footer, every page", "before": "\u2026 does not constitute legal advice or create an attorney-client relationship. | About \u00b7 Disclaimer \u00b7 Privacy Policy", "after": "\u2026 does not constitute legal advice or create an attorney-client relationship. | Contact Wise Covington PLLC about your situation | About \u00b7 Disclaimer \u00b7 Privacy Policy" },
+        { "what": "Where the link goes", "before": "the firm's home page only (https://wisecovington.com)", "after": "the firm's contact page (https://wisecovington.com/contact), which answered 200 when it was checked on 3 Nov 2026" }
+      ]
     }
   ]
 }

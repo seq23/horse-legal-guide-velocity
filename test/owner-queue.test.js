@@ -57,3 +57,18 @@ test('the cleanup removes internal notes and fixes templated headlines', () => {
   assert.ok(out.includes('Real text.') && out.includes('## Clause map') && out.includes('| a | b |'));
   assert.equal(sc.publicTitle('Why What If I Sold a Horse Without a Contract Creates Confusion'), 'What If I Sold a Horse Without a Contract?');
 });
+
+test('the one action reaches every page only once the owners approve it', () => {
+  const dir = sandbox(); const cwd = process.cwd(); process.chdir(dir);
+  try {
+    fs.writeFileSync('search-loop.config.json', JSON.stringify({ action: { label: 'Contact Wise Covington PLLC about your situation', url: 'https://wisecovington.com/contact' } }));
+    fs.writeFileSync('data/site_changes/queue.json', JSON.stringify({ changes: [{ id: 'one-action-link', status: 'pending', title: 't', summary: 's' }] }));
+    assert.equal(sc.changeApproved('one-action-link'), false);
+    assert.equal(sc.oneActionFooterLine(), '', 'a waiting change adds nothing to the footer');
+    queue.decide(['change:one-action-link'], 'approve');
+    assert.equal(sc.changeApproved('one-action-link'), true);
+    const line = sc.oneActionFooterLine();
+    assert.ok(line.includes('href="https://wisecovington.com/contact"'), line);
+    assert.ok(line.includes('Contact Wise Covington PLLC about your situation'), line);
+  } finally { process.chdir(cwd); }
+});

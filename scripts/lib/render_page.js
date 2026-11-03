@@ -4,6 +4,7 @@ const { writeJsonLd } = require('./write_jsonld');
 const { writeCanonicalTag, toAbsoluteUrl } = require('./write_canonical_tag');
 const { clusterIndex, siblingBlock } = require('./site_navigation');
 const { fitTitle, fitDescription } = require('./meta_text');
+const { oneActionFooterLine } = require('./site_changes');
 
 function readText(relPath) {
   return fs.readFileSync(path.resolve(process.cwd(), relPath), 'utf8');
@@ -138,7 +139,11 @@ function renderIconAndSocialHead({ title, description, url, canonicalUrl, ogType
 function renderLayout({ title: rawTitle, description, url, canonicalUrl, body, schemaType = 'Article', includeBrandChrome = true, schemaOptions = {} }) {
   const config = readConfig();
   const title = fitTitle(rawTitle);
-  const footer = includeBrandChrome ? readText('templates/partial.footer.html') : '';
+  // Owner-approved site change (data/site_changes/queue.json, one-action-link): until the
+  // owners approve it in /admin/ this adds nothing and the footer is byte-identical.
+  const footer = includeBrandChrome
+    ? readText('templates/partial.footer.html').replace('</footer>', `${oneActionFooterLine()}\n</footer>`)
+    : '';
   const brandHeader = includeBrandChrome ? renderBrandHeader(config) : '';
   return `<!doctype html>
 <html lang="en">
