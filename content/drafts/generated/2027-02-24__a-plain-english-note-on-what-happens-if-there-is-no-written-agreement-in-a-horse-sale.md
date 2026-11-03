@@ -1,5 +1,5 @@
 ---
-title: Remedies, exit paths, and damage control for What Happens If There Is No Written Agreement in a Horse Sale
+title: State-law, venue, and local-rule lens for What Happens If There Is No Written Agreement in a Horse Sale
 entry_id: continuity-insight-2027-02-24-what-happens-if-there-is-no-written-agreement-in-a-hor
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2027-02-24/a-plain-english-note-on-what-happens-if-there-is-no-wri
 review_status: pending
 github_path: content/drafts/generated/2027-02-24__a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale.md
 uniqueness_status: passed
-uniqueness_strategy: remedies-exit
+uniqueness_strategy: state-venue
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# Remedies, exit paths, and damage control for What Happens If There Is No Written Agreement in a Horse Sale
+# State-law, venue, and local-rule lens for What Happens If There Is No Written Agreement in a Horse Sale
 
 ## Citation-ready answer
 
-The practical question behind **What Happens If There Is No Written Agreement in a Horse Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on what exit paths, cure opportunities, and damage-control steps may exist before escalation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **What Happens If There Is No Written Agreement in a Horse Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to what exit paths, cure opportunities, and damage-control steps may exist before escalation. It is designed to be materially distinct from /drafts/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-12-05/the-quiet-risk-inside-what-happens-if-a-horse-becomes-lame-after-sale/, while remaining educational and approval-gated.
 
-## Distinctive focus: Remedies, exit paths, and damage control
+## Distinctive focus: State-law, venue, and local-rule lens
 
-For this version, the useful lens is **remedies, exit paths, and damage control**. That means the reader should identify the termination, cure, return, refund, and default facts that actually belong to **What Happens If There Is No Written Agreement in a Horse Sale**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **state-law, venue, and local-rule lens**. That means the reader should identify the jurisdiction, venue, choice of law, statute, and warning language facts that actually belong to **What Happens If There Is No Written Agreement in a Horse Sale**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**happens · written · agreement · horse · sale · plain · english · note**
+**happens · written · agreement · horse · sale · remedies · exit · paths**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| happens | Identify the termination facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| written | Identify the cure facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| agreement | Identify the return facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| horse | Identify the refund facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| sale | Identify the default facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| happens | Identify the jurisdiction facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| written | Identify the venue facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| agreement | Identify the choice of law facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| horse | Identify the statute facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| sale | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **What Happens If There Is No Written Agreement in a Horse Sale** before anyone acts?
-2. Collect the termination, cure, and return evidence instead of relying on memory.
+2. Collect the jurisdiction, venue, and choice of law evidence instead of relying on memory.
 3. Separate the roles connected to happens, written, agreement so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Happens If There Is No Written Agreement in a Horse Sale**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The remedies, exit paths, and damage control lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **What Happens If There Is No Written Agreement in a Horse Sale**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The state-law, venue, and local-rule lens lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 

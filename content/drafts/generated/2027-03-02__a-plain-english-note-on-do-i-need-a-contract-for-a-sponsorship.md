@@ -1,5 +1,5 @@
 ---
-title: State-law, venue, and local-rule lens for Do I Need a Contract for a Sponsorship
+title: Operational handoff and responsibility map for Do I Need a Contract for a Sponsorship
 entry_id: continuity-insight-2027-03-02-do-i-need-a-contract-for-a-sponsorship
 content_type: insight
 cadence: daily
@@ -11,20 +11,20 @@ slug: /drafts/2027-03-02/a-plain-english-note-on-do-i-need-a-contract-for-a-spon
 review_status: pending
 github_path: content/drafts/generated/2027-03-02__a-plain-english-note-on-do-i-need-a-contract-for-a-sponsorship.md
 uniqueness_status: passed
-uniqueness_strategy: state-venue
+uniqueness_strategy: operations-handoff
 ---
 <!-- UNIQUE_SELF_HEAL_START -->
-# State-law, venue, and local-rule lens for Do I Need a Contract for a Sponsorship
+# Operational handoff and responsibility map for Do I Need a Contract for a Sponsorship
 
 ## Citation-ready answer
 
-The practical question behind **Do I Need a Contract for a Sponsorship** is not answered safely by repeating a general horse-contract overview. This version focuses on which parts of the question may change by state, venue, statutory language, or filing deadline. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
+The practical question behind **Do I Need a Contract for a Sponsorship** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to which parts of the question may change by state, venue, statutory language, or filing deadline. It is designed to be materially distinct from /drafts/2026-07-07/why-do-i-need-a-contract-for-a-sponsorship-creates-confusion/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-10-23/why-what-should-be-in-an-equestrian-sponsorship-agreement-creates-confusion/, while remaining educational and approval-gated.
 
-## Distinctive focus: State-law, venue, and local-rule lens
+## Distinctive focus: Operational handoff and responsibility map
 
-For this version, the useful lens is **state-law, venue, and local-rule lens**. That means the reader should identify the jurisdiction, venue, choice of law, statute, and warning language facts that actually belong to **Do I Need a Contract for a Sponsorship**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
+For this version, the useful lens is **operational handoff and responsibility map**. That means the reader should identify the care, maintenance, transport, boarding, and training facts that actually belong to **Do I Need a Contract for a Sponsorship**. Those details determine whether the issue is a documentation problem, a timing problem, an authority problem, a risk-allocation problem, or some combination of them.
 
 A horse-world relationship can feel informal even when the financial and operational consequences are significant. The self-healed draft therefore avoids a broad recap and asks a narrower set of questions: who had control, what changed hands, which record captured the change, what notice was given, and what action would make the situation harder to unwind.
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**need · contract · sponsorship · plain · english · note · intellectual · property**
+**need · contract · sponsorship · state · law · venue · local · rule**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -40,23 +40,23 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 
 | Query-specific issue | Evidence to locate | Self-healing rule |
 | --- | --- | --- |
-| need | Identify the jurisdiction facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| contract | Identify the venue facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| sponsorship | Identify the choice of law facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| plain | Identify the statute facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| english | Identify the warning language facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| need | Identify the care facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| contract | Identify the maintenance facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| sponsorship | Identify the transport facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| state | Identify the boarding facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| law | Identify the training facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 
 1. Define the narrow decision: what must be decided about **Do I Need a Contract for a Sponsorship** before anyone acts?
-2. Collect the jurisdiction, venue, and choice of law evidence instead of relying on memory.
+2. Collect the care, maintenance, and transport evidence instead of relying on memory.
 3. Separate the roles connected to need, contract, sponsorship so authority and responsibility are not blurred.
 4. Identify any state-specific deadline, venue, warning language, or remedy that cannot be answered safely in a general guide.
 5. Route the fact-specific issue for legal review before money, possession, liability, or reputation is put at greater risk.
 
 ## Horse-world pressure test
 
-Imagine the parties agree on the broad story but disagree about one operational detail tied to **Do I Need a Contract for a Sponsorship**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The state-law, venue, and local-rule lens lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
+Imagine the parties agree on the broad story but disagree about one operational detail tied to **Do I Need a Contract for a Sponsorship**. One person remembers a promise; another points to a document; a third person handled the horse, payment, transport, care, or communication. The operational handoff and responsibility map lens asks which fact can be verified, when it occurred, who had authority, and what consequence followed. That pressure test is more useful than repeating that written agreements are generally important.
 
 ## What changes the analysis
 

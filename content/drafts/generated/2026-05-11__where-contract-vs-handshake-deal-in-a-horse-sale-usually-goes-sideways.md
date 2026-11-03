@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Contract vs Handshake Deal in a Horse Sale** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/, while remaining educational and approval-gated.
+This draft is intentionally scoped to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 

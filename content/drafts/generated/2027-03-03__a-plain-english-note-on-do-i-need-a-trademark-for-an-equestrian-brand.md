@@ -20,7 +20,7 @@ uniqueness_strategy: operations-handoff
 
 The practical question behind **Do I Need a Trademark for an Equestrian Brand** is not answered safely by repeating a general horse-contract overview. This version focuses on how day-to-day responsibilities are handed off and documented in the horse-world operation. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-07-05/what-equestrians-often-miss-about-do-i-need-a-trademark-for-an-equestrian-brand/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how day-to-day responsibilities are handed off and documented in the horse-world operation. It is designed to be materially distinct from /drafts/2026-10-19/how-to-think-about-trademark-vs-llc-name-for-a-horse-business-before-you-act/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Operational handoff and responsibility map
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**need · trademark · equestrian · brand · plain · english · note · intellectual**
+**need · trademark · equestrian · brand · operational · handoff · responsibility · map**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
@@ -44,7 +44,7 @@ Those concepts are not decorative keywords. They are the boundaries for the anal
 | trademark | Identify the maintenance facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | equestrian | Identify the transport facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 | brand | Identify the boarding facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
-| plain | Identify the training facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
+| operational | Identify the training facts tied specifically to this question. | Keep the source, date, person, and document connected so the record is usable. |
 
 ## Decision sequence
 

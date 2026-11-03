@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **What Happens If I Don’t Post the Required Sign** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-06-14/the-quiet-risk-inside-what-happens-if-i-don-t-post-the-required-sign/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-09-16/a-plain-english-note-on-what-happens-if-a-contract-does-not-address-responsibility/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 

@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **Can a Sponsor Use My Image Without Permission** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-07-09/how-to-think-about-can-a-sponsor-use-my-image-without-permission-before-you-act/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-08-23/a-plain-english-note-on-what-if-i-sold-a-horse-without-a-contract/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 
@@ -32,7 +32,7 @@ A horse-world relationship can feel informal even when the financial and operati
 
 This page is differentiated around the following query-specific concepts:
 
-**sponsor · use · image · without · permission · plain · english · note**
+**sponsor · use · image · without · permission · notice · communication · controls**
 
 Those concepts are not decorative keywords. They are the boundaries for the analysis. If a fact does not connect to one of them, it may belong in a different page instead of being repeated here.
 
