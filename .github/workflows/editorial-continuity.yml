@@ -1,9 +1,8 @@
 name: Editorial Continuity Sidecar
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "10 4 * * 2"  # America/Chicago, all year
-      timezone: America/Chicago
+  # Weekly schedule removed 3 Nov 2026: it extended the old template-draft
+  # runway; the search-loop engine fills the owners' queue now. Manual runs only.
 permissions:
   contents: write
 concurrency:

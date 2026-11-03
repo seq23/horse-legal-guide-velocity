@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 import fs from 'node:fs';import crypto from 'node:crypto';
+// Owners' ruling, 3 Nov 2026: the search-loop engine fills the owners' approval
+// queue (search-loop.config.json "approval"), replacing these template drafts.
+// While that is on, this generator adds nothing and says so.
+{const SL=(()=>{try{return JSON.parse(fs.readFileSync('search-loop.config.json','utf8'))}catch{return null}})();if(SL?.approval?.new_pages===true){fs.mkdirSync('data/continuity',{recursive:true});fs.writeFileSync('data/continuity/editorial_continuity_report.json',JSON.stringify({schema_version:'1.0',run_date:process.env.CONTINUITY_RUN_DATE||new Date().toISOString().slice(0,10),new_pending_entries:0,new_entry_targets:[],stopped:'REPLACED_BY_SEARCH_LOOP'},null,2)+'\n');console.log('NAMED STOP [REPLACED_BY_SEARCH_LOOP] the search-loop engine fills the owners\' queue (approval mode); no template drafts added');process.exit(0);}}
 const RUN=process.env.CONTINUITY_RUN_DATE||new Date().toISOString().slice(0,10),HORIZON=Number(process.env.CONTINUITY_HORIZON_DAYS||120),DRY=process.argv.includes('--dry-run');
 // Cadence policy: 2026 is locked and client-approved; the from_2027 lane is
 // adjustable without touching this generator. Both lanes emit status:pending

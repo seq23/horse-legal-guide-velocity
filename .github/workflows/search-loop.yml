@@ -1,9 +1,13 @@
 name: Search Loop
 
-# The shared search growth engine (seq23/search-loop @v1). Owner ruling 1 Nov 2026:
+# The shared search growth engine (seq23/search-loop, pinned @v1.4.0). Owner ruling 1 Nov 2026:
 # find easy searches weekly, publish gated question pages under /questions/ daily,
 # check every page at 2/4/8 weeks, strengthen / undo / merge, upload the weekly
 # report artifact "search-loop-week".
+# Approval mode (owners' ruling, 3 Nov 2026): every new page waits in the owners' queue
+# (/admin/, data/search-loop/pending/) and goes live only once approved there;
+# search-loop.config.json "approval". Pinned, not @v1, so a moved tag can never
+# publish without approval. 3 new pages a day at most (cap.max_per_day).
 # Horse ruling (1 Nov 2026): question pages are HIDDEN - never in the nav, a hub or
 # a section index; linked only through Related questions blocks, the sitemap and
 # IndexNow (scripts/search_loop/fold_question_pages.js). Menu pages need client
@@ -31,9 +35,9 @@ concurrency:
 
 jobs:
   search-loop:
-    uses: seq23/search-loop/.github/workflows/search-loop.yml@v1
+    uses: seq23/search-loop/.github/workflows/search-loop.yml@v1.4.0
     with:
-      engine_ref: v1
+      engine_ref: v1.4.0
       stage: ${{ inputs.stage || 'auto' }}
       setup_command: npm ci --ignore-scripts && npm run build >/dev/null && node scripts/search_loop/mirror_site.js
       post_build_command: node scripts/search_loop/mirror_site.js --clean && npm run build
@@ -44,7 +48,7 @@ jobs:
       GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
       BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
-      # $0 model lanes (engine v1.2.3): Gemini free tier (no-billing project), metered Workers AI
+      # $0 model lanes (engine v1.2.3+): Gemini free tier (no-billing project), metered Workers AI
       # (usage read with the analytics token, model run with the Workers AI token; 600 neurons/day).
       CLOUDFLARE_API_TOKEN: ${{ secrets.SEARCH_LOOP_CF_USAGE_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.SEARCH_LOOP_CF_ACCOUNT_ID }}

@@ -1,10 +1,13 @@
 const { loadState, saveState, syncCalendar, rejectEntry } = require('./_common');
-const ids = process.argv.slice(2).filter(Boolean);
-if (!ids.length) throw new Error('Usage: node scripts/admin/reject_many.js <entry_id> [entry_id...]');
+const allIds = process.argv.slice(2).filter(Boolean);
+if (!allIds.length) throw new Error('Usage: node scripts/admin/reject_many.js <entry_id> [entry_id...]');
+// sl:<slug> (search-loop pages) and change:<id> (site changes) are decided in the owners' queue module.
+const queued = require('../search_loop/owner_queue').decide(allIds, 'reject');
+const ids = queued.rest;
 const { backlog, calendar } = loadState();
 const byId = new Map(backlog.map((b) => [b.entry_id, b]));
-let rejected = 0;
-const skipped = [];
+let rejected = queued.done.length;
+const skipped = [...queued.skipped];
 for (const id of ids) {
   const entry = byId.get(id);
   if (!entry) { skipped.push({ id, reasons: ['unknown entry_id'] }); continue; }

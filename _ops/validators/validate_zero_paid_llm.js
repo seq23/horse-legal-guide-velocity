@@ -36,7 +36,7 @@ const PROVIDER_URL = /openrouter\.ai\/api|generativelanguage\.googleapis\.com|ap
 const PAID_MODEL_SLUG = /\b(anthropic\/claude[\w.-]*|openai\/gpt[\w.-]*|google\/gemini[\w.-]*|perplexity\/[\w.-]+)\b/;
 const OTHER_MODEL_KEYS = /\b(GEMINI_API_KEY|GOOGLE_GEMINI_API_KEY|OPENAI_API_KEY|ANTHROPIC_API_KEY|PERPLEXITY_API_KEY)\b/;
 // The shared search-loop engine as a reusable job (its route is $0-only).
-const ENGINE_CALLER = /^\s+uses:\s*seq23\/search-loop\/\.github\/workflows\/search-loop\.yml@v\d+\s*$/m;
+const ENGINE_CALLER = /^\s+uses:\s*seq23\/search-loop\/\.github\/workflows\/search-loop\.yml@v\d+(?:\.\d+\.\d+)?\s*$/m;
 const ROUTERS = ['scripts/llm/free_router.js', 'scripts/llm/free_router.py'];
 
 // ---------------------------------------------------------------- A. config
@@ -144,7 +144,7 @@ for (const wf of wfs) {
   // The search-loop engine's Gemini lane is $0 only with the vetted no-billing key: the one line
   // `GEMINI_API_KEY: ${{ secrets.SEARCH_LOOP_GEMINI_API_KEY }}` in an engine caller is that lane.
   // Any other Gemini/OpenAI/Anthropic/Perplexity key, or that line outside an engine caller, fails.
-  const engineCaller = /^\s+uses:\s*seq23\/search-loop\/\.github\/workflows\/search-loop\.yml@v\d+\s*$/m.test(text);
+  const engineCaller = /^\s+uses:\s*seq23\/search-loop\/\.github\/workflows\/search-loop\.yml@v\d+(?:\.\d+\.\d+)?\s*$/m.test(text);
   const keyText = engineCaller ? text.split('\n').filter((l) => !/^\s+GEMINI_API_KEY:\s*\$\{\{\s*secrets\.SEARCH_LOOP_GEMINI_API_KEY\s*\}\}\s*$/.test(l)).join('\n') : text;
   if (OTHER_MODEL_KEYS.test(keyText)) fail(`${wf} is scheduled and passes a non-router model key (${keyText.match(OTHER_MODEL_KEYS)[1]})`);
   const lines = text.split('\n');

@@ -1,0 +1,23 @@
+{
+  "changes": [
+    {
+      "id": "internal-notes-cleanup",
+      "status": "pending",
+      "queued_at": "2026-11-03",
+      "title": "Remove internal editing notes from 36 published pages and fix 15 broken headlines",
+      "summary": "Some published pages still show notes that were meant only for the writing process: sections called \"Draft summary\", \"Review notes\" (\"Manual mode is active. Do not publish without approval.\"), \"Canonical routing block\", \"Self-healing outcome\", \"Question fingerprint\", \"Evidence map\" and \"Additional context\", and sentences about the page itself (for example \"That cluster logic matters for LLM ingestion\"). Approving removes them, keeps every reader section, table and link, renames the \"Defensible data atom\" tables to plain names (\"Clause map\", \"Risk matrix\"), and turns headlines like \"Why What If I Sold a Horse Without a Contract Creates Confusion\" into the question itself. No page address changes and no page is removed.",
+      "pages_affected": "36 pages: 20 insights, 3 articles, 2 white papers and 11 topic hubs (plus the insights, articles and white papers index pages that list their headlines)",
+      "before_after": [
+        { "what": "Headline, /insights/2026-05-08/…", "before": "Why What If I Sold a Horse Without a Contract Creates Confusion", "after": "What If I Sold a Horse Without a Contract?" },
+        { "what": "Headline, /insights/2026-05-04/…", "before": "How to Think About Can a Seller Refuse to Take a Horse Back Before You Act", "after": "Can a Seller Refuse to Take a Horse Back?" },
+        { "what": "Section on 8 pages", "before": "Review notes: \"Manual mode is active.\" \"Do not publish without approval.\"", "after": "Section removed" },
+        { "what": "Section on 8 pages", "before": "Draft summary / Canonical routing block / Additional context", "after": "Sections removed" },
+        { "what": "Sections on 17 pages", "before": "Self-healing outcome / Question fingerprint / Evidence map for this question / Distinctive focus", "after": "Sections removed" },
+        { "what": "Table heading on 25 pages", "before": "Defensible data atom: clause map", "after": "Clause map (table kept)" },
+        { "what": "Line under every headline", "before": "This page is scheduled publishing output, not legal advice.", "after": "General educational information for the horse world, not legal advice." },
+        { "what": "Paragraph on 11 topic hubs", "before": "That cluster logic matters for LLM ingestion and for human readers. …", "after": "People rarely arrive with the whole legal map in mind. … (sentence about LLMs removed)" },
+        { "what": "Length of an insight page", "before": "about 970 words", "after": "about 530 words (only the internal notes are removed)" }
+      ]
+    }
+  ]
+}
