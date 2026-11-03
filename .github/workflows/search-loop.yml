@@ -50,7 +50,17 @@ jobs:
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       # $0 model lanes (engine v1.2.3+): Gemini free tier (no-billing project), metered Workers AI
       # (usage read with the analytics token, model run with the Workers AI token; 600 neurons/day).
-      CLOUDFLARE_API_TOKEN: ${{ secrets.SEARCH_LOOP_CF_USAGE_TOKEN }}
+      # CLOUDFLARE_API_TOKEN is the engine's ONE read token, and it reads three things: today's
+      # Workers AI neurons (account aiInferenceAdaptiveGroups) and the two weekly AI numbers
+      # Search Readiness item f11 is measured on - AI-bot reads from the zone's
+      # httpRequestsAdaptiveGroups by user agent, and, on this free zone (which has no
+      # clientRefererHost field), AI-referral visits from Cloudflare Web Analytics
+      # (account rumPageloadEventsAdaptiveGroups). SEARCH_LOOP_CF_USAGE_TOKEN held the Workers AI
+      # usage scope alone, so every day's analytics read was refused ("does not have permission
+      # com.cloudflare.api.account.z...") and the weekly report carried "not read" for both numbers
+      # from 1 Nov 2026 on. SEARCH_LOOP_CF_ANALYTICS_TOKEN holds all three reads; each was probed
+      # read-only against this zone on 3 Nov 2026 before this line changed.
+      CLOUDFLARE_API_TOKEN: ${{ secrets.SEARCH_LOOP_CF_ANALYTICS_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.SEARCH_LOOP_CF_ACCOUNT_ID }}
       CLOUDFLARE_WORKERS_AI_TOKEN: ${{ secrets.SEARCH_LOOP_CF_WORKERS_AI_TOKEN }}
       GEMINI_API_KEY: ${{ secrets.SEARCH_LOOP_GEMINI_API_KEY }}

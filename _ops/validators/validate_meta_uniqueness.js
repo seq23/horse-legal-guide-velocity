@@ -33,7 +33,8 @@ function listed(items) {
 
 const dist = path.resolve(process.cwd(), 'dist');
 let checked = 0;
-let missing = 0;
+let publicChecked = 0;
+const missing = [];
 const byTitle = new Map();
 const byDesc = new Map();
 const canonicalOf = new Map();
@@ -46,9 +47,15 @@ if (fs.existsSync(dist)) {
     checked++;
     const t = html.match(/<title>([^<]+)<\/title>/);
     const d = html.match(/<meta name="description" content="([^"]+)">/);
-    if (!t || !d) { missing++; continue; }
-    // Operator surfaces and noindex pages are not in any crawl invitation.
+    // Operator surfaces and noindex pages are not in any crawl invitation, so the whole meta
+    // contract - the missing-title/description count below included - is about PUBLIC pages.
+    // Counting an operator surface here turned main red on 3 Nov 2026: the search-loop engine
+    // queued three new question pages for the owners' approval, and /admin/search-loop/<slug>/
+    // previews their pre-fold HTML, which carries no description yet (the fold step writes one
+    // before the page is ever served, and the served page has it). Nothing public was wrong.
     if (/^\/(admin|agency)\//.test(rel) || /<meta name="robots" content="[^"]*noindex/i.test(html)) continue;
+    publicChecked++;
+    if (!t || !d) { missing.push(rel); continue; }
     const title = decode(t[1]).trim();
     const desc = decode(d[1]).trim();
     const c = html.match(/<link rel="canonical" href="([^"]+)"/i);
@@ -68,8 +75,9 @@ if (fs.existsSync(dist)) {
 if (checked === 0) {
   fail('GATE_EXAMINED_NOTHING: validate:meta-uniqueness examined 0 rendered pages. dist/ was absent or empty, so "no page is missing a title" was true of nothing. Run npm run build first.');
 } else {
-  if (missing > 0) fail(`${missing} rendered pages missing title or meta description`);
-  if (canonicalOf.size === 0) fail('GATE_EXAMINED_NOTHING: every rendered page was skipped as operator or noindex; no public page was checked.');
+  if (publicChecked === 0) fail('GATE_EXAMINED_NOTHING: every rendered page was skipped as operator or noindex; no public page was checked.');
+  if (missing.length > 0) fail(`${missing.length} public pages missing title or meta description:\n  ${listed(missing)}`);
+  if (canonicalOf.size === 0) fail('GATE_EXAMINED_NOTHING: no public page named a canonical, so no title or description was compared.');
   const dupTitles = [...byTitle.entries()].filter(([, v]) => v.length > 1).map(([k, v]) => `"${k}" x${v.length}: ${v.slice(0, 3).join(', ')}`);
   if (dupTitles.length) fail(`${dupTitles.length} titles shared by self-canonical pages:\n  ${listed(dupTitles)}`);
   const dupDescs = [...byDesc.entries()].filter(([, v]) => v.length > 1).map(([k, v]) => `"${k.slice(0, 80)}..." x${v.length}: ${v.slice(0, 3).join(', ')}`);
