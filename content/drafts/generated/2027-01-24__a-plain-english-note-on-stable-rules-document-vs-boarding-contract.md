@@ -20,7 +20,7 @@ uniqueness_strategy: notice-communication
 
 The practical question behind **How should someone compare stable rules document vs boarding contract in an equine legal situation** is not answered safely by repeating a general horse-contract overview. This version focuses on how notice language, communication channels, and response timing shape the next responsible move. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion.
 
-This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2026-11-22/why-am-i-overreacting-or-is-this-risky-creates-confusion/, while remaining educational and approval-gated.
+This is a later scheduled treatment of the same underlying query, so it is intentionally narrowed to how notice language, communication channels, and response timing shape the next responsible move. It is designed to be materially distinct from /drafts/2027-01-07/a-plain-english-note-on-boarding-agreement-vs-training-agreement/, while remaining educational and approval-gated.
 
 ## Distinctive focus: Notice and communication controls
 
