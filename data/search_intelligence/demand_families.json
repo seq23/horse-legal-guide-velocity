@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-10-04..2026-10-31",
-  "gsc_collected_at": "2026-11-03T15:18:48.539Z",
+  "gsc_window": "2026-10-05..2026-11-01",
+  "gsc_collected_at": "2026-11-04T15:19:35.477Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -23,8 +23,8 @@
     {
       "rank": 1,
       "family": "horse sale contract @ /hubs/horse-sale-and-purchase/",
-      "impressions": 60,
-      "weighted_position": 59.8,
+      "impressions": 62,
+      "weighted_position": 60.5,
       "status": "strengthened"
     },
     {
@@ -64,20 +64,20 @@
       "page": "/hubs/horse-sale-and-purchase/",
       "page_kind": "hub",
       "page_intent": "sale_contract",
-      "impressions": 60,
+      "impressions": 62,
       "clicks": 0,
-      "weighted_position": 59.8,
+      "weighted_position": 60.5,
       "best_position": 13,
-      "page_impressions": 89,
-      "page_position": 52,
+      "page_impressions": 92,
+      "page_position": 52.9,
       "top_query": "horse purchase agreement",
       "query_count": 12,
       "queries": [
         {
           "query": "horse purchase agreement",
-          "impressions": 25,
+          "impressions": 26,
           "clicks": 0,
-          "position": 61.5
+          "position": 62.3
         },
         {
           "query": "black horse contract purchase",
@@ -92,6 +92,12 @@
           "position": 58.7
         },
         {
+          "query": "horse bill of sale",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 79.3
+        },
+        {
           "query": "horse sales agreement",
           "impressions": 3,
           "clicks": 0,
@@ -102,12 +108,6 @@
           "impressions": 3,
           "clicks": 0,
           "position": 60.7
-        },
-        {
-          "query": "horse bill of sale",
-          "impressions": 3,
-          "clicks": 0,
-          "position": 77.3
         },
         {
           "query": "horse sale agreement",
@@ -368,8 +368,8 @@
       "clicks": 0,
       "weighted_position": 20.5,
       "best_position": 11,
-      "page_impressions": 9,
-      "page_position": 21.1,
+      "page_impressions": 8,
+      "page_position": 23.3,
       "top_query": "you have decided that you are going to start a new business giving horseback riding lessons. you need to decide which legal form you will use for your business. choose a sole proprietorship, partnership, or corporation. write a paragraph explaining why you chose the legal form you did and the advantages and disadvantages of your choice.",
       "query_count": 2,
       "queries": [
@@ -390,7 +390,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 7 of 15 by impressions; landing page at 21.1 position with 9 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 7 of 15 by impressions; landing page at 23.3 position with 8 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "horse lease agreement @ /hubs/horse-lease-and-trial/",
