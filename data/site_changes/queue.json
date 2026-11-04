@@ -77,6 +77,59 @@
       "approved_at": "2026-11-06",
       "approved_by": "Sequoia Taylor (site manager)",
       "note": "Site fixes (contact link, removing internal notes) do not wait for the owners; new posts still do (Sequoia, 6 Nov 2026)."
+    },
+    {
+      "id": "search-quality-2026w45",
+      "status": "pending",
+      "queued_at": "2026-11-03",
+      "brief_ids": [
+        "so-horselegalguide.com-outcome",
+        "so-horselegalguide.com-quality"
+      ],
+      "title": "Replace repeated writing slots in purchase, lease injury, demand-letter and liability guides",
+      "summary": "The weekly search check found repeated generic advice and missing opening definitions, publisher credits and dates. This draft changes the shared renderer for four question intents, across query and editorial pages, plus the Authority Briefs landing template. The replacement writing distinguishes purchase terms, leased-horse unsoundness, demand-letter triage and trainer versus owner roles. Existing navigation destinations and useful editorial tables remain. No URL changes, removals or redirects. It is not a claim that an attorney has reviewed the draft, or that this will restore rankings. Nothing changes publicly until you approve this row.",
+      "pages_affected": "7 indexable public pages: the matching purchase FAQ and insight, unsoundness lease guide and scenario, demand-letter scenario, trainer/owner comparison, and /authority/. Future pages with those intents use the same writing slots; reference routing surfaces and unrelated intents keep their current content.",
+      "preview_paths": [
+        "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
+        "/authority/",
+        "/scenario/a-leased-horse-became-unsound-who-pays/",
+        "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
+        "/compare/trainer-liability-vs-owner-liability/"
+      ],
+      "before_after": [
+        {
+          "what": "First explanation",
+          "before": "Generic framing repeated across unrelated questions; 19–37 word opening paragraphs.",
+          "after": "40–60 word definitions and distinct topic-specific expense, document, role and response questions."
+        },
+        {
+          "what": "Attribution and dates",
+          "before": "No visible publisher credit or update date on the sampled scenario and comparison pages.",
+          "after": "Visible existing publisher (Wise Covington PLLC), with the actual approval date as the content update date. No invented attorney review."
+        },
+        {
+          "what": "Search outcome diagnosis",
+          "before": "621 impressions in 2026-10-05..2026-11-01 versus 844 in 2026-09-07..2026-10-04.",
+          "after": "No technical outage reproduced. Four losing landings still indexed and self-canonical. Quality is a confirmed defect and a possible contributor, not a proven explanation of the decline."
+        }
+      ],
+      "diagnosis": {
+        "checked_at": "2026-11-04",
+        "confirmed": [
+          "Fresh read-only Search Console property lookup succeeded; both submitted sitemaps have zero errors and zero warnings. The sitemap API indexed=0 field is not the Pages report and is not evidence of zero indexed URLs.",
+          "Fresh URL Inspection: /, /faq/, /insights/ and /scenario/ all PASS, Submitted and indexed, INDEXING_ALLOWED, robots ALLOWED, Google canonical equals user canonical.",
+          "Independent live crawl: 325 of 325 sitemap pages, 593 targets checked, no reported defects.",
+          "Daily impressions: 2026-09-22..28 = 215; 2026-09-29..10-05 = 134. The decline precedes October 11 SEO and October 22 host/cache changes.",
+          "Git history has no robots.txt change during the comparison windows. September 29 metadata collision repair changed editorial descriptions; October 11 introduced icons/social metadata and a measured publishing freeze; October 22 introduced www-to-apex routing and caching. No reproduced canonical or noindex regression on the losing landings.",
+          "September 25 commit 6a974f8829 deliberately canonicalized duplicate /reference/ copies to their mapped answer pages and removed 262 copies from the sitemap (561 to 299 then). It also added single-cluster root redirects. September 25 and 27 title-limit changes and September 29 editorial-description changes were inspected; the losing landings retain their own canonicals.",
+          "Fresh Search Console page-grouped queries for the two comparison windows: /reference/ impressions 154 to 89; all page-grouped impressions 1338 to 635. These are page-aggregation totals, not the property-aggregation totals 844 to 621. Reference losses do not alone explain the broader decline."
+        ],
+        "not_read": [
+          "Search Console full Pages history and Manual actions: the in-app browser is unavailable; URL Inspection is a current point-in-time check and does not replace either report."
+        ],
+        "conclusion": "The cause of the impression decline remains unproven. The September 25 canonical consolidation overlaps the decline but correctly points duplicate references to their answer pages; current inspections do not reproduce an unintended canonical change on the losing landings. Do not reverse it or change robots, hosts, redirects or sitemap submissions on this evidence. The quality repair is drafted separately from any claim about rankings.",
+        "measurement": "After client approval, compare the same repaired URLs in successive 28-day Search Console windows and repeat the five-page quality check. If visibility continues falling, Danielle resumes the missing Pages-history and Manual-actions reads before proposing an indexing intervention."
+      }
     }
   ]
 }

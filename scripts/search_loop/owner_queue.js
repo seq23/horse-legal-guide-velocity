@@ -136,8 +136,29 @@ function writePreviews(dist) {
   for (const c of (read(CHANGES, { changes: [] }).changes || []).filter((x) => x.status === 'pending')) {
     const dir = path.join(dist, 'admin', 'site-changes', c.id);
     fs.mkdirSync(dir, { recursive: true });
+    const examples = [];
+    for (const [i, url] of (c.preview_paths || []).entries()) {
+      // Fixed in-repo paths only: a queue record cannot read outside dist.
+      if (!/^\/(?:[a-z0-9-]+\/)*$/.test(url)) throw new Error('Invalid site-change preview path');
+      const src = path.join(dist, url.replace(/^\//, ''), 'index.html');
+      if (!fs.existsSync(src)) throw new Error(`Missing site-change preview source: ${url}`);
+      const html = fs.readFileSync(src, 'utf8');
+      const body = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1];
+      if (!body) throw new Error(`Missing main in site-change preview: ${url}`);
+      const q = require('../lib/search_quality_draft');
+      if (c.id !== q.CHANGE) throw new Error('Unknown site-change preview renderer');
+      const after = q.improveBody({ body, url, preview: true });
+      const previewDir = path.join(dir, 'examples', String(i + 1));
+      fs.mkdirSync(previewDir, { recursive: true });
+      const render = require('../lib/render_page').renderLayout;
+      const title = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1].replace(/<[^>]*>/g, '') || c.title;
+      let preview = render({ title, description: `Unpublished quality repair preview: ${title}`, url, body: after.body, schemaOptions: { dateModified: after.dateModified } });
+      preview = preview.replace('<head>', '<head><meta name="robots" content="noindex, nofollow">');
+      fs.writeFileSync(path.join(previewDir, 'index.html'), preview);
+      examples.push(`<li>${esc(url)}: <a href="${esc(url)}">Current page</a> · <a href="examples/${i + 1}/">Read proposed revision</a></li>`);
+    }
     const rows = (c.before_after || []).map((r) => `<tr><td>${esc(r.what)}</td><td>${esc(r.before)}</td><td>${esc(r.after)}</td></tr>`).join('');
-    fs.writeFileSync(path.join(dir, 'index.html'), `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="description" content="${esc(String(c.summary || c.title).slice(0, 155))}"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(c.title)} — waiting for your approval</title><style>body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.5}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8px;vertical-align:top;text-align:left}</style></head><body><p><a href="/admin/">Back to your queue</a></p><h1>${esc(c.title)}</h1><p>${esc(c.summary)}</p><p><strong>Pages affected:</strong> ${esc(c.pages_affected)}</p><table><tr><th>What</th><th>Now</th><th>After you approve</th></tr>${rows}</table><p>Nothing changes on the site until you approve this row in your queue.</p></body></html>`);
+    fs.writeFileSync(path.join(dir, 'index.html'), `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="description" content="${esc(String(c.summary || c.title).slice(0, 155))}"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(c.title)} — waiting for your approval</title><style>body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.5}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8px;vertical-align:top;text-align:left}</style></head><body><p><a href="/admin/">Back to your queue</a></p><h1>${esc(c.title)}</h1><p>${esc(c.summary)}</p><p><strong>Pages affected:</strong> ${esc(c.pages_affected)}</p>${examples.length ? `<h2>Read the proposed pages</h2><ul>${examples.join('')}</ul>` : ''}<table><tr><th>What</th><th>Now</th><th>After you approve</th></tr>${rows}</table><p>Nothing changes on the site until you approve this row in your queue.</p></body></html>`);
   }
 }
 

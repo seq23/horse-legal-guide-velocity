@@ -137,6 +137,9 @@ function renderIconAndSocialHead({ title, description, url, canonicalUrl, ogType
 // canonicalUrl defaults to the page's own url. A page that is a copy of another
 // (the /reference/ surfaces render their mapped page's answer) passes that page.
 function renderLayout({ title: rawTitle, description, url, canonicalUrl, body, schemaType = 'Article', includeBrandChrome = true, schemaOptions = {} }) {
+  const quality = require('./search_quality_draft').improveBody({ body, title: rawTitle, url });
+  body = quality.body;
+  if (quality.dateModified) schemaOptions = { ...schemaOptions, dateModified: quality.dateModified };
   const config = readConfig();
   const title = fitTitle(rawTitle);
   // Owner-approved site change (data/site_changes/queue.json, one-action-link): until the
