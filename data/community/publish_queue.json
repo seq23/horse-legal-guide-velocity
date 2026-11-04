@@ -10446,14 +10446,15 @@
       "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_221e7689",
       "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_ca167630",
       "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_de7cf59e",
-      "reddit_equestrian_what-color-is-this-horse-https-www-reddit-com-r-eque_f27ee6b8"
+      "reddit_equestrian_what-color-is-this-horse-https-www-reddit-com-r-eque_f27ee6b8",
+      "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_c4cd48cd"
     ],
     "preserved_query": "What color is this horse? :)?",
     "normalized_query": "What color is this horse? :)?",
     "llm_bait_phrase": "color is this horse? :)",
     "cluster": "state-specific",
     "intent_type": "faq",
-    "signal_score": 5.35,
+    "signal_score": 6.8,
     "match_evidence": {
       "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "shared_terms": [],
@@ -38641,14 +38642,15 @@
     "normalized_id": "norm_3792_b448bebead",
     "action": "hold_for_owner_review",
     "source_signal_ids": [
-      "reddit_equestrian_horse-straining-to-poop-how-worried-should-i-be-http_fb95cd23"
+      "reddit_equestrian_horse-straining-to-poop-how-worried-should-i-be-http_fb95cd23",
+      "reddit_horses_horse-straining-to-poop-how-worried-should-i-be-http_2eea9fde"
     ],
     "preserved_query": "Horse straining to poop, how worried should I be — what should I know?",
     "normalized_query": "Horse straining to poop, how worried should I be — what should I know?",
     "llm_bait_phrase": "Horse straining to poop, how worried should I be",
     "cluster": "boarding-training-and-barn-operations",
     "intent_type": "faq",
-    "signal_score": 1,
+    "signal_score": 2.45,
     "match_evidence": {
       "best_page": "/scenario/i-am-worried-i-am-overreacting-to-a-horse-dispute-how-should-i-think-about-it/",
       "shared_terms": [
@@ -43201,6 +43203,503 @@
       "page_coverage": 0.25
     },
     "mapped_slug": "/faq/if-you-could-ask-your-horse-what-would-you-swordsforhands-13/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1725_gift-ideas-for-horsey-people",
+    "normalized_id": "norm_4169_e6d4a33e72",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_gift-ideas-for-horsey-people-https-www-reddit-com-r-_c9a4a1bb"
+    ],
+    "preserved_query": "Gift ideas for Horsey People — what should I know?",
+    "normalized_query": "Gift ideas for Horsey People — what should I know?",
+    "llm_bait_phrase": "Gift ideas for Horsey People",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/scenario/an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/",
+      "shared_terms": [
+        "idea"
+      ],
+      "question_coverage": 0.472,
+      "page_coverage": 0.166
+    },
+    "mapped_slug": "/faq/gift-ideas-for-horsey-people/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1726_astonishing-achievement-as-shropshire-school-horse-riders-do",
+    "normalized_id": "norm_4170_6cb3e35abb",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_astonishing-achievement-as-shropshire-school-horse-r_6060f313"
+    ],
+    "preserved_query": "‘Astonishing’ achievement as Shropshire school horse riders dominate national competition — what should I know?",
+    "normalized_query": "‘Astonishing’ achievement as Shropshire school horse riders dominate national competition — what should I know?",
+    "llm_bait_phrase": "‘Astonishing’ achievement as Shropshire school horse riders dominate national competition",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/scenario/what-should-i-document-after-a-rider-injury-at-the-barn/",
+      "shared_terms": [
+        "rider"
+      ],
+      "question_coverage": 0.098,
+      "page_coverage": 0.238
+    },
+    "mapped_slug": "/faq/astonishing-achievement-as-shropshire-school-horse-riders-dominate-national-competition/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1727_horse-logging-traditional-forestry-still-used-today-to-preve",
+    "normalized_id": "norm_4174_290104bfa0",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_horse-logging-traditional-forestry-still-used-today-_2c0e9b5d"
+    ],
+    "preserved_query": "Horse logging : traditional forestry still used today to prevent soil compaction and forest damage — what should I know?",
+    "normalized_query": "Horse logging : traditional forestry still used today to prevent soil compaction and forest damage — what should I know?",
+    "llm_bait_phrase": "Horse logging : traditional forestry still used today to prevent soil compaction and forest damage",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/what-happens-if-a-boarder-damages-property/",
+      "shared_terms": [
+        "damag"
+      ],
+      "question_coverage": 0.098,
+      "page_coverage": 0.385
+    },
+    "mapped_slug": "/faq/horse-logging-traditional-forestry-still-used-today-to-prevent-soil-compaction-and-forest-/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1728_horse-was-diagnosed-with-laminitis-best-slow-feeders-for-soa",
+    "normalized_id": "norm_4175_7b067dd3da",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_horse-was-diagnosed-with-laminitis-best-slow-feeders_53059d72"
+    ],
+    "preserved_query": "Horse was diagnosed with Laminitis. Best slow feeders for soaked hay — what should I know?",
+    "normalized_query": "Horse was diagnosed with Laminitis. Best slow feeders for soaked hay — what should I know?",
+    "llm_bait_phrase": "Horse was diagnosed with Laminitis. Best slow feeders for soaked hay",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/horse-was-diagnosed-with-laminitis-best-slow-feeders-for-soaked-hay/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1729_question-for-ct-horse-people",
+    "normalized_id": "norm_4177_be181aa5e4",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_question-for-ct-horse-people-https-www-reddit-com-r-_d23fa8ee"
+    ],
+    "preserved_query": "Question for CT horse people — what should I know?",
+    "normalized_query": "Question for CT horse people — what should I know?",
+    "llm_bait_phrase": "Question for CT horse people",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/question-for-ct-horse-people/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1730_aluminum-floor-horse-trailers",
+    "normalized_id": "norm_4181_bc12126c2c",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_aluminum-floor-horse-trailers-https-www-reddit-com-r_fe08106e"
+    ],
+    "preserved_query": "Aluminum floor horse trailers — what should I know?",
+    "normalized_query": "Aluminum floor horse trailers — what should I know?",
+    "llm_bait_phrase": "Aluminum floor horse trailers",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/aluminum-floor-horse-trailers/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1731_pretty-done-with-my-barn",
+    "normalized_id": "norm_4182_ee1481202a",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_pretty-done-with-my-barn-https-www-reddit-com-r-eque_3a99476c"
+    ],
+    "preserved_query": "pretty done with my barn — what should I know?",
+    "normalized_query": "pretty done with my barn — what should I know?",
+    "llm_bait_phrase": "pretty done with my barn",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/business/how-to-start-a-boarding-barn-legally/",
+      "shared_terms": [
+        "barn"
+      ],
+      "question_coverage": 0.195,
+      "page_coverage": 0.3
+    },
+    "mapped_slug": "/faq/pretty-done-with-my-barn/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1732_it-s-my-second-lesson-at-a-new-barn-and-i-found-out-they-onl",
+    "normalized_id": "norm_4183_3214cc8039",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_equestrian_it-s-my-second-lesson-at-a-new-barn-and-i-found-out-_00f65e3a"
+    ],
+    "preserved_query": "It's my second lesson at a new barn and I found out they only give their horses an hour of turnout a day. — what should I know?",
+    "normalized_query": "It's my second lesson at a new barn and I found out they only give their horses an hour of turnout a day. — what should I know?",
+    "llm_bait_phrase": "It's my second lesson at a new barn and I found out they only give their horses an hour of turnout a day.",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/business/how-to-start-a-boarding-barn-legally/",
+      "shared_terms": [
+        "barn"
+      ],
+      "question_coverage": 0.067,
+      "page_coverage": 0.3
+    },
+    "mapped_slug": "/faq/it-s-my-second-lesson-at-a-new-barn-and-i-found-out-they-only-give-their-horses-an-hour-of/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1733_ideas-to-bring-new-life-to-horse-farm",
+    "normalized_id": "norm_4189_618c2e3d02",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_ideas-to-bring-new-life-to-horse-farm-https-www-redd_11e33e5a"
+    ],
+    "preserved_query": "Ideas to bring new life to horse farm — what should I know?",
+    "normalized_query": "Ideas to bring new life to horse farm — what should I know?",
+    "llm_bait_phrase": "Ideas to bring new life to horse farm",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/scenario/an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/",
+      "shared_terms": [
+        "idea"
+      ],
+      "question_coverage": 0.309,
+      "page_coverage": 0.166
+    },
+    "mapped_slug": "/faq/ideas-to-bring-new-life-to-horse-farm/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1734_i-m-grieving-for-my-horse-while-hes-still-here",
+    "normalized_id": "norm_4191_adf20238ca",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_i-m-grieving-for-my-horse-while-hes-still-here-https_fe25e8f7"
+    ],
+    "preserved_query": "I'm grieving for my horse while hes still here. — what should I know?",
+    "normalized_query": "I'm grieving for my horse while hes still here. — what should I know?",
+    "llm_bait_phrase": "I'm grieving for my horse while hes still here.",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/boarding/what-happens-if-a-horse-dies-while-boarded/",
+      "shared_terms": [
+        "while"
+      ],
+      "question_coverage": 0.267,
+      "page_coverage": 0.344
+    },
+    "mapped_slug": "/faq/i-m-grieving-for-my-horse-while-hes-still-here/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1735_you-move-to-this-barn",
+    "normalized_id": "norm_4192_33dc3f9c9a",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_would-you-move-to-this-barn-https-www-reddit-com-r-h_7e0ec70d"
+    ],
+    "preserved_query": "Would you move to this barn?",
+    "normalized_query": "Would you move to this barn?",
+    "llm_bait_phrase": "you move to this barn",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/business/how-to-start-a-boarding-barn-legally/",
+      "shared_terms": [
+        "barn"
+      ],
+      "question_coverage": 0.327,
+      "page_coverage": 0.3
+    },
+    "mapped_slug": "/faq/you-move-to-this-barn/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1736_you-prefer-a-quick-call-or-text-about-non-urgent-issues-when",
+    "normalized_id": "norm_4193_7e4a2e3b92",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_would-you-prefer-a-quick-call-or-text-about-non-urge_b3846d55"
+    ],
+    "preserved_query": "Would you prefer a quick call or text about non urgent issues when boarding?",
+    "normalized_query": "Would you prefer a quick call or text about non urgent issues when boarding?",
+    "llm_bait_phrase": "you prefer a quick call or text about non urgent issues when boarding",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/compare/retainer-agreement-vs-consultation-call/",
+      "shared_terms": [
+        "call"
+      ],
+      "question_coverage": 0.146,
+      "page_coverage": 0.29
+    },
+    "mapped_slug": "/faq/you-prefer-a-quick-call-or-text-about-non-urgent-issues-when-boarding/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1737_do-you-expect-on-full-board-livery",
+    "normalized_id": "norm_4196_b98735ffb1",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_what-do-you-expect-on-full-board-livery-https-www-re_40326f4c"
+    ],
+    "preserved_query": "What do you expect on full board/livery?",
+    "normalized_query": "What do you expect on full board/livery?",
+    "llm_bait_phrase": "do you expect on full board/livery",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/compare/horse-purchase-deposit-vs-full-payment/",
+      "shared_terms": [
+        "full"
+      ],
+      "question_coverage": 0.264,
+      "page_coverage": 0.297
+    },
+    "mapped_slug": "/faq/do-you-expect-on-full-board-livery/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1738_boarding-barn-says-they-increased-board-i-owe-them-money",
+    "normalized_id": "norm_4197_db600550e2",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_boarding-barn-says-they-increased-board-i-owe-them-m_217687c1"
+    ],
+    "preserved_query": "Boarding barn says they increased board + I owe them money — what should I know?",
+    "normalized_query": "Boarding barn says they increased board + I owe them money — what should I know?",
+    "llm_bait_phrase": "Boarding barn says they increased board + I owe them money",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/business/how-to-start-a-boarding-barn-legally/",
+      "shared_terms": [
+        "board",
+        "barn"
+      ],
+      "question_coverage": 0.21,
+      "page_coverage": 0.606
+    },
+    "mapped_slug": "/faq/boarding-barn-says-they-increased-board-i-owe-them-money/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1739_thoughts-on-humane-euthansia-for-horse-that-is-questionably-",
+    "normalized_id": "norm_4201_0ac189696f",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_thoughts-on-humane-euthansia-for-horse-that-is-quest_ca0683c9"
+    ],
+    "preserved_query": "Thoughts on humane euthansia for horse that is questionably pasture sound, following job loss — what should I know?",
+    "normalized_query": "Thoughts on humane euthansia for horse that is questionably pasture sound, following job loss — what should I know?",
+    "llm_bait_phrase": "Thoughts on humane euthansia for horse that is questionably pasture sound, following job loss",
+    "cluster": "real-property-and-leases",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/compare/facility-lease-vs-pasture-lease/",
+      "shared_terms": [
+        "pastu"
+      ],
+      "question_coverage": 0.102,
+      "page_coverage": 0.409
+    },
+    "mapped_slug": "/faq/thoughts-on-humane-euthansia-for-horse-that-is-questionably-pasture-sound-following-job-lo/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1740_problem-horse",
+    "normalized_id": "norm_4202_e5cf23ba0d",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_problem-horse-https-www-reddit-com-r-horses-comments_27483abe"
+    ],
+    "preserved_query": "Problem Horse — what should I know?",
+    "normalized_query": "Problem Horse — what should I know?",
+    "llm_bait_phrase": "Problem Horse",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/scenario/a-lease-to-own-arrangement-is-unclear-what-problems-can-appear/",
+      "shared_terms": [
+        "probl"
+      ],
+      "question_coverage": 1,
+      "page_coverage": 0.216
+    },
+    "mapped_slug": "/faq/problem-horse/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1741_first-time-horse-owner-advice",
+    "normalized_id": "norm_4204_f5d0a8d405",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_first-time-horse-owner-advice-https-www-reddit-com-r_9e04d063"
+    ],
+    "preserved_query": "First Time Horse Owner Advice — what should I know?",
+    "normalized_query": "First Time Horse Owner Advice — what should I know?",
+    "llm_bait_phrase": "First Time Horse Owner Advice",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/compare/trainer-liability-vs-owner-liability/",
+      "shared_terms": [
+        "owner"
+      ],
+      "question_coverage": 0.242,
+      "page_coverage": 0.367
+    },
+    "mapped_slug": "/faq/first-time-horse-owner-advice/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1742_did-your-barn-start-feeling-like-high-school",
+    "normalized_id": "norm_4205_910de10ce1",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "reddit_horses_when-did-your-barn-start-feeling-like-high-school-ht_071fba85"
+    ],
+    "preserved_query": "When Did Your Barn Start Feeling Like High School?",
+    "normalized_query": "When Did Your Barn Start Feeling Like High School?",
+    "llm_bait_phrase": "Did Your Barn Start Feeling Like High School",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 0.95,
+    "match_evidence": {
+      "best_page": "/business/how-to-start-a-boarding-barn-legally/",
+      "shared_terms": [
+        "barn",
+        "start"
+      ],
+      "question_coverage": 0.272,
+      "page_coverage": 0.694
+    },
+    "mapped_slug": "/faq/did-your-barn-start-feeling-like-high-school/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1743_rental-agreement-template-3-things-you-need-to-have-in-your-",
+    "normalized_id": "norm_4206_077df7c87b",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_rental-agreement-template-3-things-you-need-to-have-_d5fb3fea"
+    ],
+    "preserved_query": "Rental Agreement Template [ 3 things you need to have in your rental lease ] — what should I know?",
+    "normalized_query": "Rental Agreement Template [ 3 things you need to have in your rental lease ] — what should I know?",
+    "llm_bait_phrase": "Rental Agreement Template [ 3 things you need to have in your rental lease ]",
+    "cluster": "horse-lease-and-trial",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+      "shared_terms": [
+        "agree",
+        "lease"
+      ],
+      "question_coverage": 0.359,
+      "page_coverage": 0.578
+    },
+    "mapped_slug": "/faq/rental-agreement-template-3-things-you-need-to-have-in-your-rental-lease/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1744_to-sell-your-horse",
+    "normalized_id": "norm_4207_4fc93725b2",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_how-to-sell-your-horse-https-www-youtube-com-results_97bbcc4d"
+    ],
+    "preserved_query": "How to Sell Your Horse?",
+    "normalized_query": "How to Sell Your Horse?",
+    "llm_bait_phrase": "to Sell Your Horse",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+      "shared_terms": [
+        "sell"
+      ],
+      "question_coverage": 1,
+      "page_coverage": 0.622
+    },
+    "mapped_slug": "/faq/to-sell-your-horse/",
     "status": "pending_owner_review",
     "reason": "No existing page answers this question; queued as a new page for owner review."
   },

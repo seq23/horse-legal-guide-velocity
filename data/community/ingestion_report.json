@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-02T14:37:13.377Z",
-  "total_signals": 4166,
+  "generated_at": "2026-11-04T14:37:18.805Z",
+  "total_signals": 4208,
   "signals_by_source": {
-    "reddit_equestrian": 2133,
-    "reddit_horses": 687,
+    "reddit_equestrian": 2153,
+    "reddit_horses": 707,
     "forum_the_horse_forum": 32,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 90,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 219,
+    "youtube_search_comments": 221,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 242,
@@ -17,32 +17,32 @@
     "forum_horse_and_hound": 92
   },
   "signals_by_platform": {
-    "reddit": 3428,
+    "reddit": 3468,
     "equestrian_forums": 154,
     "google_paa": 90,
     "serp_competitors": 217,
-    "youtube": 219,
+    "youtube": 221,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1725,
-  "duplicates_collapsed": 2441,
+  "normalized_count": 1745,
+  "duplicates_collapsed": 2463,
   "pages_created": 0,
   "pages_strengthened": 269,
   "rejected_signals": 0,
-  "pending_owner_review": 1450,
+  "pending_owner_review": 1470,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 896
+      "count": 908
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 276
+      "count": 282
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 217
+      "count": 218
     },
     {
       "name": "horse-sale-and-purchase",
@@ -62,7 +62,7 @@
     },
     {
       "name": "real-property-and-leases",
-      "count": 15
+      "count": 16
     },
     {
       "name": "intellectual-property-and-brand",
@@ -76,11 +76,11 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 2133
+      "count": 2153
     },
     {
       "name": "reddit_horses",
-      "count": 687
+      "count": 707
     },
     {
       "name": "reddit_smallbusiness",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 219
+      "count": 221
     },
     {
       "name": "serp_competitor_research",
@@ -137,9 +137,8 @@
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_legaladvice",
@@ -165,8 +164,8 @@
     {
       "source_key": "forum_the_horse_forum",
       "platform": "equestrian_forums",
-      "status": "success_with_data",
-      "count": 1
+      "status": "success_empty",
+      "count": 0
     },
     {
       "source_key": "forum_chronicle_of_the_horse",
@@ -178,7 +177,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 8
+      "count": 7
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -9700,7 +9699,8 @@
         "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_221e7689",
         "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_ca167630",
         "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_de7cf59e",
-        "reddit_equestrian_what-color-is-this-horse-https-www-reddit-com-r-eque_f27ee6b8"
+        "reddit_equestrian_what-color-is-this-horse-https-www-reddit-com-r-eque_f27ee6b8",
+        "reddit_horses_what-color-is-this-horse-https-www-reddit-com-r-hors_c4cd48cd"
       ]
     },
     {
@@ -24473,7 +24473,8 @@
       "question": "Horse straining to poop, how worried should I be — what should I know?",
       "llm_bait_phrase": "Horse straining to poop, how worried should I be",
       "source_signal_ids": [
-        "reddit_equestrian_horse-straining-to-poop-how-worried-should-i-be-http_fb95cd23"
+        "reddit_equestrian_horse-straining-to-poop-how-worried-should-i-be-http_fb95cd23",
+        "reddit_horses_horse-straining-to-poop-how-worried-should-i-be-http_2eea9fde"
       ]
     },
     {
@@ -26606,6 +26607,266 @@
       "llm_bait_phrase": "If you could ask your horse, what would you? Swordsforhands 13",
       "source_signal_ids": [
         "forum_the_horse_forum_if-you-could-ask-your-horse-what-would-you-swordsfor_1f143c5e"
+      ]
+    },
+    {
+      "approval_id": "approval_1725_gift-ideas-for-horsey-people",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4169_e6d4a33e72",
+      "proposed_slug": "/faq/gift-ideas-for-horsey-people/",
+      "cluster": "state-specific",
+      "question": "Gift ideas for Horsey People — what should I know?",
+      "llm_bait_phrase": "Gift ideas for Horsey People",
+      "source_signal_ids": [
+        "reddit_equestrian_gift-ideas-for-horsey-people-https-www-reddit-com-r-_c9a4a1bb"
+      ]
+    },
+    {
+      "approval_id": "approval_1726_astonishing-achievement-as-shropshire-school-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4170_6cb3e35abb",
+      "proposed_slug": "/faq/astonishing-achievement-as-shropshire-school-horse-riders-dominate-national-competition/",
+      "cluster": "state-specific",
+      "question": "‘Astonishing’ achievement as Shropshire school horse riders dominate national competition — what should I know?",
+      "llm_bait_phrase": "‘Astonishing’ achievement as Shropshire school horse riders dominate national competition",
+      "source_signal_ids": [
+        "reddit_equestrian_astonishing-achievement-as-shropshire-school-horse-r_6060f313"
+      ]
+    },
+    {
+      "approval_id": "approval_1727_horse-logging-traditional-forestry-still-used-toda",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4174_290104bfa0",
+      "proposed_slug": "/faq/horse-logging-traditional-forestry-still-used-today-to-prevent-soil-compaction-and-forest-/",
+      "cluster": "state-specific",
+      "question": "Horse logging : traditional forestry still used today to prevent soil compaction and forest damage — what should I know?",
+      "llm_bait_phrase": "Horse logging : traditional forestry still used today to prevent soil compaction and forest damage",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-logging-traditional-forestry-still-used-today-_2c0e9b5d"
+      ]
+    },
+    {
+      "approval_id": "approval_1728_horse-was-diagnosed-with-laminitis-best-slow-feede",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4175_7b067dd3da",
+      "proposed_slug": "/faq/horse-was-diagnosed-with-laminitis-best-slow-feeders-for-soaked-hay/",
+      "cluster": "state-specific",
+      "question": "Horse was diagnosed with Laminitis. Best slow feeders for soaked hay — what should I know?",
+      "llm_bait_phrase": "Horse was diagnosed with Laminitis. Best slow feeders for soaked hay",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-was-diagnosed-with-laminitis-best-slow-feeders_53059d72"
+      ]
+    },
+    {
+      "approval_id": "approval_1729_question-for-ct-horse-people",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4177_be181aa5e4",
+      "proposed_slug": "/faq/question-for-ct-horse-people/",
+      "cluster": "state-specific",
+      "question": "Question for CT horse people — what should I know?",
+      "llm_bait_phrase": "Question for CT horse people",
+      "source_signal_ids": [
+        "reddit_equestrian_question-for-ct-horse-people-https-www-reddit-com-r-_d23fa8ee"
+      ]
+    },
+    {
+      "approval_id": "approval_1730_aluminum-floor-horse-trailers",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4181_bc12126c2c",
+      "proposed_slug": "/faq/aluminum-floor-horse-trailers/",
+      "cluster": "state-specific",
+      "question": "Aluminum floor horse trailers — what should I know?",
+      "llm_bait_phrase": "Aluminum floor horse trailers",
+      "source_signal_ids": [
+        "reddit_equestrian_aluminum-floor-horse-trailers-https-www-reddit-com-r_fe08106e"
+      ]
+    },
+    {
+      "approval_id": "approval_1731_pretty-done-with-my-barn",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4182_ee1481202a",
+      "proposed_slug": "/faq/pretty-done-with-my-barn/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "pretty done with my barn — what should I know?",
+      "llm_bait_phrase": "pretty done with my barn",
+      "source_signal_ids": [
+        "reddit_equestrian_pretty-done-with-my-barn-https-www-reddit-com-r-eque_3a99476c"
+      ]
+    },
+    {
+      "approval_id": "approval_1732_it-s-my-second-lesson-at-a-new-barn-and-i-found-ou",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4183_3214cc8039",
+      "proposed_slug": "/faq/it-s-my-second-lesson-at-a-new-barn-and-i-found-out-they-only-give-their-horses-an-hour-of/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "It's my second lesson at a new barn and I found out they only give their horses an hour of turnout a day. — what should I know?",
+      "llm_bait_phrase": "It's my second lesson at a new barn and I found out they only give their horses an hour of turnout a day.",
+      "source_signal_ids": [
+        "reddit_equestrian_it-s-my-second-lesson-at-a-new-barn-and-i-found-out-_00f65e3a"
+      ]
+    },
+    {
+      "approval_id": "approval_1733_ideas-to-bring-new-life-to-horse-farm",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4189_618c2e3d02",
+      "proposed_slug": "/faq/ideas-to-bring-new-life-to-horse-farm/",
+      "cluster": "state-specific",
+      "question": "Ideas to bring new life to horse farm — what should I know?",
+      "llm_bait_phrase": "Ideas to bring new life to horse farm",
+      "source_signal_ids": [
+        "reddit_horses_ideas-to-bring-new-life-to-horse-farm-https-www-redd_11e33e5a"
+      ]
+    },
+    {
+      "approval_id": "approval_1734_i-m-grieving-for-my-horse-while-hes-still-here",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4191_adf20238ca",
+      "proposed_slug": "/faq/i-m-grieving-for-my-horse-while-hes-still-here/",
+      "cluster": "state-specific",
+      "question": "I'm grieving for my horse while hes still here. — what should I know?",
+      "llm_bait_phrase": "I'm grieving for my horse while hes still here.",
+      "source_signal_ids": [
+        "reddit_horses_i-m-grieving-for-my-horse-while-hes-still-here-https_fe25e8f7"
+      ]
+    },
+    {
+      "approval_id": "approval_1735_you-move-to-this-barn",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4192_33dc3f9c9a",
+      "proposed_slug": "/faq/you-move-to-this-barn/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Would you move to this barn?",
+      "llm_bait_phrase": "you move to this barn",
+      "source_signal_ids": [
+        "reddit_horses_would-you-move-to-this-barn-https-www-reddit-com-r-h_7e0ec70d"
+      ]
+    },
+    {
+      "approval_id": "approval_1736_you-prefer-a-quick-call-or-text-about-non-urgent-i",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4193_7e4a2e3b92",
+      "proposed_slug": "/faq/you-prefer-a-quick-call-or-text-about-non-urgent-issues-when-boarding/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Would you prefer a quick call or text about non urgent issues when boarding?",
+      "llm_bait_phrase": "you prefer a quick call or text about non urgent issues when boarding",
+      "source_signal_ids": [
+        "reddit_horses_would-you-prefer-a-quick-call-or-text-about-non-urge_b3846d55"
+      ]
+    },
+    {
+      "approval_id": "approval_1737_do-you-expect-on-full-board-livery",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4196_b98735ffb1",
+      "proposed_slug": "/faq/do-you-expect-on-full-board-livery/",
+      "cluster": "state-specific",
+      "question": "What do you expect on full board/livery?",
+      "llm_bait_phrase": "do you expect on full board/livery",
+      "source_signal_ids": [
+        "reddit_horses_what-do-you-expect-on-full-board-livery-https-www-re_40326f4c"
+      ]
+    },
+    {
+      "approval_id": "approval_1738_boarding-barn-says-they-increased-board-i-owe-them",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4197_db600550e2",
+      "proposed_slug": "/faq/boarding-barn-says-they-increased-board-i-owe-them-money/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Boarding barn says they increased board + I owe them money — what should I know?",
+      "llm_bait_phrase": "Boarding barn says they increased board + I owe them money",
+      "source_signal_ids": [
+        "reddit_horses_boarding-barn-says-they-increased-board-i-owe-them-m_217687c1"
+      ]
+    },
+    {
+      "approval_id": "approval_1739_thoughts-on-humane-euthansia-for-horse-that-is-que",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4201_0ac189696f",
+      "proposed_slug": "/faq/thoughts-on-humane-euthansia-for-horse-that-is-questionably-pasture-sound-following-job-lo/",
+      "cluster": "real-property-and-leases",
+      "question": "Thoughts on humane euthansia for horse that is questionably pasture sound, following job loss — what should I know?",
+      "llm_bait_phrase": "Thoughts on humane euthansia for horse that is questionably pasture sound, following job loss",
+      "source_signal_ids": [
+        "reddit_horses_thoughts-on-humane-euthansia-for-horse-that-is-quest_ca0683c9"
+      ]
+    },
+    {
+      "approval_id": "approval_1740_problem-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4202_e5cf23ba0d",
+      "proposed_slug": "/faq/problem-horse/",
+      "cluster": "state-specific",
+      "question": "Problem Horse — what should I know?",
+      "llm_bait_phrase": "Problem Horse",
+      "source_signal_ids": [
+        "reddit_horses_problem-horse-https-www-reddit-com-r-horses-comments_27483abe"
+      ]
+    },
+    {
+      "approval_id": "approval_1741_first-time-horse-owner-advice",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4204_f5d0a8d405",
+      "proposed_slug": "/faq/first-time-horse-owner-advice/",
+      "cluster": "state-specific",
+      "question": "First Time Horse Owner Advice — what should I know?",
+      "llm_bait_phrase": "First Time Horse Owner Advice",
+      "source_signal_ids": [
+        "reddit_horses_first-time-horse-owner-advice-https-www-reddit-com-r_9e04d063"
+      ]
+    },
+    {
+      "approval_id": "approval_1742_did-your-barn-start-feeling-like-high-school",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4205_910de10ce1",
+      "proposed_slug": "/faq/did-your-barn-start-feeling-like-high-school/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "When Did Your Barn Start Feeling Like High School?",
+      "llm_bait_phrase": "Did Your Barn Start Feeling Like High School",
+      "source_signal_ids": [
+        "reddit_horses_when-did-your-barn-start-feeling-like-high-school-ht_071fba85"
+      ]
+    },
+    {
+      "approval_id": "approval_1743_rental-agreement-template-3-things-you-need-to-hav",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4206_077df7c87b",
+      "proposed_slug": "/faq/rental-agreement-template-3-things-you-need-to-have-in-your-rental-lease/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Rental Agreement Template [ 3 things you need to have in your rental lease ] — what should I know?",
+      "llm_bait_phrase": "Rental Agreement Template [ 3 things you need to have in your rental lease ]",
+      "source_signal_ids": [
+        "youtube_search_comments_rental-agreement-template-3-things-you-need-to-have-_d5fb3fea"
+      ]
+    },
+    {
+      "approval_id": "approval_1744_to-sell-your-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4207_4fc93725b2",
+      "proposed_slug": "/faq/to-sell-your-horse/",
+      "cluster": "state-specific",
+      "question": "How to Sell Your Horse?",
+      "llm_bait_phrase": "to Sell Your Horse",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-sell-your-horse-https-www-youtube-com-results_97bbcc4d"
       ]
     }
   ]
