@@ -166,6 +166,31 @@
         "conclusion": "The cause of the impression decline remains unproven. The September 25 canonical consolidation overlaps the decline but correctly points duplicate references to their answer pages; current inspections do not reproduce an unintended canonical change on the losing landings. Do not reverse it or change robots, hosts, redirects or sitemap submissions on this evidence. The quality repair is drafted separately from any claim about rankings.",
         "measurement": "After client approval, compare the same repaired URLs in successive 28-day Search Console windows and repeat the five-page quality check. If visibility continues falling, Danielle resumes the missing Pages-history and Manual-actions reads before proposing an indexing intervention."
       }
+    },
+    {
+      "id": "public-index-itemlist",
+      "status": "pending",
+      "queued_at": "2026-11-05",
+      "title": "Describe the visible lists on six library indexes for search engines",
+      "summary": "The FAQ, scenario, comparison, state, topic-hub and reference indexes list approved pages but their structured data does not identify those lists. Approving adds ItemList metadata from the same ordered titles and links already visible on each index. No page wording, legal answer, navigation, address, price or publication status changes. The FAQ index contains links rather than answers, so no FAQPage or invented answers will be added.",
+      "pages_affected": "/faq/, /scenario/, /compare/, /state/, /hubs/, /reference/",
+      "before_after": [
+        {
+          "what": "Search metadata on each library index",
+          "before": "The visible list has no ItemList metadata.",
+          "after": "ItemList records the same visible titles and canonical destinations, in the same order."
+        },
+        {
+          "what": "Reader-facing content and approval requirement",
+          "before": "The existing approved list of pages.",
+          "after": "Exactly the same list and text. Nothing changes until this request is approved in /admin/."
+        }
+      ],
+      "evidence": [
+        "2026-11-05 live GET: /faq/, /scenario/ and /compare/ answer 200 with no ItemList node.",
+        "The full live crawl covered 325/325 sitemap pages and 593 targets with no broken link or redirect-chain findings.",
+        "2026-11-09 live GET: /faq/, /scenario/ and /compare/ still answer 200 with no ItemList node."
+      ]
     }
   ]
 }

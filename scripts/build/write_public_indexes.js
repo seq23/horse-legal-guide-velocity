@@ -3,6 +3,7 @@ const path = require('path');
 const { renderLayout } = require('../lib/render_page');
 const { fitDescription } = require('../lib/meta_text');
 const { clusterIndex, siblingBlock } = require('../lib/site_navigation');
+const { changeApproved } = require('../lib/site_changes');
 const { toAbsoluteUrl } = require('../lib/write_canonical_tag');
 function dir(p) { fs.mkdirSync(p, { recursive: true }); }
 function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;'); }
@@ -26,7 +27,13 @@ function idx(dist, { slug, title, metaTitle, description, items }) {
       intro: 'The clusters this library covers, each collecting the educational pages filed under it.',
       items: [...clusterIndex().values()].map((h) => ({ slug: h.slug, title: h.title })),
     });
-  fs.writeFileSync(path.join(d, 'index.html'), renderLayout({ title: metaTitle || title, description: fitDescription([description], slug), url: slug, body }));
+  const collection = changeApproved('public-index-itemlist') && items.length ? '<script type="application/ld+json">' + JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'ItemList',
+    '@id': toAbsoluteUrl(slug) + '#items', url: toAbsoluteUrl(slug), name: title,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.title, url: toAbsoluteUrl(item.slug) }))
+  }).replace(/</g, '\\u003c') + '</script>' : '';
+  fs.writeFileSync(path.join(d, 'index.html'), renderLayout({ title: metaTitle || title, description: fitDescription([description], slug), url: slug, body: body + collection }));
 }
 function coveragePage(dist, targets, clusters, cands) {
   const raw = readJson('data/community/raw_signals.json', []);
