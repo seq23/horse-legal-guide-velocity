@@ -1,40 +1,40 @@
 {
-  "generated_at": "2026-11-04T14:37:18.805Z",
-  "total_signals": 4208,
+  "generated_at": "2026-11-05T14:37:57.348Z",
+  "total_signals": 4249,
   "signals_by_source": {
-    "reddit_equestrian": 2153,
+    "reddit_equestrian": 2173,
     "reddit_horses": 707,
     "forum_the_horse_forum": 32,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 90,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 221,
+    "youtube_search_comments": 222,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 242,
     "reddit_smallbusiness": 243,
-    "reddit_farming_ranching": 123,
+    "reddit_farming_ranching": 143,
     "forum_horse_and_hound": 92
   },
   "signals_by_platform": {
-    "reddit": 3468,
+    "reddit": 3508,
     "equestrian_forums": 154,
     "google_paa": 90,
     "serp_competitors": 217,
-    "youtube": 221,
+    "youtube": 222,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1745,
-  "duplicates_collapsed": 2463,
+  "normalized_count": 1750,
+  "duplicates_collapsed": 2499,
   "pages_created": 0,
   "pages_strengthened": 269,
   "rejected_signals": 0,
-  "pending_owner_review": 1470,
+  "pending_owner_review": 1475,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 908
+      "count": 912
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -42,7 +42,7 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 218
+      "count": 219
     },
     {
       "name": "horse-sale-and-purchase",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 2153
+      "count": 2173
     },
     {
       "name": "reddit_horses",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 221
+      "count": 222
     },
     {
       "name": "serp_competitor_research",
@@ -100,7 +100,7 @@
     },
     {
       "name": "reddit_farming_ranching",
-      "count": 123
+      "count": 143
     },
     {
       "name": "forum_horse_and_hound",
@@ -137,8 +137,9 @@
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_legaladvice",
@@ -157,9 +158,8 @@
     {
       "source_key": "reddit_farming_ranching",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -177,7 +177,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 7
+      "count": 8
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -26867,6 +26867,71 @@
       "llm_bait_phrase": "to Sell Your Horse",
       "source_signal_ids": [
         "youtube_search_comments_how-to-sell-your-horse-https-www-youtube-com-results_97bbcc4d"
+      ]
+    },
+    {
+      "approval_id": "approval_1745_experiences-with-horses-following-eye-removal-enuc",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4209_67511381f8",
+      "proposed_slug": "/faq/experiences-with-horses-following-eye-removal-enucleation-my-16-3hh-gelding/",
+      "cluster": "state-specific",
+      "question": "Experiences with horses following eye removal (enucleation)?My 16.3hh gelding — what should I know?",
+      "llm_bait_phrase": "Experiences with horses following eye removal (enucleation)?My 16.3hh gelding",
+      "source_signal_ids": [
+        "reddit_equestrian_experiences-with-horses-following-eye-removal-enucle_7a664c82"
+      ]
+    },
+    {
+      "approval_id": "approval_1746_double-barreled-by-kids-pony",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4211_d92edb704d",
+      "proposed_slug": "/faq/double-barreled-by-kids-pony/",
+      "cluster": "state-specific",
+      "question": "Double barreled by kids pony — what should I know?",
+      "llm_bait_phrase": "Double barreled by kids pony",
+      "source_signal_ids": [
+        "reddit_equestrian_double-barreled-by-kids-pony-https-www-reddit-com-r-_afb52cbf"
+      ]
+    },
+    {
+      "approval_id": "approval_1747_it-worth-pestering-more-about-this-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4214_2de7ff79c6",
+      "proposed_slug": "/faq/it-worth-pestering-more-about-this-horse/",
+      "cluster": "state-specific",
+      "question": "Is it worth pestering more about this horse?",
+      "llm_bait_phrase": "it worth pestering more about this horse",
+      "source_signal_ids": [
+        "reddit_equestrian_is-it-worth-pestering-more-about-this-horse-https-ww_e46f1b2c"
+      ]
+    },
+    {
+      "approval_id": "approval_1748_equinavia-nevada-sheets-good-for-wide-chested-hors",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4216_d2b3d5095c",
+      "proposed_slug": "/faq/equinavia-nevada-sheets-good-for-wide-chested-horses/",
+      "cluster": "state-specific",
+      "question": "Equinavia Nevada Sheets: Good for wide-chested horses — what should I know?",
+      "llm_bait_phrase": "Equinavia Nevada Sheets: Good for wide-chested horses",
+      "source_signal_ids": [
+        "reddit_equestrian_equinavia-nevada-sheets-good-for-wide-chested-horses_ce35c436"
+      ]
+    },
+    {
+      "approval_id": "approval_1749_to-avoid-bank-financing-using-master-lease-agreeme",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4248_5bc1d39540",
+      "proposed_slug": "/faq/to-avoid-bank-financing-using-master-lease-agreements/",
+      "cluster": "horse-lease-and-trial",
+      "question": "How to Avoid Bank Financing Using Master Lease Agreements?",
+      "llm_bait_phrase": "to Avoid Bank Financing Using Master Lease Agreements",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-avoid-bank-financing-using-master-lease-agree_e367a318"
       ]
     }
   ]
