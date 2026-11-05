@@ -202,6 +202,85 @@
         "b5 FAQ answer is 37 words (aim 40-60): \"What information is mandatory on a horse bill of s\"",
         "b5 FAQ answer is 34 words (aim 40-60): \"Does a bill of sale guarantee the health or soundn\""
       ]
+    },
+    {
+      "slug": "horse-purchase-agreement",
+      "query": "horse purchase agreement",
+      "score": 30,
+      "signals": {
+        "words": 3,
+        "question": false,
+        "google_suggest": true,
+        "bing_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/horse-purchase-agreement/index.html",
+      "route": "/questions/horse-purchase-agreement/",
+      "url": "https://horselegalguide.com/questions/horse-purchase-agreement/",
+      "published_at": null,
+      "queued_at": "2026-11-05",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-purchase-agreement/index.html",
+      "hash": "06598e3d146012e725a9776b95d23da9f7ba4b1d9fd122a5bcc9b579788df608",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {}
+    },
+    {
+      "slug": "who-pays-for-purchase-agreement",
+      "query": "who pays for purchase agreement",
+      "score": 30,
+      "signals": {
+        "words": 5,
+        "question": true,
+        "google_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/who-pays-for-purchase-agreement/index.html",
+      "route": "/questions/who-pays-for-purchase-agreement/",
+      "url": "https://horselegalguide.com/questions/who-pays-for-purchase-agreement/",
+      "published_at": null,
+      "queued_at": "2026-11-05",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/who-pays-for-purchase-agreement/index.html",
+      "hash": "147aac45e970768afe6f87891fdd9e292a81d2121bf799e7f46e2a10ade27fc8",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/wex/statute_of_frauds",
+        "https://en.wikipedia.org/wiki/Bill_of_sale"
+      ],
+      "linked_from": [],
+      "checks": {}
+    },
+    {
+      "slug": "how-to-write-a-horse-bill-of-sale",
+      "query": "how to write a horse bill of sale",
+      "score": 30,
+      "signals": {
+        "words": 8,
+        "question": true,
+        "google_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/how-to-write-a-horse-bill-of-sale/index.html",
+      "route": "/questions/how-to-write-a-horse-bill-of-sale/",
+      "url": "https://horselegalguide.com/questions/how-to-write-a-horse-bill-of-sale/",
+      "published_at": null,
+      "queued_at": "2026-11-05",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/how-to-write-a-horse-bill-of-sale/index.html",
+      "hash": "9e7e5b7664c240bc8cf4a08697236ad645bfa7a2732d2d1e3776546396f519c9",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/wex/bill_of_sale",
+        "https://www.uniformlaws.org/acts/ucc"
+      ],
+      "linked_from": [],
+      "checks": {}
     }
   ],
   "dropped": [
@@ -258,6 +337,55 @@
     {
       "query": "horse bill of sale pdf",
       "at": "2026-11-04",
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
+      ]
+    },
+    {
+      "query": "equine law solicitors",
+      "at": "2026-11-05",
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "what is the purpose of a purchase agreement",
+      "at": "2026-11-05",
+      "reason": [
+        "same intent as https://horselegalguide.com/questions/horse-purchase-agreement/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "horse sale contract",
+      "at": "2026-11-05",
+      "reason": [
+        "same intent as https://horselegalguide.com/questions/horse-sale-contract-with-payments/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "equine law florida",
+      "at": "2026-11-05",
+      "reason": [
+        "same intent as https://horselegalguide.com/liability/what-does-equine-liability-law-actually-protect-me-from/ (high token overlap (0.60 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "what is horse law",
+      "at": "2026-11-05",
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
+      ]
+    },
+    {
+      "query": "what is equine risk law",
+      "at": "2026-11-05",
+      "reason": [
+        "same intent as https://horselegalguide.com/liability/what-does-equine-liability-law-actually-protect-me-from/ (high token overlap (0.75 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "what is equine inherent risk law",
+      "at": "2026-11-05",
       "reason": [
         "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
       ]
