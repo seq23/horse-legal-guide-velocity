@@ -281,6 +281,100 @@
       ],
       "linked_from": [],
       "checks": {}
+    },
+    {
+      "slug": "what-does-a-horse-bill-of-sale-look-like",
+      "query": "what does a horse bill of sale look like",
+      "score": 30,
+      "signals": {
+        "words": 9,
+        "question": true,
+        "google_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/what-does-a-horse-bill-of-sale-look-like/index.html",
+      "route": "/questions/what-does-a-horse-bill-of-sale-look-like/",
+      "url": "https://horselegalguide.com/questions/what-does-a-horse-bill-of-sale-look-like/",
+      "published_at": null,
+      "queued_at": "2026-11-06",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/what-does-a-horse-bill-of-sale-look-like/index.html",
+      "hash": "1826bda07ac60a3845bcd427ba7e7bf204764b6197caa9d89f8005a9ee91e22e",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/wex/bill_of_sale",
+        "https://www.usa.gov/"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 36 words (aim 40-60): \"Is a bill of sale the same thing as a registration\"",
+        "b5 FAQ answer is 35 words (aim 40-60): \"Do I need a notary public to sign a horse bill of \"",
+        "b5 FAQ answer is 34 words (aim 40-60): \"What happens if the horse's description is inaccur\"",
+        "b5 FAQ answer is 36 words (aim 40-60): \"Does a bill of sale guarantee the health or soundn\""
+      ]
+    },
+    {
+      "slug": "horse-purchase-agreement-payment-plan",
+      "query": "horse purchase agreement payment plan",
+      "score": 25,
+      "signals": {
+        "words": 5,
+        "question": false,
+        "google_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/horse-purchase-agreement-payment-plan/index.html",
+      "route": "/questions/horse-purchase-agreement-payment-plan/",
+      "url": "https://horselegalguide.com/questions/horse-purchase-agreement-payment-plan/",
+      "published_at": null,
+      "queued_at": "2026-11-06",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-purchase-agreement-payment-plan/index.html",
+      "hash": "5627f00a10fa184642c521fd086a36f55667aa02fa3b0b8da4d42e0bdf9a5316",
+      "model": "free-route",
+      "facts": [
+        "https://www.uniformlaws.org/acts/ucc",
+        "https://en.wikipedia.org/wiki/Contract_law_in_the_United_States"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 38 words (aim 40-60): \"Who keeps the horse registration papers during a p\"",
+        "b5 FAQ answer is 39 words (aim 40-60): \"Who is responsible for vet bills if the horse gets\"",
+        "b5 FAQ answer is 39 words (aim 40-60): \"Does an installment sale require a security agreem\""
+      ]
+    },
+    {
+      "slug": "horse-purchase-agreement-pdf",
+      "query": "horse purchase agreement pdf",
+      "score": 25,
+      "signals": {
+        "words": 4,
+        "question": false,
+        "google_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/horse-purchase-agreement-pdf/index.html",
+      "route": "/questions/horse-purchase-agreement-pdf/",
+      "url": "https://horselegalguide.com/questions/horse-purchase-agreement-pdf/",
+      "published_at": null,
+      "queued_at": "2026-11-06",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-purchase-agreement-pdf/index.html",
+      "hash": "b0d228a44f8114cd6c298c099075177a74ed411ab65e1b4bf916b312bc838312",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc/2",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 35 words (aim 40-60): \"What happens if a horse fails a pre-purchase vet e\"",
+        "b5 FAQ answer is 39 words (aim 40-60): \"Are verbal agreements binding in horse sales?\"",
+        "b5 FAQ answer is 35 words (aim 40-60): \"Who pays for pre-purchase vetting and transport co\""
+      ]
     }
   ],
   "dropped": [
@@ -388,6 +482,14 @@
       "at": "2026-11-05",
       "reason": [
         "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
+      ]
+    },
+    {
+      "query": "horse purchase agreement with trial period",
+      "at": "2026-11-06",
+      "reason": [
+        "b5 FAQ answer is 29 words (aim 40-60): \"Do state laws affect equine trial agreements?\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
       ]
     }
   ],
