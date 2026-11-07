@@ -129,6 +129,50 @@ ${moduleOpen || '<section class="answer-shape-module">'}<h2>Which facts need to 
 <section><h2>Where can the underlying rules be checked?</h2><p><a href="${esc(p.source)}">${esc(p.sourceLabel)}</a>. A state example does not establish the rule in another jurisdiction. Educational only; not legal advice. No endorsements or rankings.</p></section></article>
 <nav><h2>Which related pages may help?</h2><ul>${[...links].map(([href,label]) => `<li><a href="${esc(href)}">${esc(label)}</a></li>`).join('')}</ul></nav>${routing}`;
 }
+// Every query page scripts/build/write_pages.js builds (faq, scenario, comparison)
+// shares one template, so the gaps the weekly sample found are on all of them:
+// no definition under the H1, no visible publisher or date, a block listing the
+// page's own query five ways, and FAQ entries that restate the H1 with the same
+// boilerplate answer. Repaired here once for every such page, never per URL.
+const norm = s => text(s).toLowerCase().replace(/^(?:what should someone know about|what happens if)\s+/, '').replace(/[^a-z0-9]+/g, ' ').trim();
+function definitionFor(body) {
+  const kind = (text(body.match(/<span class="eyebrow">([\s\S]*?)<\/span>/i)?.[1] || '').replace(/\s*page$/i, '') || 'guide').toLowerCase();
+  const hub = text(body.match(/<a href="\/hubs\/[^"]+\/">Back to ([\s\S]*?)<\/a>/i)?.[1] || 'horse-world legal questions').toLowerCase();
+  const what = {scenario: 'a situation', comparison: 'a choice between two arrangements', faq: 'a common question'}[kind] || 'a question';
+  // The H1 is not repeated here: restating it is what made these pages filler.
+  const parts = [`This ${kind} page is about ${what} in ${hub}.`,
+    'It sets out which documents, dates and roles usually decide the answer, what to gather before acting and what to avoid.',
+    'It is general education for horse owners, trainers and equine businesses.',
+    'It is not advice on a specific horse, agreement or dispute.'];
+  const words = t => t.split(/\s+/).filter(Boolean).length;
+  let out = parts[0];
+  for (const part of parts.slice(1)) if (words(`${out} ${part}`) <= 60) out = `${out} ${part}`;
+  return out;
+}
+function repairQueryPage(body) {
+  const h1 = norm(body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '');
+  let next = body
+    // The provenance note stays (the accordion contract needs it visible before the
+    // FAQ); only the list of the page's own query reworded five ways goes.
+    .replace(/(<section class="signal-block">[\s\S]*?)<h2>Real question patterns this page is built around<\/h2>([\s\S]*?)<ul>[\s\S]*?<\/ul>/i, '$1<h2>Where does this question come from?</h2>$2')
+    // Reference surfaces carry a generated title prefix; as a link label it repeats
+    // the same eight words down the sibling list. The link target is unchanged.
+    .replace(/(<a\b[^>]*href="\/reference\/[^"]*"[^>]*>)What equine legal issues should someone consider in /gi, '$1')
+    .replace(/(<\/h1>)\s*<p class="muted">[\s\S]*?<\/p>/i, (m, close) => `${close}\n  <p class="site-definition">${esc(definitionFor(body))}</p>\n  ${credit(updatedDate())}`);
+  next = next.replace(/(<section class="accordion-section faq-accordion"[^>]*>[\s\S]*?<\/h2>)([\s\S]*?)(<\/section>)/i, (m, open, items, close) => {
+    const seenQ = new Set([h1]), seenA = new Set();
+    const kept = [...items.matchAll(/<details\b[\s\S]*?<\/details>/gi)].map(x => x[0]).filter(d => {
+      const q = text(d.match(/<summary>([\s\S]*?)<\/summary>/i)?.[1] || ''), a = norm(d.match(/<p>([\s\S]*?)<\/p>/i)?.[1] || '');
+      // A lower-case fragment is a broken query variant, not a question a reader asked.
+      const nq = norm(q);
+      // A truncated variant ("I back out of…" under "Can I back out of…") restates the H1.
+      if (!/^[A-Z]/.test(q) || !nq || [...seenQ].some(s => s.includes(nq) || nq.includes(s)) || seenA.has(a)) return false;
+      seenQ.add(nq); seenA.add(a); return true;
+    });
+    return kept.length ? `${open}${kept.map((d, i) => d.replace(/^<details\b([^>]*?)\s*(?:\bopen)?\s*>/i, (m, attrs) => `<details${attrs}${i === 0 ? ' open' : ''}>`)).join('\n')}${close}` : '';
+  });
+  return next;
+}
 function improveBody({body, title, url, preview = false}) {
   // A preview override cannot create a change absent from this site's queue.
   if (!readQueue().changes.some(c => c.id === CHANGE)) return {body};
@@ -138,6 +182,7 @@ function improveBody({body, title, url, preview = false}) {
   const heading = text(body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || title);
   const p = !String(url).startsWith('/reference/') && profileFor(heading);
   if (p) return {body: renderIntent(p, body, updatedDate(), url), dateModified: updatedDate()};
+  if (/<section class="signal-block"/.test(body)) return {body: repairQueryPage(body), dateModified: updatedDate()};
   if (url === '/authority/') {
     const lead = 'Horse Legal Guide’s authority briefs are longer educational guides to equine contracts, disputes and business arrangements. This section collects approved briefs when their publication date arrives. It is a place to explore a topic in depth, rather than a legal opinion on a particular horse, agreement or dispute.';
     let next = body.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)\s*<p\b[^>]*>[\s\S]*?<\/p>/i, `$1<p class="site-definition">${esc(lead)}</p>${credit(updatedDate())}`)
