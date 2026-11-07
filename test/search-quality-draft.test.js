@@ -60,7 +60,7 @@ test('every generated query page gets the template repair once approved, and non
   const forced = process.env.PREVIEW_SITE_CHANGES;
   delete process.env.PREVIEW_SITE_CHANGES;
   fs.mkdirSync(path.join(root, 'data/site_changes'), {recursive:true});
-  fs.writeFileSync(path.join(root, 'data/site_changes/queue.json'), JSON.stringify({changes:[{id:q.CHANGE,status:'pending',queued_at:'2026-11-03'}]}));
+  fs.writeFileSync(path.join(root, 'data/site_changes/queue.json'), JSON.stringify({changes:[{id:q.SHAPE,status:'pending',queued_at:'2026-11-03'}]}));
   process.chdir(root);
   try {
     const answer = 'This question belongs to the boarding cluster. The useful move is to identify the agreement.';
@@ -98,7 +98,7 @@ test('editorial, hub and section pages get the publisher line and lose the topic
   const forced = process.env.PREVIEW_SITE_CHANGES;
   delete process.env.PREVIEW_SITE_CHANGES;
   fs.mkdirSync(path.join(root, 'data/site_changes'), {recursive:true});
-  fs.writeFileSync(path.join(root, 'data/site_changes/queue.json'), JSON.stringify({changes:[{id:q.CHANGE,status:'pending',queued_at:'2026-11-03'}]}));
+  fs.writeFileSync(path.join(root, 'data/site_changes/queue.json'), JSON.stringify({changes:[{id:q.SHAPE,status:'pending',queued_at:'2026-11-03'}]}));
   process.chdir(root);
   try {
     const t = 'What Happens If a Horse Sale Goes Wrong';
@@ -124,4 +124,52 @@ test('editorial, hub and section pages get the publisher line and lose the topic
     const calm = `<h1>${t}</h1><p>${t} is a question.</p><p>About ${t}.</p><p class="x">rel="author"</p>`;
     assert.equal(q.dedupeTopic(calm), calm);
   } finally { if (forced === undefined) delete process.env.PREVIEW_SITE_CHANGES; else process.env.PREVIEW_SITE_CHANGES = forced; process.chdir(cwd); fs.rmSync(root,{recursive:true,force:true}); }
+});
+
+test('the reshape goes live on its own; the new topic writing waits for the owners', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'hlg-quality-split-'));
+  const cwd = process.cwd();
+  const forced = process.env.PREVIEW_SITE_CHANGES;
+  delete process.env.PREVIEW_SITE_CHANGES;
+  fs.mkdirSync(path.join(root, 'data/site_changes'), {recursive:true});
+  fs.writeFileSync(path.join(root, 'data/site_changes/queue.json'), JSON.stringify({changes:[
+    {id:q.SHAPE,status:'approved',queued_at:'2026-11-03',decided_at:'2026-11-07',approved_by:'Sequoia Taylor (site manager)'},
+    {id:q.CHANGE,status:'pending',queued_at:'2026-11-03'}]}));
+  process.chdir(root);
+  try {
+    const title = 'A leased horse became unsound. Who pays?';
+    const lease = q.intents.find(p => p.id === 'lease-unsoundness');
+    const body = `<header class="content-header"><span class="eyebrow">Scenario page</span><h1>${title}</h1><p class="muted">General educational information for equestrians.</p></header>
+<section class="signal-block"><h2>Real question patterns this page is built around</h2><ul><li>leased horse unsound who pays</li></ul></section>`;
+    const live = q.improveBody({body, title, url:'/scenario/a-leased-horse-became-unsound-who-pays/'});
+    assert.match(live.body, /<p class="site-definition">/, 'the reshape is live');
+    assert.match(live.body, /rel="author">Wise Covington PLLC<\/a> · Updated <time datetime="2026-11-07">/, 'dated the day it went live');
+    assert.ok(!/Real question patterns/.test(live.body));
+    assert.equal(live.dateModified, '2026-11-07');
+    for (const p of q.intents) {
+      assert.ok(!live.body.includes(p.lead), 'no new topic writing while the owners have not approved it');
+      assert.ok(!live.body.includes(p.source.replace(/&/g, '&amp;')) || p.source === 'https://wisecovington.com', 'no new legal source while pending');
+    }
+    assert.ok(!/ncleg\.gov/.test(live.body));
+    // The owners approve the topic writing through the same queue: it then replaces the template.
+    queue.decide([`change:${q.CHANGE}`], 'approve');
+    const after = q.improveBody({body, title, url:'/scenario/a-leased-horse-became-unsound-who-pays/'});
+    assert.ok(after.body.includes(lease.lead));
+    // Revoking the reshape alone leaves an unrelated page byte-identical.
+    const sc = JSON.parse(fs.readFileSync('data/site_changes/queue.json'));
+    sc.changes[0].status = 'declined';
+    fs.writeFileSync('data/site_changes/queue.json', JSON.stringify(sc));
+    const other = body.replace(title, 'Can a barn keep a horse for unpaid board?');
+    assert.equal(q.improveBody({body: other, title: 'x', url:'/scenario/other/'}).body, other);
+  } finally { if (forced === undefined) delete process.env.PREVIEW_SITE_CHANGES; else process.env.PREVIEW_SITE_CHANGES = forced; process.chdir(cwd); fs.rmSync(root,{recursive:true,force:true}); }
+});
+
+test('new claims never go live on the site manager\'s approval: only the owners approve the topic writing', () => {
+  const {readQueue} = require('../scripts/lib/site_changes');
+  const changes = readQueue(path.join(__dirname, '..')).changes;
+  const topics = changes.find(c => c.id === q.CHANGE);
+  const shape = changes.find(c => c.id === q.SHAPE);
+  assert.ok(topics && shape, 'both rows are in the real queue');
+  assert.ok(!(topics.status === 'approved' && /site manager/i.test(topics.approved_by || '')), 'the topic writing is approved only by the owners in /admin/');
+  if (shape.status === 'approved') assert.match(shape.decided_at || '', /^\d{4}-\d{2}-\d{2}$/, 'the reshape carries its real go-live date');
 });

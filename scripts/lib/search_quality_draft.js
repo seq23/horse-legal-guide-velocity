@@ -1,10 +1,21 @@
 'use strict';
-/** Intent-based writing slots shared by query pages and editorial pages.
- * Nothing reaches a public page until this ONE change is approved in /admin/.
+/** Two site changes in data/site_changes/queue.json, each inert until approved.
+ *
+ * SHAPE (search-shape-2026w45) only reshapes what the pages already say: a
+ * definition under the H1, question headings, the existing publisher's line, no
+ * list of the page's own query reworded, fewer repeats of the page's topic. It is
+ * a Search Readiness fix, which Sequoia approves without the owners' queue
+ * (ruling, 7 Nov 2026: "fix horselegal now - do not wait for them when its
+ * something from search readiness").
+ *
+ * CHANGE (search-quality-2026w45) is new topic writing with new legal sources
+ * (the four intents below). New claims always wait for the Horse owners' approval
+ * in /admin/, so it never rides on SHAPE.
  * No URL allowlist, sampled-page patch, invented reviewer or rolling date.
  */
 const { changeApproved, readQueue } = require('./site_changes');
 const CHANGE = 'search-quality-2026w45';
+const SHAPE = 'search-shape-2026w45';
 const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const text = s => String(s).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 const NC = 'https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/';
@@ -92,8 +103,8 @@ const formatVariants = {
   }
 };
 function profileFor(title) { return intents.find(p => p.match.test(title)); }
-function updatedDate() {
-  const c = readQueue().changes.find(c => c.id === CHANGE);
+function updatedDate(id = SHAPE) {
+  const c = readQueue().changes.find(c => c.id === id);
   const d = c?.decided_at || c?.queued_at;
   if (!/^\d{4}-\d{2}-\d{2}$/.test(d || '')) throw new Error('Quality change needs its actual queue/decision date');
   return d;
@@ -229,18 +240,25 @@ function finishContent(result, url) {
 }
 function improveBody(input) {
   const {body, url, preview = false} = input;
+  const queued = new Set(readQueue().changes.map(c => c.id));
   // A preview override cannot create a change absent from this site's queue.
-  if (!readQueue().changes.some(c => c.id === CHANGE)) return {body};
-  if (!preview && !changeApproved(CHANGE)) return {body};
-  const result = improveQueryBody(input);
-  return finishContent(result, url);
+  const live = id => queued.has(id) && (preview || changeApproved(id));
+  const on = {topics: live(CHANGE), shape: live(SHAPE)};
+  if (!on.topics && !on.shape) return {body};
+  const result = improveQueryBody(input, on);
+  if (!on.shape) return result;
+  const done = finishContent(result, url);
+  // A page rewritten by both changes carries the later of the two dates.
+  if (result.dateModified && done.dateModified && result.dateModified > done.dateModified) return {...done, dateModified: result.dateModified};
+  return done;
 }
-function improveQueryBody({body, title, url}) {
+function improveQueryBody({body, title, url}, on) {
   // Match the actual H1 (metadata titles are sometimes shortened), never a
   // sampled URL. Every generator rendering that intent uses the same slots.
   const heading = text(body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || title);
   const p = !String(url).startsWith('/reference/') && profileFor(heading);
-  if (p) return {body: renderIntent(p, body, updatedDate(), url), dateModified: updatedDate()};
+  if (p && on.topics) return {body: renderIntent(p, body, updatedDate(CHANGE), url), dateModified: updatedDate(CHANGE)};
+  if (!on.shape) return {body};
   if (/<section class="signal-block"/.test(body)) return {body: repairQueryPage(body), dateModified: updatedDate()};
   if (url === '/authority/') {
     const lead = 'Horse Legal Guide’s authority briefs are longer educational guides to equine contracts, disputes and business arrangements. This section collects approved briefs when their publication date arrives. It is a place to explore a topic in depth, rather than a legal opinion on a particular horse, agreement or dispute.';
@@ -251,4 +269,4 @@ function improveQueryBody({body, title, url}) {
   }
   return {body};
 }
-module.exports = {CHANGE, intents, profileFor, improveBody, dedupeTopic};
+module.exports = {CHANGE, SHAPE, intents, profileFor, improveBody, dedupeTopic};
