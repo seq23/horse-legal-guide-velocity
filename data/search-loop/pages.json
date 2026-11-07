@@ -375,6 +375,98 @@
         "b5 FAQ answer is 39 words (aim 40-60): \"Are verbal agreements binding in horse sales?\"",
         "b5 FAQ answer is 35 words (aim 40-60): \"Who pays for pre-purchase vetting and transport co\""
       ]
+    },
+    {
+      "slug": "horse-sales-agreement-with-payment-plan",
+      "query": "horse sales agreement with payment plan",
+      "score": 25,
+      "signals": {
+        "words": 6,
+        "question": false,
+        "google_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/horse-sales-agreement-with-payment-plan/index.html",
+      "route": "/questions/horse-sales-agreement-with-payment-plan/",
+      "url": "https://horselegalguide.com/questions/horse-sales-agreement-with-payment-plan/",
+      "published_at": null,
+      "queued_at": "2026-11-07",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-sales-agreement-with-payment-plan/index.html",
+      "hash": "ceac0fcf5044b045b92744dadfbca2e79e3d86bf5dc09ed82aea3ce966b41013",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://www.loc.gov/"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 39 words (aim 40-60): \"Does the Uniform Commercial Code apply to horse sa\"",
+        "b5 FAQ answer is 38 words (aim 40-60): \"Can a seller repossess a horse if a payment is mis\"",
+        "b5 FAQ answer is 37 words (aim 40-60): \"Who pays for veterinary care while payments are on\""
+      ]
+    },
+    {
+      "slug": "horse-sale-contract-with-buy-back",
+      "query": "horse sale contract with buy back",
+      "score": 25,
+      "signals": {
+        "words": 6,
+        "question": false,
+        "google_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/horse-sale-contract-with-buy-back/index.html",
+      "route": "/questions/horse-sale-contract-with-buy-back/",
+      "url": "https://horselegalguide.com/questions/horse-sale-contract-with-buy-back/",
+      "published_at": null,
+      "queued_at": "2026-11-07",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-sale-contract-with-buy-back/index.html",
+      "hash": "1d1ffa6dbca47b53df410d49fc1066b54472ddb3b2d9cb6453e3e5a08e4ced21",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc/2",
+        "https://www.usa.gov/"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 34 words (aim 40-60): \"Are buy-back clauses legally binding in every stat\"",
+        "b5 FAQ answer is 34 words (aim 40-60): \"Who determines the price in a horse buy-back agree\"",
+        "b5 FAQ answer is 38 words (aim 40-60): \"Can a buy-back clause expire over time?\""
+      ]
+    },
+    {
+      "slug": "horse-sale-contract-with-deposit",
+      "query": "horse sale contract with deposit",
+      "score": 25,
+      "signals": {
+        "words": 5,
+        "question": false,
+        "google_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/horse-sale-contract-with-deposit/index.html",
+      "route": "/questions/horse-sale-contract-with-deposit/",
+      "url": "https://horselegalguide.com/questions/horse-sale-contract-with-deposit/",
+      "published_at": null,
+      "queued_at": "2026-11-07",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-sale-contract-with-deposit/index.html",
+      "hash": "f2546b42473e8f3ca2f752985bab45e64bbadf727a72b4f7be94ea7144242a93",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 37 words (aim 40-60): \"Are deposits automatically refundable if a vet che\"",
+        "b5 FAQ answer is 37 words (aim 40-60): \"Who pays for board while the horse is held under d\""
+      ]
     }
   ],
   "dropped": [
@@ -490,6 +582,27 @@
       "reason": [
         "b5 FAQ answer is 29 words (aim 40-60): \"Do state laws affect equine trial agreements?\"",
         "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "how do you buy a horse",
+      "at": "2026-11-07",
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "horse sale contract template free",
+      "at": "2026-11-07",
+      "reason": [
+        "same intent as https://horselegalguide.com/scenario/i-used-a-template-horse-contract-is-that-enough/ (same 3 intent words plus modifiers); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "horse sale contract pdf",
+      "at": "2026-11-07",
+      "reason": [
+        "off-audience: This site does not host downloadable document templates or fillable PDF forms; instead, it provides educational articles"
       ]
     }
   ],
