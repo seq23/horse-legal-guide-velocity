@@ -79,7 +79,7 @@ function writeJsonLd(type, title, description, url, options = {}) {
       description,
       url: pageUrl,
       mainEntityOfPage: pageUrl,
-      ...(options.datePublished || options.dateModified ? { datePublished: options.datePublished || options.dateModified } : {}),
+      ...(options.datePublished ? { datePublished: options.datePublished } : {}),
       ...(options.dateModified ? { dateModified: options.dateModified } : {}),
       author: { '@id': orgId },
       publisher: { '@id': orgId },
@@ -110,7 +110,7 @@ function writeJsonLd(type, title, description, url, options = {}) {
     url: pageUrl,
     isPartOf: { '@id': websiteId },
     primaryImageOfPage: { '@type': 'ImageObject', url: `${originFromConfig(config)}/og.png` },
-    ...(options.datePublished || options.dateModified ? { datePublished: options.datePublished || options.dateModified } : {}),
+    ...(options.datePublished ? { datePublished: options.datePublished } : {}),
     ...(options.dateModified ? { dateModified: options.dateModified } : {}),
     ...(speakable.length ? { speakable: { '@type': 'SpeakableSpecification', cssSelector: speakable } } : {})
   });

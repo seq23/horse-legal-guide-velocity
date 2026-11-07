@@ -77,6 +77,69 @@
       "approved_at": "2026-11-06",
       "approved_by": "Sequoia Taylor (site manager)",
       "note": "Site fixes (contact link, removing internal notes) do not wait for the owners; new posts still do (Sequoia, 6 Nov 2026)."
+    },
+    {
+      "id": "search-quality-2026w45",
+      "status": "pending",
+      "queued_at": "2026-11-03",
+      "brief_ids": [
+        "so-horselegalguide.com-outcome",
+        "so-horselegalguide.com-quality"
+      ],
+      "title": "Clearer openings, visible publisher and date, and less repeated wording on the question pages",
+      "summary": "The weekly search check found the question pages repeat their own question several times, open without a plain definition, and show no publisher or date. This draft fixes the shared page template, so all 262 scenario, comparison and FAQ pages get: a short definition under the headline, a visible publisher line (Wise Covington PLLC) with the date you approve this, no list of the page's own question reworded five ways, and FAQ entries that no longer restate the headline with the same stock answer. Four topics (horse purchase contracts, an unsound leased horse, demand letters, trainer versus owner liability) and the Authority Briefs page also get new, topic-specific writing. No pages are added, removed or moved. It does not claim an attorney reviewed anything, or that it will restore rankings. Nothing changes publicly until you approve this row.",
+      "pages_affected": "All 262 scenario, comparison and FAQ question pages (template repair), plus /authority/ and the matching purchase insight and FAQ pages (new writing). Reference pages and unrelated sections keep their current content.",
+      "preview_paths": [
+        "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
+        "/authority/",
+        "/scenario/a-leased-horse-became-unsound-who-pays/",
+        "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
+        "/compare/trainer-liability-vs-owner-liability/"
+      ],
+      "before_after": [
+        {
+          "what": "Opening under the headline",
+          "before": "A 24-word disclaimer line on every question page; nothing that defines the topic.",
+          "after": "A 40-60 word plain definition of what the page covers (the disclaimer stays at the end of every page)."
+        },
+        {
+          "what": "Repeated wording",
+          "before": "A 'Real question patterns' box listing the page's own question up to five ways, and FAQ entries restating the headline with one stock answer.",
+          "after": "The box is removed; FAQ keeps only distinct questions with distinct answers."
+        },
+        {
+          "what": "Weekly quality check, all 262 question pages",
+          "before": "No definition 262, no visible publisher 251, no date 262, repeated filler 232.",
+          "after": "No definition 2, no visible publisher 0, no date 0, repeated filler 6."
+        },
+        {
+          "what": "Attribution and dates",
+          "before": "No visible publisher credit or update date on the sampled scenario and comparison pages.",
+          "after": "Visible existing publisher (Wise Covington PLLC), with the actual approval date as the content update date. No invented attorney review."
+        },
+        {
+          "what": "Search outcome diagnosis",
+          "before": "621 impressions in 2026-10-05..2026-11-01 versus 844 in 2026-09-07..2026-10-04.",
+          "after": "No technical outage reproduced. Four losing landings still indexed and self-canonical. Quality is a confirmed defect and a possible contributor, not a proven explanation of the decline."
+        }
+      ],
+      "diagnosis": {
+        "checked_at": "2026-11-04",
+        "confirmed": [
+          "Fresh read-only Search Console property lookup succeeded; both submitted sitemaps have zero errors and zero warnings. The sitemap API indexed=0 field is not the Pages report and is not evidence of zero indexed URLs.",
+          "Fresh URL Inspection: /, /faq/, /insights/ and /scenario/ all PASS, Submitted and indexed, INDEXING_ALLOWED, robots ALLOWED, Google canonical equals user canonical.",
+          "Independent live crawl: 325 of 325 sitemap pages, 593 targets checked, no reported defects.",
+          "Daily impressions: 2026-09-22..28 = 215; 2026-09-29..10-05 = 134. The decline precedes October 11 SEO and October 22 host/cache changes.",
+          "Git history has no robots.txt change during the comparison windows. September 29 metadata collision repair changed editorial descriptions; October 11 introduced icons/social metadata and a measured publishing freeze; October 22 introduced www-to-apex routing and caching. No reproduced canonical or noindex regression on the losing landings.",
+          "September 25 commit 6a974f8829 deliberately canonicalized duplicate /reference/ copies to their mapped answer pages and removed 262 copies from the sitemap (561 to 299 then). It also added single-cluster root redirects. September 25 and 27 title-limit changes and September 29 editorial-description changes were inspected; the losing landings retain their own canonicals.",
+          "Fresh Search Console page-grouped queries for the two comparison windows: /reference/ impressions 154 to 89; all page-grouped impressions 1338 to 635. These are page-aggregation totals, not the property-aggregation totals 844 to 621. Reference losses do not alone explain the broader decline."
+        ],
+        "not_read": [
+          "Search Console full Pages history and Manual actions: the in-app browser is unavailable; URL Inspection is a current point-in-time check and does not replace either report."
+        ],
+        "conclusion": "The cause of the impression decline remains unproven. The September 25 canonical consolidation overlaps the decline but correctly points duplicate references to their answer pages; current inspections do not reproduce an unintended canonical change on the losing landings. Do not reverse it or change robots, hosts, redirects or sitemap submissions on this evidence. The quality repair is drafted separately from any claim about rankings.",
+        "measurement": "After client approval, compare the same repaired URLs in successive 28-day Search Console windows and repeat the five-page quality check. If visibility continues falling, Danielle resumes the missing Pages-history and Manual-actions reads before proposing an indexing intervention."
+      }
     }
   ]
 }
