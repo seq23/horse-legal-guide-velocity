@@ -173,10 +173,69 @@ function repairQueryPage(body) {
   });
   return next;
 }
-function improveBody({body, title, url, preview = false}) {
+// The weekly sample reads every content section in the sitemap, not only the query
+// pages: editorial insights, articles and white papers, topic hubs and the section
+// pages (leases, state, therapeutic...) carry the same two template gaps: no visible
+// publisher, and the page's own topic slotted into four to six sentences. Sections,
+// never single URLs; /reference/ (not in the sitemap) and /about/ are left alone.
+const CONTENT_SECTIONS = /^\/(?:insights|articles|whitepapers|hubs|leases|state|therapeutic|liability|boarding|disputes|business|ip|scenario|compare|faq|authority)\//;
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const topicRe = words => new RegExp(words.map(reEsc).join('[^a-z0-9<>]+'), 'gi');
+/** The longest run of H1 words (5+) the visible body repeats more than three times. */
+function repeatedTopic(body) {
+  const h1 = text(body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '').replace(/[?.!]+$/, '');
+  const words = h1.split(/\s+/).filter(Boolean);
+  const visible = text(body.replace(/<script\b[\s\S]*?<\/script>/gi, ' '));
+  for (let n = words.length; n >= 5; n--) for (let k = 0; k + n <= words.length; k++) {
+    const re = topicRe(words.slice(k, k + n));
+    if ((visible.match(re) || []).length > 3) return { re, h1 };
+  }
+  return null;
+}
+/** Later slot mentions of the topic say "this question"/"this topic"; headings, links and breadcrumbs keep it. */
+function dedupeTopic(body) {
+  const found = repeatedTopic(body);
+  if (!found) return body;
+  const noun = /\?$|^(?:what|how|why|when|where|who|which|is|are|can|does|do|should|will|did|am)\b/i.test(found.h1) ? 'this question' : 'this topic';
+  // "The practical question behind <strong>X</strong> is" reads as one phrase.
+  let out = body.replace(new RegExp(`The practical question behind (?:<strong>)?(?:${found.re.source})(?:</strong>)? is`, 'gi'), 'The practical question here is');
+  const keep = /^<(?:h[1-6]|a|nav|title|script|summary)\b/i, close = /^<\/(?:h[1-6]|a|nav|title|script|summary)>/i;
+  const block = /^<\/?(?:p|li|td|th|div|section|article|header|ul|ol|table|tr|h[1-6])\b/i;
+  let depth = 0, before = '';
+  out = out.split(/(<[^>]+>)/).map((seg) => {
+    if (seg.startsWith('<')) { if (block.test(seg)) before = ''; if (keep.test(seg)) depth++; else if (close.test(seg)) depth = Math.max(0, depth - 1); return seg; }
+    const lead = before;
+    if (seg.trim()) before = seg;
+    if (depth) return seg;
+    // Capitalised only where a sentence starts: block start, or after ". ! ? :".
+    return seg.replace(found.re, (m, off, all) => {
+      const prior = off === 0 ? lead : all.slice(0, off);
+      return !prior.trim() || /[.!?:]\s*$/.test(prior) ? noun[0].toUpperCase() + noun.slice(1) : noun;
+    });
+  }).join('');
+  return out;
+}
+/** Publisher line (rel="author", the existing firm) under the H1 when the page has none. */
+function withCredit(body) {
+  if (/rel="author"/.test(body)) return body;
+  return body.replace(/(<\/h1>)/i, `$1${credit(updatedDate())}`);
+}
+function finishContent(result, url) {
+  if (!CONTENT_SECTIONS.test(String(url))) return result;
+  // The editorial drafts' uniqueness marker reached readers as escaped text.
+  const unmarked = result.body.replace(/<p>&lt;!-- UNIQUE_SELF_HEAL_(?:START|END) --&gt;<\/p>\s*/g, '');
+  const body = dedupeTopic(withCredit(unmarked));
+  return body === result.body ? result : { body, dateModified: updatedDate() };
+}
+function improveBody(input) {
+  const {body, url, preview = false} = input;
   // A preview override cannot create a change absent from this site's queue.
   if (!readQueue().changes.some(c => c.id === CHANGE)) return {body};
   if (!preview && !changeApproved(CHANGE)) return {body};
+  const result = improveQueryBody(input);
+  return finishContent(result, url);
+}
+function improveQueryBody({body, title, url}) {
   // Match the actual H1 (metadata titles are sometimes shortened), never a
   // sampled URL. Every generator rendering that intent uses the same slots.
   const heading = text(body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || title);
@@ -192,4 +251,4 @@ function improveBody({body, title, url, preview = false}) {
   }
   return {body};
 }
-module.exports = {CHANGE, intents, profileFor, improveBody};
+module.exports = {CHANGE, intents, profileFor, improveBody, dedupeTopic};

@@ -91,3 +91,37 @@ test('every generated query page gets the template repair once approved, and non
     assert.equal(q.improveBody({body:'<h1>Plain page</h1><p class="muted">x</p>', url:'/about/', preview:true}).body, '<h1>Plain page</h1><p class="muted">x</p>', 'pages the query generator did not build are untouched');
   } finally { if (forced === undefined) delete process.env.PREVIEW_SITE_CHANGES; else process.env.PREVIEW_SITE_CHANGES = forced; process.chdir(cwd); fs.rmSync(root,{recursive:true,force:true}); }
 });
+
+test('editorial, hub and section pages get the publisher line and lose the topic slotted into every sentence, only once approved', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'hlg-quality-ed-'));
+  const cwd = process.cwd();
+  const forced = process.env.PREVIEW_SITE_CHANGES;
+  delete process.env.PREVIEW_SITE_CHANGES;
+  fs.mkdirSync(path.join(root, 'data/site_changes'), {recursive:true});
+  fs.writeFileSync(path.join(root, 'data/site_changes/queue.json'), JSON.stringify({changes:[{id:q.CHANGE,status:'pending',queued_at:'2026-11-03'}]}));
+  process.chdir(root);
+  try {
+    const t = 'What Happens If a Horse Sale Goes Wrong';
+    const body = `<nav><a href="/">Home</a> · <span>${t}</span></nav><header class="content-header"><span class="eyebrow">Insight · 2026-05-07</span><h1>Money, possession, and risk transfer for ${t}</h1></header>
+<section class="quick-answer-block"><h2>Quick answer</h2><p><strong>The practical question behind ${t} is not answered safely by repeating a general overview.</strong></p></section>
+<article><p>&lt;!-- UNIQUE_SELF_HEAL_START --&gt;</p> <h2>Decision sequence</h2><ol><li>Define the narrow decision: what must be decided about <strong>${t}</strong> before anyone acts?</li></ol>
+<p>Imagine one operational detail tied to <strong>${t}</strong>.</p><table><tr><td>Names and signature authority tied to ${t}</td></tr></table>
+<ul><li><a href="/insights/x/">${t}</a></li></ul></article>`;
+    const input = {body, title: t, url: '/insights/2026-05-07/a-plain-english-note/'};
+    assert.equal(q.improveBody(input).body, body, 'pending: byte-identical');
+    const out = q.improveBody({...input, preview: true});
+    const visible = out.body.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    assert.ok((visible.match(new RegExp(t, 'gi')) || []).length <= 3, 'the topic is named at most three times');
+    assert.match(out.body, /<h1>Money, possession, and risk transfer for What Happens If a Horse Sale Goes Wrong<\/h1>/, 'the H1 is kept');
+    assert.match(out.body, /<a href="\/insights\/x\/">What Happens If a Horse Sale Goes Wrong<\/a>/, 'link labels are kept');
+    assert.match(out.body, /The practical question here is not answered/);
+    assert.match(out.body, /tied to <strong>this topic<\/strong>/);
+    assert.match(out.body, /rel="author">Wise Covington PLLC<\/a> · Updated <time datetime="2026-11-03">/);
+    assert.ok(!out.body.includes('UNIQUE_SELF_HEAL'), 'the leaked marker is gone');
+    assert.equal(out.dateModified, '2026-11-03');
+    // Negative: a page outside the content sections, and a page that names its topic three times, are untouched.
+    assert.equal(q.improveBody({...input, url: '/about/', preview: true}).body.includes('rel="author"'), false);
+    const calm = `<h1>${t}</h1><p>${t} is a question.</p><p>About ${t}.</p><p class="x">rel="author"</p>`;
+    assert.equal(q.dedupeTopic(calm), calm);
+  } finally { if (forced === undefined) delete process.env.PREVIEW_SITE_CHANGES; else process.env.PREVIEW_SITE_CHANGES = forced; process.chdir(cwd); fs.rmSync(root,{recursive:true,force:true}); }
+});
