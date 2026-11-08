@@ -170,6 +170,7 @@ function main() {
   // served pages reach the sitemap and IndexNow and held pages do not.
   foldQuestionPages(distDir);
   writeSectionRedirects(distDir, approvedPages, clusters);
+  require('./write_shared_checklist').writeSharedChecklist(distDir);
   writeSitemaps(distDir, config.site_domain || 'https://example.com');
   writeLlmsTxt(distDir, config.canonical_domain);
   writeAdminPage(distDir);

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { readJson, collectRequired, fail, ok } = require('./helpers');
+const SHARED_CHECKLIST = require('../../scripts/lib/search_quality_draft');
 const queue = readJson('data/community/publish_queue.json');
 if (!Array.isArray(queue)) fail('publish_queue.json must be an array');
 const targets = readJson('data/queries/page_targets.json');
@@ -21,7 +22,10 @@ for (const file of liveFiles) {
   // they can never appear in approvedSlugs.
   const siteOwned = ['/', '/about/', '/disclaimer/', '/privacy-policy/', '/admin/'];
   const loopPage = rel.startsWith('/questions/') && loopLive.has(rel);
-  if (!siteOwned.includes(rel) && !approvedSlugs.has(rel) && !allowedGenerated && !loopPage) {
+  // The shared checklist page is the query pages' own repeated text, written only once
+  // its site change is approved (scripts/build/write_shared_checklist.js).
+  const sharedChecklist = rel === SHARED_CHECKLIST.CHECKLIST_URL && require('../../scripts/lib/site_changes').changeApproved(SHARED_CHECKLIST.SHAPE);
+  if (!siteOwned.includes(rel) && !approvedSlugs.has(rel) && !allowedGenerated && !loopPage && !sharedChecklist) {
     fail(`Live page exists without approved status: ${rel}`);
   }
 }
