@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-07T23:29:58.000Z",
-  "measurement_fingerprint": "d3fad48a9b9ee0a63f866289faf615deab5a47df5e4abb2c4b261f8e8a1d771b",
+  "generated_at": "2026-11-08T00:00:49.000Z",
+  "measurement_fingerprint": "ac994d391d5e5bddc2bc5cdeb80f327e741b543a7176f9cee88a6dea65dcbb6d",
   "title": "LLM Citation Velocity Dashboard",
   "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, page uniqueness, and workflow trace next steps.",
   "truth_boundary": "Scores are regenerated from the current repo files and freshly rendered dist HTML on every release build. Existing-page similarity findings are advisory and require owner approval before any live change. Draft similarity is automatically repaired before approval eligibility. These local measurements do not prove live GitHub Actions, live GSC, Bing, or IndexNow until those provider workflows run after apply.",
@@ -43,9 +43,9 @@
     "canonical_present": 587,
     "duplicate_title_groups": 262,
     "duplicate_description_groups": 94,
-    "high_similarity_pairs": 884,
-    "intent_overlap_pairs": 14,
-    "uniqueness_review_clusters": 29,
+    "high_similarity_pairs": 887,
+    "intent_overlap_pairs": 23,
+    "uniqueness_review_clusters": 30,
     "drafts_automatically_differentiated": 265,
     "draft_uniqueness_failures": 0,
     "jsonld_present": 587,
@@ -223,8 +223,16 @@
       "why_it_matters": "Highly similar self-canonicalized pages can compete for the same query, dilute authority, and make index selection harder.",
       "recommended_fix": "Use the owner-review consolidation ledger to decide which existing pages should be differentiated or, in a separately approved phase, consolidated. This build does not mutate live pages.",
       "affected_pages": [
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
         "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
         "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
+        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+        "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
+        "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+        "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+        "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
         "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
         "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
         "/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/",
@@ -241,8 +249,6 @@
         "/leases/what-liability-applies-in-a-horse-property-lease/",
         "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
         "/leases/what-should-be-included-in-a-barn-lease/",
-        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
-        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
         "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
         "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
         "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
@@ -255,12 +261,8 @@
         "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
         "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
         "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
-        "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
         "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
         "/state/illinois/what-does-illinois-equine-liability-law-cover/",
-        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
-        "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
         "/scenario/a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/",
         "/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/",
         "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
@@ -270,9 +272,7 @@
         "/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/",
         "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
         "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
-        "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
-        "/leases/what-should-be-included-in-a-barn-lease/",
-        "/leases/what-liability-applies-in-a-horse-property-lease/"
+        "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/"
       ],
       "bulk_fix_available": false,
       "action_label": "",
@@ -280,7 +280,7 @@
       "github_edit_urls": [
         "https://github.com/seq23/horse-legal-guide-velocity/blob/main/data/admin/consolidation_review_ledger.json"
       ],
-      "source_metric": "884 pairs at or above 0.85 body similarity",
+      "source_metric": "887 pairs at or above 0.85 body similarity",
       "measurement": ""
     },
     {
@@ -298,8 +298,22 @@
         "/compare/llc-vs-sole-proprietor-horse-business/",
         "/compare/lease-vs-purchase-horse/",
         "/compare/horse-lease-vs-horse-purchase/",
+        "/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
+        "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
+        "/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
+        "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
+        "/insights/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/",
+        "/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/",
+        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+        "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "/scenario/what-if-i-sold-a-horse-without-a-contract/",
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
         "/scenario/do-people-actually-get-sued-over-horse-deals/",
         "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+        "/insights/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
+        "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+        "/insights/2026-05-04/how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act/",
+        "/faq/can-a-seller-refuse-to-take-a-horse-back/",
         "/scenario/what-if-i-sold-a-horse-without-a-contract/",
         "/scenario/i-sold-a-horse-without-a-contract-what-now/",
         "/compare/waiver-vs-insurance-horse-liability/",
@@ -308,6 +322,10 @@
         "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
         "/liability/do-i-need-insurance-for-my-horse-business/",
         "/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/",
+        "/scenario/i-sold-a-horse-without-a-contract-what-now/",
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+        "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
         "/compare/trial-agreement-vs-lease-agreement/",
         "/compare/horse-lease-vs-horse-trial-agreement/",
         "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
@@ -325,7 +343,7 @@
       "github_edit_urls": [
         "https://github.com/seq23/horse-legal-guide-velocity/blob/main/data/admin/page_uniqueness_report.json"
       ],
-      "source_metric": "14 intent-overlap pairs",
+      "source_metric": "23 intent-overlap pairs",
       "measurement": ""
     },
     {
@@ -389,5 +407,5 @@
       "measurement": ""
     }
   ],
-  "affected_item_count": 90
+  "affected_item_count": 103
 }
