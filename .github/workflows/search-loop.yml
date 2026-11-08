@@ -1,10 +1,10 @@
 name: Search Loop
 
-# The shared search growth engine (seq23/search-loop, pinned @v1.5.1). Owner ruling 1 Nov 2026:
+# The shared search growth engine (seq23/search-loop, pinned @v1.7.4). Owner ruling 1 Nov 2026:
 # find easy searches weekly, publish gated question pages under /questions/ daily,
 # check every page at 2/4/8 weeks, strengthen / undo / merge, upload the weekly
 # report artifact "search-loop-week".
-# v1.5.1 also supplies the free-zone Web Analytics fallback and retries failed daily reads;
+# v1.5.1+ also supplies the free-zone Web Analytics fallback and retries failed daily reads;
 # the token mapping alone cannot measure referrals while pinned to v1.4.0.
 # Approval mode (owners' ruling, 3 Nov 2026): every new page waits in the owners' queue
 # (/admin/, data/search-loop/pending/) and goes live only once approved there;
@@ -37,10 +37,11 @@ concurrency:
 
 jobs:
   search-loop:
-    uses: seq23/search-loop/.github/workflows/search-loop.yml@v1.5.1
+    uses: seq23/search-loop/.github/workflows/search-loop.yml@v1.7.4
     with:
       open_loops_business: friends
-      engine_ref: v1.5.1
+      engine_ref: v1.7.4
+      # v1.7.4: v1.5.1 had no open_loops_business input or BOSS_OPEN_LOOPS_TOKEN secret, so #80 made every run a startup_failure (8 Nov 2026).
       stage: ${{ inputs.stage || 'auto' }}
       setup_command: npm ci --ignore-scripts && npm run build >/dev/null && node scripts/search_loop/mirror_site.js
       post_build_command: node scripts/search_loop/mirror_site.js --clean && npm run build
