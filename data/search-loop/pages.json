@@ -467,6 +467,73 @@
         "b5 FAQ answer is 37 words (aim 40-60): \"Are deposits automatically refundable if a vet che\"",
         "b5 FAQ answer is 37 words (aim 40-60): \"Who pays for board while the horse is held under d\""
       ]
+    },
+    {
+      "slug": "horse-bill-of-sale-pdf",
+      "query": "horse bill of sale pdf",
+      "lane": "striking",
+      "score": 40,
+      "reasons": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "google_suggest": true,
+        "bing_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/horse-bill-of-sale-pdf/index.html",
+      "route": "/questions/horse-bill-of-sale-pdf/",
+      "url": "https://horselegalguide.com/questions/horse-bill-of-sale-pdf/",
+      "published_at": null,
+      "queued_at": "2026-11-08",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-bill-of-sale-pdf/index.html",
+      "hash": "4eac3e7cf166a481e0454ce16e0e9bc827a24169d7264e4428fd4c3945f293f5",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://en.wikipedia.org/wiki/Bill_of_sale"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 33 words (aim 40-60): \"Can I use a free online PDF template for my horse \"",
+        "b5 FAQ answer is 33 words (aim 40-60): \"Does a horse bill of sale guarantee the animal is \"",
+        "b5 FAQ answer is 32 words (aim 40-60): \"What documents should accompany a horse bill of sa\""
+      ]
+    },
+    {
+      "slug": "what-is-horse-law",
+      "query": "what is horse law",
+      "lane": "striking",
+      "score": 30,
+      "reasons": [],
+      "signals": {
+        "words": 4,
+        "question": true,
+        "google_suggest": true,
+        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      },
+      "rel": "questions/what-is-horse-law/index.html",
+      "route": "/questions/what-is-horse-law/",
+      "url": "https://horselegalguide.com/questions/what-is-horse-law/",
+      "published_at": null,
+      "queued_at": "2026-11-08",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/what-is-horse-law/index.html",
+      "hash": "d12505ef13161873f86b492732474d3b55a25177a5fb936be3444892ab620a53",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc/2",
+        "https://www.animallaw.info/"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 35 words (aim 40-60): \"What is an equine activity liability act?\"",
+        "b5 FAQ answer is 30 words (aim 40-60): \"Can a barn owner sell a horse for unpaid board?\"",
+        "b5 FAQ answer is 32 words (aim 40-60): \"Do liability waivers completely prevent lawsuits?\""
+      ]
     }
   ],
   "dropped": [
@@ -603,6 +670,65 @@
       "at": "2026-11-07",
       "reason": [
         "off-audience: This site does not host downloadable document templates or fillable PDF forms; instead, it provides educational articles"
+      ]
+    },
+    {
+      "query": "equine liability waiver template",
+      "at": "2026-11-08",
+      "gate": 2,
+      "reason": [
+        "the answer was not the JSON object asked for, with every key filled"
+      ]
+    },
+    {
+      "query": "equine liability waiver florida",
+      "at": "2026-11-08",
+      "gate": 2,
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
+      ]
+    },
+    {
+      "query": "free equine liability waiver",
+      "at": "2026-11-08",
+      "gate": 2,
+      "reason": [
+        "the answer was not the JSON object asked for, with every key filled"
+      ]
+    },
+    {
+      "query": "free equine liability waiver template",
+      "at": "2026-11-08",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 29 words (aim 40-60): \"Do minors need a different type of equine waiver?\"",
+        "b5 FAQ answer is 25 words (aim 40-60): \"Are warning signs required if I use a signed waive\"",
+        "b5 FAQ answer is 25 words (aim 40-60): \"Does an equine waiver replace the need for liabili\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "equine law solicitors",
+      "at": "2026-11-08",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 26 words (aim 40-60): \"What is an equine law solicitor?\"",
+        "b5 FAQ answer is 20 words (aim 40-60): \"Are equine laws the same in every state?\"",
+        "b5 FAQ answer is 17 words (aim 40-60): \"Why are written equine contracts important?\"",
+        "b5 FAQ answer is 19 words (aim 40-60): \"How can I find out more about state liability acts\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
+      ]
+    },
+    {
+      "query": "what is equine inherent risk law",
+      "at": "2026-11-08",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 29 words (aim 40-60): \"Do equine liability laws apply to horse owners who\"",
+        "b5 FAQ answer is 25 words (aim 40-60): \"Are riding instructors protected by inherent risk \"",
+        "b5 FAQ answer is 26 words (aim 40-60): \"Must stables post warning signs to receive legal p\"",
+        "b5 FAQ answer is 26 words (aim 40-60): \"Can a waiver override an equine liability statute?\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
       ]
     }
   ],
