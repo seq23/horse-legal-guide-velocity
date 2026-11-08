@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-11-07T23:29:58.000Z",
+  "generated_at": "2026-11-08T00:00:49.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-11-07T15:20:53.176Z",
-      "age_hours": 8.2,
+      "age_hours": 8.7,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "ok",
       "checked_at": "2026-11-07T15:20:53.176Z",
-      "age_hours": 8.2,
+      "age_hours": 8.7,
       "message": "Bing Webmaster monitoring refreshed."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-11-07T15:20:53.176Z",
-      "age_hours": 8.2,
+      "age_hours": 8.7,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -4593,9 +4593,9 @@
       "canonical_present": 587,
       "duplicate_title_groups": 262,
       "duplicate_description_groups": 94,
-      "high_similarity_pairs": 884,
-      "intent_overlap_pairs": 14,
-      "uniqueness_review_clusters": 29,
+      "high_similarity_pairs": 887,
+      "intent_overlap_pairs": 23,
+      "uniqueness_review_clusters": 30,
       "drafts_automatically_differentiated": 265,
       "draft_uniqueness_failures": 0,
       "jsonld_present": 587,
@@ -4629,8 +4629,8 @@
       "indexable_pages_measured": 325,
       "duplicate_title_groups": 1,
       "duplicate_description_groups": 0,
-      "high_similarity_pairs": 884,
-      "intent_overlap_pairs": 14
+      "high_similarity_pairs": 887,
+      "intent_overlap_pairs": 23
     },
     "family_metrics": {
       "about": {
@@ -4691,7 +4691,7 @@
         "pages": 21,
         "duplicate_title_memberships": 0,
         "high_similarity_pair_memberships": 63,
-        "intent_overlap_pair_memberships": 0
+        "intent_overlap_pair_memberships": 6
       },
       "hubs": {
         "pages": 12,
@@ -4702,8 +4702,8 @@
       "insights": {
         "pages": 21,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 32,
-        "intent_overlap_pair_memberships": 0
+        "high_similarity_pair_memberships": 38,
+        "intent_overlap_pair_memberships": 9
       },
       "ip": {
         "pages": 7,
@@ -4751,7 +4751,7 @@
         "pages": 106,
         "duplicate_title_memberships": 0,
         "high_similarity_pair_memberships": 1338,
-        "intent_overlap_pair_memberships": 9
+        "intent_overlap_pair_memberships": 12
       },
       "state": {
         "pages": 7,
@@ -11054,8 +11054,8 @@
   },
   "remediation": {
     "summary": {
-      "total": 29,
-      "pending_owner_approval": 29,
+      "total": 30,
+      "pending_owner_approval": 30,
       "approved": 0,
       "applied": 0,
       "rejected": 0
@@ -11064,6 +11064,39 @@
       {
         "proposal_id": "remediation-uniqueness-0001",
         "ledger_id": "uniqueness-0001",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
+        "candidate_primary": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+        "members": [
+          "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
+          "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+          "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+          "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+          "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/"
+        ],
+        "families": [
+          "insights"
+        ],
+        "reasons": [
+          "high_body_similarity"
+        ],
+        "maximum_body_similarity": 0.9851,
+        "suggested_actions": [
+          "redirect_to_primary",
+          "differentiate_patch"
+        ],
+        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0002",
+        "ledger_id": "uniqueness-0002",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11095,8 +11128,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0002",
-        "ledger_id": "uniqueness-0002",
+        "proposal_id": "remediation-uniqueness-0003",
+        "ledger_id": "uniqueness-0003",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11125,8 +11158,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0003",
-        "ledger_id": "uniqueness-0003",
+        "proposal_id": "remediation-uniqueness-0004",
+        "ledger_id": "uniqueness-0004",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11163,8 +11196,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0004",
-        "ledger_id": "uniqueness-0004",
+        "proposal_id": "remediation-uniqueness-0005",
+        "ledger_id": "uniqueness-0005",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11185,38 +11218,6 @@
           "high_body_similarity"
         ],
         "maximum_body_similarity": 0.9694,
-        "suggested_actions": [
-          "differentiate_patch"
-        ],
-        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0005",
-        "ledger_id": "uniqueness-0005",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
-        "candidate_primary": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
-        "members": [
-          "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
-          "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
-          "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
-          "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
-          "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/"
-        ],
-        "families": [
-          "insights"
-        ],
-        "reasons": [
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.9683,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -11569,6 +11570,38 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
+        "candidate_primary": "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
+        "members": [
+          "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
+          "/insights/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
+          "/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
+          "/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
+          "/insights/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/"
+        ],
+        "families": [
+          "insights"
+        ],
+        "reasons": [
+          "high_body_similarity"
+        ],
+        "maximum_body_similarity": 0.9402,
+        "suggested_actions": [
+          "differentiate_patch"
+        ],
+        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0016",
+        "ledger_id": "uniqueness-0016",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
         "candidate_primary": "/scenario/a-trainer-wants-commission-after-a-sale-what-should-be-checked/",
         "members": [
           "/scenario/a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/",
@@ -11610,8 +11643,38 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0016",
-        "ledger_id": "uniqueness-0016",
+        "proposal_id": "remediation-uniqueness-0017",
+        "ledger_id": "uniqueness-0017",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
+        "candidate_primary": "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+        "members": [
+          "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+          "/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
+          "/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/"
+        ],
+        "families": [
+          "insights"
+        ],
+        "reasons": [
+          "high_body_similarity"
+        ],
+        "maximum_body_similarity": 0.9395,
+        "suggested_actions": [
+          "differentiate_patch"
+        ],
+        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0018",
+        "ledger_id": "uniqueness-0018",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11641,8 +11704,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0017",
-        "ledger_id": "uniqueness-0017",
+        "proposal_id": "remediation-uniqueness-0019",
+        "ledger_id": "uniqueness-0019",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11678,8 +11741,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0018",
-        "ledger_id": "uniqueness-0018",
+        "proposal_id": "remediation-uniqueness-0020",
+        "ledger_id": "uniqueness-0020",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11713,8 +11776,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0019",
-        "ledger_id": "uniqueness-0019",
+        "proposal_id": "remediation-uniqueness-0021",
+        "ledger_id": "uniqueness-0021",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11747,8 +11810,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0020",
-        "ledger_id": "uniqueness-0020",
+        "proposal_id": "remediation-uniqueness-0022",
+        "ledger_id": "uniqueness-0022",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11779,8 +11842,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0021",
-        "ledger_id": "uniqueness-0021",
+        "proposal_id": "remediation-uniqueness-0023",
+        "ledger_id": "uniqueness-0023",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11810,8 +11873,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0022",
-        "ledger_id": "uniqueness-0022",
+        "proposal_id": "remediation-uniqueness-0024",
+        "ledger_id": "uniqueness-0024",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11843,19 +11906,18 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0023",
-        "ledger_id": "uniqueness-0023",
+        "proposal_id": "remediation-uniqueness-0025",
+        "ledger_id": "uniqueness-0025",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
+        "candidate_primary": "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/",
         "members": [
-          "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
-          "/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
-          "/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/"
+          "/insights/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/",
+          "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/"
         ],
         "families": [
           "insights"
@@ -11863,7 +11925,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9011,
+        "maximum_body_similarity": 0.9125,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -11873,8 +11935,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0024",
-        "ledger_id": "uniqueness-0024",
+        "proposal_id": "remediation-uniqueness-0026",
+        "ledger_id": "uniqueness-0026",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11902,8 +11964,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0025",
-        "ledger_id": "uniqueness-0025",
+        "proposal_id": "remediation-uniqueness-0027",
+        "ledger_id": "uniqueness-0027",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11931,8 +11993,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0026",
-        "ledger_id": "uniqueness-0026",
+        "proposal_id": "remediation-uniqueness-0028",
+        "ledger_id": "uniqueness-0028",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -11960,38 +12022,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0027",
-        "ledger_id": "uniqueness-0027",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
-        "candidate_primary": "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
-        "members": [
-          "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
-          "/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
-          "/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/"
-        ],
-        "families": [
-          "insights"
-        ],
-        "reasons": [
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.882,
-        "suggested_actions": [
-          "differentiate_patch"
-        ],
-        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0028",
-        "ledger_id": "uniqueness-0028",
+        "proposal_id": "remediation-uniqueness-0029",
+        "ledger_id": "uniqueness-0029",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12019,8 +12051,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0029",
-        "ledger_id": "uniqueness-0029",
+        "proposal_id": "remediation-uniqueness-0030",
+        "ledger_id": "uniqueness-0030",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12305,8 +12337,16 @@
       "code": "Page uniqueness",
       "message": "Rendered pages with substantial body similarity detected",
       "routes": [
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
         "/therapeutic/what-waivers-are-required-for-equine-therapy-programs/",
         "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
+        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+        "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
+        "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+        "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+        "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
         "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
         "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
         "/scenario/a-therapeutic-riding-program-uses-volunteers-and-minors-what-should-be-checked/",
@@ -12323,8 +12363,6 @@
         "/leases/what-liability-applies-in-a-horse-property-lease/",
         "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
         "/leases/what-should-be-included-in-a-barn-lease/",
-        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
-        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
         "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
         "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
         "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
@@ -12337,12 +12375,8 @@
         "/scenario/a-horse-sale-crossed-state-lines-what-should-be-reviewed/",
         "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
         "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
-        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
-        "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
         "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
         "/state/illinois/what-does-illinois-equine-liability-law-cover/",
-        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
-        "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
         "/scenario/a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/",
         "/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/",
         "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
@@ -12352,9 +12386,7 @@
         "/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/",
         "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
         "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
-        "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
-        "/leases/what-should-be-included-in-a-barn-lease/",
-        "/leases/what-liability-applies-in-a-horse-property-lease/"
+        "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/"
       ],
       "recommended_action": "Use the owner-review consolidation ledger to decide which existing pages should be differentiated or, in a separately approved phase, consolidated. This build does not mutate live pages."
     },
@@ -12372,8 +12404,22 @@
         "/compare/llc-vs-sole-proprietor-horse-business/",
         "/compare/lease-vs-purchase-horse/",
         "/compare/horse-lease-vs-horse-purchase/",
+        "/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
+        "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
+        "/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
+        "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
+        "/insights/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/",
+        "/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/",
+        "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+        "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
+        "/scenario/what-if-i-sold-a-horse-without-a-contract/",
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
         "/scenario/do-people-actually-get-sued-over-horse-deals/",
         "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+        "/insights/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
+        "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
+        "/insights/2026-05-04/how-to-think-about-can-a-seller-refuse-to-take-a-horse-back-before-you-act/",
+        "/faq/can-a-seller-refuse-to-take-a-horse-back/",
         "/scenario/what-if-i-sold-a-horse-without-a-contract/",
         "/scenario/i-sold-a-horse-without-a-contract-what-now/",
         "/compare/waiver-vs-insurance-horse-liability/",
@@ -12382,6 +12428,10 @@
         "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
         "/liability/do-i-need-insurance-for-my-horse-business/",
         "/compare/do-i-need-both-a-waiver-and-insurance-for-a-horse-business/",
+        "/scenario/i-sold-a-horse-without-a-contract-what-now/",
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+        "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+        "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
         "/compare/trial-agreement-vs-lease-agreement/",
         "/compare/horse-lease-vs-horse-trial-agreement/",
         "/scenario/what-if-i-already-signed-something-i-did-not-understand/",

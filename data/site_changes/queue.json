@@ -2,7 +2,7 @@
   "changes": [
     {
       "id": "internal-notes-cleanup",
-      "status": "pending",
+      "status": "approved",
       "queued_at": "2026-11-03",
       "title": "Remove internal editing notes from 36 published pages and fix 15 broken headlines",
       "summary": "Some published pages still show notes that were meant only for the writing process: sections called \"Draft summary\", \"Review notes\" (\"Manual mode is active. Do not publish without approval.\"), \"Canonical routing block\", \"Self-healing outcome\", \"Question fingerprint\", \"Evidence map\" and \"Additional context\", and sentences about the page itself (for example \"That cluster logic matters for LLM ingestion\"). Approving removes them, keeps every reader section, table and link, renames the \"Defensible data atom\" tables to plain names (\"Clause map\", \"Risk matrix\"), and turns headlines like \"Why What If I Sold a Horse Without a Contract Creates Confusion\" into the question itself. No page address changes and no page is removed.",
@@ -53,7 +53,11 @@
           "before": "about 970 words",
           "after": "about 530 words (only the internal notes are removed)"
         }
-      ]
+      ],
+      "approved_at": "2026-11-07",
+      "decided_at": "2026-11-07",
+      "approved_by": "Sequoia Taylor (site manager)",
+      "note": "Removing internal notes is a site fix that does not wait for the owners (Sequoia, 6 Nov 2026), and the leftover self-healing tables are the repeated filler the weekly Search Readiness check flags (Sequoia, 7 Nov 2026: \"fix horselegal now - do not wait for them when its something from search readiness\"). Removal and plain headlines only: no new facts or claims."
     },
     {
       "id": "one-action-link",
