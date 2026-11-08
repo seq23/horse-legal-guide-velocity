@@ -92,6 +92,24 @@ function signalBlock(page, queries, rawSignals) {
 </section>`;
 }
 
+// The checklist every query page shared word for word. One source: the query
+// template uses it, and once search-shape-2026w45 is approved it lives once on
+// /guides/before-you-act/ (write_shared_checklist.js) instead of on every page.
+const TRIAGE = `<section><h2>Fast triage framework</h2><table><thead><tr><th>Question</th><th>Why it matters</th></tr></thead><tbody><tr><td>What document controls this?</td><td>If there is a signed agreement, invoice, waiver, policy, text chain, bill of sale, or notice, that usually matters more than memory.</td></tr><tr><td>What changed hands?</td><td>Money, possession, care, transport, emergency authority, and title transfer often determine which side carries the immediate risk.</td></tr><tr><td>What happened first?</td><td>Sequence matters. The timeline often decides whether this is a misunderstanding, a contract problem, a care issue, or an escalation problem.</td></tr><tr><td>What state rules may change the answer?</td><td>Venue, warning language, lien rights, waiver rules, and equine activity statutes can change the practical analysis fast.</td></tr></tbody></table></section>`;
+const GATHER = `<section><h2>What to gather before you act</h2><ul><li>the controlling agreement, form, waiver, invoice, or bill of sale</li><li>texts, emails, screenshots, and payment records</li><li>photos, vet records, boarding logs, or incident notes if care or injury is involved</li><li>a short dated timeline of what happened and when</li><li>the exact demand, threat, refusal, or deadline now on the table</li></ul></section>`;
+const NOT_TO_DO = `<section><h2>What not to do</h2><ul><li>do not post accusations publicly before you preserve the private record</li><li>do not make a new promise just to calm the situation down</li><li>do not treat a horse-world custom like a written legal rule</li><li>do not assume the loudest issue is the real issue</li></ul></section>`;
+const NEXT_MOVE = `<section><h2>Practical next move</h2><p>The next move is usually to stabilize the record, identify the governing lane, and respond in writing with a cleaner factual position. If the other side is escalating fast, your job is to get organized first, not dramatic first.</p></section>`;
+const FAQ_DECIDES = `<section><h2>What usually decides the answer</h2><ul><li>what the signed document, bill of sale, waiver, lease, invoice, text chain, or policy actually says</li><li>whether the written record matches what each side says was promised</li><li>who had control of the horse, property, business decision, or emergency call when the issue arose</li><li>whether state law changes warning language, waiver scope, notice requirements, venue, or lien rights</li></ul></section>`;
+const COMMON_MISTAKES = `<section>
+  <h2>Common mistakes</h2>
+  <ul><li>treating a text-message understanding like a complete contract</li><li>ignoring state-specific rules, warning language, or venue issues</li><li>copying a template without matching it to the real horse, barn, sale, lease, sponsor, or business arrangement</li><li>posting accusations publicly before preserving the private record</li></ul>
+</section>`;
+const WHAT_NEXT = `<section>
+  <h2>What to do next</h2>
+  <p>Collect the contract, messages, invoices, payment records, registration or transfer records, vet records if relevant, insurance documents if relevant, and a short timeline. Then evaluate the next move with the exact state and facts in mind.</p>
+</section>`;
+const SHARED_CHECKLIST = { TRIAGE, GATHER, NOT_TO_DO, NEXT_MOVE, COMMON_MISTAKES, WHAT_NEXT, FAQ_DECIDES };
+
 function accordion(items, title) {
   if (!items.length) return '';
   const details = items.map((item, idx) => `<details data-accordion="true" data-accordion-purpose="faq-only" ${idx === 0 ? 'open' : ''}><summary>${esc(item.question)}</summary><p>${esc(item.answer)}</p></details>`).join('\n');
@@ -118,15 +136,15 @@ function comparisonBody(page, queries, clusterPhrase) {
 
 function scenarioBody(page, queries, clusterPhrase) {
   return `<section><h2>What matters first</h2><p>This is a ${esc(clusterPhrase)} scenario, which means the real work is triage. Before you argue about blame, figure out what lane you are actually in: ownership, payment, care, injury, disclosure, control, authority, or state-specific compliance. Most bad outcomes happen because people respond emotionally before they classify the problem correctly.</p></section>
-<section><h2>Fast triage framework</h2><table><thead><tr><th>Question</th><th>Why it matters</th></tr></thead><tbody><tr><td>What document controls this?</td><td>If there is a signed agreement, invoice, waiver, policy, text chain, bill of sale, or notice, that usually matters more than memory.</td></tr><tr><td>What changed hands?</td><td>Money, possession, care, transport, emergency authority, and title transfer often determine which side carries the immediate risk.</td></tr><tr><td>What happened first?</td><td>Sequence matters. The timeline often decides whether this is a misunderstanding, a contract problem, a care issue, or an escalation problem.</td></tr><tr><td>What state rules may change the answer?</td><td>Venue, warning language, lien rights, waiver rules, and equine activity statutes can change the practical analysis fast.</td></tr></tbody></table></section>
-<section><h2>What to gather before you act</h2><ul><li>the controlling agreement, form, waiver, invoice, or bill of sale</li><li>texts, emails, screenshots, and payment records</li><li>photos, vet records, boarding logs, or incident notes if care or injury is involved</li><li>a short dated timeline of what happened and when</li><li>the exact demand, threat, refusal, or deadline now on the table</li></ul></section>
-<section><h2>What not to do</h2><ul><li>do not post accusations publicly before you preserve the private record</li><li>do not make a new promise just to calm the situation down</li><li>do not treat a horse-world custom like a written legal rule</li><li>do not assume the loudest issue is the real issue</li></ul></section>
-<section><h2>Practical next move</h2><p>The next move is usually to stabilize the record, identify the governing lane, and respond in writing with a cleaner factual position. If the other side is escalating fast, your job is to get organized first, not dramatic first.</p></section>`;
+${TRIAGE}
+${GATHER}
+${NOT_TO_DO}
+${NEXT_MOVE}`;
 }
 
 function faqBody(page, queries, clusterPhrase) {
   return `<section><h2>Bottom line</h2><p>This question comes up because horse-world deals often get treated like they can run on trust, memory, or custom. They usually cannot. The useful answer starts with the controlling document, the real timeline, what money, care, possession, or authority changed hands, and which state-specific rule could change the result.</p></section>
-<section><h2>What usually decides the answer</h2><ul><li>what the signed document, bill of sale, waiver, lease, invoice, text chain, or policy actually says</li><li>whether the written record matches what each side says was promised</li><li>who had control of the horse, property, business decision, or emergency call when the issue arose</li><li>whether state law changes warning language, waiver scope, notice requirements, venue, or lien rights</li></ul></section>
+${FAQ_DECIDES}
 <section><h2>Practical answer framework</h2><p>For ${esc(clusterPhrase)}, the wrong move is to treat this like a generic internet FAQ. The right move is to answer from the paper trail first, then the facts on the ground, then the state-specific rule set. That order is what usually separates a useful answer from a misleading one.</p></section>`;
 }
 
@@ -209,14 +227,8 @@ ${breadcrumbNav(page.slug, page.title)}
 ${answerShape.html.replace('<section class="answer-shape-module"', '<section class="answer-shape-module" data-editable-zone="top_answer_module"')}
 ${signalBlock(page, queries, signals)}
 ${defaultBody(page, queries, clusterPhrase)}
-<section>
-  <h2>Common mistakes</h2>
-  <ul><li>treating a text-message understanding like a complete contract</li><li>ignoring state-specific rules, warning language, or venue issues</li><li>copying a template without matching it to the real horse, barn, sale, lease, sponsor, or business arrangement</li><li>posting accusations publicly before preserving the private record</li></ul>
-</section>
-<section>
-  <h2>What to do next</h2>
-  <p>Collect the contract, messages, invoices, payment records, registration or transfer records, vet records if relevant, insurance documents if relevant, and a short timeline. Then evaluate the next move with the exact state and facts in mind.</p>
-</section>
+${COMMON_MISTAKES}
+${WHAT_NEXT}
 ${accordion(faqItems(page, queries, clusterPhrase), 'Signal-backed FAQ')}
 ${formatRelatedLinks(content.related_pages, related)}
 <nav><p><a href="/">Home</a> · <a href="/hubs/${esc(page.cluster)}/">Back to ${esc(titleCase(page.cluster))}</a> · <a href="/reference/">Reference index</a></p></nav>
@@ -274,4 +286,4 @@ ${routingBlock(canonical)}`;
   return results;
 }
 
-module.exports = { writeApprovedPages };
+module.exports = { writeApprovedPages, SHARED_CHECKLIST };

@@ -160,6 +160,23 @@ function definitionFor(body) {
   for (const part of parts.slice(1)) if (words(`${out} ${part}`) <= 60) out = `${out} ${part}`;
   return out;
 }
+// The checklist every query page carried word for word (scripts/build/write_pages.js
+// SHARED_CHECKLIST, plus the cluster-worded "What matters first" and the comparison
+// page's generic "What usually decides" list) made any two scenario pages more than
+// half identical. With SHAPE approved it lives once on CHECKLIST_URL and each page
+// keeps only what is its own. Removal and a link only: no new facts.
+const CHECKLIST_URL = '/guides/before-you-act/';
+const SHARED_HEADINGS = new Set(['What matters first', 'Fast triage framework', 'What to gather before you act', 'What not to do', 'Practical next move', 'Common mistakes', 'What to do next', 'Bottom line', 'What usually decides the answer', 'Practical answer framework', 'What usually decides the comparison']);
+const CHECKLIST_POINTER = `<section><h2>What should be checked before acting?</h2><p>The checklist that applies to every situation on this site (the controlling document, what changed hands, the timeline, state rules, what to gather and what to avoid) is kept on one page: <a href="${CHECKLIST_URL}">Before you act: the shared checklist</a>.</p></section>`;
+function cutSharedChecklist(body) {
+  let placed = false;
+  return body.replace(/<section>\s*<h2>([^<]+)<\/h2>[\s\S]*?<\/section>\s*/g, (m, h) => {
+    if (!SHARED_HEADINGS.has(h.trim())) return m;
+    if (placed) return '';
+    placed = true;
+    return CHECKLIST_POINTER + '\n';
+  });
+}
 function repairQueryPage(body) {
   const h1 = norm(body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '');
   let next = body
@@ -170,6 +187,7 @@ function repairQueryPage(body) {
     // the same eight words down the sibling list. The link target is unchanged.
     .replace(/(<a\b[^>]*href="\/reference\/[^"]*"[^>]*>)What equine legal issues should someone consider in /gi, '$1')
     .replace(/(<\/h1>)\s*<p class="muted">[\s\S]*?<\/p>/i, (m, close) => `${close}\n  <p class="site-definition">${esc(definitionFor(body))}</p>\n  ${credit(updatedDate())}`);
+  next = cutSharedChecklist(next);
   next = next.replace(/(<section class="accordion-section faq-accordion"[^>]*>[\s\S]*?<\/h2>)([\s\S]*?)(<\/section>)/i, (m, open, items, close) => {
     const seenQ = new Set([h1]), seenA = new Set();
     const kept = [...items.matchAll(/<details\b[\s\S]*?<\/details>/gi)].map(x => x[0]).filter(d => {
@@ -231,11 +249,31 @@ function withCredit(body) {
   if (/rel="author"/.test(body)) return body;
   return body.replace(/(<\/h1>)/i, `$1${credit(updatedDate())}`);
 }
+/** An editorial quick answer under 40 words is the first sentences of the page's own
+ * first article paragraph: it takes that paragraph's next sentences, up to 60 words.
+ * The page's approved text only, nothing written here. */
+function fullerOpening(body) {
+  const qa = body.match(/(<section class="quick-answer-block"[^>]*>[\s\S]*?<p>(?:<strong>)?)([\s\S]*?)((?:<\/strong>)?<\/p>)/i);
+  if (!qa) return body;
+  const words = (t) => text(t).split(/\s+/).filter(Boolean).length;
+  if (words(qa[2]) >= 40) return body;
+  const rest = body.slice(body.indexOf(qa[0]) + qa[0].length);
+  const para = rest.match(/<article\b[^>]*>[\s\S]*?<p>([\s\S]*?)<\/p>/i)?.[1];
+  if (!para || /<[^>]+>/.test(para)) return body;
+  const start = text(qa[2]);
+  if (!text(para).startsWith(start)) return body;
+  let out = start;
+  for (const sentence of text(para).slice(start.length).trim().split(/(?<=[.!?])\s+/).filter(Boolean)) {
+    if (words(`${out} ${sentence}`) > 60) break;
+    out = `${out} ${sentence}`;
+  }
+  return out === start ? body : body.replace(qa[0], `${qa[1]}${esc(out)}${qa[3]}`);
+}
 function finishContent(result, url) {
   if (!CONTENT_SECTIONS.test(String(url))) return result;
   // The editorial drafts' uniqueness marker reached readers as escaped text.
   const unmarked = result.body.replace(/<p>&lt;!-- UNIQUE_SELF_HEAL_(?:START|END) --&gt;<\/p>\s*/g, '');
-  const body = dedupeTopic(withCredit(unmarked));
+  const body = fullerOpening(dedupeTopic(withCredit(unmarked)));
   return body === result.body ? result : { body, dateModified: updatedDate() };
 }
 function improveBody(input) {
@@ -269,4 +307,4 @@ function improveQueryBody({body, title, url}, on) {
   }
   return {body};
 }
-module.exports = {CHANGE, SHAPE, intents, profileFor, improveBody, dedupeTopic};
+module.exports = {CHANGE, SHAPE, CHECKLIST_URL, intents, profileFor, improveBody, dedupeTopic};

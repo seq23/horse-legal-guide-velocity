@@ -173,3 +173,55 @@ test('new claims never go live on the site manager\'s approval: only the owners 
   assert.ok(!(topics.status === 'approved' && /site manager/i.test(topics.approved_by || '')), 'the topic writing is approved only by the owners in /admin/');
   if (shape.status === 'approved') assert.match(shape.decided_at || '', /^\d{4}-\d{2}-\d{2}$/, 'the reshape carries its real go-live date');
 });
+
+test('the shared checklist leaves every query page for one page once the reshape is approved, and the insight opening grows from its own paragraph', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'hlg-quality-checklist-'));
+  const cwd = process.cwd();
+  const forced = process.env.PREVIEW_SITE_CHANGES;
+  delete process.env.PREVIEW_SITE_CHANGES;
+  fs.mkdirSync(path.join(root, 'data/site_changes'), {recursive:true});
+  const setQueue = (status) => fs.writeFileSync(path.join(root, 'data/site_changes/queue.json'), JSON.stringify({changes:[{id:q.SHAPE,status,queued_at:'2026-11-03',decided_at:'2026-11-07'}]}));
+  setQueue('pending');
+  // renderLayout reads the site config, templates and the one action from cwd.
+  for (const rel of ['data/system/config.json', 'data/entities', 'data/firm', 'search-loop.config.json', 'templates', 'config']) fs.cpSync(path.join(cwd, rel), path.join(root, rel), {recursive: true});
+  // write_pages.js reads repo data relative to cwd only at build time; requiring it here is side-effect free.
+  const { SHARED_CHECKLIST } = require('../scripts/build/write_pages');
+  const { writeSharedChecklist } = require('../scripts/build/write_shared_checklist');
+  process.chdir(root);
+  try {
+    const own = '<section class="answer-shape-module" data-editable-zone="top_answer_module"><h2>Timeline and process map</h2><p>own module</p></section>';
+    const shared = Object.values(SHARED_CHECKLIST).join('\n');
+    const body = `<header class="content-header"><span class="eyebrow">Scenario page</span><h1>Can a barn keep a horse for unpaid board?</h1><p class="muted">x</p></header>
+<section class="quick-answer-block"><h2>Quick answer</h2><p>Own answer.</p></section>${own}
+<section class="signal-block"><h2>Real question patterns this page is built around</h2><ul><li>q</li></ul></section>
+<section><h2>What matters first</h2><p>This is a boarding scenario.</p></section>
+${shared}`;
+    const input = {body, title:'Can a barn keep a horse for unpaid board?', url:'/scenario/any/'};
+    assert.equal(q.improveBody(input).body, body, 'pending: byte-identical');
+    const dist = path.join(root, 'dist');
+    assert.equal(writeSharedChecklist(dist), null, 'no shared page while pending');
+    setQueue('approved');
+    const out = q.improveBody(input).body;
+    for (const h of ['What matters first', 'Fast triage framework', 'What to gather before you act', 'What not to do', 'Practical next move', 'Common mistakes', 'What to do next', 'What usually decides the answer']) {
+      assert.ok(!out.includes(`<h2>${h}</h2>`), `${h} left the page`);
+    }
+    assert.equal((out.match(new RegExp(`href="${q.CHECKLIST_URL}"`, 'g')) || []).length, 1, 'one link to the shared checklist');
+    assert.ok(out.includes('own module') && out.includes('Own answer.'), 'what is the page\'s own stays');
+    // The shared page holds each checklist section's text exactly once.
+    const html = fs.readFileSync(path.join(writeSharedChecklist(dist), 'index.html'), 'utf8');
+    for (const sec of Object.values(SHARED_CHECKLIST)) {
+      const firstItem = sec.match(/<(?:td|li|p)>([^<]{20,})</)[1];
+      assert.equal(html.split(firstItem).length - 1, 1, `on the shared page once: ${firstItem.slice(0, 40)}`);
+    }
+    // Insight opening: the quick answer takes the next sentences of the page's own first paragraph, up to 60 words.
+    const para = 'The practical question here is not answered by a general overview. This version focuses on risk. A responsible first pass separates the parties, documents, timing, money, possession, communications, and state-specific facts before anyone treats a generic answer as a legal conclusion. A fourth sentence that would take the opening well past sixty words, because it keeps going about records, timelines, invoices, messages and every other document a reader might gather, is never added.';
+    const ed = `<header class="content-header"><h1>Do I need a contract?</h1></header><section class="quick-answer-block" data-answer-summary="true"><h2>Quick answer</h2><p><strong>The practical question here is not answered by a general overview. This version focuses on risk.</strong></p></section><article><h2>Citation-ready answer</h2>\n<p>${para}</p></article>`;
+    const opened = q.improveBody({body: ed, title: 'Do I need a contract?', url: '/insights/2026-04-25/x/'}).body;
+    const qa = opened.match(/quick-answer-block[\s\S]*?<strong>([\s\S]*?)<\/strong>/)[1];
+    const n = qa.split(/\s+/).length;
+    assert.ok(n >= 40 && n <= 60, `opening is 40-60 words (${n})`);
+    assert.ok(para.startsWith(qa), 'only the page\'s own sentences, in order: ' + qa);
+    const other = ed.replace(para, 'A different paragraph that does not begin with the quick answer.');
+    assert.equal(q.improveBody({body: other, title: 'Do I need a contract?', url: '/insights/2026-04-25/x/'}).body.includes('A responsible first pass'), false, 'nothing borrowed from elsewhere');
+  } finally { if (forced === undefined) delete process.env.PREVIEW_SITE_CHANGES; else process.env.PREVIEW_SITE_CHANGES = forced; process.chdir(cwd); fs.rmSync(root,{recursive:true,force:true}); }
+});
