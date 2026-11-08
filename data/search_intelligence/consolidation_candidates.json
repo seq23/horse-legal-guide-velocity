@@ -1,22 +1,25 @@
 {
   "schema_version": "1.0",
   "status": "LIST_ONLY_NO_REDIRECTS",
-  "gsc_window": "2026-10-08..2026-11-04",
-  "coverage_collected_at": "2026-11-07T15:20:51.111Z",
+  "gsc_window": "2026-10-09..2026-11-05",
+  "coverage_collected_at": "2026-11-08T15:20:23.012Z",
   "rule": "Sitemap leaf pages with 0 impressions in the 28-day export and fewer than 800 visible words in the built page. Nothing is redirected or removed by this file.",
   "thin_word_threshold": 800,
-  "sitemap_url_count": 325,
-  "candidate_count": 28,
+  "sitemap_url_count": 326,
+  "candidate_count": 187,
   "candidates_by_hub": {
-    "none": 1,
-    "/hubs/therapeutic-riding-and-hipaa/": 2,
+    "none": 24,
+    "/hubs/horse-lease-and-trial/": 14,
+    "/hubs/equine-business-formation/": 13,
+    "/hubs/intellectual-property-and-brand/": 14,
     "/hubs/real-property-and-leases/": 1,
-    "/hubs/intellectual-property-and-brand/": 5,
-    "/hubs/demand-letters-and-disputes/": 5,
-    "/hubs/liability-waivers-insurance/": 7,
-    "/hubs/equine-business-formation/": 3,
-    "/hubs/horse-sale-and-purchase/": 2,
-    "/hubs/boarding-training-and-barn-operations/": 2
+    "/hubs/horse-sale-and-purchase/": 34,
+    "/hubs/boarding-training-and-barn-operations/": 25,
+    "/hubs/liability-waivers-insurance/": 25,
+    "/hubs/demand-letters-and-disputes/": 18,
+    "/hubs/therapeutic-riding-and-hipaa/": 4,
+    "/hubs/state-specific/": 5,
+    "/hubs/emotional-am-i-screwed/": 10
   },
   "candidates": [
     {
@@ -28,96 +31,672 @@
       "fold_basis": "no page target; section index"
     },
     {
-      "route": "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
-      "word_count": 691,
+      "route": "/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/",
+      "word_count": 361,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/therapeutic-riding-and-hipaa/",
-      "fold_basis": "page target cluster therapeutic-riding-and-hipaa"
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/scenario/repairs-are-disputed-in-a-barn-lease-what-matters/",
+      "word_count": 364,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/scenario/a-lease-to-own-arrangement-is-unclear-what-problems-can-appear/",
+      "word_count": 366,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
+      "word_count": 372,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/scenario/a-horse-business-wants-to-use-client-photos-in-marketing-what-permission-matters/",
+      "word_count": 373,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/",
+      "word_count": 373,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/scenario/a-horse-lease-allows-use-but-not-showing-what-happens-if-the-horse-was-shown/",
+      "word_count": 374,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/scenario/a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/",
+      "word_count": 380,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
     },
     {
       "route": "/leases/what-should-be-included-in-a-barn-lease/",
-      "word_count": 711,
+      "word_count": 381,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/real-property-and-leases/",
       "fold_basis": "page target cluster real-property-and-leases"
     },
     {
-      "route": "/ip/do-i-need-a-contract-for-a-sponsorship/",
-      "word_count": 715,
+      "route": "/scenario/a-horse-was-misrepresented-in-texts-before-sale-what-should-be-preserved/",
+      "word_count": 381,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-sponsor-used-my-image-without-permission-what-are-the-issues/",
+      "word_count": 381,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/intellectual-property-and-brand/",
       "fold_basis": "page target cluster intellectual-property-and-brand"
     },
     {
-      "route": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
-      "word_count": 720,
+      "route": "/scenario/a-boarding-barn-has-unpaid-invoices-and-unclear-records-what-should-be-organized/",
+      "word_count": 382,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/demand-letters-and-disputes/",
-      "fold_basis": "page target cluster demand-letters-and-disputes"
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
     },
     {
-      "route": "/liability/what-happens-if-i-do-not-post-the-required-sign/",
-      "word_count": 722,
+      "route": "/scenario/a-seller-disclosed-an-issue-verbally-but-not-in-writing-what-should-be-reviewed/",
+      "word_count": 382,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/state-warning-sign-rules-are-confusing-what-should-a-barn-review/",
+      "word_count": 383,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/the-seller-kept-possession-after-payment-what-should-be-clarified/",
+      "word_count": 383,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-social-media-collaboration-went-wrong-what-rights-matter/",
+      "word_count": 384,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/an-equestrian-sponsorship-agreement-went-sideways-what-should-be-checked/",
+      "word_count": 384,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/scenario/someone-copied-my-barn-name-online-what-should-i-gather/",
+      "word_count": 385,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/",
+      "word_count": 386,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-boarding-agreement-does-not-mention-emergency-care-what-now/",
+      "word_count": 387,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/a-buyer-wants-to-return-the-horse-what-matters/",
+      "word_count": 387,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-sponsor-did-not-deliver-promised-payment-what-should-be-checked/",
+      "word_count": 387,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/scenario/a-trainer-sold-a-horse-without-clear-authority-what-should-be-reviewed/",
+      "word_count": 387,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/i-started-a-barn-without-paperwork-what-risks-did-i-create/",
+      "word_count": 387,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/a-lessee-stopped-paying-board-or-vet-bills-what-happens-next/",
+      "word_count": 388,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/an-equestrian-apparel-idea-may-copy-another-brand-what-should-be-reviewed/",
+      "word_count": 388,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
+      "word_count": 389,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/an-equine-therapy-client-was-injured-what-should-be-documented/",
+      "word_count": 389,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/i-signed-something-i-did-not-understand-what-should-i-do/",
+      "word_count": 389,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-boarding-barn-changed-facility-rules-mid-relationship-what-should-be-checked/",
+      "word_count": 390,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/a-client-posted-damaging-claims-about-a-horse-business-what-should-be-preserved/",
+      "word_count": 390,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/liability-waivers-insurance/",
       "fold_basis": "page target cluster liability-waivers-insurance"
     },
     {
-      "route": "/disputes/what-happens-if-i-do-not-respond-to-a-legal-letter/",
-      "word_count": 734,
+      "route": "/scenario/a-horse-was-sold-through-a-friend-or-agent-who-had-authority/",
+      "word_count": 390,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/i-used-a-template-horse-contract-is-that-enough/",
+      "word_count": 390,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-barn-uses-volunteers-what-legal-issues-can-come-up/",
+      "word_count": 391,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/i-ignored-a-horse-legal-issue-and-it-got-worse-what-now/",
+      "word_count": 391,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-clinic-host-and-trainer-disagree-about-responsibility-what-documents-matter/",
+      "word_count": 392,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/a-horse-sale-involved-a-minor-what-extra-issues-can-arise/",
+      "word_count": 392,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-therapeutic-riding-waiver-is-unclear-what-should-be-checked/",
+      "word_count": 392,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/there-is-a-barn-name-or-brand-dispute-what-should-be-reviewed/",
+      "word_count": 392,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/a-demand-letter-has-a-deadline-what-should-be-prioritized/",
+      "word_count": 393,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/scenario/a-horse-business-owner-is-worried-about-personal-liability-what-should-be-checked/",
+      "word_count": 393,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/a-horse-was-injured-during-a-paid-lesson-what-should-be-reviewed/",
+      "word_count": 393,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/i-am-worried-i-am-overreacting-to-a-horse-dispute-how-should-i-think-about-it/",
+      "word_count": 394,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/scenario/vet-bills-are-disputed-after-a-horse-sale-what-should-be-reviewed/",
+      "word_count": 394,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/demand-letters-and-disputes/",
       "fold_basis": "page target cluster demand-letters-and-disputes"
     },
     {
-      "route": "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
-      "word_count": 746,
+      "route": "/scenario/a-barn-is-relying-only-on-insurance-what-else-should-be-reviewed/",
+      "word_count": 395,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/a-horse-was-advertised-differently-than-described-in-the-contract-what-matters/",
+      "word_count": 395,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-seller-is-being-threatened-with-a-lawsuit-what-should-they-do-first/",
+      "word_count": 395,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
+      "word_count": 396,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/scenario/a-horse-business-is-using-an-old-waiver-what-should-be-updated/",
+      "word_count": 396,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/a-rider-used-a-facility-without-signing-a-waiver-what-risk-does-that-create/",
+      "word_count": 396,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/i-trusted-a-handshake-deal-in-a-horse-sale-am-i-exposed/",
+      "word_count": 396,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/someone-was-hurt-riding-my-horse-what-should-i-think-about/",
+      "word_count": 396,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/a-therapeutic-riding-program-collects-health-information-what-should-be-reviewed/",
+      "word_count": 397,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/therapeutic-riding-and-hipaa/",
       "fold_basis": "page target cluster therapeutic-riding-and-hipaa"
     },
     {
+      "route": "/scenario/a-horse-was-hurt-while-boarded-who-is-responsible/",
+      "word_count": 398,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/the-buyer-moved-the-horse-before-the-dispute-started-why-does-that-matter/",
+      "word_count": 398,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/scenario/a-boarding-barn-wants-to-sell-a-horse-for-unpaid-bills-what-matters/",
+      "word_count": 399,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/scenario/a-payment-plan-horse-sale-has-gone-sideways-what-should-be-reviewed/",
+      "word_count": 401,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/a-rider-was-injured-at-a-clinic-what-should-organizers-review/",
+      "word_count": 401,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/the-bill-of-sale-says-one-thing-but-texts-say-another-what-matters/",
+      "word_count": 404,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/faq/what-terms-decide-who-pays-after-a-lease-horse-dispute/",
+      "word_count": 409,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/scenario/a-contract-has-no-state-law-clause-why-can-that-matter/",
+      "word_count": 421,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/state-specific/",
+      "fold_basis": "page target cluster state-specific"
+    },
+    {
+      "route": "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
+      "word_count": 422,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/therapeutic-riding-and-hipaa/",
+      "fold_basis": "page target cluster therapeutic-riding-and-hipaa"
+    },
+    {
+      "route": "/scenario/a-seller-relied-on-a-verbal-as-is-statement-what-should-be-reviewed/",
+      "word_count": 423,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/state-specific/",
+      "fold_basis": "page target cluster state-specific"
+    },
+    {
+      "route": "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
+      "word_count": 424,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/therapeutic-riding-and-hipaa/",
+      "fold_basis": "page target cluster therapeutic-riding-and-hipaa"
+    },
+    {
+      "route": "/guides/before-you-act/",
+      "word_count": 425,
+      "impressions_28d": 0,
+      "coverage_state": "URL is unknown to Google",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/business/horse-syndicate-legal-structure/",
+      "word_count": 426,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/scenario/do-people-actually-get-sued-over-horse-deals/",
+      "word_count": 426,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
+    },
+    {
+      "route": "/faq/what-documents-matter-most-when-a-waiver-is-tested-after-an-injury/",
+      "word_count": 427,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/what-is-the-worst-case-scenario-if-i-do-nothing/",
+      "word_count": 427,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
+    },
+    {
       "route": "/business/can-i-run-a-horse-business-under-another-company/",
-      "word_count": 749,
+      "word_count": 429,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/equine-business-formation/",
       "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/business/how-to-start-a-training-barn-legally/",
+      "word_count": 429,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
+      "word_count": 429,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/therapeutic-riding-and-hipaa/",
+      "fold_basis": "page target cluster therapeutic-riding-and-hipaa"
     },
     {
       "route": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
-      "word_count": 754,
+      "word_count": 430,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/equine-business-formation/",
       "fold_basis": "page target cluster equine-business-formation"
     },
     {
-      "route": "/ip/should-i-trademark-my-barn-name/",
-      "word_count": 759,
+      "route": "/scenario/did-i-mess-up-by-trusting-a-handshake-deal/",
+      "word_count": 434,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/intellectual-property-and-brand/",
-      "fold_basis": "page target cluster intellectual-property-and-brand"
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
+    },
+    {
+      "route": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
+      "word_count": 436,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
+    },
+    {
+      "route": "/faq/what-records-should-a-boarding-barn-keep-when-board-is-overdue/",
+      "word_count": 437,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/faq/what-documents-matter-most-in-a-horse-sale-dispute/",
+      "word_count": 438,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/am-i-overreacting-or-is-this-risky/",
+      "word_count": 438,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
+    },
+    {
+      "route": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
+      "word_count": 439,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
     },
     {
       "route": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
-      "word_count": 759,
+      "word_count": 439,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/faq/do-i-need-a-contract-to-sell-a-horse/",
+      "word_count": 442,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
+      "word_count": 443,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/intellectual-property-and-brand/",
       "fold_basis": "page target cluster intellectual-property-and-brand"
     },
     {
+      "route": "/liability/what-type-of-insurance-do-horse-owners-need/",
+      "word_count": 443,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
       "route": "/liability/what-type-of-insurance-do-trainers-need/",
-      "word_count": 761,
+      "word_count": 443,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/liability-waivers-insurance/",
@@ -125,94 +704,806 @@
     },
     {
       "route": "/liability/what-is-the-equine-activity-liability-act/",
-      "word_count": 762,
+      "word_count": 444,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/liability-waivers-insurance/",
       "fold_basis": "page target cluster liability-waivers-insurance"
     },
     {
-      "route": "/disputes/can-i-ignore-a-demand-letter/",
-      "word_count": 765,
+      "route": "/scenario/i-sold-a-horse-without-a-contract-am-i-screwed/",
+      "word_count": 444,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/demand-letters-and-disputes/",
-      "fold_basis": "page target cluster demand-letters-and-disputes"
-    },
-    {
-      "route": "/liability/what-type-of-insurance-do-horse-owners-need/",
-      "word_count": 765,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/liability-waivers-insurance/",
-      "fold_basis": "page target cluster liability-waivers-insurance"
-    },
-    {
-      "route": "/disputes/how-serious-is-a-legal-demand-letter/",
-      "word_count": 767,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/demand-letters-and-disputes/",
-      "fold_basis": "page target cluster demand-letters-and-disputes"
-    },
-    {
-      "route": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
-      "word_count": 767,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/intellectual-property-and-brand/",
-      "fold_basis": "page target cluster intellectual-property-and-brand"
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
     },
     {
       "route": "/liability/do-i-need-insurance-for-my-horse-business/",
-      "word_count": 768,
+      "word_count": 446,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/liability-waivers-insurance/",
       "fold_basis": "page target cluster liability-waivers-insurance"
-    },
-    {
-      "route": "/liability/does-my-contract-need-statutory-warning-language/",
-      "word_count": 768,
-      "impressions_28d": 0,
-      "coverage_state": "Crawled - currently not indexed",
-      "fold_into": "/hubs/liability-waivers-insurance/",
-      "fold_basis": "page target cluster liability-waivers-insurance"
-    },
-    {
-      "route": "/ip/how-do-i-protect-my-horse-business-brand/",
-      "word_count": 770,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/intellectual-property-and-brand/",
-      "fold_basis": "page target cluster intellectual-property-and-brand"
-    },
-    {
-      "route": "/faq/do-i-need-a-contract-to-sell-a-horse/",
-      "word_count": 772,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/horse-sale-and-purchase/",
-      "fold_basis": "page target cluster horse-sale-and-purchase"
     },
     {
       "route": "/boarding/what-should-be-included-in-a-training-agreement/",
-      "word_count": 773,
+      "word_count": 447,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/boarding-training-and-barn-operations/",
       "fold_basis": "page target cluster boarding-training-and-barn-operations"
     },
     {
-      "route": "/faq/can-i-use-a-template-i-found-online-for-a-horse-contract/",
-      "word_count": 777,
+      "route": "/ip/should-i-trademark-my-barn-name/",
+      "word_count": 447,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/scenario/do-people-actually-get-sued-over-horse-deals-like-this/",
+      "word_count": 448,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
+    },
+    {
+      "route": "/scenario/i-received-a-demand-letter-about-a-horse-dispute-what-should-i-do-first/",
+      "word_count": 448,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/scenario/what-if-i-already-signed-something-i-did-not-understand/",
+      "word_count": 448,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
+    },
+    {
+      "route": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
+      "word_count": 448,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/state-specific/",
+      "fold_basis": "page target cluster state-specific"
+    },
+    {
+      "route": "/ip/do-i-need-a-contract-for-a-sponsorship/",
+      "word_count": 450,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/ip/how-do-i-protect-my-horse-business-brand/",
+      "word_count": 450,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/liability/does-my-contract-need-statutory-warning-language/",
+      "word_count": 450,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/is-it-too-late-to-fix-a-bad-horse-sale/",
+      "word_count": 450,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
+    },
+    {
+      "route": "/state/south-carolina/can-i-be-sued-if-i-have-a-waiver/",
+      "word_count": 450,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/state-specific/",
+      "fold_basis": "page target cluster state-specific"
+    },
+    {
+      "route": "/disputes/how-serious-is-a-legal-demand-letter/",
+      "word_count": 451,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/state/north-carolina/do-i-need-warning-signs/",
+      "word_count": 451,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/state-specific/",
+      "fold_basis": "page target cluster state-specific"
+    },
+    {
+      "route": "/disputes/can-i-ignore-a-demand-letter/",
+      "word_count": 453,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/liability/what-happens-if-i-do-not-post-the-required-sign/",
+      "word_count": 454,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
+      "word_count": 455,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
+      "word_count": 455,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
+      "word_count": 456,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/scenario/what-happens-if-i-ignore-a-problem-and-hope-it-goes-away/",
+      "word_count": 461,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/emotional-am-i-screwed/",
+      "fold_basis": "page target cluster emotional-am-i-screwed"
+    },
+    {
+      "route": "/disputes/what-happens-if-i-do-not-respond-to-a-legal-letter/",
+      "word_count": 465,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/faq/do-i-need-a-contract-to-buy-a-horse/",
+      "word_count": 489,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/horse-sale-and-purchase/",
       "fold_basis": "page target cluster horse-sale-and-purchase"
     },
     {
-      "route": "/liability/what-does-equine-liability-law-actually-protect-me-from/",
+      "route": "/scenario/what-should-i-gather-before-responding-to-a-demand-letter/",
+      "word_count": 495,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "word_count": 498,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
+      "word_count": 539,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
+      "word_count": 539,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/whitepapers/2026-05-01/white-paper-boarding-training-barn-operations-a-decision-framework-for-the-horse-world/",
+      "word_count": 539,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
+      "word_count": 540,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
+      "word_count": 540,
+      "impressions_28d": 0,
+      "coverage_state": "Discovered - currently not indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/articles/2026-05-05/a-practical-framework-for-demand-letters-disputes/",
+      "word_count": 542,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-04-28/how-to-think-about-when-does-ownership-legally-transfer-in-a-horse-sale-before-you-act/",
+      "word_count": 542,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/",
+      "word_count": 542,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/articles/2026-04-28/boarding-training-barn-operations-the-clauses-risks-and-assumptions-people-usually-overlook/",
+      "word_count": 544,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+      "word_count": 545,
+      "impressions_28d": 0,
+      "coverage_state": "Discovered - currently not indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-05-03/the-quiet-risk-inside-can-a-buyer-return-a-horse-after-purchase/",
+      "word_count": 545,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
+      "word_count": 545,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/",
+      "word_count": 545,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/articles/2026-05-12/what-horse-owners-and-equine-businesses-commonly-miss-about-high-stress-am-i-screwed/",
+      "word_count": 550,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/whitepapers/2026-04-30/white-paper-horse-sale-and-purchase-documentation-risk-allocation-and-plain-english-guardrails/",
+      "word_count": 551,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/disputes/what-should-i-do-if-i-receive-a-demand-letter/",
+      "word_count": 566,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/insights/2026-05-07/a-plain-english-note-on-what-happens-if-a-horse-sale-goes-wrong/",
+      "word_count": 577,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/",
+      "word_count": 592,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/insights/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/",
+      "word_count": 653,
+      "impressions_28d": 0,
+      "coverage_state": "Discovered - currently not indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-05-02/why-what-happens-if-a-horse-is-misrepresented-in-a-sale-creates-confusion/",
+      "word_count": 662,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
+      "word_count": 673,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-04-26/why-what-should-be-included-in-a-horse-bill-of-sale-creates-confusion/",
+      "word_count": 673,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-05-08/why-what-if-i-sold-a-horse-without-a-contract-creates-confusion/",
+      "word_count": 674,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/compare/barn-lease-vs-boarding-agreement/",
+      "word_count": 679,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
+      "word_count": 682,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/insights/2026-04-30/what-equestrians-often-miss-about-is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "word_count": 682,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": null,
+      "fold_basis": "no page target; section index"
+    },
+    {
+      "route": "/compare/release-form-vs-liability-waiver/",
+      "word_count": 691,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/compare/boarding-contract-vs-barn-lease/",
+      "word_count": 695,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/compare/release-of-claims-vs-settlement-agreement/",
+      "word_count": 695,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/compare/horse-co-ownership-agreement-vs-syndicate-structure/",
+      "word_count": 696,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/compare/lease-termination-clause-vs-informal-cancellation/",
+      "word_count": 698,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/compare/horse-syndicate-agreement-vs-partnership-agreement/",
+      "word_count": 699,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/compare/operating-agreement-vs-partnership-agreement-for-horse-businesses/",
+      "word_count": 701,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/compare/trademark-vs-llc-name-for-an-equestrian-business/",
+      "word_count": 701,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/compare/trainer-agreement-vs-boarding-agreement/",
+      "word_count": 703,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/compare/photo-release-vs-sponsorship-rights-agreement/",
+      "word_count": 704,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/compare/equine-business-contract-vs-general-business-contract/",
+      "word_count": 706,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/compare/horse-purchase-deposit-vs-full-payment/",
+      "word_count": 706,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/boarding-agreement-vs-training-agreement/",
+      "word_count": 708,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/compare/horse-sale-addendum-vs-new-contract/",
+      "word_count": 712,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/pre-purchase-exam-vs-as-is-horse-sale/",
+      "word_count": 712,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/template-horse-contract-vs-custom-horse-contract/",
+      "word_count": 717,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/trial-agreement-vs-lease-agreement/",
+      "word_count": 717,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/compare/warning-sign-compliance-vs-signed-waiver/",
+      "word_count": 717,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/compare/sale-disclosure-form-vs-veterinary-records/",
+      "word_count": 718,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/statutory-warning-signs-vs-liability-waivers/",
+      "word_count": 719,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/compare/bill-of-sale-vs-transfer-of-ownership-clause/",
+      "word_count": 721,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/private-horse-sale-vs-trainer-assisted-sale/",
+      "word_count": 721,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/compare/emergency-vet-authorization-vs-owner-consent-clause/",
+      "word_count": 723,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/insurance-certificate-vs-actual-policy-coverage/",
+      "word_count": 723,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/compare/choice-of-law-clause-vs-venue-clause/",
+      "word_count": 725,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/equestrian-sponsor-agreement-vs-informal-email-agreement/",
+      "word_count": 725,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/compare/use-of-image-rights-vs-copyright-ownership/",
+      "word_count": 725,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/compare/demand-letter-vs-informal-text-dispute/",
+      "word_count": 726,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/compare/therapy-program-waiver-vs-general-barn-waiver/",
+      "word_count": 728,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/compare/lease-to-own-vs-buying-outright/",
+      "word_count": 729,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/compare/state-equine-liability-act-vs-private-contract/",
+      "word_count": 729,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/compare/boarder-default-notice-vs-demand-letter/",
+      "word_count": 730,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/compare/mediation-vs-litigation-in-horse-disputes/",
+      "word_count": 730,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/compare/mediation-vs-litigation-in-a-horse-dispute/",
+      "word_count": 741,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/compare/hold-harmless-clause-vs-indemnity-clause/",
+      "word_count": 743,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/trademark-vs-llc-name-horse-business/",
+      "word_count": 750,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/compare/horse-owner-liability-vs-trainer-liability/",
+      "word_count": 755,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/compare/horse-lease-vs-horse-trial-agreement/",
+      "word_count": 758,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-lease-and-trial/",
+      "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/compare/sponsorship-agreement-vs-simple-email-agreement/",
+      "word_count": 758,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/intellectual-property-and-brand/",
+      "fold_basis": "page target cluster intellectual-property-and-brand"
+    },
+    {
+      "route": "/compare/contract-review-vs-diy-horse-agreement/",
+      "word_count": 759,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/business-name-registration-vs-trademark-filing/",
+      "word_count": 766,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/equine-business-formation/",
+      "fold_basis": "page target cluster equine-business-formation"
+    },
+    {
+      "route": "/compare/llc-vs-insurance-for-liability-protection/",
+      "word_count": 766,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/compare/waiver-vs-insurance-horse-liability/",
+      "word_count": 767,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/compare/stable-rules-document-vs-boarding-contract/",
+      "word_count": 771,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/compare/pre-purchase-exam-vs-no-exam-legal-risk/",
+      "word_count": 775,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/compare/training-fee-agreement-vs-commission-agreement/",
+      "word_count": 776,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/compare/mediation-vs-litigation-horse-disputes/",
+      "word_count": 779,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/compare/trainer-liability-vs-owner-liability/",
+      "word_count": 779,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/boarding-training-and-barn-operations/",
+      "fold_basis": "page target cluster boarding-training-and-barn-operations"
+    },
+    {
+      "route": "/compare/liability-waiver-vs-insurance-for-horse-activities/",
       "word_count": 781,
       "impressions_28d": 0,
       "coverage_state": "Submitted and indexed",
@@ -220,28 +1511,12 @@
       "fold_basis": "page target cluster liability-waivers-insurance"
     },
     {
-      "route": "/boarding/what-should-be-included-in-a-horse-boarding-agreement/",
-      "word_count": 782,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/boarding-training-and-barn-operations/",
-      "fold_basis": "page target cluster boarding-training-and-barn-operations"
-    },
-    {
-      "route": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
+      "route": "/compare/custom-contract-review-vs-online-legal-template/",
       "word_count": 788,
       "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/demand-letters-and-disputes/",
-      "fold_basis": "page target cluster demand-letters-and-disputes"
-    },
-    {
-      "route": "/business/how-to-start-a-training-barn-legally/",
-      "word_count": 794,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/equine-business-formation/",
-      "fold_basis": "page target cluster equine-business-formation"
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
     }
   ]
 }

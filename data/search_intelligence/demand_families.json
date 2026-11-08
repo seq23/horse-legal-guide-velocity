@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-10-08..2026-11-04",
-  "gsc_collected_at": "2026-11-07T15:18:42.792Z",
+  "gsc_window": "2026-10-09..2026-11-05",
+  "gsc_collected_at": "2026-11-08T15:18:22.037Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -23,8 +23,8 @@
     {
       "rank": 1,
       "family": "horse sale contract @ /hubs/horse-sale-and-purchase/",
-      "impressions": 63,
-      "weighted_position": 60.3,
+      "impressions": 65,
+      "weighted_position": 60.5,
       "status": "strengthened"
     },
     {
@@ -64,26 +64,26 @@
       "page": "/hubs/horse-sale-and-purchase/",
       "page_kind": "hub",
       "page_intent": "sale_contract",
-      "impressions": 63,
+      "impressions": 65,
       "clicks": 0,
-      "weighted_position": 60.3,
+      "weighted_position": 60.5,
       "best_position": 13,
-      "page_impressions": 94,
-      "page_position": 52.6,
+      "page_impressions": 96,
+      "page_position": 52.9,
       "top_query": "horse purchase agreement",
-      "query_count": 12,
+      "query_count": 13,
       "queries": [
         {
           "query": "horse purchase agreement",
           "impressions": 25,
           "clicks": 0,
-          "position": 63.3
+          "position": 63.9
         },
         {
           "query": "black horse contract purchase",
-          "impressions": 11,
+          "impressions": 12,
           "clicks": 0,
-          "position": 54.6
+          "position": 55.2
         },
         {
           "query": "horse sale contract",
@@ -132,6 +132,12 @@
           "impressions": 1,
           "clicks": 0,
           "position": 55
+        },
+        {
+          "query": "equine bill of sale",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 56
         },
         {
           "query": "equine purchase",
@@ -248,7 +254,7 @@
       "weighted_position": 32.5,
       "best_position": 11,
       "page_impressions": 11,
-      "page_position": 25.8,
+      "page_position": 24,
       "top_query": "how to start an equestrian business",
       "query_count": 2,
       "queries": [
@@ -325,8 +331,8 @@
       "clicks": 0,
       "weighted_position": 45.3,
       "best_position": 24.5,
-      "page_impressions": 10,
-      "page_position": 21.6,
+      "page_impressions": 11,
+      "page_position": 27.4,
       "top_query": "horse trial agreement",
       "query_count": 2,
       "queries": [
@@ -347,7 +353,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 6 of 14 by impressions; landing page at 21.6 position with 10 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 6 of 14 by impressions; landing page at 27.4 position with 11 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "boarding and training contract @ /hubs/boarding-training-and-barn-operations/",
@@ -563,8 +569,8 @@
       "clicks": 0,
       "weighted_position": 97,
       "best_position": 97,
-      "page_impressions": 8,
-      "page_position": 18.8,
+      "page_impressions": 7,
+      "page_position": 20.7,
       "top_query": "equine legal advice",
       "query_count": 1,
       "queries": [
@@ -579,7 +585,7 @@
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 14 of 14 by impressions; landing page at 18.8 position with 8 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 14 of 14 by impressions; landing page at 20.7 position with 7 page impressions (needs <= 15 with >= 2)"
     }
   ]
 }
