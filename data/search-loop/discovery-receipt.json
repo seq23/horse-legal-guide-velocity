@@ -1,8 +1,8 @@
 {
   "schema": "search-loop-discovery-v1",
   "site": "horselegalguide.com",
-  "week": "2026-W45",
-  "generated_at": "2026-11-02T13:26:46.639Z",
+  "week": "2026-W46",
+  "generated_at": "2026-11-09T13:26:39.705Z",
   "paid_calls": 0,
   "cost_usd": 0,
   "hosts": {
@@ -32,20 +32,36 @@
     }
   },
   "sources": {
-    "search_console": "ok: 40 rows",
-    "bing_webmaster": "ok: 104 rows",
+    "search_console": "ok: 33 rows",
+    "bing_webmaster": "ok: 120 rows",
+    "easy_wins": "ok: 0 easy win(s) in Search Console",
     "suggestqueries.google.com": "ok",
     "api.bing.com": "ok",
-    "relevance_screen": "ok: kept 122 of 150 (free model)"
+    "relevance_screen": "ok: kept 90 of 150 (free model)",
+    "top10": "not read: no BRAVE_SEARCH_API_KEY"
   },
-  "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)",
   "notes": [
     "autocomplete stopped at its budget of 80 calls"
   ],
+  "competition": "not read: no BRAVE_SEARCH_API_KEY",
+  "lanes": {
+    "ratio": {
+      "can_be_one": 2,
+      "striking": 1
+    },
+    "can_be_one": 0,
+    "striking": 90,
+    "weights": {
+      "neighbour": 35,
+      "unanswered": 30,
+      "weak_top10": 40,
+      "demand": 10
+    }
+  },
   "counts": {
-    "candidates": 203,
-    "targets": 122,
-    "strengthen_candidates": 6,
+    "candidates": 192,
+    "targets": 90,
+    "strengthen_candidates": 4,
     "dropped_shared_audience": 0
   }
 }

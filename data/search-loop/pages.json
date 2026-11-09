@@ -534,6 +534,125 @@
         "b5 FAQ answer is 30 words (aim 40-60): \"Can a barn owner sell a horse for unpaid board?\"",
         "b5 FAQ answer is 32 words (aim 40-60): \"Do liability waivers completely prevent lawsuits?\""
       ]
+    },
+    {
+      "slug": "horse-sales-agreement",
+      "query": "horse sales agreement",
+      "lane": "striking",
+      "score": 30,
+      "scores": {
+        "striking": 30,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 3,
+        "question": false,
+        "google_suggest": true,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/horse-sales-agreement/index.html",
+      "route": "/questions/horse-sales-agreement/",
+      "url": "https://horselegalguide.com/questions/horse-sales-agreement/",
+      "published_at": null,
+      "queued_at": "2026-11-09",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-sales-agreement/index.html",
+      "hash": "0edf1193777162b03c802eed63da0e6e43089b72ba45d3d4eb7b24b89609135e",
+      "model": "free-route",
+      "facts": [
+        "https://en.wikipedia.org/wiki/Personal_property",
+        "https://www.law.cornell.edu/ucc"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 38 words (aim 40-60): \"Are agents required to disclose their commissions \"",
+        "b5 FAQ answer is 33 words (aim 40-60): \"Can a bill of sale replace a detailed purchase con\"",
+        "b5 FAQ answer is 31 words (aim 40-60): \"How does the Uniform Commercial Code apply to hors\""
+      ]
+    },
+    {
+      "slug": "horse-sale-contract-pdf",
+      "query": "horse sale contract pdf",
+      "lane": "striking",
+      "score": 25,
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/horse-sale-contract-pdf/index.html",
+      "route": "/questions/horse-sale-contract-pdf/",
+      "url": "https://horselegalguide.com/questions/horse-sale-contract-pdf/",
+      "published_at": null,
+      "queued_at": "2026-11-09",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-sale-contract-pdf/index.html",
+      "hash": "706ce908264ec67404c33de9caca07be91b4b4ae8664edf1a4961adb1d2c8ff6",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc/2",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 39 words (aim 40-60): \"What happens if a horse gets sick before delivery?\"",
+        "b5 FAQ answer is 39 words (aim 40-60): \"Do I need a bill of sale if I have a handshake agr\"",
+        "b5 FAQ answer is 36 words (aim 40-60): \"Should a pre-purchase exam be mentioned in the con\""
+      ]
+    },
+    {
+      "slug": "horse-sale-agreement-first-right-of-refusal",
+      "query": "horse sale agreement first right of refusal",
+      "lane": "striking",
+      "score": 25,
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 7,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/horse-sale-agreement-first-right-of-refusal/index.html",
+      "route": "/questions/horse-sale-agreement-first-right-of-refusal/",
+      "url": "https://horselegalguide.com/questions/horse-sale-agreement-first-right-of-refusal/",
+      "published_at": null,
+      "queued_at": "2026-11-09",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-sale-agreement-first-right-of-refusal/index.html",
+      "hash": "ccc6bea192ac04c95675b020c6c3c0f23868a46167bc641fa0acfe387981fe2e",
+      "model": "free-route",
+      "facts": [
+        "https://en.wikipedia.org/wiki/Right_of_first_refusal",
+        "https://www.extension.org/"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 39 words (aim 40-60): \"What triggers a first right of refusal clause in a\"",
+        "b5 FAQ answer is 37 words (aim 40-60): \"Can a first right of refusal last forever?\"",
+        "b5 FAQ answer is 35 words (aim 40-60): \"What happens if an owner sells the horse without h\"",
+        "b5 FAQ answer is 31 words (aim 40-60): \"Does a lease or gift trigger a first right of refu\""
+      ]
     }
   ],
   "dropped": [
@@ -729,6 +848,39 @@
         "b5 FAQ answer is 26 words (aim 40-60): \"Must stables post warning signs to receive legal p\"",
         "b5 FAQ answer is 26 words (aim 40-60): \"Can a waiver override an equine liability statute?\"",
         "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
+      ]
+    },
+    {
+      "query": "horse bill of sale montana",
+      "at": "2026-11-09",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 28 words (aim 40-60): \"How does Montana brand law affect a horse purchase\"",
+        "b5 FAQ answer is 26 words (aim 40-60): \"What identifying information should be included fo\"",
+        "b5 FAQ answer is 28 words (aim 40-60): \"Can a bill of sale include health warranties for t\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "horse liability waiver",
+      "at": "2026-11-09",
+      "reason": [
+        "same intent as https://horselegalguide.com/compare/liability-waiver-vs-insurance-for-horse-activities/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "horse purchase agreement with trial period",
+      "at": "2026-11-09",
+      "gate": 2,
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "horse sales agreement template",
+      "at": "2026-11-09",
+      "reason": [
+        "same intent as https://horselegalguide.com/questions/horse-sales-agreement/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
       ]
     }
   ],

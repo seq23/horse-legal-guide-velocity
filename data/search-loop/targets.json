@@ -1,45 +1,18 @@
 {
   "schema": "search-loop-targets-v1",
   "site": "horselegalguide.com",
-  "week": "2026-W45",
-  "generated_at": "2026-11-02T13:26:46.639Z",
+  "week": "2026-W46",
+  "generated_at": "2026-11-09T13:26:39.705Z",
   "sources": {
-    "search_console": "ok: 40 rows",
-    "bing_webmaster": "ok: 104 rows",
+    "search_console": "ok: 33 rows",
+    "bing_webmaster": "ok: 120 rows",
+    "easy_wins": "ok: 0 easy win(s) in Search Console",
     "suggestqueries.google.com": "ok",
     "api.bing.com": "ok",
-    "relevance_screen": "ok: kept 122 of 150 (free model)"
+    "relevance_screen": "ok: kept 90 of 150 (free model)",
+    "top10": "not read: no BRAVE_SEARCH_API_KEY"
   },
   "targets": [
-    {
-      "query": "horse sale contract with payments",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "gsc_position": 13,
-        "gsc_impressions": 1,
-        "gsc_page": "https://horselegalguide.com/hubs/horse-sale-and-purchase/",
-        "bing_suggest": true,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 74.9,
-      "kind": "new"
-    },
-    {
-      "query": "horse purchase agreement template",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "google_suggest": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 40,
-      "kind": "new"
-    },
     {
       "query": "horse sale agreement template",
       "variants": [],
@@ -48,38 +21,93 @@
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
       },
       "score": 40,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "horse sale contract template",
-      "variants": [],
+      "query": "sale of horse contract",
+      "variants": [
+        "contract of sale for horse",
+        "horse sale contract",
+        "horse contract of sale"
+      ],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
+      },
+      "score": 40,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale",
+      "variants": [
+        "bill of sale horse",
+        "as is horse bill of sale",
+        "horse bill of sale explained",
+        "bill of sale of horse",
+        "examples of bill of sale for horse",
+        "horse bill of sale easy",
+        "simple bill of sale for a horse"
+      ],
       "signals": {
         "words": 4,
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
       },
       "score": 40,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "horse sale contract with first right of refusal",
-      "variants": [
-        "horse sale contract first right of refusal"
-      ],
+      "query": "horse bill of sale montana",
+      "variants": [],
       "signals": {
-        "words": 8,
+        "words": 5,
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
       },
       "score": 40,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "equine liability waiver template",
@@ -89,10 +117,18 @@
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
       },
       "score": 40,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "equine liability waiver florida",
@@ -104,10 +140,18 @@
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
       },
       "score": 40,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "free equine liability waiver",
@@ -119,10 +163,18 @@
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
       },
       "score": 40,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "free equine liability waiver template",
@@ -132,10 +184,18 @@
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
       },
       "score": 40,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "equine activity liability waiver",
@@ -145,85 +205,62 @@
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
       },
       "score": 40,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "horse bill of sale",
-      "variants": [
-        "bill of sale horse",
-        "as is horse bill of sale",
-        "horse bill of sale explained",
-        "bill of sale of horse",
-        "examples of bill of sale for horse"
-      ],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "google_suggest": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 40,
-      "kind": "new"
-    },
-    {
-      "query": "horse bill of sale template",
-      "variants": [
-        "bill of sale horse template"
-      ],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "google_suggest": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 40,
-      "kind": "new"
-    },
-    {
-      "query": "horse bill of sale pdf",
+      "query": "horse sales agreement",
       "variants": [],
       "signals": {
-        "words": 5,
+        "words": 3,
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
       },
-      "score": 40,
-      "kind": "new"
+      "scores": {
+        "striking": 30,
+        "can_be_one": 0
+      },
+      "score": 30,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "horse bill of sale free",
+      "query": "horse liability waiver",
       "variants": [
-        "free horse bill of sale"
+        "horse waiver of liability"
       ],
       "signals": {
-        "words": 5,
+        "words": 3,
         "question": false,
         "google_suggest": true,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
       },
-      "score": 40,
-      "kind": "new"
-    },
-    {
-      "query": "horse bill of sale printable",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "google_suggest": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      "scores": {
+        "striking": 30,
+        "can_be_one": 0
       },
-      "score": 40,
-      "kind": "new"
+      "score": 30,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "equine law solicitors",
@@ -234,152 +271,18 @@
         "gsc_position": 18,
         "gsc_impressions": 1,
         "gsc_page": "https://horselegalguide.com/about/",
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
       },
-      "score": 35.8,
-      "kind": "new"
-    },
-    {
-      "query": "horse purchase agreement",
-      "variants": [],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+      "scores": {
+        "striking": 25.8,
+        "can_be_one": 0
       },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "what is the purpose of a purchase agreement",
-      "variants": [],
-      "signals": {
-        "words": 8,
-        "question": true,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "who pays for purchase agreement",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": true,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "horse sale contract",
-      "variants": [
-        "horse contract of sale",
-        "sale of horse contract",
-        "contract of sale for horse"
-      ],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "equine law florida",
-      "variants": [
-        "florida equine law"
-      ],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "what is horse law",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": true,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "what is equine risk law",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": true,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "what is equine inherent risk law",
-      "variants": [],
-      "signals": {
-        "words": 6,
-        "question": true,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "how to write a horse bill of sale",
-      "variants": [],
-      "signals": {
-        "words": 8,
-        "question": true,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "what does a horse bill of sale look like",
-      "variants": [],
-      "signals": {
-        "words": 9,
-        "question": true,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "kind": "new"
-    },
-    {
-      "query": "horse purchase agreement payment plan",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 25,
-      "kind": "new"
+      "score": 25.8,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "already ranks 18 in Search Console (1 impressions)"
+      ]
     },
     {
       "query": "horse purchase agreement with trial period",
@@ -388,48 +291,18 @@
         "words": 6,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
-    },
-    {
-      "query": "horse purchase agreement pdf",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 25,
-      "kind": "new"
-    },
-    {
-      "query": "horse sales agreement with payment plan",
-      "variants": [],
-      "signals": {
-        "words": 6,
-        "question": false,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 25,
-      "kind": "new"
-    },
-    {
-      "query": "how do you buy a horse",
-      "variants": [
-        "steps on buying a horse"
-      ],
-      "signals": {
-        "words": 6,
-        "question": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse sale contract template free",
@@ -438,22 +311,18 @@
         "words": 5,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
-    },
-    {
-      "query": "horse sale contract with buy back",
-      "variants": [],
-      "signals": {
-        "words": 6,
-        "question": false,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse sale contract pdf",
@@ -462,34 +331,78 @@
         "words": 4,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "horse sale contract with deposit",
+      "query": "horse sales agreement template",
       "variants": [],
       "signals": {
-        "words": 5,
+        "words": 4,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "printable equine liability waiver template",
+      "query": "horse sale agreement first right of refusal",
       "variants": [],
       "signals": {
-        "words": 5,
+        "words": 7,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse sale agreement pdf",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "score": 25,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse bill of sale free printable",
@@ -498,10 +411,18 @@
         "words": 6,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse bill of sale template free",
@@ -510,10 +431,18 @@
         "words": 6,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse bill of sale example",
@@ -522,22 +451,38 @@
         "words": 5,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "horse bill of sale montana",
+      "query": "horse bill of sale form",
       "variants": [],
       "signals": {
         "words": 5,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse bill of sale with buy back clause",
@@ -546,22 +491,18 @@
         "words": 8,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
-    },
-    {
-      "query": "how to obtain a bill of sale for a horse",
-      "variants": [],
-      "signals": {
-        "words": 10,
-        "question": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse bill of sale word document",
@@ -570,10 +511,18 @@
         "words": 6,
         "question": false,
         "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
       },
       "score": 25,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse purchase agreement with deposit",
@@ -582,10 +531,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse purchase and sale agreement",
@@ -597,10 +554,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse purchase and sale agreement printable",
@@ -609,10 +574,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse lease to purchase agreement",
@@ -621,10 +594,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "free horse purchase agreement",
@@ -633,10 +614,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "basic horse purchase agreement",
@@ -645,10 +634,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse purchase and sale agreement template",
@@ -657,10 +654,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "contract for buying a horse legal advice",
@@ -669,10 +674,18 @@
         "words": 7,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "lease to buy horse agreement",
@@ -681,10 +694,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "equine purchase agreement template",
@@ -693,10 +714,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "generic purchase agreement for horse",
@@ -705,10 +734,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "equine purchase agreement form",
@@ -717,10 +754,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "sales contract horse agreement",
@@ -729,10 +774,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "buying a horse contract advice",
@@ -741,10 +794,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "equine purchase agreement with warranty",
@@ -753,10 +814,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "buying a horse contract pdf",
@@ -767,10 +836,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "equine purchase agreement with payment plan",
@@ -779,10 +856,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "buying a horse contract legal issues",
@@ -791,10 +876,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "contract for buying a horse examples",
@@ -805,10 +898,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "contract for buying a horse form",
@@ -819,10 +920,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "buying a horse contract clauses",
@@ -831,10 +940,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "buying a horse contract sample",
@@ -845,10 +962,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "selling a horse contract",
@@ -857,10 +982,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "lease to own horse contract agreement",
@@ -869,10 +1002,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "contract for buying a horse online",
@@ -881,10 +1022,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "contract for buying a horse template",
@@ -895,22 +1044,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "purchasing your own horse",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "lease to own horse contract tips",
@@ -919,10 +1064,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "contract for buying a horse checklist",
@@ -933,10 +1086,58 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse buy back contract",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "free contracts for selling a horse",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse sale contract free",
@@ -947,10 +1148,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse sale contract with trial period",
@@ -959,10 +1168,18 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "sample horse sale contract",
@@ -971,10 +1188,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "basic horse sale contract",
@@ -983,10 +1208,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "sales contract horse legal",
@@ -995,10 +1228,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "sales contract horse conditions",
@@ -1007,10 +1248,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "sales contract horse pdf",
@@ -1019,10 +1268,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "sales contract horse terms",
@@ -1031,10 +1288,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "sales contract horse clauses",
@@ -1043,10 +1308,18 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "sales contract horse sample",
@@ -1055,382 +1328,138 @@
         "words": 4,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "free contracts for selling a horse",
+      "query": "horse sale agreement template free",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine sales agreement template",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sales contract horse form",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sales contract horse template",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse sales contract template free",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "paperwork needed to sell a horse",
       "variants": [],
       "signals": {
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse buy back contract",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "missouri equine law sign",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "ohio equine liability law",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "georgia equine liability law",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "indiana equine liability law",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "arizona equine liability law",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "equine liability waiver nc",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "equine liability waiver washington state",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "equine facility liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "alabama equine liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "michigan equine liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "equine trainer liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "georgia equine liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "equine release and waiver of liability",
-      "variants": [],
-      "signals": {
-        "words": 6,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse waiver of liability",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "liability waiver for horse riding",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "equestrian activities liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "liability waiver for horseback riding",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse riding release of liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 6,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse show liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "liability waiver horse property",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse riding liability waiver form",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horseback riding liability waiver sample",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horseback riding liability waiver laws",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "equine riding liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "waiver for horse riding",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "free printable horse liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horseback riding liability waiver download",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse riding lesson liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "equine activity waiver example",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse bill of sale word",
@@ -1439,70 +1468,18 @@
         "words": 5,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse bill of sale email",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse bill of sale excel",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse bill of sale online",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse bill of sale express",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
-    },
-    {
-      "query": "horse bill of sale editable",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
       "query": "horse bill of sale free sample",
@@ -1511,52 +1488,381 @@
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "horse bill of sale texas pdf",
+      "query": "simple horse bill of sale pdf free download",
+      "variants": [],
+      "signals": {
+        "words": 8,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "bill of sale for horse purchase",
       "variants": [],
       "signals": {
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     },
     {
-      "query": "horse bill of sale texas form",
+      "query": "sample horse bill of sale",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine bill of sale",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "basic horse bill of sale",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine liability waiver nc",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine liability waiver washington state",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine facility liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "michigan equine liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "alabama equine liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine trainer liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "georgia equine liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine release and waiver of liability",
       "variants": [],
       "signals": {
         "words": 6,
         "question": false,
         "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
-      "kind": "new"
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "liability waiver for horse riding",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equestrian activities liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "liability waiver for horseback riding",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse riding release of liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse show liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
     }
   ],
   "strengthen": [
-    {
-      "query": "equine law",
-      "variants": [
-        "what is equine law"
-      ],
-      "signals": {
-        "words": 2,
-        "question": false,
-        "google_suggest": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 30,
-      "page": "/faq/"
-    },
     {
       "query": "equine liability waiver",
       "variants": [],
@@ -1564,8 +1870,11 @@
         "words": 3,
         "question": false,
         "google_suggest": true,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "bing_suggest": true
+      },
+      "scores": {
+        "striking": 30,
+        "can_be_one": 0
       },
       "score": 30,
       "page": "/compare/equine-therapy-consent-form-vs-liability-waiver/"
@@ -1578,25 +1887,14 @@
       "signals": {
         "words": 4,
         "question": false,
-        "bing_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "bing_suggest": true
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
       },
       "score": 20,
       "page": "/compare/equine-therapy-consent-form-vs-liability-waiver/"
-    },
-    {
-      "query": "how to start an equestrian business",
-      "variants": [],
-      "signals": {
-        "words": 6,
-        "question": true,
-        "gsc_position": 30,
-        "gsc_impressions": 1,
-        "gsc_page": "https://horselegalguide.com/hubs/equine-business-formation/",
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
-      },
-      "score": 19,
-      "page": "/compare/trademark-vs-llc-name-for-an-equestrian-business/"
     },
     {
       "query": "equine liability form",
@@ -1604,8 +1902,11 @@
       "signals": {
         "words": 3,
         "question": false,
-        "google_suggest": true,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "google_suggest": true
+      },
+      "scores": {
+        "striking": 15,
+        "can_be_one": 0
       },
       "score": 15,
       "page": "/compare/equine-therapy-consent-form-vs-liability-waiver/"
@@ -1617,8 +1918,11 @@
         "words": 4,
         "question": false,
         "bing_impressions": 1,
-        "bing_position": 9,
-        "competition": "not read: no free, ToS-safe competition signal (SERP scraping is not used)"
+        "bing_position": 9
+      },
+      "scores": {
+        "striking": 13,
+        "can_be_one": 0
       },
       "score": 13,
       "page": "/liability/what-is-the-equine-activity-liability-act/"
