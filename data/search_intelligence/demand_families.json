@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-10-09..2026-11-05",
-  "gsc_collected_at": "2026-11-08T15:18:22.037Z",
+  "gsc_window": "2026-10-10..2026-11-06",
+  "gsc_collected_at": "2026-11-09T15:19:07.818Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -23,8 +23,8 @@
     {
       "rank": 1,
       "family": "horse sale contract @ /hubs/horse-sale-and-purchase/",
-      "impressions": 65,
-      "weighted_position": 60.5,
+      "impressions": 66,
+      "weighted_position": 60.8,
       "status": "strengthened"
     },
     {
@@ -64,20 +64,20 @@
       "page": "/hubs/horse-sale-and-purchase/",
       "page_kind": "hub",
       "page_intent": "sale_contract",
-      "impressions": 65,
+      "impressions": 66,
       "clicks": 0,
-      "weighted_position": 60.5,
+      "weighted_position": 60.8,
       "best_position": 13,
-      "page_impressions": 96,
-      "page_position": 52.9,
+      "page_impressions": 100,
+      "page_position": 53.6,
       "top_query": "horse purchase agreement",
       "query_count": 13,
       "queries": [
         {
           "query": "horse purchase agreement",
-          "impressions": 25,
+          "impressions": 26,
           "clicks": 0,
-          "position": 63.9
+          "position": 64.5
         },
         {
           "query": "black horse contract purchase",
