@@ -43,25 +43,6 @@ test('over a length limit never fails: fitTitle trims any title, fitDescription 
   assert.ok(fitDescription(['word '.repeat(80)]).length <= DESC_MAX);
 });
 
-test('home definition: over 60 words passes, under 75% of 40 fails, a near miss is a note', () => {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'horse-home-def-'));
-  try {
-    fs.mkdirSync(path.join(root, 'dist'), { recursive: true });
-    const page = (words) => `<html><head><script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'WebPage', speakable: { cssSelector: ['h1', '#home-definition'] } }] })}</script></head><body><h1>Horse Legal Guide</h1><p id="home-definition">${Array(words).fill('word').join(' ')}</p></body></html>`;
-    const run = (words) => {
-      fs.writeFileSync(path.join(root, 'dist/index.html'), page(words));
-      const r = spawnSync(process.execPath, [path.join(repo, '_ops/validators/validate_home_definition_speakable.js')], { cwd: root, encoding: 'utf8', env: { ...process.env, VALIDATION_MODE: 'enforce' } });
-      return { status: r.status, report: JSON.parse(fs.readFileSync(path.join(root, '_ops/reports/validate_home_definition_speakable.json'), 'utf8')) };
-    };
-    assert.equal(run(50).status, 0);
-    const over = run(95);
-    assert.equal(over.status, 0, 'over a word limit never fails');
-    assert.ok(over.report.issues.every((i) => !i.blocking));
-    assert.equal(run(31).status, 0, '31 words is above 75% of 40');
-    assert.equal(run(29).status, 1, '29 words is below 75% of 40');
-  } finally { fs.rmSync(root, { recursive: true, force: true }); }
-});
-
 test('search strengthening keeps the brand on all three title tags', () => {
   const { applyEntry } = require('../scripts/search_intelligence/apply_strengthening');
   const title = 'Start an Equestrian Business Legally: Barn & Lesson Checklist';

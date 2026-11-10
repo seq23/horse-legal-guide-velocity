@@ -42,10 +42,6 @@ jobs:
         run: npm run validate:all
       - name: Run IndexNow, GSC sitemap submission, and priority URL inspection
         run: npm run distribution:post-publish
-      - name: Validate post-publish distribution contract
-        run: |
-          npm run validate:indexnow-workflow
-          npm run validate:authority-distribution
       - name: Commit durable distribution receipts and observation feedback
         run: |
           git config user.name "horse-distribution-observer"

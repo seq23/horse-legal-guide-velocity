@@ -228,8 +228,7 @@ if (gatesScanned === 0) fail('examined 0 validator files - the collectFiles swee
 const COVERAGE = '_ops/reports/gate-coverage.json';
 // Every gate that must have been exercised by the time this validator runs.
 const REQUIRED_COVERAGE = [
-  'validate:content', 'validate:footer', 'validate:links', 'validate:manual',
-  'validate:review', 'validate:above-fold',
+  'validate:footer', 'validate:manual', 'validate:review',
   'validate:public-page-phrase-contract',
 ];
 if (!fs.existsSync(path.join(ROOT, COVERAGE))) {

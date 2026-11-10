@@ -31,9 +31,7 @@ const REPORT = path.join(ROOT, '_ops/reports/self-heal-loop.json');
 const REPAIRS = {
   'validate:generated-surfaces': { command: 'npm run build', content: false,
     why: 'The check reads dist/; build is what writes it. A stale or missing surface is regenerated, not hand-patched.' },
-  'validate:page-manifests': { command: 'npm run build', content: false,
-    why: 'Manifests are emitted by the build; the validator reads the emitted files.' },
-  // These five read rendered pages under dist/, which the build is the only
+  // These read rendered pages under dist/, which the build is the only
   // writer of. They were unpaired only because a corrupt dist could never reach
   // them: `build` used to run as the first step of the detection pass and
   // repaired the tree before they looked at it. With detection made read-only
@@ -41,41 +39,23 @@ const REPAIRS = {
   // to generated-surfaces above - the repair writes what the check reads.
   //
   // Measured, not assumed: dist/index.html was replaced with
-  // `<html>faux corruption</html>`; these are the five steps that failed, and
+  // `<html>faux corruption</html>`; these were the steps that failed, and
   // `npm run build` on its own returned all five to PASS. A break in the SOURCE
   // rather than in dist is not repaired by a rebuild, the re-validation fails
   // again, and the loop reports UNRESOLVED - which is the correct outcome, since
   // no published word may be rewritten here.
-  'validate:content': { command: 'npm run build', content: false,
-    why: 'Reads rendered pages under dist/; the build is their only writer.' },
   'validate:public-page-phrase-contract': { command: 'npm run build', content: false,
     why: 'Reads rendered public pages under dist/; the build is their only writer.' },
   'validate:footer': { command: 'npm run build', content: false,
     why: 'Reads footer links in rendered dist/ pages; the build is their only writer.' },
-  'validate:public-surfaces': { command: 'npm run build', content: false,
-    why: 'Reads rendered public surfaces under dist/; the build is their only writer.' },
-  'validate:meta-uniqueness': { command: 'npm run build', content: false,
-    why: 'Reads titles and meta descriptions from rendered dist/ pages; the build is their only writer.' },
   'validate:ingestion': { command: 'npm run normalize:signals', content: false,
     why: 'normalize_signals.js is the only writer of the normalized signal file this check reads.' },
   'validate:query-intelligence': { command: 'npm run query:rebuild', content: false,
     why: 'build_provider_query_intelligence.js produces the intelligence artifact the check validates.' },
   'validate:remediation-workflow': { command: 'npm run search:prepare-repairs', content: false,
     why: 'prepare_query_repairs.js writes the repair proposals this check reads.' },
-  // 31 Oct 2026: validate:search-intelligence went red and the loop reported
-  // UNRESOLVED with nothing to run. Two classes live in that check. The derived
-  // half (demand_families.json / ledger / targets out of step with the committed
-  // export, or strengthened pages missing from dist) is regenerated here. The
-  // ledger keeps each pending family's qualified_on, and the validator fails a
-  // reset clock, so this repair can never launder the 7-day deadline. An overdue
-  // family needs sourced words written in strengthening.json; that is authoring,
-  // not repair, and stays UNRESOLVED rather than fabricated.
-  'validate:search-intelligence': { command: 'npm run search:rebuild-loop', content: false,
-    why: 'build_loop.js writes the families, ledger and targets this check recomputes; build writes the strengthened pages it reads.' },
   'validate:publish_quality': { command: 'npm run content:self-heal', content: true,
     why: 'run_self_heal.js differentiates substantially similar DRAFTS, which is the defect this check reports. Approval stays manual.' },
-  'validate:self-heal-report': { command: 'npm run content:self-heal', content: true,
-    why: 'The report this check validates is written by the self-heal run itself.' },
 };
 
 // Deliberately unpaired, recorded so the omissions are auditable rather than
