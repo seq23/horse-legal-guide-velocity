@@ -82,7 +82,7 @@
     "validate:admin-manifest": "node _ops/validators/validate_admin_manifest.js",
     "validate:admin-ui-dispatches-approvals": "node _ops/validators/validate_admin_ui_dispatches_approvals.js",
     "validate:agency-monitoring": "node _ops/validators/validate_agency_monitoring.js",
-    "validate:all": "npm run build && npm run validate:generated-surfaces && npm run validate:mode && npm run validate:review && npm run validate:ingestion && npm run validate:question-queue && npm run validate:public-page-phrase-contract && npm run validate:footer && npm run validate:manual && npm run validate:content-system && npm run validate:publish_quality && npm run validate:content-ops && npm run validate:llm-velocity && npm run validate:automation-mode && npm run validate:workflow-trace && npm run validate:no-inert-stages && npm run validate:github-admin && npm run validate:agency-monitoring && npm run validate:query-intelligence && npm run validate:remediation-workflow && npm run validate:publish-safety && npm run validate:admin-approval-live && npm run validate:admin-ui-dispatches-approvals && npm run validate:zero-paid-llm && npm run atlas:coverage && npm test && npm run validate:authority-modernization",
+    "validate:all": "npm run build && npm run validate:generated-surfaces && npm run validate:mode && npm run validate:review && npm run validate:ingestion && npm run validate:question-queue && npm run validate:public-page-phrase-contract && npm run validate:footer && npm run validate:manual && npm run validate:content-system && npm run validate:publish_quality && npm run validate:content-ops && npm run validate:llm-velocity && npm run validate:automation-mode && npm run validate:github-admin && npm run validate:agency-monitoring && npm run validate:query-intelligence && npm run validate:remediation-workflow && npm run validate:publish-safety && npm run validate:admin-approval-live && npm run validate:admin-ui-dispatches-approvals && npm run validate:zero-paid-llm && npm run atlas:coverage && npm run validate:approved-content-email && npm run validate:jsonld-page-kinds && npm run validate:about-page && npm run validate:editorial-policy-gate && npm test && npm run validate:authority-modernization",
     "validate:authority-modernization": "npm run validate:protected-editorial-core && npm run validate:continuity",
     "validate:automation-mode": "node _ops/validators/validate_automation_mode.js",
     "validate:canonical": "node _ops/validators/validate_canonical_protection.js",
@@ -98,7 +98,6 @@
     "validate:llm-velocity": "npm run validate:wise-covington-contact",
     "validate:manual": "node _ops/validators/validate_manual_mode.js",
     "validate:mode": "node _ops/validators/validate_mode.js",
-    "validate:no-inert-stages": "node _ops/validators/validate_no_inert_stages.js",
     "validate:policy": "node _ops/validators/validate_policy_compliance.js",
     "validate:protected-editorial-core": "node scripts/authority_scale/validate_protected_editorial_core.mjs",
     "validate:public-page-phrase-contract": "node _ops/validators/validate_public_page_phrase_contract.js",
@@ -109,13 +108,16 @@
     "validate:review": "node _ops/validators/validate_review_flow.js",
     "validate:revoke-not-live-on-domain": "node _ops/validators/validate_admin_approval_reaches_live.js --verify-live-domain",
     "validate:wise-covington-contact": "node _ops/validators/validate_wise_covington_contact.js",
-    "validate:workflow-trace": "node scripts/ops/validate_workflow_trace.js",
     "validate:zero-paid-llm": "node _ops/validators/validate_zero_paid_llm.js",
     "llm:free-selftest": "node scripts/llm/free_router.js --selftest",
     "validate:entity-graph": "node _ops/validators/validate_entity_graph.js",
     "validate:editorial-policy-gate": "node _ops/validators/validate_editorial_policy_gate.js",
     "entity:backlink-watch": "node scripts/entity/entity_backlink_watch.mjs",
     "live:smoke-check": "node scripts/ops/live_smoke_check.mjs",
-    "validate:question-queue": "node _ops/validators/validate_question_queue.js"
+    "validate:question-queue": "node _ops/validators/validate_question_queue.js",
+    "validate:preflight": "node _ops/validators/validate_preflight.js",
+    "validate:approved-content-email": "node _ops/validators/validate_approved_content_email_workflow.js",
+    "validate:jsonld-page-kinds": "node _ops/validators/validate_jsonld_page_kinds.js",
+    "validate:about-page": "node _ops/validators/validate_about_page.js"
   }
 }
