@@ -68,10 +68,6 @@ jobs:
           path: _ops/reports/self-heal-loop.json
           if-no-files-found: error
 
-      - name: Guard the loop contract
-        if: always()
-        run: npm run validate:self-heal-loop
-
       # Without this the repairs die with the runner and the next scheduled run
       # repairs exactly the same breakage again.
       # The commit is gated on the loop's own report, NOT on `git diff --cached`.

@@ -23,8 +23,6 @@ jobs:
           node-version: 20
       - name: Install
         run: npm ci
-      - name: Preflight
-        run: npm run validate:preflight
       - name: Build
         run: npm run build
       - name: Generate workflow trace

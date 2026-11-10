@@ -45,7 +45,7 @@ self-explaining, never a silent exit and never a red `main`.
 Run the repo's own gates, in one batch:
 
 ```bash
-npm run build && npm run validate:seo-aeo-geo && npm run validate:seo-hygiene && npm test
+npm run build && npm run validate:all
 ```
 
 `npm run validate:all` is the full gate the CI workflow runs. Rule 0 applies to every stage here:

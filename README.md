@@ -25,7 +25,6 @@ This repo exists to:
 ## Build
 
 ```bash
-npm run validate:preflight
 npm run build
 npm run publish:mode
 npm run validate:all
