@@ -653,6 +653,117 @@
         "b5 FAQ answer is 35 words (aim 40-60): \"What happens if an owner sells the horse without h\"",
         "b5 FAQ answer is 31 words (aim 40-60): \"Does a lease or gift trigger a first right of refu\""
       ]
+    },
+    {
+      "slug": "horse-sale-agreement-pdf",
+      "query": "horse sale agreement pdf",
+      "lane": "striking",
+      "score": 25,
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/horse-sale-agreement-pdf/index.html",
+      "route": "/questions/horse-sale-agreement-pdf/",
+      "url": "https://horselegalguide.com/questions/horse-sale-agreement-pdf/",
+      "published_at": null,
+      "queued_at": "2026-11-10",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-sale-agreement-pdf/index.html",
+      "hash": "2bc96649fb7fdccdec185c0a22261ba3ca61acdd2568b278b7408ecdb4fac3e4",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 38 words (aim 40-60): \"Are pre-purchase exam results part of the sale agr\"",
+        "b5 FAQ answer is 38 words (aim 40-60): \"Can a seller disclaim all warranties in a horse sa\""
+      ]
+    },
+    {
+      "slug": "horse-bill-of-sale-free-printable",
+      "query": "horse bill of sale free printable",
+      "lane": "striking",
+      "score": 25,
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/horse-bill-of-sale-free-printable/index.html",
+      "route": "/questions/horse-bill-of-sale-free-printable/",
+      "url": "https://horselegalguide.com/questions/horse-bill-of-sale-free-printable/",
+      "published_at": null,
+      "queued_at": "2026-11-10",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-bill-of-sale-free-printable/index.html",
+      "hash": "ee8f216efa5eb46f03b6323aa5cdf220b9cac21470153e5fc4d40d29f3a08954",
+      "model": "free-route",
+      "facts": [
+        "https://www.horsecouncil.org/",
+        "https://www.aphis.usda.gov/"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 39 words (aim 40-60): \"Do I need a notary public for a horse bill of sale\"",
+        "b5 FAQ answer is 38 words (aim 40-60): \"What is the difference between a bill of sale and \"",
+        "b5 FAQ answer is 32 words (aim 40-60): \"What information must be included to identify the \""
+      ]
+    },
+    {
+      "slug": "horse-bill-of-sale-with-buy-back-clause",
+      "query": "horse bill of sale with buy back clause",
+      "lane": "striking",
+      "score": 25,
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 8,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/horse-bill-of-sale-with-buy-back-clause/index.html",
+      "route": "/questions/horse-bill-of-sale-with-buy-back-clause/",
+      "url": "https://horselegalguide.com/questions/horse-bill-of-sale-with-buy-back-clause/",
+      "published_at": null,
+      "queued_at": "2026-11-10",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-bill-of-sale-with-buy-back-clause/index.html",
+      "hash": "86a3d930539a67be1ae9f79adf7b3a6e7fd9c21704ba09da155593e534168265",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://en.wikipedia.org/wiki/Contract"
+      ],
+      "linked_from": [],
+      "checks": {}
     }
   ],
   "dropped": [
@@ -881,6 +992,33 @@
       "at": "2026-11-09",
       "reason": [
         "same intent as https://horselegalguide.com/questions/horse-sales-agreement/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "horse bill of sale template free",
+      "at": "2026-11-10",
+      "reason": [
+        "same intent as https://horselegalguide.com/questions/horse-bill-of-sale-free-printable/ (high token overlap (0.60 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "horse bill of sale example",
+      "at": "2026-11-10",
+      "gate": 2,
+      "reason": [
+        "off-audience: This query asks for an example document rather than an overview of legal concepts or documentation requirements."
+      ]
+    },
+    {
+      "query": "horse bill of sale form",
+      "at": "2026-11-10",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 27 words (aim 40-60): \"Is a bill of sale the same as a registration trans\"",
+        "b5 FAQ answer is 26 words (aim 40-60): \"Do I need a lawyer to draft a horse bill of sale?\"",
+        "b5 FAQ answer is 25 words (aim 40-60): \"What happens if a horse is sold without a bill of \"",
+        "b5 FAQ answer is 24 words (aim 40-60): \"Should a pre-purchase exam be mentioned in the bil\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
       ]
     }
   ],
