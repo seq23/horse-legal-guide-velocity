@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-10-10..2026-11-06",
-  "gsc_collected_at": "2026-11-09T15:19:07.818Z",
+  "gsc_window": "2026-10-11..2026-11-07",
+  "gsc_collected_at": "2026-11-10T15:18:45.209Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -23,8 +23,8 @@
     {
       "rank": 1,
       "family": "horse sale contract @ /hubs/horse-sale-and-purchase/",
-      "impressions": 66,
-      "weighted_position": 60.8,
+      "impressions": 67,
+      "weighted_position": 61.1,
       "status": "strengthened"
     },
     {
@@ -37,8 +37,8 @@
     {
       "rank": 3,
       "family": "equine liability @ /hubs/liability-waivers-insurance/",
-      "impressions": 5,
-      "weighted_position": 60.2,
+      "impressions": 6,
+      "weighted_position": 62,
       "status": "strengthened"
     },
     {
@@ -64,20 +64,20 @@
       "page": "/hubs/horse-sale-and-purchase/",
       "page_kind": "hub",
       "page_intent": "sale_contract",
-      "impressions": 66,
+      "impressions": 67,
       "clicks": 0,
-      "weighted_position": 60.8,
+      "weighted_position": 61.1,
       "best_position": 13,
-      "page_impressions": 100,
-      "page_position": 53.6,
+      "page_impressions": 103,
+      "page_position": 53.4,
       "top_query": "horse purchase agreement",
       "query_count": 13,
       "queries": [
         {
           "query": "horse purchase agreement",
-          "impressions": 26,
+          "impressions": 27,
           "clicks": 0,
-          "position": 64.5
+          "position": 65.1
         },
         {
           "query": "black horse contract purchase",
@@ -211,20 +211,20 @@
       "page": "/hubs/liability-waivers-insurance/",
       "page_kind": "hub",
       "page_intent": "liability",
-      "impressions": 5,
+      "impressions": 6,
       "clicks": 0,
-      "weighted_position": 60.2,
+      "weighted_position": 62,
       "best_position": 60,
-      "page_impressions": 7,
-      "page_position": 44.6,
+      "page_impressions": 8,
+      "page_position": 47.9,
       "top_query": "equine liability waiver",
       "query_count": 2,
       "queries": [
         {
           "query": "equine liability waiver",
-          "impressions": 3,
+          "impressions": 4,
           "clicks": 0,
-          "position": 60.3
+          "position": 63
         },
         {
           "query": "horse liability waiver",
