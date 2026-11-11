@@ -764,6 +764,119 @@
       ],
       "linked_from": [],
       "checks": {}
+    },
+    {
+      "slug": "horse-bill-of-sale-word-document",
+      "query": "horse bill of sale word document",
+      "lane": "striking",
+      "score": 25,
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/horse-bill-of-sale-word-document/index.html",
+      "route": "/questions/horse-bill-of-sale-word-document/",
+      "url": "https://horselegalguide.com/questions/horse-bill-of-sale-word-document/",
+      "published_at": null,
+      "queued_at": "2026-11-11",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-bill-of-sale-word-document/index.html",
+      "hash": "aa528cb55abec6581283a2f77a7f75e177ad52c832ccced652fe43c804e711f1",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/wex/bill_of_sale",
+        "https://www.law.cornell.edu/wex/statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 37 words (aim 40-60): \"Should I use a bill of sale or a formal contract?\"",
+        "b5 FAQ answer is 38 words (aim 40-60): \"Do I need to notarize a horse bill of sale?\"",
+        "b5 FAQ answer is 37 words (aim 40-60): \"What happens if the horse's description is incorre\""
+      ]
+    },
+    {
+      "slug": "equine-purchase-agreement-template",
+      "query": "equine purchase agreement template",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/equine-purchase-agreement-template/index.html",
+      "route": "/questions/equine-purchase-agreement-template/",
+      "url": "https://horselegalguide.com/questions/equine-purchase-agreement-template/",
+      "published_at": null,
+      "queued_at": "2026-11-11",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/equine-purchase-agreement-template/index.html",
+      "hash": "ed05683e6620594b51a41e5b4d78d115ff49ed20944f5f05c5ddeea3f4d832bf",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc/2",
+        "https://en.wikipedia.org/wiki/Bill_of_sale"
+      ],
+      "linked_from": [],
+      "checks": {}
+    },
+    {
+      "slug": "sales-contract-horse-agreement",
+      "query": "sales contract horse agreement",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/sales-contract-horse-agreement/index.html",
+      "route": "/questions/sales-contract-horse-agreement/",
+      "url": "https://horselegalguide.com/questions/sales-contract-horse-agreement/",
+      "published_at": null,
+      "queued_at": "2026-11-11",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/sales-contract-horse-agreement/index.html",
+      "hash": "1220dea776ee1276d2bfdd4cefc6af4e8be2a187e18fbdc46ad7c63613f61252",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 37 words (aim 40-60): \"Are verbal horse sales agreements legally binding?\"",
+        "b5 FAQ answer is 39 words (aim 40-60): \"What happens if a horse gets sick during a trial p\"",
+        "b5 FAQ answer is 33 words (aim 40-60): \"Do I need a lawyer to draft a horse sales contract\"",
+        "b5 FAQ answer is 35 words (aim 40-60): \"What is an as-is horse sale?\""
+      ]
     }
   ],
   "dropped": [
@@ -1019,6 +1132,90 @@
         "b5 FAQ answer is 25 words (aim 40-60): \"What happens if a horse is sold without a bill of \"",
         "b5 FAQ answer is 24 words (aim 40-60): \"Should a pre-purchase exam be mentioned in the bil\"",
         "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "horse purchase agreement with deposit",
+      "at": "2026-11-11",
+      "reason": [
+        "same intent as https://horselegalguide.com/compare/purchase-deposit-agreement-vs-refundable-trial-payment/ (high token overlap (0.75 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "horse purchase and sale agreement",
+      "at": "2026-11-11",
+      "reason": [
+        "same intent as https://horselegalguide.com/compare/horse-purchase-agreement-vs-bill-of-sale/ (high token overlap (0.75 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "horse purchase and sale agreement printable",
+      "at": "2026-11-11",
+      "reason": [
+        "same intent as https://horselegalguide.com/compare/horse-purchase-agreement-vs-bill-of-sale/ (high token overlap (0.60 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "horse lease to purchase agreement",
+      "at": "2026-11-11",
+      "reason": [
+        "same intent as https://horselegalguide.com/compare/horse-lease-vs-horse-purchase/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "free horse purchase agreement",
+      "at": "2026-11-11",
+      "gate": 2,
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "basic horse purchase agreement",
+      "at": "2026-11-11",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 24 words (aim 40-60): \"Do I need a lawyer to draft a horse purchase agree\"",
+        "b5 FAQ answer is 27 words (aim 40-60): \"What happens if a horse gets sick during a trial p\"",
+        "b5 FAQ answer is 24 words (aim 40-60): \"Is a registration certificate proof of ownership?\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "horse purchase and sale agreement template",
+      "at": "2026-11-11",
+      "reason": [
+        "same intent as https://horselegalguide.com/compare/horse-purchase-agreement-vs-bill-of-sale/ (high token overlap (0.60 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "contract for buying a horse legal advice",
+      "at": "2026-11-11",
+      "reason": [
+        "same intent as https://horselegalguide.com/faq/do-i-need-a-contract-to-buy-a-horse/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "lease to buy horse agreement",
+      "at": "2026-11-11",
+      "gate": 2,
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "generic purchase agreement for horse",
+      "at": "2026-11-11",
+      "gate": 2,
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "equine purchase agreement form",
+      "at": "2026-11-11",
+      "reason": [
+        "same intent as https://horselegalguide.com/questions/equine-purchase-agreement-template/ (high token overlap (0.60 >= 0.6)); skipped, published pages are frozen on this site"
       ]
     }
   ],
