@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-11T13:32:14.000Z",
+  "generated_at": "2026-11-11T13:32:18.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "84a77b3c61ffe180580443470f80ac75d08e6992d95234d98057caa19f5a5f84",
+  "source_fingerprint": "f1813aecded3e47e8d721dea641af769acc6f6962eb0830dc759b29190a4bceb",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
@@ -12,7 +12,7 @@
     "indexable_pages_measured": 326,
     "duplicate_title_groups": 1,
     "duplicate_description_groups": 0,
-    "high_similarity_pairs": 207,
+    "high_similarity_pairs": 205,
     "intent_overlap_pairs": 23
   },
   "family_metrics": {
@@ -139,7 +139,7 @@
     "scenario": {
       "pages": 106,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 200,
+      "high_similarity_pair_memberships": 196,
       "intent_overlap_pair_memberships": 12
     },
     "state": {
@@ -1134,18 +1134,6 @@
       "title_b": "A social media collaboration went wrong |"
     },
     {
-      "a": "/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
-      "b": "/scenario/a-contract-names-the-wrong-party-why-does-that-matter/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8837,
-      "cosine_similarity": 0.9631,
-      "shingle_similarity": 0.7362,
-      "intent_similarity": 0,
-      "title_a": "The horse failed the pre-purchase exam after |",
-      "title_b": "A contract names the wrong party |"
-    },
-    {
       "a": "/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/",
       "b": "/scenario/a-farrier-or-vet-dispute-affects-a-horse-sale-what-documents-matter/",
       "family_a": "scenario",
@@ -1792,18 +1780,6 @@
       "intent_similarity": 0.125,
       "title_a": "How to Start an Equine-Assisted Therapy |",
       "title_b": "How to Start a Boarding Barn Legally |"
-    },
-    {
-      "a": "/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
-      "b": "/scenario/a-horse-was-transported-before-paperwork-was-complete-what-risk-does-that-create/",
-      "family_a": "scenario",
-      "family_b": "scenario",
-      "body_similarity": 0.8667,
-      "cosine_similarity": 0.962,
-      "shingle_similarity": 0.6897,
-      "intent_similarity": 0.0833,
-      "title_a": "The horse failed the pre-purchase exam after |",
-      "title_b": "A horse was transported before paperwork was |"
     },
     {
       "a": "/scenario/i-bought-a-horse-and-something-is-wrong-what-now/",
