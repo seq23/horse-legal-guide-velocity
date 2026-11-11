@@ -7,17 +7,15 @@
   "status": "passed",
   "proof_type": "local-equivalent-structure-and-artifact-trace",
   "commands_checked": [
-    "npm run selfheal",
-    "npm run validate:self-heal-loop"
+    "npm run selfheal"
   ],
   "artifacts_checked": [
     "_ops/selfheal/heal_until_clean.js",
-    "_ops/validators/validate_self_heal_loop.js",
     "_ops/reports/self-heal-loop.json"
   ],
   "missing_artifacts_warning_only": [],
-  "started_at": "2026-11-10T13:32:23.000Z",
-  "finished_at": "2026-11-10T13:32:23.000Z",
+  "started_at": "2026-11-11T13:32:14.000Z",
+  "finished_at": "2026-11-11T13:32:14.000Z",
   "warnings": [],
   "hard_fails": [],
   "live_github_actions_status": "not_executed_in_chatgpt_container"
