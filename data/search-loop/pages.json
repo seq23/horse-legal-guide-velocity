@@ -877,6 +877,111 @@
         "b5 FAQ answer is 33 words (aim 40-60): \"Do I need a lawyer to draft a horse sales contract\"",
         "b5 FAQ answer is 35 words (aim 40-60): \"What is an as-is horse sale?\""
       ]
+    },
+    {
+      "slug": "buying-a-horse-contract-advice",
+      "query": "buying a horse contract advice",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/buying-a-horse-contract-advice/index.html",
+      "route": "/questions/buying-a-horse-contract-advice/",
+      "url": "https://horselegalguide.com/questions/buying-a-horse-contract-advice/",
+      "published_at": null,
+      "queued_at": "2026-11-12",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/buying-a-horse-contract-advice/index.html",
+      "hash": "5aaa8921855dceffb4a4fb12364a5b1219fdf06172d9da2e56208a2f80e19d05",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://www.usa.gov/laws-and-regulations"
+      ],
+      "linked_from": [],
+      "checks": {}
+    },
+    {
+      "slug": "equine-purchase-agreement-with-warranty",
+      "query": "equine purchase agreement with warranty",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/equine-purchase-agreement-with-warranty/index.html",
+      "route": "/questions/equine-purchase-agreement-with-warranty/",
+      "url": "https://horselegalguide.com/questions/equine-purchase-agreement-with-warranty/",
+      "published_at": null,
+      "queued_at": "2026-11-12",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/equine-purchase-agreement-with-warranty/index.html",
+      "hash": "4a6a085337d3574ca89de4dc36062d54e23699b1f49755a013bd02596f57ebc6",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc/2",
+        "https://www.law.cornell.edu/ucc/2/2-313"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b2 meta description is 90 chars (aim 120-160)"
+      ]
+    },
+    {
+      "slug": "equine-purchase-agreement-with-payment-plan",
+      "query": "equine purchase agreement with payment plan",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/equine-purchase-agreement-with-payment-plan/index.html",
+      "route": "/questions/equine-purchase-agreement-with-payment-plan/",
+      "url": "https://horselegalguide.com/questions/equine-purchase-agreement-with-payment-plan/",
+      "published_at": null,
+      "queued_at": "2026-11-12",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/equine-purchase-agreement-with-payment-plan/index.html",
+      "hash": "d44a39acef47b6b31d1c87ec33ea95d1c20cd70da0082e2244c29060981d1f61",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc/2",
+        "https://www.oyez.org/"
+      ],
+      "linked_from": [],
+      "checks": {}
     }
   ],
   "dropped": [
@@ -1216,6 +1321,15 @@
       "at": "2026-11-11",
       "reason": [
         "same intent as https://horselegalguide.com/questions/equine-purchase-agreement-template/ (high token overlap (0.60 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "buying a horse contract pdf",
+      "at": "2026-11-12",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 24 words (aim 40-60): \"Should a pre-purchase exam be mentioned in the con\"",
+        "b5 FAQ answer is 28 words (aim 40-60): \"Can I modify a downloaded PDF contract template?\""
       ]
     }
   ],
