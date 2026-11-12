@@ -1,44 +1,44 @@
 {
-  "generated_at": "2026-11-11T14:37:04.648Z",
-  "total_signals": 4370,
+  "generated_at": "2026-11-12T14:36:53.516Z",
+  "total_signals": 4411,
   "signals_by_source": {
-    "reddit_equestrian": 2253,
+    "reddit_equestrian": 2273,
     "reddit_horses": 727,
     "forum_the_horse_forum": 33,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 97,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 233,
+    "youtube_search_comments": 234,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 242,
-    "reddit_smallbusiness": 243,
+    "reddit_smallbusiness": 263,
     "reddit_farming_ranching": 143,
     "forum_horse_and_hound": 94
   },
   "signals_by_platform": {
-    "reddit": 3608,
+    "reddit": 3648,
     "equestrian_forums": 157,
     "google_paa": 97,
     "serp_competitors": 217,
-    "youtube": 233,
+    "youtube": 234,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1804,
-  "duplicates_collapsed": 2566,
+  "normalized_count": 1813,
+  "duplicates_collapsed": 2598,
   "pages_created": 0,
   "pages_strengthened": 275,
   "rejected_signals": 0,
-  "pending_owner_review": 1523,
+  "pending_owner_review": 1532,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 942
+      "count": 944
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 287
+      "count": 290
     },
     {
       "name": "horse-lease-and-trial",
@@ -46,7 +46,7 @@
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 214
+      "count": 217
     },
     {
       "name": "liability-waivers-insurance",
@@ -62,7 +62,7 @@
     },
     {
       "name": "real-property-and-leases",
-      "count": 17
+      "count": 18
     },
     {
       "name": "intellectual-property-and-brand",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 2253
+      "count": 2273
     },
     {
       "name": "reddit_horses",
@@ -84,7 +84,7 @@
     },
     {
       "name": "reddit_smallbusiness",
-      "count": 243
+      "count": 263
     },
     {
       "name": "reddit_legaladvice",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 233
+      "count": 234
     },
     {
       "name": "serp_competitor_research",
@@ -151,9 +151,8 @@
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -183,8 +182,9 @@
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "success_with_data",
-      "count": 8
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 25000ms"
     },
     {
       "source_key": "serp_competitor_research",
@@ -27716,6 +27716,123 @@
       "llm_bait_phrase": "Tips when Leasing an Equine",
       "source_signal_ids": [
         "youtube_search_comments_tips-when-leasing-an-equine-https-www-youtube-com-re_71adb8ba"
+      ]
+    },
+    {
+      "approval_id": "approval_1804_question-on-horse-trailer-towing",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4380_c0b6c0304d",
+      "proposed_slug": "/faq/question-on-horse-trailer-towing/",
+      "cluster": "state-specific",
+      "question": "Question on Horse Trailer Towing — what should I know?",
+      "llm_bait_phrase": "Question on Horse Trailer Towing",
+      "source_signal_ids": [
+        "reddit_equestrian_question-on-horse-trailer-towing-https-www-reddit-co_6ba5fa81"
+      ]
+    },
+    {
+      "approval_id": "approval_1805_talk-to-me-like-i-m-an-idiot-savant-how-do-i-start",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4382_e7f6419176",
+      "proposed_slug": "/faq/talk-to-me-like-i-m-an-idiot-savant-how-do-i-start-my-solo-training-lessons-possibly-soon-/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Talk to me like i’m an idiot savant—how do i start my solo training/lessons/(possibly soon to be be)boarding business —admin not operations — what should I know?",
+      "llm_bait_phrase": "Talk to me like i’m an idiot savant—how do i start my solo training/lessons/(possibly soon to be be)boarding business —admin not operations",
+      "source_signal_ids": [
+        "reddit_equestrian_talk-to-me-like-i-m-an-idiot-savant-how-do-i-start-m_9d7ad2e0"
+      ]
+    },
+    {
+      "approval_id": "approval_1806_pnw-barns-what-is-typical-for-winter-turnout",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4383_226b6aa8be",
+      "proposed_slug": "/faq/pnw-barns-what-is-typical-for-winter-turnout/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "PNW barns what is typical for winter turnout — what should I know?",
+      "llm_bait_phrase": "PNW barns what is typical for winter turnout",
+      "source_signal_ids": [
+        "reddit_equestrian_pnw-barns-what-is-typical-for-winter-turnout-https-w_3666221f"
+      ]
+    },
+    {
+      "approval_id": "approval_1807_does-it-take-to-work-at-a-pre-training-yard-abroad",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4385_2691222e3f",
+      "proposed_slug": "/faq/does-it-take-to-work-at-a-pre-training-yard-abroad-as-a-foreign-rider/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "What does it take to work at a pre-training yard abroad as a foreign rider?",
+      "llm_bait_phrase": "does it take to work at a pre-training yard abroad as a foreign rider",
+      "source_signal_ids": [
+        "reddit_equestrian_what-does-it-take-to-work-at-a-pre-training-yard-abr_f47c3a6b"
+      ]
+    },
+    {
+      "approval_id": "approval_1808_had-my-horse-outside-of-the-property-for-the-first",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4387_76f7cf291d",
+      "proposed_slug": "/faq/had-my-horse-outside-of-the-property-for-the-first-time/",
+      "cluster": "real-property-and-leases",
+      "question": "Had my horse outside of the property for the first time! — what should I know?",
+      "llm_bait_phrase": "Had my horse outside of the property for the first time!",
+      "source_signal_ids": [
+        "reddit_equestrian_had-my-horse-outside-of-the-property-for-the-first-t_8092a0d3"
+      ]
+    },
+    {
+      "approval_id": "approval_1809_my-horse-changed-colors",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4389_b13310765b",
+      "proposed_slug": "/faq/my-horse-changed-colors/",
+      "cluster": "state-specific",
+      "question": "My horse changed colors — what should I know?",
+      "llm_bait_phrase": "My horse changed colors",
+      "source_signal_ids": [
+        "reddit_equestrian_my-horse-changed-colors-https-www-reddit-com-r-eques_e097cdc5"
+      ]
+    },
+    {
+      "approval_id": "approval_1810_actually-helps-increase-sales-in-a-small-retail-sh",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4393_c763d03a5f",
+      "proposed_slug": "/faq/actually-helps-increase-sales-in-a-small-retail-shop/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "What actually helps increase sales in a small retail shop?",
+      "llm_bait_phrase": "actually helps increase sales in a small retail shop",
+      "source_signal_ids": [
+        "reddit_smallbusiness_what-actually-helps-increase-sales-in-a-small-retail_c363cf12"
+      ]
+    },
+    {
+      "approval_id": "approval_1811_everful-wholesale-clothes",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4404_3b2060a823",
+      "proposed_slug": "/faq/everful-wholesale-clothes/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Everful wholesale clothes — what should I know?",
+      "llm_bait_phrase": "Everful wholesale clothes",
+      "source_signal_ids": [
+        "reddit_smallbusiness_everful-wholesale-clothes-https-www-reddit-com-r-sma_39132dd3"
+      ]
+    },
+    {
+      "approval_id": "approval_1812_schmitty-s-horse-sale-u0026-preview-aplington-ia",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4410_8085b5a19d",
+      "proposed_slug": "/faq/schmitty-s-horse-sale-u0026-preview-aplington-ia/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Schmitty’s Horse Sale \\u0026 Preview, Aplington, IA — what should I know?",
+      "llm_bait_phrase": "Schmitty’s Horse Sale \\u0026 Preview, Aplington, IA",
+      "source_signal_ids": [
+        "youtube_search_comments_schmitty-s-horse-sale-u0026-preview-aplington-ia-htt_40ee048f"
       ]
     }
   ]
