@@ -1,24 +1,24 @@
 {
   "schema_version": "1.0",
   "status": "LIST_ONLY_NO_REDIRECTS",
-  "gsc_window": "2026-10-13..2026-11-09",
-  "coverage_collected_at": "2026-11-12T15:21:39.667Z",
+  "gsc_window": "2026-10-14..2026-11-10",
+  "coverage_collected_at": "2026-11-13T15:21:43.606Z",
   "rule": "Sitemap leaf pages with 0 impressions in the 28-day export and fewer than 800 visible words in the built page. Nothing is redirected or removed by this file.",
   "thin_word_threshold": 800,
   "sitemap_url_count": 326,
-  "candidate_count": 191,
+  "candidate_count": 194,
   "candidates_by_hub": {
     "none": 24,
     "/hubs/horse-lease-and-trial/": 14,
     "/hubs/equine-business-formation/": 14,
+    "/hubs/real-property-and-leases/": 2,
     "/hubs/intellectual-property-and-brand/": 14,
-    "/hubs/real-property-and-leases/": 1,
     "/hubs/horse-sale-and-purchase/": 37,
     "/hubs/boarding-training-and-barn-operations/": 26,
-    "/hubs/liability-waivers-insurance/": 23,
+    "/hubs/liability-waivers-insurance/": 25,
     "/hubs/demand-letters-and-disputes/": 18,
-    "/hubs/therapeutic-riding-and-hipaa/": 4,
-    "/hubs/state-specific/": 6,
+    "/hubs/therapeutic-riding-and-hipaa/": 3,
+    "/hubs/state-specific/": 7,
     "/hubs/emotional-am-i-screwed/": 10
   },
   "candidates": [
@@ -85,6 +85,14 @@
       "coverage_state": "Crawled - currently not indexed",
       "fold_into": "/hubs/horse-lease-and-trial/",
       "fold_basis": "page target cluster horse-lease-and-trial"
+    },
+    {
+      "route": "/leases/what-liability-applies-in-a-horse-property-lease/",
+      "word_count": 380,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/real-property-and-leases/",
+      "fold_basis": "page target cluster real-property-and-leases"
     },
     {
       "route": "/scenario/a-sponsor-wants-exclusivity-after-the-fact-what-should-be-reviewed/",
@@ -215,6 +223,14 @@
       "fold_basis": "page target cluster horse-sale-and-purchase"
     },
     {
+      "route": "/scenario/a-parent-signed-a-waiver-for-a-minor-rider-what-should-be-checked/",
+      "word_count": 387,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
       "route": "/scenario/a-sponsor-did-not-deliver-promised-payment-what-should-be-checked/",
       "word_count": 387,
       "impressions_28d": 0,
@@ -269,6 +285,14 @@
       "coverage_state": "Crawled - currently not indexed",
       "fold_into": "/hubs/horse-sale-and-purchase/",
       "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
+      "route": "/scenario/insurance-denied-a-horse-related-claim-what-should-be-gathered/",
+      "word_count": 389,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
     },
     {
       "route": "/scenario/a-boarding-barn-changed-facility-rules-mid-relationship-what-should-be-checked/",
@@ -623,14 +647,6 @@
       "fold_basis": "page target cluster equine-business-formation"
     },
     {
-      "route": "/therapeutic/am-i-subject-to-hipaa-in-equine-therapy/",
-      "word_count": 429,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/therapeutic-riding-and-hipaa/",
-      "fold_basis": "page target cluster therapeutic-riding-and-hipaa"
-    },
-    {
       "route": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
       "word_count": 430,
       "impressions_28d": 0,
@@ -807,6 +823,14 @@
       "fold_basis": "page target cluster state-specific"
     },
     {
+      "route": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+      "word_count": 448,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/state-specific/",
+      "fold_basis": "page target cluster state-specific"
+    },
+    {
       "route": "/scenario/can-i-back-out-of-a-horse-deal-without-getting-sued/",
       "word_count": 449,
       "impressions_28d": 0,
@@ -858,7 +882,7 @@
       "route": "/disputes/how-serious-is-a-legal-demand-letter/",
       "word_count": 451,
       "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
+      "coverage_state": "Crawled - currently not indexed",
       "fold_into": "/hubs/demand-letters-and-disputes/",
       "fold_basis": "page target cluster demand-letters-and-disputes"
     },
@@ -882,7 +906,7 @@
       "route": "/liability/what-happens-if-i-do-not-post-the-required-sign/",
       "word_count": 454,
       "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
+      "coverage_state": "Crawled - currently not indexed",
       "fold_into": "/hubs/liability-waivers-insurance/",
       "fold_basis": "page target cluster liability-waivers-insurance"
     },
@@ -890,7 +914,7 @@
       "route": "/disputes/can-a-contract-dispute-be-resolved-without-court/",
       "word_count": 455,
       "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
+      "coverage_state": "Crawled - currently not indexed",
       "fold_into": "/hubs/demand-letters-and-disputes/",
       "fold_basis": "page target cluster demand-letters-and-disputes"
     },
