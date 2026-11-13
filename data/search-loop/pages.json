@@ -982,6 +982,119 @@
       ],
       "linked_from": [],
       "checks": {}
+    },
+    {
+      "slug": "contract-for-buying-a-horse-form",
+      "query": "contract for buying a horse form",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/contract-for-buying-a-horse-form/index.html",
+      "route": "/questions/contract-for-buying-a-horse-form/",
+      "url": "https://horselegalguide.com/questions/contract-for-buying-a-horse-form/",
+      "published_at": null,
+      "queued_at": "2026-11-13",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/contract-for-buying-a-horse-form/index.html",
+      "hash": "da36e9f3779ccb23510ce6951e1640840c00192f37b76b9883769fdc1ab7034f",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/wex/ucc",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 37 words (aim 40-60): \"Are digital signatures valid on a horse purchase c\""
+      ]
+    },
+    {
+      "slug": "buying-a-horse-contract-clauses",
+      "query": "buying a horse contract clauses",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/buying-a-horse-contract-clauses/index.html",
+      "route": "/questions/buying-a-horse-contract-clauses/",
+      "url": "https://horselegalguide.com/questions/buying-a-horse-contract-clauses/",
+      "published_at": null,
+      "queued_at": "2026-11-13",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/buying-a-horse-contract-clauses/index.html",
+      "hash": "3a7d9ff9d8b52dd1511a6d61fbbed98077946c7c7ffffe102d6f876e602db5d1",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://www.usa.gov/"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 37 words (aim 40-60): \"When does ownership of the horse officially transf\"",
+        "b5 FAQ answer is 34 words (aim 40-60): \"Should a pre-purchase exam contingency be in the c\"",
+        "b5 FAQ answer is 33 words (aim 40-60): \"Who is responsible for the horse during transport?\""
+      ]
+    },
+    {
+      "slug": "lease-to-own-horse-contract-agreement",
+      "query": "lease to own horse contract agreement",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/lease-to-own-horse-contract-agreement/index.html",
+      "route": "/questions/lease-to-own-horse-contract-agreement/",
+      "url": "https://horselegalguide.com/questions/lease-to-own-horse-contract-agreement/",
+      "published_at": null,
+      "queued_at": "2026-11-13",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/lease-to-own-horse-contract-agreement/index.html",
+      "hash": "d7939f24b2dc2e33ac33dda34980cc9b8494f034e60563f0af2b0e47a8c6cbed",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/wex/contract",
+        "https://www.uniformlaws.org/acts/ucc"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 39 words (aim 40-60): \"Who pays for veterinary care during a lease-to-own\""
+      ]
     }
   ],
   "dropped": [
@@ -1330,6 +1443,37 @@
       "reason": [
         "b5 FAQ answer is 24 words (aim 40-60): \"Should a pre-purchase exam be mentioned in the con\"",
         "b5 FAQ answer is 28 words (aim 40-60): \"Can I modify a downloaded PDF contract template?\""
+      ]
+    },
+    {
+      "query": "buying a horse contract legal issues",
+      "at": "2026-11-13",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 27 words (aim 40-60): \"Can I return a horse if it does not suit me?\"",
+        "b5 FAQ answer is 27 words (aim 40-60): \"Who owns the horse if payments are made over time?\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
+      ]
+    },
+    {
+      "query": "contract for buying a horse examples",
+      "at": "2026-11-13",
+      "reason": [
+        "same intent as https://horselegalguide.com/faq/do-i-need-a-contract-to-buy-a-horse/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "buying a horse contract sample",
+      "at": "2026-11-13",
+      "reason": [
+        "same intent as https://horselegalguide.com/faq/do-i-need-a-contract-to-buy-a-horse/ (high token overlap (0.75 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "selling a horse contract",
+      "at": "2026-11-13",
+      "reason": [
+        "same intent as https://horselegalguide.com/faq/do-i-need-a-contract-to-sell-a-horse/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
       ]
     }
   ],
