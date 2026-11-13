@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-11-12T14:36:53.516Z",
-  "total_signals": 4411,
+  "generated_at": "2026-11-13T14:36:58.325Z",
+  "total_signals": 4466,
   "signals_by_source": {
-    "reddit_equestrian": 2273,
+    "reddit_equestrian": 2293,
     "reddit_horses": 727,
     "forum_the_horse_forum": 33,
     "forum_chronicle_of_the_horse": 30,
-    "google_paa_manual_or_provider": 97,
+    "google_paa_manual_or_provider": 108,
     "serp_competitor_research": 217,
     "youtube_search_comments": 234,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
-    "reddit_legaladvice": 242,
+    "reddit_legaladvice": 262,
     "reddit_smallbusiness": 263,
     "reddit_farming_ranching": 143,
-    "forum_horse_and_hound": 94
+    "forum_horse_and_hound": 98
   },
   "signals_by_platform": {
-    "reddit": 3648,
-    "equestrian_forums": 157,
-    "google_paa": 97,
+    "reddit": 3688,
+    "equestrian_forums": 161,
+    "google_paa": 108,
     "serp_competitors": 217,
     "youtube": 234,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1813,
-  "duplicates_collapsed": 2598,
+  "normalized_count": 1835,
+  "duplicates_collapsed": 2631,
   "pages_created": 0,
-  "pages_strengthened": 275,
+  "pages_strengthened": 278,
   "rejected_signals": 0,
-  "pending_owner_review": 1532,
+  "pending_owner_review": 1551,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 944
+      "count": 951
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 290
+      "count": 293
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 225
+      "count": 232
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 217
+      "count": 221
     },
     {
       "name": "liability-waivers-insurance",
@@ -58,7 +58,7 @@
     },
     {
       "name": "demand-letters-and-disputes",
-      "count": 18
+      "count": 19
     },
     {
       "name": "real-property-and-leases",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 2273
+      "count": 2293
     },
     {
       "name": "reddit_horses",
@@ -88,7 +88,7 @@
     },
     {
       "name": "reddit_legaladvice",
-      "count": 242
+      "count": 262
     },
     {
       "name": "youtube_search_comments",
@@ -104,11 +104,11 @@
     },
     {
       "name": "google_paa_manual_or_provider",
-      "count": 97
+      "count": 108
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 94
+      "count": 98
     },
     {
       "name": "forum_the_horse_forum",
@@ -144,15 +144,15 @@
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "blocked_source",
-      "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "status": "success_with_data",
+      "count": 20
     },
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -176,15 +176,14 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_empty",
-      "count": 0
+      "status": "success_with_data",
+      "count": 11
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "timed_out",
-      "count": 0,
-      "error": "source timeout after 25000ms"
+      "status": "success_with_data",
+      "count": 16
     },
     {
       "source_key": "serp_competitor_research",
@@ -7862,6 +7861,87 @@
       "mapped_slug": "/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
       "status": "approved_for_content",
       "reason": "The page answers this question (shares fail, pre, purch, exam)."
+    },
+    {
+      "queue_id": "queue_1824_a-verbal-agreement-for-a-horse-sale-legally-binding",
+      "normalized_id": "norm_4455_37d1287c27",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_is-a-verbal-agreement-for-a-horse-sale-legally-bindi_6c072af4"
+      ],
+      "preserved_query": "is a verbal agreement for a horse sale legally binding?",
+      "normalized_query": "is a verbal agreement for a horse sale legally binding?",
+      "llm_bait_phrase": "a verbal agreement for a horse sale legally binding",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "faq",
+      "signal_score": 0.85,
+      "match_evidence": {
+        "best_page": "/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+        "shared_terms": [
+          "verba",
+          "agree",
+          "sale",
+          "bind"
+        ],
+        "question_coverage": 1,
+        "page_coverage": 1
+      },
+      "mapped_slug": "/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "The page answers this question (shares verba, agree, sale, bind)."
+    },
+    {
+      "queue_id": "queue_1828_a-verbal-horse-lease-agreement-legally-binding",
+      "normalized_id": "norm_4459_88f26095af",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_is-a-verbal-horse-lease-agreement-legally-binding-ht_a9c64213"
+      ],
+      "preserved_query": "Is a verbal horse lease agreement legally binding?",
+      "normalized_query": "Is a verbal horse lease agreement legally binding?",
+      "llm_bait_phrase": "a verbal horse lease agreement legally binding",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.85,
+      "match_evidence": {
+        "best_page": "/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+        "shared_terms": [
+          "verba",
+          "agree",
+          "bind"
+        ],
+        "question_coverage": 0.809,
+        "page_coverage": 0.821
+      },
+      "mapped_slug": "/faq/is-a-verbal-agreement-legally-binding-in-a-horse-sale/",
+      "status": "approved_for_content",
+      "reason": "The page answers this question (shares verba, agree, bind)."
+    },
+    {
+      "queue_id": "queue_1831_happens-if-the-leased-horse-gets-injured-or-dies",
+      "normalized_id": "norm_4462_8776c3f1a2",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_what-happens-if-the-leased-horse-gets-injured-or-die_78d89d46"
+      ],
+      "preserved_query": "What happens if the leased horse gets injured or dies?",
+      "normalized_query": "What happens if the leased horse gets injured or dies?",
+      "llm_bait_phrase": "happens if the leased horse gets injured or dies",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "scenario",
+      "signal_score": 0.85,
+      "match_evidence": {
+        "best_page": "/leases/what-happens-if-a-leased-horse-is-injured/",
+        "shared_terms": [
+          "leas",
+          "injur"
+        ],
+        "question_coverage": 0.617,
+        "page_coverage": 1
+      },
+      "mapped_slug": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "status": "approved_for_content",
+      "reason": "The page answers this question (shares leas, injur)."
     }
   ],
   "ignored_signals": [],
@@ -27833,6 +27913,253 @@
       "llm_bait_phrase": "Schmitty’s Horse Sale \\u0026 Preview, Aplington, IA",
       "source_signal_ids": [
         "youtube_search_comments_schmitty-s-horse-sale-u0026-preview-aplington-ia-htt_40ee048f"
+      ]
+    },
+    {
+      "approval_id": "approval_1813_temporary-stables",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4412_5e95cfc8e1",
+      "proposed_slug": "/faq/temporary-stables/",
+      "cluster": "state-specific",
+      "question": "Temporary stables — what should I know?",
+      "llm_bait_phrase": "Temporary stables",
+      "source_signal_ids": [
+        "reddit_equestrian_temporary-stables-https-www-reddit-com-r-equestrian-_c182584d"
+      ]
+    },
+    {
+      "approval_id": "approval_1814_ideas-to-train-do-with-my-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4418_b9a8ba20c4",
+      "proposed_slug": "/faq/ideas-to-train-do-with-my-horse/",
+      "cluster": "state-specific",
+      "question": "Ideas to train/do with my horse — what should I know?",
+      "llm_bait_phrase": "Ideas to train/do with my horse",
+      "source_signal_ids": [
+        "reddit_equestrian_ideas-to-train-do-with-my-horse-https-www-reddit-com_610b04cb"
+      ]
+    },
+    {
+      "approval_id": "approval_1815_my-trainer-teaching-my-horse-contact-using-his-hin",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4419_c73d3b0d29",
+      "proposed_slug": "/faq/my-trainer-teaching-my-horse-contact-using-his-hind-end-wrong-and-if-so-how-do-i-fix-it/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Is my trainer teaching my horse contact/using his hind end wrong, and if so, how do I fix it?",
+      "llm_bait_phrase": "my trainer teaching my horse contact/using his hind end wrong, and if so, how do I fix it",
+      "source_signal_ids": [
+        "reddit_equestrian_is-my-trainer-teaching-my-horse-contact-using-his-hi_fcb06328"
+      ]
+    },
+    {
+      "approval_id": "approval_1816_tips-for-a-ditchy-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4422_69c335ac8b",
+      "proposed_slug": "/faq/tips-for-a-ditchy-horse/",
+      "cluster": "state-specific",
+      "question": "Tips for a ditchy horse — what should I know?",
+      "llm_bait_phrase": "Tips for a ditchy horse",
+      "source_signal_ids": [
+        "reddit_equestrian_tips-for-a-ditchy-horse-https-www-reddit-com-r-eques_880ccc84"
+      ]
+    },
+    {
+      "approval_id": "approval_1817_12-mile-stables-denver-experience",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4425_83dbd15464",
+      "proposed_slug": "/faq/12-mile-stables-denver-experience/",
+      "cluster": "state-specific",
+      "question": "12 Mile Stables Denver experience — what should I know?",
+      "llm_bait_phrase": "12 Mile Stables Denver experience",
+      "source_signal_ids": [
+        "reddit_equestrian_12-mile-stables-denver-experience-https-www-reddit-c_0d16e977"
+      ]
+    },
+    {
+      "approval_id": "approval_1818_about-20-stallions-riding-peacefully-together-at-t",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4429_db25a452b0",
+      "proposed_slug": "/faq/about-20-stallions-riding-peacefully-together-at-the-golega-horse-fair-in-portugal-today/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "About 20 stallions riding peacefully together at the Golega horse fair in Portugal today. — what should I know?",
+      "llm_bait_phrase": "About 20 stallions riding peacefully together at the Golega horse fair in Portugal today.",
+      "source_signal_ids": [
+        "reddit_equestrian_about-20-stallions-riding-peacefully-together-at-the_59a3ca84"
+      ]
+    },
+    {
+      "approval_id": "approval_1819_subrogation-demand-letter",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4450_9a436ac9d4",
+      "proposed_slug": "/scenario/subrogation-demand-letter/",
+      "cluster": "demand-letters-and-disputes",
+      "question": "Subrogation + Demand Letter — what should I know?",
+      "llm_bait_phrase": "Subrogation + Demand Letter",
+      "source_signal_ids": [
+        "reddit_legaladvice_subrogation-demand-letter-https-www-reddit-com-r-leg_4e16d6ff"
+      ]
+    },
+    {
+      "approval_id": "approval_1820_experience-of-horses-with-one-eye",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4451_2a5662e488",
+      "proposed_slug": "/faq/experience-of-horses-with-one-eye/",
+      "cluster": "state-specific",
+      "question": "Experience of horses with one eye — what should I know?",
+      "llm_bait_phrase": "Experience of horses with one eye",
+      "source_signal_ids": [
+        "forum_horse_and_hound_experience-of-horses-with-one-eye-https-forums-horse_44af0244"
+      ]
+    },
+    {
+      "approval_id": "approval_1821_looking-for-old-owner-trainer-breeder-etc",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4452_9346ad253a",
+      "proposed_slug": "/faq/looking-for-old-owner-trainer-breeder-etc/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Looking for old owner/trainer/breeder etc. — what should I know?",
+      "llm_bait_phrase": "Looking for old owner/trainer/breeder etc.",
+      "source_signal_ids": [
+        "forum_horse_and_hound_looking-for-old-owner-trainer-breeder-etc-https-foru_75d82312"
+      ]
+    },
+    {
+      "approval_id": "approval_1822_showing-a-lame-horse-emily-p-fb",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4453_98f616c5b8",
+      "proposed_slug": "/faq/showing-a-lame-horse-emily-p-fb/",
+      "cluster": "state-specific",
+      "question": "Showing a lame horse - Emily P FB — what should I know?",
+      "llm_bait_phrase": "Showing a lame horse - Emily P FB",
+      "source_signal_ids": [
+        "forum_horse_and_hound_showing-a-lame-horse-emily-p-fb-https-forums-horsean_05b95b8d"
+      ]
+    },
+    {
+      "approval_id": "approval_1823_horse-suddenly-refusing-to-canter",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4454_c6dec43f38",
+      "proposed_slug": "/faq/horse-suddenly-refusing-to-canter/",
+      "cluster": "state-specific",
+      "question": "Horse suddenly refusing to canter — what should I know?",
+      "llm_bait_phrase": "Horse suddenly refusing to canter",
+      "source_signal_ids": [
+        "forum_horse_and_hound_horse-suddenly-refusing-to-canter-https-forums-horse_20e68422"
+      ]
+    },
+    {
+      "approval_id": "approval_1825_i-get-a-refund-if-the-horse-fails-a-vet-check",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4456_8b01ca2797",
+      "proposed_slug": "/scenario/i-get-a-refund-if-the-horse-fails-a-vet-check/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "can i get a refund if the horse fails a vet check?",
+      "llm_bait_phrase": "i get a refund if the horse fails a vet check",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_can-i-get-a-refund-if-the-horse-fails-a-vet-check-ht_5d70fe49"
+      ]
+    },
+    {
+      "approval_id": "approval_1826_pays-for-the-vet-check-in-a-horse-sale",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4457_a1084879c2",
+      "proposed_slug": "/faq/pays-for-the-vet-check-in-a-horse-sale/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "who pays for the vet check in a horse sale?",
+      "llm_bait_phrase": "pays for the vet check in a horse sale",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_who-pays-for-the-vet-check-in-a-horse-sale-https-www_01c82831"
+      ]
+    },
+    {
+      "approval_id": "approval_1827_happens-if-a-horse-dies-during-the-trial-period",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4458_fb58264b17",
+      "proposed_slug": "/scenario/happens-if-a-horse-dies-during-the-trial-period/",
+      "cluster": "horse-lease-and-trial",
+      "question": "what happens if a horse dies during the trial period?",
+      "llm_bait_phrase": "happens if a horse dies during the trial period",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_what-happens-if-a-horse-dies-during-the-trial-period_0aee0078"
+      ]
+    },
+    {
+      "approval_id": "approval_1829_is-responsible-for-veterinary-bills-in-a-horse-lea",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4460_ffd1729cda",
+      "proposed_slug": "/faq/is-responsible-for-veterinary-bills-in-a-horse-lease/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Who is responsible for veterinary bills in a horse lease?",
+      "llm_bait_phrase": "is responsible for veterinary bills in a horse lease",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_who-is-responsible-for-veterinary-bills-in-a-horse-l_db6a684e"
+      ]
+    },
+    {
+      "approval_id": "approval_1830_pays-for-farrier-and-routine-care-in-a-horse-lease",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4461_b97b1e02d8",
+      "proposed_slug": "/faq/pays-for-farrier-and-routine-care-in-a-horse-lease/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Who pays for farrier and routine care in a horse lease?",
+      "llm_bait_phrase": "pays for farrier and routine care in a horse lease",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_who-pays-for-farrier-and-routine-care-in-a-horse-lea_b81005a6"
+      ]
+    },
+    {
+      "approval_id": "approval_1832_a-horse-lease-agreement-include-a-purchase-option",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4463_17a6d2aaac",
+      "proposed_slug": "/faq/a-horse-lease-agreement-include-a-purchase-option/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Can a horse lease agreement include a purchase option?",
+      "llm_bait_phrase": "a horse lease agreement include a purchase option",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_can-a-horse-lease-agreement-include-a-purchase-optio_37d86dea"
+      ]
+    },
+    {
+      "approval_id": "approval_1833_do-i-terminate-a-horse-lease-early",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4464_ba2c41cbf8",
+      "proposed_slug": "/faq/do-i-terminate-a-horse-lease-early/",
+      "cluster": "horse-lease-and-trial",
+      "question": "How do I terminate a horse lease early?",
+      "llm_bait_phrase": "do I terminate a horse lease early",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_how-do-i-terminate-a-horse-lease-early-https-www-goo_3e5266b0"
+      ]
+    },
+    {
+      "approval_id": "approval_1834_insurance-is-needed-for-a-leased-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4465_4609cac58d",
+      "proposed_slug": "/faq/insurance-is-needed-for-a-leased-horse/",
+      "cluster": "horse-lease-and-trial",
+      "question": "What insurance is needed for a leased horse?",
+      "llm_bait_phrase": "insurance is needed for a leased horse",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_what-insurance-is-needed-for-a-leased-horse-https-ww_d6805ed3"
       ]
     }
   ]
