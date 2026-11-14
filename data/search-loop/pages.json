@@ -1095,6 +1095,112 @@
       "gate_notes": [
         "b5 FAQ answer is 39 words (aim 40-60): \"Who pays for veterinary care during a lease-to-own\""
       ]
+    },
+    {
+      "slug": "contract-for-buying-a-horse-template",
+      "query": "contract for buying a horse template",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/contract-for-buying-a-horse-template/index.html",
+      "route": "/questions/contract-for-buying-a-horse-template/",
+      "url": "https://horselegalguide.com/questions/contract-for-buying-a-horse-template/",
+      "published_at": null,
+      "queued_at": "2026-11-14",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/contract-for-buying-a-horse-template/index.html",
+      "hash": "767411b9a8aca1ef1bf1448b1a88fb0407d02c6daf56c68a8d3cc2f5670ba1a8",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://www.loc.gov/"
+      ],
+      "linked_from": [],
+      "checks": {}
+    },
+    {
+      "slug": "contract-for-buying-a-horse-checklist",
+      "query": "contract for buying a horse checklist",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/contract-for-buying-a-horse-checklist/index.html",
+      "route": "/questions/contract-for-buying-a-horse-checklist/",
+      "url": "https://horselegalguide.com/questions/contract-for-buying-a-horse-checklist/",
+      "published_at": null,
+      "queued_at": "2026-11-14",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/contract-for-buying-a-horse-checklist/index.html",
+      "hash": "9baf9f7655c8904669ea0af406bc8376d2d3414f10b277ab5de1bbf787175fd7",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc/2",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b4 direct answer under the H1 is 38 words (aim 40-60)",
+        "b5 FAQ answer is 37 words (aim 40-60): \"Does state law affect horse sale contracts?\""
+      ]
+    },
+    {
+      "slug": "free-contracts-for-selling-a-horse",
+      "query": "free contracts for selling a horse",
+      "lane": "striking",
+      "score": 20,
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/free-contracts-for-selling-a-horse/index.html",
+      "route": "/questions/free-contracts-for-selling-a-horse/",
+      "url": "https://horselegalguide.com/questions/free-contracts-for-selling-a-horse/",
+      "published_at": null,
+      "queued_at": "2026-11-14",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/free-contracts-for-selling-a-horse/index.html",
+      "hash": "58066bf59315236415684ac1225e947bba6efb50aff4794c787e9a2217cf3371",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/wex/uniform_commercial_code",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {}
     }
   ],
   "dropped": [
@@ -1474,6 +1580,32 @@
       "at": "2026-11-13",
       "reason": [
         "same intent as https://horselegalguide.com/faq/do-i-need-a-contract-to-sell-a-horse/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "contract for buying a horse online",
+      "at": "2026-11-14",
+      "gate": 2,
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "lease to own horse contract tips",
+      "at": "2026-11-14",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 26 words (aim 40-60): \"Are lease-to-own contracts regulated by state law?\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
+      ]
+    },
+    {
+      "query": "horse buy back contract",
+      "at": "2026-11-14",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 29 words (aim 40-60): \"Are all horse buy back clauses legally enforceable\"",
+        "b5 FAQ answer is 25 words (aim 40-60): \"Can a buy back clause last for the horse's entire \""
       ]
     }
   ],
