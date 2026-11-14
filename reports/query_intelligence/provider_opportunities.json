@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-11-14T13:30:30.000Z",
+  "generated_at": "2026-11-14T15:20:34.000Z",
   "provider_status": {
     "gsc": "ok",
     "bing": "ok",
@@ -9,9 +9,9 @@
   "summary": {
     "opportunities": 131,
     "new_candidates": 115,
-    "improve_existing": 6,
+    "improve_existing": 5,
     "differentiate_existing": 8,
-    "cannibalization_review": 2,
+    "cannibalization_review": 3,
     "active_query_failures": 0
   },
   "policy": "Provider and grounded-search data may create recommendations, pending candidates, and finished owner-review repairs only. They may not approve, publish, or mutate live legal pages.",
@@ -31,7 +31,7 @@
       "metrics": {
         "clicks": 0,
         "impressions": 70,
-        "average_position": 63.89
+        "average_position": 64.09
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
@@ -88,24 +88,26 @@
     {
       "opportunity_id": "provider-opportunity-0019",
       "query": "horse sale contract",
-      "type": "new_candidate",
+      "type": "cannibalization_review",
       "target_page": "/hubs/horse-sale-and-purchase/",
       "provider_pages": [
-        "/hubs/horse-sale-and-purchase/"
+        "/hubs/horse-sale-and-purchase/",
+        "/questions/horse-sale-contract-with-payments/"
       ],
       "providers": [
         "gsc"
       ],
       "metrics": {
         "clicks": 0,
-        "impressions": 20,
-        "average_position": 57.4
+        "impressions": 26,
+        "average_position": 46.65
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
       "coverage_match_score": 0.333,
-      "confidence": 0.553,
+      "confidence": 0.559,
       "reasons": [
+        "provider_query_maps_to_multiple_pages",
         "impressions_without_clicks",
         "ranking_opportunity"
       ],
@@ -165,13 +167,13 @@
       ],
       "metrics": {
         "clicks": 0,
-        "impressions": 8,
-        "average_position": 79.25
+        "impressions": 10,
+        "average_position": 76
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
       "coverage_match_score": 0.4,
-      "confidence": 0.558,
+      "confidence": 0.56,
       "reasons": [
         "ranking_opportunity"
       ],
@@ -304,6 +306,39 @@
         "clicks": 0,
         "impressions": 6,
         "average_position": 60.33
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.333,
+      "confidence": 0.539,
+      "reasons": [
+        "ranking_opportunity"
+      ],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0020",
+      "query": "horse sale contract lawyer",
+      "type": "new_candidate",
+      "target_page": "/hubs/horse-sale-and-purchase/",
+      "provider_pages": [
+        "/hubs/horse-sale-and-purchase/"
+      ],
+      "providers": [
+        "gsc"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 6,
+        "average_position": 73.67
       },
       "active_query_evidence": null,
       "grounded_competitors": [],
@@ -876,7 +911,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0101",
+      "opportunity_id": "provider-opportunity-0100",
       "query": "equine assisted therapy specific business",
       "type": "new_candidate",
       "target_page": "",
@@ -905,7 +940,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0099",
+      "opportunity_id": "provider-opportunity-0101",
       "query": "can a barn sell a horse after two months of non payment",
       "type": "new_candidate",
       "target_page": "",
@@ -934,7 +969,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0077",
+      "opportunity_id": "provider-opportunity-0078",
       "query": "how often does a horse get sued",
       "type": "new_candidate",
       "target_page": "",
@@ -1025,7 +1060,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0068",
+      "opportunity_id": "provider-opportunity-0066",
       "query": "is leasing a horse for a trial period normal to purchase",
       "type": "new_candidate",
       "target_page": "",
@@ -1054,7 +1089,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0066",
+      "opportunity_id": "provider-opportunity-0067",
       "query": "intellectual property rights of a horse barn",
       "type": "new_candidate",
       "target_page": "",
@@ -1112,7 +1147,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0063",
+      "opportunity_id": "provider-opportunity-0064",
       "query": "can horses be kept if boarder does not pay",
       "type": "new_candidate",
       "target_page": "",
@@ -1130,39 +1165,6 @@
       "coverage_match_score": 0.333,
       "confidence": 0.535,
       "reasons": [],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0020",
-      "query": "horse sale contract lawyer",
-      "type": "new_candidate",
-      "target_page": "/hubs/horse-sale-and-purchase/",
-      "provider_pages": [
-        "/hubs/horse-sale-and-purchase/"
-      ],
-      "providers": [
-        "gsc"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 2,
-        "average_position": 62
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.333,
-      "confidence": 0.535,
-      "reasons": [
-        "ranking_opportunity"
-      ],
       "status": "pending_owner_review",
       "automatic_actions_completed": [
         "measurement",
@@ -1207,7 +1209,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0076",
+      "opportunity_id": "provider-opportunity-0077",
       "query": "i've had a horse boarded at my place for 7 months.  he has not paid.  what should i do?",
       "type": "new_candidate",
       "target_page": "",
@@ -1265,7 +1267,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0064",
+      "opportunity_id": "provider-opportunity-0063",
       "query": "outright purchase horse meaning",
       "type": "new_candidate",
       "target_page": "",
@@ -1517,7 +1519,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0067",
+      "opportunity_id": "provider-opportunity-0068",
       "query": "if im leasing a horse property that has been willed to 3 different owners at equal shares, and one wants us gone but the other 2 want me to continue a new lease in nc what should i do?",
       "type": "new_candidate",
       "target_page": "",
@@ -1546,7 +1548,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0078",
+      "opportunity_id": "provider-opportunity-0076",
       "query": "law for horse boarding and breeding facilties to collect debt owed there was verbal agreement to pay monthly but they are missing payments now",
       "type": "new_candidate",
       "target_page": "",
@@ -1699,7 +1701,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0100",
+      "opportunity_id": "provider-opportunity-0099",
       "query": "hipaa therapy horses",
       "type": "new_candidate",
       "target_page": "",
@@ -1854,7 +1856,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0058",
+      "opportunity_id": "provider-opportunity-0057",
       "query": "who pays vet bills under a horse lease racing victoria",
       "type": "differentiate_existing",
       "target_page": "/leases/who-pays-vet-bills-in-a-horse-lease/",
@@ -1886,7 +1888,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0120",
+      "opportunity_id": "provider-opportunity-0103",
       "query": "what does a blanket clause in a horse lease be",
       "type": "improve_existing",
       "target_page": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
@@ -1949,7 +1951,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0046",
+      "opportunity_id": "provider-opportunity-0048",
       "query": "when should a horse lease be made effective? shipping date?",
       "type": "improve_existing",
       "target_page": "/scenario/what-should-be-documented-when-a-lease-horse-is-injured/",
@@ -1980,7 +1982,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0057",
+      "opportunity_id": "provider-opportunity-0056",
       "query": "who pays vet bills under a racehorse lease racing victoria",
       "type": "differentiate_existing",
       "target_page": "/leases/who-pays-vet-bills-in-a-horse-lease/",
@@ -2012,38 +2014,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0127",
-      "query": "what should a bill of sale include to protect the buyer of a horse",
-      "type": "improve_existing",
-      "target_page": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
-      "provider_pages": [],
-      "providers": [
-        "bing"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 1,
-        "average_position": 3
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.583,
-      "confidence": 0.597,
-      "reasons": [
-        "query_matches_existing_coverage"
-      ],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0053",
+      "opportunity_id": "provider-opportunity-0059",
       "query": "equine activity liability act",
       "type": "differentiate_existing",
       "target_page": "/liability/what-is-the-equine-activity-liability-act/",
@@ -2075,7 +2046,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0071",
+      "opportunity_id": "provider-opportunity-0074",
       "query": "what do i need to do to make my property a boarding barn in suffolk va",
       "type": "improve_existing",
       "target_page": "/boarding/what-legal-documents-do-i-need-to-run-a-boarding-barn/",
@@ -2106,7 +2077,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0102",
+      "opportunity_id": "provider-opportunity-0104",
       "query": "am i liable if someone else rides my horse",
       "type": "new_candidate",
       "target_page": "",
@@ -2135,7 +2106,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0085",
+      "opportunity_id": "provider-opportunity-0088",
       "query": "can a boarding kennel claim ownership and sell  a pet for unpaid services",
       "type": "new_candidate",
       "target_page": "",
@@ -2164,7 +2135,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0121",
+      "opportunity_id": "provider-opportunity-0105",
       "query": "is a horse a trademark",
       "type": "new_candidate",
       "target_page": "",
@@ -2193,7 +2164,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0096",
+      "opportunity_id": "provider-opportunity-0091",
       "query": "what does ny require in an equine bill of sale",
       "type": "new_candidate",
       "target_page": "",
@@ -2222,7 +2193,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0052",
+      "opportunity_id": "provider-opportunity-0058",
       "query": "what happens if a horse is left at a boarding facility without payment",
       "type": "new_candidate",
       "target_page": "",
@@ -2251,7 +2222,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0091",
+      "opportunity_id": "provider-opportunity-0092",
       "query": "do you need an indemnification clause on a horse oease gareement",
       "type": "new_candidate",
       "target_page": "",
@@ -2280,7 +2251,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0115",
+      "opportunity_id": "provider-opportunity-0106",
       "query": "how to take a horse due to a boarding bill apha",
       "type": "new_candidate",
       "target_page": "",
@@ -2309,7 +2280,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0059",
+      "opportunity_id": "provider-opportunity-0052",
       "query": "does ownership hsve to be proven before a sale of a horse in your possession",
       "type": "new_candidate",
       "target_page": "",
@@ -2338,7 +2309,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0108",
+      "opportunity_id": "provider-opportunity-0107",
       "query": "how does the equine retail business work",
       "type": "new_candidate",
       "target_page": "",
@@ -2425,7 +2396,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0110",
+      "opportunity_id": "provider-opportunity-0116",
       "query": "lefally what do you do about someone not paying board on their horse",
       "type": "new_candidate",
       "target_page": "",
@@ -2483,7 +2454,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0109",
+      "opportunity_id": "provider-opportunity-0115",
       "query": "person dosentnpay thier  horse board what repercutuins do i have",
       "type": "new_candidate",
       "target_page": "",
@@ -2512,7 +2483,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0114",
+      "opportunity_id": "provider-opportunity-0108",
       "query": "what information should you pass on about your lease horse that is just nice for them to know?",
       "type": "new_candidate",
       "target_page": "",
@@ -2541,36 +2512,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0128",
-      "query": "can a barn owner sell a horse due to nonpayment of board in ohio",
-      "type": "new_candidate",
-      "target_page": "",
-      "provider_pages": [],
-      "providers": [
-        "bing"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 1,
-        "average_position": 4
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.385,
-      "confidence": 0.547,
-      "reasons": [],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0088",
+      "opportunity_id": "provider-opportunity-0083",
       "query": "what would count as an exception to needing a horse lease in writing",
       "type": "new_candidate",
       "target_page": "",
@@ -2599,7 +2541,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0072",
+      "opportunity_id": "provider-opportunity-0075",
       "query": "in barn lease vs part board",
       "type": "new_candidate",
       "target_page": "",
@@ -2628,7 +2570,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0118",
+      "opportunity_id": "provider-opportunity-0119",
       "query": "intellectual property in the horse world example",
       "type": "new_candidate",
       "target_page": "",
@@ -2645,6 +2587,35 @@
       "grounded_competitors": [],
       "coverage_match_score": 0.375,
       "confidence": 0.545,
+      "reasons": [],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0129",
+      "query": "can you buy a horse and place them under and llc later",
+      "type": "new_candidate",
+      "target_page": "",
+      "provider_pages": [],
+      "providers": [
+        "bing"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 1,
+        "average_position": 9
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.364,
+      "confidence": 0.542,
       "reasons": [],
       "status": "pending_owner_review",
       "automatic_actions_completed": [
@@ -2686,7 +2657,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0119",
+      "opportunity_id": "provider-opportunity-0102",
       "query": "purchased a horse that cannot be ridden what is my remedy with the seller",
       "type": "new_candidate",
       "target_page": "",
@@ -2715,7 +2686,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0126",
+      "opportunity_id": "provider-opportunity-0123",
       "query": "• under no circumstances will the horse be released if the payment is delayed",
       "type": "new_candidate",
       "target_page": "",
@@ -2744,7 +2715,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0097",
+      "opportunity_id": "provider-opportunity-0090",
       "query": "do you have horse purcase agreement",
       "type": "new_candidate",
       "target_page": "",
@@ -2773,7 +2744,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0103",
+      "opportunity_id": "provider-opportunity-0113",
       "query": "kentucky law regarding horse purchase agreement",
       "type": "new_candidate",
       "target_page": "",
@@ -2802,7 +2773,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0123",
+      "opportunity_id": "provider-opportunity-0127",
       "query": "legalities of returning a horse",
       "type": "new_candidate",
       "target_page": "",
@@ -2831,7 +2802,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0105",
+      "opportunity_id": "provider-opportunity-0112",
       "query": "person dosentnpay thier horse board what repercutuins do i have to go",
       "type": "new_candidate",
       "target_page": "",
@@ -2889,7 +2860,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0093",
+      "opportunity_id": "provider-opportunity-0096",
       "query": "what do i do in pennsylvania a horse has not been paid board on for 3 months on my property",
       "type": "new_candidate",
       "target_page": "",
@@ -2918,7 +2889,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0113",
+      "opportunity_id": "provider-opportunity-0121",
       "query": "what to do if someone does not pay for  there horse being stabled",
       "type": "new_candidate",
       "target_page": "",
@@ -2947,7 +2918,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0047",
+      "opportunity_id": "provider-opportunity-0049",
       "query": "can you sue a horse dealer for selling bad horse and then exchanging for another bad horse?",
       "type": "new_candidate",
       "target_page": "",
@@ -2976,7 +2947,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0048",
+      "opportunity_id": "provider-opportunity-0046",
       "query": "equine lease agreement elements horse identification expenses insurance use termination",
       "type": "new_candidate",
       "target_page": "",
@@ -3034,7 +3005,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0106",
+      "opportunity_id": "provider-opportunity-0114",
       "query": "person dosentnpay in bc thier horse board what repercutuins do i have to go",
       "type": "new_candidate",
       "target_page": "",
@@ -3063,7 +3034,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0117",
+      "opportunity_id": "provider-opportunity-0120",
       "query": "buying a horse in texas, if the horse comes up lame when we recieve it",
       "type": "new_candidate",
       "target_page": "",
@@ -3092,36 +3063,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0130",
-      "query": "can a boarding facility keep me froom my horses if i owe them money",
-      "type": "new_candidate",
-      "target_page": "",
-      "provider_pages": [],
-      "providers": [
-        "bing"
-      ],
-      "metrics": {
-        "clicks": 0,
-        "impressions": 1,
-        "average_position": 6
-      },
-      "active_query_evidence": null,
-      "grounded_competitors": [],
-      "coverage_match_score": 0.286,
-      "confidence": 0.522,
-      "reasons": [],
-      "status": "pending_owner_review",
-      "automatic_actions_completed": [
-        "measurement",
-        "classification",
-        "competitor_observation"
-      ],
-      "automatic_approval": false,
-      "automatic_publication": false,
-      "live_page_change_authorized": false
-    },
-    {
-      "opportunity_id": "provider-opportunity-0049",
+      "opportunity_id": "provider-opportunity-0047",
       "query": "horse care products partnership agreement key points",
       "type": "new_candidate",
       "target_page": "",
@@ -3179,7 +3121,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0075",
+      "opportunity_id": "provider-opportunity-0072",
       "query": "horse board in bc when is notice due date for payment",
       "type": "new_candidate",
       "target_page": "",
@@ -3208,7 +3150,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0094",
+      "opportunity_id": "provider-opportunity-0097",
       "query": "if a horse is boarded at your farm and the owner no longer pays its monthy board payment at what point is that abandonment",
       "type": "new_candidate",
       "target_page": "",
@@ -3237,7 +3179,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0111",
+      "opportunity_id": "provider-opportunity-0117",
       "query": "who keeps the barn if it’s added on lease property",
       "type": "new_candidate",
       "target_page": "",
@@ -3266,7 +3208,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0092",
+      "opportunity_id": "provider-opportunity-0093",
       "query": "if a client does not pay me for boarding his horese wat can i do ?",
       "type": "new_candidate",
       "target_page": "",
@@ -3295,7 +3237,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0107",
+      "opportunity_id": "provider-opportunity-0110",
       "query": "if i tell someone if they plan to sell a horse in the future im happy to buy them back and they say ok a verbal contractr",
       "type": "new_candidate",
       "target_page": "",
@@ -3312,6 +3254,35 @@
       "grounded_competitors": [],
       "coverage_match_score": 0.261,
       "confidence": 0.516,
+      "reasons": [],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0124",
+      "query": "does an owner leasing a horse absolve the owner from liability when the horse is under the lessee's custody and control in pennsylvania",
+      "type": "new_candidate",
+      "target_page": "",
+      "provider_pages": [],
+      "providers": [
+        "bing"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 1,
+        "average_position": 2
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.25,
+      "confidence": 0.513,
       "reasons": [],
       "status": "pending_owner_review",
       "automatic_actions_completed": [
@@ -3411,7 +3382,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0089",
+      "opportunity_id": "provider-opportunity-0094",
       "query": "what do i do if a horse is boarded at my facility in the state of massachusetts and the owner hasn’t paid board in 30 days",
       "type": "new_candidate",
       "target_page": "",
@@ -3440,7 +3411,36 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0042",
+      "opportunity_id": "provider-opportunity-0126",
+      "query": "does an the lessor of a horse absolve the owner from liability when the horse is under the lessee's custody and control in pennsylvania",
+      "type": "new_candidate",
+      "target_page": "",
+      "provider_pages": [],
+      "providers": [
+        "bing"
+      ],
+      "metrics": {
+        "clicks": 0,
+        "impressions": 1,
+        "average_position": 8
+      },
+      "active_query_evidence": null,
+      "grounded_competitors": [],
+      "coverage_match_score": 0.238,
+      "confidence": 0.511,
+      "reasons": [],
+      "status": "pending_owner_review",
+      "automatic_actions_completed": [
+        "measurement",
+        "classification",
+        "competitor_observation"
+      ],
+      "automatic_approval": false,
+      "automatic_publication": false,
+      "live_page_change_authorized": false
+    },
+    {
+      "opportunity_id": "provider-opportunity-0041",
       "query": "factual situations a barn owner or manager might encounter that might have legal consequences.",
       "type": "new_candidate",
       "target_page": "",
@@ -3469,7 +3469,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0087",
+      "opportunity_id": "provider-opportunity-0082",
       "query": "i bought a horse two weeks ago, the owners said they would be there to help me if i stayed at the same barn",
       "type": "new_candidate",
       "target_page": "",
@@ -3498,7 +3498,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0129",
+      "opportunity_id": "provider-opportunity-0130",
       "query": "equine law englisch",
       "type": "new_candidate",
       "target_page": "",
@@ -3527,7 +3527,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0056",
+      "opportunity_id": "provider-opportunity-0053",
       "query": "equine law wise",
       "type": "new_candidate",
       "target_page": "",
@@ -3556,7 +3556,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0086",
+      "opportunity_id": "provider-opportunity-0085",
       "query": "horse legal",
       "type": "new_candidate",
       "target_page": "",
@@ -3585,7 +3585,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0131",
+      "opportunity_id": "provider-opportunity-0128",
       "query": "horse legal advice",
       "type": "new_candidate",
       "target_page": "",
@@ -3616,7 +3616,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0112",
+      "opportunity_id": "provider-opportunity-0118",
       "query": "horse legal solutions",
       "type": "new_candidate",
       "target_page": "",
@@ -3645,7 +3645,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0124",
+      "opportunity_id": "provider-opportunity-0131",
       "query": "spell legal horse concern",
       "type": "new_candidate",
       "target_page": "",
@@ -3674,7 +3674,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0116",
+      "opportunity_id": "provider-opportunity-0109",
       "query": "can an owner of a horse be liable for injuries caused by the horse who is lent to an independent horse training school and who ahs no monetary connection withhtat school?",
       "type": "new_candidate",
       "target_page": "",
@@ -3703,7 +3703,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0083",
+      "opportunity_id": "provider-opportunity-0086",
       "query": "sold horses, reposscrssing due to non payment.. can i be charged board fir time they had?",
       "type": "new_candidate",
       "target_page": "",
@@ -3732,7 +3732,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0082",
+      "opportunity_id": "provider-opportunity-0081",
       "query": "if a horse sold for over 10k is sold without a bill of sale and person has owned for 30 days and decides they want a refund can they take a legal course of action",
       "type": "new_candidate",
       "target_page": "",
@@ -3761,7 +3761,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0074",
+      "opportunity_id": "provider-opportunity-0071",
       "query": "los angeles animal shelter horse owner not paying for boarding gonna be taken away form pdf california",
       "type": "new_candidate",
       "target_page": "",
@@ -3790,7 +3790,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0081",
+      "opportunity_id": "provider-opportunity-0084",
       "query": "are horse brands trademarked",
       "type": "new_candidate",
       "target_page": "",
@@ -3819,7 +3819,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0084",
+      "opportunity_id": "provider-opportunity-0087",
       "query": "when leasing a horse and the barn staff are respon sible for the lease aggreement as a 3rd party, or agent, and don't own the horse, is it standard to include a lease fee as a percent of lease price the lease price",
       "type": "new_candidate",
       "target_page": "",
@@ -3877,7 +3877,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0104",
+      "opportunity_id": "provider-opportunity-0111",
       "query": "kossert horses legal notice",
       "type": "new_candidate",
       "target_page": "",
@@ -3906,7 +3906,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0041",
+      "opportunity_id": "provider-opportunity-0042",
       "query": "provlem with removing field boarder 1 sentence",
       "type": "new_candidate",
       "target_page": "",
@@ -3964,7 +3964,7 @@
       "live_page_change_authorized": false
     },
     {
-      "opportunity_id": "provider-opportunity-0090",
+      "opportunity_id": "provider-opportunity-0089",
       "query": "equest law",
       "type": "new_candidate",
       "target_page": "",
