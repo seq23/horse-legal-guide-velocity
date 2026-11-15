@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-10-15..2026-11-11",
-  "gsc_collected_at": "2026-11-14T15:18:32.642Z",
+  "gsc_window": "2026-10-16..2026-11-12",
+  "gsc_collected_at": "2026-11-15T15:18:09.652Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -11,20 +11,20 @@
     "pending_max_days": 7
   },
   "family_count": 16,
-  "qualifying_count": 6,
+  "qualifying_count": 7,
   "status_counts": {
-    "strengthened": 2,
+    "strengthened": 3,
     "pending_strengthening": 1,
     "intent_mismatch": 2,
     "no_answer_page": 1,
-    "not_qualified": 10
+    "not_qualified": 9
   },
   "top_families": [
     {
       "rank": 1,
       "family": "horse sale contract @ /hubs/horse-sale-and-purchase/",
-      "impressions": 91,
-      "weighted_position": 62,
+      "impressions": 96,
+      "weighted_position": 62.6,
       "status": "strengthened"
     },
     {
@@ -43,17 +43,17 @@
     },
     {
       "rank": 4,
+      "family": "horse lease agreement @ /hubs/horse-lease-and-trial/",
+      "impressions": 6,
+      "weighted_position": 68.7,
+      "status": "strengthened"
+    },
+    {
+      "rank": 5,
       "family": "start an equestrian business @ /hubs/equine-business-formation/",
       "impressions": 4,
       "weighted_position": 32.5,
       "status": "intent_mismatch"
-    },
-    {
-      "rank": 5,
-      "family": "equine law @ /insights/",
-      "impressions": 4,
-      "weighted_position": 97,
-      "status": "not_qualified"
     }
   ],
   "families": [
@@ -64,12 +64,12 @@
       "page": "/hubs/horse-sale-and-purchase/",
       "page_kind": "hub",
       "page_intent": "sale_contract",
-      "impressions": 91,
+      "impressions": 96,
       "clicks": 0,
-      "weighted_position": 62,
+      "weighted_position": 62.6,
       "best_position": 13,
-      "page_impressions": 133,
-      "page_position": 53.1,
+      "page_impressions": 138,
+      "page_position": 53.9,
       "top_query": "horse purchase agreement",
       "query_count": 14,
       "queries": [
@@ -77,13 +77,13 @@
           "query": "horse purchase agreement",
           "impressions": 35,
           "clicks": 0,
-          "position": 64.1
+          "position": 64.5
         },
         {
           "query": "black horse contract purchase",
-          "impressions": 14,
+          "impressions": 15,
           "clicks": 0,
-          "position": 56.7
+          "position": 57.3
         },
         {
           "query": "horse sale contract",
@@ -92,16 +92,22 @@
           "position": 57.4
         },
         {
+          "query": "horse bill of sale",
+          "impressions": 8,
+          "clicks": 0,
+          "position": 75.9
+        },
+        {
           "query": "horse sales agreement",
           "impressions": 6,
           "clicks": 0,
           "position": 52.7
         },
         {
-          "query": "horse bill of sale",
-          "impressions": 5,
+          "query": "horse sale contract lawyer",
+          "impressions": 4,
           "clicks": 0,
-          "position": 76
+          "position": 70.8
         },
         {
           "query": "horse purchase contract",
@@ -120,12 +126,6 @@
           "impressions": 3,
           "clicks": 0,
           "position": 61.3
-        },
-        {
-          "query": "horse sale contract lawyer",
-          "impressions": 3,
-          "clicks": 0,
-          "position": 73.7
         },
         {
           "query": "how do i create a legal contract for horse sale or purchase",
@@ -249,6 +249,50 @@
       "strengthened_on": "2026-10-31"
     },
     {
+      "family": "horse lease agreement @ /hubs/horse-lease-and-trial/",
+      "intent": "lease_agreement",
+      "head_term": "horse lease agreement",
+      "page": "/hubs/horse-lease-and-trial/",
+      "page_kind": "hub",
+      "page_intent": "lease_agreement",
+      "impressions": 6,
+      "clicks": 0,
+      "weighted_position": 68.7,
+      "best_position": 24.5,
+      "page_impressions": 20,
+      "page_position": 31.2,
+      "top_query": "horse lease agreement",
+      "query_count": 3,
+      "queries": [
+        {
+          "query": "horse lease agreement",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 92
+        },
+        {
+          "query": "horse trial agreement",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 24.5
+        },
+        {
+          "query": "equine lease agreement law firm wellington",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 87
+        }
+      ],
+      "rank": 4,
+      "basis": [
+        "top_demand"
+      ],
+      "qualifies": true,
+      "status": "strengthened",
+      "reason": "data/search_intelligence/strengthening.json entry for /hubs/horse-lease-and-trial/, applied at build",
+      "strengthened_on": "2026-10-31"
+    },
+    {
       "family": "start an equestrian business @ /hubs/equine-business-formation/",
       "intent": "business_formation",
       "head_term": "start an equestrian business",
@@ -277,7 +321,7 @@
           "position": 11
         }
       ],
-      "rank": 4,
+      "rank": 5,
       "basis": [
         "top_demand"
       ],
@@ -320,46 +364,11 @@
           "position": 98
         }
       ],
-      "rank": 5,
-      "basis": [],
-      "qualifies": false,
-      "status": "not_qualified",
-      "reason": "weighted position 97 > 95"
-    },
-    {
-      "family": "horse lease agreement @ /hubs/horse-lease-and-trial/",
-      "intent": "lease_agreement",
-      "head_term": "horse lease agreement",
-      "page": "/hubs/horse-lease-and-trial/",
-      "page_kind": "hub",
-      "page_intent": "lease_agreement",
-      "impressions": 3,
-      "clicks": 0,
-      "weighted_position": 45.3,
-      "best_position": 24.5,
-      "page_impressions": 17,
-      "page_position": 20.4,
-      "top_query": "horse trial agreement",
-      "query_count": 2,
-      "queries": [
-        {
-          "query": "horse trial agreement",
-          "impressions": 2,
-          "clicks": 0,
-          "position": 24.5
-        },
-        {
-          "query": "equine lease agreement law firm wellington",
-          "impressions": 1,
-          "clicks": 0,
-          "position": 87
-        }
-      ],
       "rank": 6,
       "basis": [],
       "qualifies": false,
       "status": "not_qualified",
-      "reason": "rank 6 of 16 by impressions; landing page at 20.4 position with 17 page impressions (needs <= 15 with >= 2)"
+      "reason": "rank 6 of 16 by impressions; landing page at 96.2 position with 5 page impressions (needs <= 15 with >= 2)"
     },
     {
       "family": "horse sale contract @ /questions/horse-sale-contract-with-payments/",
@@ -391,7 +400,7 @@
       "qualifies": true,
       "status": "pending_strengthening",
       "qualified_on": "2026-11-14",
-      "reason": "qualified on 2026-11-14 (0 day(s) ago); no data/search_intelligence/strengthening.json entry yet. Allowed for 7 days, then the validator fails."
+      "reason": "qualified on 2026-11-14 (1 day(s) ago); no data/search_intelligence/strengthening.json entry yet. Allowed for 7 days, then the validator fails."
     },
     {
       "family": "start an equestrian business @ /business/partnership-agreement-for-horse-business/",
