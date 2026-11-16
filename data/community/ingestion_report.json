@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-13T14:36:58.325Z",
-  "total_signals": 4466,
+  "generated_at": "2026-11-16T14:47:12.022Z",
+  "total_signals": 4490,
   "signals_by_source": {
-    "reddit_equestrian": 2293,
+    "reddit_equestrian": 2313,
     "reddit_horses": 727,
     "forum_the_horse_forum": 33,
     "forum_chronicle_of_the_horse": 30,
-    "google_paa_manual_or_provider": 108,
+    "google_paa_manual_or_provider": 112,
     "serp_competitor_research": 217,
     "youtube_search_comments": 234,
     "instagram_public_social_framing": 29,
@@ -17,36 +17,36 @@
     "forum_horse_and_hound": 98
   },
   "signals_by_platform": {
-    "reddit": 3688,
+    "reddit": 3708,
     "equestrian_forums": 161,
-    "google_paa": 108,
+    "google_paa": 112,
     "serp_competitors": 217,
     "youtube": 234,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1835,
-  "duplicates_collapsed": 2631,
+  "normalized_count": 1849,
+  "duplicates_collapsed": 2641,
   "pages_created": 0,
-  "pages_strengthened": 278,
+  "pages_strengthened": 280,
   "rejected_signals": 0,
-  "pending_owner_review": 1551,
+  "pending_owner_review": 1563,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 951
+      "count": 957
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 293
+      "count": 294
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 232
+      "count": 235
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 221
+      "count": 225
     },
     {
       "name": "liability-waivers-insurance",
@@ -76,7 +76,7 @@
   "source_mix": [
     {
       "name": "reddit_equestrian",
-      "count": 2293
+      "count": 2313
     },
     {
       "name": "reddit_horses",
@@ -104,7 +104,7 @@
     },
     {
       "name": "google_paa_manual_or_provider",
-      "count": 108
+      "count": 112
     },
     {
       "name": "forum_horse_and_hound",
@@ -144,8 +144,9 @@
     {
       "source_key": "reddit_legaladvice",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -176,8 +177,8 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_with_data",
-      "count": 11
+      "status": "success_empty",
+      "count": 0
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -7942,6 +7943,60 @@
       "mapped_slug": "/leases/what-happens-if-a-leased-horse-is-injured/",
       "status": "approved_for_content",
       "reason": "The page answers this question (shares leas, injur)."
+    },
+    {
+      "queue_id": "queue_1846_happens-if-a-horse-fails-a-pre-purchase-exam-after-contract-",
+      "normalized_id": "norm_4487_9676378a7e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_what-happens-if-a-horse-fails-a-pre-purchase-exam-af_485511b9"
+      ],
+      "preserved_query": "what happens if a horse fails a pre-purchase exam after contract signed?",
+      "normalized_query": "what happens if a horse fails a pre-purchase exam after contract signed?",
+      "llm_bait_phrase": "happens if a horse fails a pre-purchase exam after contract signed",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "scenario",
+      "signal_score": 0.85,
+      "match_evidence": {
+        "best_page": "/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
+        "shared_terms": [
+          "fail",
+          "pre",
+          "purch",
+          "exam"
+        ],
+        "question_coverage": 0.736,
+        "page_coverage": 0.671
+      },
+      "mapped_slug": "/scenario/the-horse-failed-the-pre-purchase-exam-after-a-deposit-what-now/",
+      "status": "approved_for_content",
+      "reason": "The page answers this question (shares fail, pre, purch, exam)."
+    },
+    {
+      "queue_id": "queue_1847_owns-the-horse-in-a-lease-agreement",
+      "normalized_id": "norm_4488_6d23a7c95e",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_who-owns-the-horse-in-a-lease-agreement-https-www-go_14958fd0"
+      ],
+      "preserved_query": "who owns the horse in a lease agreement?",
+      "normalized_query": "who owns the horse in a lease agreement?",
+      "llm_bait_phrase": "owns the horse in a lease agreement",
+      "cluster": "horse-lease-and-trial",
+      "intent_type": "faq",
+      "signal_score": 0.85,
+      "match_evidence": {
+        "best_page": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+        "shared_terms": [
+          "lease",
+          "agree"
+        ],
+        "question_coverage": 1,
+        "page_coverage": 0.578
+      },
+      "mapped_slug": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+      "status": "approved_for_content",
+      "reason": "The page answers this question (shares lease, agree)."
     }
   ],
   "ignored_signals": [],
@@ -28160,6 +28215,162 @@
       "llm_bait_phrase": "insurance is needed for a leased horse",
       "source_signal_ids": [
         "google_paa_manual_or_provider_what-insurance-is-needed-for-a-leased-horse-https-ww_d6805ed3"
+      ]
+    },
+    {
+      "approval_id": "approval_1835_has-anyone-had-success-having-their-horse-used-in-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4467_410ea80652",
+      "proposed_slug": "/faq/has-anyone-had-success-having-their-horse-used-in-a-lesson-program/",
+      "cluster": "state-specific",
+      "question": "Has anyone had *success* having their horse used in a lesson program — what should I know?",
+      "llm_bait_phrase": "Has anyone had *success* having their horse used in a lesson program",
+      "source_signal_ids": [
+        "reddit_equestrian_has-anyone-had-success-having-their-horse-used-in-a-_d9b7ac95"
+      ]
+    },
+    {
+      "approval_id": "approval_1836_horse-purchase-advice-needed",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4468_936d03f471",
+      "proposed_slug": "/faq/horse-purchase-advice-needed/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Horse Purchase Advice Needed — what should I know?",
+      "llm_bait_phrase": "Horse Purchase Advice Needed",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-purchase-advice-needed-https-www-reddit-com-r-_9910687f"
+      ]
+    },
+    {
+      "approval_id": "approval_1837_auto-tracking-camera-setup-for-filming-only-sugges",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4471_f2bcfdec82",
+      "proposed_slug": "/faq/auto-tracking-camera-setup-for-filming-only-suggestions-please/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Auto tracking camera setup for filming only; suggestions please! — what should I know?",
+      "llm_bait_phrase": "Auto tracking camera setup for filming only; suggestions please!",
+      "source_signal_ids": [
+        "reddit_equestrian_auto-tracking-camera-setup-for-filming-only-suggesti_4cac6d60"
+      ]
+    },
+    {
+      "approval_id": "approval_1838_are-some-barn-essentials-that-always-seem-to-go-mi",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4473_e297a9c802",
+      "proposed_slug": "/faq/are-some-barn-essentials-that-always-seem-to-go-missing/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "What are some barn essentials that always seem to go missing?",
+      "llm_bait_phrase": "are some barn essentials that always seem to go missing",
+      "source_signal_ids": [
+        "reddit_equestrian_what-are-some-barn-essentials-that-always-seem-to-go_33e3c9b8"
+      ]
+    },
+    {
+      "approval_id": "approval_1839_new-horse-owner-looking-for-advice-8-year-old-quar",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4476_d2c38c60fe",
+      "proposed_slug": "/faq/new-horse-owner-looking-for-advice-8-year-old-quarter-horse-with-recurring-lameness-not-su/",
+      "cluster": "state-specific",
+      "question": "New horse owner looking for advice: 8-year-old Quarter Horse with recurring lameness. Not sure where to start! — what should I know?",
+      "llm_bait_phrase": "New horse owner looking for advice: 8-year-old Quarter Horse with recurring lameness. Not sure where to start!",
+      "source_signal_ids": [
+        "reddit_equestrian_new-horse-owner-looking-for-advice-8-year-old-quarte_db5a53b2"
+      ]
+    },
+    {
+      "approval_id": "approval_1840_would-you-do-with-this-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4477_9f9e0f52e4",
+      "proposed_slug": "/faq/would-you-do-with-this-horse/",
+      "cluster": "state-specific",
+      "question": "What would you do with this horse?",
+      "llm_bait_phrase": "would you do with this horse",
+      "source_signal_ids": [
+        "reddit_equestrian_what-would-you-do-with-this-horse-https-www-reddit-c_8e4b2dac"
+      ]
+    },
+    {
+      "approval_id": "approval_1841_horse-supplies",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4479_f839857243",
+      "proposed_slug": "/faq/horse-supplies/",
+      "cluster": "state-specific",
+      "question": "Horse supplies — what should I know?",
+      "llm_bait_phrase": "Horse supplies",
+      "source_signal_ids": [
+        "reddit_equestrian_horse-supplies-https-www-reddit-com-r-equestrian-com_5ba8462a"
+      ]
+    },
+    {
+      "approval_id": "approval_1842_well-what-was-a-great-purchase",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4482_1ca84da245",
+      "proposed_slug": "/faq/well-what-was-a-great-purchase/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "Well what was a great purchase — what should I know?",
+      "llm_bait_phrase": "Well what was a great purchase",
+      "source_signal_ids": [
+        "reddit_equestrian_well-what-was-a-great-purchase-https-www-reddit-com-_e60fe12a"
+      ]
+    },
+    {
+      "approval_id": "approval_1843_is-going-on-with-my-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4483_80f18589cc",
+      "proposed_slug": "/faq/is-going-on-with-my-horse/",
+      "cluster": "state-specific",
+      "question": "What is going on with my horse?",
+      "llm_bait_phrase": "is going on with my horse",
+      "source_signal_ids": [
+        "reddit_equestrian_what-is-going-on-with-my-horse-https-www-reddit-com-_50ff538b"
+      ]
+    },
+    {
+      "approval_id": "approval_1844_nexium-for-horses-ulcers",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4485_975a36469c",
+      "proposed_slug": "/faq/nexium-for-horses-ulcers/",
+      "cluster": "state-specific",
+      "question": "Nexium for horses (ulcers) — what should I know?",
+      "llm_bait_phrase": "Nexium for horses (ulcers)",
+      "source_signal_ids": [
+        "reddit_equestrian_nexium-for-horses-ulcers-https-www-reddit-com-r-eque_a87fd47d"
+      ]
+    },
+    {
+      "approval_id": "approval_1845_pays-for-the-pre-purchase-vet-exam-buyer-or-seller",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4486_ca90f4bd90",
+      "proposed_slug": "/faq/pays-for-the-pre-purchase-vet-exam-buyer-or-seller/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "who pays for the pre-purchase vet exam buyer or seller?",
+      "llm_bait_phrase": "pays for the pre-purchase vet exam buyer or seller",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_who-pays-for-the-pre-purchase-vet-exam-buyer-or-sell_9ca1c818"
+      ]
+    },
+    {
+      "approval_id": "approval_1848_a-lessor-sell-the-horse-during-a-lease-term",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4489_05afa6e572",
+      "proposed_slug": "/faq/a-lessor-sell-the-horse-during-a-lease-term/",
+      "cluster": "horse-lease-and-trial",
+      "question": "can a lessor sell the horse during a lease term?",
+      "llm_bait_phrase": "a lessor sell the horse during a lease term",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_can-a-lessor-sell-the-horse-during-a-lease-term-http_bea16ea3"
       ]
     }
   ]
