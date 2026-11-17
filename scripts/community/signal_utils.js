@@ -111,6 +111,17 @@ function blockedAccessMarker(value) {
   return /(log in|login required|sign in|captcha|access denied|private group|private account|not authorized|forbidden)/i.test(String(value || ''));
 }
 
+// A signal comes from Facebook when its platform or source says so, or its link is ON Facebook.
+// The words in a post's link are its title, not its source: a Reddit thread titled "this is why I
+// hate Facebook" is a Reddit signal (the 17 Nov 2026 Public Signal Processing failure).
+const FACEBOOK_HOSTS = /(^|\.)(facebook\.com|fb\.com|fb\.me|fb\.watch)$/i;
+function isFacebookSignal(signal) {
+  if (/facebook/i.test(`${(signal && signal.platform) || ''} ${(signal && signal.source_key) || ''}`)) return true;
+  let host = '';
+  try { host = new URL(String((signal && signal.source_url) || '')).hostname; } catch { return false; }
+  return FACEBOOK_HOSTS.test(host);
+}
+
 function allowedSource(source) {
   if (!source || source.status !== 'active') return false;
   const haystack = `${source.platform || ''} ${source.source_key || ''} ${source.display_name || ''}`.toLowerCase();
@@ -191,6 +202,7 @@ module.exports = {
   nowDate,
   blockedAccessMarker,
   allowedSource,
+  isFacebookSignal,
   buildRawSignal,
   fetchText,
   fetchJson,
