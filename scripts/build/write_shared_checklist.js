@@ -5,6 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
+const { fitDescription } = require('../lib/meta_text');
 const { changeApproved } = require('../lib/site_changes');
 const { SHAPE, CHECKLIST_URL } = require('../lib/search_quality_draft');
 const { SHARED_CHECKLIST } = require('./write_pages');
@@ -33,7 +34,7 @@ ${sections.join('\n')}
 <section class="routing-block" data-editable-zone="routing_block"><p>This page is educational only and does not provide legal advice or create an attorney-client relationship.</p></section>`;
   const dir = path.join(distDir, CHECKLIST_URL.replace(/^\/|\/$/g, ''));
   fs.mkdirSync(dir, { recursive: true });
-  const html = renderLayout({ title, description: 'The checklist every Horse Legal Guide situation shares: the controlling document, what changed hands, the timeline, state rules, what to gather and what to avoid.', url: CHECKLIST_URL, body });
+  const html = renderLayout({ title, description: fitDescription(['The checklist every Horse Legal Guide situation shares: the controlling document, what changed hands, the timeline, state rules, what to gather, what to avoid.'], CHECKLIST_URL), url: CHECKLIST_URL, body });
   fs.writeFileSync(path.join(dir, 'index.html'), html);
   return dir;
 }
