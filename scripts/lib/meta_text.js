@@ -22,7 +22,7 @@ const TITLE_MIN = 30;
 // 68. Bing Site Scan's own "title too long" threshold of 70 still passes
 // underneath a 65 ceiling.
 const TITLE_MAX = 65;
-const DESC_MIN = 110;
+const DESC_MIN = 120;
 const DESC_MAX = 160;
 
 function clean(text) {

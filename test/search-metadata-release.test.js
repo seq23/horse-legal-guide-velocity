@@ -159,3 +159,13 @@ test('freeze off (owner 1 Nov 2026): an approved unmeasured entry publishes stra
     assert.deepEqual(state.holds, []);
   } finally { fs.rmSync(root, { recursive: true, force: true }); }
 });
+
+// Search Readiness b2 (17 Nov 2026): the checklist floor is 120, and a scenario
+// description whose first sentence break fell at 119 shipped at 119 when the
+// generator's own floor was 110.
+test('the description floor is the checklist floor of 120, and a sentence cut never lands under it', () => {
+  assert.ok(DESC_MIN >= 120, `DESC_MIN is ${DESC_MIN}`);
+  const lead = 'A horse was transported before paperwork was complete. What risk does that create? Do not guess; start from the record. Note the exact day the horse moved, who arranged the trailer and what paperwork had been signed.';
+  const result = fitDescription([lead, 'A general guide to horse sale and purchase questions for horse owners, barns and equine businesses.']);
+  assert.ok(result.length >= 120 && result.length <= DESC_MAX, `${result.length}: ${result}`);
+});
