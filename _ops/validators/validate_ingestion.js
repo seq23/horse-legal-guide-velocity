@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { readJson, fail, ok } = require('./helpers');
+const { isFacebookSignal } = require('../../scripts/community/signal_utils');
 function exists(rel) { return fs.existsSync(path.resolve(process.cwd(), rel)); }
 function safeString(value) { return String(value || ''); }
 function slugSet(targets) { return new Set(targets.filter((t) => t.review_status === 'approved').map((t) => t.slug)); }
@@ -54,13 +55,14 @@ const sourceKeys = new Set((registry.sources || []).map((s) => s.source_key));
 if (!(registry.sources || []).some((s) => s.platform === 'instagram' && s.tier === 2)) fail('Instagram must exist as Tier 2 source.');
 if ((registry.sources || []).some((s) => /facebook/i.test(`${s.platform} ${s.source_key} ${s.display_name}`))) fail('Facebook source appears in source registry.');
 if ((policy.removed_sources || []).indexOf('facebook_groups') === -1) fail('facebook_groups must be listed as removed source.');
+if (!Array.isArray(raw) || raw.length === 0) fail('Examined zero raw signals: data/community/raw_signals.json is empty, so nothing was checked.');
 const rawIds = new Set();
 for (const signal of raw) {
   if (!signal.signal_id) fail('Raw signal missing signal_id.');
   if (rawIds.has(signal.signal_id)) fail(`Duplicate signal_id: ${signal.signal_id}`);
   rawIds.add(signal.signal_id);
   if (!sourceKeys.has(signal.source_key)) fail(`Raw signal has unknown source_key: ${signal.source_key}`);
-  if (/facebook/i.test(`${signal.platform} ${signal.source_key} ${signal.source_url}`)) fail(`Removed source appears in raw signals: ${signal.signal_id}`);
+  if (isFacebookSignal(signal)) fail(`Removed source appears in raw signals: ${signal.signal_id}`);
   if (safeString(signal.short_excerpt).length > (policy.excerpt_limit_chars || 300)) fail(`Short excerpt exceeds safe limit: ${signal.signal_id}`);
   if (/full_thread|full post|full comment dump/i.test(JSON.stringify(signal))) fail(`Body-like or full-thread storage marker found: ${signal.signal_id}`);
   if (hasPII(`${signal.raw_title || ''} ${signal.short_excerpt || ''}`)) fail(`PII-like value found in raw signal: ${signal.signal_id}`);
