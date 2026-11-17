@@ -1446,6 +1446,113 @@
       ],
       "linked_from": [],
       "checks": {}
+    },
+    {
+      "slug": "horse-sale-agreement",
+      "query": "horse sale agreement",
+      "lane": "striking",
+      "score": 15,
+      "scores": {
+        "striking": 15,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 3,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/horse-sale-agreement/index.html",
+      "route": "/questions/horse-sale-agreement/",
+      "url": "https://horselegalguide.com/questions/horse-sale-agreement/",
+      "published_at": null,
+      "queued_at": "2026-11-17",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-sale-agreement/index.html",
+      "hash": "0b0951258a2b7f7820d6794278da4e6f967356f5ad9473db475274a47fe15962",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/wex/uniform_commercial_code",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 36 words (aim 40-60): \"Is a bill of sale enough for a horse purchase?\"",
+        "b5 FAQ answer is 39 words (aim 40-60): \"What if the horse has a health issue after the sal\""
+      ]
+    },
+    {
+      "slug": "horse-purchase-contract",
+      "query": "horse purchase contract",
+      "lane": "striking",
+      "score": 15,
+      "scores": {
+        "striking": 15,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 3,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/horse-purchase-contract/index.html",
+      "route": "/questions/horse-purchase-contract/",
+      "url": "https://horselegalguide.com/questions/horse-purchase-contract/",
+      "published_at": null,
+      "queued_at": "2026-11-17",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/horse-purchase-contract/index.html",
+      "hash": "a7a9771ea6b159111a986a97ef8d581e8fd9d6e77c02b3e1da141821da60bde7",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/ucc",
+        "https://en.wikipedia.org/wiki/Contract"
+      ],
+      "linked_from": [],
+      "checks": {}
+    },
+    {
+      "slug": "legalities-of-returning-a-horse",
+      "query": "legalities of returning a horse",
+      "lane": "striking",
+      "score": 13,
+      "scores": {
+        "striking": 13,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_impressions": 1,
+        "bing_position": 9,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/legalities-of-returning-a-horse/index.html",
+      "route": "/questions/legalities-of-returning-a-horse/",
+      "url": "https://horselegalguide.com/questions/legalities-of-returning-a-horse/",
+      "published_at": null,
+      "queued_at": "2026-11-17",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/legalities-of-returning-a-horse/index.html",
+      "hash": "4c5020d5de9b97c6bd3fb565bc5b138b5dc0faa5e9720de6d41cb234908d9cac",
+      "model": "free-route",
+      "facts": [
+        "https://www.law.cornell.edu/wex/uniform_commercial_code",
+        "https://en.wikipedia.org/wiki/Statute_of_frauds"
+      ],
+      "linked_from": [],
+      "checks": {}
     }
   ],
   "dropped": [
@@ -1891,6 +1998,60 @@
     {
       "query": "do you need an indemnification clause on a horse oease gareement",
       "at": "2026-11-16",
+      "gate": 2,
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "if someone gets hurt by riding a horse on my property on colorado",
+      "at": "2026-11-17",
+      "reason": [
+        "same intent as https://horselegalguide.com/liability/if-someone-gets-hurt-riding-my-horse-am-i-liable/ (high token overlap (0.63 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "horse trial agreement",
+      "at": "2026-11-17",
+      "reason": [
+        "same intent as https://horselegalguide.com/leases/what-is-a-horse-trial-agreement/ (same wording); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "equestrian liability waiver",
+      "at": "2026-11-17",
+      "gate": 2,
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 0)"
+      ]
+    },
+    {
+      "query": "equine liability release",
+      "at": "2026-11-17",
+      "gate": 2,
+      "reason": [
+        "b5 FAQ answer is 27 words (aim 40-60): \"Do equine liability acts replace the need for a si\"",
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "horse lease agreement",
+      "at": "2026-11-17",
+      "reason": [
+        "same intent as https://horselegalguide.com/compare/horse-lease-vs-horse-trial-agreement/ (high token overlap (0.67 >= 0.6)); skipped, published pages are frozen on this site"
+      ]
+    },
+    {
+      "query": "factual situations a barn owner or manager might encounter that might have legal consequences",
+      "at": "2026-11-17",
+      "gate": 2,
+      "reason": [
+        "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
+      ]
+    },
+    {
+      "query": "if a lease shows a horse and wins who gets the check",
+      "at": "2026-11-17",
       "gate": 2,
       "reason": [
         "facts: needs at least 2 distinct sources whose URLs answered 200 (found 1)"
