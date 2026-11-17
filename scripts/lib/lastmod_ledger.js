@@ -48,7 +48,12 @@ const { execFileSync } = require('child_process');
 // through the content hash instead of through a shallow clone: a navigation
 // link is not a change to 324 pages, and telling a crawler that all of them
 // were updated today is the false freshness signal, not a strong one.
-const SCHEMA = 'lastmod-ledger-v3';
+// v4 (17 Nov 2026): renderLayout now puts the brand header and the site footer
+// OUTSIDE <main>, which holds only the page's own content (the HTML landmark
+// rule, and what the weekly Search Readiness sample reads as the page). The
+// region hashed is the same content in a new wrapper, so the bump migrates the
+// recorded dates instead of moving all of them to the build date.
+const SCHEMA = 'lastmod-ledger-v4';
 // Chrome repeated verbatim on every page. Stripped before hashing so a change
 // to it moves no page's date; a change to a page's own body still moves that
 // page's date and only that page's.

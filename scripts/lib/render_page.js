@@ -340,13 +340,15 @@ function renderLayout({ title: rawTitle, description, url, canonicalUrl, body, s
   </style>
 </head>
 <body>
-  <main class="page-shell">
+  <div class="page-shell">
     <div class="page-card">
 ${brandHeader}
+<main>
 ${body}
+</main>
 ${footer}
     </div>
-  </main>
+  </div>
   <script type="application/ld+json">${writeJsonLd(schemaType.toLowerCase() === 'faqpage' ? 'faq' : 'article', title, description, url, { ...schemaOptions, faq: schemaOptions.faq || extractVisibleFaq(body) })}</script>
 </body>
 </html>`;

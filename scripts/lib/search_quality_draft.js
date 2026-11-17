@@ -151,8 +151,12 @@ function definitionFor(body) {
   const hub = text(body.match(/<a href="\/hubs\/[^"]+\/">Back to ([\s\S]*?)<\/a>/i)?.[1] || 'horse-world legal questions').toLowerCase();
   const what = {scenario: 'a situation', comparison: 'a choice between two arrangements', faq: 'a common question'}[kind] || 'a question';
   // The H1 is not repeated here: restating it is what made these pages filler.
+  // A comparison or scenario page names its own checks (topic_lenses.js via the
+  // module's data-checks); the stock sentence was the same on all 183 of them.
+  const checks = String(body.match(/data-checks="([^"]*)"/)?.[1] || '').split('|').map(s => s.replace(/&amp;/g, '&')).filter(Boolean);
+  const listed = checks.length > 1 ? `${checks.slice(0, -1).join(', ')} and ${checks[checks.length - 1]}` : checks[0];
   const parts = [`This ${kind} page is about ${what} in ${hub}.`,
-    'It sets out which documents, dates and roles usually decide the answer, what to gather before acting and what to avoid.',
+    listed ? `It usually turns on ${listed}.` : 'It sets out which documents, dates and roles usually decide the answer, what to gather before acting and what to avoid.',
     'It is general education for horse owners, trainers and equine businesses.',
     'It is not advice on a specific horse, agreement or dispute.'];
   const words = t => t.split(/\s+/).filter(Boolean).length;
