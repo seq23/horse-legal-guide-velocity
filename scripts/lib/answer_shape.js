@@ -10,6 +10,17 @@ function readJson(rel, fallback) {
 }
 
 const familyMap = readJson('data/system/query_family_to_shape_map.json', {});
+const { lensesFor, joinLabels } = require('./topic_lenses');
+
+// Comparison and scenario pages: the rows come from the page's own lenses
+// (scripts/lib/topic_lenses.js), so no two pages share one paragraph set with
+// only the names swapped in (Search Readiness q1, 17 Nov 2026).
+function isLensPage(page) {
+  return ['comparison', 'scenario'].includes(String(page.page_type || '').toLowerCase());
+}
+function lensRows(page) {
+  return lensesFor(page).map((l) => [l.ask, l.check]);
+}
 
 function esc(value) {
   return String(value || '')
@@ -90,12 +101,10 @@ function redFlagItems(page) {
 
 function comparisonRows(page) {
   const sides = comparisonSides(page);
+  const lenses = lensesFor(page);
   return [
-    ['Best when', `${sides.left} is usually the cleaner fit when the parties need a narrower role, shorter duration, or less transfer of ownership-style risk. ${sides.right} is usually the cleaner fit when the parties need a broader allocation of control, responsibility, and long-term expectations.`],
-    ['Gets risky when', `${sides.left} becomes dangerous when people treat it like ${sides.right} without updating the paperwork. ${sides.right} becomes dangerous when it is too broad, too vague, or copied from a form that does not match the actual arrangement.`],
-    ['What decides the outcome', 'The deciding factors are usually control, payment, possession, emergency authority, refund or exit rights, and what can actually be proved in writing.'],
-    ['Fast verdict', `If the relationship needs clarity about who controls the horse, who pays, who can end the deal, and what happens when something goes wrong, choose the structure that says those things explicitly instead of relying on horse-world assumptions.`],
-    ['Before signing', `Ask which side controls the key decisions, what happens if the horse is hurt or the deal breaks down, and whether ${sides.left} or ${sides.right} still fits once the real-world facts are written down.`]
+    ...lenses.map((l) => [l.ask, l.check]),
+    ['Before choosing', `Check whether ${sides.left} or ${sides.right}, as written, answers each question above for the real arrangement.`]
   ];
 }
 
@@ -138,10 +147,10 @@ function quickAnswerForPage(page) {
   const pageType = String(page.page_type || '').toLowerCase();
   if (pageType === 'comparison') {
     const { left, right } = comparisonSides(page);
-    return `Short answer: ${left} and ${right} are not interchangeable. Use the version that matches who controls the relationship, who carries the risk, what happens when the arrangement changes, and what you can actually prove in writing if the horse-world deal goes sideways.`;
+    return `Short answer: ${left} and ${right} are not interchangeable. ${lensesFor(page)[0].check}`;
   }
   if (pageType === 'scenario') {
-    return 'Short answer: Do not guess and do not escalate blindly. First pin down the exact problem, preserve the written record, and sort the issue into the right lane — sale, boarding, lease, liability, payment, care, business authority, or state-specific rule. What you do next should follow that triage, not panic.';
+    return `Short answer: Do not guess; start from the record. ${lensesFor(page)[0].check}`;
   }
   const stem = sentenceCase(page.primary_query || page.title);
   return `Short answer: ${stem} is rarely answered by vibe or horse-world custom alone. Start with the controlling document, the real timeline, what changed hands, and the state-specific rule that actually governs the relationship, then answer from there.`;
@@ -166,7 +175,12 @@ function renderModule(page) {
     top_verdict_block: 'Bottom-line verdict'
   };
   let inner = '';
-  if (moduleType === 'top_checklist') {
+  if (isLensPage(page)) {
+    // The marker stays the family's module type; the rows are the page's own.
+    const head = String(page.page_type).toLowerCase() === 'comparison' ? ['Decision lens', 'What to check'] : ['Question to settle', 'What to check'];
+    const rows = String(page.page_type).toLowerCase() === 'comparison' ? comparisonRows(page) : lensRows(page);
+    inner = `<table><thead><tr><th>${head[0]}</th><th>${head[1]}</th></tr></thead><tbody>${rows.map(([a,b]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join('')}</tbody></table>`;
+  } else if (moduleType === 'top_checklist') {
     inner = `<ol>${checklistItems(page, clusterPhrase).map((item) => `<li>${esc(item)}</li>`).join('')}</ol>`;
   } else if (moduleType === 'top_red_flags_block') {
     inner = `<ul>${redFlagItems(page).map((item) => `<li><strong>Red flag:</strong> ${esc(item)}</li>`).join('')}</ul>`;
@@ -186,7 +200,7 @@ function renderModule(page) {
   return {
     queryFamily: family,
     moduleType,
-    html: `<section class="answer-shape-module" data-answer-shape="${esc(moduleType)}" data-query-family="${esc(family)}"><span class="eyebrow">Answer-first module</span><h2>${esc(titleMap[moduleType] || 'Answer-first module')}</h2>${inner}</section>`
+    html: `<section class="answer-shape-module" data-answer-shape="${esc(moduleType)}" data-query-family="${esc(family)}"${isLensPage(page) ? ` data-checks="${esc(lensesFor(page).map((l) => l.label).join('|'))}"` : ''}><span class="eyebrow">Answer-first module</span><h2>${esc(isLensPage(page) && String(page.page_type).toLowerCase() === 'scenario' ? 'Which questions settle this situation?' : (titleMap[moduleType] || 'Answer-first module'))}</h2>${inner}</section>`
   };
 }
 

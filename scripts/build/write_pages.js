@@ -126,12 +126,12 @@ function faqItems(page, queries, clusterPhrase) {
   }));
 }
 
+// The "Bottom-line decision", "Best fit / worst fit" and "Practical verdict"
+// sections were the same sentences on all 78 comparison pages with two names
+// slotted in; the page's own checks now sit in the quick answer and the top
+// table (answer_shape.js, topic_lenses.js).
 function comparisonBody(page, queries, clusterPhrase) {
-  const sides = comparisonSides(page);
-  return `<section><h2>Bottom-line decision</h2><p>People land on this page because they need to choose between <strong>${esc(sides.left)}</strong> and <strong>${esc(sides.right)}</strong>, not because they want two abstract definitions. The useful move is to match the document to who controls the horse-world relationship, who carries the downside, and what happens if the relationship breaks.</p></section>
-<section><h2>Best fit / worst fit</h2><table><thead><tr><th>Decision lane</th><th>How to think about it</th></tr></thead><tbody><tr><td>Best fit for ${esc(sides.left)}</td><td>Use it when the parties want a narrower role, a simpler responsibility split, or a shorter factual commitment that does not quietly turn into a bigger deal later.</td></tr><tr><td>Best fit for ${esc(sides.right)}</td><td>Use it when the relationship needs broader authority, clearer ownership or control language, stronger payment logic, and a more durable written framework.</td></tr><tr><td>Worst fit for either one</td><td>Both fail when the paperwork says one thing but the real horse-world arrangement works another way in practice.</td></tr></tbody></table></section>
-<section><h2>What usually decides the comparison</h2><ul><li>who controls the horse, property, business, or decision rights</li><li>what money changes hands and when</li><li>what happens if the horse is injured, the deal ends early, or the facts change</li><li>which promises are actually written down</li><li>whether state-specific rules change notice, liability, venue, or enforceability</li></ul></section>
-<section><h2>Practical verdict</h2><p>The better choice is usually the one that reduces later confusion about control, payment, responsibility, exit rights, and proof. If ${esc(sides.left)} only works when everyone stays friendly, and ${esc(sides.right)} works when the facts get messy, that usually tells you which structure is safer.</p></section>`;
+  return `<section><h2>What usually decides the comparison</h2><ul><li>who controls the horse, property, business, or decision rights</li><li>what money changes hands and when</li><li>what happens if the horse is injured, the deal ends early, or the facts change</li><li>which promises are actually written down</li><li>whether state-specific rules change notice, liability, venue, or enforceability</li></ul></section>`;
 }
 
 function scenarioBody(page, queries, clusterPhrase) {
@@ -210,7 +210,9 @@ function writeApprovedPages(distDir, approvedPages) {
     const rawQuick = String(content.quick_answer || page.quick_answer || '').trim();
     const normalizedQuick = rawQuick.replace(/^short answer:\s*/i, '');
     const hedgedQuick = /^(generally|usually|it depends|depends|often)\b/i.test(normalizedQuick);
-    const quick = (!rawQuick || hedgedQuick)
+    // 87 scenario and 78 comparison .md files carry one stock quick answer each.
+    const stockQuick = /not just semantic|usually turns on documents, timing, state context/i.test(normalizedQuick);
+    const quick = (!rawQuick || hedgedQuick || stockQuick)
       ? quickAnswerForPage(page)
       : rawQuick;
     let body = `
