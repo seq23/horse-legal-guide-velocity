@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-10-18..2026-11-14",
-  "gsc_collected_at": "2026-11-17T15:19:18.562Z",
+  "gsc_window": "2026-10-19..2026-11-15",
+  "gsc_collected_at": "2026-11-18T15:18:56.636Z",
   "rule": "A family is (intent from demand_intents.json, landing page) over the 28-day query x page export. It qualifies if (a) its landing page has >= 2 impressions at position <= 15, or (b) it is in the top 5 families by impressions with impression-weighted position <= 95. A qualifying family is strengthened on its landing page when that page is a single-answer page whose intent matches; otherwise the reason is recorded. A qualifying family may sit in pending_strengthening for at most 7 days.",
   "thresholds": {
     "top_n": 5,
@@ -23,15 +23,15 @@
     {
       "rank": 1,
       "family": "horse sale contract @ /hubs/horse-sale-and-purchase/",
-      "impressions": 107,
-      "weighted_position": 63.9,
+      "impressions": 109,
+      "weighted_position": 64.6,
       "status": "strengthened"
     },
     {
       "rank": 2,
       "family": "equine liability @ /hubs/liability-waivers-insurance/",
       "impressions": 7,
-      "weighted_position": 55,
+      "weighted_position": 52,
       "status": "strengthened"
     },
     {
@@ -64,12 +64,12 @@
       "page": "/hubs/horse-sale-and-purchase/",
       "page_kind": "hub",
       "page_intent": "sale_contract",
-      "impressions": 107,
+      "impressions": 109,
       "clicks": 0,
-      "weighted_position": 63.9,
+      "weighted_position": 64.6,
       "best_position": 13,
-      "page_impressions": 154,
-      "page_position": 54.5,
+      "page_impressions": 153,
+      "page_position": 55.8,
       "top_query": "horse purchase agreement",
       "query_count": 16,
       "queries": [
@@ -77,37 +77,37 @@
           "query": "horse purchase agreement",
           "impressions": 35,
           "clicks": 0,
-          "position": 65.3
+          "position": 65.6
         },
         {
           "query": "black horse contract purchase",
-          "impressions": 16,
+          "impressions": 17,
+          "clicks": 0,
+          "position": 57.5
+        },
+        {
+          "query": "horse sale contract lawyer",
+          "impressions": 12,
+          "clicks": 0,
+          "position": 82.5
+        },
+        {
+          "query": "horse sale contract",
+          "impressions": 10,
           "clicks": 0,
           "position": 57.3
         },
         {
-          "query": "horse sale contract",
-          "impressions": 11,
-          "clicks": 0,
-          "position": 57.4
-        },
-        {
           "query": "horse bill of sale",
-          "impressions": 9,
-          "clicks": 0,
-          "position": 74.2
-        },
-        {
-          "query": "horse sale contract lawyer",
           "impressions": 8,
           "clicks": 0,
-          "position": 80.9
+          "position": 71.3
         },
         {
           "query": "horse sales agreement",
-          "impressions": 6,
+          "impressions": 5,
           "clicks": 0,
-          "position": 52.7
+          "position": 53.2
         },
         {
           "query": "horse sales contract",
@@ -188,10 +188,10 @@
       "page_intent": "liability",
       "impressions": 7,
       "clicks": 0,
-      "weighted_position": 55,
+      "weighted_position": 52,
       "best_position": 13,
       "page_impressions": 10,
-      "page_position": 40.5,
+      "page_position": 38.4,
       "top_query": "equine liability waiver",
       "query_count": 3,
       "queries": [
@@ -199,7 +199,7 @@
           "query": "equine liability waiver",
           "impressions": 4,
           "clicks": 0,
-          "position": 63
+          "position": 57.8
         },
         {
           "query": "horse liability waiver",
@@ -277,8 +277,8 @@
       "clicks": 0,
       "weighted_position": 68.7,
       "best_position": 24.5,
-      "page_impressions": 20,
-      "page_position": 31.2,
+      "page_impressions": 21,
+      "page_position": 33.7,
       "top_query": "horse lease agreement",
       "query_count": 2,
       "queries": [
@@ -418,7 +418,7 @@
       "qualifies": true,
       "status": "pending_strengthening",
       "qualified_on": "2026-11-14",
-      "reason": "qualified on 2026-11-14 (3 day(s) ago); no data/search_intelligence/strengthening.json entry yet. Allowed for 7 days, then the validator fails."
+      "reason": "qualified on 2026-11-14 (4 day(s) ago); no data/search_intelligence/strengthening.json entry yet. Allowed for 7 days, then the validator fails."
     },
     {
       "family": "start an equestrian business @ /business/partnership-agreement-for-horse-business/",
