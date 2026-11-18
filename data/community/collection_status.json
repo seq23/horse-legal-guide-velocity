@@ -1,18 +1,19 @@
 {
-  "generated_at": "2026-11-17T17:17:40.898Z",
+  "generated_at": "2026-11-18T14:37:07.351Z",
   "adapter_status": [
     {
       "source_key": "reddit_equestrian",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 7 of 8 attempt(s) for reddit_equestrian (HTTP 403/429). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
       "status": "blocked_source",
       "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "error": "Reddit refused 7 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_legaladvice",
@@ -50,14 +51,15 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_empty",
-      "count": 0
+      "status": "success_with_data",
+      "count": 9
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "success_with_data",
-      "count": 16
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 25000ms"
     },
     {
       "source_key": "serp_competitor_research",
@@ -70,7 +72,7 @@
       "source_key": "youtube_search_comments",
       "platform": "youtube",
       "status": "success_with_data",
-      "count": 40
+      "count": 38
     },
     {
       "source_key": "instagram_public_social_framing",
@@ -85,17 +87,23 @@
       "count": 0
     }
   ],
-  "collected_count": 83,
-  "reddit_collected_count": 20,
-  "zero_reddit_warning": false,
-  "collection_health": "degraded_blocked_sources",
-  "blocked_source_count": 4,
+  "collected_count": 54,
+  "reddit_collected_count": 0,
+  "zero_reddit_warning": true,
+  "collection_health": "degraded_failed_sources",
+  "blocked_source_count": 5,
   "blocked_sources": [
+    {
+      "source_key": "reddit_equestrian",
+      "platform": "reddit",
+      "status": "blocked_source",
+      "reason": "Reddit refused 7 of 8 attempt(s) for reddit_equestrian (HTTP 403/429). Reddit public access is blocked for this pipeline; no app credential is available."
+    },
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
       "status": "blocked_source",
-      "reason": "Reddit refused 8 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "reason": "Reddit refused 7 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_legaladvice",
@@ -116,5 +124,5 @@
       "reason": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     }
   ],
-  "raw_store_count": 4519
+  "raw_store_count": 4532
 }

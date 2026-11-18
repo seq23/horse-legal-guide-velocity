@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-17T17:17:41.560Z",
-  "total_signals": 4519,
+  "generated_at": "2026-11-18T14:37:07.943Z",
+  "total_signals": 4532,
   "signals_by_source": {
     "reddit_equestrian": 2333,
     "reddit_horses": 727,
@@ -8,37 +8,37 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 120,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 235,
+    "youtube_search_comments": 246,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 262,
     "reddit_smallbusiness": 263,
     "reddit_farming_ranching": 143,
-    "forum_horse_and_hound": 98
+    "forum_horse_and_hound": 100
   },
   "signals_by_platform": {
     "reddit": 3728,
-    "equestrian_forums": 161,
+    "equestrian_forums": 163,
     "google_paa": 120,
     "serp_competitors": 217,
-    "youtube": 235,
+    "youtube": 246,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1862,
+  "normalized_count": 1875,
   "duplicates_collapsed": 2657,
   "pages_created": 0,
   "pages_strengthened": 282,
   "rejected_signals": 0,
-  "pending_owner_review": 1574,
+  "pending_owner_review": 1587,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 959
+      "count": 962
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 296
+      "count": 305
     },
     {
       "name": "horse-lease-and-trial",
@@ -46,7 +46,7 @@
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 229
+      "count": 230
     },
     {
       "name": "liability-waivers-insurance",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 235
+      "count": 246
     },
     {
       "name": "serp_competitor_research",
@@ -108,7 +108,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 98
+      "count": 100
     },
     {
       "name": "forum_the_horse_forum",
@@ -131,15 +131,16 @@
     {
       "source_key": "reddit_equestrian",
       "platform": "reddit",
-      "status": "success_with_data",
-      "count": 20
+      "status": "blocked_source",
+      "count": 0,
+      "error": "Reddit refused 7 of 8 attempt(s) for reddit_equestrian (HTTP 403/429). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_horses",
       "platform": "reddit",
       "status": "blocked_source",
       "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "error": "Reddit refused 7 of 8 attempt(s) for reddit_horses (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_legaladvice",
@@ -177,14 +178,15 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_empty",
-      "count": 0
+      "status": "success_with_data",
+      "count": 9
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "success_with_data",
-      "count": 16
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 25000ms"
     },
     {
       "source_key": "serp_competitor_research",
@@ -197,7 +199,7 @@
       "source_key": "youtube_search_comments",
       "platform": "youtube",
       "status": "success_with_data",
-      "count": 40
+      "count": 38
     },
     {
       "source_key": "instagram_public_social_framing",
@@ -28568,6 +28570,175 @@
       "llm_bait_phrase": "is a free lease horse agreement",
       "source_signal_ids": [
         "google_paa_manual_or_provider_what-is-a-free-lease-horse-agreement-https-www-googl_121eaa83"
+      ]
+    },
+    {
+      "approval_id": "approval_1862_sensitive-nervous-horse-help",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4519_049baebbc0",
+      "proposed_slug": "/faq/sensitive-nervous-horse-help/",
+      "cluster": "state-specific",
+      "question": "Sensitive nervous horse , help ! — what should I know?",
+      "llm_bait_phrase": "Sensitive nervous horse , help !",
+      "source_signal_ids": [
+        "forum_horse_and_hound_sensitive-nervous-horse-help-https-forums-horseandho_9b7b11ef"
+      ]
+    },
+    {
+      "approval_id": "approval_1863_i-ready-for-a-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4520_d0e4e9429a",
+      "proposed_slug": "/scenario/i-ready-for-a-horse/",
+      "cluster": "state-specific",
+      "question": "Am I ready for a horse?",
+      "llm_bait_phrase": "I ready for a horse",
+      "source_signal_ids": [
+        "forum_horse_and_hound_am-i-ready-for-a-horse-https-forums-horseandhound-co_c3f29439"
+      ]
+    },
+    {
+      "approval_id": "approval_1864_i-never-thought-i-d-be-selling-this-horse",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4521_73eb4ef5e2",
+      "proposed_slug": "/faq/i-never-thought-i-d-be-selling-this-horse/",
+      "cluster": "state-specific",
+      "question": "I Never Thought I’d Be Selling This Horse… 💔 — what should I know?",
+      "llm_bait_phrase": "I Never Thought I’d Be Selling This Horse… 💔",
+      "source_signal_ids": [
+        "youtube_search_comments_i-never-thought-i-d-be-selling-this-horse-https-www-_f3d80b53"
+      ]
+    },
+    {
+      "approval_id": "approval_1865_the-horse-sale-at-rancho-rio-wickenburg-az",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4522_d557f971a5",
+      "proposed_slug": "/faq/the-horse-sale-at-rancho-rio-wickenburg-az/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "The Horse Sale at Rancho Rio, Wickenburg, AZ — what should I know?",
+      "llm_bait_phrase": "The Horse Sale at Rancho Rio, Wickenburg, AZ",
+      "source_signal_ids": [
+        "youtube_search_comments_the-horse-sale-at-rancho-rio-wickenburg-az-https-www_818a2aee"
+      ]
+    },
+    {
+      "approval_id": "approval_1866_boarding-on-insanity-with-dr-gabor-mat-childhood-t",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4523_c651af0d0b",
+      "proposed_slug": "/faq/boarding-on-insanity-with-dr-gabor-mat-childhood-trauma-u0026-our-leaders-full-trailer-pie/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Boarding on Insanity With Dr. Gabor Maté: Childhood Trauma \\u0026 Our Leaders: Full Trailer | Piers Cross — what should I know?",
+      "llm_bait_phrase": "Boarding on Insanity With Dr. Gabor Maté: Childhood Trauma \\u0026 Our Leaders: Full Trailer | Piers Cross",
+      "source_signal_ids": [
+        "youtube_search_comments_boarding-on-insanity-with-dr-gabor-mat-childhood-tra_11ea45de"
+      ]
+    },
+    {
+      "approval_id": "approval_1867_is-boarding-school-abuse-monsees-u0026-mayer",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4524_e1ae2b077b",
+      "proposed_slug": "/faq/is-boarding-school-abuse-monsees-u0026-mayer/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "What is Boarding School Abuse? | Monsees \\u0026 Mayer?",
+      "llm_bait_phrase": "is Boarding School Abuse? | Monsees \\u0026 Mayer",
+      "source_signal_ids": [
+        "youtube_search_comments_what-is-boarding-school-abuse-monsees-u0026-mayer-ht_41c37d6e"
+      ]
+    },
+    {
+      "approval_id": "approval_1868_managing-a-horse-boarding-facility",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4525_75ee5ef9b5",
+      "proposed_slug": "/faq/managing-a-horse-boarding-facility/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Managing a Horse Boarding Facility — what should I know?",
+      "llm_bait_phrase": "Managing a Horse Boarding Facility",
+      "source_signal_ids": [
+        "youtube_search_comments_managing-a-horse-boarding-facility-https-www-youtube_ec979733"
+      ]
+    },
+    {
+      "approval_id": "approval_1869_horse-boarding-explained-what-you-really-get-at-ea",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4526_4f7f9818ae",
+      "proposed_slug": "/faq/horse-boarding-explained-what-you-really-get-at-each-level/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Horse Boarding Explained: What You REALLY Get At Each Level — what should I know?",
+      "llm_bait_phrase": "Horse Boarding Explained: What You REALLY Get At Each Level",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-boarding-explained-what-you-really-get-at-each_b00451b1"
+      ]
+    },
+    {
+      "approval_id": "approval_1870_boarding-facilities-are-making-a-fortune-cost-to-b",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4527_4dabcbf014",
+      "proposed_slug": "/faq/boarding-facilities-are-making-a-fortune-cost-to-board-a-horse/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Boarding Facilities are making a FORTUNE. Cost to Board A Horse. — what should I know?",
+      "llm_bait_phrase": "Boarding Facilities are making a FORTUNE. Cost to Board A Horse.",
+      "source_signal_ids": [
+        "youtube_search_comments_boarding-facilities-are-making-a-fortune-cost-to-boa_4153ec88"
+      ]
+    },
+    {
+      "approval_id": "approval_1871_a-day-in-the-life-managing-a-horse-boarding-facili",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4528_7020f66e01",
+      "proposed_slug": "/faq/a-day-in-the-life-managing-a-horse-boarding-facility/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "A DAY IN THE LIFE | MANAGING A HORSE BOARDING FACILITY — what should I know?",
+      "llm_bait_phrase": "A DAY IN THE LIFE | MANAGING A HORSE BOARDING FACILITY",
+      "source_signal_ids": [
+        "youtube_search_comments_a-day-in-the-life-managing-a-horse-boarding-facility_c46c45a8"
+      ]
+    },
+    {
+      "approval_id": "approval_1872_no-return-ticket-airlines-can-deny-boarding",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4529_3d604b3d02",
+      "proposed_slug": "/faq/no-return-ticket-airlines-can-deny-boarding/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "No Return Ticket? Airlines Can Deny Boarding! — what should I know?",
+      "llm_bait_phrase": "No Return Ticket? Airlines Can Deny Boarding!",
+      "source_signal_ids": [
+        "youtube_search_comments_no-return-ticket-airlines-can-deny-boarding-https-ww_0f14dd6d"
+      ]
+    },
+    {
+      "approval_id": "approval_1873_airlines-can-deny-boarding-without-a-return-ticket",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4530_0f58980b2b",
+      "proposed_slug": "/faq/airlines-can-deny-boarding-without-a-return-ticket/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Why airlines can deny boarding without a return ticket?",
+      "llm_bait_phrase": "airlines can deny boarding without a return ticket",
+      "source_signal_ids": [
+        "youtube_search_comments_why-airlines-can-deny-boarding-without-a-return-tick_d86a7f68"
+      ]
+    },
+    {
+      "approval_id": "approval_1874_is-pet-boarding-insurance-general-liability-worker",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4531_6b48a08e06",
+      "proposed_slug": "/faq/is-pet-boarding-insurance-general-liability-workers-compensation-arslan564/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "What is Pet Boarding Insurance? General Liability || Workers’ Compensation #arslan564?",
+      "llm_bait_phrase": "is Pet Boarding Insurance? General Liability || Workers’ Compensation #arslan564",
+      "source_signal_ids": [
+        "youtube_search_comments_what-is-pet-boarding-insurance-general-liability-wor_b0fb2112"
       ]
     }
   ]
