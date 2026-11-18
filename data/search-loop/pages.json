@@ -1553,6 +1553,45 @@
       ],
       "linked_from": [],
       "checks": {}
+    },
+    {
+      "slug": "terms-and-leasr-for-a-horse",
+      "query": "terms and leasr for a horse",
+      "lane": "striking",
+      "score": 13,
+      "scores": {
+        "striking": 13,
+        "can_be_one": 0
+      },
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_impressions": 1,
+        "bing_position": 10,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "rel": "questions/terms-and-leasr-for-a-horse/index.html",
+      "route": "/questions/terms-and-leasr-for-a-horse/",
+      "url": "https://horselegalguide.com/questions/terms-and-leasr-for-a-horse/",
+      "published_at": null,
+      "queued_at": "2026-11-18",
+      "status": "pending_approval",
+      "pending_rel": "data/search-loop/pending/questions/terms-and-leasr-for-a-horse/index.html",
+      "hash": "bebf9d2882166fb83d1351122e878fca215779726b39ef0d250a9421ecbce3d3",
+      "model": "free-route",
+      "facts": [
+        "https://www.animallaw.info/",
+        "https://www.law.cornell.edu/"
+      ],
+      "linked_from": [],
+      "checks": {},
+      "gate_notes": [
+        "b5 FAQ answer is 36 words (aim 40-60): \"Who owns the horse during the term of a lease?\"",
+        "b5 FAQ answer is 36 words (aim 40-60): \"Do I need a written contract for a horse lease?\""
+      ]
     }
   ],
   "dropped": [
