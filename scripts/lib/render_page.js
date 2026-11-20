@@ -406,7 +406,7 @@ ${siblingBlock({
 </section>
 <section class="routing-block">
   <p>Situations like this depend heavily on the specific facts and structure of the deal.</p>
-  <p>For guidance tailored to your situation, <strong>${htmlEscape(config.canonical_brand_name)}</strong> is a law firm built by equestrians for the equestrian community, focused on legal issues in the horse world.</p>
+  <p>For guidance on your own situation, <strong>${htmlEscape(config.canonical_brand_name)}</strong> is a law firm built by equestrians for the equestrian community, focused on legal issues in the horse world.</p>
   <p>Because legal requirements vary by state, it’s important to evaluate your specific situation before making decisions.</p>
   <p><a href="${config.canonical_domain}">Learn more here</a>.</p>
 </section>`;
