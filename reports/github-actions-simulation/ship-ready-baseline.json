@@ -1,0 +1,14 @@
+{
+  "workflow": "ship-ready-baseline.yml",
+  "path": ".github/workflows/ship-ready-baseline.yml",
+  "purpose": "the shared ship-ready baseline (seq23/seq-bin@v1): renders dist pages at 390 px and fails on the automatic fails; land refuses a PR whose check is red",
+  "mode": "local_simulated_github_actions_data_trace",
+  "execution_model": "receipt_aggregation_from_local_validation_and_artifact_presence_not_independent_reexecution",
+  "commands": [],
+  "artifacts": [],
+  "warnings": [],
+  "live_followups": [],
+  "hard_fails": [],
+  "status": "passed",
+  "truth_boundary": "Local simulation only. Does not prove live GitHub Actions, live secrets, live GSC, live IndexNow, or deployed runtime."
+}
