@@ -1,20 +1,20 @@
 {
   "schema_version": "1.0",
   "status": "LIST_ONLY_NO_REDIRECTS",
-  "gsc_window": "2026-10-21..2026-11-17",
-  "coverage_collected_at": "2026-11-20T22:15:57.641Z",
+  "gsc_window": "2026-10-22..2026-11-18",
+  "coverage_collected_at": "2026-11-21T20:55:46.185Z",
   "rule": "Sitemap leaf pages with 0 impressions in the 28-day export and fewer than 800 visible words in the built page. Nothing is redirected or removed by this file.",
   "thin_word_threshold": 800,
   "sitemap_url_count": 326,
-  "candidate_count": 210,
+  "candidate_count": 212,
   "candidates_by_hub": {
     "none": 21,
     "/hubs/equine-business-formation/": 16,
     "/hubs/horse-lease-and-trial/": 18,
     "/hubs/real-property-and-leases/": 3,
     "/hubs/intellectual-property-and-brand/": 16,
-    "/hubs/demand-letters-and-disputes/": 20,
-    "/hubs/horse-sale-and-purchase/": 40,
+    "/hubs/demand-letters-and-disputes/": 21,
+    "/hubs/horse-sale-and-purchase/": 41,
     "/hubs/boarding-training-and-barn-operations/": 30,
     "/hubs/emotional-am-i-screwed/": 9,
     "/hubs/liability-waivers-insurance/": 25,
@@ -181,6 +181,14 @@
       "coverage_state": "Crawled - currently not indexed",
       "fold_into": "/hubs/liability-waivers-insurance/",
       "fold_basis": "page target cluster liability-waivers-insurance"
+    },
+    {
+      "route": "/scenario/someone-wants-to-mediate-a-horse-dispute-what-should-be-prepared/",
+      "word_count": 403,
+      "impressions_28d": 0,
+      "coverage_state": "Submitted and indexed",
+      "fold_into": "/hubs/demand-letters-and-disputes/",
+      "fold_basis": "page target cluster demand-letters-and-disputes"
     },
     {
       "route": "/compare/horse-purchase-deposit-vs-full-payment/",
@@ -455,6 +463,14 @@
       "fold_basis": "page target cluster horse-lease-and-trial"
     },
     {
+      "route": "/compare/retainer-agreement-vs-consultation-call/",
+      "word_count": 422,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/horse-sale-and-purchase/",
+      "fold_basis": "page target cluster horse-sale-and-purchase"
+    },
+    {
       "route": "/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/",
       "word_count": 422,
       "impressions_28d": 0,
@@ -570,7 +586,7 @@
       "route": "/business/horse-syndicate-legal-structure/",
       "word_count": 426,
       "impressions_28d": 0,
-      "coverage_state": "Crawled - currently not indexed",
+      "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/equine-business-formation/",
       "fold_basis": "page target cluster equine-business-formation"
     },
@@ -1015,14 +1031,6 @@
       "fold_basis": "page target cluster intellectual-property-and-brand"
     },
     {
-      "route": "/compare/warning-sign-compliance-vs-signed-waiver/",
-      "word_count": 449,
-      "impressions_28d": 0,
-      "coverage_state": "Submitted and indexed",
-      "fold_into": "/hubs/liability-waivers-insurance/",
-      "fold_basis": "page target cluster liability-waivers-insurance"
-    },
-    {
       "route": "/compare/horse-sale-addendum-vs-new-contract/",
       "word_count": 450,
       "impressions_28d": 0,
@@ -1077,6 +1085,14 @@
       "coverage_state": "Crawled - currently not indexed",
       "fold_into": "/hubs/demand-letters-and-disputes/",
       "fold_basis": "page target cluster demand-letters-and-disputes"
+    },
+    {
+      "route": "/liability/can-i-still-be-sued-if-i-have-a-waiver/",
+      "word_count": 451,
+      "impressions_28d": 0,
+      "coverage_state": "Crawled - currently not indexed",
+      "fold_into": "/hubs/liability-waivers-insurance/",
+      "fold_basis": "page target cluster liability-waivers-insurance"
     },
     {
       "route": "/state/north-carolina/do-i-need-warning-signs/",
@@ -1346,7 +1362,7 @@
       "route": "/compare/pre-purchase-exam-vs-as-is-horse-sale/",
       "word_count": 476,
       "impressions_28d": 0,
-      "coverage_state": "Crawled - currently not indexed",
+      "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/horse-sale-and-purchase/",
       "fold_basis": "page target cluster horse-sale-and-purchase"
     },
@@ -1418,7 +1434,7 @@
       "route": "/compare/horse-lease-vs-horse-trial-agreement/",
       "word_count": 493,
       "impressions_28d": 0,
-      "coverage_state": "Crawled - currently not indexed",
+      "coverage_state": "Submitted and indexed",
       "fold_into": "/hubs/horse-lease-and-trial/",
       "fold_basis": "page target cluster horse-lease-and-trial"
     },
