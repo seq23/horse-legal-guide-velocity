@@ -478,7 +478,7 @@ function renderAboutPage() {
   <li><a href="/compare/">Comparison index</a> — one option against another</li>
   <li><a href="/insights/">Insights</a> — the editorial surface</li>
 </ul></nav>
-${referralNote({ href: firmSite })}`;
+${referralNote()}`;
 
   return renderLayout({
     title: 'About Horse Legal Guide: Who Writes It',

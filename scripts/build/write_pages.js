@@ -154,10 +154,8 @@ function defaultBody(page, queries, clusterPhrase) {
   return faqBody(page, queries, clusterPhrase);
 }
 
-// The firm link always goes to the firm's own site (the old block sent "Learn more here" to the page's
-// canonical address, which is this guide, not the firm).
 function routingBlock() {
-  return referralNote({ disclaimer: true, zone: 'routing_block' });
+  return referralNote({ zone: 'routing_block' });
 }
 
 /** Reference surfaces, filed by the cluster the candidate record already carries. */

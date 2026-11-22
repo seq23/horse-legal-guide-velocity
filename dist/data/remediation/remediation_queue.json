@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-22T02:48:13.000Z",
-  "source_fingerprint": "bce158f08a6e355d5eb16edd1bea945d25826a8c5b6913e58e6fbbdf59a42ca2",
+  "generated_at": "2026-11-22T12:25:30.000Z",
+  "source_fingerprint": "dff5b068ffa172e4bf121007704e890235a7b033f65d18e48f37fa41c4c1b58e",
   "policy": "Owner approval required before any live-page search control or page patch is applied.",
   "summary": {
-    "total": 20,
-    "pending_owner_approval": 20,
+    "total": 18,
+    "pending_owner_approval": 18,
     "approved": 0,
     "applied": 0,
     "rejected": 0
@@ -67,7 +67,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9763,
+      "maximum_body_similarity": 0.9757,
       "suggested_actions": [
         "redirect_to_primary",
         "differentiate_patch"
@@ -98,7 +98,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.951,
+      "maximum_body_similarity": 0.9497,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -129,7 +129,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9424,
+      "maximum_body_similarity": 0.9409,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -225,7 +225,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9156,
+      "maximum_body_similarity": 0.9137,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -237,6 +237,35 @@
     {
       "proposal_id": "remediation-uniqueness-0008",
       "ledger_id": "uniqueness-0008",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
+      "candidate_primary": "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/",
+      "members": [
+        "/insights/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/",
+        "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/"
+      ],
+      "families": [
+        "insights"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9125,
+      "suggested_actions": [
+        "differentiate_patch"
+      ],
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0009",
+      "ledger_id": "uniqueness-0009",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -264,36 +293,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9137,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0009",
-      "ledger_id": "uniqueness-0009",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/",
-      "members": [
-        "/insights/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/",
-        "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/"
-      ],
-      "families": [
-        "insights"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.9125,
+      "maximum_body_similarity": 0.9118,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -322,7 +322,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.911,
+      "maximum_body_similarity": 0.9087,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -352,7 +352,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9064,
+      "maximum_body_similarity": 0.9041,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -383,7 +383,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9064,
+      "maximum_body_similarity": 0.9039,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -413,7 +413,7 @@
         "duplicate_title",
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8909,
+      "maximum_body_similarity": 0.8883,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -431,10 +431,9 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/liability/what-type-of-insurance-do-horse-owners-need/",
+      "candidate_primary": "/liability/what-is-the-equine-activity-liability-act/",
       "members": [
         "/liability/what-is-the-equine-activity-liability-act/",
-        "/liability/what-type-of-insurance-do-horse-owners-need/",
         "/liability/what-type-of-insurance-do-trainers-need/"
       ],
       "families": [
@@ -443,7 +442,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8816,
+      "maximum_body_similarity": 0.8791,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -474,7 +473,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8755,
+      "maximum_body_similarity": 0.8722,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -504,7 +503,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8737,
+      "maximum_body_similarity": 0.8708,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -533,7 +532,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8736,
+      "maximum_body_similarity": 0.8706,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -562,65 +561,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8733,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0019",
-      "ledger_id": "uniqueness-0019",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
-      "members": [
-        "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
-        "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/"
-      ],
-      "families": [
-        "faq"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.8532,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0020",
-      "ledger_id": "uniqueness-0020",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
-      "members": [
-        "/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
-        "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/"
-      ],
-      "families": [
-        "scenario"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.8505,
+      "maximum_body_similarity": 0.8705,
       "suggested_actions": [
         "differentiate_patch"
       ],

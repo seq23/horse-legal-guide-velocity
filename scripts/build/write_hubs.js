@@ -74,7 +74,7 @@ ${renderQuickAnswer(hubDescription(cluster, clusterPages))}
   <p>Start with the narrow page that matches your immediate concern, then move through the related pages in the cluster to understand adjacent risks, assumptions, and decision points. A sale question may connect to liability, a lease question may overlap with boarding or insurance, and a business question may reach into branding, sponsorship, or state-specific compliance. The goal here is not volume for its own sake. It is visible fan-out that makes the cluster legible.</p>
   <p>For many visitors, the value of a hub page is not just navigation. It is perspective. Seeing the neighboring questions often helps people recognize what they have not yet asked, which is exactly where avoidable horse-world problems tend to begin.</p>
 </section>
-${referralNote({ disclaimer: true })}`;
+${referralNote()}`;
     const wayfinding = `\n${wayfindingNav(cluster.cluster)}`;
     const topUp = pickSiblings(body + wayfinding, cluster.slug, [
       ...rotate(referenceByCluster.get(cluster.cluster) || [], cluster.cluster)
