@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-21T20:13:08.000Z",
-  "source_fingerprint": "666fd3fd44adfa803abe130104741a6b68428fd451a66d098a48e1018a831160",
+  "generated_at": "2026-11-22T02:48:13.000Z",
+  "source_fingerprint": "bce158f08a6e355d5eb16edd1bea945d25826a8c5b6913e58e6fbbdf59a42ca2",
   "policy": "Owner review only. This ledger never mutates live pages, routes, canonicals, robots directives, or redirects.",
   "automatic_live_changes_allowed": false,
-  "entry_count": 18,
+  "entry_count": 20,
   "entries": [
     {
       "ledger_id": "uniqueness-0001",
@@ -46,7 +46,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9754,
+      "maximum_body_similarity": 0.9763,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -66,12 +66,33 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9488,
+      "maximum_body_similarity": 0.951,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
     {
       "ledger_id": "uniqueness-0004",
+      "status": "owner_review_required",
+      "action_applied": "none",
+      "candidate_primary": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
+      "members": [
+        "/state/illinois/what-does-illinois-equine-liability-law-cover/",
+        "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+        "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
+        "/state/south-carolina/do-i-need-a-liability-waiver/"
+      ],
+      "families": [
+        "state"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9424,
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "approval_required_for_live_change": true
+    },
+    {
+      "ledger_id": "uniqueness-0005",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
@@ -89,27 +110,6 @@
         "high_body_similarity"
       ],
       "maximum_body_similarity": 0.9402,
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true
-    },
-    {
-      "ledger_id": "uniqueness-0005",
-      "status": "owner_review_required",
-      "action_applied": "none",
-      "candidate_primary": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
-      "members": [
-        "/state/illinois/what-does-illinois-equine-liability-law-cover/",
-        "/state/north-carolina/do-i-need-a-horse-sale-contract/",
-        "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
-        "/state/south-carolina/do-i-need-a-liability-waiver/"
-      ],
-      "families": [
-        "state"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.9399,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -153,31 +153,12 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9127,
+      "maximum_body_similarity": 0.9156,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
     {
       "ledger_id": "uniqueness-0008",
-      "status": "owner_review_required",
-      "action_applied": "none",
-      "candidate_primary": "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/",
-      "members": [
-        "/insights/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/",
-        "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/"
-      ],
-      "families": [
-        "insights"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.9125,
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true
-    },
-    {
-      "ledger_id": "uniqueness-0009",
       "status": "owner_review_required",
       "action_applied": "none",
       "candidate_primary": "/business/partnership-agreement-for-horse-business/",
@@ -201,7 +182,26 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9107,
+      "maximum_body_similarity": 0.9137,
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "approval_required_for_live_change": true
+    },
+    {
+      "ledger_id": "uniqueness-0009",
+      "status": "owner_review_required",
+      "action_applied": "none",
+      "candidate_primary": "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/",
+      "members": [
+        "/insights/2026-05-12/what-equestrians-often-miss-about-template-contract-vs-custom-horse-contract/",
+        "/insights/2026-05-13/a-plain-english-note-on-pre-purchase-exam-vs-no-exam-legal-risk/"
+      ],
+      "families": [
+        "insights"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9125,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -220,7 +220,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9068,
+      "maximum_body_similarity": 0.911,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -240,7 +240,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9021,
+      "maximum_body_similarity": 0.9064,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -261,7 +261,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9016,
+      "maximum_body_similarity": 0.9064,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -281,7 +281,7 @@
         "duplicate_title",
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8864,
+      "maximum_body_similarity": 0.8909,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -289,9 +289,10 @@
       "ledger_id": "uniqueness-0014",
       "status": "owner_review_required",
       "action_applied": "none",
-      "candidate_primary": "/liability/what-is-the-equine-activity-liability-act/",
+      "candidate_primary": "/liability/what-type-of-insurance-do-horse-owners-need/",
       "members": [
         "/liability/what-is-the-equine-activity-liability-act/",
+        "/liability/what-type-of-insurance-do-horse-owners-need/",
         "/liability/what-type-of-insurance-do-trainers-need/"
       ],
       "families": [
@@ -300,7 +301,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8771,
+      "maximum_body_similarity": 0.8816,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -308,9 +309,10 @@
       "ledger_id": "uniqueness-0015",
       "status": "owner_review_required",
       "action_applied": "none",
-      "candidate_primary": "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
+      "candidate_primary": "/boarding/what-should-be-included-in-a-training-agreement/",
       "members": [
         "/boarding/what-liability-does-a-trainer-have/",
+        "/boarding/what-should-be-included-in-a-training-agreement/",
         "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
         "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/"
       ],
@@ -320,7 +322,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8692,
+      "maximum_body_similarity": 0.8755,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -340,7 +342,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8691,
+      "maximum_body_similarity": 0.8737,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -359,7 +361,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8687,
+      "maximum_body_similarity": 0.8736,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     },
@@ -378,7 +380,45 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8683,
+      "maximum_body_similarity": 0.8733,
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "approval_required_for_live_change": true
+    },
+    {
+      "ledger_id": "uniqueness-0019",
+      "status": "owner_review_required",
+      "action_applied": "none",
+      "candidate_primary": "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
+      "members": [
+        "/faq/what-happens-if-a-horse-becomes-lame-after-sale/",
+        "/faq/what-happens-if-there-is-no-written-agreement-in-a-horse-sale/"
+      ],
+      "families": [
+        "faq"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.8532,
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "approval_required_for_live_change": true
+    },
+    {
+      "ledger_id": "uniqueness-0020",
+      "status": "owner_review_required",
+      "action_applied": "none",
+      "candidate_primary": "/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
+      "members": [
+        "/scenario/a-horse-syndicate-member-wants-out-what-documents-matter/",
+        "/scenario/horse-business-partners-are-disagreeing-what-documents-matter/"
+      ],
+      "families": [
+        "scenario"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.8505,
       "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
       "approval_required_for_live_change": true
     }

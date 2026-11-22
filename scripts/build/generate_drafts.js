@@ -87,7 +87,7 @@ Wise Covington PLLC is a law firm built by equestrians for the equestrian commun
 
 Because legal requirements vary by state, it’s important to evaluate your specific situation before making decisions.
 
-Learn more here: https://wisecovington.com`],
+Visit Wise Covington PLLC: https://wisecovington.com`],
     ['## Review notes', '- Manual mode is active.\n- Do not publish without approval.\n- Keep the footer disclaimer and both footer policy links.']
   ];
   const article = [
@@ -105,7 +105,7 @@ Wise Covington PLLC is a law firm built by equestrians for the equestrian commun
 
 Because legal requirements vary by state, it’s important to evaluate your specific situation before making decisions.
 
-Learn more here: https://wisecovington.com`],
+Visit Wise Covington PLLC: https://wisecovington.com`],
     ['## Review notes', '- Manual mode is active.\n- Do not publish without approval.\n- Keep the footer disclaimer and both footer policy links.']
   ];
   const authority = [
@@ -124,7 +124,7 @@ Wise Covington PLLC is a law firm built by equestrians for the equestrian commun
 
 Because legal requirements vary by state, it’s important to evaluate your specific situation before making decisions.
 
-Learn more here: https://wisecovington.com`],
+Visit Wise Covington PLLC: https://wisecovington.com`],
     ['## Review notes', '- Manual mode is active.\n- Do not publish without approval.\n- Keep the footer disclaimer and both footer policy links.']
   ];
   return entry.content_type === 'insight' ? insight : entry.content_type === 'article' ? article : authority;
@@ -208,7 +208,7 @@ Wise Covington PLLC is a law firm built by equestrians for the equestrian commun
 
 Because legal requirements vary by state, it’s important to evaluate your specific situation before making decisions.
 
-Learn more here: https://wisecovington.com`);
+Visit Wise Covington PLLC: https://wisecovington.com`);
 
   push('## Educational boundary', 'This page and the document it generates are educational only. They are not legal advice, do not apply the law of any state to any particular set of facts, and do not create an attorney-client relationship. No statement here should be treated as a description of the law in your state. Have the document reviewed by a lawyer licensed where the horse is kept before you rely on it.');
 

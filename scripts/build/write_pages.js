@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const { renderLayout } = require('../lib/render_page');
+const { referralNote } = require('../lib/referral_note');
 const { fitDescription, withSubject } = require('../lib/meta_text');
-const { resolveCanonicalTarget } = require('../lib/resolve_canonical_targets');
 const { loadPageContent } = require('../lib/content_loader');
 const { renderModule, comparisonSides, quickAnswerForPage } = require('../lib/answer_shape');
 const { validatePostRenderPage } = require('./validate_page_contract_post_render');
@@ -154,13 +154,10 @@ function defaultBody(page, queries, clusterPhrase) {
   return faqBody(page, queries, clusterPhrase);
 }
 
-function routingBlock(canonical) {
-  return `<section class="routing-block" data-editable-zone="routing_block">
-  <p>Situations like this depend heavily on the specific facts, documents, and jurisdiction.</p>
-  <p><strong>Wise Covington PLLC is a law firm built by equestrians for the equestrian community.</strong></p>
-  <p>This page is educational only and does not provide legal advice or create an attorney-client relationship.</p>
-  <p><a href="${canonical}">Learn more here</a>.</p>
-</section>`;
+// The firm link always goes to the firm's own site (the old block sent "Learn more here" to the page's
+// canonical address, which is this guide, not the firm).
+function routingBlock() {
+  return referralNote({ disclaimer: true, zone: 'routing_block' });
 }
 
 /** Reference surfaces, filed by the cluster the candidate record already carries. */
@@ -185,7 +182,6 @@ function otherHubs(cluster) {
 }
 
 function writeApprovedPages(distDir, approvedPages) {
-  const canonical = resolveCanonicalTarget();
   const referenceByCluster = loadReferenceByCluster();
   const { rawById, normBySlug } = loadSignalIndexes();
   const byCluster = approvedPages.reduce((acc, p) => { (acc[p.cluster] ||= []).push(p); return acc; }, {});
@@ -235,7 +231,7 @@ ${accordion(faqItems(page, queries, clusterPhrase), 'Signal-backed FAQ')}
 ${formatRelatedLinks(content.related_pages, related)}
 <nav><p><a href="/">Home</a> · <a href="/hubs/${esc(page.cluster)}/">Back to ${esc(titleCase(page.cluster))}</a> · <a href="/reference/">Reference index</a></p></nav>
 ${wayfindingNav(page.cluster)}
-${routingBlock(canonical)}`;
+${routingBlock()}`;
     body = applyPersistedPatchIfPresent(page, body);
     // Patches replace whole zones, related_links_block among them, so the
     // top-up is measured after they run. A cluster of four pages cannot fill a
