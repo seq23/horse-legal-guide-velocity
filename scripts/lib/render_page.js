@@ -5,6 +5,7 @@ const { writeCanonicalTag, toAbsoluteUrl } = require('./write_canonical_tag');
 const { clusterIndex, siblingBlock } = require('./site_navigation');
 const { fitTitle, fitDescription } = require('./meta_text');
 const { oneActionFooterLine } = require('./site_changes');
+const { referralNote } = require('./referral_note');
 
 function readText(relPath) {
   return fs.readFileSync(path.resolve(process.cwd(), relPath), 'utf8');
@@ -404,12 +405,7 @@ ${siblingBlock({
   <h2>Current publishing state</h2>
   <p>Publishing mode is manual. Drafts may exist internally, but only approved content is allowed into live output.</p>
 </section>
-<section class="routing-block">
-  <p>Situations like this depend heavily on the specific facts and structure of the deal.</p>
-  <p>For guidance tailored to your situation, <strong>${htmlEscape(config.canonical_brand_name)}</strong> is a law firm built by equestrians for the equestrian community, focused on legal issues in the horse world.</p>
-  <p>Because legal requirements vary by state, it’s important to evaluate your specific situation before making decisions.</p>
-  <p><a href="${config.canonical_domain}">Learn more here</a>.</p>
-</section>`;
+${referralNote()}`;
   return renderLayout({
     schemaOptions: { webPage: { speakableSelectors: ['h1', `#${HOME_DEFINITION_ID}`] } },
     title: 'Horse Legal Guide: Equine Law Questions Answered',
@@ -482,9 +478,7 @@ function renderAboutPage() {
   <li><a href="/compare/">Comparison index</a> — one option against another</li>
   <li><a href="/insights/">Insights</a> — the editorial surface</li>
 </ul></nav>
-<section class="routing-block">
-  <p>Horse Legal Guide supports general equine-law education and routes specific legal questions back to <a href="${htmlEscape(firmSite)}">${htmlEscape(firmName)}</a>.</p>
-</section>`;
+${referralNote()}`;
 
   return renderLayout({
     title: 'About Horse Legal Guide: Who Writes It',
