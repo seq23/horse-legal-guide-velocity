@@ -47154,6 +47154,458 @@
     "reason": "The page answers this question (shares leas, injur)."
   },
   {
+    "queue_id": "queue_1883_all-my-horses-walkinthewalk-209",
+    "normalized_id": "norm_4540_3c04c1d5c6",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "forum_the_horse_forum_all-my-horses-walkinthewalk-209-https-www-horseforum_1b8e1028"
+    ],
+    "preserved_query": "All My Horses walkinthewalk 209 — what should I know?",
+    "normalized_query": "All My Horses walkinthewalk 209 — what should I know?",
+    "llm_bait_phrase": "All My Horses walkinthewalk 209",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 1,
+    "match_evidence": {
+      "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/all-my-horses-walkinthewalk-209/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1884_pays-for-the-pre-purchase-vet-check-buyer-or-seller",
+    "normalized_id": "norm_4541_868933be0b",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "google_paa_manual_or_provider_who-pays-for-the-pre-purchase-vet-check-buyer-or-sel_e0b32bf6"
+    ],
+    "preserved_query": "who pays for the pre-purchase vet check buyer or seller?",
+    "normalized_query": "who pays for the pre-purchase vet check buyer or seller?",
+    "llm_bait_phrase": "pays for the pre-purchase vet check buyer or seller",
+    "cluster": "horse-sale-and-purchase",
+    "intent_type": "faq",
+    "signal_score": 0.85,
+    "match_evidence": {
+      "best_page": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "shared_terms": [
+        "purch",
+        "buyer"
+      ],
+      "question_coverage": 0.266,
+      "page_coverage": 0.6
+    },
+    "mapped_slug": "/faq/pays-for-the-pre-purchase-vet-check-buyer-or-seller/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1885_is-liable-if-a-leased-horse-gets-injured",
+    "normalized_id": "norm_4542_e546f25097",
+    "action": "strengthen_existing_page",
+    "source_signal_ids": [
+      "google_paa_manual_or_provider_who-is-liable-if-a-leased-horse-gets-injured-https-w_174f17de"
+    ],
+    "preserved_query": "Who is liable if a leased horse gets injured?",
+    "normalized_query": "Who is liable if a leased horse gets injured?",
+    "llm_bait_phrase": "is liable if a leased horse gets injured",
+    "cluster": "horse-lease-and-trial",
+    "intent_type": "scenario",
+    "signal_score": 0.85,
+    "match_evidence": {
+      "best_page": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "shared_terms": [
+        "leas",
+        "injur"
+      ],
+      "question_coverage": 0.733,
+      "page_coverage": 1
+    },
+    "mapped_slug": "/leases/what-happens-if-a-leased-horse-is-injured/",
+    "status": "approved_for_content",
+    "reason": "The page answers this question (shares leas, injur)."
+  },
+  {
+    "queue_id": "queue_1886_a-horse-lease-agreement-need-to-be-in-writing",
+    "normalized_id": "norm_4543_22085cb746",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "google_paa_manual_or_provider_does-a-horse-lease-agreement-need-to-be-in-writing-h_be70ab61"
+    ],
+    "preserved_query": "Does a horse lease agreement need to be in writing?",
+    "normalized_query": "Does a horse lease agreement need to be in writing?",
+    "llm_bait_phrase": "a horse lease agreement need to be in writing",
+    "cluster": "horse-lease-and-trial",
+    "intent_type": "faq",
+    "signal_score": 0.85,
+    "match_evidence": {
+      "best_page": "/leases/what-should-be-included-in-a-horse-lease-agreement/",
+      "shared_terms": [
+        "lease",
+        "agree"
+      ],
+      "question_coverage": 0.52,
+      "page_coverage": 0.578
+    },
+    "mapped_slug": "/faq/a-horse-lease-agreement-need-to-be-in-writing/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1887_pays-for-veterinary-care-in-a-horse-lease",
+    "normalized_id": "norm_4544_52d3c10849",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "google_paa_manual_or_provider_who-pays-for-veterinary-care-in-a-horse-lease-https-_fd28cfd8"
+    ],
+    "preserved_query": "Who pays for veterinary care in a horse lease?",
+    "normalized_query": "Who pays for veterinary care in a horse lease?",
+    "llm_bait_phrase": "pays for veterinary care in a horse lease",
+    "cluster": "horse-lease-and-trial",
+    "intent_type": "faq",
+    "signal_score": 0.85,
+    "match_evidence": {
+      "best_page": "/leases/who-pays-vet-bills-in-a-horse-lease/",
+      "shared_terms": [
+        "pay",
+        "lease"
+      ],
+      "question_coverage": 0.399,
+      "page_coverage": 0.472
+    },
+    "mapped_slug": "/faq/pays-for-veterinary-care-in-a-horse-lease/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1888_a-horse-lease-agreement-be-terminated-early",
+    "normalized_id": "norm_4545_37921d0a81",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "google_paa_manual_or_provider_can-a-horse-lease-agreement-be-terminated-early-http_a0094d9f"
+    ],
+    "preserved_query": "Can a horse lease agreement be terminated early?",
+    "normalized_query": "Can a horse lease agreement be terminated early?",
+    "llm_bait_phrase": "a horse lease agreement be terminated early",
+    "cluster": "horse-lease-and-trial",
+    "intent_type": "faq",
+    "signal_score": 0.85,
+    "match_evidence": {
+      "best_page": "/leases/can-you-end-a-horse-lease-early/",
+      "shared_terms": [
+        "lease",
+        "early"
+      ],
+      "question_coverage": 0.495,
+      "page_coverage": 0.616
+    },
+    "mapped_slug": "/faq/a-horse-lease-agreement-be-terminated-early/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1889_happens-if-a-leased-horse-dies",
+    "normalized_id": "norm_4546_b71ca9432e",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "google_paa_manual_or_provider_what-happens-if-a-leased-horse-dies-https-www-google_93c9d384"
+    ],
+    "preserved_query": "What happens if a leased horse dies?",
+    "normalized_query": "What happens if a leased horse dies?",
+    "llm_bait_phrase": "happens if a leased horse dies",
+    "cluster": "horse-lease-and-trial",
+    "intent_type": "scenario",
+    "signal_score": 0.85,
+    "match_evidence": {
+      "best_page": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "shared_terms": [
+        "leas"
+      ],
+      "question_coverage": 0.469,
+      "page_coverage": 0.548
+    },
+    "mapped_slug": "/scenario/happens-if-a-leased-horse-dies/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1890_is-responsible-for-farrier-costs-in-a-horse-lease",
+    "normalized_id": "norm_4547_cbdb5b1ac3",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "google_paa_manual_or_provider_who-is-responsible-for-farrier-costs-in-a-horse-leas_f2f068df"
+    ],
+    "preserved_query": "Who is responsible for farrier costs in a horse lease?",
+    "normalized_query": "Who is responsible for farrier costs in a horse lease?",
+    "llm_bait_phrase": "is responsible for farrier costs in a horse lease",
+    "cluster": "horse-lease-and-trial",
+    "intent_type": "faq",
+    "signal_score": 0.85,
+    "match_evidence": {
+      "best_page": "/leases/who-is-responsible-for-repairs-in-a-barn-lease/",
+      "shared_terms": [
+        "respo",
+        "lease"
+      ],
+      "question_coverage": 0.382,
+      "page_coverage": 0.478
+    },
+    "mapped_slug": "/faq/is-responsible-for-farrier-costs-in-a-horse-lease/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1891_the-lessee-need-insurance-for-a-leased-horse",
+    "normalized_id": "norm_4548_b9b1f17239",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "google_paa_manual_or_provider_does-the-lessee-need-insurance-for-a-leased-horse-ht_1d25fa04"
+    ],
+    "preserved_query": "Does the lessee need insurance for a leased horse?",
+    "normalized_query": "Does the lessee need insurance for a leased horse?",
+    "llm_bait_phrase": "the lessee need insurance for a leased horse",
+    "cluster": "horse-lease-and-trial",
+    "intent_type": "faq",
+    "signal_score": 0.85,
+    "match_evidence": {
+      "best_page": "/leases/what-happens-if-a-leased-horse-is-injured/",
+      "shared_terms": [
+        "leas"
+      ],
+      "question_coverage": 0.344,
+      "page_coverage": 0.548
+    },
+    "mapped_slug": "/faq/the-lessee-need-insurance-for-a-leased-horse/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1892_206-horses-sold-to-the-kill-buyer-in-one-day-here-s-where-th",
+    "normalized_id": "norm_4549_5003e3d3fb",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_206-horses-sold-to-the-kill-buyer-in-one-day-here-s-_9764bb20"
+    ],
+    "preserved_query": "206 Horses Sold to the Kill Buyer in One Day… Here's Where the Slaughter Truck Goes — what should I know?",
+    "normalized_query": "206 Horses Sold to the Kill Buyer in One Day… Here's Where the Slaughter Truck Goes — what should I know?",
+    "llm_bait_phrase": "206 Horses Sold to the Kill Buyer in One Day… Here's Where the Slaughter Truck Goes",
+    "cluster": "horse-sale-and-purchase",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/faq/what-happens-if-a-horse-sale-goes-wrong/",
+      "shared_terms": [
+        "goe"
+      ],
+      "question_coverage": 0.116,
+      "page_coverage": 0.406
+    },
+    "mapped_slug": "/faq/206-horses-sold-to-the-kill-buyer-in-one-day-here-s-where-the-slaughter-truck-goes/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1893_206-horses-sold-to-the-kill-buyer",
+    "normalized_id": "norm_4550_255f90a14d",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_206-horses-sold-to-the-kill-buyer-https-www-youtube-_ba1b7fee"
+    ],
+    "preserved_query": "206 horses sold to the kill buyer — what should I know?",
+    "normalized_query": "206 horses sold to the kill buyer — what should I know?",
+    "llm_bait_phrase": "206 horses sold to the kill buyer",
+    "cluster": "horse-sale-and-purchase",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/scenario/what-if-i-sold-a-horse-without-a-contract/",
+      "shared_terms": [
+        "sold"
+      ],
+      "question_coverage": 0.21,
+      "page_coverage": 0.392
+    },
+    "mapped_slug": "/faq/206-horses-sold-to-the-kill-buyer/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1894_sale-day-who-made-it-who-didn-t",
+    "normalized_id": "norm_4551_ccbc082322",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_sale-day-who-made-it-who-didn-t-https-www-youtube-co_b81a8686"
+    ],
+    "preserved_query": "Sale day: who made it, who didn't — what should I know?",
+    "normalized_query": "Sale day: who made it, who didn't — what should I know?",
+    "llm_bait_phrase": "Sale day: who made it, who didn't",
+    "cluster": "horse-sale-and-purchase",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/",
+      "shared_terms": [
+        "sale"
+      ],
+      "question_coverage": 0.188,
+      "page_coverage": 0.369
+    },
+    "mapped_slug": "/faq/sale-day-who-made-it-who-didn-t/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1895_live-his-horses-sorted-by-weight",
+    "normalized_id": "norm_4552_c6859ab666",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_live-his-horses-sorted-by-weight-https-www-youtube-c_4ded52c4"
+    ],
+    "preserved_query": "Live: his horses sorted by weight — what should I know?",
+    "normalized_query": "Live: his horses sorted by weight — what should I know?",
+    "llm_bait_phrase": "Live: his horses sorted by weight",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/live-his-horses-sorted-by-weight/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1896_isn-t-horse-slaughter-illegal",
+    "normalized_id": "norm_4553_85eafbaf6f",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_isn-t-horse-slaughter-illegal-https-www-youtube-com-_d067a13d"
+    ],
+    "preserved_query": "Isn't horse slaughter illegal — what should I know?",
+    "normalized_query": "Isn't horse slaughter illegal — what should I know?",
+    "llm_bait_phrase": "Isn't horse slaughter illegal",
+    "cluster": "state-specific",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
+      "shared_terms": [],
+      "question_coverage": 0,
+      "page_coverage": 0
+    },
+    "mapped_slug": "/faq/isn-t-horse-slaughter-illegal/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1897_nalbb-let-s-talk-insurance-liability",
+    "normalized_id": "norm_4554_71f5d505b9",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_nalbb-let-s-talk-insurance-liability-https-www-youtu_bf758224"
+    ],
+    "preserved_query": "NALBB Let's Talk Insurance- Liability — what should I know?",
+    "normalized_query": "NALBB Let's Talk Insurance- Liability — what should I know?",
+    "llm_bait_phrase": "NALBB Let's Talk Insurance- Liability",
+    "cluster": "liability-waivers-insurance",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/compare/waiver-vs-insurance-horse-liability/",
+      "shared_terms": [
+        "insur",
+        "liabi"
+      ],
+      "question_coverage": 0.275,
+      "page_coverage": 0.672
+    },
+    "mapped_slug": "/faq/nalbb-let-s-talk-insurance-liability/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1898_insurance-vs-liability",
+    "normalized_id": "norm_4555_c25bbd8367",
+    "action": "strengthen_existing_page",
+    "source_signal_ids": [
+      "youtube_search_comments_insurance-vs-liability-https-www-youtube-com-results_81c37612"
+    ],
+    "preserved_query": "Insurance vs Liability",
+    "normalized_query": "Insurance vs Liability",
+    "llm_bait_phrase": "Insurance vs Liability",
+    "cluster": "liability-waivers-insurance",
+    "intent_type": "comparison",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/compare/waiver-vs-insurance-horse-liability/",
+      "shared_terms": [
+        "insur",
+        "liabi"
+      ],
+      "question_coverage": 1,
+      "page_coverage": 0.672
+    },
+    "mapped_slug": "/compare/waiver-vs-insurance-horse-liability/",
+    "status": "approved_for_content",
+    "reason": "The page answers this question (shares insur, liabi)."
+  },
+  {
+    "queue_id": "queue_1899_real-labor-data-from-114-pet-boarding-u0026-daycare-location",
+    "normalized_id": "norm_4556_a608c29226",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_real-labor-data-from-114-pet-boarding-u0026-daycare-_a1ff3a93"
+    ],
+    "preserved_query": "Real Labor Data From 114 Pet Boarding \\u0026 Daycare Locations — what should I know?",
+    "normalized_query": "Real Labor Data From 114 Pet Boarding \\u0026 Daycare Locations — what should I know?",
+    "llm_bait_phrase": "Real Labor Data From 114 Pet Boarding \\u0026 Daycare Locations",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/compare/boarding-agreement-vs-training-agreement/",
+      "shared_terms": [
+        "board"
+      ],
+      "question_coverage": 0.058,
+      "page_coverage": 0.323
+    },
+    "mapped_slug": "/faq/real-labor-data-from-114-pet-boarding-u0026-daycare-locations/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
+    "queue_id": "queue_1900_ollie-s-law-would-mandate-regulations-for-pet-boarding-facil",
+    "normalized_id": "norm_4557_db2e932681",
+    "action": "hold_for_owner_review",
+    "source_signal_ids": [
+      "youtube_search_comments_ollie-s-law-would-mandate-regulations-for-pet-boardi_a23a921c"
+    ],
+    "preserved_query": "‘Ollie’s Law’ Would Mandate Regulations For Pet-Boarding Facilities In Massachusetts — what should I know?",
+    "normalized_query": "‘Ollie’s Law’ Would Mandate Regulations For Pet-Boarding Facilities In Massachusetts — what should I know?",
+    "llm_bait_phrase": "‘Ollie’s Law’ Would Mandate Regulations For Pet-Boarding Facilities In Massachusetts",
+    "cluster": "boarding-training-and-barn-operations",
+    "intent_type": "faq",
+    "signal_score": 0.65,
+    "match_evidence": {
+      "best_page": "/compare/facility-lease-vs-pasture-lease/",
+      "shared_terms": [
+        "facil"
+      ],
+      "question_coverage": 0.113,
+      "page_coverage": 0.361
+    },
+    "mapped_slug": "/faq/ollie-s-law-would-mandate-regulations-for-pet-boarding-facilities-in-massachusetts/",
+    "status": "pending_owner_review",
+    "reason": "No existing page answers this question; queued as a new page for owner review."
+  },
+  {
     "queue_id": "queue_requeued_horse-lease-agreement",
     "requeued_id": "requeued_horse-lease-agreement",
     "action": "hold_for_owner_review",
