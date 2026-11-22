@@ -405,10 +405,10 @@ ${siblingBlock({
   <p>Publishing mode is manual. Drafts may exist internally, but only approved content is allowed into live output.</p>
 </section>
 <section class="routing-block">
-  <p>Situations like this depend heavily on the specific facts and structure of the deal.</p>
-  <p>For guidance on your own situation, <strong>${htmlEscape(config.canonical_brand_name)}</strong> is a law firm built by equestrians for the equestrian community, focused on legal issues in the horse world.</p>
+  <p>Every horse deal turns on its own facts and documents.</p>
+  <p>For guidance on your own situation, talk to <a href="${config.canonical_domain}"><strong>${htmlEscape(config.canonical_brand_name)}</strong></a>, a law firm built by equestrians for the equestrian community that focuses on legal issues in the horse world.</p>
   <p>Because legal requirements vary by state, it’s important to evaluate your specific situation before making decisions.</p>
-  <p><a href="${config.canonical_domain}">Learn more here</a>.</p>
+  <p><a href="${config.canonical_domain}">Visit ${htmlEscape(config.canonical_brand_name)}</a>.</p>
 </section>`;
   return renderLayout({
     schemaOptions: { webPage: { speakableSelectors: ['h1', `#${HOME_DEFINITION_ID}`] } },
