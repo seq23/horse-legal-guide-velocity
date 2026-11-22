@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-11-21T20:55:46.000Z",
+  "generated_at": "2026-11-22T20:27:59.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-11-21T20:55:48.466Z",
-      "age_hours": 0,
+      "age_hours": 23.5,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "ok",
       "checked_at": "2026-11-21T20:55:48.466Z",
-      "age_hours": 0,
+      "age_hours": 23.5,
       "message": "Bing Webmaster monitoring refreshed."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-11-21T20:55:48.466Z",
-      "age_hours": 0,
+      "age_hours": 23.5,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -5080,7 +5080,7 @@
       "canonical_present": 588,
       "duplicate_title_groups": 262,
       "duplicate_description_groups": 94,
-      "high_similarity_pairs": 110,
+      "high_similarity_pairs": 112,
       "intent_overlap_pairs": 23,
       "uniqueness_review_clusters": 18,
       "drafts_automatically_differentiated": 265,
@@ -5099,15 +5099,15 @@
       "hard_fail_items": 0,
       "word_warning_items": 2,
       "ai_risk_items": 17,
-      "workflow_count": 22,
-      "workflow_passed": 22,
+      "workflow_count": 23,
+      "workflow_passed": 23,
       "workflow_warning_count": 0,
       "signal_raw_store_count": 4558,
       "signal_fresh_collected_count": 58,
       "signal_failed_sources": 0,
       "signal_zero_reddit_warning": true,
       "github_actions_simulation_status": "passed",
-      "github_actions_simulated_workflows": 22,
+      "github_actions_simulated_workflows": 23,
       "github_actions_simulation_warnings": 0,
       "github_actions_live_followups": 4,
       "github_actions_simulation_failures": 0
@@ -5116,7 +5116,7 @@
       "indexable_pages_measured": 326,
       "duplicate_title_groups": 1,
       "duplicate_description_groups": 1,
-      "high_similarity_pairs": 110,
+      "high_similarity_pairs": 112,
       "intent_overlap_pairs": 23
     },
     "family_metrics": {
@@ -5141,13 +5141,13 @@
       "boarding": {
         "pages": 11,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 4,
+        "high_similarity_pair_memberships": 6,
         "intent_overlap_pair_memberships": 1
       },
       "business": {
         "pages": 13,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 78,
+        "high_similarity_pair_memberships": 80,
         "intent_overlap_pair_memberships": 0
       },
       "compare": {
@@ -12102,7 +12102,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9754,
+        "maximum_body_similarity": 0.9757,
         "suggested_actions": [
           "redirect_to_primary",
           "differentiate_patch"
@@ -12133,7 +12133,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9488,
+        "maximum_body_similarity": 0.9497,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12145,6 +12145,37 @@
       {
         "proposal_id": "remediation-uniqueness-0004",
         "ledger_id": "uniqueness-0004",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
+        "candidate_primary": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
+        "members": [
+          "/state/illinois/what-does-illinois-equine-liability-law-cover/",
+          "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+          "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
+          "/state/south-carolina/do-i-need-a-liability-waiver/"
+        ],
+        "families": [
+          "state"
+        ],
+        "reasons": [
+          "high_body_similarity"
+        ],
+        "maximum_body_similarity": 0.9409,
+        "suggested_actions": [
+          "differentiate_patch"
+        ],
+        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0005",
+        "ledger_id": "uniqueness-0005",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12166,37 +12197,6 @@
           "high_body_similarity"
         ],
         "maximum_body_similarity": 0.9402,
-        "suggested_actions": [
-          "differentiate_patch"
-        ],
-        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0005",
-        "ledger_id": "uniqueness-0005",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
-        "candidate_primary": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
-        "members": [
-          "/state/illinois/what-does-illinois-equine-liability-law-cover/",
-          "/state/north-carolina/do-i-need-a-horse-sale-contract/",
-          "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
-          "/state/south-carolina/do-i-need-a-liability-waiver/"
-        ],
-        "families": [
-          "state"
-        ],
-        "reasons": [
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.9399,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12260,7 +12260,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9127,
+        "maximum_body_similarity": 0.9137,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12328,7 +12328,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9107,
+        "maximum_body_similarity": 0.9118,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12357,7 +12357,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9068,
+        "maximum_body_similarity": 0.9087,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12387,7 +12387,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9021,
+        "maximum_body_similarity": 0.9041,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12418,7 +12418,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.9016,
+        "maximum_body_similarity": 0.9039,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12448,7 +12448,7 @@
           "duplicate_title",
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8864,
+        "maximum_body_similarity": 0.8883,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12477,7 +12477,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8771,
+        "maximum_body_similarity": 0.8791,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12495,9 +12495,10 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
+        "candidate_primary": "/boarding/what-should-be-included-in-a-training-agreement/",
         "members": [
           "/boarding/what-liability-does-a-trainer-have/",
+          "/boarding/what-should-be-included-in-a-training-agreement/",
           "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
           "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/"
         ],
@@ -12507,7 +12508,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8692,
+        "maximum_body_similarity": 0.8722,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12537,7 +12538,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8691,
+        "maximum_body_similarity": 0.8708,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12566,7 +12567,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8687,
+        "maximum_body_similarity": 0.8706,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12595,7 +12596,7 @@
         "reasons": [
           "high_body_similarity"
         ],
-        "maximum_body_similarity": 0.8683,
+        "maximum_body_similarity": 0.8705,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12886,20 +12887,20 @@
         "/therapeutic/do-i-need-insurance-for-therapeutic-riding/",
         "/therapeutic/what-legal-requirements-apply-to-therapeutic-riding-programs/",
         "/therapeutic/how-do-i-start-an-equine-assisted-therapy-program-legally/",
-        "/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
-        "/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
         "/state/south-carolina/do-i-need-a-liability-waiver/",
         "/state/north-carolina/do-i-need-a-horse-sale-contract/",
-        "/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
-        "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
-        "/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/",
-        "/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
-        "/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/",
-        "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+        "/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
         "/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
-        "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
+        "/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
+        "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
+        "/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/",
+        "/insights/2026-05-06/what-equestrians-often-miss-about-can-a-buyer-sue-after-an-as-is-horse-sale/",
+        "/insights/2026-05-11/where-contract-vs-handshake-deal-in-a-horse-sale-usually-goes-sideways/",
+        "/insights/2026-05-01/a-plain-english-note-on-what-happens-if-there-is-no-written-agreement-in-a-horse-sale/",
         "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
         "/state/illinois/what-does-illinois-equine-liability-law-cover/",
+        "/insights/2026-04-29/where-who-is-responsible-after-a-horse-sale-is-completed-usually-goes-sideways/",
+        "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
         "/insights/2026-05-05/where-what-happens-if-a-horse-becomes-lame-after-sale-usually-goes-sideways/",
         "/insights/2026-04-25/a-plain-english-note-on-do-i-need-a-contract-to-buy-a-horse/",
         "/leases/what-should-be-included-in-a-barn-lease/",

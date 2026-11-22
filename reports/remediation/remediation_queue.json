@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-21T20:55:46.000Z",
-  "source_fingerprint": "666fd3fd44adfa803abe130104741a6b68428fd451a66d098a48e1018a831160",
+  "generated_at": "2026-11-22T20:27:59.000Z",
+  "source_fingerprint": "dff5b068ffa172e4bf121007704e890235a7b033f65d18e48f37fa41c4c1b58e",
   "policy": "Owner approval required before any live-page search control or page patch is applied.",
   "summary": {
     "total": 18,
@@ -67,7 +67,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9754,
+      "maximum_body_similarity": 0.9757,
       "suggested_actions": [
         "redirect_to_primary",
         "differentiate_patch"
@@ -98,7 +98,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9488,
+      "maximum_body_similarity": 0.9497,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -110,6 +110,37 @@
     {
       "proposal_id": "remediation-uniqueness-0004",
       "ledger_id": "uniqueness-0004",
+      "status": "pending_owner_approval",
+      "approved_action": null,
+      "approved_by": null,
+      "approved_at": null,
+      "applied_at": null,
+      "rejected_at": null,
+      "candidate_primary": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
+      "members": [
+        "/state/illinois/what-does-illinois-equine-liability-law-cover/",
+        "/state/north-carolina/do-i-need-a-horse-sale-contract/",
+        "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
+        "/state/south-carolina/do-i-need-a-liability-waiver/"
+      ],
+      "families": [
+        "state"
+      ],
+      "reasons": [
+        "high_body_similarity"
+      ],
+      "maximum_body_similarity": 0.9409,
+      "suggested_actions": [
+        "differentiate_patch"
+      ],
+      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+      "approval_required_for_live_change": true,
+      "automatic_live_change": false,
+      "patch_plan": null
+    },
+    {
+      "proposal_id": "remediation-uniqueness-0005",
+      "ledger_id": "uniqueness-0005",
       "status": "pending_owner_approval",
       "approved_action": null,
       "approved_by": null,
@@ -131,37 +162,6 @@
         "high_body_similarity"
       ],
       "maximum_body_similarity": 0.9402,
-      "suggested_actions": [
-        "differentiate_patch"
-      ],
-      "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-      "approval_required_for_live_change": true,
-      "automatic_live_change": false,
-      "patch_plan": null
-    },
-    {
-      "proposal_id": "remediation-uniqueness-0005",
-      "ledger_id": "uniqueness-0005",
-      "status": "pending_owner_approval",
-      "approved_action": null,
-      "approved_by": null,
-      "approved_at": null,
-      "applied_at": null,
-      "rejected_at": null,
-      "candidate_primary": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
-      "members": [
-        "/state/illinois/what-does-illinois-equine-liability-law-cover/",
-        "/state/north-carolina/do-i-need-a-horse-sale-contract/",
-        "/state/north-carolina/what-does-north-carolina-equine-liability-law-cover/",
-        "/state/south-carolina/do-i-need-a-liability-waiver/"
-      ],
-      "families": [
-        "state"
-      ],
-      "reasons": [
-        "high_body_similarity"
-      ],
-      "maximum_body_similarity": 0.9399,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -225,7 +225,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9127,
+      "maximum_body_similarity": 0.9137,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -293,7 +293,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9107,
+      "maximum_body_similarity": 0.9118,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -322,7 +322,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9068,
+      "maximum_body_similarity": 0.9087,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -352,7 +352,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9021,
+      "maximum_body_similarity": 0.9041,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -383,7 +383,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.9016,
+      "maximum_body_similarity": 0.9039,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -413,7 +413,7 @@
         "duplicate_title",
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8864,
+      "maximum_body_similarity": 0.8883,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -442,7 +442,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8771,
+      "maximum_body_similarity": 0.8791,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -460,9 +460,10 @@
       "approved_at": null,
       "applied_at": null,
       "rejected_at": null,
-      "candidate_primary": "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
+      "candidate_primary": "/boarding/what-should-be-included-in-a-training-agreement/",
       "members": [
         "/boarding/what-liability-does-a-trainer-have/",
+        "/boarding/what-should-be-included-in-a-training-agreement/",
         "/boarding/who-is-liable-if-a-horse-is-injured-while-boarded/",
         "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/"
       ],
@@ -472,7 +473,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8692,
+      "maximum_body_similarity": 0.8722,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -502,7 +503,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8691,
+      "maximum_body_similarity": 0.8708,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -531,7 +532,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8687,
+      "maximum_body_similarity": 0.8706,
       "suggested_actions": [
         "differentiate_patch"
       ],
@@ -560,7 +561,7 @@
       "reasons": [
         "high_body_similarity"
       ],
-      "maximum_body_similarity": 0.8683,
+      "maximum_body_similarity": 0.8705,
       "suggested_actions": [
         "differentiate_patch"
       ],
