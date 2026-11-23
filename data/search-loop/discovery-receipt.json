@@ -1,8 +1,8 @@
 {
   "schema": "search-loop-discovery-v1",
   "site": "horselegalguide.com",
-  "week": "2026-W47",
-  "generated_at": "2026-11-16T13:46:58.711Z",
+  "week": "2026-W48",
+  "generated_at": "2026-11-23T18:04:58.454Z",
   "paid_calls": 0,
   "cost_usd": 0,
   "hosts": {
@@ -19,25 +19,25 @@
       "cost_usd": 0
     },
     "suggestqueries.google.com": {
-      "calls": 77,
-      "ok": 77,
+      "calls": 40,
+      "ok": 40,
       "failed": 0,
       "cost_usd": 0
     },
     "api.bing.com": {
-      "calls": 3,
-      "ok": 0,
-      "failed": 3,
+      "calls": 40,
+      "ok": 40,
+      "failed": 0,
       "cost_usd": 0
     }
   },
   "sources": {
-    "search_console": "ok: 41 rows",
-    "bing_webmaster": "ok: 140 rows",
-    "easy_wins": "ok: 0 easy win(s) in Search Console",
+    "search_console": "ok: 58 rows",
+    "bing_webmaster": "ok: 158 rows",
+    "easy_wins": "ok: 1 easy win(s) in Search Console",
     "suggestqueries.google.com": "ok",
-    "api.bing.com": "not read: unavailable after 3 failures (last http 204)",
-    "relevance_screen": "ok: kept 28 of 71 (free model)",
+    "api.bing.com": "ok",
+    "relevance_screen": "ok: kept 78 of 150 (free model)",
     "top10": "not read: no BRAVE_SEARCH_API_KEY"
   },
   "notes": [
@@ -49,8 +49,8 @@
       "can_be_one": 2,
       "striking": 1
     },
-    "can_be_one": 0,
-    "striking": 28,
+    "can_be_one": 8,
+    "striking": 70,
     "weights": {
       "neighbour": 35,
       "unanswered": 30,
@@ -59,9 +59,9 @@
     }
   },
   "counts": {
-    "candidates": 99,
-    "targets": 28,
-    "strengthen_candidates": 4,
+    "candidates": 207,
+    "targets": 78,
+    "strengthen_candidates": 5,
     "dropped_shared_audience": 0
   }
 }

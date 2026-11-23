@@ -1,36 +1,415 @@
 {
   "schema": "search-loop-targets-v1",
   "site": "horselegalguide.com",
-  "week": "2026-W47",
-  "generated_at": "2026-11-16T13:46:58.711Z",
+  "week": "2026-W48",
+  "generated_at": "2026-11-23T18:04:58.454Z",
   "sources": {
-    "search_console": "ok: 41 rows",
-    "bing_webmaster": "ok: 140 rows",
-    "easy_wins": "ok: 0 easy win(s) in Search Console",
+    "search_console": "ok: 58 rows",
+    "bing_webmaster": "ok: 158 rows",
+    "easy_wins": "ok: 1 easy win(s) in Search Console",
     "suggestqueries.google.com": "ok",
-    "api.bing.com": "not read: unavailable after 3 failures (last http 204)",
-    "relevance_screen": "ok: kept 28 of 71 (free model)",
+    "api.bing.com": "ok",
+    "relevance_screen": "ok: kept 78 of 150 (free model)",
     "top10": "not read: no BRAVE_SEARCH_API_KEY"
   },
   "targets": [
     {
-      "query": "what is equine inherent risk law",
+      "query": "horse boarding liability waiver law",
       "variants": [],
       "signals": {
-        "words": 6,
-        "question": true,
-        "google_suggest": true,
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "neighbour": {
+          "sim": 0.6,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        },
+        "unanswered": {
+          "words": 5,
+          "covered": 0.4,
+          "parts_best_position": 2,
+          "parts_rows": 2
+        },
         "top10": "not read: no BRAVE_SEARCH_API_KEY"
       },
       "scores": {
-        "striking": 30,
+        "striking": 20,
+        "can_be_one": 61
+      },
+      "score": 61,
+      "kind": "new",
+      "lane": "can_be_one",
+      "reasons": [
+        "easy-win neighbour of \"horse riding liability waiver\" (top 2 with 3 impressions)",
+        "no site page answers this 5-word question, and the site holds its parts at position 2",
+        "people search it (autocomplete or impressions)"
+      ]
+    },
+    {
+      "query": "horseback riding liability waiver",
+      "variants": [
+        "liability waiver for horseback riding"
+      ],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "gsc_position": 18.5,
+        "gsc_impressions": 2,
+        "gsc_page": "https://horselegalguide.com/hubs/liability-waivers-insurance/",
+        "bing_suggest": true,
+        "neighbour": {
+          "sim": 0.75,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        },
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 47.2,
+        "can_be_one": 36.3
+      },
+      "score": 47.2,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "already ranks 18.5 in Search Console (2 impressions)",
+        "can-be-#1 score 36.3 too (taken by the striking lane's turn)"
+      ]
+    },
+    {
+      "query": "horse boarding liability waiver requirements",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "neighbour": {
+          "sim": 0.6,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        },
+        "unanswered": {
+          "words": 5,
+          "covered": 0.4,
+          "parts_best_position": 2,
+          "parts_rows": 2
+        },
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 61
+      },
+      "score": 61,
+      "kind": "new",
+      "lane": "can_be_one",
+      "reasons": [
+        "easy-win neighbour of \"horse riding liability waiver\" (top 2 with 3 impressions)",
+        "no site page answers this 5-word question, and the site holds its parts at position 2",
+        "people search it (autocomplete or impressions)"
+      ]
+    },
+    {
+      "query": "horse boarding liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "neighbour": {
+          "sim": 0.75,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        },
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 36.3
+      },
+      "score": 36.3,
+      "kind": "new",
+      "lane": "can_be_one",
+      "reasons": [
+        "easy-win neighbour of \"horse riding liability waiver\" (top 2 with 3 impressions)",
+        "people search it (autocomplete or impressions)"
+      ]
+    },
+    {
+      "query": "horse sale agreement template",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "google_suggest": true,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
         "can_be_one": 0
       },
-      "score": 30,
+      "score": 40,
       "kind": "new",
       "lane": "striking",
       "reasons": [
         "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse boarding waiver of liability form",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "neighbour": {
+          "sim": 0.6,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        },
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 31
+      },
+      "score": 31,
+      "kind": "new",
+      "lane": "can_be_one",
+      "reasons": [
+        "easy-win neighbour of \"horse riding liability waiver\" (top 2 with 3 impressions)",
+        "people search it (autocomplete or impressions)"
+      ]
+    },
+    {
+      "query": "horse trainer liability insurance",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "gsc_position": 23,
+        "gsc_impressions": 1,
+        "gsc_page": "https://horselegalguide.com/hubs/liability-waivers-insurance/",
+        "neighbour": {
+          "sim": 0.5,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        },
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 26.7,
+        "can_be_one": 27.5
+      },
+      "score": 27.5,
+      "kind": "new",
+      "lane": "can_be_one",
+      "reasons": [
+        "easy-win neighbour of \"horse riding liability waiver\" (top 2 with 3 impressions)",
+        "people search it (autocomplete or impressions)"
+      ]
+    },
+    {
+      "query": "horse bill of sale",
+      "variants": [
+        "bill of sale horse",
+        "simple horse bill of sale",
+        "as is horse bill of sale",
+        "horse bill of sale explained",
+        "bill of sale of horse",
+        "examples of bill of sale for horse",
+        "horse bill of sale easy",
+        "simple bill of sale for a horse"
+      ],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "google_suggest": true,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
+      },
+      "score": 40,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "free equine liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "neighbour": {
+          "sim": 0.5,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        },
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 27.5
+      },
+      "score": 27.5,
+      "kind": "new",
+      "lane": "can_be_one",
+      "reasons": [
+        "easy-win neighbour of \"horse riding liability waiver\" (top 2 with 3 impressions)",
+        "people search it (autocomplete or impressions)"
+      ]
+    },
+    {
+      "query": "equine activity liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "neighbour": {
+          "sim": 0.5,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        },
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 27.5
+      },
+      "score": 27.5,
+      "kind": "new",
+      "lane": "can_be_one",
+      "reasons": [
+        "easy-win neighbour of \"horse riding liability waiver\" (top 2 with 3 impressions)",
+        "people search it (autocomplete or impressions)"
+      ]
+    },
+    {
+      "query": "horse bill of sale example",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "google_suggest": true,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 40,
+        "can_be_one": 0
+      },
+      "score": 40,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine trainer liability waiver",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "neighbour": {
+          "sim": 0.5,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        },
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 27.5
+      },
+      "score": 27.5,
+      "kind": "new",
+      "lane": "can_be_one",
+      "reasons": [
+        "easy-win neighbour of \"horse riding liability waiver\" (top 2 with 3 impressions)",
+        "people search it (autocomplete or impressions)"
+      ]
+    },
+    {
+      "query": "horse sale contract",
+      "variants": [
+        "sale of horse contract",
+        "contract of sale for horse",
+        "horse contract of sale"
+      ],
+      "signals": {
+        "words": 3,
+        "question": false,
+        "gsc_position": 29.5,
+        "gsc_impressions": 2,
+        "gsc_page": "https://horselegalguide.com/questions/horse-sale-contract-with-payments/",
+        "bing_suggest": true,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 37.2,
+        "can_be_one": 0
+      },
+      "score": 37.2,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "already ranks 29.5 in Search Console (2 impressions)"
+      ]
+    },
+    {
+      "query": "image right solicitors",
+      "variants": [],
+      "signals": {
+        "words": 3,
+        "question": false,
+        "gsc_position": 12,
+        "gsc_impressions": 1,
+        "gsc_page": "https://horselegalguide.com/compare/use-of-image-rights-vs-copyright-ownership/",
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 36.7,
+        "can_be_one": 0
+      },
+      "score": 36.7,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "already ranks 12 in Search Console (1 impressions)"
+      ]
+    },
+    {
+      "query": "horse trial contract",
+      "variants": [],
+      "signals": {
+        "words": 3,
+        "question": false,
+        "gsc_position": 13,
+        "gsc_impressions": 1,
+        "gsc_page": "https://horselegalguide.com/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/",
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 34.9,
+        "can_be_one": 0
+      },
+      "score": 34.9,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "already ranks 13 in Search Console (1 impressions)"
       ]
     },
     {
@@ -76,268 +455,99 @@
       ]
     },
     {
-      "query": "horse bill of sale example",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 25,
-        "can_be_one": 0
-      },
-      "score": 25,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse bill of sale montana",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 25,
-        "can_be_one": 0
-      },
-      "score": 25,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "equine liability waiver florida",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 25,
-        "can_be_one": 0
-      },
-      "score": 25,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "equine activity liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 25,
-        "can_be_one": 0
-      },
-      "score": 25,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse lease agreement example",
-      "variants": [
-        "example of horse lease agreement"
-      ],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 25,
-        "can_be_one": 0
-      },
-      "score": 25,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse lease agreement california",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 25,
-        "can_be_one": 0
-      },
-      "score": 25,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse purchase contract with payments",
-      "variants": [],
-      "signals": {
-        "words": 5,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 25,
-        "can_be_one": 0
-      },
-      "score": 25,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse purchase contract template",
-      "variants": [],
-      "signals": {
-        "words": 4,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 25,
-        "can_be_one": 0
-      },
-      "score": 25,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse sale contract",
-      "variants": [],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "gsc_position": 29.5,
-        "gsc_impressions": 2,
-        "gsc_page": "https://horselegalguide.com/questions/horse-sale-contract-with-payments/",
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 22.2,
-        "can_be_one": 0
-      },
-      "score": 22.2,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "already ranks 29.5 in Search Console (2 impressions)"
-      ]
-    },
-    {
-      "query": "do you have horse purcase agreement",
+      "query": "horse bill of sale template free",
       "variants": [],
       "signals": {
         "words": 6,
-        "question": true,
-        "bing_impressions": 1,
-        "bing_position": 10,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 18,
-        "can_be_one": 0
-      },
-      "score": 18,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "do you need an indemnification clause on a horse oease gareement",
-      "variants": [],
-      "signals": {
-        "words": 11,
-        "question": true,
-        "bing_impressions": 1,
-        "bing_position": 10,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 18,
-        "can_be_one": 0
-      },
-      "score": 18,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "can you buy a horse and place them under and llc later",
-      "variants": [],
-      "signals": {
-        "words": 12,
-        "question": true,
-        "bing_impressions": 1,
-        "bing_position": 9,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 18,
-        "can_be_one": 0
-      },
-      "score": 18,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "if someone gets hurt by riding a horse on my property on colorado",
-      "variants": [],
-      "signals": {
-        "words": 13,
         "question": false,
-        "bing_impressions": 4,
-        "bing_position": 9,
+        "google_suggest": true,
         "top10": "not read: no BRAVE_SEARCH_API_KEY"
       },
       "scores": {
-        "striking": 17,
+        "striking": 25,
         "can_be_one": 0
       },
-      "score": 17,
+      "score": 25,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale form",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "score": 25,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale with first right of refusal",
+      "variants": [],
+      "signals": {
+        "words": 9,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "score": 25,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "how to obtain a bill of sale for a horse",
+      "variants": [],
+      "signals": {
+        "words": 10,
+        "question": true,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "score": 25,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse sale contract template free",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "google_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 25,
+        "can_be_one": 0
+      },
+      "score": 25,
       "kind": "new",
       "lane": "striking",
       "reasons": [
@@ -350,221 +560,36 @@
       "signals": {
         "words": 3,
         "question": false,
-        "gsc_position": 24.5,
-        "gsc_impressions": 2,
+        "gsc_position": 19,
+        "gsc_impressions": 1,
         "gsc_page": "https://horselegalguide.com/hubs/horse-lease-and-trial/",
         "top10": "not read: no BRAVE_SEARCH_API_KEY"
       },
       "scores": {
-        "striking": 16.3,
+        "striking": 24,
         "can_be_one": 0
       },
-      "score": 16.3,
+      "score": 24,
       "kind": "new",
       "lane": "striking",
       "reasons": [
-        "already ranks 24.5 in Search Console (2 impressions)"
+        "already ranks 19 in Search Console (1 impressions)"
       ]
     },
     {
-      "query": "horse sale agreement",
-      "variants": [],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 15,
-        "can_be_one": 0
-      },
-      "score": 15,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 15,
-        "can_be_one": 0
-      },
-      "score": 15,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "equestrian liability waiver",
-      "variants": [],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 15,
-        "can_be_one": 0
-      },
-      "score": 15,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "equine liability release",
-      "variants": [],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 15,
-        "can_be_one": 0
-      },
-      "score": 15,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse lease agreement",
-      "variants": [
-        "what is a horse lease agreement"
-      ],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 15,
-        "can_be_one": 0
-      },
-      "score": 15,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse purchase contract",
-      "variants": [],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 15,
-        "can_be_one": 0
-      },
-      "score": 15,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "horse buying contract",
-      "variants": [],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 15,
-        "can_be_one": 0
-      },
-      "score": 15,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "factual situations a barn owner or manager might encounter that might have legal consequences",
-      "variants": [],
-      "signals": {
-        "words": 14,
-        "question": false,
-        "bing_impressions": 1,
-        "bing_position": 10,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 13,
-        "can_be_one": 0
-      },
-      "score": 13,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "if a lease shows a horse and wins who gets the check",
-      "variants": [],
-      "signals": {
-        "words": 12,
-        "question": false,
-        "bing_impressions": 1,
-        "bing_position": 8,
-        "top10": "not read: no BRAVE_SEARCH_API_KEY"
-      },
-      "scores": {
-        "striking": 13,
-        "can_be_one": 0
-      },
-      "score": 13,
-      "kind": "new",
-      "lane": "striking",
-      "reasons": [
-        "autocomplete demand (google/bing)"
-      ]
-    },
-    {
-      "query": "legalities of returning a horse",
+      "query": "horse purchase agreement with deposit",
       "variants": [],
       "signals": {
         "words": 5,
         "question": false,
-        "bing_impressions": 1,
-        "bing_position": 9,
+        "bing_suggest": true,
         "top10": "not read: no BRAVE_SEARCH_API_KEY"
       },
       "scores": {
-        "striking": 13,
+        "striking": 20,
         "can_be_one": 0
       },
-      "score": 13,
+      "score": 20,
       "kind": "new",
       "lane": "striking",
       "reasons": [
@@ -572,20 +597,1090 @@
       ]
     },
     {
-      "query": "terms and leasr for a horse",
+      "query": "horse purchase and sale agreement",
+      "variants": [
+        "horse purchase sale agreement",
+        "horse sale and purchase agreement"
+      ],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse purchase and sale agreement printable",
       "variants": [],
       "signals": {
         "words": 6,
         "question": false,
-        "bing_impressions": 1,
-        "bing_position": 10,
+        "bing_suggest": true,
         "top10": "not read: no BRAVE_SEARCH_API_KEY"
       },
       "scores": {
-        "striking": 13,
+        "striking": 20,
         "can_be_one": 0
       },
-      "score": 13,
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse purchase and sale agreement template",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "free horse purchase agreement",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse lease to purchase agreement",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "basic horse purchase agreement",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "contract for buying a horse legal advice",
+      "variants": [],
+      "signals": {
+        "words": 7,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "lease to buy horse agreement",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "generic purchase agreement for horse",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine purchase agreement form",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "buying a horse contract pdf",
+      "variants": [
+        "contract for buying a horse pdf"
+      ],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "buying a horse contract legal issues",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "contract for buying a horse examples",
+      "variants": [
+        "buying a horse contract tips"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "buying a horse contract sample",
+      "variants": [
+        "contract for buying a horse sample"
+      ],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "selling a horse contract",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "contract for buying a horse online",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "lease to own horse contract tips",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sales contract horse legal",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sales contract horse pdf",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sales contract horse clauses",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sales contract horse sample",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sales contract horse terms",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sales contract horse conditions",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sales contract horse form",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "power of attorney to sell horse",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale example contract",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse lease to buy contract",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale word",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale example pdf",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale example form",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas pdf",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas form",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas free",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas legal",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas online",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas sample",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas example",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas download",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas template",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale texas requirements",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale montana",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale florida",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale california",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "simple horse bill of sale pdf free download",
+      "variants": [],
+      "signals": {
+        "words": 8,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse sale bill of sale",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "bill of sale for horse purchase",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale example legal",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale free example",
+      "variants": [
+        "horse bill of sale example free"
+      ],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "sample horse bill of sale",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "equine bill of sale",
+      "variants": [],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse bill of sale online",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "bill of sale legal form for horse",
+      "variants": [],
+      "signals": {
+        "words": 7,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "basic horse bill of sale",
+      "variants": [],
+      "signals": {
+        "words": 5,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
+      "kind": "new",
+      "lane": "striking",
+      "reasons": [
+        "autocomplete demand (google/bing)"
+      ]
+    },
+    {
+      "query": "horse sale contract with trial period",
+      "variants": [],
+      "signals": {
+        "words": 6,
+        "question": false,
+        "bing_suggest": true,
+        "top10": "not read: no BRAVE_SEARCH_API_KEY"
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 0
+      },
+      "score": 20,
       "kind": "new",
       "lane": "striking",
       "reasons": [
@@ -595,51 +1690,77 @@
   ],
   "strengthen": [
     {
-      "query": "equine liability waiver",
+      "query": "release of claims settlement agreement",
       "variants": [],
       "signals": {
-        "words": 3,
+        "words": 5,
         "question": false,
-        "google_suggest": true
+        "gsc_position": 11,
+        "gsc_impressions": 2,
+        "gsc_page": "https://www.horselegalguide.com/compare/release-of-claims-vs-settlement-agreement/"
       },
       "scores": {
-        "striking": 15,
+        "striking": 50.9,
         "can_be_one": 0
       },
-      "score": 15,
-      "page": "/compare/equine-therapy-consent-form-vs-liability-waiver/"
-    },
-    {
-      "query": "equine liability form",
-      "variants": [],
-      "signals": {
-        "words": 3,
-        "question": false,
-        "google_suggest": true
-      },
-      "scores": {
-        "striking": 15,
-        "can_be_one": 0
-      },
-      "score": 15,
-      "page": "/compare/equine-therapy-consent-form-vs-liability-waiver/"
+      "score": 50.9,
+      "page": "/compare/release-of-claims-vs-settlement-agreement/"
     },
     {
       "query": "equine law",
-      "variants": [
-        "what is equine law"
-      ],
+      "variants": [],
       "signals": {
         "words": 2,
         "question": false,
-        "google_suggest": true
+        "gsc_position": 19.8,
+        "gsc_impressions": 6,
+        "gsc_page": "https://horselegalguide.com/"
       },
       "scores": {
-        "striking": 15,
+        "striking": 29.8,
         "can_be_one": 0
       },
-      "score": 15,
+      "score": 29.8,
       "page": "/faq/"
+    },
+    {
+      "query": "image rights",
+      "variants": [],
+      "signals": {
+        "words": 2,
+        "question": false,
+        "gsc_position": 21,
+        "gsc_impressions": 1,
+        "gsc_page": "https://horselegalguide.com/compare/use-of-image-rights-vs-copyright-ownership/"
+      },
+      "scores": {
+        "striking": 20.4,
+        "can_be_one": 0
+      },
+      "score": 20.4,
+      "page": "/compare/use-of-image-rights-vs-copyright-ownership/"
+    },
+    {
+      "query": "equine liability waiver form",
+      "variants": [
+        "equine waiver of liability form"
+      ],
+      "signals": {
+        "words": 4,
+        "question": false,
+        "bing_suggest": true,
+        "neighbour": {
+          "sim": 0.5,
+          "of": "horse riding liability waiver",
+          "why": "top 2 with 3 impressions"
+        }
+      },
+      "scores": {
+        "striking": 20,
+        "can_be_one": 27.5
+      },
+      "score": 20,
+      "page": "/compare/equine-therapy-consent-form-vs-liability-waiver/"
     },
     {
       "query": "equine activity liability act",

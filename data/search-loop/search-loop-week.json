@@ -1,14 +1,14 @@
 {
   "schema": "search-loop-week-v1",
-  "week": "2026-W47",
+  "week": "2026-W48",
   "site": "horselegalguide.com",
-  "generated_at": "2026-11-22T20:24:56.112Z",
+  "generated_at": "2026-11-23T18:04:58.454Z",
   "state": "running",
-  "published": 0,
+  "published": 45,
   "indexed": 1,
   "pace": 3,
   "ai_visitors": 0,
-  "ai_bot_hits": 2038,
+  "ai_bot_hits": 1782,
   "conversions": "not read: no conversion source configured for this site (form fills / checkouts)",
   "wins": 0,
   "undone": 0,
@@ -16,14 +16,19 @@
   "held_by_cap": 0,
   "redirected": [],
   "cap": {
-    "max_live_pages": 14,
-    "live": 1,
-    "room": 13,
-    "why": "down from 16 to 14: Google impressions fell to 626 in the last 28 days from 638 in the 28 before"
+    "max_live_pages": 16,
+    "live": 46,
+    "room": 0,
+    "why": "up from 14 to 16: Google impressions 629 in the last 28 days beat 592 in the 28 before"
   },
   "notes": [
-    "BUILD published 0 of quota 3: 0 draft(s) failed the gate and were dropped; 0 got no answer from the free model and stay queued",
-    "CHECK: published pages are frozen on this site; checkpoints are recorded, no page is strengthened, undone or merged"
+    "FIND top10: not read: no BRAVE_SEARCH_API_KEY",
+    "cap: up from 14 to 16: Google impressions 629 in the last 28 days beat 592 in the 28 before",
+    "BUILD approval: 45 approved page(s) went live, 0 declined page(s) left the queue",
+    "BUILD held by the cap: 91 live engine page(s), cap 16 (up from 14 to 16: Google impressions 629 in the last 28 days beat 592 in the 28 before); 0 more page(s) today would have gone over it, those searches stay queued",
+    "BUILD: published pages are frozen on this site, so no existing page was edited to link the 45 new page(s); link them from the site's own build or nav",
+    "CHECK: published pages are frozen on this site; checkpoints are recorded, no page is strengthened, undone or merged",
+    "IndexNow: 45 new page(s) not live yet; submitted when they answer 200"
   ],
   "lanes": {
     "ratio": {
@@ -37,7 +42,7 @@
       "hit_rate": "not read: no page in this lane has reached its 2-week check yet"
     },
     "striking": {
-      "pages": 1,
+      "pages": 46,
       "measured": 1,
       "top3": 0,
       "hit_rate": 0
@@ -51,5 +56,5 @@
     "weight_changes": [],
     "competition": "not read: no BRAVE_SEARCH_API_KEY"
   },
-  "run_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/runs/45066216108"
+  "run_url": "https://github.com/seq23/horse-legal-guide-velocity/actions/runs/45234465081"
 }
