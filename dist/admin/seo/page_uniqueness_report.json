@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-22T20:27:59.000Z",
+  "generated_at": "2026-11-23T18:06:22.000Z",
   "source": "fresh rendered dist HTML after the current build",
   "policy": "Measurements are advisory for existing live pages. No existing page is automatically rewritten, canonicalized, noindexed, redirected, or removed.",
-  "source_fingerprint": "dff5b068ffa172e4bf121007704e890235a7b033f65d18e48f37fa41c4c1b58e",
+  "source_fingerprint": "23e76161543edc14b196b14b754f45a04992159567ac2b43d8b1c3074d72615c",
   "thresholds": {
     "body_similarity": 0.85,
     "title_intent_similarity": 0.72
   },
   "metrics": {
-    "indexable_pages_measured": 326,
+    "indexable_pages_measured": 363,
     "duplicate_title_groups": 1,
     "duplicate_description_groups": 1,
-    "high_similarity_pairs": 112,
+    "high_similarity_pairs": 108,
     "intent_overlap_pairs": 23
   },
   "family_metrics": {
@@ -43,7 +43,7 @@
     "business": {
       "pages": 13,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 80,
+      "high_similarity_pair_memberships": 74,
       "intent_overlap_pair_memberships": 0
     },
     "compare": {
@@ -103,7 +103,7 @@
     "leases": {
       "pages": 11,
       "duplicate_title_memberships": 0,
-      "high_similarity_pair_memberships": 8,
+      "high_similarity_pair_memberships": 6,
       "intent_overlap_pair_memberships": 1
     },
     "liability": {
@@ -119,7 +119,7 @@
       "intent_overlap_pair_memberships": 0
     },
     "questions": {
-      "pages": 1,
+      "pages": 38,
       "duplicate_title_memberships": 0,
       "high_similarity_pair_memberships": 0,
       "intent_overlap_pair_memberships": 0
@@ -531,18 +531,6 @@
       "title_b": "Do I Need an LLC to Start a Horse Business? |"
     },
     {
-      "a": "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
-      "b": "/faq/what-should-be-included-in-a-horse-sale-contract/",
-      "family_a": "faq",
-      "family_b": "faq",
-      "body_similarity": 0.9087,
-      "cosine_similarity": 0.9775,
-      "shingle_similarity": 0.7808,
-      "intent_similarity": 0.3333,
-      "title_a": "Who Is Responsible After a Horse Sale Is |",
-      "title_b": "What Should Be Included in a Horse Sale |"
-    },
-    {
       "a": "/state/north-carolina/do-i-need-a-horse-sale-contract/",
       "b": "/state/illinois/what-does-illinois-equine-liability-law-cover/",
       "family_a": "state",
@@ -687,18 +675,6 @@
       "title_b": "How to Start a Training Barn Legally |"
     },
     {
-      "a": "/business/joint-venture-agreement-equine-business/",
-      "b": "/business/how-to-start-a-horse-retail-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.895,
-      "cosine_similarity": 0.9803,
-      "shingle_similarity": 0.7367,
-      "intent_similarity": 0.125,
-      "title_a": "Joint Venture Agreement for an Equine |",
-      "title_b": "How to Start a Horse Retail Business |"
-    },
-    {
       "a": "/insights/2026-04-27/the-quiet-risk-inside-what-should-be-included-in-a-horse-sale-contract/",
       "b": "/insights/2026-04-24/what-equestrians-often-miss-about-do-i-need-a-contract-to-sell-a-horse/",
       "family_a": "insights",
@@ -721,30 +697,6 @@
       "intent_similarity": 0.1111,
       "title_a": "How to Start an Equine-Assisted Therapy |",
       "title_b": "How Do I Separate My Horse Business from |"
-    },
-    {
-      "a": "/business/joint-venture-agreement-equine-business/",
-      "b": "/business/horse-syndicate-legal-structure/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.892,
-      "cosine_similarity": 0.9746,
-      "shingle_similarity": 0.7384,
-      "intent_similarity": 0,
-      "title_a": "Joint Venture Agreement for an Equine |",
-      "title_b": "Horse Syndicate Legal Structure |"
-    },
-    {
-      "a": "/business/joint-venture-agreement-equine-business/",
-      "b": "/business/how-to-start-a-training-barn-legally/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8917,
-      "cosine_similarity": 0.9769,
-      "shingle_similarity": 0.7336,
-      "intent_similarity": 0,
-      "title_a": "Joint Venture Agreement for an Equine |",
-      "title_b": "How to Start a Training Barn Legally |"
     },
     {
       "a": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
@@ -783,6 +735,18 @@
       "title_b": "Mediation vs Litigation in Horse Disputes |"
     },
     {
+      "a": "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
+      "b": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+      "family_a": "faq",
+      "family_b": "faq",
+      "body_similarity": 0.8863,
+      "cosine_similarity": 0.9689,
+      "shingle_similarity": 0.7329,
+      "intent_similarity": 0.3333,
+      "title_a": "Who Is Responsible After a Horse Sale Is |",
+      "title_b": "What Should Be Included in a Horse Sale |"
+    },
+    {
       "a": "/business/how-to-start-an-equine-apparel-business/",
       "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
       "family_a": "business",
@@ -795,16 +759,16 @@
       "title_b": "How Do I Separate My Horse Business from |"
     },
     {
-      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
-      "b": "/business/partnership-agreement-for-horse-business/",
+      "a": "/business/joint-venture-agreement-equine-business/",
+      "b": "/business/how-to-start-a-horse-retail-business/",
       "family_a": "business",
       "family_b": "business",
-      "body_similarity": 0.886,
-      "cosine_similarity": 0.9897,
-      "shingle_similarity": 0.6933,
-      "intent_similarity": 0.2857,
-      "title_a": "What Legal Documents Do I Need for a Horse |",
-      "title_b": "Partnership Agreement for a Horse Business |"
+      "body_similarity": 0.8847,
+      "cosine_similarity": 0.9734,
+      "shingle_similarity": 0.7199,
+      "intent_similarity": 0.125,
+      "title_a": "Joint Venture Agreement for an Equine |",
+      "title_b": "How to Start a Horse Retail Business |"
     },
     {
       "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
@@ -891,18 +855,6 @@
       "title_b": "Do I Need an LLC to Start a Horse Business? |"
     },
     {
-      "a": "/business/partnership-agreement-for-horse-business/",
-      "b": "/business/horse-syndicate-legal-structure/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8797,
-      "cosine_similarity": 0.9759,
-      "shingle_similarity": 0.701,
-      "intent_similarity": 0.1429,
-      "title_a": "Partnership Agreement for a Horse Business |",
-      "title_b": "Horse Syndicate Legal Structure |"
-    },
-    {
       "a": "/liability/what-type-of-insurance-do-trainers-need/",
       "b": "/liability/what-is-the-equine-activity-liability-act/",
       "family_a": "liability",
@@ -913,6 +865,18 @@
       "intent_similarity": 0,
       "title_a": "What Type of Insurance Do Trainers Need? |",
       "title_b": "What Is the Equine Activity Liability Act? |"
+    },
+    {
+      "a": "/business/joint-venture-agreement-equine-business/",
+      "b": "/business/how-to-start-a-training-barn-legally/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8787,
+      "cosine_similarity": 0.9717,
+      "shingle_similarity": 0.7061,
+      "intent_similarity": 0,
+      "title_a": "Joint Venture Agreement for an Equine |",
+      "title_b": "How to Start a Training Barn Legally |"
     },
     {
       "a": "/ip/do-i-need-a-trademark-for-an-equestrian-brand/",
@@ -928,15 +892,15 @@
     },
     {
       "a": "/business/joint-venture-agreement-equine-business/",
-      "b": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "b": "/business/horse-syndicate-legal-structure/",
       "family_a": "business",
       "family_b": "business",
-      "body_similarity": 0.8776,
-      "cosine_similarity": 0.976,
-      "shingle_similarity": 0.6948,
-      "intent_similarity": 0.1111,
+      "body_similarity": 0.878,
+      "cosine_similarity": 0.9681,
+      "shingle_similarity": 0.7106,
+      "intent_similarity": 0,
       "title_a": "Joint Venture Agreement for an Equine |",
-      "title_b": "Do I Need an LLC to Start a Horse Business? |"
+      "title_b": "Horse Syndicate Legal Structure |"
     },
     {
       "a": "/ip/how-do-i-get-a-sponsorship-for-horse-riding/",
@@ -1011,16 +975,16 @@
       "title_b": "Horse Syndicate Legal Structure |"
     },
     {
-      "a": "/business/partnership-agreement-for-horse-business/",
-      "b": "/business/how-do-i-legally-start-a-horse-business/",
+      "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
+      "b": "/business/partnership-agreement-for-horse-business/",
       "family_a": "business",
       "family_b": "business",
-      "body_similarity": 0.8732,
-      "cosine_similarity": 0.986,
-      "shingle_similarity": 0.6635,
-      "intent_similarity": 0.3333,
-      "title_a": "Partnership Agreement for a Horse Business |",
-      "title_b": "How Do I Legally Start a Horse Business? |"
+      "body_similarity": 0.8734,
+      "cosine_similarity": 0.9853,
+      "shingle_similarity": 0.6656,
+      "intent_similarity": 0.2857,
+      "title_a": "What Legal Documents Do I Need for a Horse |",
+      "title_b": "Partnership Agreement for a Horse Business |"
     },
     {
       "a": "/boarding/who-pays-vet-bills-while-a-horse-is-boarded/",
@@ -1047,18 +1011,6 @@
       "title_b": "Can a Contract Dispute Be Resolved Without |"
     },
     {
-      "a": "/business/partnership-agreement-for-horse-business/",
-      "b": "/business/how-to-start-an-equine-assisted-therapy-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8707,
-      "cosine_similarity": 0.9732,
-      "shingle_similarity": 0.6804,
-      "intent_similarity": 0.125,
-      "title_a": "Partnership Agreement for a Horse Business |",
-      "title_b": "How to Start an Equine-Assisted Therapy |"
-    },
-    {
       "a": "/compare/horse-syndicate-agreement-vs-partnership-agreement/",
       "b": "/compare/horse-co-ownership-agreement-vs-syndicate-structure/",
       "family_a": "compare",
@@ -1069,18 +1021,6 @@
       "intent_similarity": 0.5,
       "title_a": "Horse syndicate agreement vs partnership |",
       "title_b": "Horse co-ownership agreement vs syndicate |"
-    },
-    {
-      "a": "/leases/who-pays-vet-bills-in-a-horse-lease/",
-      "b": "/leases/what-is-a-horse-trial-agreement/",
-      "family_a": "leases",
-      "family_b": "leases",
-      "body_similarity": 0.8705,
-      "cosine_similarity": 0.9802,
-      "shingle_similarity": 0.6667,
-      "intent_similarity": 0.1429,
-      "title_a": "Who Pays Vet Bills in a Horse Lease? |",
-      "title_b": "What Is a Horse Trial Agreement? |"
     },
     {
       "a": "/business/how-to-start-an-equine-assisted-therapy-business/",
@@ -1119,6 +1059,30 @@
       "title_b": "How to Start a Boarding Barn Legally |"
     },
     {
+      "a": "/business/partnership-agreement-for-horse-business/",
+      "b": "/business/horse-syndicate-legal-structure/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8681,
+      "cosine_similarity": 0.9733,
+      "shingle_similarity": 0.6729,
+      "intent_similarity": 0.1429,
+      "title_a": "Partnership Agreement for a Horse Business |",
+      "title_b": "Horse Syndicate Legal Structure |"
+    },
+    {
+      "a": "/business/joint-venture-agreement-equine-business/",
+      "b": "/business/do-i-need-an-llc-to-start-a-horse-business/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8676,
+      "cosine_similarity": 0.9689,
+      "shingle_similarity": 0.6794,
+      "intent_similarity": 0.1111,
+      "title_a": "Joint Venture Agreement for an Equine |",
+      "title_b": "Do I Need an LLC to Start a Horse Business? |"
+    },
+    {
       "a": "/ip/should-i-trademark-my-barn-name/",
       "b": "/ip/can-a-sponsor-use-my-image-without-permission/",
       "family_a": "ip",
@@ -1129,18 +1093,6 @@
       "intent_similarity": 0,
       "title_a": "Should I Trademark My Barn Name? |",
       "title_b": "Can a Sponsor Use My Image Without |"
-    },
-    {
-      "a": "/business/partnership-agreement-for-horse-business/",
-      "b": "/business/how-to-start-a-boarding-barn-legally/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8673,
-      "cosine_similarity": 0.9736,
-      "shingle_similarity": 0.6698,
-      "intent_similarity": 0,
-      "title_a": "Partnership Agreement for a Horse Business |",
-      "title_b": "How to Start a Boarding Barn Legally |"
     },
     {
       "a": "/business/what-legal-documents-do-i-need-for-a-horse-business/",
@@ -1189,18 +1141,6 @@
       "intent_similarity": 0.1667,
       "title_a": "What Should Be in an Equestrian Sponsorship |",
       "title_b": "How Do I Get a Sponsorship for Horse Riding? |"
-    },
-    {
-      "a": "/business/partnership-agreement-for-horse-business/",
-      "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.8646,
-      "cosine_similarity": 0.974,
-      "shingle_similarity": 0.6614,
-      "intent_similarity": 0.2857,
-      "title_a": "Partnership Agreement for a Horse Business |",
-      "title_b": "How Do I Separate My Horse Business from |"
     },
     {
       "a": "/business/how-to-start-a-training-barn-legally/",
@@ -1275,6 +1215,18 @@
       "title_b": "Who Is Liable If a Horse Is Injured While |"
     },
     {
+      "a": "/business/partnership-agreement-for-horse-business/",
+      "b": "/business/how-do-i-legally-start-a-horse-business/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.861,
+      "cosine_similarity": 0.9815,
+      "shingle_similarity": 0.6372,
+      "intent_similarity": 0.3333,
+      "title_a": "Partnership Agreement for a Horse Business |",
+      "title_b": "How Do I Legally Start a Horse Business? |"
+    },
+    {
       "a": "/disputes/how-serious-is-a-legal-demand-letter/",
       "b": "/disputes/do-i-need-a-lawyer-to-respond-to-a-demand-letter/",
       "family_a": "disputes",
@@ -1285,18 +1237,6 @@
       "intent_similarity": 0.2857,
       "title_a": "How Serious Is a Legal Demand Letter? |",
       "title_b": "Do I Need a Lawyer to Respond to a Demand |"
-    },
-    {
-      "a": "/business/partnership-agreement-for-horse-business/",
-      "b": "/business/how-to-start-an-equine-apparel-business/",
-      "family_a": "business",
-      "family_b": "business",
-      "body_similarity": 0.86,
-      "cosine_similarity": 0.9724,
-      "shingle_similarity": 0.6511,
-      "intent_similarity": 0.1429,
-      "title_a": "Partnership Agreement for a Horse Business |",
-      "title_b": "How to Start an Equine Apparel Business |"
     },
     {
       "a": "/business/how-to-start-an-equine-apparel-business/",
@@ -1335,16 +1275,16 @@
       "title_b": "How Do I Legally Start a Horse Business? |"
     },
     {
-      "a": "/business/joint-venture-agreement-equine-business/",
-      "b": "/business/how-to-start-an-equine-apparel-business/",
+      "a": "/business/partnership-agreement-for-horse-business/",
+      "b": "/business/how-to-start-an-equine-assisted-therapy-business/",
       "family_a": "business",
       "family_b": "business",
       "body_similarity": 0.8584,
-      "cosine_similarity": 0.9656,
-      "shingle_similarity": 0.6593,
-      "intent_similarity": 0.2857,
-      "title_a": "Joint Venture Agreement for an Equine |",
-      "title_b": "How to Start an Equine Apparel Business |"
+      "cosine_similarity": 0.9687,
+      "shingle_similarity": 0.6534,
+      "intent_similarity": 0.125,
+      "title_a": "Partnership Agreement for a Horse Business |",
+      "title_b": "How to Start an Equine-Assisted Therapy |"
     },
     {
       "a": "/ip/what-should-be-in-an-equestrian-sponsorship-agreement/",
@@ -1417,6 +1357,18 @@
       "intent_similarity": 0,
       "title_a": "What Should Be in an Equestrian Sponsorship |",
       "title_b": "Can a Sponsor Use My Image Without |"
+    },
+    {
+      "a": "/business/partnership-agreement-for-horse-business/",
+      "b": "/business/how-do-i-separate-my-horse-business-from-personal-assets/",
+      "family_a": "business",
+      "family_b": "business",
+      "body_similarity": 0.8542,
+      "cosine_similarity": 0.9694,
+      "shingle_similarity": 0.6402,
+      "intent_similarity": 0.2857,
+      "title_a": "Partnership Agreement for a Horse Business |",
+      "title_b": "How Do I Separate My Horse Business from |"
     },
     {
       "a": "/ip/how-do-i-protect-my-horse-business-brand/",
@@ -1504,15 +1456,15 @@
     },
     {
       "a": "/business/partnership-agreement-for-horse-business/",
-      "b": "/business/joint-venture-agreement-equine-business/",
+      "b": "/business/how-to-start-a-boarding-barn-legally/",
       "family_a": "business",
       "family_b": "business",
-      "body_similarity": 0.8507,
-      "cosine_similarity": 0.9697,
-      "shingle_similarity": 0.6296,
-      "intent_similarity": 0.2857,
+      "body_similarity": 0.8521,
+      "cosine_similarity": 0.9674,
+      "shingle_similarity": 0.638,
+      "intent_similarity": 0,
       "title_a": "Partnership Agreement for a Horse Business |",
-      "title_b": "Joint Venture Agreement for an Equine |"
+      "title_b": "How to Start a Boarding Barn Legally |"
     },
     {
       "a": "/insights/2026-05-10/how-to-think-about-horse-sale-contract-vs-bill-of-sale-before-you-act/",
@@ -1553,7 +1505,7 @@
       "b": "/compare/template-contract-vs-custom-horse-contract/",
       "family_a": "compare",
       "family_b": "compare",
-      "body_similarity": 0.7473,
+      "body_similarity": 0.7593,
       "intent_similarity": 1,
       "title_a": "Template horse contract vs custom horse |",
       "title_b": "Template Contract vs Custom Horse Contract |"
@@ -1563,7 +1515,7 @@
       "b": "/compare/horse-lease-vs-horse-purchase/",
       "family_a": "compare",
       "family_b": "compare",
-      "body_similarity": 0.5193,
+      "body_similarity": 0.557,
       "intent_similarity": 1,
       "title_a": "Lease vs Purchase Horse |",
       "title_b": "Horse lease vs horse purchase |"
@@ -1593,7 +1545,7 @@
       "b": "/faq/what-should-be-included-in-a-horse-bill-of-sale/",
       "family_a": "insights",
       "family_b": "faq",
-      "body_similarity": 0.2853,
+      "body_similarity": 0.2861,
       "intent_similarity": 1,
       "title_a": "Why What Should Be Included in a Horse Bill |",
       "title_b": "What Should Be Included in a Horse Bill of |"
@@ -1633,7 +1585,7 @@
       "b": "/faq/when-does-ownership-legally-transfer-in-a-horse-sale/",
       "family_a": "insights",
       "family_b": "faq",
-      "body_similarity": 0.317,
+      "body_similarity": 0.3203,
       "intent_similarity": 0.8333,
       "title_a": "How to Think About When Does Ownership |",
       "title_b": "When Does Ownership Legally Transfer in a |"
@@ -1713,7 +1665,7 @@
       "b": "/compare/horse-lease-vs-horse-trial-agreement/",
       "family_a": "compare",
       "family_b": "compare",
-      "body_similarity": 0.7813,
+      "body_similarity": 0.7905,
       "intent_similarity": 0.75,
       "title_a": "Trial Agreement vs Lease Agreement |",
       "title_b": "Horse lease vs horse trial agreement |"
@@ -1723,7 +1675,7 @@
       "b": "/compare/horse-lease-vs-horse-trial-agreement/",
       "family_a": "leases",
       "family_b": "compare",
-      "body_similarity": 0.6647,
+      "body_similarity": 0.6522,
       "intent_similarity": 0.75,
       "title_a": "What Is a Horse Trial Agreement? |",
       "title_b": "Horse lease vs horse trial agreement |"
@@ -1753,7 +1705,7 @@
       "b": "/boarding/can-a-boarding-barn-sell-a-horse-for-unpaid-bills/",
       "family_a": "scenario",
       "family_b": "boarding",
-      "body_similarity": 0.485,
+      "body_similarity": 0.4846,
       "intent_similarity": 0.75,
       "title_a": "A boarding barn wants to sell a horse for |",
       "title_b": "Can a Boarding Barn Sell a Horse for Unpaid |"

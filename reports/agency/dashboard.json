@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-11-22T21:04:00.000Z",
+  "generated_at": "2026-11-23T18:06:22.000Z",
   "policy": {
     "mode": "approval_gated_assisted",
     "message": "Monitoring, query testing, competitor comparison, draft self-healing, and finished repair preparation may run automatically. Client approval remains required for publication and live-page remediation."
@@ -9,19 +9,19 @@
     "gsc": {
       "status": "ok",
       "checked_at": "2026-11-22T21:04:02.329Z",
-      "age_hours": 0,
+      "age_hours": 21,
       "message": "Search Console monitoring refreshed."
     },
     "bing": {
       "status": "ok",
       "checked_at": "2026-11-22T21:04:02.329Z",
-      "age_hours": 0,
+      "age_hours": 21,
       "message": "Bing Webmaster monitoring refreshed."
     },
     "live": {
       "status": "ok",
       "checked_at": "2026-11-22T21:04:02.329Z",
-      "age_hours": 0,
+      "age_hours": 21,
       "message": "All monitored public routes returned successful responses.",
       "summary": {
         "checked": 9,
@@ -5115,7 +5115,7 @@
   "quality": {
     "seo_health": {
       "citation_velocity": 99,
-      "seo": 79,
+      "seo": 80,
       "aeo": 100,
       "geo": 100,
       "routing_contact": 100,
@@ -5128,23 +5128,23 @@
       "metadata_completeness": 100
     },
     "seo_metrics": {
-      "rendered_public_pages": 588,
-      "total_html_pages": 588,
-      "sitemap_url_count": 327,
-      "title_present": 588,
-      "description_present": 588,
-      "canonical_present": 588,
+      "rendered_public_pages": 625,
+      "total_html_pages": 625,
+      "sitemap_url_count": 364,
+      "title_present": 625,
+      "description_present": 625,
+      "canonical_present": 625,
       "duplicate_title_groups": 262,
       "duplicate_description_groups": 94,
-      "high_similarity_pairs": 112,
+      "high_similarity_pairs": 108,
       "intent_overlap_pairs": 23,
-      "uniqueness_review_clusters": 18,
+      "uniqueness_review_clusters": 17,
       "drafts_automatically_differentiated": 265,
       "draft_uniqueness_failures": 0,
-      "jsonld_present": 588,
-      "article_schema_pages": 588,
-      "breadcrumb_schema_pages": 588,
-      "internal_link_healthy_pages": 588,
+      "jsonld_present": 625,
+      "article_schema_pages": 625,
+      "breadcrumb_schema_pages": 625,
+      "internal_link_healthy_pages": 625,
       "zero_internal_link_pages": 0,
       "weak_internal_link_pages": 0,
       "draft_items": 25,
@@ -5169,10 +5169,10 @@
       "github_actions_simulation_failures": 0
     },
     "page_uniqueness": {
-      "indexable_pages_measured": 326,
+      "indexable_pages_measured": 363,
       "duplicate_title_groups": 1,
       "duplicate_description_groups": 1,
-      "high_similarity_pairs": 112,
+      "high_similarity_pairs": 108,
       "intent_overlap_pairs": 23
     },
     "family_metrics": {
@@ -5203,7 +5203,7 @@
       "business": {
         "pages": 13,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 80,
+        "high_similarity_pair_memberships": 74,
         "intent_overlap_pair_memberships": 0
       },
       "compare": {
@@ -5263,7 +5263,7 @@
       "leases": {
         "pages": 11,
         "duplicate_title_memberships": 0,
-        "high_similarity_pair_memberships": 8,
+        "high_similarity_pair_memberships": 6,
         "intent_overlap_pair_memberships": 1
       },
       "liability": {
@@ -5279,7 +5279,7 @@
         "intent_overlap_pair_memberships": 0
       },
       "questions": {
-        "pages": 1,
+        "pages": 38,
         "duplicate_title_memberships": 0,
         "high_similarity_pair_memberships": 0,
         "intent_overlap_pair_memberships": 0
@@ -5887,8 +5887,8 @@
     "summary": {
       "opportunities": 146,
       "new_candidates": 127,
-      "improve_existing": 5,
-      "differentiate_existing": 9,
+      "improve_existing": 8,
+      "differentiate_existing": 6,
       "cannibalization_review": 5,
       "active_query_failures": 0
     },
@@ -8196,7 +8196,7 @@
       {
         "opportunity_id": "provider-opportunity-0072",
         "query": "who pays vet bills under a horse lease victoria",
-        "type": "differentiate_existing",
+        "type": "improve_existing",
         "target_page": "/leases/who-pays-vet-bills-in-a-horse-lease/",
         "provider_pages": [],
         "providers": [
@@ -8212,8 +8212,7 @@
         "coverage_match_score": 0.778,
         "confidence": 0.645,
         "reasons": [
-          "query_matches_existing_coverage",
-          "target_is_in_live_similarity_cluster"
+          "query_matches_existing_coverage"
         ],
         "status": "pending_owner_review",
         "automatic_actions_completed": [
@@ -8228,7 +8227,7 @@
       {
         "opportunity_id": "provider-opportunity-0069",
         "query": "who pays vet bills under a horse lease racing victoria",
-        "type": "differentiate_existing",
+        "type": "improve_existing",
         "target_page": "/leases/who-pays-vet-bills-in-a-horse-lease/",
         "provider_pages": [],
         "providers": [
@@ -8244,8 +8243,7 @@
         "coverage_match_score": 0.7,
         "confidence": 0.626,
         "reasons": [
-          "query_matches_existing_coverage",
-          "target_is_in_live_similarity_cluster"
+          "query_matches_existing_coverage"
         ],
         "status": "pending_owner_review",
         "automatic_actions_completed": [
@@ -8354,7 +8352,7 @@
       {
         "opportunity_id": "provider-opportunity-0068",
         "query": "who pays vet bills under a racehorse lease racing victoria",
-        "type": "differentiate_existing",
+        "type": "improve_existing",
         "target_page": "/leases/who-pays-vet-bills-in-a-horse-lease/",
         "provider_pages": [],
         "providers": [
@@ -8370,8 +8368,7 @@
         "coverage_match_score": 0.6,
         "confidence": 0.601,
         "reasons": [
-          "query_matches_existing_coverage",
-          "target_is_in_live_similarity_cluster"
+          "query_matches_existing_coverage"
         ],
         "status": "pending_owner_review",
         "automatic_actions_completed": [
@@ -12225,8 +12222,8 @@
   },
   "remediation": {
     "summary": {
-      "total": 18,
-      "pending_owner_approval": 18,
+      "total": 17,
+      "pending_owner_approval": 17,
       "approved": 0,
       "applied": 0,
       "rejected": 0
@@ -12532,35 +12529,6 @@
         "approved_at": null,
         "applied_at": null,
         "rejected_at": null,
-        "candidate_primary": "/faq/who-is-responsible-after-a-horse-sale-is-completed/",
-        "members": [
-          "/faq/what-should-be-included-in-a-horse-sale-contract/",
-          "/faq/who-is-responsible-after-a-horse-sale-is-completed/"
-        ],
-        "families": [
-          "faq"
-        ],
-        "reasons": [
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.9087,
-        "suggested_actions": [
-          "differentiate_patch"
-        ],
-        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0011",
-        "ledger_id": "uniqueness-0011",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
         "candidate_primary": "/liability/do-i-need-a-warning-sign-at-my-barn/",
         "members": [
           "/liability/do-i-need-a-liability-waiver-for-my-horse-business/",
@@ -12583,8 +12551,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0012",
-        "ledger_id": "uniqueness-0012",
+        "proposal_id": "remediation-uniqueness-0011",
+        "ledger_id": "uniqueness-0011",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12614,8 +12582,8 @@
         "patch_plan": null
       },
       {
-        "proposal_id": "remediation-uniqueness-0013",
-        "ledger_id": "uniqueness-0013",
+        "proposal_id": "remediation-uniqueness-0012",
+        "ledger_id": "uniqueness-0012",
         "status": "pending_owner_approval",
         "approved_action": null,
         "approved_by": null,
@@ -12635,6 +12603,35 @@
           "high_body_similarity"
         ],
         "maximum_body_similarity": 0.8883,
+        "suggested_actions": [
+          "differentiate_patch"
+        ],
+        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
+        "approval_required_for_live_change": true,
+        "automatic_live_change": false,
+        "patch_plan": null
+      },
+      {
+        "proposal_id": "remediation-uniqueness-0013",
+        "ledger_id": "uniqueness-0013",
+        "status": "pending_owner_approval",
+        "approved_action": null,
+        "approved_by": null,
+        "approved_at": null,
+        "applied_at": null,
+        "rejected_at": null,
+        "candidate_primary": "/faq/what-should-be-included-in-a-horse-sale-contract/",
+        "members": [
+          "/faq/what-should-be-included-in-a-horse-sale-contract/",
+          "/faq/who-is-responsible-after-a-horse-sale-is-completed/"
+        ],
+        "families": [
+          "faq"
+        ],
+        "reasons": [
+          "high_body_similarity"
+        ],
+        "maximum_body_similarity": 0.8863,
         "suggested_actions": [
           "differentiate_patch"
         ],
@@ -12754,35 +12751,6 @@
           "high_body_similarity"
         ],
         "maximum_body_similarity": 0.8706,
-        "suggested_actions": [
-          "differentiate_patch"
-        ],
-        "recommendation": "Review substantive differentiation versus consolidation. No route, canonical, robots directive, or redirect change is authorized by this ledger.",
-        "approval_required_for_live_change": true,
-        "automatic_live_change": false,
-        "patch_plan": null
-      },
-      {
-        "proposal_id": "remediation-uniqueness-0018",
-        "ledger_id": "uniqueness-0018",
-        "status": "pending_owner_approval",
-        "approved_action": null,
-        "approved_by": null,
-        "approved_at": null,
-        "applied_at": null,
-        "rejected_at": null,
-        "candidate_primary": "/leases/who-pays-vet-bills-in-a-horse-lease/",
-        "members": [
-          "/leases/what-is-a-horse-trial-agreement/",
-          "/leases/who-pays-vet-bills-in-a-horse-lease/"
-        ],
-        "families": [
-          "leases"
-        ],
-        "reasons": [
-          "high_body_similarity"
-        ],
-        "maximum_body_similarity": 0.8705,
         "suggested_actions": [
           "differentiate_patch"
         ],

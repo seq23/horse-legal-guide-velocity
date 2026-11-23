@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-22T20:27:59.000Z",
-  "measurement_fingerprint": "dff5b068ffa172e4bf121007704e890235a7b033f65d18e48f37fa41c4c1b58e",
+  "generated_at": "2026-11-23T18:06:22.000Z",
+  "measurement_fingerprint": "23e76161543edc14b196b14b754f45a04992159567ac2b43d8b1c3074d72615c",
   "title": "LLM Citation Velocity Dashboard",
   "purpose": "Real generated-health dashboard for SEO, AEO, GEO, LLM citation readiness, Wise Covington routing, signal ingestion, rendered-page health, page uniqueness, and workflow trace next steps.",
   "truth_boundary": "Scores are regenerated from the current repo files and freshly rendered dist HTML on every release build. Existing-page similarity findings are advisory and require owner approval before any live change. Draft similarity is automatically repaired before approval eligibility. These local measurements do not prove live GitHub Actions, live GSC, Bing, or IndexNow until those provider workflows run after apply.",
@@ -22,7 +22,7 @@
   ],
   "health": {
     "citation_velocity": 99,
-    "seo": 79,
+    "seo": 80,
     "aeo": 100,
     "geo": 100,
     "routing_contact": 100,
@@ -35,23 +35,23 @@
     "metadata_completeness": 100
   },
   "metrics": {
-    "rendered_public_pages": 588,
-    "total_html_pages": 588,
-    "sitemap_url_count": 327,
-    "title_present": 588,
-    "description_present": 588,
-    "canonical_present": 588,
+    "rendered_public_pages": 625,
+    "total_html_pages": 625,
+    "sitemap_url_count": 364,
+    "title_present": 625,
+    "description_present": 625,
+    "canonical_present": 625,
     "duplicate_title_groups": 262,
     "duplicate_description_groups": 94,
-    "high_similarity_pairs": 112,
+    "high_similarity_pairs": 108,
     "intent_overlap_pairs": 23,
-    "uniqueness_review_clusters": 18,
+    "uniqueness_review_clusters": 17,
     "drafts_automatically_differentiated": 265,
     "draft_uniqueness_failures": 0,
-    "jsonld_present": 588,
-    "article_schema_pages": 588,
-    "breadcrumb_schema_pages": 588,
-    "internal_link_healthy_pages": 588,
+    "jsonld_present": 625,
+    "article_schema_pages": 625,
+    "breadcrumb_schema_pages": 625,
+    "internal_link_healthy_pages": 625,
     "zero_internal_link_pages": 0,
     "weak_internal_link_pages": 0,
     "draft_items": 25,
@@ -107,7 +107,7 @@
   },
   "panels": {
     "seo": {
-      "score": 79,
+      "score": 80,
       "instructions": "Improve rendered title/meta/canonical coverage, sitemap parity, duplicate metadata warnings, body similarity, intent overlap, and crawl/index readiness. Existing-page findings remain owner-reviewed."
     },
     "aeo": {
@@ -280,7 +280,7 @@
       "github_edit_urls": [
         "https://github.com/seq23/horse-legal-guide-velocity/blob/main/data/admin/consolidation_review_ledger.json"
       ],
-      "source_metric": "112 pairs at or above 0.85 body similarity",
+      "source_metric": "108 pairs at or above 0.85 body similarity",
       "measurement": ""
     },
     {
