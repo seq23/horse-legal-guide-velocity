@@ -1,40 +1,40 @@
 {
-  "generated_at": "2026-11-20T21:56:35.464Z",
-  "total_signals": 4558,
+  "generated_at": "2026-11-24T01:49:41.281Z",
+  "total_signals": 4566,
   "signals_by_source": {
     "reddit_equestrian": 2333,
     "reddit_horses": 727,
     "forum_the_horse_forum": 34,
     "forum_chronicle_of_the_horse": 30,
-    "google_paa_manual_or_provider": 136,
+    "google_paa_manual_or_provider": 142,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 255,
+    "youtube_search_comments": 256,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 262,
     "reddit_smallbusiness": 263,
     "reddit_farming_ranching": 143,
-    "forum_horse_and_hound": 100
+    "forum_horse_and_hound": 101
   },
   "signals_by_platform": {
     "reddit": 3728,
-    "equestrian_forums": 164,
-    "google_paa": 136,
+    "equestrian_forums": 165,
+    "google_paa": 142,
     "serp_competitors": 217,
-    "youtube": 255,
+    "youtube": 256,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1901,
+  "normalized_count": 1909,
   "duplicates_collapsed": 2657,
   "pages_created": 0,
-  "pages_strengthened": 286,
+  "pages_strengthened": 287,
   "rejected_signals": 0,
-  "pending_owner_review": 1609,
+  "pending_owner_review": 1616,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 966
+      "count": 968
     },
     {
       "name": "boarding-training-and-barn-operations",
@@ -42,11 +42,11 @@
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 252
+      "count": 255
     },
     {
       "name": "horse-sale-and-purchase",
-      "count": 236
+      "count": 239
     },
     {
       "name": "liability-waivers-insurance",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 255
+      "count": 256
     },
     {
       "name": "serp_competitor_research",
@@ -104,11 +104,11 @@
     },
     {
       "name": "google_paa_manual_or_provider",
-      "count": 136
+      "count": 142
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 100
+      "count": 101
     },
     {
       "name": "forum_the_horse_forum",
@@ -161,7 +161,7 @@
       "platform": "reddit",
       "status": "blocked_source",
       "count": 0,
-      "error": "Reddit refused 7 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "error": "Reddit refused 7 of 8 attempt(s) for reddit_farming_ranching (HTTP 403/429). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -178,8 +178,8 @@
     {
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
-      "status": "success_empty",
-      "count": 0
+      "status": "success_with_data",
+      "count": 7
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -198,7 +198,7 @@
       "source_key": "youtube_search_comments",
       "platform": "youtube",
       "status": "success_with_data",
-      "count": 34
+      "count": 40
     },
     {
       "source_key": "instagram_public_social_framing",
@@ -8156,6 +8156,32 @@
       "mapped_slug": "/compare/waiver-vs-insurance-horse-liability/",
       "status": "approved_for_content",
       "reason": "The page answers this question (shares insur, liabi)."
+    },
+    {
+      "queue_id": "queue_1903_i-return-a-horse-after-purchase-contract",
+      "normalized_id": "norm_4560_35fe97d4b7",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_can-i-return-a-horse-after-purchase-contract-https-w_9ebce14e"
+      ],
+      "preserved_query": "can i return a horse after purchase contract?",
+      "normalized_query": "can i return a horse after purchase contract?",
+      "llm_bait_phrase": "i return a horse after purchase contract",
+      "cluster": "horse-sale-and-purchase",
+      "intent_type": "scenario",
+      "signal_score": 0.85,
+      "match_evidence": {
+        "best_page": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+        "shared_terms": [
+          "retur",
+          "purch"
+        ],
+        "question_coverage": 0.749,
+        "page_coverage": 0.688
+      },
+      "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "status": "approved_for_content",
+      "reason": "The page answers this question (shares retur, purch)."
     }
   ],
   "ignored_signals": [],
@@ -29128,6 +29154,97 @@
       "llm_bait_phrase": "‘Ollie’s Law’ Would Mandate Regulations For Pet-Boarding Facilities In Massachusetts",
       "source_signal_ids": [
         "youtube_search_comments_ollie-s-law-would-mandate-regulations-for-pet-boardi_a23a921c"
+      ]
+    },
+    {
+      "approval_id": "approval_1901_new-horse-queries",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4558_31b70c73f6",
+      "proposed_slug": "/faq/new-horse-queries/",
+      "cluster": "state-specific",
+      "question": "New horse queries — what should I know?",
+      "llm_bait_phrase": "New horse queries",
+      "source_signal_ids": [
+        "forum_horse_and_hound_new-horse-queries-https-forums-horseandhound-co-uk_2f7d6b5a"
+      ]
+    },
+    {
+      "approval_id": "approval_1902_pays-for-vet-check-in-horse-sale-contract",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4559_0296e0b4e6",
+      "proposed_slug": "/faq/pays-for-vet-check-in-horse-sale-contract/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "who pays for vet check in horse sale contract?",
+      "llm_bait_phrase": "pays for vet check in horse sale contract",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_who-pays-for-vet-check-in-horse-sale-contract-https-_73cb1684"
+      ]
+    },
+    {
+      "approval_id": "approval_1904_a-horse-sale-contract-need-to-be-notarized",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4561_512de7b0ad",
+      "proposed_slug": "/faq/a-horse-sale-contract-need-to-be-notarized/",
+      "cluster": "horse-sale-and-purchase",
+      "question": "does a horse sale contract need to be notarized?",
+      "llm_bait_phrase": "a horse sale contract need to be notarized",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_does-a-horse-sale-contract-need-to-be-notarized-http_0eca57cd"
+      ]
+    },
+    {
+      "approval_id": "approval_1905_is-a-soundness-warranty-in-horse-contract",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4562_5ea7c87651",
+      "proposed_slug": "/faq/is-a-soundness-warranty-in-horse-contract/",
+      "cluster": "state-specific",
+      "question": "what is a \"soundness\" warranty in horse contract?",
+      "llm_bait_phrase": "is a \"soundness\" warranty in horse contract",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_what-is-a-soundness-warranty-in-horse-contract-https_94f60986"
+      ]
+    },
+    {
+      "approval_id": "approval_1906_is-the-difference-between-a-full-lease-and-a-half-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4563_8389adafad",
+      "proposed_slug": "/compare/is-the-difference-between-a-full-lease-and-a-half-lease/",
+      "cluster": "horse-lease-and-trial",
+      "question": "what is the difference between a full lease and a half lease?",
+      "llm_bait_phrase": "is the difference between a full lease and a half lease",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_what-is-the-difference-between-a-full-lease-and-a-ha_86d7e122"
+      ]
+    },
+    {
+      "approval_id": "approval_1907_a-horse-lease-agreement-need-to-be-notarized",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4564_c118aedf07",
+      "proposed_slug": "/faq/a-horse-lease-agreement-need-to-be-notarized/",
+      "cluster": "horse-lease-and-trial",
+      "question": "does a horse lease agreement need to be notarized?",
+      "llm_bait_phrase": "a horse lease agreement need to be notarized",
+      "source_signal_ids": [
+        "google_paa_manual_or_provider_does-a-horse-lease-agreement-need-to-be-notarized-ht_97570ee3"
+      ]
+    },
+    {
+      "approval_id": "approval_1908_horse-lease-guide-full-vs-partial-lease-contracts-",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4565_692033ca8d",
+      "proposed_slug": "/compare/horse-lease-guide-full-vs-partial-lease-contracts-costs-and-red-flags/",
+      "cluster": "horse-lease-and-trial",
+      "question": "Horse Lease Guide: Full vs Partial Lease — Contracts, Costs and Red Flags",
+      "llm_bait_phrase": "Horse Lease Guide: Full vs Partial Lease — Contracts, Costs and Red Flags",
+      "source_signal_ids": [
+        "youtube_search_comments_horse-lease-guide-full-vs-partial-lease-contracts-co_9badce17"
       ]
     }
   ]
