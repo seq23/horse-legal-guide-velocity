@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24T01:49:41.281Z",
-  "total_signals": 4566,
+  "generated_at": "2026-11-24T23:36:58.104Z",
+  "total_signals": 4568,
   "signals_by_source": {
     "reddit_equestrian": 2333,
     "reddit_horses": 727,
@@ -8,29 +8,29 @@
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 142,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 256,
+    "youtube_search_comments": 257,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 262,
     "reddit_smallbusiness": 263,
     "reddit_farming_ranching": 143,
-    "forum_horse_and_hound": 101
+    "forum_horse_and_hound": 102
   },
   "signals_by_platform": {
     "reddit": 3728,
-    "equestrian_forums": 165,
+    "equestrian_forums": 166,
     "google_paa": 142,
     "serp_competitors": 217,
-    "youtube": 256,
+    "youtube": 257,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1909,
+  "normalized_count": 1911,
   "duplicates_collapsed": 2657,
   "pages_created": 0,
   "pages_strengthened": 287,
   "rejected_signals": 0,
-  "pending_owner_review": 1616,
+  "pending_owner_review": 1618,
   "top_clusters": [
     {
       "name": "state-specific",
@@ -38,7 +38,7 @@
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 307
+      "count": 308
     },
     {
       "name": "horse-lease-and-trial",
@@ -50,7 +50,7 @@
     },
     {
       "name": "liability-waivers-insurance",
-      "count": 58
+      "count": 59
     },
     {
       "name": "equine-business-formation",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 256
+      "count": 257
     },
     {
       "name": "serp_competitor_research",
@@ -108,7 +108,7 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 101
+      "count": 102
     },
     {
       "name": "forum_the_horse_forum",
@@ -147,7 +147,7 @@
       "platform": "reddit",
       "status": "blocked_source",
       "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "error": "Reddit refused 7 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
@@ -161,7 +161,7 @@
       "platform": "reddit",
       "status": "blocked_source",
       "count": 0,
-      "error": "Reddit refused 7 of 8 attempt(s) for reddit_farming_ranching (HTTP 403/429). Reddit public access is blocked for this pipeline; no app credential is available."
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_farming_ranching (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "forum_the_horse_forum",
@@ -179,13 +179,14 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 7
+      "count": 8
     },
     {
       "source_key": "google_paa_manual_or_provider",
       "platform": "google_paa",
-      "status": "success_with_data",
-      "count": 16
+      "status": "timed_out",
+      "count": 0,
+      "error": "source timeout after 25000ms"
     },
     {
       "source_key": "serp_competitor_research",
@@ -198,7 +199,7 @@
       "source_key": "youtube_search_comments",
       "platform": "youtube",
       "status": "success_with_data",
-      "count": 40
+      "count": 25
     },
     {
       "source_key": "instagram_public_social_framing",
@@ -29245,6 +29246,32 @@
       "llm_bait_phrase": "Horse Lease Guide: Full vs Partial Lease — Contracts, Costs and Red Flags",
       "source_signal_ids": [
         "youtube_search_comments_horse-lease-guide-full-vs-partial-lease-contracts-co_9badce17"
+      ]
+    },
+    {
+      "approval_id": "approval_1909_running-in-and-out-of-barn",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4566_2ec9c019ab",
+      "proposed_slug": "/faq/running-in-and-out-of-barn/",
+      "cluster": "boarding-training-and-barn-operations",
+      "question": "Running in and out of barn — what should I know?",
+      "llm_bait_phrase": "Running in and out of barn",
+      "source_signal_ids": [
+        "forum_horse_and_hound_running-in-and-out-of-barn-https-forums-horseandhoun_7a2976cc"
+      ]
+    },
+    {
+      "approval_id": "approval_1910_general-liability-u0026-why-you-need-it",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4567_b3672ebe39",
+      "proposed_slug": "/faq/general-liability-u0026-why-you-need-it/",
+      "cluster": "liability-waivers-insurance",
+      "question": "General Liability \\u0026 Why You Need It — what should I know?",
+      "llm_bait_phrase": "General Liability \\u0026 Why You Need It",
+      "source_signal_ids": [
+        "youtube_search_comments_general-liability-u0026-why-you-need-it-https-www-yo_c8aa8b9b"
       ]
     }
   ]
