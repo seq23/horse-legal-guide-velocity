@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_on": "2026-11-22",
-  "gsc_window": "2026-10-23..2026-11-19",
+  "updated_on": "2026-11-24",
+  "gsc_window": "2026-10-25..2026-11-21",
   "rule": "pages: strengthened pages with the date each was strengthened (from strengthening.json). pending: qualifying families with no strengthening yet and the date each first qualified. skipped: qualifying families that are not strengthened, with the reason and the date first recorded.",
   "pages": [
     {
@@ -92,24 +92,32 @@
       "family": "equestrian brand protection @ /compare/use-of-image-rights-vs-copyright-ownership/",
       "page": "/compare/use-of-image-rights-vs-copyright-ownership/",
       "qualified_on": "2026-11-21",
-      "impressions": 6
+      "impressions": 7
+    },
+    {
+      "family": "horse sale contract @ /faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/",
+      "page": "/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/",
+      "qualified_on": "2026-11-24",
+      "impressions": 7
+    },
+    {
+      "family": "topic:compare @ /compare/release-of-claims-vs-settlement-agreement/",
+      "page": "/compare/release-of-claims-vs-settlement-agreement/",
+      "qualified_on": "2026-11-24",
+      "impressions": 2
     },
     {
       "family": "horse sale contract @ /questions/horse-sale-contract-with-payments/",
       "page": "/questions/horse-sale-contract-with-payments/",
       "qualified_on": "2026-11-14",
       "impressions": 2
+    },
+    {
+      "family": "topic:hubs @ /hubs/therapeutic-riding-and-hipaa/",
+      "page": "/hubs/therapeutic-riding-and-hipaa/",
+      "qualified_on": "2026-11-24",
+      "impressions": 1
     }
   ],
-  "skipped": [
-    {
-      "family": "equine law @ /about/",
-      "page": "/about/",
-      "status": "intent_mismatch",
-      "reason": "query intent equine_law_general vs page intent topic:about; strengthening /about/ for it would blur the page. A new page for it is a content-lane decision (the query is now measured, so the publishing freeze lets it through).",
-      "impressions": 6,
-      "weighted_position": 30.8,
-      "recorded_on": "2026-10-31"
-    }
-  ]
+  "skipped": []
 }

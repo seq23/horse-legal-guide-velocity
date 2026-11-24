@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "gsc_window": "2026-10-23..2026-11-19",
-  "gsc_collected_at": "2026-11-22T21:01:56.779Z",
+  "gsc_window": "2026-10-25..2026-11-21",
+  "gsc_collected_at": "2026-11-24T23:54:11.813Z",
   "measurement_rule": "Every target carries a source and a positive measured number with its unit. Unmeasured candidates are dropped with the reason. Units are never summed or compared across sources.",
   "precedence": [
     "gsc_export",
@@ -10,36 +10,36 @@
     "semrush_volume",
     "bing_keyword_research"
   ],
-  "target_count": 112,
+  "target_count": 116,
   "targets_by_source": {
-    "gsc_export": 48,
-    "gsc_history": 15,
-    "gsc_90d_evidence": 47,
+    "gsc_export": 53,
+    "gsc_history": 16,
+    "gsc_90d_evidence": 45,
     "semrush_volume": 2
   },
-  "dropped_count": 992,
+  "dropped_count": 994,
   "dropped_by_source": {
     "bing_keyword_research": 4,
-    "page_targets": 988
+    "page_targets": 990
   },
   "targets": [
     {
       "query": "horse purchase agreement",
       "query_norm": "horse purchase agreement",
       "source": "gsc_export",
-      "number": 32,
+      "number": 33,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-sale-and-purchase/",
       "measurements": [
         {
           "source": "gsc_export",
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 32,
+          "number": 33,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
-          "position": 66.9
+          "position": 66.4
         },
         {
           "source": "gsc_90d_evidence",
@@ -59,12 +59,40 @@
       ]
     },
     {
+      "query": "horse sale contract lawyer",
+      "query_norm": "horse sale contract lawyer",
+      "source": "gsc_export",
+      "number": 22,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/hubs/horse-sale-and-purchase/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 22,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 75.5
+        },
+        {
+          "source": "gsc_90d_evidence",
+          "file": "data/queries/evidence/evidence_queries.json",
+          "number": 1,
+          "unit": "google_impressions_90d",
+          "window": "null..null",
+          "position": null
+        }
+      ]
+    },
+    {
       "query": "black horse contract purchase",
       "query_norm": "black horse contract purchase",
       "source": "gsc_export",
       "number": 19,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-sale-and-purchase/",
       "measurements": [
         {
@@ -72,65 +100,9 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 19,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
-          "position": 58.6
-        }
-      ]
-    },
-    {
-      "query": "horse sale contract lawyer",
-      "query_norm": "horse sale contract lawyer",
-      "source": "gsc_export",
-      "number": 18,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/hubs/horse-sale-and-purchase/",
-      "measurements": [
-        {
-          "source": "gsc_export",
-          "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 18,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
-          "clicks": 0,
-          "position": 80.8
-        },
-        {
-          "source": "gsc_90d_evidence",
-          "file": "data/queries/evidence/evidence_queries.json",
-          "number": 1,
-          "unit": "google_impressions_90d",
-          "window": "null..null",
-          "position": null
-        }
-      ]
-    },
-    {
-      "query": "horse sale contract",
-      "query_norm": "horse sale contract",
-      "source": "gsc_export",
-      "number": 9,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/hubs/horse-sale-and-purchase/",
-      "measurements": [
-        {
-          "source": "gsc_export",
-          "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 9,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
-          "clicks": 0,
-          "position": 51.3
-        },
-        {
-          "source": "gsc_90d_evidence",
-          "file": "data/queries/evidence/evidence_queries.json",
-          "number": 1,
-          "unit": "google_impressions_90d",
-          "window": "null..null",
-          "position": null
+          "position": 58.9
         }
       ]
     },
@@ -138,19 +110,19 @@
       "query": "equine law",
       "query_norm": "equine law",
       "source": "gsc_export",
-      "number": 8,
+      "number": 9,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/",
       "measurements": [
         {
           "source": "gsc_export",
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 8,
+          "number": 9,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
-          "position": 39.8
+          "position": 45.3
         },
         {
           "source": "gsc_90d_evidence",
@@ -163,12 +135,60 @@
       ]
     },
     {
+      "query": "horse not as described",
+      "query_norm": "horse not as described",
+      "source": "gsc_export",
+      "number": 9,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 9,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 60
+        }
+      ]
+    },
+    {
+      "query": "horse sale contract",
+      "query_norm": "horse sale contract",
+      "source": "gsc_export",
+      "number": 9,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/hubs/horse-sale-and-purchase/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 9,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 50.7
+        },
+        {
+          "source": "gsc_90d_evidence",
+          "file": "data/queries/evidence/evidence_queries.json",
+          "number": 1,
+          "unit": "google_impressions_90d",
+          "window": "null..null",
+          "position": null
+        }
+      ]
+    },
+    {
       "query": "horse bill of sale",
       "query_norm": "horse bill of sale",
       "source": "gsc_export",
       "number": 8,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-sale-and-purchase/",
       "measurements": [
         {
@@ -176,7 +196,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 8,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 71.3
         },
@@ -211,7 +231,7 @@
       "source": "gsc_export",
       "number": 6,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-sale-and-purchase/",
       "measurements": [
         {
@@ -219,7 +239,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 6,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 53.5
         },
@@ -234,32 +254,12 @@
       ]
     },
     {
-      "query": "horse not as described",
-      "query_norm": "horse not as described",
-      "source": "gsc_export",
-      "number": 5,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/faq/what-happens-if-a-horse-is-misrepresented-in-a-sale/",
-      "measurements": [
-        {
-          "source": "gsc_export",
-          "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 5,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
-          "clicks": 0,
-          "position": 60
-        }
-      ]
-    },
-    {
       "query": "horse riding liability insurance",
       "query_norm": "horse riding liability insurance",
       "source": "gsc_export",
       "number": 5,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/liability-waivers-insurance/",
       "measurements": [
         {
@@ -267,7 +267,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 5,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 6.8
         }
@@ -279,7 +279,7 @@
       "source": "gsc_export",
       "number": 4,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/liability-waivers-insurance/",
       "measurements": [
         {
@@ -287,9 +287,29 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 4,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
-          "position": 57.5
+          "position": 56
+        }
+      ]
+    },
+    {
+      "query": "equine liability waiver qld",
+      "query_norm": "equine liability waiver qld",
+      "source": "gsc_export",
+      "number": 4,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/hubs/liability-waivers-insurance/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 4,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 58
         }
       ]
     },
@@ -299,7 +319,7 @@
       "source": "gsc_export",
       "number": 4,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-lease-and-trial/",
       "measurements": [
         {
@@ -307,7 +327,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 4,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 90.8
         },
@@ -334,7 +354,7 @@
       "source": "gsc_export",
       "number": 4,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-sale-and-purchase/",
       "measurements": [
         {
@@ -342,7 +362,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 4,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 58.8
         },
@@ -362,7 +382,7 @@
       "source": "gsc_export",
       "number": 3,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-sale-and-purchase/",
       "measurements": [
         {
@@ -370,7 +390,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 3,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 71.7
         },
@@ -397,7 +417,7 @@
       "source": "gsc_export",
       "number": 3,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/articles/",
       "measurements": [
         {
@@ -405,7 +425,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 3,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 94.7
         },
@@ -425,7 +445,7 @@
       "source": "gsc_export",
       "number": 3,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/about/",
       "measurements": [
         {
@@ -433,7 +453,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 3,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 35.3
         }
@@ -445,7 +465,7 @@
       "source": "gsc_export",
       "number": 3,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/liability-waivers-insurance/",
       "measurements": [
         {
@@ -453,9 +473,29 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 3,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 2
+        }
+      ]
+    },
+    {
+      "query": "how do i create a legal contract for horse sale or purchase",
+      "query_norm": "how do i create a legal contract for horse sale or purchase",
+      "source": "gsc_export",
+      "number": 3,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/hubs/horse-sale-and-purchase/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 3,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 44
         }
       ]
     },
@@ -465,7 +505,7 @@
       "source": "gsc_export",
       "number": 3,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/boarding-training-and-barn-operations/",
       "measurements": [
         {
@@ -473,7 +513,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 3,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 57.7
         }
@@ -485,7 +525,7 @@
       "source": "gsc_export",
       "number": 3,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/compare/use-of-image-rights-vs-copyright-ownership/",
       "measurements": [
         {
@@ -493,7 +533,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 3,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 34.7
         }
@@ -505,7 +545,7 @@
       "source": "gsc_export",
       "number": 2,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/about/",
       "measurements": [
         {
@@ -513,7 +553,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 2,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 30.5
         }
@@ -525,7 +565,7 @@
       "source": "gsc_export",
       "number": 2,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/",
       "measurements": [
         {
@@ -533,7 +573,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 2,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 69
         },
@@ -553,7 +593,7 @@
       "source": "gsc_export",
       "number": 2,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-sale-and-purchase/",
       "measurements": [
         {
@@ -561,7 +601,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 2,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 78.5
         }
@@ -573,7 +613,7 @@
       "source": "gsc_export",
       "number": 2,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-sale-and-purchase/",
       "measurements": [
         {
@@ -581,7 +621,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 2,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 78
         },
@@ -601,7 +641,7 @@
       "source": "gsc_export",
       "number": 2,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/liability-waivers-insurance/",
       "measurements": [
         {
@@ -609,9 +649,57 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 2,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 37
+        }
+      ]
+    },
+    {
+      "query": "horse purchase contract",
+      "query_norm": "horse purchase contract",
+      "source": "gsc_export",
+      "number": 2,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/hubs/horse-sale-and-purchase/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 2,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 53
+        },
+        {
+          "source": "gsc_90d_evidence",
+          "file": "data/queries/evidence/evidence_queries.json",
+          "number": 3,
+          "unit": "google_impressions_90d",
+          "window": "2026-05-25..2026-08-23",
+          "position": 61
+        }
+      ]
+    },
+    {
+      "query": "horse sale agreement",
+      "query_norm": "horse sale agreement",
+      "source": "gsc_export",
+      "number": 2,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/hubs/horse-sale-and-purchase/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 2,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 54
         }
       ]
     },
@@ -621,7 +709,7 @@
       "source": "gsc_export",
       "number": 2,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/liability-waivers-insurance/",
       "measurements": [
         {
@@ -629,9 +717,29 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 2,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 18.5
+        }
+      ]
+    },
+    {
+      "query": "how do i create a partnership or syndicate for owning horses legally",
+      "query_norm": "how do i create a partnership or syndicate for owning horses legally",
+      "source": "gsc_export",
+      "number": 2,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/business/partnership-agreement-for-horse-business/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 2,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 74.5
         }
       ]
     },
@@ -641,7 +749,7 @@
       "source": "gsc_export",
       "number": 2,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/equine-business-formation/",
       "measurements": [
         {
@@ -649,7 +757,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 2,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 44.5
         },
@@ -669,7 +777,7 @@
       "source": "gsc_export",
       "number": 2,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/compare/use-of-image-rights-vs-copyright-ownership/",
       "measurements": [
         {
@@ -677,9 +785,57 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 2,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 40.5
+        }
+      ]
+    },
+    {
+      "query": "release of claims settlement agreement",
+      "query_norm": "release of claims settlement agreement",
+      "source": "gsc_export",
+      "number": 2,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/compare/release-of-claims-vs-settlement-agreement/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 2,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 11
+        }
+      ]
+    },
+    {
+      "query": "what are the legal aspects of horse sale contracts",
+      "query_norm": "what are the legal aspects of horse sale contracts",
+      "source": "gsc_export",
+      "number": 2,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/hubs/horse-sale-and-purchase/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 2,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 84
+        },
+        {
+          "source": "gsc_90d_evidence",
+          "file": "data/queries/evidence/evidence_queries.json",
+          "number": 2,
+          "unit": "google_impressions_90d",
+          "window": "2026-05-25..2026-08-23",
+          "position": 87.5
         }
       ]
     },
@@ -689,7 +845,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/equine-business-formation/",
       "measurements": [
         {
@@ -697,7 +853,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 72
         }
@@ -709,7 +865,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/liability-waivers-insurance/",
       "measurements": [
         {
@@ -717,7 +873,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 7
         }
@@ -729,7 +885,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/about/",
       "measurements": [
         {
@@ -737,19 +893,47 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 18
         }
       ]
     },
     {
-      "query": "equine liability waiver qld",
-      "query_norm": "equine liability waiver qld",
+      "query": "equine lease agreement law firm wellington",
+      "query_norm": "equine lease agreement law firm wellington",
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/compare/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 1,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 51
+        },
+        {
+          "source": "gsc_90d_evidence",
+          "file": "data/queries/evidence/evidence_queries.json",
+          "number": 2,
+          "unit": "google_impressions_90d",
+          "window": "2026-05-25..2026-08-23",
+          "position": 72
+        }
+      ]
+    },
+    {
+      "query": "equine liability releases attorney wellington",
+      "query_norm": "equine liability releases attorney wellington",
+      "source": "gsc_export",
+      "number": 1,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/liability-waivers-insurance/",
       "measurements": [
         {
@@ -757,9 +941,9 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
-          "position": 68
+          "position": 98
         }
       ]
     },
@@ -769,7 +953,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-sale-and-purchase/",
       "measurements": [
         {
@@ -777,9 +961,57 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 59
+        }
+      ]
+    },
+    {
+      "query": "hipaa therapy horses",
+      "query_norm": "hipaa therapy horses",
+      "source": "gsc_export",
+      "number": 1,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/hubs/therapeutic-riding-and-hipaa/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 1,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 1
+        }
+      ]
+    },
+    {
+      "query": "horse law",
+      "query_norm": "horse law",
+      "source": "gsc_export",
+      "number": 1,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/insights/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 1,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 87
+        },
+        {
+          "source": "gsc_90d_evidence",
+          "file": "data/queries/evidence/evidence_queries.json",
+          "number": 1,
+          "unit": "google_impressions_90d",
+          "window": "2026-05-25..2026-08-23",
+          "position": 5
         }
       ]
     },
@@ -789,7 +1021,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/business/partnership-agreement-for-horse-business/",
       "measurements": [
         {
@@ -797,77 +1029,9 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 56
-        }
-      ]
-    },
-    {
-      "query": "horse purchase contract",
-      "query_norm": "horse purchase contract",
-      "source": "gsc_export",
-      "number": 1,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/hubs/horse-sale-and-purchase/",
-      "measurements": [
-        {
-          "source": "gsc_export",
-          "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 1,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
-          "clicks": 0,
-          "position": 56
-        },
-        {
-          "source": "gsc_90d_evidence",
-          "file": "data/queries/evidence/evidence_queries.json",
-          "number": 3,
-          "unit": "google_impressions_90d",
-          "window": "2026-05-25..2026-08-23",
-          "position": 61
-        }
-      ]
-    },
-    {
-      "query": "horse sale agreement",
-      "query_norm": "horse sale agreement",
-      "source": "gsc_export",
-      "number": 1,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/hubs/horse-sale-and-purchase/",
-      "measurements": [
-        {
-          "source": "gsc_export",
-          "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 1,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
-          "clicks": 0,
-          "position": 56
-        }
-      ]
-    },
-    {
-      "query": "horse sale contract with payments",
-      "query_norm": "horse sale contract with payments",
-      "source": "gsc_export",
-      "number": 1,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/hubs/horse-sale-and-purchase/",
-      "measurements": [
-        {
-          "source": "gsc_export",
-          "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 1,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
-          "clicks": 0,
-          "position": 13
         }
       ]
     },
@@ -877,7 +1041,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/liability-waivers-insurance/",
       "measurements": [
         {
@@ -885,9 +1049,37 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 23
+        }
+      ]
+    },
+    {
+      "query": "horse training agreement",
+      "query_norm": "horse training agreement",
+      "source": "gsc_export",
+      "number": 1,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/compare/",
+      "measurements": [
+        {
+          "source": "gsc_export",
+          "file": "data/search_intelligence/gsc_search_analytics_export.json",
+          "number": 1,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-25..2026-11-21",
+          "clicks": 0,
+          "position": 67
+        },
+        {
+          "source": "gsc_90d_evidence",
+          "file": "data/queries/evidence/evidence_queries.json",
+          "number": 2,
+          "unit": "google_impressions_90d",
+          "window": "null..null",
+          "position": null
         }
       ]
     },
@@ -897,7 +1089,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/reference/",
       "measurements": [
         {
@@ -905,7 +1097,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 57
         },
@@ -925,7 +1117,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/horse-lease-and-trial/",
       "measurements": [
         {
@@ -933,7 +1125,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 19
         },
@@ -953,7 +1145,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/scenario/a-trial-horse-got-hurt-before-purchase-what-should-be-reviewed/",
       "measurements": [
         {
@@ -961,49 +1153,9 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 13
-        }
-      ]
-    },
-    {
-      "query": "how do i create a legal contract for horse sale or purchase",
-      "query_norm": "how do i create a legal contract for horse sale or purchase",
-      "source": "gsc_export",
-      "number": 1,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/hubs/horse-sale-and-purchase/",
-      "measurements": [
-        {
-          "source": "gsc_export",
-          "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 1,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
-          "clicks": 0,
-          "position": 56
-        }
-      ]
-    },
-    {
-      "query": "how do i create a partnership or syndicate for owning horses legally",
-      "query_norm": "how do i create a partnership or syndicate for owning horses legally",
-      "source": "gsc_export",
-      "number": 1,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/business/partnership-agreement-for-horse-business/",
-      "measurements": [
-        {
-          "source": "gsc_export",
-          "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 1,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
-          "clicks": 0,
-          "position": 76
         }
       ]
     },
@@ -1013,7 +1165,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/equine-business-formation/",
       "measurements": [
         {
@@ -1021,7 +1173,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 39
         },
@@ -1041,7 +1193,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/compare/use-of-image-rights-vs-copyright-ownership/",
       "measurements": [
         {
@@ -1049,37 +1201,29 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 12
         }
       ]
     },
     {
-      "query": "law of the horse",
-      "query_norm": "law of the horse",
+      "query": "image rights",
+      "query_norm": "image rights",
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/insights/",
+      "window": "2026-10-25..2026-11-21",
+      "landing_page": "/compare/use-of-image-rights-vs-copyright-ownership/",
       "measurements": [
         {
           "source": "gsc_export",
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
-          "position": 93
-        },
-        {
-          "source": "gsc_90d_evidence",
-          "file": "data/queries/evidence/evidence_queries.json",
-          "number": 2,
-          "unit": "google_impressions_90d",
-          "window": "null..null",
-          "position": null
+          "position": 21
         }
       ]
     },
@@ -1089,7 +1233,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/insights/",
       "measurements": [
         {
@@ -1097,7 +1241,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 85
         }
@@ -1109,7 +1253,7 @@
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/business/how-to-start-a-horse-retail-business/",
       "measurements": [
         {
@@ -1117,7 +1261,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 71
         },
@@ -1132,40 +1276,12 @@
       ]
     },
     {
-      "query": "what are the legal aspects of horse sale contracts",
-      "query_norm": "what are the legal aspects of horse sale contracts",
-      "source": "gsc_export",
-      "number": 1,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
-      "landing_page": "/hubs/horse-sale-and-purchase/",
-      "measurements": [
-        {
-          "source": "gsc_export",
-          "file": "data/search_intelligence/gsc_search_analytics_export.json",
-          "number": 1,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
-          "clicks": 0,
-          "position": 89
-        },
-        {
-          "source": "gsc_90d_evidence",
-          "file": "data/queries/evidence/evidence_queries.json",
-          "number": 2,
-          "unit": "google_impressions_90d",
-          "window": "2026-05-25..2026-08-23",
-          "position": 87.5
-        }
-      ]
-    },
-    {
       "query": "you have decided that you are going to start a new business giving horseback riding lessons. you need to decide which legal form you will use for your business. choose a sole proprietorship, partnership, or corporation. write a paragraph explaining why you chose the legal form you did and the advantages and disadvantages of your choice.",
       "query_norm": "you have decided that you are going to start a new business giving horseback riding lessons you need to decide which legal form you will use for your business choose a sole proprietorship partnership or corporation write a paragraph explaining why you chose the legal form you did and the advantages and disadvantages of your choice",
       "source": "gsc_export",
       "number": 1,
       "unit": "google_impressions_28d",
-      "window": "2026-10-23..2026-11-19",
+      "window": "2026-10-25..2026-11-21",
       "landing_page": "/hubs/equine-business-formation/",
       "measurements": [
         {
@@ -1173,7 +1289,7 @@
           "file": "data/search_intelligence/gsc_search_analytics_export.json",
           "number": 1,
           "unit": "google_impressions_28d",
-          "window": "2026-10-23..2026-11-19",
+          "window": "2026-10-25..2026-11-21",
           "clicks": 0,
           "position": 11
         }
@@ -1342,33 +1458,6 @@
       ]
     },
     {
-      "query": "equine lease agreement law firm wellington",
-      "query_norm": "equine lease agreement law firm wellington",
-      "source": "gsc_history",
-      "number": 1,
-      "unit": "google_impressions_28d",
-      "window": "2026-10-16..2026-11-12",
-      "landing_page": null,
-      "measurements": [
-        {
-          "source": "gsc_history",
-          "file": "data/search_intelligence/gsc_query_history.json",
-          "number": 1,
-          "unit": "google_impressions_28d",
-          "window": "2026-10-16..2026-11-12",
-          "position": 87
-        },
-        {
-          "source": "gsc_90d_evidence",
-          "file": "data/queries/evidence/evidence_queries.json",
-          "number": 2,
-          "unit": "google_impressions_90d",
-          "window": "2026-05-25..2026-08-23",
-          "position": 72
-        }
-      ]
-    },
-    {
       "query": "equine legal",
       "query_norm": "equine legal",
       "source": "gsc_history",
@@ -1450,6 +1539,25 @@
       ]
     },
     {
+      "query": "horse sale contract with payments",
+      "query_norm": "horse sale contract with payments",
+      "source": "gsc_history",
+      "number": 1,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-23..2026-11-19",
+      "landing_page": null,
+      "measurements": [
+        {
+          "source": "gsc_history",
+          "file": "data/search_intelligence/gsc_query_history.json",
+          "number": 1,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-23..2026-11-19",
+          "position": 13
+        }
+      ]
+    },
+    {
       "query": "horse sale disputes",
       "query_norm": "horse sale disputes",
       "source": "gsc_history",
@@ -1497,6 +1605,33 @@
           "source": "gsc_90d_evidence",
           "file": "data/queries/evidence/evidence_queries.json",
           "number": 1,
+          "unit": "google_impressions_90d",
+          "window": "null..null",
+          "position": null
+        }
+      ]
+    },
+    {
+      "query": "law of the horse",
+      "query_norm": "law of the horse",
+      "source": "gsc_history",
+      "number": 1,
+      "unit": "google_impressions_28d",
+      "window": "2026-10-23..2026-11-19",
+      "landing_page": null,
+      "measurements": [
+        {
+          "source": "gsc_history",
+          "file": "data/search_intelligence/gsc_query_history.json",
+          "number": 1,
+          "unit": "google_impressions_28d",
+          "window": "2026-10-23..2026-11-19",
+          "position": 93
+        },
+        {
+          "source": "gsc_90d_evidence",
+          "file": "data/queries/evidence/evidence_queries.json",
+          "number": 2,
           "unit": "google_impressions_90d",
           "window": "null..null",
           "position": null
@@ -1701,25 +1836,6 @@
     {
       "query": "horse legal advice",
       "query_norm": "horse legal advice",
-      "source": "gsc_90d_evidence",
-      "number": 2,
-      "unit": "google_impressions_90d",
-      "window": "null..null",
-      "landing_page": null,
-      "measurements": [
-        {
-          "source": "gsc_90d_evidence",
-          "file": "data/queries/evidence/evidence_queries.json",
-          "number": 2,
-          "unit": "google_impressions_90d",
-          "window": "null..null",
-          "position": null
-        }
-      ]
-    },
-    {
-      "query": "horse training agreement",
-      "query_norm": "horse training agreement",
       "source": "gsc_90d_evidence",
       "number": 2,
       "unit": "google_impressions_90d",
@@ -2075,25 +2191,6 @@
           "unit": "google_impressions_90d",
           "window": "2026-05-25..2026-08-23",
           "position": 67
-        }
-      ]
-    },
-    {
-      "query": "horse law",
-      "query_norm": "horse law",
-      "source": "gsc_90d_evidence",
-      "number": 1,
-      "unit": "google_impressions_90d",
-      "window": "2026-05-25..2026-08-23",
-      "landing_page": null,
-      "measurements": [
-        {
-          "source": "gsc_90d_evidence",
-          "file": "data/queries/evidence/evidence_queries.json",
-          "number": 1,
-          "unit": "google_impressions_90d",
-          "window": "2026-05-25..2026-08-23",
-          "position": 5
         }
       ]
     },
@@ -5225,6 +5322,18 @@
     },
     {
       "query": "I return a horse after purchase if it has health issues",
+      "source": "page_targets",
+      "page": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "reason": "site-authored phrasing; no Search Console row, no measured volume"
+    },
+    {
+      "query": "can i return a horse after purchase contract?",
+      "source": "page_targets",
+      "page": "/faq/can-a-buyer-return-a-horse-after-purchase/",
+      "reason": "site-authored phrasing; no Search Console row, no measured volume"
+    },
+    {
+      "query": "i return a horse after purchase contract",
       "source": "page_targets",
       "page": "/faq/can-a-buyer-return-a-horse-after-purchase/",
       "reason": "site-authored phrasing; no Search Console row, no measured volume"
