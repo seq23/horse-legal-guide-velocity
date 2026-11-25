@@ -1,48 +1,48 @@
 {
-  "generated_at": "2026-11-24T23:36:58.104Z",
-  "total_signals": 4568,
+  "generated_at": "2026-11-25T23:16:53.270Z",
+  "total_signals": 4573,
   "signals_by_source": {
     "reddit_equestrian": 2333,
     "reddit_horses": 727,
-    "forum_the_horse_forum": 34,
+    "forum_the_horse_forum": 35,
     "forum_chronicle_of_the_horse": 30,
     "google_paa_manual_or_provider": 142,
     "serp_competitor_research": 217,
-    "youtube_search_comments": 257,
+    "youtube_search_comments": 260,
     "instagram_public_social_framing": 29,
     "quora_question_patterns": 29,
     "reddit_legaladvice": 262,
     "reddit_smallbusiness": 263,
     "reddit_farming_ranching": 143,
-    "forum_horse_and_hound": 102
+    "forum_horse_and_hound": 103
   },
   "signals_by_platform": {
     "reddit": 3728,
-    "equestrian_forums": 166,
+    "equestrian_forums": 168,
     "google_paa": 142,
     "serp_competitors": 217,
-    "youtube": 257,
+    "youtube": 260,
     "instagram": 29,
     "quora": 29
   },
-  "normalized_count": 1911,
+  "normalized_count": 1916,
   "duplicates_collapsed": 2657,
   "pages_created": 0,
-  "pages_strengthened": 287,
+  "pages_strengthened": 288,
   "rejected_signals": 0,
-  "pending_owner_review": 1618,
+  "pending_owner_review": 1622,
   "top_clusters": [
     {
       "name": "state-specific",
-      "count": 968
+      "count": 970
     },
     {
       "name": "boarding-training-and-barn-operations",
-      "count": 308
+      "count": 309
     },
     {
       "name": "horse-lease-and-trial",
-      "count": 255
+      "count": 256
     },
     {
       "name": "horse-sale-and-purchase",
@@ -54,7 +54,7 @@
     },
     {
       "name": "equine-business-formation",
-      "count": 34
+      "count": 35
     },
     {
       "name": "demand-letters-and-disputes",
@@ -92,7 +92,7 @@
     },
     {
       "name": "youtube_search_comments",
-      "count": 257
+      "count": 260
     },
     {
       "name": "serp_competitor_research",
@@ -108,11 +108,11 @@
     },
     {
       "name": "forum_horse_and_hound",
-      "count": 102
+      "count": 103
     },
     {
       "name": "forum_the_horse_forum",
-      "count": 34
+      "count": 35
     },
     {
       "name": "forum_chronicle_of_the_horse",
@@ -147,14 +147,14 @@
       "platform": "reddit",
       "status": "blocked_source",
       "count": 0,
-      "error": "Reddit refused 7 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "error": "Reddit refused 8 of 8 attempt(s) for reddit_legaladvice (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_smallbusiness",
       "platform": "reddit",
       "status": "blocked_source",
       "count": 0,
-      "error": "Reddit refused 8 of 8 attempt(s) for reddit_smallbusiness (HTTP 429/403). Reddit public access is blocked for this pipeline; no app credential is available."
+      "error": "Reddit refused 7 of 8 attempt(s) for reddit_smallbusiness (HTTP 403/429). Reddit public access is blocked for this pipeline; no app credential is available."
     },
     {
       "source_key": "reddit_farming_ranching",
@@ -179,7 +179,7 @@
       "source_key": "forum_horse_and_hound",
       "platform": "equestrian_forums",
       "status": "success_with_data",
-      "count": 8
+      "count": 7
     },
     {
       "source_key": "google_paa_manual_or_provider",
@@ -199,7 +199,7 @@
       "source_key": "youtube_search_comments",
       "platform": "youtube",
       "status": "success_with_data",
-      "count": 25
+      "count": 40
     },
     {
       "source_key": "instagram_public_social_framing",
@@ -8183,6 +8183,32 @@
       "mapped_slug": "/faq/can-a-buyer-return-a-horse-after-purchase/",
       "status": "approved_for_content",
       "reason": "The page answers this question (shares retur, purch)."
+    },
+    {
+      "queue_id": "queue_1915_run-your-barn-like-a-business",
+      "normalized_id": "norm_4572_37fe15dea7",
+      "action": "strengthen_existing_page",
+      "source_signal_ids": [
+        "youtube_search_comments_run-your-barn-like-a-business-https-www-youtube-com-_065420ff"
+      ],
+      "preserved_query": "Run Your Barn Like A Business — what should I know?",
+      "normalized_query": "Run Your Barn Like A Business — what should I know?",
+      "llm_bait_phrase": "Run Your Barn Like A Business",
+      "cluster": "boarding-training-and-barn-operations",
+      "intent_type": "faq",
+      "signal_score": 0.65,
+      "match_evidence": {
+        "best_page": "/leases/can-i-run-a-horse-business-under-my-lease/",
+        "shared_terms": [
+          "run",
+          "busin"
+        ],
+        "question_coverage": 0.724,
+        "page_coverage": 0.718
+      },
+      "mapped_slug": "/leases/can-i-run-a-horse-business-under-my-lease/",
+      "status": "approved_for_content",
+      "reason": "The page answers this question (shares run, busin)."
     }
   ],
   "ignored_signals": [],
@@ -29272,6 +29298,58 @@
       "llm_bait_phrase": "General Liability \\u0026 Why You Need It",
       "source_signal_ids": [
         "youtube_search_comments_general-liability-u0026-why-you-need-it-https-www-yo_c8aa8b9b"
+      ]
+    },
+    {
+      "approval_id": "approval_1911_all-my-horses-walkinthewalk-212",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4568_8d2db71386",
+      "proposed_slug": "/faq/all-my-horses-walkinthewalk-212/",
+      "cluster": "state-specific",
+      "question": "All My Horses walkinthewalk 212 — what should I know?",
+      "llm_bait_phrase": "All My Horses walkinthewalk 212",
+      "source_signal_ids": [
+        "forum_the_horse_forum_all-my-horses-walkinthewalk-212-https-www-horseforum_428b813e"
+      ]
+    },
+    {
+      "approval_id": "approval_1912_equine-and-farm-vets-join-forces-to-treat-a-reinde",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4569_7fe34adf7f",
+      "proposed_slug": "/faq/equine-and-farm-vets-join-forces-to-treat-a-reindeer/",
+      "cluster": "state-specific",
+      "question": "Equine and farm vets join forces to treat a reindeer — what should I know?",
+      "llm_bait_phrase": "Equine and farm vets join forces to treat a reindeer",
+      "source_signal_ids": [
+        "forum_horse_and_hound_equine-and-farm-vets-join-forces-to-treat-a-reindeer_dfc11091"
+      ]
+    },
+    {
+      "approval_id": "approval_1913_5-clauses-you-really-want-to-have-in-your-lease-as",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4570_0631f1f781",
+      "proposed_slug": "/faq/5-clauses-you-really-want-to-have-in-your-lease-as-a-real-estate-investor/",
+      "cluster": "horse-lease-and-trial",
+      "question": "5 Clauses You REALLY Want To Have In Your Lease 😥 As A Real Estate Investor — what should I know?",
+      "llm_bait_phrase": "5 Clauses You REALLY Want To Have In Your Lease 😥 As A Real Estate Investor",
+      "source_signal_ids": [
+        "youtube_search_comments_5-clauses-you-really-want-to-have-in-your-lease-as-a_89f46a1b"
+      ]
+    },
+    {
+      "approval_id": "approval_1914_to-board-horses-as-a-business",
+      "type": "new_page_or_cluster",
+      "status": "pending",
+      "normalized_id": "norm_4571_c9d0a20992",
+      "proposed_slug": "/faq/to-board-horses-as-a-business/",
+      "cluster": "equine-business-formation",
+      "question": "How To Board Horses As A Business?",
+      "llm_bait_phrase": "To Board Horses As A Business",
+      "source_signal_ids": [
+        "youtube_search_comments_how-to-board-horses-as-a-business-https-www-youtube-_eff5f8f0"
       ]
     }
   ]
