@@ -2,6 +2,7 @@ name: Deploy Distribution
 
 on:
   workflow_run:
+    branches: [main]
     workflows: ["Manual Publish"]
     types: [completed]
   workflow_dispatch:
@@ -14,8 +15,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy-distribution:
+    environment: reviewed-main
     timeout-minutes: 5  # ~3x median 0.3m over 5 green runs; fault detector, not a budget
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    if: github.ref == 'refs/heads/main' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     env:
       SITE_DOMAIN: https://horselegalguide.com

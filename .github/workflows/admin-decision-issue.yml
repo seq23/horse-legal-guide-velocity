@@ -32,8 +32,9 @@ concurrency:
 
 jobs:
   apply-decision:
+    environment: reviewed-main
     timeout-minutes: 5  # ~3x median 1.0m over 7 green runs; fault detector, not a budget
-    if: contains(github.event.issue.labels.*.name, 'admin-decision')
+    if: github.ref == 'refs/heads/main' && (contains(github.event.issue.labels.*.name, 'admin-decision'))
     runs-on: ubuntu-latest
     env:
       SITE_DOMAIN: https://horselegalguide.com
