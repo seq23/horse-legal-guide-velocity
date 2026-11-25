@@ -16,6 +16,7 @@ on:
         required: false
         default: "false"
   workflow_run:
+    branches: [main]
     workflows: ["Admin Bulk Content Actions", "Manual Publish", "Admin Decision Issue"]
     types: [completed]
   schedule:
@@ -32,8 +33,9 @@ concurrency:
 
 jobs:
   email-approved-content:
+    environment: reviewed-main
     timeout-minutes: 5  # ~3x median 0.7m over 8 green runs; fault detector, not a budget
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    if: github.ref == 'refs/heads/main' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     env:
       SITE_DOMAIN: https://horselegalguide.com

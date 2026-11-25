@@ -13,7 +13,6 @@ jobs:
     env:
       SITE_DOMAIN: https://horselegalguide.com
       CANONICAL_DOMAIN: https://wisecovington.com
-      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       INDEXNOW_KEY_LOCATION: https://horselegalguide.com/indexnow.txt
       GSC_SITE_URL: sc-domain:horselegalguide.com
     steps:

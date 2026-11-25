@@ -10,6 +10,7 @@ name: Live Smoke Check
 # search console. It mutates nothing and needs no secrets.
 on:
   workflow_run:
+    branches: [main]
     workflows: ["Deploy Distribution"]
     types: [completed]
   workflow_dispatch:
