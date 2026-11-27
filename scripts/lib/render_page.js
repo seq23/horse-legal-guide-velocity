@@ -460,7 +460,6 @@ function renderAboutPage() {
   <ol>
     <li><strong>A real question comes first.</strong> Pages are built around questions horse owners, trainers, barns and equine businesses actually ask, not around keywords.</li>
     <li><strong>The answer is scoped, not generalised.</strong> Each page separates the parties, documents, timing, money, possession, communications and state-specific facts rather than repeating a generic contract overview.</li>
-    <li><strong>A person approves it.</strong> No page publishes without owner review and approval; approval alone does not publish future-dated content before its scheduled date.</li>
     <li><strong>The limits are stated on the page.</strong> Where an answer depends on your state, a deadline, a minor, an entity, disputed authority, injury or insurance, the page says so and routes the question to the firm instead of guessing.</li>
     <li><strong>Dates are visible.</strong> Editorial pages carry their publication date, and the structured data on every page carries the same dates a reader sees.</li>
   </ol>
@@ -483,7 +482,7 @@ ${referralNote()}`;
   return renderLayout({
     title: 'About Horse Legal Guide: Who Writes It',
     description: fitDescription([
-      `Horse Legal Guide is published by ${firmName}, a law firm built by equestrians. Who writes these equine law pages, how they are reviewed and approved, and what this guide is not.`
+      `Horse Legal Guide is published by ${firmName}, a law firm built by equestrians. Who writes these equine law pages, how they are written and checked, and what this guide is not.`
     ], '/about/'),
     url: '/about/',
     body
